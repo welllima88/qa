@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIX.SCS.QA.Selenium.Tests.SCSPlatin</RootNamespace>
+    <AssemblyName>SCS2WebTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.29.1\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium.Support.2.29.1\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scs2TestDirector.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />
+    <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
+    <Compile Include="TestObjects\Brand\ContractSelect.cs" />
+    <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
+    <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
+    <Compile Include="TestObjects\Common\QuickSearch.cs" />
+    <Compile Include="TestObjects\Common\Footer.cs" />
+    <Compile Include="TestObjects\Common\Menu\CustomerMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\LocationMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\MassMutationMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\LobbyMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TerminalAnalysisMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
+    <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
+    <Compile Include="TestObjects\Common\Zebra.cs" />
+    <Compile Include="TestObjects\Contact\ContactCreate.cs" />
+    <Compile Include="TestObjects\Contact\ContactEdit.cs" />
+    <Compile Include="TestObjects\Contact\ContactView.cs" />
+    <Compile Include="TestObjects\Common\Lobby.cs" />
+    <Compile Include="TestObjects\Common\MetaNavBar.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressView.cs" />
+    <Compile Include="TestObjects\Location\LocationEdit.cs" />
+    <Compile Include="TestObjects\Common\FormAlert.cs" />
+    <Compile Include="TestObjects\Common\RecentElements.cs" />
+    <Compile Include="TestObjects\Common\NavigationBar.cs" />
+    <Compile Include="TestObjects\Brand\ContractEdit.cs" />
+    <Compile Include="TestObjects\Brand\ContractCreate.cs" />
+    <Compile Include="TestObjects\Brand\ContractView.cs" />
+    <Compile Include="TestObjects\Terminal\Article.cs" />
+    <Compile Include="TestObjects\Terminal\Base.cs" />
+    <Compile Include="TestObjects\Terminal\Brands.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\CommonTerminalInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Contacts.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\SalesContract.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TechnicalView.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalSaleContract.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalTexts.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TroubleTickets.cs" />
+    <Compile Include="TestObjects\Terminal\Functionbits.cs" />
+    <Compile Include="TestObjects\Terminal\Parameter.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalView.cs" />
+    <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
+    <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />
+    <Compile Include="Tests\Administration\SIMCard\SimCardEditTest.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardListView.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SIMCardEdit.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SIMCardCreate.cs" />
+    <Compile Include="Tests\BuildTest.cs" />
+    <Compile Include="Tests\Contact\ContactCreateTest.cs" />
+    <Compile Include="Tests\Contact\ContactEditTest.cs" />
+    <Compile Include="Tests\Customer\CetrelCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\CustomerEditTest.cs" />
+    <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />
+    <Compile Include="Tests\Location\BillingAddressEditTest.cs" />
+    <Compile Include="Tests\Location\LocationEditTest.cs" />
+    <Compile Include="Tests\Location\LocationCreateTest.cs" />
+    <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />
+    <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
+    <Compile Include="TestObjects\Customer\CustomerView.cs" />
+    <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
+    <Compile Include="Tests\General Checks\LobbyTest.cs" />
+    <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
+    <Compile Include="TestObjects\Location\LocationView.cs" />
+    <Compile Include="TestObjects\Location\LocationCreate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Customer\CustomerCreateTest.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalData.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
+    <Compile Include="Tests\Login\Login.cs" />
+    <Compile Include="Tests\Menu\MenusTest.cs" />
+    <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
+    <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
+    <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Tests\Smoke Test.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tests\Regressiontest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestObjects\Common\Navigation\" />
+    <Folder Include="TestObjects\Common\News\" />
+    <Folder Include="Tests\Administration\Agency\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestSetup\LocatorMap.xml" />
+    <Content Include="RegReplace.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
+      <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
+      <Name>SeleniumExtension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
