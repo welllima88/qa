@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         {
             //before first test-method starts
             _tb = new Scs2TestDirector();
-            _driver = _tb.SetupTest(); //default QA-L with certificate login
+            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _customerMenu = new CustomerMenu(_driver);
             _customerView = new CustomerView(_driver);
             _locationMenu = new LocationMenu(_driver);

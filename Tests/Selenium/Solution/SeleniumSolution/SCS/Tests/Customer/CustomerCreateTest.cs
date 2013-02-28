@@ -32,7 +32,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             var auth = new CertificateLogin("tkcposl", _driver);
             var app = new Scs(_driver);
 
-            _tb.SetupTest("https://gateint.telekurs.ch/scsc-qa-l/", auth, app, app, auth);
+            _tb.TestSetup("https://gateint.telekurs.ch/scsc-qa-l/", auth, app, app, auth);
 
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);

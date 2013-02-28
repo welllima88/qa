@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
         {
             //before first test-method starts
             _tb = new Scs2TestDirector();
-            _driver = _tb.SetupTest(); //default QA-L with certificate login and 10 seconds response timeout
+            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
             _customerMenu = new CustomerMenu(_driver);
             _locationMenu = new LocationMenu(_driver);
             _terminalMenu = new TerminalMenu(_driver);

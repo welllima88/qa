@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Login;
@@ -12,14 +13,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
         private static TestDirector _tb;
         private static IWebDriver _driver;
         private static Lobby _lobby;
-
+        
         #region ILoginCheck Members
 
         public void CheckLogInSucess()
         {
-            Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
-            Assert.IsTrue(_lobby.CompanyLogo.Displayed);
-            Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
+            throw new NotImplementedException("Needs to make sure that _lobby is valid value (circular)");
         }
 
         #endregion
@@ -30,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
             //before first test-method starts
             _tb = new Scs2TestDirector();
             _driver = _tb.WebDriver;
-            _tb.SetupTest(); //default QA-L with certificate login and 10 seconds response timeout
+            _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
             _lobby = new Lobby(_driver);
         }
 
@@ -55,7 +54,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
         [TestMethod]
         public void SuccessfullLoginTest()
         {
-            CheckLogInSucess();
+            Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
+            Assert.IsTrue(_lobby.CompanyLogo.Displayed);
+            Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
         }
     }
 }

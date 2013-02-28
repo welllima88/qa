@@ -15,14 +15,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
         {
         }
 
-        public override IWebDriverAdapter SetupTest()
+        public override IWebDriverAdapter DefaultTestSetup()
         {
             var certificateLogin = new CertificateLogin("tkcposl", WebDriver);
             var lobby = new Lobby(WebDriver);
-            var loginTest = new LoginTest();
-
-            SetupTest("https://gateint.telekurs.ch/zebrac-qa-l", certificateLogin, loginTest, lobby,
-                             certificateLogin);
+            
+            TestSetup("https://gateint.telekurs.ch/zebrac-qa-l", certificateLogin, lobby);
             return WebDriver;
         }
     }

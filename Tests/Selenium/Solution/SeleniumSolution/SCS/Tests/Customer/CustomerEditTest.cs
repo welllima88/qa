@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         {
             //before first test-method starts
             _tb = new ScsTestDirector();
-            _driver = _tb.SetupTest(); //default QA-L with certificate login and 10 seconds response timeout
+            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
 
             _customerMenu = new CustomerMenu(_driver);
             _customerEdit = new CustomerEdit(_driver);

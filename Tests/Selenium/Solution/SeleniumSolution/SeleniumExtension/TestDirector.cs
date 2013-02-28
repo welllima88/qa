@@ -92,11 +92,11 @@ namespace SIX.SCS.QA.Selenium.Extension
         ///   - SecureId
         ///   - UAF
         /// </param>
-        /// <param name="loginCheck"></param>
         /// <param name="logout"></param>
+        /// <param name="loginCheck"></param>
         /// <param name="logoutCheck"></param>
-        public void SetupTest(string baseUrl, ILogin login, ILoginCheck loginCheck, ILogout logout,
-                              ILogoutCheck logoutCheck)
+        public void TestSetup(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
+                              ILogoutCheck logoutCheck = null)
         {
             _login = login;
             _loginCheck = loginCheck;
@@ -109,10 +109,10 @@ namespace SIX.SCS.QA.Selenium.Extension
             BaseUrl = WebDriver.Url = baseUrl; // essential to avoid constructor actions  ;)
 
             _login.Login();
-            _loginCheck.CheckLogInSucess();
+            if (_loginCheck != null) _loginCheck.CheckLogInSucess();
         }
 
-        public virtual IWebDriverAdapter SetupTest()
+        public virtual IWebDriverAdapter DefaultTestSetup()
         {
             throw new NotImplementedException("sub class has to implement this method");
         }
@@ -124,8 +124,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         public void ShutDownTest()
         {
             _logout.Logout();
-            _logoutCheck.CheckLogOutSucess();
-
+            if (_logoutCheck != null) _logoutCheck.CheckLogOutSucess();
             WebDriver.Quit();
         }
     }
