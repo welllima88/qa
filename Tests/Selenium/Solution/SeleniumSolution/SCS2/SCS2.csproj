@@ -71,7 +71,6 @@
     <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
     <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
-    <Compile Include="TestObjects\Common\Zebra.cs" />
     <Compile Include="TestObjects\Contact\ContactCreate.cs" />
     <Compile Include="TestObjects\Contact\ContactEdit.cs" />
     <Compile Include="TestObjects\Contact\ContactView.cs" />
@@ -133,7 +132,7 @@
     <Compile Include="Tests\Customer\CustomerCreateTest.cs" />
     <Compile Include="TestObjects\Terminal\TerminalData.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
-    <Compile Include="Tests\Login\Login.cs" />
+    <Compile Include="Tests\Login\LoginTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
