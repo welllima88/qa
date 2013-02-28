@@ -38,6 +38,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         private ILoginCheck _loginCheck;
         private ILogout _logout;
         private ILogoutCheck _logoutCheck;
+        // private static readonly FirefoxBinary FirefoxBinary = new FirefoxBinary(@"D:\_tfs\ScsDev\QA\Tests\Selenium\Firefox\firefox.exe");
 
         /// <summary>
         /// Customize contructor for selecting browser and configure timeout
@@ -68,20 +69,11 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public string BaseUrl { get; private set; }
 
-        private static IWebDriverAdapter FireFoxWebDriverAdapter()
-        {
-            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(CertificateProfile);
-            var firefoxBinary = new FirefoxBinary(@"D:\_tfs\ScsDev\QA\Tests\Selenium\Firefox\firefox.exe");
-
-            return new WebDriverAdapter(new FirefoxDriver(firefoxBinary, firefoxProfile));
-        }
-
-        private static IWebDriverAdapter FireFoxWebDriverAdapter(string profileName)
+        private static IWebDriverAdapter FireFoxWebDriverAdapter(string profileName = CertificateProfile)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            var firefoxBinary = new FirefoxBinary(@"D:\_tfs\ScsDev\QA\Tests\Selenium\Firefox\firefox.exe");
 
-            return new WebDriverAdapter(new FirefoxDriver(firefoxBinary, firefoxProfile));
+            return new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
 
         private static IWebDriverAdapter InternetExplorerWebDriverAdapter()
@@ -115,7 +107,7 @@ namespace SIX.SCS.QA.Selenium.Extension
             WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(TimeOutSeconds));
 
             BaseUrl = WebDriver.Url = baseUrl; // essential to avoid constructor actions  ;)
-            
+
             _login.Login();
             _loginCheck.CheckLogInSucess();
         }
