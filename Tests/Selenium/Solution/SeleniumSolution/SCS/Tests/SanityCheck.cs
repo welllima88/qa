@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
     /// Summary description for UnitTest
     /// </summary>
     [TestClass]
-    public class BasicTest
+    public class SanityCheck
     {
         private static TestDirector _testDirector;
         private static IWebDriverAdapter _driver;
@@ -28,6 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
         public static void MyClassInitialize(TestContext testContext)
         {
             _testDirector = new ScsTestDirector();
+            _driver=_testDirector.WebDriver;
 
             // var auth = new UacLogin("six_scs_auto", "six_scs_auto_pw",_driver);
             // var auth = new CertificateLogin("tkcposl", _driver);
@@ -58,11 +59,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
         #endregion
 
         [TestMethod]
-        public void SanityCheck()
+        public void CheckWesAvailable()
         {
-            //
-            // TODO: Add test logic here
-            //
+            // TODO
         }
     }
 }
