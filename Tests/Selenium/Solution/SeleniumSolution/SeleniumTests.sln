@@ -28,15 +28,15 @@ Global
 		SccProjectUniqueName1 = SeleniumExtension\\SeleniumExtension.csproj
 		SccProjectName1 = SeleniumExtension
 		SccLocalPath1 = SeleniumExtension
-		SccProjectUniqueName2 = Integration\\Integration.csproj
-		SccProjectName2 = Integration
-		SccLocalPath2 = Integration
-		SccProjectUniqueName3 = SCS2\\SCS\u0020Platin.csproj
-		SccProjectName3 = SCS2
-		SccLocalPath3 = SCS2
-		SccProjectUniqueName4 = SCS\\SCS\u0020Classic.csproj
-		SccProjectName4 = SCS
-		SccLocalPath4 = SCS
+		SccProjectUniqueName2 = SCS2\\SCS\u0020Platin.csproj
+		SccProjectName2 = SCS2
+		SccLocalPath2 = SCS2
+		SccProjectUniqueName3 = SCS\\SCS\u0020Classic.csproj
+		SccProjectName3 = SCS
+		SccLocalPath3 = SCS
+		SccProjectUniqueName4 = Integration\\Integration.csproj
+		SccProjectName4 = Integration
+		SccLocalPath4 = Integration
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SeleniumTests1.vsmdi
