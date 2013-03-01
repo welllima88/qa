@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
         public static void MyClassInitialize(TestContext testContext)
         {
             _testDirector = new ScsClassicTestDirector();
-            _driver=_testDirector.WebDriver;
+            _driver = _testDirector.WebDriver;
 
             // var auth = new UacLogin("six_scs_auto", "six_scs_auto_pw",_driver);
             // var auth = new CertificateLogin("tkcposl", _driver);

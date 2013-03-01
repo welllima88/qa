@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
             var application = new Scs(WebDriver);
 
             TestSetup("https://gateint.telekurs.ch/scsc-qa-l", certificateLogin, application,
-                             application, certificateLogin);
+                      application, certificateLogin);
             return WebDriver;
         }
     }
