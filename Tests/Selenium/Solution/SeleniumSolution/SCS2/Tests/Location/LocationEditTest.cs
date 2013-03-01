@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
@@ -16,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
     {
         private static LocationView _locationView;
         private static LocationEdit _locationEdit;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;

@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
     {
         private static TerminalCreate _terminalCreate;
         private static TerminalView _terminalView;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;

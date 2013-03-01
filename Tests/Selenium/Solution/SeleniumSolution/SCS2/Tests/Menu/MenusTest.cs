@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
     public class MenusTest
     {
         private static TestDirector _tb;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static CustomerMenu _customerMenu;
         private static LocationMenu _locationMenu;
         private static TerminalMenu _terminalMenu;

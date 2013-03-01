@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
@@ -11,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
     public class TerminalCreateChooseArticleTest
     {
         private static TerminalCreate _terminalCreate;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
         private static Lobby _lobby;

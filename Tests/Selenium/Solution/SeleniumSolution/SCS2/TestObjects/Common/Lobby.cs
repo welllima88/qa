@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Login;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 
@@ -6,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class Lobby : ILogout
     {
-        private readonly IWebDriver _driver;
+        private readonly IWebDriverAdapter _driver;
         public ApplicationInfo ApplicationInfo;
         public Footer Footer;
         public LobbyMenu Menu;
@@ -16,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
 
-        public Lobby(IWebDriver driver)
+        public Lobby(IWebDriverAdapter driver)
         {
             _driver = driver;
             Menu = new LobbyMenu(_driver);

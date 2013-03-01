@@ -9,8 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
     {
         private readonly CustomerCreate _customerCreate;
         private readonly CustomerView _customerView;
-        private readonly IWebDriverAdapter _driver;
-
+        
         public CustomerEdit(IWebDriverAdapter driver) : base(driver)
         {
             _customerView = new CustomerView(Driver);
@@ -67,7 +66,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public String Ep2MerchantId
         {
-            get { return _driver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
+            get { return Driver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
         }
 
         public string CategoryCode

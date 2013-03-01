@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
     {
         private static BillingAddressView _billingAddressView;
         private static BillingAddressCreate _billingAddressCreate;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;

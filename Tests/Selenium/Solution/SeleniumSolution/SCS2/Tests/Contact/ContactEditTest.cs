@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
@@ -15,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
     {
         private static ContactEdit _contactEdit;
         private static ContactView _contactView;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;

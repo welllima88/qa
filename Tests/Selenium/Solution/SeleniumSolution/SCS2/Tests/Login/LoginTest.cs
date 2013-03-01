@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Login;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -11,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
     public class LoginTest : ILoginCheck
     {
         private static TestDirector _tb;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static Lobby _lobby;
 
         #region ILoginCheck Members

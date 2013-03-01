@@ -9,7 +9,6 @@
  * 
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -22,7 +21,7 @@ namespace SeleniumTests
     [TestClass]
     public class LobbyTest
     {
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
         private static Lobby _lobby;
 
