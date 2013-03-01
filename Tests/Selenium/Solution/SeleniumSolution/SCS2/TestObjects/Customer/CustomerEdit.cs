@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
     {
         private readonly CustomerCreate _customerCreate;
         private readonly CustomerView _customerView;
-        
+
         public CustomerEdit(IWebDriverAdapter driver) : base(driver)
         {
             _customerView = new CustomerView(Driver);
