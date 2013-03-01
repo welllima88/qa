@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         private static CustomerEdit _customerEdit;
         private static CustomerView _customerView;
         private static IWebDriverAdapter _driver;
-        private static ScsTestDirector _tb;
+        private static ScsClassicTestDirector _tb;
         private static CustomerMenu _customerMenu;
         private long _dt;
         private List<string> _formAlerts;
@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new ScsTestDirector();
+            _tb = new ScsClassicTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
 
             _customerMenu = new CustomerMenu(_driver);

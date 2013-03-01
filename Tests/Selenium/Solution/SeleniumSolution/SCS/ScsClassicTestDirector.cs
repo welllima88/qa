@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
 {
-    public class ScsTestDirector : TestDirector
+    public class ScsClassicTestDirector : TestDirector
     {
         public override IWebDriverAdapter DefaultTestSetup()
         {
