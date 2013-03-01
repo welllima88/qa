@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
@@ -15,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
     {
         private static CustomerEdit _customerEdit;
         private static CustomerView _customerView;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;
@@ -30,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
+            _tb = new Scs2TestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
 
             _customerMenu = new CustomerMenu(_driver);

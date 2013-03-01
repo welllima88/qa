@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
         private static TestDirector _tb;
         private static IWebDriver _driver;
         private static Lobby _lobby;
-        
+
         #region ILoginCheck Members
 
         public void CheckLogInSucess()
@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
+            _tb = new Scs2TestDirector();
             _driver = _tb.WebDriver;
             _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
             _lobby = new Lobby(_driver);

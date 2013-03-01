@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
@@ -13,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
     {
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriver _driver;
+        private static IWebDriverAdapter _driver;
         private static FormAlert _formAlert;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
@@ -26,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         {
             // no need Test
             //run IEDriverServer:           
-            _tb = new ScsPlatinTestDirector("IE");
+            _tb = new Scs2TestDirector("IE");
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);

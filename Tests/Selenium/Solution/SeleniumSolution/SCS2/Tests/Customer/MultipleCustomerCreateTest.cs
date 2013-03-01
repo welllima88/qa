@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 
@@ -70,8 +70,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
         public void EnterValidCustomerDataAndCancel()
         {
-            var tb = new ScsPlatinTestDirector();
-            IWebDriver driver = tb.DefaultTestSetup();
+            var tb = new Scs2TestDirector();
+            IWebDriverAdapter driver = tb.DefaultTestSetup();
             var customerMenu = new CustomerMenu(driver);
             var customerCreate = new CustomerCreate(driver);
 
