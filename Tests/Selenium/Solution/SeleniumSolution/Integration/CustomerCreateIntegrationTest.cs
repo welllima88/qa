@@ -57,7 +57,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [ClassInitialize]
         public static void MyClassInitialize(TestContext testContext)
         {
-            _zebra = new Scs2TestDirector();
+            _zebra = new ScsPlatinTestDirector();
             _scs = new ScsTestDirector();
             
             _zebra.DefaultTestSetup();
