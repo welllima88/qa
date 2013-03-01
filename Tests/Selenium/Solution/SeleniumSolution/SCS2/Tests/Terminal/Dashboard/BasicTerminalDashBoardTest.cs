@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new Scs2TestDirector();
+            _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _terminalCreate = new TerminalCreate(_driver);
             _terminalView = new TerminalView(_driver);

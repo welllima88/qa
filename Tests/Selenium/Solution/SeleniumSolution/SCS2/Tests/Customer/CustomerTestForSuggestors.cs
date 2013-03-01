@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new Scs2TestDirector();
+            _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _customerCreate = new CustomerCreate(_driver);
             _customerMenu = new CustomerMenu(_driver);

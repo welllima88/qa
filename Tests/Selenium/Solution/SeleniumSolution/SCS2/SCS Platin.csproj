@@ -53,7 +53,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Scs2TestDirector.cs" />
+    <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />

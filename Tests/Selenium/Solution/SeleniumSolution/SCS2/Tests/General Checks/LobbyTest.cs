@@ -29,7 +29,7 @@ namespace SeleniumTests
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new Scs2TestDirector();
+            _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup();
             _lobby = new Lobby(_driver);
         }

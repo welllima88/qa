@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new Scs2TestDirector();
+            _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
             _lobbyMenu = new LobbyMenu(_driver);
             _customerMenu = new CustomerMenu(_driver);

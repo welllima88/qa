@@ -70,7 +70,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
         public void EnterValidCustomerDataAndCancel()
         {
-            var tb = new Scs2TestDirector();
+            var tb = new ScsPlatinTestDirector();
             IWebDriver driver = tb.DefaultTestSetup();
             var customerMenu = new CustomerMenu(driver);
             var customerCreate = new CustomerCreate(driver);

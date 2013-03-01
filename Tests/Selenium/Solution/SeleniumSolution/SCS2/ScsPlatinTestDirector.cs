@@ -5,13 +5,13 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 {
-    public class Scs2TestDirector : TestDirector
+    public class ScsPlatinTestDirector : TestDirector
     {
-        public Scs2TestDirector(string p) : base(p)
+        public ScsPlatinTestDirector(string p) : base(p)
         {
         }
 
-        public Scs2TestDirector()
+        public ScsPlatinTestDirector()
         {
         }
 
