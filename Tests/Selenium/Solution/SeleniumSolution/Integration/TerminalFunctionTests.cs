@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSClassics;
-using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Administration;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal;
 
 namespace SIX.SCS.QA.Selenium.Tests.Integration
 {
@@ -31,8 +27,8 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [ClassInitialize]
         public static void MyClassInitialize(TestContext testContext)
         {
-            _zebra = new ScsPlatinTestDirector();
-            _scs = new ScsTestDirector();
+            _zebra = new SCSPlatin.ScsPlatinTestDirector();
+            _scs = new SCSClassics.ScsClassicTestDirector();
         }
 
         //
@@ -59,11 +55,11 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [TestMethod]
         public void YomaniDefaultFktCreateTerminalShortCut()
         {
-            var terminalFunctionsAdmin = new TerminalFunctions(_scs.WebDriver);
+            var terminalFunctionsAdmin = new SCSClassics.TestObjects.Terminal.TerminalCreate(_scs.WebDriver);
             _scs.WebDriver.Url = _scs.BaseUrl +
                                  "/DefaultFunctions.asp?caller=SoftwareId&mode=show&SoftwareId=1085&CategoryCode=0";
-            
-            var terminalCreate = new TerminalCreate(_zebra.WebDriver);
+
+            var terminalCreate = new SCSPlatin.TestObjects.Terminal.TerminalCreate(_zebra.WebDriver);
             _zebra.WebDriver.Url = _zebra.BaseUrl +
                                    "Pages/Terminal/TerminalNewDetails.aspx?CustomerId=123321&LocationId=&ArticleId=D988260F-C9EC-4067-9CBE-27A48A3B4397";
 
