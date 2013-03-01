@@ -4,11 +4,10 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactView: WebObject
+    public class ContactView : WebObject
     {
         public ContactView(IWebDriverAdapter driver) : base(driver)
         {
-        
         }
 
         public string FirstName

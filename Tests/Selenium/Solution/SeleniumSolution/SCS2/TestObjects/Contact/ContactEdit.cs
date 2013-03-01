@@ -4,11 +4,11 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactEdit:WebObject
+    public class ContactEdit : WebObject
     {
         private readonly ContactCreate _contactCreate;
         private readonly ContactView _contactView;
-        
+
         public ContactEdit(IWebDriverAdapter driver) : base(driver)
         {
             _contactCreate = new ContactCreate(Driver);
