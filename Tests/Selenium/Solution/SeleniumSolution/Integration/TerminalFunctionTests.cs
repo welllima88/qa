@@ -1,5 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Terminal;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
 
 namespace SIX.SCS.QA.Selenium.Tests.Integration
 {
@@ -27,8 +30,8 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [ClassInitialize]
         public static void MyClassInitialize(TestContext testContext)
         {
-            _zebra = new SCSPlatin.ScsPlatinTestDirector();
-            _scs = new SCSClassics.ScsClassicTestDirector();
+            _zebra = new ScsPlatinTestDirector();
+            _scs = new ScsClassicTestDirector();
         }
 
         //
@@ -55,7 +58,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [TestMethod]
         public void YomaniDefaultFktCreateTerminalShortCut()
         {
-            var terminalFunctionsAdmin = new SCSClassics.TestObjects.Terminal.TerminalCreate(_scs.WebDriver);
+            var terminalFunctionsAdmin = new TerminalCreate(_scs.WebDriver);
             _scs.WebDriver.Url = _scs.BaseUrl +
                                  "/DefaultFunctions.asp?caller=SoftwareId&mode=show&SoftwareId=1085&CategoryCode=0";
 

@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-
+using SIX.SCS.QA.Selenium.Tests.SCSClassics;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 
 namespace SIX.SCS.QA.Selenium.Tests.Integration
 {
@@ -13,8 +15,8 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
     {
         private static TestDirector _scs;
         private static TestDirector _zebra;
-        private static SCSPlatin.TestObjects.Customer.CustomerCreate _zebraCustomerCreate;
-        private static SCSPlatin.TestObjects.Customer.CustomerView _zebraCustomerView;
+        private static CustomerCreate _zebraCustomerCreate;
+        private static CustomerView _zebraCustomerView;
 
         private static SCSClassics.TestObjects.Customer.CustomerCreate _scsCustomerCreate;
         private static SCSClassics.TestObjects.Customer.CustomerView _scsCustomerView;
@@ -56,14 +58,14 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
         [ClassInitialize]
         public static void MyClassInitialize(TestContext testContext)
         {
-            _zebra = new SCSPlatin.ScsPlatinTestDirector();
-            _scs = new SCSClassics.ScsClassicTestDirector();
+            _zebra = new ScsPlatinTestDirector();
+            _scs = new ScsClassicTestDirector();
 
             _zebra.DefaultTestSetup();
             _scs.DefaultTestSetup();
 
-            _zebraCustomerView = new SCSPlatin.TestObjects.Customer.CustomerView(_zebra.WebDriver);
-            _zebraCustomerCreate = new SCSPlatin.TestObjects.Customer.CustomerCreate(_zebra.WebDriver);
+            _zebraCustomerView = new CustomerView(_zebra.WebDriver);
+            _zebraCustomerCreate = new CustomerCreate(_zebra.WebDriver);
             _scsCustomerView = new SCSClassics.TestObjects.Customer.CustomerView(_zebra.WebDriver);
             _scsCustomerCreate = new SCSClassics.TestObjects.Customer.CustomerCreate(_zebra.WebDriver);
         }
