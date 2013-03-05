@@ -26,19 +26,19 @@ namespace SIX.SCS.QA.Selenium.Extension
 
             // f*** o**:
             //_driver.WaitForElementPresent(By.XPath("//div[@class='suggestBox']")).Click();
-            IWebElement e;
+            IWebElement suggestElement;
             try
             {
                 //IWebElement e = _driver.WaitForElementPresent(By.XPath("//div[@inttext='" + intValue + "']"));
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + "CH"+ "']"));
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + intValue + "']"));
-                e = _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + intValue + "']"));
-                e.Click();
+                suggestElement = _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + intValue + "']"));
+                suggestElement.Click();
             }
                 //catch (NoSuchElementException)
             catch (Exception ex)
             {
-                Console.Error.WriteLine("suggestor element failure [" + intValue + "]" + ex.Message);
+                Console.Error.WriteLine("failure: skip 'click' on suggestor element [" + intValue + "] " + ex.Message);
             }
             //_driver.WaitForElementPresent(By.CssSelector("div.suggestBox div div")).Click();                        
         }
