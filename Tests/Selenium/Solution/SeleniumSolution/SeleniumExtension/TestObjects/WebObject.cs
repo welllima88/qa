@@ -12,9 +12,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
             Driver = driver;
         }
 
-        /// <summary>
-        /// override the default constructor to prevent initializing without a WebDriver reference
-        /// </summary>
+        // /// <summary>
+        // /// override the default constructor to prevent initializing without a WebDriver reference
+        // /// </summary>
         // private WebObject()
         //{
         //   throw new NotSupportedException("The default constructor is not allowed to be used to avoid missing webdriver reference");
