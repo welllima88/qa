@@ -1,13 +1,13 @@
 ﻿using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Login;
+using SIX.SCS.QA.Selenium.Extension.TestObjects;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
-    public class Lobby : ILogout
+    public class Lobby : WebObject, ILogout
     {
-        private readonly IWebDriverAdapter _driver;
         public ApplicationInfo ApplicationInfo;
         public Footer Footer;
         public LobbyMenu Menu;
@@ -17,27 +17,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
 
-        public Lobby(IWebDriverAdapter driver)
+        public Lobby(IWebDriverAdapter driver) : base(driver)
         {
-            _driver = driver;
-            Menu = new LobbyMenu(_driver);
-            RecentElements = new RecentElements(_driver);
-            RecentMassmutations = new RecentMassmutations(_driver);
-            NavigationBar = new NavigationBar(_driver);
-            Footer = new Footer(_driver);
-            MetaNavBar = new MetaNavBar(_driver);
-            ApplicationInfo = new ApplicationInfo(_driver);
-            QuickSearch = new QuickSearch(_driver);
+            Menu = new LobbyMenu(Driver);
+            RecentElements = new RecentElements(Driver);
+            RecentMassmutations = new RecentMassmutations(Driver);
+            NavigationBar = new NavigationBar(Driver);
+            Footer = new Footer(Driver);
+            MetaNavBar = new MetaNavBar(Driver);
+            ApplicationInfo = new ApplicationInfo(Driver);
+            QuickSearch = new QuickSearch(Driver);
         }
 
         public IWebElement CompanyLogo
         {
-            get { return _driver.FindElement(By.CssSelector("html>body>form>img.companyLogo")); }
+            get { return Driver.FindElement(By.CssSelector("html>body>form>img.companyLogo")); }
         }
 
         public IWebElement Headline
         {
-            get { return _driver.FindElement(By.CssSelector("td#content h1")); }
+            get { return Driver.FindElement(By.CssSelector("td#content h1")); }
         }
 
         #region ILogout Members

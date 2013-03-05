@@ -1,0 +1,23 @@
+using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.TestObjects;
+
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
+{
+    public class QuickSearch : WebObject
+    {
+        public QuickSearch(IWebDriverAdapter driver) : base(driver)
+        {
+        }
+
+        public IWebElement SearchField
+        {
+            get { return Driver.FindElement(By.CssSelector("div#searchBar>input#searchText")); }
+        }
+
+        public IWebElement SearchButton
+        {
+            get { return Driver.FindElement(By.CssSelector("div#searchBar>p#searchSubmit")); }
+        }
+    }
+}
