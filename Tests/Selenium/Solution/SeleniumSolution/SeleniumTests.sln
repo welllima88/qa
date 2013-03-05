@@ -19,6 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS Platin", "SCS2\SCS Plat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "Integration\Integration.csproj", "{3202B79E-97DD-449C-9833-C584DE26EFB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{A2497504-A07C-4F79-9389-73CDF2A23910}"
+	ProjectSection(SolutionItems) = preProject
+		E:\Konzept\Test-Automatisierung-Konzept.docx = E:\Konzept\Test-Automatisierung-Konzept.docx
+		E:\Konzept\TESTAUTOMATISIERUNG.cayra = E:\Konzept\TESTAUTOMATISIERUNG.cayra
+		E:\Konzept\TESTAUTOMATISIERUNG.mm = E:\Konzept\TESTAUTOMATISIERUNG.mm
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 5
