@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 {
-    public class ContractCreate:WebObject 
+    public class ContractCreate : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
     {
         private ContractSelect _contractSelect;
