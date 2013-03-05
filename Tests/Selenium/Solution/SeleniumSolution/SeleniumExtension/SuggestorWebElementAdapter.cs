@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Extension
                 //catch (NoSuchElementException)
             catch (Exception ex)
             {
-                Console.Out.WriteLine("suggestor element failure [" + intValue + "]" + ex.Message);
+                Console.Error.WriteLine("suggestor element failure [" + intValue + "]" + ex.Message);
             }
             //_driver.WaitForElementPresent(By.CssSelector("div.suggestBox div div")).Click();                        
         }
