@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
     {
         private readonly string _password = "six_scs_auto";
         private readonly UacLoginPage _uacLoginPage;
-        private readonly string _userName = "six_scs_auto";
+        private readonly string _userName = "six_scs_auto_PW";
 
         public UacLogin(string userName, string password, IWebDriverAdapter driver) : base(driver)
         {
