@@ -73,8 +73,8 @@ namespace SeleniumTests
 
             Assert.IsTrue(_lobby.NavigationBar.MoreMenu.Displayed);
             _lobby.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobby.NavigationBar.Help.Displayed);
-            Assert.IsTrue(_lobby.NavigationBar.SystemInfo.Displayed);
+            Assert.IsTrue(_lobby.NavigationBar.Help.Enabled);
+            Assert.IsTrue(_lobby.NavigationBar.SystemInfo.Enabled);
             _lobby.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
 
