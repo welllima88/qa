@@ -81,7 +81,7 @@ namespace SeleniumTests
         [TestMethod]
         public void CheckMetaNavBar()
         {
-            Assert.IsFalse(_lobby.MetaNavBar.User.Displayed);
+            Assert.IsTrue(_lobby.MetaNavBar.User.Displayed);
             Assert.IsTrue(_lobby.MetaNavBar.Logout.Displayed);
             Assert.IsTrue(_lobby.MetaNavBar.Languages.Displayed);
 
