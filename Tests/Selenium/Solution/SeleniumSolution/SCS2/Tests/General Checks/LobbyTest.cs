@@ -73,7 +73,7 @@ namespace SeleniumTests
 
             Assert.IsTrue(_lobby.NavigationBar.MoreMenu.Displayed);
             _lobby.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobby.NavigationBar.Help.Enabled);
+            Assert.IsTrue(_lobby.NavigationBar.Help.Displayed);
             Assert.IsTrue(_lobby.NavigationBar.SystemInfo.Enabled);
             _lobby.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
@@ -87,7 +87,7 @@ namespace SeleniumTests
 
             _lobby.MetaNavBar.Languages.Click();
             Assert.IsTrue(_lobby.MetaNavBar.Language("Deutsch").Displayed);
-            Assert.IsTrue(_lobby.MetaNavBar.Language("English").Displayed);
+            Assert.IsTrue(_lobby.MetaNavBar.Language("English").Enabled);
             _lobby.MetaNavBar.Languages.Click();
         }
 
