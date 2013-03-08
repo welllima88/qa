@@ -8,16 +8,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public QuickSearch(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "div#searchBar>";
         }
 
         public IWebElement SearchField
         {
-            get { return Driver.FindElement(By.CssSelector("div#searchBar>input#searchText")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix = "input#searchText")); }
         }
 
         public IWebElement SearchButton
         {
-            get { return Driver.FindElement(By.CssSelector("div#searchBar>p#searchSubmit")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "p#searchSubmit")); }
         }
     }
 }
