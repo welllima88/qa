@@ -9,6 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public CustomerCreate(IWebDriverAdapter driver)
             : base(driver)
         {
+            Prefix = "#ctl00_bodyContentPlaceHolder";
         }
 
         #region ICustomerCreate Members
@@ -17,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindSuggesterElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx"))
+                Driver.FindSuggesterElement(By.CssSelector(Prefix +"_addressControl_sugCountrytbx"))
                     .Suggestor(value);
             }
         }
@@ -26,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsBillingTenant")).
+                Driver.FindAdaptedElement(By.CssSelector(Prefix +"_customerSbsBillingTenant")).
                     Selector().SelectByText(value);
             }
         }
@@ -35,8 +36,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_zipTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_zipTextBox")).SendKeys(
                     value);
             }
         }
@@ -45,8 +46,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_cityTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_cityTextBox")).SendKeys
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_cityTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_cityTextBox")).SendKeys
                     (
                         value);
             }
@@ -56,10 +57,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox"))
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_addressAdditionTextBox"))
                     .
                     Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox"))
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_addressAdditionTextBox"))
                     .
                     SendKeys(
                         value);
@@ -70,8 +71,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_poTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_poTextBox")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_poTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_poTextBox")).SendKeys(
                     value);
             }
         }
@@ -80,8 +81,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_regionTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_regionTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_regionTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_regionTextBox")).
                     SendKeys(
                         value);
             }
@@ -91,9 +92,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_telephoneTextBox")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_telephoneTextBox")).
                     SendKeys(
                         value);
             }
@@ -103,9 +104,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_telephone2TextBox")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_telephone2TextBox")).
                     SendKeys(
                         value);
             }
@@ -115,8 +116,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_faxTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_faxTextBox")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_faxTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_faxTextBox")).SendKeys(
                     value);
             }
         }
@@ -125,8 +126,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_emailTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_emailTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_emailTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_emailTextBox")).
                     SendKeys(value);
             }
         }
@@ -135,8 +136,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).SendKeys(value);
+                Driver.FindElement(By.CssSelector(Prefix +"_customerNameTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_customerNameTextBox")).SendKeys(value);
             }
         }
 
@@ -144,8 +145,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_sapNumberInput")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_sapNumberInput")).SendKeys(value);
+                Driver.FindElement(By.CssSelector(Prefix +"_sapNumberInput")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_sapNumberInput")).SendKeys(value);
             }
         }
 
@@ -153,8 +154,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCompanyName")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCompanyName")).SendKeys(value);
+                Driver.FindElement(By.CssSelector(Prefix +"_inpCompanyName")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_inpCompanyName")).SendKeys(value);
             }
         }
 
@@ -163,7 +164,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier")).
+                Driver.FindAdaptedElement(By.CssSelector(Prefix +"_supplierDropDown_dnSupplier")).
                     Selector().SelectByText(value);
             }
         }
@@ -173,7 +174,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsCurrency")).Selector
+                Driver.FindAdaptedElement(By.CssSelector(Prefix +"_customerSbsCurrency")).Selector
                     ().SelectByText(value);
             }
         }
@@ -183,7 +184,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindSuggesterElement(
-                    By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDowntbx")).Suggestor(value);
+                    By.CssSelector(Prefix +"_rowCategoryCode_sugDropDowntbx")).Suggestor(value);
             }
         }
 
@@ -191,7 +192,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowAgency_sugAgency")).Selector
+                Driver.FindAdaptedElement(By.CssSelector(Prefix +"_rowAgency_sugAgency")).Selector
                     ().SelectByText(value);
             }
         }
@@ -201,7 +202,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(
-                    By.CssSelector("#ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract")).Selector().
+                    By.CssSelector(Prefix +"_rowSupportContract_ddSupportContract")).Selector().
                     SelectByText(value);
             }
         }
@@ -210,9 +211,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_streetNameTextBox")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox")).
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_streetNameTextBox")).
                     SendKeys(
                         value);
             }
@@ -223,7 +224,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindSuggesterElement(By.CssSelector(
-                    "#ctl00_bodyContentPlaceHolder_addressControl_sugLanguagetbx")).Suggestor(value);
+                    Prefix +"_addressControl_sugLanguagetbx")).Suggestor(value);
             }
         }
 
@@ -231,28 +232,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webTextBox")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webTextBox")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_webTextBox")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_addressControl_webTextBox")).SendKeys(
                     value);
             }
         }
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_cancelButton")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_saveButton")); }
         }
 
         public string CustomerNumber
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNumberInput")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNumberInput")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_customerNumberInput")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_customerNumberInput")).SendKeys(
                     value);
             }
         }
@@ -272,7 +273,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSegment")).Selector().
+                Driver.FindAdaptedElement(By.CssSelector(Prefix +"_customerSegment")).Selector().
                     SelectByText(value);
             }
         }
