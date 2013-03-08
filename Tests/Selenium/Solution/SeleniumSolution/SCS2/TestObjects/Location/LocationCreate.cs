@@ -8,17 +8,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
     {
         public LocationCreate(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "#LocationData";
         }
 
         #region ILocationCreate Members
 
         public string Country
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("#LocationData_CountryId")).Selector().SelectByText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix +"_CountryId")).Selector().SelectByText(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector("#LocationData_CountryId")).Selector().SelectedOption.Text;
+                    Driver.FindAdaptedElement(By.CssSelector(Prefix +"_CountryId")).Selector().SelectedOption.Text;
             }
         }
 
@@ -26,8 +27,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_ZIP")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_ZIP")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_ZIP")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_ZIP")).SendKeys(
                     value);
             }
         }
@@ -36,8 +37,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_City")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_City")).SendKeys
+                Driver.FindElement(By.CssSelector(Prefix +"_City")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_City")).SendKeys
                     (
                         value);
             }
@@ -47,10 +48,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_AddressAddition"))
+                Driver.FindElement(By.CssSelector(Prefix +"_AddressAddition"))
                     .
                     Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_AddressAddition"))
+                Driver.FindElement(By.CssSelector(Prefix +"_AddressAddition"))
                     .
                     SendKeys(
                         value);
@@ -61,8 +62,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_PO")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_PO")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_PO")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_PO")).SendKeys(
                     value);
             }
         }
@@ -71,8 +72,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Region")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Region")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Region")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_Region")).
                     SendKeys(
                         value);
             }
@@ -82,9 +83,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Telephone")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Telephone")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Telephone")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Telephone")).
                     SendKeys(
                         value);
             }
@@ -94,9 +95,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Mobile")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Mobile")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Mobile")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Mobile")).
                     SendKeys(
                         value);
             }
@@ -106,8 +107,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Fax")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Fax")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_Fax")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_Fax")).SendKeys(
                     value);
             }
         }
@@ -116,8 +117,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Email")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Email")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Email")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_Email")).
                     SendKeys(value);
             }
         }
@@ -127,8 +128,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_SapNumber")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_SapNumber")).SendKeys(value);
+                Driver.FindElement(By.CssSelector(Prefix +"_SapNumber")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_SapNumber")).SendKeys(value);
             }
         }
 
@@ -136,8 +137,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_LocationName")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_LocationName")).SendKeys(value);
+                Driver.FindElement(By.CssSelector(Prefix +"_LocationName")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_LocationName")).SendKeys(value);
             }
         }
 
@@ -146,9 +147,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Street")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Street")).
                     Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Street")).
+                Driver.FindElement(By.CssSelector(Prefix +"_Street")).
                     SendKeys(
                         value);
             }
@@ -156,11 +157,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Language
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("#LocationData_LanguageId")).Selector().SelectByText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix +"_LanguageId")).Selector().SelectByText(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector("#LocationData_LanguageId")).Selector().SelectedOption.
+                    Driver.FindAdaptedElement(By.CssSelector(Prefix +"_LanguageId")).Selector().SelectedOption.
                         Text;
             }
         }
@@ -169,8 +170,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#LocationData_Web")).Clear();
-                Driver.FindElement(By.CssSelector("#LocationData_Web")).SendKeys(
+                Driver.FindElement(By.CssSelector(Prefix +"_Web")).Clear();
+                Driver.FindElement(By.CssSelector(Prefix +"_Web")).SendKeys(
                     value);
             }
         }

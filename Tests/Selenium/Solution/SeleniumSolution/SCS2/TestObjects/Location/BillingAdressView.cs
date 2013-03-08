@@ -8,11 +8,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
     {
         public BillingAddressView(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "#LocationData";
         }
 
         public string CompanyName
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_LocationName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_LocationName")).Text; }
         }
 
         public string StreetName
@@ -20,7 +21,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_Street"))
+                    Driver.FindElement(By.CssSelector(Prefix +"_Street"))
                         .Text;
             }
         }
@@ -30,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_ZIP")).Text;
+                    Driver.FindElement(By.CssSelector(Prefix +"_ZIP")).Text;
             }
         }
 
@@ -39,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_City")).Text;
+                    Driver.FindElement(By.CssSelector(Prefix +"_City")).Text;
             }
         }
 
@@ -49,7 +50,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_LanguageId")).Text;
+                    Driver.FindElement(By.CssSelector(Prefix +"_LanguageId")).Text;
             }
         }
 
@@ -58,44 +59,44 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_CountryId")).Text;
+                    Driver.FindElement(By.CssSelector(Prefix +"_CountryId")).Text;
             }
         }
 
 
         public string Po
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_PO")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_PO")).Text; }
         }
 
         public string AdressAddition
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_AddressAddition")).Text; }
         }
 
         public string Email
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Email")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Email")).Text; }
         }
 
         public string Web
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Web")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Web")).Text; }
         }
 
         public string Telephone
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Telephone")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Telephone")).Text; }
         }
 
         public string Mobile
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Mobile")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Mobile")).Text; }
         }
 
         public string Fax
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Fax")).Text; }
         }
 
         public IWebElement EditButton
