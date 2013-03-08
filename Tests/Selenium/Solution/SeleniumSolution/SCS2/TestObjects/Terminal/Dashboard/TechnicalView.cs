@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
@@ -6,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
     {
         //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
 
-        public TechnicalView(IWebDriver driver) : base(driver)
+        public TechnicalView(IWebDriverAdapter driver) : base(driver)
         {
             Pre = "div#portlet_TerminalTechnicalViewpointPortlet_content div#SetupDataTree ul";
         }
