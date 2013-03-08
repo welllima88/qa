@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public IWebElement PrintPage
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "a[href*='JavaScript:Page.Print()']")); }
+            get { return Driver.FindElement(By.CssSelector("td#footerFunctionBar>a[href*='JavaScript:Page.Print()']")); }
         }
 
         public IWebElement ScrollUp
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Prefix + "a[href*='JavaScript:window.scroll(0,0)']"));
+                    Driver.FindElement(By.CssSelector("td#footerFunctionBar>a[href*='JavaScript:window.scroll(0,0)']"));
             }
         }
     }
