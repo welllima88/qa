@@ -99,9 +99,12 @@
     <Compile Include="TestObjects\Terminal\Brands.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\CommonTerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Contacts.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\SalesContract.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TechnicalView.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalSaleContract.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTexts.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
