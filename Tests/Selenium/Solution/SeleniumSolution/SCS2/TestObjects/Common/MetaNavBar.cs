@@ -8,11 +8,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public MetaNavBar(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "td#metaNavBar ";
         }
 
         public IWebElement Logout
         {
-            get { return Driver.FindElement(By.CssSelector("a#ctl00_hplLogout[href*='/Logout.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "a#ctl00_hplLogout[href*='/Logout.aspx']")); }
         }
 
         public IWebElement User
@@ -21,13 +22,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a#ctl00_hplSimpleUserInfo[href*='/User/UserEdit.aspx?PageMode=view&UserName=']"));
+                        By.CssSelector(Prefix +
+                                       "a#ctl00_hplSimpleUserInfo[href*='/User/UserEdit.aspx?PageMode=view&UserName=']"));
             }
         }
 
         public IWebElement Languages
         {
-            get { return Driver.FindElement(By.CssSelector("a#ctl00_hplLanguages.menu")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "a#ctl00_hplLanguages.menu")); }
         }
 
         public IWebElement Language(string language)
