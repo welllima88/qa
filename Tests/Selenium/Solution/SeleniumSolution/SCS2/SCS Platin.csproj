@@ -69,6 +69,7 @@
     <Compile Include="TestObjects\Brand\ContractSelect.cs" />
     <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
     <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\MenuObject.cs" />
     <Compile Include="TestObjects\Common\QuickSearch.cs" />
     <Compile Include="TestObjects\Common\Footer.cs" />
     <Compile Include="TestObjects\Common\Menu\CustomerMenu.cs" />

@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactEdit : WebObject
+    public class ContactEdit : WebObject, IContactEdit
     {
         private readonly ContactCreate _contactCreate;
         private readonly ContactView _contactView;
