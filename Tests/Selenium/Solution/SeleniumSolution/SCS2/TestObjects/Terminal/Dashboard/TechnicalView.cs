@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 
         public TechnicalView(IWebDriverAdapter driver) : base(driver)
         {
-            Pre = "div#portlet_TerminalTechnicalViewpointPortlet_content div#SetupDataTree ul";
+            Prefix = "div#portlet_TerminalTechnicalViewpointPortlet_content div#SetupDataTree ul";
         }
 
         public IWebElement TerminalId
@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Pre + "li:nth-child(1)" + Suf));
+                            Prefix + "li:nth-child(1)" + Suf));
             }
         }
 
@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Pre + "li:nth-child(3)" + Suf));
+                            Prefix + "li:nth-child(3)" + Suf));
             }
         }
 
@@ -41,7 +41,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Pre + "li:nth-child(4)" + Suf));
+                            Prefix + "li:nth-child(4)" + Suf));
             }
         }
 
@@ -52,7 +52,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Pre + "li:nth-child(5)" + Suf));
+                            Prefix + "li:nth-child(5)" + Suf));
             }
         }
 
@@ -63,7 +63,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Pre + "li:nth-child(6)" + Suf));
+                            Prefix + "li:nth-child(6)" + Suf));
             }
         }
     }
