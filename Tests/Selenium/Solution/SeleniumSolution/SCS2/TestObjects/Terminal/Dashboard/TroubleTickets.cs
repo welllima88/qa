@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
-    public class TroubleTickets:PortletViewBase
+    public class TroubleTickets : PortletViewBase
     {
         public TroubleTickets(IWebDriverAdapter driver) : base(driver)
         {

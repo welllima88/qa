@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
-    public class TerminalDashboard:WebObject
+    public class TerminalDashboard : WebObject
     {
         public Brands Brands;
         public CommonTerminalInfo CommonTerminalInfo;
@@ -14,15 +14,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         public TerminalTexts TerminalTexts;
         public TroubleTickets TroubleTickets;
 
-        public TerminalDashboard(IWebDriverAdapter driver):base(driver)
+        public TerminalDashboard(IWebDriverAdapter driver) : base(driver)
         {
-
             CommonTerminalInfo = new CommonTerminalInfo(Driver);
-            Contacts=new Contacts(Driver);
-            TechnicalView=new TechnicalView(Driver);
+            Contacts = new Contacts(Driver);
+            TechnicalView = new TechnicalView(Driver);
             TerminalSaleContract = new TerminalSaleContract(Driver);
             TerminalTexts = new TerminalTexts(Driver);
-            TroubleTickets=new TroubleTickets(Driver);
+            TroubleTickets = new TroubleTickets(Driver);
         }
 
         public IWebElement EditButton
