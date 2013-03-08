@@ -10,6 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public RecentMassmutations(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "div.container ";
         }
 
         public String Header
@@ -19,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return Driver.FindElements(By.CssSelector("div.container a[id$='_hplBatchHistory']")); }
+            get { return Driver.FindElements(By.CssSelector(Prefix + "a[id$='_hplBatchHistory']")); }
         }
 
         public IWebElement MostRecent
@@ -30,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public IWebElement RecentElement(int elementNo)
         {
             return Driver.FindElement(
-                By.CssSelector("div.container a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl" +
+                By.CssSelector(Prefix + "a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl" +
                                (elementNo - 1).ToString("00") +
                                "_hplBatchHistory"));
         }

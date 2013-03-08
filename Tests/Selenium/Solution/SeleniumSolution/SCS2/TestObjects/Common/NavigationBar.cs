@@ -8,6 +8,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public NavigationBar(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "td#tabNavBar ";
         }
 
         public IWebElement Lobby
@@ -16,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='Default']"));
+                        By.CssSelector(Prefix+"div#ctl00_pnlMainMenu div#menuItems a[href*='Default']"));
             }
             //todod: ... [text*='Lobby'] doesnt work...why??
         }
@@ -27,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
+                        By.CssSelector(Prefix+"div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
             }
         }
 
@@ -37,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
+                        By.CssSelector(Prefix +"div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
             }
         }
 
@@ -47,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink"));
+                        By.CssSelector(Prefix +"div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink"));
             }
         }
 
