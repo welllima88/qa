@@ -4,25 +4,26 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactView : WebObject
+    public class ContactView : WebObject, IContactView
     {
         public ContactView(IWebDriverAdapter driver) : base(driver)
         {
+            Prefix = "#Person";
         }
 
         public string FirstName
         {
-            get { return Driver.FindElement(By.CssSelector("#Person_FirstName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_FirstName")).Text; }
         }
 
         public string Name
         {
-            get { return Driver.FindElement(By.CssSelector("#Person_LastName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_LastName")).Text; }
         }
 
         public string Salutation
         {
-            get { return Driver.FindElement(By.CssSelector("#Person_Title")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix +"_Title")).Text; }
         }
 
         public string Country

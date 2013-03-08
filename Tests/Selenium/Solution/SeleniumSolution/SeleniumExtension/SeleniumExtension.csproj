@@ -86,6 +86,7 @@
     <Compile Include="TestDirector.cs" />
     <Compile Include="TestObjects\IContactCreate.cs" />
     <Compile Include="TestObjects\IContactEdit.cs" />
+    <Compile Include="TestObjects\IContactView.cs" />
     <Compile Include="TestObjects\ICustomerCreate.cs" />
     <Compile Include="TestObjects\ICustomerEdit.cs" />
     <Compile Include="TestObjects\ICustomerView.cs" />
