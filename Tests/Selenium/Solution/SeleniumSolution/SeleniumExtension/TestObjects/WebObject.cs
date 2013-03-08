@@ -28,5 +28,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
         public IWebDriverAdapter Driver { get; private set; }
 
         #endregion
+
+        protected string Prefix = "";
+        protected string Suffix = "";
+
     }
 }
