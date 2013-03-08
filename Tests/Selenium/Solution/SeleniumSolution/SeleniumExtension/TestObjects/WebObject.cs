@@ -1,5 +1,8 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects
 {
+    /// <summary>
+    /// This abstract WebObject bundles features for all test objects, like Driver Reference and locator information
+    /// </summary>
     public abstract class WebObject : IWebObject
     {
         /// <summary>
