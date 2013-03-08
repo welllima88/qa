@@ -10,6 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         public TechnicalView(IWebDriverAdapter driver) : base(driver)
         {
             Prefix = "div#portlet_TerminalTechnicalViewpointPortlet_content div#SetupDataTree ul";
+            Suffix = "??";
         }
 
         public IWebElement TerminalId
@@ -19,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(1)" + Suf));
+                            Prefix + "li:nth-child(1)" + Suffix));
             }
         }
 
@@ -30,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(3)" + Suf));
+                            Prefix + "li:nth-child(3)" + Suffix));
             }
         }
 
@@ -41,7 +42,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(4)" + Suf));
+                            Prefix + "li:nth-child(4)" + Suffix));
             }
         }
 
@@ -52,7 +53,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(5)" + Suf));
+                            Prefix + "li:nth-child(5)" + Suffix));
             }
         }
 
@@ -63,7 +64,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(6)" + Suf));
+                            Prefix + "li:nth-child(6)" + Suffix));
             }
         }
     }
