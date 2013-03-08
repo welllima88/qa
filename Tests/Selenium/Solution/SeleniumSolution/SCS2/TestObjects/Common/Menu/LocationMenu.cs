@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 {
-    public class LocationMenu : WebObject
+    public class LocationMenu : MenuObject
     {
         public LocationMenu(IWebDriverAdapter driver) : base(driver)
         {

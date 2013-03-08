@@ -7,9 +7,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
     /// <summary>
     /// css Locator have problems with menu so use xpath until resolved the reason...
     /// </summary>
-    public class LobbyMenu : WebObject
+    public class LobbyMenu : MenuObject
     {
-        public const string MenuPrefix = "//td[@id='leftHandMenu']/span[@id=\"ctl00_trvNavigation\"]/descendant::";
         public CustomerMenu Customer;
         public LocationMenu LocationMenu;
         public MassMutationMenu MassMutation;

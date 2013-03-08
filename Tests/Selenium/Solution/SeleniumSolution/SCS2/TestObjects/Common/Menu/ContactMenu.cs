@@ -1,10 +1,9 @@
 ﻿using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 {
-    public class ContactMenu : WebObject, IWebGuiElement
+    public class ContactMenu : MenuObject
     {
         public ContactMenu(IWebDriverAdapter driver) : base(driver)
         {

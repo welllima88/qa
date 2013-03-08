@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 {
-    public class TerminalMenu : WebObject
+    public class TerminalMenu : MenuObject
     {
         public TerminalAnalysisMenu AnalysisMenu;
 
