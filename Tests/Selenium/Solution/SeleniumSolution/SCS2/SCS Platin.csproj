@@ -110,6 +110,7 @@
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTexts.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TroubleTickets.cs" />
+    <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
     <Compile Include="TestObjects\Terminal\Parameter.cs" />
     <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Tests\Login\LoginTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
+    <Compile Include="Tests\Terminal\EventLog\BasicEventLogTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
   </ItemGroup>
