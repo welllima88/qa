@@ -22,8 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
             }
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).SendKeys(value);
+                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TypeText(value);
             }
             //Check date format at this point? -> NOOO! In test method is right place
             //    Assert.IsTrue(Regex.IsMatch(Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).GetAttribute("value"), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
@@ -33,8 +32,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).SendKeys(value);
+                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).TypeText(value);
             }
         }
 

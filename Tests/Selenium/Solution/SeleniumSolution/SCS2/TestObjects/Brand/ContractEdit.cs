@@ -50,14 +50,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 
         public void SetVpNo(String vpNo)
         {
-            Driver.FindElement(
+            Driver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .Clear();
-            Driver.FindElement(
-                By.CssSelector(
-                    "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .SendKeys(vpNo);
+                .TypeText(vpNo);
         }
 
         /// <summary>
