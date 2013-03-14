@@ -1,7 +1,6 @@
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
+namespace SIX.SCS.QA.Selenium.Extension.TestObjects
 {
     public interface IContactEdit
     {

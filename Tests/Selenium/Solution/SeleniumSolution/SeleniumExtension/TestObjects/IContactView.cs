@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
+namespace SIX.SCS.QA.Selenium.Extension.TestObjects
 {
     public interface IContactView
     {
