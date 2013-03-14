@@ -84,7 +84,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Country = "Deutschland [DE]";
             _contactCreate.AddressAddition = "Zusatz1";
 
-            _contactCreate.CancelButton.Click();
+            //_contactCreate.CancelButton.Click();
         }
 
         [TestMethod]
@@ -125,8 +125,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
             Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Email Adresse!"));
             Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
-            Assert.IsTrue(_formAlerts.Count == 14);
-            _contactCreate.CancelButton.Click();
+            Assert.IsTrue(_formAlerts.Count == 14);            
         }
 
         [TestMethod]
@@ -144,9 +143,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));
-
-            _contactCreate.CancelButton.Click();
+            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));            
         }
 
         [TestMethod]
@@ -175,7 +172,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
             Assert.IsTrue(_formAlerts.Contains("Vorname: Dies ist ein Pflichtfeld!"));
-            _contactCreate.CancelButton.Click();
         }
 
         [TestMethod]
@@ -204,7 +200,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
             Assert.IsTrue(_formAlerts.Contains("Name: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
-            _contactCreate.CancelButton.Click();
         }
 
         [TestMethod]
@@ -233,7 +228,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-            _contactCreate.CancelButton.Click();
         }
 
         [TestMethod]
@@ -262,7 +256,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
             Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-            _contactCreate.CancelButton.Click();
         }
 
         [TestMethod]
@@ -291,7 +284,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-            _contactCreate.CancelButton.Click();
         }
 
 
