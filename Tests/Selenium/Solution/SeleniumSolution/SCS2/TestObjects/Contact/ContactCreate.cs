@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
@@ -126,16 +125,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         public IWebElement SaveButton
         {
             get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
-        }
-
-        public IWebElement AdressFromLocationButton
-        {
-            get { throw new NotSupportedException(); }
-        }
-
-        public IWebElement CancelButton
-        {
-            get { throw new NotSupportedException(); }
         }
 
         #endregion
