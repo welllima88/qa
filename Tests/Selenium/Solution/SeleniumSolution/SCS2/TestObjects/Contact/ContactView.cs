@@ -11,19 +11,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             Prefix = "#Person";
         }
 
+        public IWebElement EditButton
+        {
+            get { return Driver.FindElement(By.CssSelector("button[name='edit']")); }
+        }
+
+        #region IContactView Members
+
         public string FirstName
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix +"_FirstName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "_FirstName")).Text; }
         }
 
         public string Name
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix +"_LastName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "_LastName")).Text; }
         }
 
         public string Salutation
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix +"_Title")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "_Title")).Text; }
         }
 
         public string Country
@@ -97,9 +104,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             }
         }
 
-        public IWebElement EditButton
-        {
-            get { return Driver.FindElement(By.CssSelector("button[name='edit']")); }
-        }
+        #endregion
     }
 }

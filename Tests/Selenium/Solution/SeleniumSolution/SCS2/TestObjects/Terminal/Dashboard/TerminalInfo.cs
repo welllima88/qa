@@ -10,6 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         {
             Prefix = "div.portletSummaryColumn";
         }
+
         //TODO: better locators 
         public string TerminalId
         {

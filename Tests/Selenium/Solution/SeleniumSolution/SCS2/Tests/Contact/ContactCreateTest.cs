@@ -125,7 +125,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
             Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Email Adresse!"));
             Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
-            Assert.IsTrue(_formAlerts.Count == 14);            
+            Assert.IsTrue(_formAlerts.Count == 14);
         }
 
         [TestMethod]
@@ -143,7 +143,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));            
+            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));
         }
 
         [TestMethod]

@@ -3,10 +3,9 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
 {
-    public class WesSecurIdLoginPage:WebObject
+    public class WesSecurIdLoginPage : WebObject
     {
-
-        public WesSecurIdLoginPage(IWebDriverAdapter driver):base(driver)
+        public WesSecurIdLoginPage(IWebDriverAdapter driver) : base(driver)
         {
         }
 
@@ -37,17 +36,15 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
 
         public string Mandant
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='client']")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='client']")).TypeText(value); }
         }
 
         public string User
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebuserid']")).TypeText(value);
+                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebuserid']")).TypeText(
+                    value);
             }
         }
 
@@ -55,7 +52,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswd']")).TypeText(value);
+                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswd']")).TypeText(
+                    value);
             }
         }
 
@@ -68,7 +66,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']")).TypeText(value);
+                Driver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']")).
+                    TypeText(value);
             }
         }
 

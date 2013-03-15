@@ -27,10 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string City
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_City")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_City")).TypeText(value); }
         }
 
         public string AdressAddition
@@ -44,18 +41,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Po
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_PO")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_PO")).TypeText(value); }
         }
 
         public string Region
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Region")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Region")).TypeText(value); }
         }
 
         public string Telephone
@@ -82,36 +73,24 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Fax
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Fax")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Fax")).TypeText(value); }
         }
 
         public string Email
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Email")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Email")).TypeText(value); }
         }
 
 
         public string CompanyName
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_LocationName")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_LocationName")).TypeText(value); }
         }
 
 
         public string StreetName
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Street")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Street")).TypeText(value); }
         }
 
         public string Language
@@ -121,10 +100,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Web
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Web")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Web")).TypeText(value); }
         }
 
         public IWebElement SaveButton

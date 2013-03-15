@@ -20,20 +20,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
                     Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).GetAttribute(
                         "value");
             }
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TypeText(value); }
             //Check date format at this point? -> NOOO! In test method is right place
             //    Assert.IsTrue(Regex.IsMatch(Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).GetAttribute("value"), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
         }
 
         public String SetRemark
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).TypeText(value); }
         }
 
         /// <summary>

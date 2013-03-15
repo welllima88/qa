@@ -3,7 +3,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
-    public class CustomerInfo:WebObject
+    public class CustomerInfo : WebObject
     {
         public CustomerInfo(IWebDriverAdapter driver) : base(driver)
         {

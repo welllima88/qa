@@ -11,10 +11,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
 
         public string UserName
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername")).TypeText(value); }
         }
 
         public string UserPasswort

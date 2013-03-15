@@ -53,10 +53,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Po
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_addressControl_poTextBox")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_addressControl_poTextBox")).TypeText(value); }
         }
 
         public string Region
@@ -88,10 +85,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Fax
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_addressControl_faxTextBox")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_addressControl_faxTextBox")).TypeText(value); }
         }
 
         public string Email
@@ -105,26 +99,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string CustomerName
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_customerNameTextBox")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_customerNameTextBox")).TypeText(value); }
         }
 
         public string SapNumber
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_sapNumberInput")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_sapNumberInput")).TypeText(value); }
         }
 
         public string CompanyName
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_inpCompanyName")).TypeText(value);
-            }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_inpCompanyName")).TypeText(value); }
         }
 
 

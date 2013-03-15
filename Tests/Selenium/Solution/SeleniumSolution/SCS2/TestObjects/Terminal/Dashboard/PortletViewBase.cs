@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
     {
         protected PortletViewBase(IWebDriverAdapter driver) : base(driver)
         {
-            Suffix=" div.portletKeyValueRow div.treeGridValueCol";
+            Suffix = " div.portletKeyValueRow div.treeGridValueCol";
         }
 
         public IWebElement Refresh

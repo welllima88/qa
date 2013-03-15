@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -38,11 +37,11 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by)
         {
-            var webElements = _webDriver.FindElements(by);
+            ReadOnlyCollection<IWebElement> webElements = _webDriver.FindElements(by);
             var list = new Collection<IWebElementAdapter>();
 
             // convert:
-            foreach (var webElement in webElements)
+            foreach (IWebElement webElement in webElements)
             {
                 list.Add(new WebElementAdapter(webElement));
             }

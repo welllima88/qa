@@ -19,6 +19,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
         string City { set; }
         string Region { set; }
         string AddressAddition { set; }
-        IWebElement SaveButton { get; }                
+        IWebElement SaveButton { get; }
     }
 }

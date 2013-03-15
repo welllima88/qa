@@ -15,6 +15,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             _contactView = new ContactView(Driver);
         }
 
+        public IWebElement CancelButton
+        {
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+        }
+
+        public IWebElement SaveButton
+        {
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
+        }
+
+        public IWebElement ClickCancel
+        {
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnCancel")); }
+        }
+
+        #region IContactEdit Members
+
         public string FirstName
         {
             set { _contactCreate.FirstName = value; }
@@ -91,29 +108,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return _contactView.CreateDate; }
         }
 
-        public IWebElement CancelButton
-        {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
-        }
-
         public string Addition
         {
             set { _contactCreate.AddressAddition = value; }
-        }
-
-        public IWebElement SaveButton
-        {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
-        }
-
-        public IWebElement ClickCancel
-        {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnCancel")); }
         }
 
         public IWebElement ClickAdressFromLocation
         {
             get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }
         }
+
+        #endregion
     }
 }

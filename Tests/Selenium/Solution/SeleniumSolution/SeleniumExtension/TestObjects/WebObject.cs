@@ -5,6 +5,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
     /// </summary>
     public abstract class WebObject : IWebObject
     {
+        protected string Prefix = "";
+        protected string Suffix = "";
+
         /// <summary>
         /// This abstract class of an WebObject defines the essential constructor for initializing the WebDriver reference.
         /// It is also used for adding features to all test objects
@@ -31,9 +34,5 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
         public IWebDriverAdapter Driver { get; private set; }
 
         #endregion
-
-        protected string Prefix = "";
-        protected string Suffix = "";
-
     }
 }

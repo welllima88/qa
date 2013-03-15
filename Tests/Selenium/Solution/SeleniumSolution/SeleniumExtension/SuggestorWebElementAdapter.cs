@@ -32,7 +32,8 @@ namespace SIX.SCS.QA.Selenium.Extension
                 //IWebElement e = _driver.WaitForElementPresent(By.XPath("//div[@inttext='" + intValue + "']"));
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + "CH"+ "']"));
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + intValue + "']"));
-                suggestElement = _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + intValue + "']"));
+                suggestElement =
+                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + intValue + "']"));
                 suggestElement.Click();
             }
                 //catch (NoSuchElementException)
