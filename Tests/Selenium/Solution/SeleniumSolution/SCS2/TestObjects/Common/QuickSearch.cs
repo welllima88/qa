@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public IWebElement SearchField
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix = "input#searchText")); }
+            get { return Driver.FindElement(By.CssSelector(Prefix + "input#searchText")); }
         }
 
         public IWebElement SearchButton
