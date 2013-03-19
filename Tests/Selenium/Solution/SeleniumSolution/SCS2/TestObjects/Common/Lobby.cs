@@ -16,6 +16,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public QuickSearch QuickSearch;
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
+        public ApplicationNews ApplicationNews;
 
         public Lobby(IWebDriverAdapter driver) : base(driver)
         {
@@ -26,6 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             Footer = new Footer(Driver);
             MetaNavBar = new MetaNavBar(Driver);
             ApplicationInfo = new ApplicationInfo(Driver);
+            ApplicationNews=new ApplicationNews(Driver);
             QuickSearch = new QuickSearch(Driver);
         }
 
