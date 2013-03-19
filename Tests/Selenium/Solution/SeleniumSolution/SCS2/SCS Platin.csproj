@@ -68,6 +68,7 @@
     <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
     <Compile Include="TestObjects\Brand\ContractSelect.cs" />
     <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
+    <Compile Include="TestObjects\Common\ApplicationNews.cs" />
     <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\MenuObject.cs" />
     <Compile Include="TestObjects\Common\QuickSearch.cs" />
@@ -95,6 +96,13 @@
     <Compile Include="TestObjects\Brand\ContractEdit.cs" />
     <Compile Include="TestObjects\Brand\ContractCreate.cs" />
     <Compile Include="TestObjects\Brand\ContractView.cs" />
+    <Compile Include="TestObjects\SearchResult\AbstractSearchResult.cs" />
+    <Compile Include="TestObjects\SearchResult\MpdResult.cs" />
+    <Compile Include="TestObjects\SearchResult\UserResult.cs" />
+    <Compile Include="TestObjects\SearchResult\SimCardResult.cs" />
+    <Compile Include="TestObjects\SearchResult\TerminalResult.cs" />
+    <Compile Include="TestObjects\SearchResult\LocationResult.cs" />
+    <Compile Include="TestObjects\SearchResult\CustomerResult.cs" />
     <Compile Include="TestObjects\Terminal\Article.cs" />
     <Compile Include="TestObjects\Terminal\Base.cs" />
     <Compile Include="TestObjects\Terminal\Brands.cs" />
