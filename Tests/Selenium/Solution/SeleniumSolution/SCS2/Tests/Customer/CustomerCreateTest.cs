@@ -461,7 +461,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         }
 
         [TestMethod]
-        public void CreateCustomerWithMinimalAndSave()
+        public void CreateCustomerWithMinimalAndSaveWithMenuCheck()
         {
             _customerMenu.CustomerCreate.Click();
 
