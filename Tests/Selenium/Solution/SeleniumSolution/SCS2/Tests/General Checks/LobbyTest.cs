@@ -113,6 +113,13 @@ namespace SeleniumTests
         }
 
         [TestMethod]
+        public void ApplicationNews()
+        {
+            Assert.IsTrue(_lobby.ApplicationNews.NewsTitle.Displayed);
+            // Assert.IsTrue(_lobby.RecentElements.Elements.Count > 0);
+        }
+
+        [TestMethod]
         public void CheckRecentMassJobs()
         {
             Assert.IsTrue(_lobby.RecentMassmutations.MostRecent.Displayed);
