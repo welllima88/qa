@@ -55,6 +55,13 @@ namespace SeleniumTests
         }
 
         [TestMethod]
+        public void CheckQuickSearch()
+        {
+            Assert.IsTrue(_lobby.QuickSearch.SearchField.Displayed);
+            Assert.IsTrue(_lobby.QuickSearch.SearchButton.Displayed);
+        }
+
+        [TestMethod]
         public void CheckFooter()
         {
             Assert.IsTrue(_lobby.Footer.Copyright.Displayed);
