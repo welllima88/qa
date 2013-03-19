@@ -21,7 +21,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             var lobby = new Lobby(WebDriver);
 
             // TestSetup("https://gateint.telekurs.ch/zebrac-qa-l", certificateLogin, lobby);
-            TestSetup("https://mdzhwcweb01/zebra", uacLogin, lobby);
+            TestSetup("https://mdzhwcweb01/scs2", uacLogin, lobby);
             return WebDriver;
         }
     }
