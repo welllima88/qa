@@ -6,9 +6,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
     public class TerminalDashboard : WebObject
     {
-        public BrandsPortlet BrandsPortlet;
-        public FixInfo FixInfo;
+        public BrandPortlet BrandsPortlet;
         public ContactsPortlet ContactsPortlet;
+        public FixInfo FixInfo;
         public SalesContractPortlet SalesContractPortlet;
         public TechnicalViewPortlet TechnicalViewPortlet;
         public TerminalTextsPortlet TerminalTextsPortlet;
@@ -17,6 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         public TerminalDashboard(IWebDriverAdapter driver) : base(driver)
         {
             FixInfo = new FixInfo(Driver);
+            BrandsPortlet=new BrandPortlet(Driver);
             ContactsPortlet = new ContactsPortlet(Driver);
             TechnicalViewPortlet = new TechnicalViewPortlet(Driver);
             SalesContractPortlet = new SalesContractPortlet(Driver);
