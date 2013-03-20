@@ -6,22 +6,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
     public class TerminalDashboard : WebObject
     {
-        public Brands Brands;
+        public BrandsPortlet BrandsPortlet;
         public FixInfo FixInfo;
-        public Contacts Contacts;
-        public SaleContract SaleContract;
-        public TechnicalView TechnicalView;
-        public TerminalTexts TerminalTexts;
-        public TroubleTickets TroubleTickets;
+        public ContactsPortlet ContactsPortlet;
+        public SalesContractPortlet SalesContractPortlet;
+        public TechnicalViewPortlet TechnicalViewPortlet;
+        public TerminalTextsPortlet TerminalTextsPortlet;
+        public TroubleTicketsPortlet TroubleTicketsPortlet;
 
         public TerminalDashboard(IWebDriverAdapter driver) : base(driver)
         {
             FixInfo = new FixInfo(Driver);
-            Contacts = new Contacts(Driver);
-            TechnicalView = new TechnicalView(Driver);
-            SaleContract = new SaleContract(Driver);
-            TerminalTexts = new TerminalTexts(Driver);
-            TroubleTickets = new TroubleTickets(Driver);
+            ContactsPortlet = new ContactsPortlet(Driver);
+            TechnicalViewPortlet = new TechnicalViewPortlet(Driver);
+            SalesContractPortlet = new SalesContractPortlet(Driver);
+            TerminalTextsPortlet = new TerminalTextsPortlet(Driver);
+            TroubleTicketsPortlet = new TroubleTicketsPortlet(Driver);
         }
 
         public IWebElement EditButton
