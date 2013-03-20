@@ -1,8 +1,9 @@
 ﻿using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
-    public class FixInfo : PortletViewBase
+    public class FixInfo : WebObject
     {
         public readonly CustomerInfo Customer;
         public readonly LocationInfo Location;
