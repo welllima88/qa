@@ -3,68 +3,65 @@ using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
-    public class TechnicalView : PortletViewBase
+    public class SalesContractPortlet : PortletViewBase
     {
-        //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
-
-        public TechnicalView(IWebDriverAdapter driver) : base(driver)
+        public SalesContractPortlet(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "div#portlet_TerminalTechnicalViewpointPortlet_content div#SetupDataTree ul";
-            Suffix = "??";
+            PortletId = "div#frame_SalesPortlet "; // div#SetupDataTree ul
         }
 
-        public IWebElement TerminalId
+        public IWebElement ContractType
         {
             get
             {
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(1)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(1)" + Suffix));
             }
         }
 
-        public IWebElement SerialNo
+        public IWebElement InstallType
         {
             get
             {
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(3)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(2)" + Suffix));
             }
         }
 
-        public IWebElement Password
+        public IWebElement DeliverDate
         {
             get
             {
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(4)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(3)" + Suffix));
             }
         }
 
-        public IWebElement TerminalType
+        public IWebElement SupportContract
         {
             get
             {
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(5)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(4)" + Suffix));
             }
         }
 
-        public IWebElement NetType
+        public IWebElement CashIntegrator
         {
             get
             {
                 return
                     Driver.FindElement(
                         By.CssSelector(
-                            Prefix + "li:nth-child(6)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(5)" + Suffix));
             }
         }
     }
