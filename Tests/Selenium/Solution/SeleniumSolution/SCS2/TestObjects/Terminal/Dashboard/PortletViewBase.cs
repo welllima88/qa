@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
@@ -13,13 +12,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             Prefix = "tbody tr#rowContent td#content div#dashboarditems div ";
         }
 
+        protected string PortletId { get; set; }
+
         public IWebElement PortletTitle
         {
             get
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "h1.portlet-header"));
+                        By.CssSelector(Prefix + PortletId + "h1.portlet-header"));
             }
         }
 
@@ -29,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "h1 span[title='refresh']"));
+                        By.CssSelector(Prefix + PortletId + "h1 span[title='refresh']"));
             }
         }
 
@@ -39,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "h1 span[title='minimize']"));
+                        By.CssSelector(Prefix + PortletId + "h1 span[title='minimize']"));
             }
         }
     }
