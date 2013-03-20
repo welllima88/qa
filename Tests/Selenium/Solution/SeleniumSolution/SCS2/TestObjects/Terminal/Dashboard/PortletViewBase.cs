@@ -10,14 +10,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         protected PortletViewBase(IWebDriverAdapter driver) : base(driver)
         {
             Suffix = " div.portletKeyValueRow div.treeGridValueCol";
+            Prefix = "tbody tr#rowContent td#content div#dashboarditems div ";
+        }
+
+        public IWebElement PortletTitle
+        {
+            get
+            {
+                return
+                    Driver.FindElement(
+                        By.CssSelector(Prefix + "h1.portlet-header"));
+            }
         }
 
         public IWebElement Refresh
         {
             get
             {
-                throw new NotImplementedException("Refresh to Portlet not implemented");
-                return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']"));
+                return
+                    Driver.FindElement(
+                        By.CssSelector(Prefix + "h1 span[title='refresh']"));
             }
         }
 
@@ -25,8 +37,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         {
             get
             {
-                throw new NotImplementedException("Refresh to Portlet not implemented");
-                return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']"));
+                return
+                    Driver.FindElement(
+                        By.CssSelector(Prefix + "h1 span[title='minimize']"));
             }
         }
     }
