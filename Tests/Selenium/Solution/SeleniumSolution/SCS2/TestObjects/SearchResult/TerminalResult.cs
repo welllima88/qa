@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
 {
-    class TerminalResult : AbstractSearchResult
+    internal class TerminalResult : AbstractSearchResult
     {
         public TerminalResult(IWebDriverAdapter driver)
             : base(driver)

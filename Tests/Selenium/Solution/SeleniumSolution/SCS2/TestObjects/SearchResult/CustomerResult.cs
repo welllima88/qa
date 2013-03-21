@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
 {
-    class CustomerResult : AbstractSearchResult
+    internal class CustomerResult : AbstractSearchResult
     {
         public CustomerResult(IWebDriverAdapter driver) : base(driver)
         {

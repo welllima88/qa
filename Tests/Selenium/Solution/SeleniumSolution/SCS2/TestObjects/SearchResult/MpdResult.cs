@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
 {
-    class MpdResult : AbstractSearchResult
+    internal class MpdResult : AbstractSearchResult
     {
         public MpdResult(IWebDriverAdapter driver)
             : base(driver)

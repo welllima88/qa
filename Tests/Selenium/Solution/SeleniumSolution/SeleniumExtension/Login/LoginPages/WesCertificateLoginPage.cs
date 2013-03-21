@@ -3,10 +3,10 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
 {
-    public class WesCertificateLoginPage:WebObject
+    public class WesCertificateLoginPage : WebObject
     {
-        public WesCertificateLoginPage(IWebDriverAdapter driver):base(driver)
-        {            
+        public WesCertificateLoginPage(IWebDriverAdapter driver) : base(driver)
+        {
         }
 
         public IWebElement LoginButton

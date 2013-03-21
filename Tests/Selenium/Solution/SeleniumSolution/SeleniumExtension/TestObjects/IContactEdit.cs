@@ -1,5 +1,3 @@
-using OpenQA.Selenium;
-
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects
 {
     public interface IContactEdit
@@ -19,6 +17,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
         string City { set; get; }
         string Region { set; get; }
         string CreateDate { get; }
-        string Addition { set; get;}
+        string Addition { set; get; }
     }
 }

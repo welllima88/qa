@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
 {
-    class LocationResult : AbstractSearchResult
+    internal class LocationResult : AbstractSearchResult
     {
         public LocationResult(IWebDriverAdapter driver)
             : base(driver)

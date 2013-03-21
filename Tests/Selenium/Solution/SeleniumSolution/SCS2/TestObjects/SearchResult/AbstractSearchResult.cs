@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
         /// <param name="driver"></param>
         protected AbstractSearchResult(IWebDriverAdapter driver)
             : base(driver)
-        {            
+        {
         }
 
         public IWebElement Headline

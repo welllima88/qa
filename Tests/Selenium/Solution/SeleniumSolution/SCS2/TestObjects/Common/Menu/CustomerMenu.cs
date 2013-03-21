@@ -80,7 +80,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
                 return
                     Driver.FindElement(By.CssSelector("a[href*='/Mpd/list?CUSTOMERID=']"));
             }
-        }        public IWebElement AllTerminals
+        }
+
+        public IWebElement AllTerminals
         {
             get
             {
