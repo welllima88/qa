@@ -4,22 +4,21 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
 {
     public interface IContactEdit
     {
-        string FirstName { set; }
-        string Name { set; }
-        string Salutation { set; }
-        string Country { set; }
-        string Language { set; }
-        string Telephone { set; }
-        string Mobile { set; }
-        string Fax { set; }
-        string Email { set; }
-        string Street { set; }
-        string Po { set; }
-        string Zip { set; }
-        string City { set; }
-        string Region { set; }
+        string FirstName { set; get; }
+        string Name { set; get; }
+        string Salutation { set; get; }
+        string Country { set; get; }
+        string Language { set; get; }
+        string Telephone { set; get; }
+        string Mobile { set; get; }
+        string Fax { set; get; }
+        string Email { set; get; }
+        string Street { set; get; }
+        string Po { set; get; }
+        string Zip { set; get; }
+        string City { set; get; }
+        string Region { set; get; }
         string CreateDate { get; }
-        string Addition { set; }
-        IWebElement ClickAdressFromLocation { get; }
+        string Addition { set; get;}
     }
 }
