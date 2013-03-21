@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
 
             _customerMenu = new CustomerMenu(_driver);
             _customerEdit = new CustomerEdit(_driver);
-            _customerView = new CustomerView(_driver);
+            _customerView = new CustomerView(_driver);            
         }
 
         [TestInitialize]
@@ -35,6 +35,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         {
             _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
             _dt = DateTime.Now.Ticks; //timestamp for each test
+            _formAlerts=new List<string>(0);
         }
 
         [TestCleanup]
@@ -137,34 +138,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         [TestMethod]
         public void EditCustomerDoesNotAllowCustomerNumberChange()
         {
-            throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
+            throw new NotImplementedException();            
         }
 
         [Ignore]
         [TestMethod]
         public void EditCustomerDoesNotAllowSupplierChange()
         {
-            throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
+            throw new NotImplementedException();            
         }
 
         [Ignore]
         [TestMethod]
         public void EditCustomerDoesNotAllowSbsBillingTenantChange()
         {
-            throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
-            //_customerEdit.SbsBillingTenant = "SIX Payment Services AG";
+            throw new NotImplementedException();            
         }
 
         [Ignore]
         [TestMethod]
         public void EditCustomerDoesNotAllowSbsCurrencyChange()
         {
-            throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
-            //_customerEdit.SbsCurrency = "SIX Payment Services AG";
+            throw new NotImplementedException();            
         }
 
         [TestMethod]

@@ -34,6 +34,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
         public void TestInit()
         {
             _dt = DateTime.Now.Ticks; //timestamp for each test
+            _formAlerts=new List<string>(0);
         }
 
         [TestCleanup]
