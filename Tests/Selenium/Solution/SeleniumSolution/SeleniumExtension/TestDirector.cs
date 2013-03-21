@@ -78,6 +78,7 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         private static IWebDriverAdapter InternetExplorerWebDriverAdapter()
         {
+            //todo make path relative
             return
                 new WebDriverAdapter(
                     new InternetExplorerDriver(@"D:\_tfs\ScsDev\QA\Tests\Selenium\IEDriver"));
@@ -86,7 +87,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <summary>
         /// Execute the required login procedure to fulfill the basic precondition of testing.
         /// </summary>
-        /// <param name="baseUrl">sets the base url for testing e.g. "https://gateint.telekurs.ch/zebrac-qa-l" </param>
+        /// <param name="baseUrl">sets the base url for testing e.g. "https://gateint.telekurs.ch/scsc-qa-l" </param>
         /// <param name="login">Choose the appropiate login strategy login by:
         ///   - certifacte
         ///   - SecureId
@@ -95,7 +96,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <param name="logout"></param>
         /// <param name="loginCheck"></param>
         /// <param name="logoutCheck"></param>
-        public void TestSetup(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
+        protected void TestSetup(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
                               ILogoutCheck logoutCheck = null)
         {
             _login = login;
