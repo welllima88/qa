@@ -81,6 +81,16 @@
     <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
     <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
+    <Compile Include="TestObjects\Common\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestObjects\Contact\ContactCreate.cs" />
     <Compile Include="TestObjects\Contact\ContactEdit.cs" />
     <Compile Include="TestObjects\Contact\ContactView.cs" />
@@ -207,6 +217,14 @@
     <EmbeddedResource Include="Properties\Scs2Res.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Common\Common.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Contact\Contact.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
