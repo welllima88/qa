@@ -21,7 +21,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             var uacLogin = new UacLogin(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
             var lobby = new Lobby(WebDriver);
 
-            TestSetup(Scs2Res.WES_QA_L, certificateLogin, lobby);
+            // TestSetup(Scs2Res.WES_QA_L, certificateLogin, lobby);
             TestSetup(Scs2Res.UAC_DEV, uacLogin, lobby);
             return WebDriver;
         }
