@@ -7,13 +7,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class ApplicationInfo : WebObject
     {
         public ApplicationInfo(IWebDriverAdapter driver) : base(driver)
-        {
-            Prefix = "div#applicationBar div#applicationInformation ";
+        {            
         }
 
         public IWebElement ApplicationName
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "span#ctl00_lblApplicationName")); }
+            get { return Driver.FindElement(By.CssSelector(Common.ApplicationInfo_ApplicationName)); }
         }
 
         public IWebElement Environment
@@ -22,7 +21,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "span#ctl00_lblEnvironmentText"));
+                        By.CssSelector(Common.ApplicationInfo_Environment));
             }
         }
     }

@@ -33,12 +33,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public IWebElement CompanyLogo
         {
-            get { return Driver.FindElement(By.CssSelector("html>body>form>img.companyLogo")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Lobby_CompanyLogo)); }
         }
 
         public IWebElement Headline
         {
-            get { return Driver.FindElement(By.CssSelector("td#content h1")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
         }
 
         #region ILogout Members

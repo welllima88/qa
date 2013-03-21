@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return Driver.FindElements(By.CssSelector("div.container a[id*='ElementHistory']")); }
+            get { return Driver.FindElements(By.CssSelector(Common.RecentElements_Elements)); }
         }
 
 
@@ -33,9 +33,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         {
             IWebElement e =
                 Driver.FindElement(
-                    By.CssSelector("a#ctl00_bodyContentPlaceHolder_rptElementHistory_ctl" +
+                    By.CssSelector(Common.RecentElements_RecentElement_Prefix +
                                    (elementNo - 1).ToString("00") +
-                                   "_hplElementHistory"));
+                                   Common.RecentElements_RecentElement_Suffix));
             return e;
         }
     }

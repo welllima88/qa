@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public NavigationBar(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "td#tabNavBar ";
+            Prefix = Common.NavigationBar_Prefix;
         }
 
         public IWebElement Lobby
@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "div#ctl00_pnlMainMenu div#menuItems a[href*='Default']"));
+                        By.CssSelector(Common.NavigationBar_Lobby));
             }
             //todod: ... [text*='Lobby'] doesnt work...why??
         }
@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
+                        By.CssSelector(Common.NavigationBar_Administration));
             }
         }
 
@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
+                        By.CssSelector(Common.NavigationBar_Reporting));
             }
         }
 
@@ -48,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector(Prefix + "div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink"));
+                        By.CssSelector(Common.NavigationBar_MoreMenu));
             }
         }
 
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public IWebElement Current
         {
-            get { return Driver.FindElement(By.CssSelector("a#ctl00_hplMenuMenuCurrent")); }
+            get { return Driver.FindElement(By.CssSelector(Common.NavigationBar_Current)); }
         }
     }
 }

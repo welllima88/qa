@@ -7,28 +7,27 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class Footer : WebObject
     {
         public Footer(IWebDriverAdapter driver) : base(driver)
-        {
-            Prefix = "td#footerNavigationBar>";
+        {            
         }
 
         public IWebElement Feedback
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "a#ctl00_hplFeedback")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Footer_Feedback)); }
         }
 
         public IWebElement Disclaimer
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "a[href*='/disclaimer.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Footer_Disclaimer)); }
         }
 
         public IWebElement Copyright
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "div#copyright")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Footer_Copyright)); }
         }
 
         public IWebElement PrintPage
         {
-            get { return Driver.FindElement(By.CssSelector("td#footerFunctionBar>a[href*='JavaScript:Page.Print()']")); }
+            get { return Driver.FindElement(By.CssSelector(Common.Footer_PrintPage)); }
         }
 
         public IWebElement ScrollUp
@@ -36,7 +35,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("td#footerFunctionBar>a[href*='JavaScript:window.scroll(0,0)']"));
+                    Driver.FindElement(By.CssSelector(Common.Footer_ScrollUp));
             }
         }
     }

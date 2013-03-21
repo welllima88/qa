@@ -9,17 +9,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public LobbyNews(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "div.container ";
+            Prefix = "";
         }
 
         public ReadOnlyCollection<IWebElement> NewsElements
         {
-            get { return Driver.FindElements(By.CssSelector(Prefix + "ul")); }
+            get { return Driver.FindElements(By.CssSelector(Common.LobbyNews_NewsElements)); }
         }
 
         public IWebElement NewsTitle
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "span#ctl00_bodyContentPlaceHolder_lblNewsTitle h2")); }
+            get { return Driver.FindElement(By.CssSelector(Common.LobbyNews_NewsTitle)); }
         }
     }
 }

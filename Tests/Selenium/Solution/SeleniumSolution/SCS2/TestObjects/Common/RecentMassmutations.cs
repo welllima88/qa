@@ -9,18 +9,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class RecentMassmutations : WebObject
     {
         public RecentMassmutations(IWebDriverAdapter driver) : base(driver)
-        {
-            Prefix = "div.container ";
+        {            
         }
 
         public String Header
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblBatchTitle")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Common.RecentMassmutations_Header)).Text; }
         }
 
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return Driver.FindElements(By.CssSelector(Prefix + "a[id$='_hplBatchHistory']")); }
+            get { return Driver.FindElements(By.CssSelector(Common.RecentMassmutations_Elements)); }
         }
 
         public IWebElement MostRecent
@@ -31,9 +30,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public IWebElement RecentElement(int elementNo)
         {
             return Driver.FindElement(
-                By.CssSelector(Prefix + "a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl" +
+                By.CssSelector(Common.RecentMassmutations_RecentElement_Prefix +
                                (elementNo - 1).ToString("00") +
-                               "_hplBatchHistory"));
+                               Common.RecentMassmutations_RecentElement_Suffix));
         }
     }
 }
