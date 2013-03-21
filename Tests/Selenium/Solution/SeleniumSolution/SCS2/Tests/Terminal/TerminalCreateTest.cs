@@ -69,11 +69,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestMethod]
         public void CreateTerminalAndCancel()
         {
-            throw new NotImplementedException();
-            _customerMenu.TerminalCreate.Click();
-
-            Assert.AreEqual("Lobby",
-                            _driver.FindElement(By.XPath("//span[@id='ctl00_bodyContentPlaceHolder_lblTitle']/h1")).Text);
+            throw new NotSupportedException("no cancel action available");            
         }
 
         [TestMethod]
