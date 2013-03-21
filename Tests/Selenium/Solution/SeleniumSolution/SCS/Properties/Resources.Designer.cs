@@ -61,6 +61,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tkcposl.
+        /// </summary>
+        internal static string mandant_qa_L {
+            get {
+                return ResourceManager.GetString("mandant_qa_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://mdzhwcweb01/mgmt/.
         /// </summary>
         internal static string UAC_DEV {

@@ -61,11 +61,38 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://mdzhwcweb01/zebra/.
+        ///   Looks up a localized string similar to tkcposl.
+        /// </summary>
+        public static string mandant_qa_L {
+            get {
+                return ResourceManager.GetString("mandant_qa_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://mdzhwcweb01/scs2.
         /// </summary>
         public static string UAC_DEV {
             get {
                 return ResourceManager.GetString("UAC_DEV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to six_scs_auto_PW.
+        /// </summary>
+        public static string uac_passwort {
+            get {
+                return ResourceManager.GetString("uac_passwort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to six_scs_auto.
+        /// </summary>
+        public static string uac_username {
+            get {
+                return ResourceManager.GetString("uac_username", resourceCulture);
             }
         }
         

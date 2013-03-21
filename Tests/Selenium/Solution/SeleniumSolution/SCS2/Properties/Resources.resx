@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="UAC_DEV" xml:space="preserve">
-    <value>https://mdzhwcweb01/zebra/</value>
+    <value>https://mdzhwcweb01/scs2</value>
     <comment>UAC</comment>
+  </data>
+  <data name="uac_passwort" xml:space="preserve">
+    <value>six_scs_auto_PW</value>
+  </data>
+  <data name="uac_username" xml:space="preserve">
+    <value>six_scs_auto</value>
   </data>
   <data name="WES_Production" xml:space="preserve">
     <value>https://gate.telekurs.ch/zebras/</value>
@@ -130,4 +136,7 @@
   <data name="WES_QA_L" xml:space="preserve">
     <value>https://gateint.telekurs.ch/zebrac-qa-l/</value>
   </data>
+	<data name="mandant_qa_L">
+		<value xml:space="preserve">tkcposl</value>
+	</data>
 </root>

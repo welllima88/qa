@@ -1,5 +1,6 @@
 ﻿using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Login.LoginMethod;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
@@ -8,10 +9,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
     {
         public override IWebDriverAdapter DefaultTestSetup()
         {
-            var certificateLogin = new CertificateLogin("tkcposl", WebDriver);
+            var certificateLogin = new CertificateLogin(Resources.mandant_qa_L, WebDriver);
             var application = new Scs(WebDriver);
 
-            TestSetup("https://gateint.telekurs.ch/scsc-qa-l", certificateLogin, application,
+            TestSetup(Resources.WES_QA_L, certificateLogin, application,
                       application, certificateLogin);
             return WebDriver;
         }
