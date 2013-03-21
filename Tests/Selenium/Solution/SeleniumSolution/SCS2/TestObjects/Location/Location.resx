@@ -135,34 +135,34 @@
   <data name="Location_Po" xml:space="preserve">
     <value>_PO</value>
   </data>
-  <data name="Location" xml:space="preserve">
+  <data name="Location_Region" xml:space="preserve">
     <value>_Region</value>
   </data>
-	<data name="Location_Telephone">
-		<value xml:space="preserve">_Telephone</value>
-	</data>
-	<data name="Location_Mobile">
-		<value xml:space="preserve">_Mobile</value>
-	</data>
-	<data name="Location_Fax">
-		<value xml:space="preserve">_Fax</value>
-	</data>
-	<data name="Location_Email">
-		<value xml:space="preserve">_Email</value>
-	</data>
-	<data name="Location_SapNumber">
-		<value xml:space="preserve">_SapNumber</value>
-	</data>
-	<data name="Location_CompanyName">
-		<value xml:space="preserve">_LocationName</value>
-	</data>
-	<data name="Location_StreetName">
-		<value xml:space="preserve">_Street</value>
-	</data>
-	<data name="Location_Language">
-		<value xml:space="preserve">_LanguageId</value>
-	</data>
-	<data name="Location_Web">
-		<value xml:space="preserve">_Web</value>
-	</data>
+  <data name="Location_Telephone" xml:space="preserve">
+    <value>_Telephone</value>
+  </data>
+  <data name="Location_Mobile" xml:space="preserve">
+    <value>_Mobile</value>
+  </data>
+  <data name="Location_Fax" xml:space="preserve">
+    <value>_Fax</value>
+  </data>
+  <data name="Location_Email" xml:space="preserve">
+    <value>_Email</value>
+  </data>
+  <data name="Location_SapNumber" xml:space="preserve">
+    <value>_SapNumber</value>
+  </data>
+  <data name="Location_CompanyName" xml:space="preserve">
+    <value>_LocationName</value>
+  </data>
+  <data name="Location_StreetName" xml:space="preserve">
+    <value>_Street</value>
+  </data>
+  <data name="Location_Language" xml:space="preserve">
+    <value>_LanguageId</value>
+  </data>
+  <data name="Location_Web" xml:space="preserve">
+    <value>_Web</value>
+  </data>
 </root>

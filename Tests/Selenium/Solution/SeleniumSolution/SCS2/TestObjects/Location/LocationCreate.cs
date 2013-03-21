@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Region
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location)).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Region)).TypeText(value); }
         }
 
         public string Telephone

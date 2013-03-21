@@ -61,15 +61,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Region.
-        /// </summary>
-        internal static string Location {
-            get {
-                return ResourceManager.GetString("Location", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to _AddressAddition.
         /// </summary>
         internal static string Location_AdressAddition {
@@ -147,6 +138,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         internal static string Location_Po {
             get {
                 return ResourceManager.GetString("Location_Po", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Region.
+        /// </summary>
+        internal static string Location_Region {
+            get {
+                return ResourceManager.GetString("Location_Region", resourceCulture);
             }
         }
         
