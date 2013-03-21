@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -159,7 +160,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public void EditCustomerDoesNotAllowCustomerNumberChange()
         {
             throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
         }
 
         [Ignore]
@@ -167,7 +167,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public void EditCustomerDoesNotAllowSupplierChange()
         {
             throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
         }
 
         [Ignore]
@@ -175,8 +174,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public void EditCustomerDoesNotAllowSbsBillingTenantChange()
         {
             throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
-            //_customerEdit.SbsBillingTenant = "SIX Payment Services AG";
         }
 
         [Ignore]
@@ -184,8 +181,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public void EditCustomerDoesNotAllowSbsCurrencyChange()
         {
             throw new NotImplementedException();
-            _customerMenu.CustomerEdit.Click();
-            //_customerEdit.SbsCurrency = "SIX Payment Services AG";
+            //Todo implement ignored tests
         }
 
         [TestMethod]
@@ -670,14 +666,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _menusTests.CustomerMenuCheck(_customerMenu);
         }
 
-        [Ignore]
+
         [TestMethod]
         public void EditCustomerCheckHeadline()
         {
-            throw new NotImplementedException();
-            StringAssert.Contains("Lobby", _lobby.Headline.Text);
+            StringAssert.Matches(_lobby.Headline.Text, new Regex(@"\d+:.*"));
+            string headLine = _lobby.Headline.Text;
             _customerMenu.CustomerEdit.Click();
-            Assert.AreEqual("Kontakt bearbeiten", _lobby.Headline.Text);
+            StringAssert.Contains(_lobby.Headline.Text, headLine);
         }
     }
 }
