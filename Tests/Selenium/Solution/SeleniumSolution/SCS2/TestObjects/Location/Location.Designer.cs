@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Location {
+    public class Location {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location.Location", typeof(Location).Assembly);
@@ -51,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,135 +63,135 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_AddressAddition.
         /// </summary>
-        internal static string Location_AdressAddition {
+        public static string AdressAddition {
             get {
-                return ResourceManager.GetString("Location_AdressAddition", resourceCulture);
+                return ResourceManager.GetString("AdressAddition", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_City.
         /// </summary>
-        internal static string Location_City {
+        public static string City {
             get {
-                return ResourceManager.GetString("Location_City", resourceCulture);
+                return ResourceManager.GetString("City", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_LocationName.
         /// </summary>
-        internal static string Location_CompanyName {
+        public static string CompanyName {
             get {
-                return ResourceManager.GetString("Location_CompanyName", resourceCulture);
+                return ResourceManager.GetString("CompanyName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_CountryId.
         /// </summary>
-        internal static string Location_Country {
+        public static string Country {
             get {
-                return ResourceManager.GetString("Location_Country", resourceCulture);
+                return ResourceManager.GetString("Country", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Email.
         /// </summary>
-        internal static string Location_Email {
+        public static string Email {
             get {
-                return ResourceManager.GetString("Location_Email", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Fax.
         /// </summary>
-        internal static string Location_Fax {
+        public static string Fax {
             get {
-                return ResourceManager.GetString("Location_Fax", resourceCulture);
+                return ResourceManager.GetString("Fax", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_LanguageId.
         /// </summary>
-        internal static string Location_Language {
+        public static string Language {
             get {
-                return ResourceManager.GetString("Location_Language", resourceCulture);
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Mobile.
         /// </summary>
-        internal static string Location_Mobile {
+        public static string Mobile {
             get {
-                return ResourceManager.GetString("Location_Mobile", resourceCulture);
+                return ResourceManager.GetString("Mobile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_PO.
         /// </summary>
-        internal static string Location_Po {
+        public static string Po {
             get {
-                return ResourceManager.GetString("Location_Po", resourceCulture);
+                return ResourceManager.GetString("Po", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Region.
         /// </summary>
-        internal static string Location_Region {
+        public static string Region {
             get {
-                return ResourceManager.GetString("Location_Region", resourceCulture);
+                return ResourceManager.GetString("Region", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_SapNumber.
         /// </summary>
-        internal static string Location_SapNumber {
+        public static string SapNumber {
             get {
-                return ResourceManager.GetString("Location_SapNumber", resourceCulture);
+                return ResourceManager.GetString("SapNumber", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Street.
         /// </summary>
-        internal static string Location_StreetName {
+        public static string StreetName {
             get {
-                return ResourceManager.GetString("Location_StreetName", resourceCulture);
+                return ResourceManager.GetString("StreetName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Telephone.
         /// </summary>
-        internal static string Location_Telephone {
+        public static string Telephone {
             get {
-                return ResourceManager.GetString("Location_Telephone", resourceCulture);
+                return ResourceManager.GetString("Telephone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_Web.
         /// </summary>
-        internal static string Location_Web {
+        public static string Web {
             get {
-                return ResourceManager.GetString("Location_Web", resourceCulture);
+                return ResourceManager.GetString("Web", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to #LocationData_ZIP.
         /// </summary>
-        internal static string Location_Zip {
+        public static string Zip {
             get {
-                return ResourceManager.GetString("Location_Zip", resourceCulture);
+                return ResourceManager.GetString("Zip", resourceCulture);
             }
         }
     }
