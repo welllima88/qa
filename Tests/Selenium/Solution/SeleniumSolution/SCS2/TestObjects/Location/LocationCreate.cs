@@ -8,97 +8,97 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
     {
         public LocationCreate(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "#LocationData";
+            Prefix = Location.LocationPrefix;
         }
 
         #region ILocationCreate Members
 
         public string Country
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_CountryId")).Selector().SelectByText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Country)).Selector().SelectByText(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector(Prefix + "_CountryId")).Selector().SelectedOption.Text;
+                    Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Country)).Selector().SelectedOption.Text;
             }
         }
 
         public string Zip
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_ZIP")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Zip)).TypeText(value); }
         }
 
         public string City
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_City")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_City)).TypeText(value); }
         }
 
         public string AdressAddition
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_AddressAddition")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_AdressAddition)).TypeText(value); }
         }
 
         public string Po
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_PO")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Po)).TypeText(value); }
         }
 
         public string Region
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Region")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location)).TypeText(value); }
         }
 
         public string Telephone
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Telephone")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Telephone)).TypeText(value); }
         }
 
         public string Mobile
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Mobile")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Mobile)).TypeText(value); }
         }
 
         public string Fax
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Fax")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Fax)).TypeText(value); }
         }
 
         public string Email
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Email")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Email)).TypeText(value); }
         }
 
 
         public string SapNumber
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_SapNumber")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_SapNumber)).TypeText(value); }
         }
 
         public string CompanyName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_LocationName")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_CompanyName)).TypeText(value); }
         }
 
 
         public string StreetName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Street")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_StreetName)).TypeText(value); }
         }
 
         public string Language
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_LanguageId")).Selector().SelectByText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Language)).Selector().SelectByText(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector(Prefix + "_LanguageId")).Selector().SelectedOption.
+                    Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Language)).Selector().SelectedOption.
                         Text;
             }
         }
 
         public string Web
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Web")).TypeText(value); }
+            set { Driver.FindAdaptedElement(By.CssSelector(Prefix + Location.Location_Web)).TypeText(value); }
         }
 
         public IWebElement SaveButton
