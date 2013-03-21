@@ -40,7 +40,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Person/PersonEdit.aspx?PageMode=view&PersonId=8935";
+            // todo: specify generic url to sim
+            _driver.Url = _tb.BaseUrl + "????";
             _dt = DateTime.Now.Ticks; //timestamp for each test
         }
 
