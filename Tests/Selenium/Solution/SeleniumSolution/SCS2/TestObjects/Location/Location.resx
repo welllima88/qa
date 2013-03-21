@@ -117,52 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LocationPrefix" xml:space="preserve">
-    <value>#LocationData</value>
-  </data>
   <data name="Location_Country" xml:space="preserve">
-    <value>_CountryId</value>
+    <value>#LocationData_CountryId</value>
   </data>
   <data name="Location_Zip" xml:space="preserve">
-    <value>_ZIP</value>
+    <value>#LocationData_ZIP</value>
   </data>
   <data name="Location_City" xml:space="preserve">
-    <value>_City</value>
+    <value>#LocationData_City</value>
   </data>
   <data name="Location_AdressAddition" xml:space="preserve">
-    <value>_AddressAddition</value>
+    <value>#LocationData_AddressAddition</value>
   </data>
   <data name="Location_Po" xml:space="preserve">
-    <value>_PO</value>
+    <value>#LocationData_PO</value>
   </data>
   <data name="Location_Region" xml:space="preserve">
-    <value>_Region</value>
+    <value>#LocationData_Region</value>
   </data>
   <data name="Location_Telephone" xml:space="preserve">
-    <value>_Telephone</value>
+    <value>#LocationData_Telephone</value>
   </data>
   <data name="Location_Mobile" xml:space="preserve">
-    <value>_Mobile</value>
+    <value>#LocationData_Mobile</value>
   </data>
   <data name="Location_Fax" xml:space="preserve">
-    <value>_Fax</value>
+    <value>#LocationData_Fax</value>
   </data>
   <data name="Location_Email" xml:space="preserve">
-    <value>_Email</value>
+    <value>#LocationData_Email</value>
   </data>
   <data name="Location_SapNumber" xml:space="preserve">
-    <value>_SapNumber</value>
+    <value>#LocationData_SapNumber</value>
   </data>
   <data name="Location_CompanyName" xml:space="preserve">
-    <value>_LocationName</value>
+    <value>#LocationData_LocationName</value>
   </data>
   <data name="Location_StreetName" xml:space="preserve">
-    <value>_Street</value>
+    <value>#LocationData_Street</value>
   </data>
   <data name="Location_Language" xml:space="preserve">
-    <value>_LanguageId</value>
+    <value>#LocationData_LanguageId</value>
   </data>
   <data name="Location_Web" xml:space="preserve">
-    <value>_Web</value>
+    <value>#LocationData_Web</value>
   </data>
 </root>

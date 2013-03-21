@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _AddressAddition.
+        ///   Looks up a localized string similar to #LocationData_AddressAddition.
         /// </summary>
         internal static string Location_AdressAddition {
             get {
@@ -70,7 +70,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _City.
+        ///   Looks up a localized string similar to #LocationData_City.
         /// </summary>
         internal static string Location_City {
             get {
@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _LocationName.
+        ///   Looks up a localized string similar to #LocationData_LocationName.
         /// </summary>
         internal static string Location_CompanyName {
             get {
@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _CountryId.
+        ///   Looks up a localized string similar to #LocationData_CountryId.
         /// </summary>
         internal static string Location_Country {
             get {
@@ -97,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Email.
+        ///   Looks up a localized string similar to #LocationData_Email.
         /// </summary>
         internal static string Location_Email {
             get {
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Fax.
+        ///   Looks up a localized string similar to #LocationData_Fax.
         /// </summary>
         internal static string Location_Fax {
             get {
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _LanguageId.
+        ///   Looks up a localized string similar to #LocationData_LanguageId.
         /// </summary>
         internal static string Location_Language {
             get {
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Mobile.
+        ///   Looks up a localized string similar to #LocationData_Mobile.
         /// </summary>
         internal static string Location_Mobile {
             get {
@@ -133,7 +133,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _PO.
+        ///   Looks up a localized string similar to #LocationData_PO.
         /// </summary>
         internal static string Location_Po {
             get {
@@ -142,7 +142,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Region.
+        ///   Looks up a localized string similar to #LocationData_Region.
         /// </summary>
         internal static string Location_Region {
             get {
@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _SapNumber.
+        ///   Looks up a localized string similar to #LocationData_SapNumber.
         /// </summary>
         internal static string Location_SapNumber {
             get {
@@ -160,7 +160,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Street.
+        ///   Looks up a localized string similar to #LocationData_Street.
         /// </summary>
         internal static string Location_StreetName {
             get {
@@ -169,7 +169,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Telephone.
+        ///   Looks up a localized string similar to #LocationData_Telephone.
         /// </summary>
         internal static string Location_Telephone {
             get {
@@ -178,7 +178,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Web.
+        ///   Looks up a localized string similar to #LocationData_Web.
         /// </summary>
         internal static string Location_Web {
             get {
@@ -187,20 +187,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ZIP.
+        ///   Looks up a localized string similar to #LocationData_ZIP.
         /// </summary>
         internal static string Location_Zip {
             get {
                 return ResourceManager.GetString("Location_Zip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to #LocationData.
-        /// </summary>
-        internal static string LocationPrefix {
-            get {
-                return ResourceManager.GetString("LocationPrefix", resourceCulture);
             }
         }
     }
