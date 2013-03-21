@@ -68,7 +68,7 @@
     <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
     <Compile Include="TestObjects\Brand\ContractSelect.cs" />
     <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
-    <Compile Include="TestObjects\Common\ApplicationNews.cs" />
+    <Compile Include="TestObjects\Common\LobbyNews.cs" />
     <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\MenuObject.cs" />
     <Compile Include="TestObjects\Common\QuickSearch.cs" />

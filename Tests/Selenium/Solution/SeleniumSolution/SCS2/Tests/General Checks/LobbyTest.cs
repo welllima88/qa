@@ -115,7 +115,7 @@ namespace SeleniumTests
         [TestMethod]
         public void ApplicationNews()
         {
-            Assert.IsTrue(_lobby.ApplicationNews.NewsTitle.Displayed);
+            Assert.IsTrue(_lobby.LobbyNews.NewsTitle.Displayed);
             // Assert.IsTrue(_lobby.RecentElements.Elements.Count > 0);
         }
 

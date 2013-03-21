@@ -5,9 +5,9 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
-    public class ApplicationNews : WebObject
+    public class LobbyNews : WebObject
     {
-        public ApplicationNews(IWebDriverAdapter driver) : base(driver)
+        public LobbyNews(IWebDriverAdapter driver) : base(driver)
         {
             Prefix = "div.container ";
         }
