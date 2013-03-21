@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Contact {
+    public class Contact {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact.Contact", typeof(Contact).Assembly);
@@ -51,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,135 +61,135 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_AddressAddition.
+        ///   Looks up a localized string similar to #PersonData_Contact_AddressAddition.
         /// </summary>
-        internal static string AddressAddition {
+        public static string AddressAddition {
             get {
                 return ResourceManager.GetString("AddressAddition", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_City.
+        ///   Looks up a localized string similar to #PersonData_Contact_City.
         /// </summary>
-        internal static string City {
+        public static string City {
             get {
                 return ResourceManager.GetString("City", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to select#PersonData_Contact_CountryId.
+        ///   Looks up a localized string similar to #PersonData_Contact_CountryId.
         /// </summary>
-        internal static string Country {
+        public static string Country {
             get {
                 return ResourceManager.GetString("Country", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Email.
+        ///   Looks up a localized string similar to #PersonData_Contact_Email.
         /// </summary>
-        internal static string Email {
+        public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Fax.
+        ///   Looks up a localized string similar to #PersonData_Contact_Fax.
         /// </summary>
-        internal static string Fax {
+        public static string Fax {
             get {
                 return ResourceManager.GetString("Fax", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_FirstName.
+        ///   Looks up a localized string similar to #PersonData_FirstName.
         /// </summary>
-        internal static string FirstName {
+        public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to selector#PersonData_Contact_LanguageId.
+        ///   Looks up a localized string similar to #PersonData_Contact_LanguageId.
         /// </summary>
-        internal static string Language {
+        public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Mobile.
+        ///   Looks up a localized string similar to #PersonData_Contact_Mobile.
         /// </summary>
-        internal static string Mobile {
+        public static string Mobile {
             get {
                 return ResourceManager.GetString("Mobile", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_LastName.
+        ///   Looks up a localized string similar to #PersonData_LastName.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_PO.
+        ///   Looks up a localized string similar to #PersonData_Contact_PO.
         /// </summary>
-        internal static string Po {
+        public static string Po {
             get {
                 return ResourceManager.GetString("Po", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Region.
+        ///   Looks up a localized string similar to #PersonData_Contact_Region.
         /// </summary>
-        internal static string Region {
+        public static string Region {
             get {
                 return ResourceManager.GetString("Region", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Title.
+        ///   Looks up a localized string similar to #PersonData_Title.
         /// </summary>
-        internal static string Salutation {
+        public static string Salutation {
             get {
                 return ResourceManager.GetString("Salutation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Street.
+        ///   Looks up a localized string similar to #PersonData_Contact_Street.
         /// </summary>
-        internal static string Street {
+        public static string Street {
             get {
                 return ResourceManager.GetString("Street", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_Telephone.
+        ///   Looks up a localized string similar to #PersonData_Contact_Telephone.
         /// </summary>
-        internal static string Telephone {
+        public static string Telephone {
             get {
                 return ResourceManager.GetString("Telephone", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to input#PersonData_Contact_ZIP.
+        ///   Looks up a localized string similar to #PersonData_Contact_ZIP.
         /// </summary>
-        internal static string Zip {
+        public static string Zip {
             get {
                 return ResourceManager.GetString("Zip", resourceCulture);
             }

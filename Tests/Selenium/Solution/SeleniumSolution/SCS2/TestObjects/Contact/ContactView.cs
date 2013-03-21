@@ -8,7 +8,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
     {
         public ContactView(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "#Person";
         }
 
         public IWebElement EditButton
@@ -20,17 +19,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 
         public string FirstName
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_FirstName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Contact.FirstName)).Text; }
         }
 
         public string Name
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_LastName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Contact.Name)).Text; }
         }
 
         public string Salutation
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Title")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Contact.Salutation)).Text; }
         }
 
         public string Country
