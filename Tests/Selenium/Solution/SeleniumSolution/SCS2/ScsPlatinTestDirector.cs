@@ -17,12 +17,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 
         public override IWebDriverAdapter DefaultTestSetup()
         {
-            var certificateLogin = new CertificateLogin(Resources.mandant_qa_L, WebDriver);
-            var uacLogin = new UacLogin(Resources.uac_username, Resources.uac_passwort, WebDriver);
+            var certificateLogin = new CertificateLogin(Scs2Res.mandant_qa_L, WebDriver);
+            var uacLogin = new UacLogin(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
             var lobby = new Lobby(WebDriver);
 
-            TestSetup(Resources.WES_QA_L, certificateLogin, lobby);
-            TestSetup(Resources.UAC_DEV, uacLogin, lobby);
+            TestSetup(Scs2Res.WES_QA_L, certificateLogin, lobby);
+            TestSetup(Scs2Res.UAC_DEV, uacLogin, lobby);
             return WebDriver;
         }
     }

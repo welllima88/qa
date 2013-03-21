@@ -53,11 +53,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             set
             {
-                Driver.FindElement(By.CssSelector(Prefix + "_Telephone")).
-                    Clear();
-                Driver.FindElement(By.CssSelector(Prefix + "_Telephone")).
-                    SendKeys(
-                        value);
+                Driver.FindAdaptedElement(By.CssSelector(Prefix + "_Telephone")).
+                    TypeText(value);
             }
         }
 

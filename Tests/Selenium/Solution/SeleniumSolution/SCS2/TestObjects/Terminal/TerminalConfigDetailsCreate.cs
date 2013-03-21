@@ -33,14 +33,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
             }
             set
             {
-                Driver.FindElement(
+                Driver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                    .Clear();
-                Driver.FindElement(
-                    By.CssSelector(
-                        "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                    .SendKeys(value);
+                    .TypeText(value);
             }
         }
 
@@ -59,14 +55,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindElement(
+                Driver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_inpInstallTypeRemark"))
-                    .Clear();
-                Driver.FindElement(
-                    By.CssSelector(
-                        "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_inpInstallTypeRemark"))
-                    .SendKeys(value);
+                    .TypeText(value);
             }
         }
 
@@ -96,14 +88,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindElement(
+                Driver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_inpECRText"))
-                    .Clear();
-                Driver.FindElement(
-                    By.CssSelector(
-                        "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_inpECRText"))
-                    .SendKeys(value);
+                    .TypeText(value);
             }
         }
 
@@ -125,14 +113,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindElement(
+                Driver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                    .Clear();
-                Driver.FindElement(
-                    By.CssSelector(
-                        "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                    .SendKeys(value);
+                    .TypeText(value);
             }
 
 

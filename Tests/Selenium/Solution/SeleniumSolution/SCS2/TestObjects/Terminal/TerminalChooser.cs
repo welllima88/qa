@@ -42,9 +42,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
                     .
                     TypeText(value);
                 Driver.FindElement(By.CssSelector("input#ctl00_bodyContentPlaceHolder_articleSelector_inpNumber")).
-                    SendKeys
-                    (Keys.Enter);
-                //Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_articleSelector_inpNumber]")).Submit(); ??
+                    SendKeys //send keys here necessary!!
+                    (Keys.Enter);                
             }
             //use Article(" xenta AUTONOM, TCP/IP / 15463").Click to continue to next screen
         }

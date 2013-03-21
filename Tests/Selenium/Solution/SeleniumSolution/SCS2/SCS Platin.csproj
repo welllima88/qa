@@ -56,10 +56,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="Properties\Scs2Res.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>Scs2Res.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
@@ -86,6 +86,16 @@
     <Compile Include="TestObjects\Contact\ContactView.cs" />
     <Compile Include="TestObjects\Common\Lobby.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
+    <Compile Include="TestObjects\Contact\Contact.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contact.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestObjects\Customer\Customer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
     <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
     <Compile Include="TestObjects\Location\BillingAdressView.cs" />
@@ -96,6 +106,11 @@
     <Compile Include="TestObjects\Brand\ContractEdit.cs" />
     <Compile Include="TestObjects\Brand\ContractCreate.cs" />
     <Compile Include="TestObjects\Brand\ContractView.cs" />
+    <Compile Include="TestObjects\Location\Location.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Location.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestObjects\SearchResult\AbstractSearchResult.cs" />
     <Compile Include="TestObjects\SearchResult\MpdResult.cs" />
     <Compile Include="TestObjects\SearchResult\UserResult.cs" />
@@ -189,9 +204,21 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Properties\Scs2Res.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Contact\Contact.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Contact.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Customer\Customer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Location\Location.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Location.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

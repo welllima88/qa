@@ -26,10 +26,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_inpTerminalInfoText"))
-                    .Clear();
-                Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_inpTerminalInfoText"))
-                    .SendKeys(value);
+                Driver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_inpTerminalInfoText"))
+                    .TypeText(value);
             }
         }
 

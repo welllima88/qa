@@ -34,13 +34,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
             }
             set
             {
-                Driver.FindElement(
-                    By.CssSelector("#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText"))
-                    .Clear();
-                Driver.FindElement(
+                Driver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText"))
                     .
-                    SendKeys(value);
+                    TypeText(value);
             }
         }
 
