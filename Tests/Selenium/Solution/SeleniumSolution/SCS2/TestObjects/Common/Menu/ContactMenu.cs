@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='/Pages/Person/PersonEdit.aspx?PageMode=view&PERSONID=']"));
+                        By.CssSelector(Menu.ContactMenu_Contact));
             }
         }
 
@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&PERSONID=']"));
+                        By.CssSelector(Menu.ContactMenu_ContactEdit));
             }
         }
     }
