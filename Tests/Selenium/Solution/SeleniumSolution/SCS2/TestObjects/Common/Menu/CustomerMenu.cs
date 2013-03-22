@@ -11,27 +11,27 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement Customer
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Customer/CustomerEdit.aspx?CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_Customer)); }
         }
 
         public IWebElement CustomerCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Customer/CustomerEdit.aspx?PageMode=new']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerCreate)); }
         }
 
         public IWebElement LocationCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Location/New?CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_LocationCreate)); }
         }
 
         public IWebElement TerminalCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/TerminalNew.aspx?CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_TerminalCreate)); }
         }
 
         public IWebElement UserCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/LoginNew.asp?CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_UserCreate)); }
         }
 
         public IWebElement CustomerEdit
@@ -40,16 +40,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_CustomerEdit));
             }
         }
 
-        public IWebElement CustomerQuit
+        public IWebElement CustomerDeactivate
         {
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']"));
+                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerDeactivate));
             }
         }
 
@@ -59,7 +59,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='Location/LocationList.aspx?CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_LocationsOfCustomer));
             }
         }
 
@@ -69,7 +69,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']"));
+                        By.CssSelector(Menu.CustomerMenu_TerminalsOfCustomerLocation));
             }
         }
 
@@ -78,7 +78,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("a[href*='/Mpd/list?CUSTOMERID=']"));
+                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_AllMpds));
             }
         }
 
@@ -87,7 +87,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("a[href*='Terminal/TerminalList.aspx?CUSTOMERID=']"));
+                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_AllTerminals));
             }
         }
 
@@ -96,8 +96,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
-                        By.CssSelector("a[href*='TicketList.asp?ListType=customer&CUSTOMERID=']"));
+                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_Tickets));
             }
         }
 
@@ -107,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='User/UserList.aspx?CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_Users));
             }
         }
 
@@ -117,7 +116,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='Person/PersonList.aspx?CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_Contacts));
             }
         }
 
@@ -126,7 +125,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("a[href*='Person/PersonEdit.aspx?PageMode=new&CUSTOMERID=']"));
+                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_ContactCreate));
             }
         }
 
@@ -136,7 +135,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='BillingAddress/List?CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_BillingAdresses));
             }
         }
 
@@ -146,13 +145,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             {
                 return
                     Driver.FindElement(
-                        By.CssSelector("a[href*='BillingAddress/New?CUSTOMERID=']"));
+                        By.CssSelector(Menu.CustomerMenu_BillingAdressCreate));
             }
         }
 
         public IWebElement BillingAddressEdit
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/BillingAddress/Edit?CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_BillingAddressEdit)); }
         }
     }
 }
