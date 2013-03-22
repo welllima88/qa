@@ -9,76 +9,54 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
     {
         public LocationView(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "#LocationData";
         }
 
         #region ILocationView Members
 
         public string CompanyName
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_LocationName")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_LocationName")).Text; }
         }
 
         public string Guid
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_LocationGUID")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_LocationGUID")).Text; }
         }
 
         public string StreetName
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector(Prefix + "_Street"))
-                        .Text;
-            }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Street")).Text; }
         }
 
         public string Zip
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector(Prefix + "_ZIP")).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_ZIP")).Text; }
         }
 
         public string City
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector(Prefix + "_City")).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_City")).Text; }
         }
 
         public String SbsDebitNumber
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Address_SBSDebitNumber")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Address_SBSDebitNumber")).Text; }
         }
 
         public String SbsAdressNumber
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Address_SBSAddressNumber")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Address_SBSAddressNumber")).Text; }
         }
 
 
         public string Language
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector(Prefix + "_LanguageId")).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_LanguageId")).Text; }
         }
 
         public string Country
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector(Prefix + "_CountryId")).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_CountryId")).Text; }
         }
 
         public string Ep2MerchantId
@@ -88,42 +66,42 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string SapNumber
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_SapNumber")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_SapNumber")).Text; }
         }
 
         public string Po
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_PO")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_PO")).Text; }
         }
 
         public string AdressAddition
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_AddressAddition")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
         }
 
         public string Email
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Email")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Email")).Text; }
         }
 
         public string Web
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Web")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Web")).Text; }
         }
 
         public string Telephone
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Telephone")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Telephone")).Text; }
         }
 
         public string Mobile
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Mobile")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Mobile")).Text; }
         }
 
         public string Fax
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Fax")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
         }
 
         public IWebElement EditButton
@@ -133,7 +111,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Region
         {
-            get { return Driver.FindElement(By.CssSelector(Prefix + "_Region")).Text; }
+            get { return Driver.FindElement(By.CssSelector("#LocationData_Region")).Text; }
         }
 
         #endregion
