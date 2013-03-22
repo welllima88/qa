@@ -231,7 +231,7 @@
       <LastGenOutput>Contact.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Customer\Customer.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Customer.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Location\Location.resx">

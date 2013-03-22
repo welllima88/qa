@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Customer {
+    public class Customer {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer.Customer", typeof(Customer).Assembly);
@@ -51,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox.
         /// </summary>
-        internal static string AdressAddition {
+        public static string AdressAddition {
             get {
                 return ResourceManager.GetString("AdressAddition", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_rowAgency_sugAgency.
         /// </summary>
-        internal static string Agency {
+        public static string Agency {
             get {
                 return ResourceManager.GetString("Agency", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to select#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator.
         /// </summary>
-        internal static string CashIntegrator {
+        public static string CashIntegrator {
             get {
                 return ResourceManager.GetString("CashIntegrator", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDowntbx.
         /// </summary>
-        internal static string CategoryCode {
+        public static string CategoryCode {
             get {
                 return ResourceManager.GetString("CategoryCode", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_cityTextBox.
         /// </summary>
-        internal static string City {
+        public static string City {
             get {
                 return ResourceManager.GetString("City", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_inpCompanyName.
         /// </summary>
-        internal static string CompanyName {
+        public static string CompanyName {
             get {
                 return ResourceManager.GetString("CompanyName", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx.
         /// </summary>
-        internal static string Country {
+        public static string Country {
             get {
                 return ResourceManager.GetString("Country", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerNameTextBox.
         /// </summary>
-        internal static string CustomerName {
+        public static string CustomerName {
             get {
                 return ResourceManager.GetString("CustomerName", resourceCulture);
             }
@@ -135,25 +135,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerNumberInput.
         /// </summary>
-        internal static string CustomerNumber {
+        public static string CustomerNumber {
             get {
                 return ResourceManager.GetString("CustomerNumber", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSegment.
-        /// </summary>
-        internal static string CustomerSegment {
-            get {
-                return ResourceManager.GetString("CustomerSegment", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_emailTextBox.
         /// </summary>
-        internal static string Email {
+        public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
             }
@@ -162,16 +153,25 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_faxTextBox.
         /// </summary>
-        internal static string Fax {
+        public static string Fax {
             get {
                 return ResourceManager.GetString("Fax", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerGUIDLabel.
+        /// </summary>
+        public static string GUID {
+            get {
+                return ResourceManager.GetString("GUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_sugLanguagetbx.
         /// </summary>
-        internal static string Language {
+        public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox.
         /// </summary>
-        internal static string Mobile {
+        public static string Mobile {
             get {
                 return ResourceManager.GetString("Mobile", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_poTextBox.
         /// </summary>
-        internal static string Po {
+        public static string Po {
             get {
                 return ResourceManager.GetString("Po", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_regionTextBox.
         /// </summary>
-        internal static string Region {
+        public static string Region {
             get {
                 return ResourceManager.GetString("Region", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_sapNumberInput.
         /// </summary>
-        internal static string SapNumber {
+        public static string SapNumber {
             get {
                 return ResourceManager.GetString("SapNumber", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSbsBillingTenant.
         /// </summary>
-        internal static string SbsBillingTenant {
+        public static string SbsBillingTenant {
             get {
                 return ResourceManager.GetString("SbsBillingTenant", resourceCulture);
             }
@@ -225,16 +225,25 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSbsCurrency.
         /// </summary>
-        internal static string SbsCurrency {
+        public static string SbsCurrency {
             get {
                 return ResourceManager.GetString("SbsCurrency", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSegment.
+        /// </summary>
+        public static string Segment {
+            get {
+                return ResourceManager.GetString("Segment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox.
         /// </summary>
-        internal static string StreetName {
+        public static string StreetName {
             get {
                 return ResourceManager.GetString("StreetName", resourceCulture);
             }
@@ -243,7 +252,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier.
         /// </summary>
-        internal static string Supplier {
+        public static string Supplier {
             get {
                 return ResourceManager.GetString("Supplier", resourceCulture);
             }
@@ -252,7 +261,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract.
         /// </summary>
-        internal static string SupportContract {
+        public static string SupportContract {
             get {
                 return ResourceManager.GetString("SupportContract", resourceCulture);
             }
@@ -261,7 +270,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox.
         /// </summary>
-        internal static string Telephone {
+        public static string Telephone {
             get {
                 return ResourceManager.GetString("Telephone", resourceCulture);
             }
@@ -270,7 +279,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_webTextBox.
         /// </summary>
-        internal static string Web {
+        public static string Web {
             get {
                 return ResourceManager.GetString("Web", resourceCulture);
             }
@@ -279,7 +288,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_zipTextBox.
         /// </summary>
-        internal static string Zip {
+        public static string Zip {
             get {
                 return ResourceManager.GetString("Zip", resourceCulture);
             }

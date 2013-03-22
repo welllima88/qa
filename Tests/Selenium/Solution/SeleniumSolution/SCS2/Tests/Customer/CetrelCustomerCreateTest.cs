@@ -60,7 +60,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string supportContract = "SPA Servicepaket Advance";
             _customerCreate.SupportContract = supportContract;
             string customerSegment = "07_P_CETREL";
-            _customerCreate.CustomerSegment = customerSegment;
+            _customerCreate.Segment = customerSegment;
             string customerName = "SYR Cetrel Kunde Create";
             _customerCreate.CustomerName = customerName;
             string companyName = "SYR Cetrel Firma Create";

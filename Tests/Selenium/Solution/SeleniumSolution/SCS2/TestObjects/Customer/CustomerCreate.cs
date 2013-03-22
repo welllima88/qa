@@ -276,16 +276,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             }
         }
 
-        public string CustomerSegment
+        public string Segment
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerSegment)).Selector().
+                Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
                     SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerSegment)).Selector().
+                return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
                     SelectedOption.Text;
             }
         }

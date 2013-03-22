@@ -15,72 +15,58 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string CompanyName
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCompanyName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.CompanyName)).Text; }
         }
 
         public string Guid
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerGUIDLabel")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.GUID)).Text; }
         }
 
         public string CustomerName
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.CustomerName)).Text; }
         }
 
         public string Supplier
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier")).
-                        Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Supplier)).Text;
             }
         }
 
         public string SbsBillingTenant
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsBillingTenantLabel")).
-                        Text;
+            {return Driver.FindElement(By.CssSelector(Customer.SbsBillingTenant)).Text;
             }
         }
 
         public string StreetName
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.StreetName)).Text;
             }
         }
 
         public string Zip
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox")).Text;
+            { return Driver.FindElement(By.CssSelector(Customer.Zip)).Text;
             }
         }
 
         public string City
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_cityTextBox")).Text;
-            }
+            {return Driver.FindElement(By.CssSelector(Customer.City)).Text;}
         }
 
         public string SbsCurrency
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsCurrency")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.SbsCurrency)).Text; }
         }
-
+        //todo to verify this locators:
         public String CustomerNumber
         {
             get { return Driver.FindElement(By.CssSelector("span[id$='customerNumberInput']")).Text; }
@@ -90,6 +76,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             get { return Driver.FindElement(By.CssSelector("span[id$='customerSbsLabel']")).Text; }
         }
+        public string Ep2MerchantId
+        {
+            get { return Driver.FindElement(By.CssSelector("span[id$='ep2numberTextBox']")).Text; }
+        }
 
         public String SbsAdressNumber
         {
@@ -98,96 +88,74 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public String Agency
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowAgency_sugAgency")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.Agency)).Text; }
         }
 
 
         public string Language
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugLanguage")).Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Language)).Text;
             }
         }
 
         public string Country
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugCountry")).Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Country)).Text;
             }
         }
 
-        public string Ep2MerchantId
-        {
-            get { return Driver.FindElement(By.CssSelector("span[id$='ep2numberTextBox']")).Text; }
-        }
 
         public string Po
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_poTextBox")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.Po)).Text; }
         }
 
         public string AdressAddition
         {
             get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox")).Text;
+            {return Driver.FindElement(By.CssSelector(Customer.AdressAddition)).Text;
             }
         }
 
         public string SapNumber
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_sapNumberInput")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.SapNumber)).Text; }
         }
 
         public string Email
         {
             // ":not(label)" is necessary because rendering tag is a span if no email and a if it is set
             get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
+            {return Driver.FindElement(By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
             }
         }
 
         public string Telephone
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Telephone)).Text;
             }
         }
 
         public string Mobile
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Mobile)).Text;
             }
         }
 
         public string Fax
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_faxTextBox")).Text;
+            {return Driver.FindElement(By.CssSelector(Customer.Fax)).Text;
             }
         }
 
         public string Web
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webLink")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.Web)).Text; }
         }
 
         public IWebElement EditButton
@@ -198,48 +166,34 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string Region
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_regionTextBox")).
-                        Text;
+            { return Driver.FindElement(By.CssSelector(Customer.Region)).Text;
             }
         }
 
         public string CategoryCode
         {
             get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.CategoryCode)).Text;
             }
         }
 
         public string SupportContract
         {
             get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("#ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.SupportContract)).Text;
             }
         }
 
         public string CashIntegrator
         {
             get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator"))
-                        .Text;
+            {return Driver.FindElement(By.CssSelector(Customer.CashIntegrator)).Text;
             }
         }
 
-        public string CustomerSegment
+        public string Segment
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSegment")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.Segment)).Text; }
         }
 
         #endregion

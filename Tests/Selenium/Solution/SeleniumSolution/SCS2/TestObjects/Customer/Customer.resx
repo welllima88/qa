@@ -189,7 +189,10 @@
   <data name="CashIntegrator" xml:space="preserve">
     <value>select#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</value>
   </data>
-  <data name="CustomerSegment" xml:space="preserve">
+  <data name="Segment" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_customerSegment</value>
   </data>
+	<data name="GUID">
+		<value xml:space="preserve">#ctl00_bodyContentPlaceHolder_customerGUIDLabel</value>
+	</data>
 </root>
