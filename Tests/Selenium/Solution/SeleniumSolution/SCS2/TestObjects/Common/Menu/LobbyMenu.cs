@@ -26,7 +26,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement Lobby
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='Default.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.LobbyMenu_Lobby)); }
         }
     }
 }
