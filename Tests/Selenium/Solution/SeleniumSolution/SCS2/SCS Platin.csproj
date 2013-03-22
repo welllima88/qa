@@ -201,7 +201,6 @@
     <Folder Include="Tests\Administration\Agency\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestSetup\LocatorMap.xml" />
     <Content Include="RegReplace.txt" />
   </ItemGroup>
   <ItemGroup>
