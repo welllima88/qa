@@ -121,7 +121,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Guid
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_LocationGUID")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Location.GUID)).Text; }
         }
 
         #endregion

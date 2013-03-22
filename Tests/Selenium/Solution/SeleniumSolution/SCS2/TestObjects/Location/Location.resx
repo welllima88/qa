@@ -162,4 +162,7 @@
   <data name="Web" xml:space="preserve">
     <value>#LocationData_Web</value>
   </data>
+	<data name="GUID">
+		<value xml:space="preserve">#LocationData_LocationGUID</value>
+	</data>
 </root>

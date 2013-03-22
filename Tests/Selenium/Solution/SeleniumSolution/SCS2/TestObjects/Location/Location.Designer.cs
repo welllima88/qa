@@ -115,6 +115,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #LocationData_LocationGUID.
+        /// </summary>
+        public static string GUID {
+            get {
+                return ResourceManager.GetString("GUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #LocationData_LanguageId.
         /// </summary>
         public static string Language {
