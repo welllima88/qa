@@ -165,4 +165,13 @@
 	<data name="GUID">
 		<value xml:space="preserve">#LocationData_LocationGUID</value>
 	</data>
+	<data name="SbsDebitNumber">
+		<value xml:space="preserve">#LocationData_Address_SBSDebitNumber</value>
+	</data>
+	<data name="SbsAdressNumber">
+		<value xml:space="preserve">#LocationData_Address_SBSAddressNumber</value>
+	</data>
+	<data name="Ep2MerchantId">
+		<value xml:space="preserve">#Location_EP2MerchantId</value>
+	</data>
 </root>

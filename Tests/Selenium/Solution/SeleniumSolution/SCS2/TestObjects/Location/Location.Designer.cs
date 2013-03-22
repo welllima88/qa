@@ -106,6 +106,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #Location_EP2MerchantId.
+        /// </summary>
+        public static string Ep2MerchantId {
+            get {
+                return ResourceManager.GetString("Ep2MerchantId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #LocationData_Fax.
         /// </summary>
         public static string Fax {
@@ -165,6 +174,24 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location {
         public static string SapNumber {
             get {
                 return ResourceManager.GetString("SapNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #LocationData_Address_SBSAddressNumber.
+        /// </summary>
+        public static string SbsAdressNumber {
+            get {
+                return ResourceManager.GetString("SbsAdressNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #LocationData_Address_SBSDebitNumber.
+        /// </summary>
+        public static string SbsDebitNumber {
+            get {
+                return ResourceManager.GetString("SbsDebitNumber", resourceCulture);
             }
         }
         
