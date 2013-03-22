@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class QuickSearch : WebObject
     {
         public QuickSearch(IWebDriverAdapter driver) : base(driver)
-        {            
+        {
         }
 
         public IWebElement SearchField

@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class RecentMassmutations : WebObject
     {
         public RecentMassmutations(IWebDriverAdapter driver) : base(driver)
-        {            
+        {
         }
 
         public String Header

@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
     public class CustomerView : WebObject, ICustomerView
     {
         public CustomerView(IWebDriverAdapter driver) : base(driver)
-        {            
+        {
         }
 
         #region ICustomerView Members

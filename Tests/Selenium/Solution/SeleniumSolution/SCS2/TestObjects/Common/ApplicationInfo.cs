@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class ApplicationInfo : WebObject
     {
         public ApplicationInfo(IWebDriverAdapter driver) : base(driver)
-        {            
+        {
         }
 
         public IWebElement ApplicationName

@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class Footer : WebObject
     {
         public Footer(IWebDriverAdapter driver) : base(driver)
-        {            
+        {
         }
 
         public IWebElement Feedback

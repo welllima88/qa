@@ -9,8 +9,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     public class Lobby : WebObject, ILogout
     {
         public ApplicationInfo ApplicationInfo;
-        public LobbyNews LobbyNews;
         public Footer Footer;
+        public LobbyNews LobbyNews;
         public LobbyMenu Menu;
         public MetaNavBar MetaNavBar;
         public NavigationBar NavigationBar;
