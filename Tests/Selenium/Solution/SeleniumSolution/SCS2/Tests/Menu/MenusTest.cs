@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
             Assert.IsTrue(terminalMenu.ServiceCenterCreate.Displayed);
             Assert.IsTrue(terminalMenu.PmsCreate.Displayed);
             Assert.IsTrue(terminalMenu.Edit.Displayed);
-            Assert.IsTrue(terminalMenu.Quit.Displayed);
+            Assert.IsTrue(terminalMenu.Deactivate.Displayed);
             Assert.IsTrue(terminalMenu.Duplicate.Displayed);
             Assert.IsTrue(terminalMenu.Replace.Displayed);
             Assert.IsTrue(terminalMenu.Tickets.Displayed);
@@ -130,7 +130,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
         {
             Assert.IsTrue(customerMenu.CustomerCreate.Displayed);
             Assert.IsTrue(customerMenu.CustomerEdit.Displayed);
-            Assert.IsTrue(customerMenu.CustomerQuit.Displayed);
+            Assert.IsTrue(customerMenu.CustomerDeactivate.Displayed);
             Assert.IsTrue(customerMenu.Customer.Displayed);
 
             Assert.IsTrue(customerMenu.LocationsOfCustomer.Displayed);

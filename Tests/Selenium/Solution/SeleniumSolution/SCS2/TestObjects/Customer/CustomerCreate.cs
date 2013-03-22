@@ -245,12 +245,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("_cancelButton")); }
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("_saveButton")); }
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
         }
 
         public string CustomerNumber
