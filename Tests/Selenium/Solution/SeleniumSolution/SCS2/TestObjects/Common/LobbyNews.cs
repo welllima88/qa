@@ -9,7 +9,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public LobbyNews(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "";
         }
 
         public ReadOnlyCollection<IWebElement> NewsElements

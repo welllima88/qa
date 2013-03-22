@@ -8,7 +8,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
     {
         public NavigationBar(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = Common.NavigationBar_Prefix;
         }
 
         public IWebElement Lobby
@@ -19,7 +18,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
                     Driver.FindElement(
                         By.CssSelector(Common.NavigationBar_Lobby));
             }
-            //todod: ... [text*='Lobby'] doesnt work...why??
         }
 
         public IWebElement Administration
