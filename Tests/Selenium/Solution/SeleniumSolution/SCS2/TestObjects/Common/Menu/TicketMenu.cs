@@ -11,17 +11,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement NotAssigned
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TicketList.asp?ListType=notassign']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TicketMenu_NotAssigned)); }
         }
 
         public IWebElement MyGroup
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TicketList.asp?ListType=pending']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TicketMenu_MyGroup)); }
         }
 
         public IWebElement My
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TicketList.asp?ListType=personal']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TicketMenu_My)); }
         }
     }
 }

@@ -98,4 +98,184 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="ContactMenu_Contact">
+		<value><![CDATA[a[href*='/Pages/Person/PersonEdit.aspx?PageMode=view&PERSONID=']]]></value>
+	</data>
+	<data name="ContactMenu_ContactEdit">
+		<value><![CDATA[a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&PERSONID=']]]></value>
+	</data>
+	<data name="CustomerMenu_Customer">
+		<value><![CDATA[a[href*='/Customer/CustomerEdit.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_CustomerCreate">
+		<value><![CDATA[a[href*='/Customer/CustomerEdit.aspx?PageMode=new']]]></value>
+	</data>
+	<data name="CustomerMenu_LocationCreate">
+		<value><![CDATA[a[href*='/Location/New?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_TerminalCreate">
+		<value><![CDATA[a[href*='/Terminal/TerminalNew.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_UserCreate">
+		<value><![CDATA[a[href*='/LoginNew.asp?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_CustomerEdit">
+		<value><![CDATA[a[href*='/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_CustomerDeactivate">
+		<value><![CDATA[a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_LocationsOfCustomer">
+		<value><![CDATA[a[href*='Location/LocationList.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_TerminalsOfCustomerLocation">
+		<value><![CDATA[a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']]]></value>
+	</data>
+	<data name="CustomerMenu_AllMpds">
+		<value><![CDATA[a[href*='/Mpd/list?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_AllTerminals">
+		<value><![CDATA[a[href*='Terminal/TerminalList.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_Tickets">
+		<value><![CDATA[a[href*='TicketList.asp?ListType=customer&CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_Users">
+		<value><![CDATA[a[href*='User/UserList.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_Contacts">
+		<value><![CDATA[a[href*='Person/PersonList.aspx?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_ContactCreate">
+		<value><![CDATA[a[href*='Person/PersonEdit.aspx?PageMode=new&CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_BillingAdresses">
+		<value><![CDATA[a[href*='BillingAddress/List?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_BillingAdressCreate">
+		<value><![CDATA[a[href*='BillingAddress/New?CUSTOMERID=']]]></value>
+	</data>
+	<data name="CustomerMenu_BillingAddressEdit">
+		<value><![CDATA[a[href*='/BillingAddress/Edit?CUSTOMERID=']]]></value>
+	</data>
+	<data name="LobbyMenu_Lobby">
+		<value><![CDATA[a[href*='Default.aspx']]]></value>
+	</data>
+	<data name="LocationMenu_Location">
+		<value><![CDATA[a[href*='/Location/?LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_TerminalCreate">
+		<value><![CDATA[a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_InfotextCreate">
+		<value><![CDATA[a[href*='Default.aspx']]]></value>
+	</data>
+	<data name="LocationMenu_ContactCreate">
+		<value><![CDATA[a[href*='Person/PersonEdit.aspx?PageMode=new&LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_LocationEdit">
+		<value><![CDATA[a[href*='Location/Edit?LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_LocationQuit">
+		<value><![CDATA[a[href*='Location.asp?mode=Cancel&LocationFunction=']]]></value>
+	</data>
+	<data name="LocationMenu_Terminals">
+		<value><![CDATA[a[href*='Terminal/TerminalList.aspx?LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_Contacts">
+		<value><![CDATA[a[href*='Person/PersonList.aspx?CUSTOMERID='][href*='&LOCATIONID=']]]></value>
+	</data>
+	<data name="LocationMenu_Infotexts">
+		<value><![CDATA[a[href*='InfoText/LocationInfoTextList.aspx?LOCATIONID=']]]></value>
+	</data>
+	<data name="MassMutationMenu_CustomerCreate">
+		<value><![CDATA[a[href*='/MassMutation/CustomersFileUpload.aspx']]]></value>
+	</data>
+	<data name="MassMutationMenu_LocationCreate">
+		<value><![CDATA[a[href*='/MassMutation/LocationsFileUpload.aspx']]]></value>
+	</data>
+	<data name="MassMutationMenu_TerminalCreate">
+		<value><![CDATA[a[href*='/MassMutation/TerminalsFileUpload.aspx']]]></value>
+	</data>
+	<data name="MassMutationMenu_ContractCreate">
+		<value><![CDATA[a[href*='/MassMutation/ContractsFileUpload.aspx']]]></value>
+	</data>
+	<data name="MassMutationMenu_BusinessTemplateMigrate">
+		<value><![CDATA[a[href*='/MassMutation/BTMigrationFileUpload.aspx']]]></value>
+	</data>
+	<data name="Prefix">
+		<value><![CDATA[td#leftHandMenu ]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_GklpBlock">
+		<value><![CDATA[a[href*='/GKLP/GKLPBlock.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_SetFastInitFlag">
+		<value><![CDATA[a[href*='/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_ResetComAdresses">
+		<value><![CDATA[a[href*='/Terminal/ResetNetAddr.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_TerminalEvents">
+		<value><![CDATA[a[href*='/TerminalS3Log.asp?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_FoMessages">
+		<value><![CDATA[a[href*='/FoMessage/Index?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_FoQueries">
+		<value><![CDATA[a[href*='/Terminal/FOQueries.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_Ep2TraceLog">
+		<value><![CDATA[a[href*='/TerminalEP2Log.asp?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalAnalysisMenu_SendOverview">
+		<value><![CDATA[a[href*='/Admin/MessageTransport/Overview.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Terminal">
+		<value><![CDATA[a[href*='/Terminal/TerminalView.aspx?PageMode=view&TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_ContractCreate">
+		<value><![CDATA[a[href*='/Contract/ContractNew.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_InfotextCreate">
+		<value><![CDATA[a[href*='/InfoText/TerminalInfoTextNew.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_TicketCreate">
+		<value><![CDATA[a[href*='/ticket.asp?WindowName=NewTicket&CUSTOMERID=']]]></value>
+	</data>
+	<data name="TerminalMenu_ServiceCenterCreate">
+		<value><![CDATA[a[href*='/Contract/ServiceCenterCreate.aspx?']]]></value>
+	</data>
+	<data name="TerminalMenu_PmsCreate">
+		<value><![CDATA[a[href*='/Contract/PMSCreate.aspx?']]]></value>
+	</data>
+	<data name="TerminalMenu_Edit">
+		<value><![CDATA[a[href*='/Terminal/TerminalView.aspx?PageMode=edit&TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Deactivate">
+		<value><![CDATA[a[href*='/Terminal/?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Duplicate">
+		<value><![CDATA[a[href*='/Terminal/TerminalDuplicate.aspx?']]]></value>
+	</data>
+	<data name="TerminalMenu_Replace">
+		<value><![CDATA[a[href*='/Terminal/TerminalReplace.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Tickets">
+		<value><![CDATA[a[href*='/TicketList.asp?ListType=terminal&TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Infotexts">
+		<value><![CDATA[a[href*='/InfoText/TerminalInfoTextList.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TerminalMenu_Forms">
+		<value><![CDATA[a[href*='/Terminal/TerminalForms.aspx?TERMINALID=']]]></value>
+	</data>
+	<data name="TicketMenu_NotAssigned">
+		<value><![CDATA[a[href*='/TicketList.asp?ListType=notassign']]]></value>
+	</data>
+	<data name="TicketMenu_MyGroup">
+		<value><![CDATA[a[href*='/TicketList.asp?ListType=pending']]]></value>
+	</data>
+	<data name="TicketMenu_My">
+		<value><![CDATA[a[href*='/TicketList.asp?ListType=personal']]]></value>
+	</data>
 </root>

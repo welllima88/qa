@@ -21,52 +21,42 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement GklpBlock
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/GKLP/GKLPBlock.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_GklpBlock)); }
         }
 
         public IWebElement SetFastInitFlag
         {
-            get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector(
-                            "a[href*='/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&TERMINALID=']"));
-            }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_SetFastInitFlag)); }
         }
 
         public IWebElement ResetComAdresses
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/ResetNetAddr.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_ResetComAdresses)); }
         }
 
         public IWebElement TerminalEvents
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TerminalS3Log.asp?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_TerminalEvents)); }
         }
 
         public IWebElement FoMessages
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/FoMessage/Index?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_FoMessages)); }
         }
 
         public IWebElement FoQueries
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/FOQueries.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_FoQueries)); }
         }
 
         public IWebElement Ep2TraceLog
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TerminalEP2Log.asp?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_Ep2TraceLog)); }
         }
 
         public IWebElement SendOverview
         {
-            get
-            {
-                return
-                    Driver.FindElement(By.CssSelector("a[href*='/Admin/MessageTransport/Overview.aspx?TERMINALID=']"));
-            }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_SendOverview)); }
         }
     }
 }

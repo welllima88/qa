@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
         protected MenuObject(IWebDriverAdapter driver) : base(driver)
         {
             // "//td[@id='leftHandMenu']/span[@id=\"ctl00_trvNavigation\"]/descendant::";
-            Prefix = "td#leftHandMenu ";
+            Prefix = Menu.Prefix;
         }
     }
 }

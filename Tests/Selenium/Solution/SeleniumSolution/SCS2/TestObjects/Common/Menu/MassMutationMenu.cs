@@ -12,27 +12,27 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement CustomerCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/MassMutation/CustomersFileUpload.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_CustomerCreate)); }
         }
 
         public IWebElement LocationCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/MassMutation/LocationsFileUpload.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_LocationCreate)); }
         }
 
         public IWebElement TerminalCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/MassMutation/TerminalsFileUpload.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_TerminalCreate)); }
         }
 
         public IWebElement ContractCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/MassMutation/ContractsFileUpload.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_ContractCreate)); }
         }
 
         public IWebElement BusinessTemplateMigrate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/MassMutation/BTMigrationFileUpload.aspx']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_BusinessTemplateMigrate)); }
         }
     }
 }

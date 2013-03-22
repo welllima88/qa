@@ -14,77 +14,67 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 
         public IWebElement Terminal
         {
-            get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("a[href*='/Terminal/TerminalView.aspx?PageMode=view&TERMINALID=']"));
-            }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Terminal)); }
         }
 
         public IWebElement ContractCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Contract/ContractNew.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_ContractCreate)); }
         }
 
         public IWebElement InfotextCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/InfoText/TerminalInfoTextNew.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_InfotextCreate)); }
         }
 
         public IWebElement TicketCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/ticket.asp?WindowName=NewTicket&CUSTOMERID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_TicketCreate)); }
         }
 
         public IWebElement ServiceCenterCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Contract/ServiceCenterCreate.aspx?']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_ServiceCenterCreate)); }
         }
 
         public IWebElement PmsCreate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Contract/PMSCreate.aspx?']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_PmsCreate)); }
         }
 
         public IWebElement Edit
         {
-            get
-            {
-                return
-                    Driver.FindElement(
-                        By.CssSelector("a[href*='/Terminal/TerminalView.aspx?PageMode=edit&TERMINALID=']"));
-            }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Edit)); }
         }
 
-        public IWebElement Quit
+        public IWebElement Deactivate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Deactivate)); }
         }
 
         public IWebElement Duplicate
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/TerminalDuplicate.aspx?']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Duplicate)); }
         }
 
         public IWebElement Replace
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/TerminalReplace.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Replace)); }
         }
 
         public IWebElement Tickets
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/TicketList.asp?ListType=terminal&TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Tickets)); }
         }
 
         public IWebElement Infotexts
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/InfoText/TerminalInfoTextList.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Infotexts)); }
         }
 
         public IWebElement Forms
         {
-            get { return Driver.FindElement(By.CssSelector("a[href*='/Terminal/TerminalForms.aspx?TERMINALID=']")); }
+            get { return Driver.FindElement(By.CssSelector(Menu.TerminalMenu_Forms)); }
         }
     }
 }
