@@ -382,6 +382,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
         {
             _customerMenu.ContactCreate.Click();
             _menusTests.CustomerMenuCheck(_customerMenu);
+            Assert.IsTrue(_contactMenu.Contact.Displayed);
         }
 
         [Ignore]
