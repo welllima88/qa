@@ -1,3 +1,4 @@
+using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
@@ -13,11 +14,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
         public MassMutationMenu MassMutation;
         public TerminalMenu TerminalMenu;
         public TicketMenu Ticket;
+        public SimCardMenu SimCardMenu;
 
         public LobbyMenu(IWebDriverAdapter driver) : base(driver)
         {
             MassMutation = new MassMutationMenu(Driver);
-            Customer = new CustomerMenu(Driver);
             Customer = new CustomerMenu(Driver);
             LocationMenu = new LocationMenu(Driver);
             TerminalMenu = new TerminalMenu(Driver);
