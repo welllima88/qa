@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
         public MassMutationMenu MassMutation;
         public TerminalMenu TerminalMenu;
         public TicketMenu Ticket;
-        public SimCardMenu SimCardMenu;
+        public SimCardMenu SimCard;
 
         public LobbyMenu(IWebDriverAdapter driver) : base(driver)
         {

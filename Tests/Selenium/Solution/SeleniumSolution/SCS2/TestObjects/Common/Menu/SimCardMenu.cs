@@ -3,7 +3,7 @@ using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 {
-    internal class SimCardMenu : MenuObject
+    public class SimCardMenu : MenuObject
     {
         public SimCardMenu(IWebDriverAdapter driver) : base(driver)
         {
