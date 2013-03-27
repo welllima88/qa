@@ -39,6 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         [TestInitialize]
         public void TestInit()
         {
+            // SIMCard/EditCard?simCardId=11
             _driver.Url = _tb.BaseUrl + "/SIMCard/Details?SIMCardId=1";
             _dt = DateTime.Now.Ticks; //timestamp for each test
         }

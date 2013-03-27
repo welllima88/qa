@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -10,17 +8,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
     [TestClass]
     public class SimCardCreateTest
     {
-        private static SimCardListView _simCardListView;
         private static SimCardView _simCardView;
-        private static SimCardEdit _simCardEdit;
-        private static SimCardCreate _simCardCreate;
         private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
-        private static FormAlert _formAlert;
         private static Lobby _lobby;
         private static TestDirector _tb;
-        private long _dt;
-        private List<string> _formAlerts;
+
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -30,10 +23,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
 
             _simCardView = new SimCardView(_driver);
-            _simCardEdit = new SimCardEdit(_driver);
-            _simCardCreate = new SimCardCreate(_driver);
             _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
             _lobby = new Lobby(_driver);
         }
 
@@ -41,8 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         public void TestInit()
         {
             // todo: specify generic url to sim
-            _driver.Url = _tb.BaseUrl + "????";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _driver.Url = _tb.BaseUrl + "/SIMCard/Details?SIMCardId=1";
         }
 
         [TestCleanup]
@@ -58,7 +47,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         }
 
         [TestMethod]
-        public void CheckEditContactMenu()
+        public void CheckSimCardView()
+        {
+        }
+
+        [TestMethod]
+        public void CheckLobbyMenu()
+        {
+            Assert.IsTrue(_lobby.Menu.SimCardManagement.Displayed);
+        }
+
+        [TestMethod]
+        public void CheckNavigationBar()
         {
         }
     }
