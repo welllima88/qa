@@ -278,4 +278,7 @@
 	<data name="TicketMenu_My">
 		<value><![CDATA[a[href*='/TicketList.asp?ListType=personal']]]></value>
 	</data>
+	<data name="SimCardMenu_SimCardManagement">
+		<value><![CDATA[a[href*='/SIMCard']]></value>
+	</data>
 </root>

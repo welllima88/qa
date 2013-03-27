@@ -385,6 +385,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to a[href*=&apos;/SIMCard&apos;.
+        /// </summary>
+        internal static string SimCardMenu_SimCardManagement {
+            get {
+                return ResourceManager.GetString("SimCardMenu_SimCardManagement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to a[href*=&apos;/TerminalEP2Log.asp?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_Ep2TraceLog {
