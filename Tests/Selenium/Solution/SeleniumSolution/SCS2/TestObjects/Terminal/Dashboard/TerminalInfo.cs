@@ -11,28 +11,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
     {
         public TerminalInfo(IWebDriverAdapter driver) : base(driver)
         {
-            Prefix = "div.portletSummaryColumn";
         }
 
-        //TODO: better locators 
         public string TerminalId
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")).Text; }
+            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_TID")).Text; }
         }
 
         public string ExternTerminalId
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")).Text; }
+            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_ExtId")).Text; }
         }
 
         public string Article
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")).Text; }
+            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_ArticleDisplayName")).Text; }
         }
 
         public string Status
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")).Text; }
+            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_State")).Text; }
         }
     }
 }

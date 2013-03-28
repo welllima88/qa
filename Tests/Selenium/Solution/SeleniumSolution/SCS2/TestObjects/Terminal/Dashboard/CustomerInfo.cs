@@ -15,17 +15,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 
         public IWebElementAdapter Name
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("portletSummaryColumn>#TD_Customer_Name")); }
+            get { return Driver.FindAdaptedElement(By.CssSelector("div.portletSummaryColumn #TD_Customer_Name")); }
+        }
+
+        public IWebElementAdapter Adress
+        {
+            get { return Driver.FindAdaptedElement(By.CssSelector("div.portletSummaryColumn #TD_Customer_Address")); }
         }
 
         public IWebElementAdapter Info
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("portletSummaryColumn>#TD_Customer_Info")); }
+            get { return Driver.FindAdaptedElement(By.CssSelector("div.portletSummaryColumn #TD_Customer_Info")); }
         }
 
         public IWebElementAdapter Id
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("portletSummaryColumn>#TD_Customer_Id")); }
+            get { return Driver.FindAdaptedElement(By.CssSelector("div.portletSummaryColumn #TD_Customer_Id")); }
         }
     }
 }
