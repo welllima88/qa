@@ -13,24 +13,24 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         {
         }
 
-        public string TerminalId
+        public IWebElementAdapter TerminalId
         {
-            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_TerminalId)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_TerminalId)); }
         }
 
-        public string ExternTerminalId
+        public IWebElementAdapter ExternTerminalId
         {
-            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_ExternTerminalId)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_ExternTerminalId)); }
         }
 
-        public string Article
+        public IWebElementAdapter Article
         {
-            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_Article)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_Article)); }
         }
 
-        public string Status
+        public IWebElementAdapter Status
         {
-            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_Status)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_Status)); }
         }
     }
 }
