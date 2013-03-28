@@ -138,6 +138,11 @@
     <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Dashboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestObjects\Terminal\Dashboard\SalesContractPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TechnicalViewPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
@@ -237,6 +242,10 @@
     <EmbeddedResource Include="TestObjects\Location\Location.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Location.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Terminal\Dashboard\Dashboard.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

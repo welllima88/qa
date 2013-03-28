@@ -15,22 +15,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 
         public string TerminalId
         {
-            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_TID")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_TerminalId)).Text; }
         }
 
         public string ExternTerminalId
         {
-            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_ExtId")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_ExternTerminalId)).Text; }
         }
 
         public string Article
         {
-            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_ArticleDisplayName")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_Article)).Text; }
         }
 
         public string Status
         {
-            get { return Driver.FindElement(By.CssSelector("div.portletSummaryColumn #TD_Trm_State")).Text; }
+            get { return Driver.FindElement(By.CssSelector(Dashboard.TerminalInfo_Status)).Text; }
         }
     }
 }

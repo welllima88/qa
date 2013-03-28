@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 
         public FixInfo(IWebDriverAdapter webDriver) : base(webDriver)
         {
-            Prefix = "div#DashboardSummaryContainer";
+            Prefix = "";
             Customer = new CustomerInfo(webDriver);
             Location = new LocationInfo(webDriver);
             Terminal = new TerminalInfo(webDriver);
