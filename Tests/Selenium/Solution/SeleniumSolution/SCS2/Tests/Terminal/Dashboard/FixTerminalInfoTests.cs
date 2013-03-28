@@ -45,12 +45,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
             StringAssert.Matches(_terminFixInfo.Terminal.Article.Text, new Regex(@"\w+"));
             StringAssert.Matches(_terminFixInfo.Terminal.TerminalId.Text, new Regex(@"\d+"));
             StringAssert.Matches(_terminFixInfo.Terminal.ExternTerminalId.Text, new Regex(@"\w+"));
-        }        [TestMethod]
+        }
+
+        [TestMethod]
         public void LocationlInfoCheck()
         {
             StringAssert.Matches(_terminFixInfo.Location.Adress.Text, new Regex(@"\w+"));
             StringAssert.Matches(_terminFixInfo.Location.Ep2Id.Text, new Regex(@"\w{8}\d{7}"));
             StringAssert.Matches(_terminFixInfo.Location.Name.Text, new Regex(@"\w+"));
+        }
+
+        [TestMethod]
+        public void CustomerInfoCheck()
+        {
+            StringAssert.Matches(_terminFixInfo.Customer.Adress.Text, new Regex(@"\w+"));
+            StringAssert.Matches(_terminFixInfo.Customer.Id.Text, new Regex(@"\d+"));
+            StringAssert.Matches(_terminFixInfo.Customer.Name.Text, new Regex(@"\w+"));
+            StringAssert.Matches(_terminFixInfo.Customer.Info.Text, new Regex(@"\w+"));
         }
     }
 }
