@@ -152,6 +152,9 @@
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Tree\Leaf.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Tree\Composite.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Tree\IComponent.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
