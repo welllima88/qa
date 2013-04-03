@@ -132,11 +132,14 @@
     <Compile Include="TestObjects\Terminal\Article.cs" />
     <Compile Include="TestObjects\Terminal\Base.cs" />
     <Compile Include="TestObjects\Terminal\Brands.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\BrandPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Acquirer.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandContract.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\FixInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\ContactsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Pms.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Dashboard.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -144,6 +147,7 @@
       <DependentUpon>Dashboard.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Terminal\Dashboard\SalesContractPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\ServiceCenter.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TechnicalViewPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
