@@ -213,6 +213,7 @@
   <ItemGroup>
     <Folder Include="TestObjects\Common\Navigation\" />
     <Folder Include="TestObjects\Common\News\" />
+    <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
     <Folder Include="Tests\Administration\Agency\" />
   </ItemGroup>
   <ItemGroup>
