@@ -59,7 +59,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string streetName = "Bahnhofstr. 23a";
             string zip = "8001";
             string city = "Zürich";
-            string sapNumber = "1133";
             
             _customerCreate.Supplier = supplier;
             _customerCreate.CustomerName = customerName;
@@ -67,8 +66,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _customerCreate.StreetName = streetName;
             _customerCreate.Zip = zip;
             _customerCreate.City = city;
-            _customerCreate.SapNumber = sapNumber;
-
+            
             _customerCreate.SaveButton.Click();
 
             Assert.AreEqual(customerName, _customerView.CustomerName);
@@ -80,7 +78,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual(custId, _customerView.CustomerNumber);
             Assert.AreEqual(customerName, _customerView.CustomerName);
             Assert.AreEqual(supplier, _customerView.Supplier);
-            Assert.AreEqual(sapNumber, _customerView.SapNumber);
             
             StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
@@ -107,14 +104,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
             string supplier = "Coop Divisionen";
             string categoryCode = "3663: HOTELES EL PRESIDENTE";
-            string supportContract = "SPA Servicepaket Advance";
-            string customerSegment = "07_P_CETREL";
             string customerName = "SYR Coop Division Kunde";
             string companyName = "SYR Coop Firma";
             string streetName = "Pronto 1a";
             string zip = "8008";
             string city = "Zürich";
-            string po = "COO1";
+            string po = "COO2";
             string adressAddition = "TakeAway";
             string region = "ZH-W";
             string sapNumber = "2244";
@@ -129,8 +124,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
             _customerCreate.Supplier = supplier;
             _customerCreate.CategoryCode = categoryCode;
-            _customerCreate.SupportContract = supportContract;
-            _customerCreate.Segment = customerSegment;
             _customerCreate.CustomerName = customerName;
             _customerCreate.CompanyName = companyName;
             _customerCreate.StreetName = streetName;
@@ -163,8 +156,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual(supplier, _customerView.Supplier);
             Assert.AreEqual(sapNumber, _customerView.SapNumber);
             Assert.AreEqual(categoryCode, _customerView.CategoryCode);
-            Assert.AreEqual(supportContract,
-                            _customerView.SupportContract);
 
             StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 

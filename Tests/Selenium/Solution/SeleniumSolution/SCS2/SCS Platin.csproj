@@ -173,6 +173,7 @@
     <Compile Include="Tests\Contact\ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
     <Compile Include="Tests\Customer\CetrelCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\CustomerEditTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />

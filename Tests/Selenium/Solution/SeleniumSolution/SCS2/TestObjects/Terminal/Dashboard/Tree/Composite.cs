@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using SIX.SCS.QA.Selenium.Extension;
+﻿using System.Collections.Generic;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Tree
 {
@@ -22,6 +20,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Tre
         {
             _composite.Remove(webComponent);
         }
-        
     }
 }
