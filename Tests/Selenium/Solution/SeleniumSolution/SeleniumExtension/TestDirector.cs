@@ -49,7 +49,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         protected static IWebDriverAdapter FireFoxWebDriverAdapter()
         {
             FirefoxProfile firefoxProfile =
-                new FirefoxProfileManager().GetProfile(Driver.FirefoxProfile_Certificate);
+                new FirefoxProfileManager().GetProfile(DriverRes.FirefoxProfile_Certificate);
 
             return new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
