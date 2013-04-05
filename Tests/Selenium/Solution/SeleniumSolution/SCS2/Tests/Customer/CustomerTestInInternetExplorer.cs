@@ -25,7 +25,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         {
             // no need Test
             //run IEDriverServer:           
-            _tb = new ScsPlatinTestDirector("IE");
+            // todo find a way after refactorring to start up IE again
+            //_tb = new ScsPlatinTestDirector("IE");
+            _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);
