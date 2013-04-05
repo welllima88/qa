@@ -61,11 +61,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string city = "Zürich";
             
             _customerCreate.Supplier = supplier;
-            _customerCreate.CustomerName = customerName;
             _customerCreate.CompanyName = companyName;
             _customerCreate.StreetName = streetName;
             _customerCreate.Zip = zip;
             _customerCreate.City = city;
+            _customerCreate.CustomerName = customerName;
             
             _customerCreate.SaveButton.Click();
 
