@@ -53,8 +53,12 @@ namespace SIX.SCS.QA.Selenium.Extension
 
             return new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
-
-        private static IWebDriverAdapter InternetExplorerWebDriverAdapter()
+        /// <summary>
+        /// Important note:
+        /// but this is delegated to virtual method, and IE-webtesting is not supported for special test case, this will cause to derive a new class from test-director, which startups IE web driver, because it is rarely used, this solution is perfect at the momemt
+        /// </summary>
+        /// <returns></returns>
+        protected static IWebDriverAdapter InternetExplorerWebDriverAdapter()
         {
             //todo set relative path
             return
