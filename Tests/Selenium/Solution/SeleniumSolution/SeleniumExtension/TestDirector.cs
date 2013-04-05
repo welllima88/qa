@@ -2,6 +2,7 @@ using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using SIX.SCS.QA.Selenium.Extension.Login;
+using SIX.SCS.QA.Selenium.Extension.Properties;
 
 // http://www.seleniumwiki.com/category/visual-studio-2010/
 // http://code.google.com/p/selenium/downloads/list
@@ -11,29 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension
 {
     public class TestDirector
     {
-        #region Browser enum
-
-        public enum Browser
-        {
-            InternetExplorer,
-            Firefox
-        }
-
-        #endregion
-
-        #region FireFoxProfile enum
-
-        public enum FireFoxProfile
-        {
-            CertificateProfile,
-            NoCertificateProfile
-        }
-
-        #endregion
-
         private const double TimeOutSeconds = 30;
-        public const string CertificateProfile = "SeleWithCertificate";
-        public const string NoCertificateProfile = "SeleWithOutCertificate";
         private ILogin _login;
         private ILoginCheck _loginCheck;
         private ILogout _logout;
@@ -41,20 +20,11 @@ namespace SIX.SCS.QA.Selenium.Extension
         // private static readonly FirefoxBinary FirefoxBinary = new FirefoxBinary(@"D:\_tfs\ScsDev\QA\Tests\Selenium\Firefox\firefox.exe");
 
         /// <summary>
-        /// Customize contructor for selecting browser and configure timeout
-        /// </summary>
-        /// <param name="browser"></param>
-        protected TestDirector(String browser)
-        {
-            WebDriver = InternetExplorerWebDriverAdapter();
-        }
-
-        /// <summary>
         /// Common constructor for default test-launch with one browser instance of Firefox and 10 seconds timeout. 
         /// </summary>
         public TestDirector()
         {
-            WebDriver = FireFoxWebDriverAdapter();
+            WebDriver = DefaultBrowserSetup();
         }
 
         /// <summary>
@@ -65,20 +35,28 @@ namespace SIX.SCS.QA.Selenium.Extension
             WebDriver = webDriverAdapter;
         }
 
-        public IWebDriverAdapter WebDriver { get; private set; }
+        public IWebDriverAdapter WebDriver { get; protected set; }
 
         public string BaseUrl { get; private set; }
 
-        private static IWebDriverAdapter FireFoxWebDriverAdapter(string profileName = CertificateProfile)
+        private static IWebDriverAdapter FireFoxWebDriverAdapter(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
 
             return new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
 
+        protected static IWebDriverAdapter FireFoxWebDriverAdapter()
+        {
+            FirefoxProfile firefoxProfile =
+                new FirefoxProfileManager().GetProfile(Driver.FirefoxProfile_Certificate);
+
+            return new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+        }
+
         private static IWebDriverAdapter InternetExplorerWebDriverAdapter()
         {
-            //todo make path relative
+            //todo set relative path
             return
                 new WebDriverAdapter(
                     new InternetExplorerDriver(@"D:\_tfs\ScsDev\QA\Tests\Selenium\IEDriver"));
@@ -97,7 +75,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <param name="loginCheck"></param>
         /// <param name="logoutCheck"></param>
         protected void TestSetup(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
-                              ILogoutCheck logoutCheck = null)
+                                 ILogoutCheck logoutCheck = null)
         {
             _login = login;
             _loginCheck = loginCheck;
@@ -111,6 +89,11 @@ namespace SIX.SCS.QA.Selenium.Extension
 
             _login.Login();
             if (_loginCheck != null) _loginCheck.CheckLogInSucess();
+        }
+
+        protected virtual IWebDriverAdapter DefaultBrowserSetup()
+        {
+            throw new NotImplementedException("sub class has to implement this method");
         }
 
         public virtual IWebDriverAdapter DefaultTestSetup()
