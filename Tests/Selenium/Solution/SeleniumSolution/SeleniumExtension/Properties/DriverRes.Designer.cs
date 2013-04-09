@@ -61,11 +61,20 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DEV.
+        /// </summary>
+        internal static string DEV {
+            get {
+                return ResourceManager.GetString("DEV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Firefox.
         /// </summary>
-        internal static string Browser {
+        internal static string Firefox {
             get {
-                return ResourceManager.GetString("Browser", resourceCulture);
+                return ResourceManager.GetString("Firefox", resourceCulture);
             }
         }
         
@@ -84,6 +93,69 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         internal static string FirefoxProfile_Certificate {
             get {
                 return ResourceManager.GetString("FirefoxProfile_Certificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InternetExplorer.
+        /// </summary>
+        internal static string InternetExplorer {
+            get {
+                return ResourceManager.GetString("InternetExplorer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production.
+        /// </summary>
+        internal static string Production {
+            get {
+                return ResourceManager.GetString("Production", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QAK.
+        /// </summary>
+        internal static string QAK {
+            get {
+                return ResourceManager.GetString("QAK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QAL.
+        /// </summary>
+        internal static string QAL {
+            get {
+                return ResourceManager.GetString("QAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UAC.
+        /// </summary>
+        internal static string UAC {
+            get {
+                return ResourceManager.GetString("UAC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WES_Certificate.
+        /// </summary>
+        internal static string WES_Certificate {
+            get {
+                return ResourceManager.GetString("WES_Certificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WES_SecurId.
+        /// </summary>
+        internal static string WES_SecurId {
+            get {
+                return ResourceManager.GetString("WES_SecurId", resourceCulture);
             }
         }
     }

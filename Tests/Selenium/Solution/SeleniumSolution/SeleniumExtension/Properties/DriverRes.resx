@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Browser" xml:space="preserve">
+  <data name="DEV" xml:space="preserve">
+    <value>DEV</value>
+  </data>
+  <data name="Firefox" xml:space="preserve">
     <value>Firefox</value>
     <comment>Browser where tests are running e.g. Firefox, InternetExplorer, Opera, Chrome</comment>
   </data>
@@ -126,5 +129,26 @@
   </data>
   <data name="FirefoxProfile_Certificate" xml:space="preserve">
     <value>SeleWithCertificate</value>
+  </data>
+  <data name="InternetExplorer" xml:space="preserve">
+    <value>InternetExplorer</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="QAK" xml:space="preserve">
+    <value>QAK</value>
+  </data>
+  <data name="QAL" xml:space="preserve">
+    <value>QAL</value>
+  </data>
+  <data name="UAC" xml:space="preserve">
+    <value>UAC</value>
+  </data>
+  <data name="WES_Certificate" xml:space="preserve">
+    <value>WES_Certificate</value>
+  </data>
+  <data name="WES_SecurId" xml:space="preserve">
+    <value>WES_SecurId</value>
   </data>
 </root>
