@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
             var certificateLogin = new CertificateLogin(Resources.mandant_qa_L, WebDriver);
             var application = new Scs(WebDriver);
 
-            TestSetup(Resources.WES_QA_L, certificateLogin, application,
+            StartUpTest(Resources.WES_QA_L, certificateLogin, application,
                       application, certificateLogin);
             return WebDriver;
         }
