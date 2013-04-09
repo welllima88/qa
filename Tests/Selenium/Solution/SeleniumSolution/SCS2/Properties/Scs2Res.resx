@@ -136,7 +136,7 @@
   <data name="WES_QA_L" xml:space="preserve">
     <value>https://gateint.telekurs.ch/zebrac-qa-l/</value>
   </data>
-	<data name="mandant_qa_L">
-		<value xml:space="preserve">tkcposl</value>
-	</data>
+  <data name="mandant_qa_L" xml:space="preserve">
+    <value>tkcposl</value>
+  </data>
 </root>
