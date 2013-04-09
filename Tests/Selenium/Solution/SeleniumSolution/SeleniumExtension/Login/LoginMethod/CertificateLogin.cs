@@ -19,11 +19,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
 
         public void Login()
         {
-            // intial Checks
-            Assert.IsTrue(_wes.LoginButton.Displayed);
-            StringAssert.Matches(_wes.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
-
-            // Mandant und Login:
+            // choose tenant and login/submit:
             _wes.Mandant(_mandant).Click();
             _wes.LoginButton.Click();
         }
