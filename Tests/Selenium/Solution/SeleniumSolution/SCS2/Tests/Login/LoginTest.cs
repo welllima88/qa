@@ -25,10 +25,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
             _tb = new ScsPlatinTestDirector();
-            _driver = _tb.WebDriver;
-            _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
+            _driver = _tb.DefaultTestSetup();
             _lobby = new Lobby(_driver);
         }
 
@@ -56,6 +54,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
             Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
             Assert.IsTrue(_lobby.CompanyLogo.Displayed);
             Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
+        }
+
+        [Ignore]
+        [TestMethod]
+        // todo after refactoring login/test director insert checks:
+        public void PreLoginTest()
+        {
+            // Assert.IsTrue(_wes.LoginButton.Displayed);
+            // StringAssert.Matches(_wes.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
         }
     }
 }
