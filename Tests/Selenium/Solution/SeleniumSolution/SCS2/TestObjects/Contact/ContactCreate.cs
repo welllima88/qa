@@ -152,7 +152,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
+            get { return Driver.FindElement(By.CssSelector("input.button[value='Speichern']")); }
         }
 
         #endregion

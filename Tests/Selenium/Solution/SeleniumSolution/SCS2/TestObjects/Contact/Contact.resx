@@ -124,7 +124,7 @@
     <value>#PersonData_LastName</value>
   </data>
   <data name="Salutation" xml:space="preserve">
-    <value>#PersonData_Title</value>
+    <value>#PersonData_Salutation</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>#PersonData_Contact_CountryId</value>
