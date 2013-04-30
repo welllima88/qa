@@ -19,6 +19,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         private ILoginCheck _loginCheck;
         private ILogout _logout;
         private ILogoutCheck _logoutCheck;
+        protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
+        protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
 
         public TestDirector(string environment, string auth)
         {
@@ -36,17 +38,9 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public string BaseUrl { get; private set; }
 
-        private void FireFoxWebDriverAdapter(string profileName)
+        protected void FireFoxWebDriverAdapter(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-
-            WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
-        }
-
-        protected void FireFoxWebDriverAdapter()
-        {
-            FirefoxProfile firefoxProfile =
-                new FirefoxProfileManager().GetProfile(DriverRes.FirefoxProfile_Certificate);
 
             WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
@@ -75,9 +69,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <param name="loginCheck"></param>
         /// <param name="logoutCheck"></param>
         protected void StartUpTest(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
-                             ILogoutCheck logoutCheck = null)
+                                   ILogoutCheck logoutCheck = null)
         {
-            
             WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(TimeOutSeconds));
             WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(TimeOutSeconds));
 

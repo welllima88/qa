@@ -79,20 +79,20 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SeleWithOutCertificate.
-        /// </summary>
-        internal static string FirefoxProfile {
-            get {
-                return ResourceManager.GetString("FirefoxProfile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SeleWithCertificate.
         /// </summary>
         internal static string FirefoxProfile_Certificate {
             get {
                 return ResourceManager.GetString("FirefoxProfile_Certificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SeleWithOutCertificate.
+        /// </summary>
+        internal static string FirefoxProfile_Plain {
+            get {
+                return ResourceManager.GetString("FirefoxProfile_Plain", resourceCulture);
             }
         }
         

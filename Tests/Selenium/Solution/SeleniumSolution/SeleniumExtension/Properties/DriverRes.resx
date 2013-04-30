@@ -124,11 +124,11 @@
     <value>Firefox</value>
     <comment>Browser where tests are running e.g. Firefox, InternetExplorer, Opera, Chrome</comment>
   </data>
-  <data name="FirefoxProfile" xml:space="preserve">
-    <value>SeleWithOutCertificate</value>
-  </data>
   <data name="FirefoxProfile_Certificate" xml:space="preserve">
     <value>SeleWithCertificate</value>
+  </data>
+  <data name="FirefoxProfile_Plain" xml:space="preserve">
+    <value>SeleWithOutCertificate</value>
   </data>
   <data name="InternetExplorer" xml:space="preserve">
     <value>InternetExplorer</value>
