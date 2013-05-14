@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/TerminalDashboard/?TERMINALID=21011402";
+            _driver.Url = _tb.BaseUrl + "/Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402";
         }
 
         [TestCleanup]
@@ -48,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestMethod]
         public void CharactersOnlyNotAllowed()
         {
-            SetOnlineFinancialAndSafe("ab");
+            SetOnlineFinancialAndSave("ab");
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestMethod]
         public void AlphaNumericNotAllowed()
         {
-            SetOnlineFinancialAndSafe("9*");
+            SetOnlineFinancialAndSave("9*");
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
@@ -64,30 +64,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestMethod]
         public void NegativNumberNotAllowed()
         {
-            SetOnlineFinancialAndSafe("-1");
+            SetOnlineFinancialAndSave("-1");
             Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
 
         [TestMethod]
         public void ZeroNotAllowed()
         {
-            SetOnlineFinancialAndSafe("0");
+            SetOnlineFinancialAndSave("0");
             Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
 
         [TestMethod]
         public void ValueAllowed()
         {
-            SetOnlineFinancialAndSafe("11");
-            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+            SetOnlineFinancialAndSave("11");
+            Assert.IsFalse(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
 
-        private void SetOnlineFinancialAndSafe(string value)
+        private static void SetOnlineFinancialAndSave(string value)
         {
-            _driver.FindElement(
-                By.CssSelector(
-                    "#OnlineFinancialAdviceProperty > div.treeGridValueCol > span.editLink > a")).
-                Click();
             _driver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_tbcTerminalData_tpFinancialconfig_tpFinancialconfigPropertyMaxFinAdvQueueSize_valueText"))
