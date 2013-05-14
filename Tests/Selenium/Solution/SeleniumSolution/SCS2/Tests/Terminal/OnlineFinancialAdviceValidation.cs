@@ -46,10 +46,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         }
 
         [TestMethod]
+        public void CharactersOnlyNotAllowed()
+        {
+            SetOnlineFinancialAndSafe("ab");
+            _formAlerts = _formAlert.FormAlertList;
+            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+        }
+
+        [TestMethod]
         public void AlphaNumericNotAllowed()
         {
             SetOnlineFinancialAndSafe("9*");
-            _formAlerts=_formAlert.FormAlertList;
+            _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
         }
 
