@@ -30,7 +30,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402";
+            _driver.Url = _tb.BaseUrl +
+                          "/Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402";
         }
 
         [TestCleanup]
@@ -50,7 +51,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         {
             SetOnlineFinancialAndSave("ab");
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+            Assert.IsTrue(
+                _formAlerts.Contains(
+                    "Financial Advice Queue Size: Ihre Eingabe ist ungültig! Ungültige Zeichen gefunden!"));
         }
 
         [TestMethod]
@@ -65,21 +68,24 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         public void NegativNumberNotAllowed()
         {
             SetOnlineFinancialAndSave("-1");
-            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+            _formAlerts = _formAlert.FormAlertList;
+            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ungültige Zeichen gefunden!"));
         }
 
         [TestMethod]
         public void ZeroNotAllowed()
         {
             SetOnlineFinancialAndSave("0");
-            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+            _formAlerts = _formAlert.FormAlertList;
+            Assert.IsTrue(_formAlerts.Contains("Financial Advice Queue Size: Ungültige Zeichen gefunden!"));
         }
 
         [TestMethod]
         public void ValueAllowed()
         {
             SetOnlineFinancialAndSave("11");
-            Assert.IsFalse(_formAlerts.Contains("Financial Advice Queue Size: Ihre Eingabe ist ungültig!"));
+            _formAlerts = _formAlert.FormAlertList;
+            Assert.IsFalse(_formAlerts.Count == 1);
         }
 
         private static void SetOnlineFinancialAndSave(string value)
