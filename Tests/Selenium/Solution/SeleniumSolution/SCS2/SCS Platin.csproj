@@ -194,6 +194,7 @@
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
     <Compile Include="Tests\Login\LoginTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
+    <Compile Include="Tests\Terminal\OnlineFinancialAdviceValidation.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\FixTerminalInfoTests.cs" />
     <Compile Include="Tests\Terminal\EventLog\BasicEventLogTest.cs" />

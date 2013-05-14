@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
@@ -288,6 +289,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
                     SelectedOption.Text;
             }
+        }
+
+        public string Ep2MerchantId
+        {
+            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).TypeText(value); }
         }
 
         #endregion

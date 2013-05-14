@@ -329,6 +329,42 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         }
 
         [TestMethod]
+        public void CreateCustomerWithInvalidEp2NoFailed()
+        {
+            _customerMenu.CustomerCreate.Click();
+
+            _customerCreate.Supplier = "SIX Payment Services AG";
+            _customerCreate.SbsCurrency = "EUR";
+            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
+            _customerCreate.CustomerName = "SYR Sele Kunde A";
+
+            _customerCreate.CompanyName = "SYR Sele Firma A";
+            _customerCreate.StreetName = "Hardturmstr. 201";
+            _customerCreate.Zip = "8048";
+            _customerCreate.City = "Zürich";
+            _customerCreate.Po = "PFO1";
+            _customerCreate.AdressAddition = "Etage 3";
+            _customerCreate.Region = "Reg 3";
+            _customerCreate.SapNumber = "4440";
+
+            _customerCreate.Agency = "SIX Payment Services (Europe)";
+            _customerCreate.Language = "Deutsch [de]";
+            _customerCreate.Country = "Schweiz [CH]";
+            _customerCreate.Email = "marc.siegmund@six-group.com";
+            _customerCreate.Telephone = "0031 58 399 6237";
+            _customerCreate.Mobile = "0032 58 399 6237";
+            _customerCreate.Fax = "0033 58 399 6237";
+            _customerCreate.Web = "www.six-group.com/de-intern";
+            _customerCreate.Ep2MerchantId = "12DDFF_3-3";
+
+            _customerCreate.SaveButton.Click();
+
+            _formAlerts = _formAlert.FormAlertList;
+            Assert.IsTrue(_formAlerts.Count == 1);
+            Assert.IsTrue(_formAlerts.Contains("Dies ist keine gültige EP2 Händlernummer."));
+        }
+
+        [TestMethod]
         public void CreateCustomerWithoutMandantFailed()
         {
             _customerMenu.CustomerCreate.Click();
