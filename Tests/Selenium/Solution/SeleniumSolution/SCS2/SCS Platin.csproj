@@ -163,6 +163,7 @@
     <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
+    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardEditTest.cs" />
@@ -200,6 +201,8 @@
     <Compile Include="Tests\Terminal\EventLog\BasicEventLogTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
+    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
+    <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

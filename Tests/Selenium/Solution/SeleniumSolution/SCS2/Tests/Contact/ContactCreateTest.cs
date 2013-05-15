@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _customerMenu = new CustomerMenu(_driver);
             _contactCreate = new ContactCreate(_driver);
             _contactView = new ContactView(_driver);
-            _contactMenu=new ContactMenu(_driver);
+            _contactMenu = new ContactMenu(_driver);
             _recentElements = new RecentElements(_driver);
             _navigationBar = new NavigationBar(_driver);
             _formAlert = new FormAlert(_driver);

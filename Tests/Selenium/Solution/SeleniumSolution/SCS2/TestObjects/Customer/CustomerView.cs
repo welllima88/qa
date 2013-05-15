@@ -30,42 +30,34 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Supplier
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Supplier)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Supplier)).Text; }
         }
 
         public string SbsBillingTenant
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.SbsBillingTenant)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.SbsBillingTenant)).Text; }
         }
 
         public string StreetName
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.StreetName)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.StreetName)).Text; }
         }
 
         public string Zip
         {
-            get
-            { return Driver.FindElement(By.CssSelector(Customer.Zip)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Zip)).Text; }
         }
 
         public string City
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.City)).Text;}
+            get { return Driver.FindElement(By.CssSelector(Customer.City)).Text; }
         }
 
         public string SbsCurrency
         {
             get { return Driver.FindElement(By.CssSelector(Customer.SbsCurrency)).Text; }
         }
+
         //todo to verify this locators:
         public String CustomerNumber
         {
@@ -76,6 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             get { return Driver.FindElement(By.CssSelector("span[id$='customerSbsLabel']")).Text; }
         }
+
         public string Ep2MerchantId
         {
             get { return Driver.FindElement(By.CssSelector("span[id$='ep2numberTextBox']")).Text; }
@@ -94,16 +87,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Language
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Language)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Language)).Text; }
         }
 
         public string Country
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Country)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Country)).Text; }
         }
 
 
@@ -114,9 +103,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string AdressAddition
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.AdressAddition)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.AdressAddition)).Text; }
         }
 
         public string SapNumber
@@ -128,29 +115,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             // ":not(label)" is necessary because rendering tag is a span if no email and a if it is set
             get
-            {return Driver.FindElement(By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
+            {
+                return
+                    Driver.FindElement(
+                        By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
             }
         }
 
         public string Telephone
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Telephone)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Telephone)).Text; }
         }
 
         public string Mobile
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Mobile)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Mobile)).Text; }
         }
 
         public string Fax
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.Fax)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Fax)).Text; }
         }
 
         public string Web
@@ -165,30 +149,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Region
         {
-            get
-            { return Driver.FindElement(By.CssSelector(Customer.Region)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.Region)).Text; }
         }
 
         public string CategoryCode
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.CategoryCode)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.CategoryCode)).Text; }
         }
 
         public string SupportContract
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.SupportContract)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.SupportContract)).Text; }
         }
 
         public string CashIntegrator
         {
-            get
-            {return Driver.FindElement(By.CssSelector(Customer.CashIntegrator)).Text;
-            }
+            get { return Driver.FindElement(By.CssSelector(Customer.CashIntegrator)).Text; }
         }
 
         public string Segment

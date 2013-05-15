@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Tree
 {
-    public interface IComponent:IWebObject
+    public interface IComponent : IWebObject
     {
     }
 }

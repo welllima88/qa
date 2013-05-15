@@ -1,5 +1,4 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
@@ -10,6 +9,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public CustomerCreate(IWebDriverAdapter driver)
             : base(driver)
         {
+        }
+
+        public string Ep2MerchantId
+        {
+            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).TypeText(value); }
         }
 
         #region ICustomerCreate Members
@@ -289,12 +294,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
                     SelectedOption.Text;
             }
-        }
-
-        public string Ep2MerchantId
-        {
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).Text; }
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).TypeText(value); }
         }
 
         #endregion

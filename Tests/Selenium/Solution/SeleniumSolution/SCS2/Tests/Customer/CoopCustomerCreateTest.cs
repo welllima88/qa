@@ -59,14 +59,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string streetName = "Bahnhofstr. 23a";
             string zip = "8001";
             string city = "Zürich";
-            
+
             _customerCreate.Supplier = supplier;
             _customerCreate.CompanyName = companyName;
             _customerCreate.StreetName = streetName;
             _customerCreate.Zip = zip;
             _customerCreate.City = city;
             _customerCreate.CustomerName = customerName;
-            
+
             _customerCreate.SaveButton.Click();
 
             Assert.AreEqual(customerName, _customerView.CustomerName);
@@ -78,7 +78,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual(custId, _customerView.CustomerNumber);
             Assert.AreEqual(customerName, _customerView.CustomerName);
             Assert.AreEqual(supplier, _customerView.Supplier);
-            
+
             StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
             Assert.AreEqual(companyName, _customerView.CompanyName);

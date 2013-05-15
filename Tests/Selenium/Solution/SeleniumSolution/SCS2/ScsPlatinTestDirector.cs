@@ -10,8 +10,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
     {
         public override IWebDriverAdapter DefaultTestSetup()
         {
-            
-
             ILogin login;
             string baseAdress;
 
