@@ -17,12 +17,12 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         #region ISuggesterWebElement Members
 
-        public void Suggestor(string intValue)
+        public void Suggestor(string innerText)
         {
             // these suggestors are soooo ?x$*! -> disabled the click on this element
             // driver.FindElement(By.CssSelector("div.suggestBox div div[textContent='" + text + "'].active")).Click();
             // click | //div[@inttext="Englisch [en]"] |         
-            TypeText(intValue);
+            TypeText(innerText);
 
             // f*** o**:
             //_driver.WaitForElementPresent(By.XPath("//div[@class='suggestBox']")).Click();
@@ -33,13 +33,13 @@ namespace SIX.SCS.QA.Selenium.Extension
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + "CH"+ "']"));
                 //IWebElement e = _driver.WaitForElementPresent(By.CssSelector("div[intvalue='" + intValue + "']"));
                 suggestElement =
-                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + intValue + "']"));
+                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + innerText + "']"));
                 suggestElement.Click();
             }
                 //catch (NoSuchElementException)
             catch (Exception ex)
             {
-                Console.Error.WriteLine("failure: skip 'click' on suggestor element [" + intValue + "] " + ex.Message);
+                Console.Error.WriteLine("failure: skip 'click' on suggestor element [" + innerText + "] " + ex.Message);
             }
             //_driver.WaitForElementPresent(By.CssSelector("div.suggestBox div div")).Click();                        
         }

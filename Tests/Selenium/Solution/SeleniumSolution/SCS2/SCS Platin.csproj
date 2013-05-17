@@ -175,6 +175,8 @@
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
     <Compile Include="Tests\Customer\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\CoopCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\CustomerCreateWithNoDataTest.cs" />
+    <Compile Include="Tests\Customer\CustomerCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\CustomerEditTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />

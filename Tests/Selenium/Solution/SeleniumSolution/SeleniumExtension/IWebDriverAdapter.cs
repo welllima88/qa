@@ -13,6 +13,5 @@ namespace SIX.SCS.QA.Selenium.Extension
         List<String> WebElementsAsStringList(ReadOnlyCollection<IWebElement> webElements);
         ISuggesterWebElement FindSuggesterElement(By by);
         IWebElement WaitForElementPresent(By locator);
-        IWebElement WaitForElementPresent(By locator, int timeout);
     }
 }

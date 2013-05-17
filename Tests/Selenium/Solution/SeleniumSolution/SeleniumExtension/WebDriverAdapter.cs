@@ -128,7 +128,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <returns>the found element (otherwise exception)</returns>
         public IWebElement WaitForElementPresent(By locator)
         {
-            return WaitForElementPresent(locator, 10);
+            return WaitForElementPresent(locator, 2);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <returns>the found element (otherwise exception)</returns>
         public IWebElement WaitForElementPresent(By locator, int timeout)
         {
-            const int interval = 500;
+            const int interval = 100;
             int retry = timeout*1000/interval; //[s]->[ms]
 
             do
