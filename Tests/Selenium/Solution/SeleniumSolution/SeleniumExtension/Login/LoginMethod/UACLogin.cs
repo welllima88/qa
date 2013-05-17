@@ -1,10 +1,9 @@
-using System;
 using SIX.SCS.QA.Selenium.Extension.Login.LoginPages;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
 {
-    public class UacLogin : WebObject, ILogin, ILogoutCheck
+    public class UacLogin : WebObject, ILogin
     {
         private readonly string _password = "six_scs_auto";
         private readonly UacLoginPage _uacLoginPage;
@@ -27,15 +26,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
             _uacLoginPage.UserName = _userName;
             _uacLoginPage.UserPasswort = _password;
             _uacLoginPage.LoginButton.Click();
-        }
-
-        #endregion
-
-        #region ILogoutCheck Members
-
-        public void CheckLogOutSucess()
-        {
-            throw new NotImplementedException("Needs to be implemented");
         }
 
         #endregion
