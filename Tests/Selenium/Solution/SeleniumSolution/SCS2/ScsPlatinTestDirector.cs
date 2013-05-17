@@ -8,6 +8,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 {
     public class ScsPlatinTestDirector : TestDirector
     {
+        //TODO: make code clean, alive and good
         public override IWebDriverAdapter DefaultTestSetup()
         {
             ILogin login;
