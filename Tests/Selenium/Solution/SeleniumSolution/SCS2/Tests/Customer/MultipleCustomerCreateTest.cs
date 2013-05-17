@@ -46,9 +46,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Thread browserInstance;
             while (no > 0)
             {
-                var customerCreateTest = new CustomerCreateTest();
+                var customerCreateAndCancelTest = new CustomerCreateAndCancelTest();
 //                customerCreateTest.
-                browserInstance = new Thread(customerCreateTest.CreateCustomerAndCancel);
+                browserInstance = new Thread(customerCreateAndCancelTest.CreateCustomerAndCancel);
                 browserInstance.Start();
                 no--;
             }

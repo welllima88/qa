@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -14,21 +13,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
     [TestClass]
     public class CustomerCreateTest
     {
-        private const int MillisecondsTimeout = 1000;
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
         private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static TestDirector _tb;
-        private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
         private static LobbyMenu _lobbyMenu;
         private static MenusTest _menusTests;
         private static Lobby _lobby;
 
         private long _dt;
-        private List<string> _formAlerts;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -42,7 +38,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _customerView = new CustomerView(_driver);
             _recentElements = new RecentElements(_driver);
             _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
             _menusTests = new MenusTest();
             _lobby = new Lobby(_driver);
         }
@@ -57,6 +52,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         [TestCleanup]
         public void TestCleanup()
         {
+            _customerMenu.CustomerDeactivate.Click();
         }
 
         [ClassCleanup]
@@ -64,335 +60,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         {
             //after last test-method finished
             _tb.ShutDownTest();
-        }
-
-        [TestMethod]
-        public void CreateCustomerAndCancel()
-        {
-            _customerMenu.CustomerCreate.Click();
-            _customerCreate.CustomerName = "Selenium Test will cancel";
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services AG";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "5555";
-            _customerCreate.City = "Zürich";
-            _customerCreate.SbsCurrency = "EUR";
-
-            _customerCreate.CancelButton.Click();
-            // ??:
-            Assert.AreEqual("Lobby",
-                            _driver.FindElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblTitle>h1")).Text);
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithInvalidDataFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A$°";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A$°";
-            _customerCreate.CustomerNumber = "^@}$°";
-            _customerCreate.StreetName = "Hardturmstr. 201$°";
-            _customerCreate.Zip = "802$°";
-            _customerCreate.City = "Zürich$°";
-            _customerCreate.Po = "PFO1$°";
-            _customerCreate.AdressAddition = "Etage 3$°";
-            _customerCreate.Region = "Reg 3[]$°";
-            _customerCreate.SapNumber = "444$°";
-
-            _customerCreate.Agency = "Albert Brun & Partner";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-grou$°p.com";
-            _customerCreate.Telephone = "0031 58 399 6237$";
-            _customerCreate.Mobile = "0032 58 399 6237$";
-            _customerCreate.Fax = "0033 58 399 6237$";
-            _customerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Kundennummer: Ihre Eingabe ist ungültig!"));
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
-            Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"), "web adress not validated");
-            Assert.IsTrue(_formAlerts.Count == 14);
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithIncompleteDataFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 7);
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!"));
-            Assert.IsTrue(_formAlerts.Contains("Mandant: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutCustomerNameFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "Albert Brun & Partner";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.CustomerName = "";
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutCompanyNameFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.Agency = "Albert Brun & Partner";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.CompanyName = "";
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutStreetAndNumberFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutCityFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutZipFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithInvalidEp2NoFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "8048";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Agency = "SIX Payment Services (Europe)";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-            _customerCreate.Ep2MerchantId = "12DDFF_3-3";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Dies ist keine gültige EP2 Händlernummer."));
-        }
-
-        [TestMethod]
-        public void CreateCustomerWithoutMandantFailed()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
-
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            // Removed: thx to suggester: Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Mandant: Dies ist ein Pflichtfeld!"));
         }
 
         [TestMethod]
@@ -568,60 +235,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual("", _customerView.Web);
         }
 
-        [TestMethod]
-        public void CreateCustomerWithSbsAndMinimalAndSave()
-        {
-            _customerMenu.CustomerCreate.Click();
-
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "CHF";
-            _customerCreate.CustomerName = "SYR SBS Kunde" + _dt;
-
-            _customerCreate.CompanyName = "SYR SBS Firma" + _dt;
-            _customerCreate.StreetName = "SbsRoad. 201";
-            _customerCreate.Zip = "8008";
-            _customerCreate.City = "SBS";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-
-            _customerCreate.SaveButton.Click();
-
-            Assert.AreEqual("SYR SBS Kunde" + _dt, _customerView.CustomerName);
-            string custId = _customerView.CustomerNumber;
-
-            //check/read customerId
-
-            Assert.AreEqual(custId, _customerView.CustomerNumber);
-            Assert.AreEqual(custId, _customerView.SbsDebitNumber);
-
-            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-
-            Assert.AreEqual("SIX Payment Services AG", _customerView.Supplier);
-
-            int retry = 4;
-            do
-            {
-                try
-                {
-                    StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
-                    retry = 0; //no retry necessary anymore
-                }
-                catch (AssertFailedException)
-                {
-                    Thread.Sleep(MillisecondsTimeout);
-                    //carefull
-                    //_driver.Navigate().Refresh(); doesn't work proper, so this is better:
-                    _customerMenu.Customer.Click();
-                    retry--;
-                }
-            } while (retry > 0);
-
-            Assert.AreEqual("SYR SBS Firma" + _dt, _customerView.CompanyName);
-            Assert.AreEqual("SbsRoad. 201", _customerView.StreetName);
-            Assert.AreEqual("8008", _customerView.Zip);
-            Assert.AreEqual("SBS", _customerView.City);
-            Assert.AreEqual("CHF", _customerView.SbsCurrency);
-        }
 
         [TestMethod]
         public void CreateCustomerCheckNavBar()
