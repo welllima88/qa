@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return Driver.FindElement(By.CssSelector(Customer.SbsBillingTenant)).Text; }
         }
 
-        public string StreetName
+        public string StreetNo
         {
             get { return Driver.FindElement(By.CssSelector(Customer.StreetName)).Text; }
         }
