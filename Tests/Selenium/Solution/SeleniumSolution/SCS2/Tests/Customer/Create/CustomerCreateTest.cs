@@ -17,6 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private static RecentElements _recentElements;
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
+
         private static string _adressAddition;
         private static string _cashIntegrator;
         private static string _agency;
@@ -26,6 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private static string _country;
         private static string _custId;
         private static string _customerName;
+        private static string _segment;
 
         private static long _dt;
         private static string _email;
@@ -66,6 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _categoryCode = "3364: AGENCY RENT-A-CAR";
             _supportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h";
             _cashIntegrator = "Wincor Nixdorf AG, Brüttisellen";
+            _segment = "01_CH";
             _companyName = "SYR Sele Firma A";
             _streetName = "Hardturmstr. 201";
             _agency = "B05 Leiser Peter";
@@ -92,6 +95,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.CategoryCode = _categoryCode;
             _customerCreate.SupportContract = _supportContract;
             _customerCreate.CashIntegrator = _cashIntegrator;
+            _customerCreate.Segment = _segment;
             _customerCreate.CompanyName = _companyName;
             _customerCreate.StreetName = _streetName;
             _customerCreate.Zip = _zip;
@@ -295,6 +299,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         public void Web()
         {
             Assert.AreEqual(_web, _customerView.Web);
+        }
+        [TestMethod]
+        public void Segment()
+        {
+            Assert.AreEqual(_segment, _customerCreate.Segment);
         }
     }
 }
