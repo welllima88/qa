@@ -133,6 +133,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_sugCountry.
+        /// </summary>
+        public static string CountryView {
+            get {
+                return ResourceManager.GetString("CountryView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerNameTextBox.
         /// </summary>
         public static string CustomerName {
@@ -192,6 +201,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_sugLanguage.
+        /// </summary>
+        public static string LanguageView {
+            get {
+                return ResourceManager.GetString("LanguageView", resourceCulture);
             }
         }
         

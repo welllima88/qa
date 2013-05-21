@@ -204,4 +204,10 @@
   <data name="WebView" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_addressControl_webLink</value>
   </data>
+  <data name="CountryView" xml:space="preserve">
+    <value>#ctl00_bodyContentPlaceHolder_addressControl_sugCountry</value>
+  </data>
+  <data name="LanguageView" xml:space="preserve">
+    <value>#ctl00_bodyContentPlaceHolder_addressControl_sugLanguage</value>
+  </data>
 </root>
