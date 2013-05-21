@@ -121,7 +121,7 @@
     <value>#ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx</value>
   </data>
   <data name="SbsBillingTenant" xml:space="preserve">
-    <value>#ctl00_bodyContentPlaceHolder_customerSbsBillingTenant</value>
+    <value>[id*='_customerSbsBillingTenant']</value>
   </data>
   <data name="Zip" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox</value>
@@ -187,7 +187,7 @@
     <value>#ctl00_bodyContentPlaceHolder_customerNumberInput</value>
   </data>
   <data name="CashIntegrator" xml:space="preserve">
-    <value>select#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</value>
+    <value>#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</value>
   </data>
   <data name="Segment" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_customerSegment</value>
@@ -197,5 +197,11 @@
   </data>
   <data name="Ep2MerchantId" xml:space="preserve">
     <value>input#ctl00_bodyContentPlaceHolder_rowEP2MerchantID_ep2numberTextBox</value>
+  </data>
+  <data name="CategoryCodeView" xml:space="preserve">
+    <value>#ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown</value>
+  </data>
+  <data name="WebView" xml:space="preserve">
+    <value>#ctl00_bodyContentPlaceHolder_addressControl_webLink</value>
   </data>
 </root>

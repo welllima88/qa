@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to select#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator.
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator.
         /// </summary>
         public static string CashIntegrator {
             get {
@@ -93,6 +93,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         public static string CategoryCode {
             get {
                 return ResourceManager.GetString("CategoryCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown.
+        /// </summary>
+        public static string CategoryCodeView {
+            get {
+                return ResourceManager.GetString("CategoryCodeView", resourceCulture);
             }
         }
         
@@ -223,7 +232,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSbsBillingTenant.
+        ///   Looks up a localized string similar to [id*=&apos;_customerSbsBillingTenant&apos;].
         /// </summary>
         public static string SbsBillingTenant {
             get {
@@ -291,6 +300,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         public static string Web {
             get {
                 return ResourceManager.GetString("Web", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_addressControl_webLink.
+        /// </summary>
+        public static string WebView {
+            get {
+                return ResourceManager.GetString("WebView", resourceCulture);
             }
         }
         
