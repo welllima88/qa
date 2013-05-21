@@ -300,6 +300,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         {
             Assert.AreEqual(_web, _customerView.Web);
         }
+
         [TestMethod]
         public void Segment()
         {
