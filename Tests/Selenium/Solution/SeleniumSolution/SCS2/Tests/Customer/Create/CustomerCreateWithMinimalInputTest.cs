@@ -4,7 +4,6 @@ using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 {
@@ -18,9 +17,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private static RecentElements _recentElements;
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
-        private static LobbyMenu _lobbyMenu;
-        private static MenusTest _menusTests;
-        private static Lobby _lobby;
 
         private static long _dt;
         private static string _custId;
@@ -41,14 +37,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             //before first test-method starts
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _lobbyMenu = new LobbyMenu(_driver);
             _customerMenu = new CustomerMenu(_driver);
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);
             _recentElements = new RecentElements(_driver);
             _navigationBar = new NavigationBar(_driver);
-            _menusTests = new MenusTest();
-            _lobby = new Lobby(_driver);
 
             _driver.Url = _tb.BaseUrl + "/Default.aspx";
             _dt = DateTime.Now.Ticks; //timestamp for each test
@@ -261,7 +254,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void Web()
         {
-            Assert.AreEqual(" ", _customerView.Web);
+            Assert.AreEqual("", _customerView.Web);
         }
     }
 }
