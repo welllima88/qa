@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 {
     [TestClass]
     public class CustomerCreateWithNoDataTest

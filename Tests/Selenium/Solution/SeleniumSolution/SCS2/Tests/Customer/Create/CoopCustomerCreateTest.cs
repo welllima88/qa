@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 {
     [TestClass]
     public class CoopCustomerCreateTest
@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual("", _customerView.Po);
             Assert.AreEqual("", _customerView.AdressAddition);
             Assert.AreEqual("", _customerView.Region);
-            Assert.AreEqual(streetName, _customerView.StreetName);
+            Assert.AreEqual(streetName, _customerView.StreetNo);
             Assert.AreEqual(zip, _customerView.Zip);
             Assert.AreEqual(city, _customerView.City);
             Assert.AreEqual("Deutsch [de]", _customerView.Language);
@@ -163,7 +163,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual(po, _customerView.Po);
             Assert.AreEqual(adressAddition, _customerView.AdressAddition);
             Assert.AreEqual(region, _customerView.Region);
-            Assert.AreEqual(streetName, _customerView.StreetName);
+            Assert.AreEqual(streetName, _customerView.StreetNo);
             Assert.AreEqual(zip, _customerView.Zip);
             Assert.AreEqual(city, _customerView.City);
             Assert.AreEqual(agency, _customerView.Agency);
