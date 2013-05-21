@@ -139,7 +139,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Web
         {
-            get { return Driver.FindElement(By.CssSelector(Customer.Web)).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.WebView)).Text; }
         }
 
         public IWebElement EditButton
@@ -154,7 +154,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string CategoryCode
         {
-            get { return Driver.FindElement(By.CssSelector(Customer.CategoryCode)).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.CategoryCodeView)).Text; }
         }
 
         public string SupportContract
