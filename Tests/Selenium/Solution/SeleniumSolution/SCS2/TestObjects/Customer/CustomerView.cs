@@ -87,12 +87,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Language
         {
-            get { return Driver.FindElement(By.CssSelector(Customer.Language)).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.LanguageView)).Text; }
         }
 
         public string Country
         {
-            get { return Driver.FindElement(By.CssSelector(Customer.Country)).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.CountryView)).Text; }
         }
 
 

@@ -194,11 +194,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindSuggesterElement(By.CssSelector(Customer.Agency)).Suggestor(value);
+                Driver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
+                    ().SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Text;
+                return Driver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
+                    ().SelectedOption.Text;
             }
         }
 
