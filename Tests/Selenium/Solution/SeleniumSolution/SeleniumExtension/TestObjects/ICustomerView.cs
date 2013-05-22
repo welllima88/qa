@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects
         string CustomerName { get; }
         string Supplier { get; }
         string SbsBillingTenant { get; }
-        string StreetName { get; }
+        string StreetNo { get; }
         string Zip { get; }
         string City { get; }
         string SbsCurrency { get; }
