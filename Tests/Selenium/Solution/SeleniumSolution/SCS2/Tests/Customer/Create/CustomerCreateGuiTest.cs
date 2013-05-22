@@ -49,14 +49,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         }
 
         [TestMethod]
-        public void CreateCustomerCheckNavBar()
+        public void CreateCustomerNavigationBar()
         {
             _customerMenu.CustomerCreate.Click();
             Assert.AreEqual("Neuer Kunde", _navigationBar.Current.Text);
         }
 
         [TestMethod]
-        public void CreateCustomerCheckHeadline()
+        public void CreateCustomerHeadline()
         {
             StringAssert.Contains("Lobby", _lobby.Headline.Text);
             _customerMenu.CustomerCreate.Click();
