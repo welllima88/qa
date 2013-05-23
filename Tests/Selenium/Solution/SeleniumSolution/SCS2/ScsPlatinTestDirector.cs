@@ -8,29 +8,31 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 {
     public class ScsPlatinTestDirector : TestDirector
     {
-        //TODO: make code clean, alive and good
         public override IWebDriverAdapter DefaultTestSetup()
         {
             ILogin login;
-            string baseAdress;
 
-            if (true)
-            {
-                FireFoxWebDriverAdapter(PlainProfile);
-                login = new UacLogin(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
-                baseAdress = Scs2Res.UAC_DEV;
-            }
-            else
-            {
-                FireFoxWebDriverAdapter(CertifacteProfile);
-                login = new CertificateLogin(Scs2Res.mandant_qa_L, WebDriver);
-                baseAdress = Scs2Res.WES_QA_L;
-            }
+            string baseAdress;
+            FireFoxSetupWithUac(out login, out baseAdress);
 
             var lobby = new Lobby(WebDriver);
 
             StartUpTest(baseAdress, login, lobby);
             return WebDriver;
+        }
+
+        private void FireFoxSetUpWithCertifacte(out ILogin login, out string baseAdress)
+        {
+            FireFoxWebDriverAdapter(CertifacteProfile);
+            login = new CertificateLogin(Scs2Res.mandant_qa_L, WebDriver);
+            baseAdress = Scs2Res.WES_QA_L;
+        }
+
+        private void FireFoxSetupWithUac(out ILogin login, out string baseAdress)
+        {
+            FireFoxWebDriverAdapter(PlainProfile);
+            login = new UacLogin(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
+            baseAdress = Scs2Res.UAC_DEV;
         }
     }
 }
