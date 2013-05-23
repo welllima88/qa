@@ -417,7 +417,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual("PFO1", _customerView.Po);
             Assert.AreEqual("Etage 3", _customerView.AdressAddition);
             Assert.AreEqual("Reg 3", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("SIX Payment Services (Europe)", _customerView.Agency);
@@ -484,7 +484,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual(" ", _customerView.Po);
             Assert.AreEqual(" ", _customerView.AdressAddition);
             Assert.AreEqual(" ", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("Keine Agentur", _customerView.Agency);
@@ -541,7 +541,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             } while (retry > 0);
 
             Assert.AreEqual("SYR SBS Firma" + _dt, _customerView.CompanyName);
-            Assert.AreEqual("SbsRoad. 201", _customerView.StreetName);
+            Assert.AreEqual("SbsRoad. 201", _customerView.StreetNo);
             Assert.AreEqual("8008", _customerView.Zip);
             Assert.AreEqual("SBS", _customerView.City);
             Assert.AreEqual("CHF", _customerView.SbsCurrency);

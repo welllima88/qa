@@ -153,7 +153,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
             Assert.AreEqual(po, _zebraCustomerView.Po);
             Assert.AreEqual(adressAddition, _zebraCustomerView.AdressAddition);
             Assert.AreEqual(region, _zebraCustomerView.Region);
-            Assert.AreEqual(streetName, _zebraCustomerView.StreetName);
+            Assert.AreEqual(streetName, _zebraCustomerView.StreetNo);
             Assert.AreEqual(zip, _zebraCustomerView.Zip);
             Assert.AreEqual(city, _zebraCustomerView.City);
             Assert.AreEqual(billingTenant, _zebraCustomerView.Agency);
@@ -197,7 +197,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
             Assert.AreEqual(po, _scsCustomerView.Po);
             Assert.AreEqual(adressAddition, _scsCustomerView.AdressAddition);
             Assert.AreEqual(region, _scsCustomerView.Region);
-            Assert.AreEqual(streetName, _scsCustomerView.StreetName);
+            Assert.AreEqual(streetName, _scsCustomerView.StreetNo);
             Assert.AreEqual(zip, _scsCustomerView.Zip);
             Assert.AreEqual(city, _scsCustomerView.City);
             Assert.AreEqual(billingTenant, _scsCustomerView.Agency);
@@ -272,7 +272,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
             Assert.AreEqual(po, _scsCustomerView.Po);
             Assert.AreEqual(adressAddition, _scsCustomerView.AdressAddition);
             Assert.AreEqual(region, _scsCustomerView.Region);
-            Assert.AreEqual(streetName, _scsCustomerView.StreetName);
+            Assert.AreEqual(streetName, _scsCustomerView.StreetNo);
             Assert.AreEqual(zip, _scsCustomerView.Zip);
             Assert.AreEqual(city, _scsCustomerView.City);
             Assert.AreEqual(billingTenant, _scsCustomerView.Agency);
@@ -316,7 +316,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
             Assert.AreEqual(po, _zebraCustomerView.Po);
             Assert.AreEqual(adressAddition, _zebraCustomerView.AdressAddition);
             Assert.AreEqual(region, _zebraCustomerView.Region);
-            Assert.AreEqual(streetName, _zebraCustomerView.StreetName);
+            Assert.AreEqual(streetName, _zebraCustomerView.StreetNo);
             Assert.AreEqual(zip, _zebraCustomerView.Zip);
             Assert.AreEqual(city, _zebraCustomerView.City);
             Assert.AreEqual(billingTenant, _zebraCustomerView.Agency);

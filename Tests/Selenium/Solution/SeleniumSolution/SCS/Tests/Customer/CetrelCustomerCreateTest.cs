@@ -97,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual("LUX1", _customerView.Po);
             Assert.AreEqual("ZusatzLUX", _customerView.AdressAddition);
             Assert.AreEqual("WestLUX", _customerView.Region);
-            Assert.AreEqual("Luxemburgerli 1a", _customerView.StreetName);
+            Assert.AreEqual("Luxemburgerli 1a", _customerView.StreetNo);
             Assert.AreEqual("11247", _customerView.Zip);
             Assert.AreEqual("Luxemburg", _customerView.City);
             Assert.AreEqual("SIX LUX", _customerView.Agency);

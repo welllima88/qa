@@ -48,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
             }
         }
 
-        public string StreetName
+        public string StreetNo
         {
             get
             {

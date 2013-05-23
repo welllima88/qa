@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             string companyName = _customerView.CompanyName;
             string po = _customerView.Po;
             string adressAddition = _customerView.AdressAddition;
-            string streetName = _customerView.StreetName;
+            string streetName = _customerView.StreetNo;
             string zip = _customerView.Zip;
             string city = _customerView.City;
             string agency = _customerView.Agency;
@@ -121,7 +121,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual(companyName, _customerView.CompanyName);
             Assert.AreEqual(po, _customerView.Po);
             Assert.AreEqual(adressAddition, _customerView.AdressAddition);
-            Assert.AreEqual(streetName, _customerView.StreetName);
+            Assert.AreEqual(streetName, _customerView.StreetNo);
             Assert.AreEqual(zip, _customerView.Zip);
             Assert.AreEqual(city, _customerView.City);
             Assert.AreEqual(agency, _customerView.Agency);
@@ -379,7 +379,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             string sapNumber = _customerView.SapNumber;
             string ep2MerchantId = _customerView.Ep2MerchantId;
             string companyName = _customerView.CompanyName;
-            string streetName = _customerView.StreetName;
+            string streetName = _customerView.StreetNo;
             string zip = _customerView.Zip;
             string city = _customerView.City;
             string po = _customerView.Po;
@@ -482,7 +482,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual("PFO1", _customerView.Po);
             Assert.AreEqual("Etage 3", _customerView.AdressAddition);
             Assert.AreEqual("Reg 55", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("SIX Payment Services (Europe)", _customerView.Agency);
@@ -509,7 +509,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             string sapNumber = _customerView.SapNumber;
             string ep2MerchantId = _customerView.Ep2MerchantId;
             string companyName = _customerView.CompanyName;
-            string streetName = _customerView.StreetName;
+            string streetName = _customerView.StreetNo;
             string zip = _customerView.Zip;
             string city = _customerView.City;
             string po = _customerView.Po;
@@ -603,7 +603,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
             Assert.AreEqual(" ", _customerView.Po);
             Assert.AreEqual(" ", _customerView.AdressAddition);
             Assert.AreEqual(" ", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("Keine Agentur", _customerView.Agency);
