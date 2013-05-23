@@ -118,7 +118,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual("SIX Payment Services AG", _customerView.Supplier);
             Assert.AreEqual("EUR", _customerView.SbsCurrency);
 
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("SYR Firma DEMO" + _dt, _customerView.CompanyName);
             Assert.AreEqual("5555", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);

@@ -23,8 +23,32 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         private static CustomerMenu _customerMenu;
         private static MenusTest _menusTests;
         private static Lobby _lobby;
-        private long _dt;
+        private static long _dt;
         private List<string> _formAlerts;
+        private static string _custId;
+        private static string _customerName;
+        private static string _supplier;
+        private static string _sbsBillingTenant;
+        private static string _sbsCurrency;
+        private static string _sapNumber;
+        private static string _sbsDebitNumber;
+        private static string _sbsAdressNumber;
+        private static string _ep2MerchantId;
+        private static string _companyName;
+        private static string _po;
+        private static string _adressAddition;
+        private static string _streetName;
+        private static string _zip;
+        private static string _city;
+        private static string _agency;
+        private static string _language;
+        private static string _country;
+        private static string _email;
+        private static string _telephone;
+        private static string _mobile;
+        private static string _fax;
+        private static string _web;
+        private static string _segment;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -41,13 +65,43 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _formAlert = new FormAlert(_driver);
             _menusTests = new MenusTest();
             _lobby = new Lobby(_driver);
+            
+            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
+            _dt = DateTime.Now.Ticks; //timestamp for each test
+
+            _custId = _customerView.CustomerNumber;
+            _customerName = _customerView.CustomerName;
+            _supplier = _customerView.Supplier;
+
+            _sbsBillingTenant = _customerView.SbsBillingTenant;
+            _sbsCurrency = _customerView.SbsCurrency;
+            _sapNumber = _customerView.SapNumber;
+            _sbsDebitNumber = _customerView.SbsDebitNumber;
+            _sbsAdressNumber = _customerView.SbsAdressNumber;
+            _segment = _customerView.Segment;
+
+            _ep2MerchantId = _customerView.Ep2MerchantId;
+
+            _companyName = _customerView.CompanyName;
+            _po = _customerView.Po;
+            _adressAddition = _customerView.AdressAddition;
+            _streetName = _customerView.StreetNo;
+            _zip = _customerView.Zip;
+            _city = _customerView.City;
+            _agency = _customerView.Agency;
+            _language = _customerView.Language;
+            _country = _customerView.Country;
+            _email = _customerView.Email;
+            _telephone = _customerView.Telephone;
+            _mobile = _customerView.Mobile;
+            _fax = _customerView.Fax;
+            _web = _customerView.Web;
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            
         }
 
         [TestCleanup]
@@ -74,32 +128,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         [TestMethod]
         public void EditCustomerAndCancel()
         {
-            string custId = _customerView.CustomerNumber;
-            string customerName = _customerView.CustomerName;
-            string supplier = _customerView.Supplier;
-
-            string sbsBillingTenant = _customerView.SbsBillingTenant;
-            string sbsCurrency = _customerView.SbsCurrency;
-            string sapNumber = _customerView.SapNumber;
-            string sbsDebitNumber = _customerView.SbsDebitNumber;
-            string sbsAdressNumber = _customerView.SbsAdressNumber;
-
-            string ep2MerchantId = _customerView.Ep2MerchantId;
-
-            string companyName = _customerView.CompanyName;
-            string po = _customerView.Po;
-            string adressAddition = _customerView.AdressAddition;
-            string streetName = _customerView.StreetName;
-            string zip = _customerView.Zip;
-            string city = _customerView.City;
-            string agency = _customerView.Agency;
-            string language = _customerView.Language;
-            string country = _customerView.Country;
-            string email = _customerView.Email;
-            string telephone = _customerView.Telephone;
-            string mobile = _customerView.Mobile;
-            string fax = _customerView.Fax;
-            string web = _customerView.Web;
 
             _customerMenu.CustomerEdit.Click();
 
@@ -125,34 +153,35 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
             _customerEdit.CancelButton.Click();
 
-            Assert.AreEqual(custId, _customerView.CustomerNumber);
-            Assert.AreEqual(customerName, _customerView.CustomerName);
-            Assert.AreEqual(supplier, _customerView.Supplier);
-            Assert.AreEqual(sbsDebitNumber, _customerView.SbsDebitNumber);
-            Assert.AreEqual(sbsAdressNumber, _customerView.SbsAdressNumber);
-            Assert.AreEqual(sbsBillingTenant, _customerView.SbsBillingTenant);
-            Assert.AreEqual(sbsCurrency, _customerView.SbsCurrency);
-            Assert.AreEqual(sapNumber, _customerView.SapNumber);
-            Assert.AreEqual(ep2MerchantId, _customerView.Ep2MerchantId);
+            Assert.AreEqual(_custId, _customerView.CustomerNumber);
+            Assert.AreEqual(_customerName, _customerView.CustomerName);
+            Assert.AreEqual(_supplier, _customerView.Supplier);
+            Assert.AreEqual(_sbsDebitNumber, _customerView.SbsDebitNumber);
+            Assert.AreEqual(_sbsAdressNumber, _customerView.SbsAdressNumber);
+            Assert.AreEqual(_sbsBillingTenant, _customerView.SbsBillingTenant);
+            Assert.AreEqual(_sbsCurrency, _customerView.SbsCurrency);
+            Assert.AreEqual(_sapNumber, _customerView.SapNumber);
+            Assert.AreEqual(_segment, _customerView.Segment);
+            Assert.AreEqual(_ep2MerchantId, _customerView.Ep2MerchantId);
 
             StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
             StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            Assert.AreEqual(companyName, _customerView.CompanyName);
-            Assert.AreEqual(po, _customerView.Po);
-            Assert.AreEqual(adressAddition, _customerView.AdressAddition);
-            Assert.AreEqual(streetName, _customerView.StreetName);
-            Assert.AreEqual(zip, _customerView.Zip);
-            Assert.AreEqual(city, _customerView.City);
-            Assert.AreEqual(agency, _customerView.Agency);
-            Assert.AreEqual(language, _customerView.Language);
-            Assert.AreEqual(country, _customerView.Country);
-            Assert.AreEqual(email, _customerView.Email);
-            Assert.AreEqual(telephone, _customerView.Telephone);
-            Assert.AreEqual(mobile, _customerView.Mobile);
-            Assert.AreEqual(fax, _customerView.Fax);
-            Assert.AreEqual(web, _customerView.Web);
+            Assert.AreEqual(_companyName, _customerView.CompanyName);
+            Assert.AreEqual(_po, _customerView.Po);
+            Assert.AreEqual(_adressAddition, _customerView.AdressAddition);
+            Assert.AreEqual(_streetName, _customerView.StreetNo);
+            Assert.AreEqual(_zip, _customerView.Zip);
+            Assert.AreEqual(_city, _customerView.City);
+            Assert.AreEqual(_agency, _customerView.Agency);
+            Assert.AreEqual(_language, _customerView.Language);
+            Assert.AreEqual(_country, _customerView.Country);
+            Assert.AreEqual(_email, _customerView.Email);
+            Assert.AreEqual(_telephone, _customerView.Telephone);
+            Assert.AreEqual(_mobile, _customerView.Mobile);
+            Assert.AreEqual(_fax, _customerView.Fax);
+            Assert.AreEqual(_web, _customerView.Web);
         }
 
         [Ignore]
@@ -407,7 +436,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string sapNumber = _customerView.SapNumber;
             string ep2MerchantId = _customerView.Ep2MerchantId;
             string companyName = _customerView.CompanyName;
-            string streetName = _customerView.StreetName;
+            string streetName = _customerView.StreetNo;
             string zip = _customerView.Zip;
             string city = _customerView.City;
             string po = _customerView.Po;
@@ -513,7 +542,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual("PFO1", _customerView.Po);
             Assert.AreEqual("Etage 3", _customerView.AdressAddition);
             Assert.AreEqual("Reg 55", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("SIX Payment Services (Europe)", _customerView.Agency);
@@ -540,7 +569,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             string sapNumber = _customerView.SapNumber;
             string ep2MerchantId = _customerView.Ep2MerchantId;
             string companyName = _customerView.CompanyName;
-            string streetName = _customerView.StreetName;
+            string streetName = _customerView.StreetNo;
             string zip = _customerView.Zip;
             string city = _customerView.City;
             string po = _customerView.Po;
@@ -637,7 +666,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             Assert.AreEqual(" ", _customerView.Po);
             Assert.AreEqual(" ", _customerView.AdressAddition);
             Assert.AreEqual(" ", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetName);
+            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
             Assert.AreEqual("8021", _customerView.Zip);
             Assert.AreEqual("Zürich", _customerView.City);
             Assert.AreEqual("Keine Agentur", _customerView.Agency);
