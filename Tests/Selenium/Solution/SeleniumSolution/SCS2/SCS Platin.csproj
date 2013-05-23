@@ -41,6 +41,9 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver, Version=2.32.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.WebDriver.2.32.1\lib\net40\WebDriver.dll</HintPath>
@@ -173,12 +176,24 @@
     <Compile Include="Tests\BuildTest.cs" />
     <Compile Include="Tests\Contact\ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
-    <Compile Include="Tests\Customer\CetrelCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\CoopCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\CustomerCreateWithNoDataTest.cs" />
-    <Compile Include="Tests\Customer\CustomerCreateWithMissingDataTest.cs" />
+    <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateAndCancelTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateGuiTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithSBSExportTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithNoDataTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\CustomerEditTest.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
+    <Compile Include="Tests\General Checks\ApplicationInfoTest.cs" />
+    <Compile Include="Tests\General Checks\ApplicationNewsTest.cs" />
+    <Compile Include="Tests\General Checks\RecentElementsTest.cs" />
+    <Compile Include="Tests\General Checks\MetaNavigationBarTest.cs" />
+    <Compile Include="Tests\General Checks\NavigationBarTest.cs" />
+    <Compile Include="Tests\General Checks\FooterTest.cs" />
+    <Compile Include="Tests\General Checks\QuickSearchTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />
     <Compile Include="Tests\Location\BillingAddressEditTest.cs" />
     <Compile Include="Tests\Location\LocationEditTest.cs" />
@@ -187,12 +202,12 @@
     <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
-    <Compile Include="Tests\General Checks\LobbyTest.cs" />
+    <Compile Include="Tests\General Checks\RecentMassJobsTest.cs" />
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
     <Compile Include="TestObjects\Location\LocationView.cs" />
     <Compile Include="TestObjects\Location\LocationCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Customer\CustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateTest.cs" />
     <Compile Include="TestObjects\Terminal\TerminalData.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
     <Compile Include="Tests\Login\LoginTest.cs" />
@@ -204,6 +219,7 @@
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
+    <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +240,9 @@
     <Folder Include="TestObjects\Common\News\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
     <Folder Include="Tests\Administration\Agency\" />
+    <Folder Include="Tests\Location\Create\" />
+    <Folder Include="Tests\Search\" />
+    <Folder Include="Tests\Ticketing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="RegReplace.txt" />
@@ -249,6 +268,7 @@
     <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Contact\Contact.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -257,6 +277,7 @@
     <EmbeddedResource Include="TestObjects\Customer\Customer.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Location\Location.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
