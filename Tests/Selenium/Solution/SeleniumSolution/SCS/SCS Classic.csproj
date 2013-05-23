@@ -87,6 +87,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SCS2\SCS Platin.csproj">
+      <Project>{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}</Project>
+      <Name>SCS Platin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
       <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
       <Name>SeleniumExtension</Name>
@@ -97,6 +101,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

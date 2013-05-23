@@ -8,6 +8,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 {
     [TestClass]
+    
     public class CustomerCreateWithMissingDataTest
     {
         private static CustomerCreate _customerCreate;
@@ -19,6 +20,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private List<string> _formAlerts;
 
         [ClassInitialize]
+        
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts

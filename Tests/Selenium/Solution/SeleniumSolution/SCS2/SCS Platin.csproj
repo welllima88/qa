@@ -164,6 +164,17 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
+    <Compile Include="TestObjects\TestObjects\IContactCreate.cs" />
+    <Compile Include="TestObjects\TestObjects\IContactEdit.cs" />
+    <Compile Include="TestObjects\TestObjects\IContactView.cs" />
+    <Compile Include="TestObjects\TestObjects\ICustomerCreate.cs" />
+    <Compile Include="TestObjects\TestObjects\ICustomerEdit.cs" />
+    <Compile Include="TestObjects\TestObjects\ICustomerView.cs" />
+    <Compile Include="TestObjects\TestObjects\IFunctionbits.cs" />
+    <Compile Include="TestObjects\TestObjects\ILocationCreate.cs" />
+    <Compile Include="TestObjects\TestObjects\ILocationEdit.cs" />
+    <Compile Include="TestObjects\TestObjects\ILocationView.cs" />
+    <Compile Include="TestObjects\TestObjects\ISimCardElement.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardEditTest.cs" />

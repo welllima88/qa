@@ -67,6 +67,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         }
 
         [TestMethod]
+        [TestCategory("SmokeTest")]
         public void CreateCustomerWithSbsAndMinimalAndSave()
         {
             _customerMenu.CustomerCreate.Click();

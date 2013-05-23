@@ -81,19 +81,8 @@
     </Compile>
     <Compile Include="SuggestorWebElementAdapter.cs" />
     <Compile Include="TestDirector.cs" />
-    <Compile Include="TestObjects\IContactCreate.cs" />
-    <Compile Include="TestObjects\IContactEdit.cs" />
-    <Compile Include="TestObjects\IContactView.cs" />
-    <Compile Include="TestObjects\ICustomerCreate.cs" />
-    <Compile Include="TestObjects\ICustomerEdit.cs" />
-    <Compile Include="TestObjects\ICustomerView.cs" />
-    <Compile Include="TestObjects\IFunctionbits.cs" />
-    <Compile Include="TestObjects\ILocationCreate.cs" />
-    <Compile Include="TestObjects\ILocationEdit.cs" />
-    <Compile Include="TestObjects\ILocationView.cs" />
-    <Compile Include="TestObjects\ISimCardElement.cs" />
-    <Compile Include="TestObjects\WebObject.cs" />
-    <Compile Include="TestObjects\IWebObject.cs" />
+    <Compile Include="WebObject.cs" />
+    <Compile Include="IWebObject.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
     <Compile Include="WebDriverAdapter.cs" />
     <Compile Include="WebElementAdapter.cs" />
@@ -104,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TestEntities\" />
+    <Folder Include="TestObjects\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\DriverRes.resx">
