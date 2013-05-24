@@ -8,6 +8,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Menu;
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests.Customer
 {
     [TestClass]
+    [Ignore]
     public class CustomerEditTest
     {
         private static CustomerEdit _customerEdit;

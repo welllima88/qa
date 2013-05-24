@@ -10,6 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.Integration
     /// Summary description for TerminalFunctionTests
     /// </summary>
     [TestClass]
+    [Ignore]
     public class TerminalFunctionTests
     {
         private static TestDirector _scs;
