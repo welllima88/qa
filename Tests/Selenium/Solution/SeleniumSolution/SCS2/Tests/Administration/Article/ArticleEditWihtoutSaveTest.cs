@@ -84,5 +84,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
         {
             _articleEdit.NetType = "TCP/IP ep2 Standard";
         }
+
+        [TestMethod]
+        public void CashIntegratedEditWithoutSave()
+        {
+            _articleEdit.CashIntegrated = "Cash Integrator";
+        }
     }
 }
