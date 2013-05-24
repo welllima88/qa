@@ -8,16 +8,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS Classic", "SCS\SCS Classic.csproj", "{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExtension", "SeleniumExtension\SeleniumExtension.csproj", "{D82EFC2F-3E2D-4892-9D5D-327139693BB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS Platin", "SCS2\SCS Platin.csproj", "{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D82EFC2F-3E2D-4892-9D5D-327139693BB4} = {D82EFC2F-3E2D-4892-9D5D-327139693BB4}
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "Integration\Integration.csproj", "{3202B79E-97DD-449C-9833-C584DE26EFB4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{20517DF7-28B0-4749-864B-0E815ECD5152}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 3
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
 		SccLocalPath0 = .
@@ -38,12 +34,6 @@ Global
 		SccProjectUniqueName2 = SCS2\\SCS\u0020Platin.csproj
 		SccProjectName2 = SCS2
 		SccLocalPath2 = SCS2
-		SccProjectUniqueName3 = SCS\\SCS\u0020Classic.csproj
-		SccProjectName3 = SCS
-		SccLocalPath3 = SCS
-		SccProjectUniqueName4 = Integration\\Integration.csproj
-		SccProjectName4 = Integration
-		SccLocalPath4 = Integration
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SeleniumTests.vsmdi
@@ -53,10 +43,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,10 +51,6 @@ Global
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3202B79E-97DD-449C-9833-C584DE26EFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3202B79E-97DD-449C-9833-C584DE26EFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3202B79E-97DD-449C-9833-C584DE26EFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3202B79E-97DD-449C-9833-C584DE26EFB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
