@@ -12,6 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
     [TestClass]
     public class ContactEditTest
     {
+        private string _contactId;
         private static ContactEdit _contactEdit;
         private static ContactView _contactView;
         private static IWebDriverAdapter _driver;
@@ -24,6 +25,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
         private static Lobby _lobby;
         private long _dt;
         private List<string> _formAlerts;
+
+        public ContactEditTest(string contactId)
+        {
+            _contactId = contactId;
+        }
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -45,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Person/PersonEdit.aspx?PageMode=view&PersonId=8935";
+            _driver.Url = _tb.BaseUrl + "/Pages/Person/PersonEdit.aspx?PageMode=view&PersonId=" + _contactId;
             _dt = DateTime.Now.Ticks; //timestamp for each test
         }
 
