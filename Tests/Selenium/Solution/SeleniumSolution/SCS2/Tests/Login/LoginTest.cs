@@ -1,26 +1,15 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.Login;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
 {
     [TestClass]
-    public class LoginTest : ILoginCheck
+    public class LoginTest
     {
         private static TestDirector _tb;
         private static IWebDriverAdapter _driver;
         private static Lobby _lobby;
-
-        #region ILoginCheck Members
-
-        public void CheckLogInSucess()
-        {
-            throw new NotImplementedException("Needs to make sure that _lobby is valid value (circular)");
-        }
-
-        #endregion
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -49,20 +38,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
 
         [TestCategory("BasicLoginTest")]
         [TestMethod]
-        public void SuccessfullLoginTest()
+        public void ApplicationName()
         {
             Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
-            Assert.IsTrue(_lobby.CompanyLogo.Displayed);
-            Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
         }
 
-        [Ignore]
+        [TestCategory("BasicLoginTest")]
         [TestMethod]
-        // todo after refactoring login/test director insert checks:
-        public void PreLoginTest()
+        public void CompanyLogo()
         {
-            // Assert.IsTrue(_wes.LoginButton.Displayed);
-            // StringAssert.Matches(_wes.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
+            Assert.IsTrue(_lobby.CompanyLogo.Displayed);
+        }
+
+        [TestCategory("BasicLoginTest")]
+        [TestMethod]
+        public void LobbyMenu()
+        {
+            Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
         }
     }
 }
