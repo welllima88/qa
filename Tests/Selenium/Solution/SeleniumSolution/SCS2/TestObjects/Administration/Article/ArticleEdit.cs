@@ -59,6 +59,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article
             set { Driver.FindAdaptedElement(By.CssSelector("#Article_SapTemplateId")).TypeText(value); }
         }
 
+        public string CashIntegrated
+        {
+            get { throw new NotSupportedException("gui element not realized"); }
+            set { throw new NotSupportedException("gui element not realized"); }
+        }
+
         public List<string> Supplier
         {
             get
