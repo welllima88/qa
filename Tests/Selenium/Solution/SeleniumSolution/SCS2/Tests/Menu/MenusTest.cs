@@ -121,6 +121,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
             _driver.FindElement(By.CssSelector("td:contains('^ Neuer Kunde$')"));
             _driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
             _driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
+
+            _driver.FindElement(By.CssSelector("td[textContent()=\" Neuer Kunde\"]"));
+
             _driver.FindElement(By.XPath("//td[text()=' Kunde']"));
             e.Click();
         }
