@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 {
-    internal class SimCardHistory
+    internal class SimCardHistory : WebObject
     {
-        private readonly IWebDriverAdapter _driver;
-
-        public SimCardHistory(IWebDriverAdapter driver)
+        public SimCardHistory(IWebDriverAdapter driver) : base(driver)
         {
-            _driver = driver;
         }
 
         public ReadOnlyCollection<IWebElement> HistoryElements
         {
-            get { return _driver.FindElements(By.CssSelector("table.dataTable tbody tr")); }
+            get { return Driver.FindElements(By.CssSelector("table.dataTable tbody tr")); }
         }
 
         public List<String> HistoryList
         {
-            get { return _driver.WebElementsAsStringList(HistoryElements); }
+            get { return Driver.WebElementsAsStringList(HistoryElements); }
         }
     }
 }
