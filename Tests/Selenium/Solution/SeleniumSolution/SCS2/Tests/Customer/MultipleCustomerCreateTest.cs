@@ -9,6 +9,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 {
     [TestClass]
+    [Ignore]
     public class MultipleCustomerCreateTest
     {
         private const int NumberOfThreads = 5;

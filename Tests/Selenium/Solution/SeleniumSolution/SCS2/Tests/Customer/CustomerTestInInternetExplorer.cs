@@ -8,6 +8,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 {
     [TestClass]
+    [Ignore]
     public class CustomerTestInInternetExplorer
     {
         private static CustomerCreate _customerCreate;
