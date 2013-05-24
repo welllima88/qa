@@ -48,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=404871";
+            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=401152";
             _dt = DateTime.Now.Ticks; //timestamp for each test
         }
 
