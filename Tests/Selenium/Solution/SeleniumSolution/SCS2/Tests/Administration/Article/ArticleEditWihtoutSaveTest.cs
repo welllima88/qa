@@ -74,6 +74,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
         }
 
         [TestMethod]
+        public void SupplierListHasSixSupplierElement()
+        {
+            CollectionAssert.Contains(_articleEdit.Supplier, "SIX Payment Services AG");
+        }
+
+        [TestMethod]
         public void TerminalTypeEditWithoutSave()
         {
             _articleEdit.TerminalType = "xenta AUTONOM";
