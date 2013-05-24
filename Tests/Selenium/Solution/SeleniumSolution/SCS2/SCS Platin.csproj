@@ -62,6 +62,8 @@
       <DependentUpon>Scs2Res.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
+    <Compile Include="TestObjects\Administration\Article\ArticleEdit.cs" />
+    <Compile Include="TestObjects\Definitions\IArticle.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />
@@ -164,17 +166,18 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="TestObjects\TestObjects\IContactCreate.cs" />
-    <Compile Include="TestObjects\TestObjects\IContactEdit.cs" />
-    <Compile Include="TestObjects\TestObjects\IContactView.cs" />
-    <Compile Include="TestObjects\TestObjects\ICustomerCreate.cs" />
-    <Compile Include="TestObjects\TestObjects\ICustomerEdit.cs" />
-    <Compile Include="TestObjects\TestObjects\ICustomerView.cs" />
-    <Compile Include="TestObjects\TestObjects\IFunctionbits.cs" />
-    <Compile Include="TestObjects\TestObjects\ILocationCreate.cs" />
-    <Compile Include="TestObjects\TestObjects\ILocationEdit.cs" />
-    <Compile Include="TestObjects\TestObjects\ILocationView.cs" />
-    <Compile Include="TestObjects\TestObjects\ISimCardElement.cs" />
+    <Compile Include="TestObjects\Definitions\IContactCreate.cs" />
+    <Compile Include="TestObjects\Definitions\IContactEdit.cs" />
+    <Compile Include="TestObjects\Definitions\IContactView.cs" />
+    <Compile Include="TestObjects\Definitions\ICustomerCreate.cs" />
+    <Compile Include="TestObjects\Definitions\ICustomerEdit.cs" />
+    <Compile Include="TestObjects\Definitions\ICustomerView.cs" />
+    <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
+    <Compile Include="TestObjects\Definitions\ILocationCreate.cs" />
+    <Compile Include="TestObjects\Definitions\ILocationEdit.cs" />
+    <Compile Include="TestObjects\Definitions\ILocationView.cs" />
+    <Compile Include="TestObjects\Definitions\ISimCardElement.cs" />
+    <Compile Include="Tests\Administration\Article\ArticleEditWihtoutSaveTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardEditTest.cs" />
@@ -204,8 +207,10 @@
     <Compile Include="Tests\General Checks\QuickSearchTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />
     <Compile Include="Tests\Location\BillingAddressEditTest.cs" />
+    <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
+    <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Location\LocationEditTest.cs" />
-    <Compile Include="Tests\Location\LocationCreateTest.cs" />
+    <Compile Include="Tests\Location\Create\LocationCreateTest.cs" />
     <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />
     <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
@@ -248,7 +253,6 @@
     <Folder Include="TestObjects\Common\News\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
     <Folder Include="Tests\Administration\Agency\" />
-    <Folder Include="Tests\Location\Create\" />
     <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>

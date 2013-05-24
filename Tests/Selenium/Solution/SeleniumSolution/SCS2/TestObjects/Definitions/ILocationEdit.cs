@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.TestObjects
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
     public interface ILocationEdit
     {

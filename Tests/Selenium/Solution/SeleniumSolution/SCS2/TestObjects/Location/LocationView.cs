@@ -2,7 +2,7 @@ using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.TestObjects;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 {
