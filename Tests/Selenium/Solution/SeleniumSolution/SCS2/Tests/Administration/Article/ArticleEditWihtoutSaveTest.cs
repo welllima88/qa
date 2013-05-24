@@ -82,7 +82,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
         [TestMethod]
         public void NetTypeEditWithoutSave()
         {
-            _articleEdit.NetType = "TCP/IP ep2 Standard";
+            _articleEdit.NetType = "TCP/IP ep2 (DNS)";
         }
 
         [TestMethod]
