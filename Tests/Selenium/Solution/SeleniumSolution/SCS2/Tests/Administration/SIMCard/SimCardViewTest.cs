@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         private static SimCardView _simCardView;
         private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
         private static TestDirector _tb;
 
 
@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
 
             _simCardView = new SimCardView(_driver);
             _navigationBar = new NavigationBar(_driver);
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]

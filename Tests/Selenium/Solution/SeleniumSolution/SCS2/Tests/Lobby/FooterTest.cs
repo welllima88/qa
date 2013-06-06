@@ -10,10 +10,8 @@
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
-namespace SeleniumTests
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
     /// <summary>
     /// be careful with menu expander because they prevent some actions and need special handling 
@@ -23,14 +21,14 @@ namespace SeleniumTests
     {
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
-        private static Lobby _lobby;
+        private static TestObjects.Common.LobbyView _lobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup();
-            _lobby = new Lobby(_driver);
+            _lobbyView = new TestObjects.Common.LobbyView(_driver);
         }
 
         [TestInitialize]
@@ -57,31 +55,31 @@ namespace SeleniumTests
         [TestMethod]
         public void Copyright()
         {
-            Assert.IsTrue(_lobby.Footer.Copyright.Displayed);
+            Assert.IsTrue(_lobbyView.Footer.Copyright.Displayed);
         }
 
         [TestMethod]
         public void Disclaimer()
         {
-            Assert.IsTrue(_lobby.Footer.Disclaimer.Displayed);
+            Assert.IsTrue(_lobbyView.Footer.Disclaimer.Displayed);
         }
 
         [TestMethod]
         public void Feedback()
         {
-            Assert.IsTrue(_lobby.Footer.Feedback.Displayed);
+            Assert.IsTrue(_lobbyView.Footer.Feedback.Displayed);
         }
 
         [TestMethod]
         public void PrintPage()
         {
-            Assert.IsTrue(_lobby.Footer.PrintPage.Displayed);
+            Assert.IsTrue(_lobbyView.Footer.PrintPage.Displayed);
         }
 
         [TestMethod]
         public void ScrollUp()
         {
-            Assert.IsTrue(_lobby.Footer.ScrollUp.Displayed);
+            Assert.IsTrue(_lobbyView.Footer.ScrollUp.Displayed);
         }
     }
 }

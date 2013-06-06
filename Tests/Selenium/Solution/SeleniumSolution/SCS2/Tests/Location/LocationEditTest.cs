@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         private static LocationCreate _locationCreate;
         private static LocationMenu _locationMenu;
         private static MenusTest _menusTests;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
         private long _dt;
         private List<string> _formAlerts;
 
@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
 
             _navigationBar = new NavigationBar(_driver);
             _formAlert = new FormAlert(_driver);
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]

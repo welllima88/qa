@@ -9,14 +9,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
     {
         private static TestDirector _tb;
         private static IWebDriverAdapter _driver;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup();
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]

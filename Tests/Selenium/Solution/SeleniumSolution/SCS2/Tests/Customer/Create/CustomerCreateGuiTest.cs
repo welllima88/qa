@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private static CustomerMenu _customerMenu;
         private static LobbyMenu _lobbyMenu;
         private static MenusTest _menusTests;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerMenu = new CustomerMenu(_driver);
             _navigationBar = new NavigationBar(_driver);
             _menusTests = new MenusTest();
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]

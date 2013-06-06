@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
             _customerCreate = new CustomerCreate(_driver);
             _customerMenu = new CustomerMenu(_driver);
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
 

@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         private static SimCardCreate _simCardCreate;
         private static IWebDriverAdapter _driver;
         private static FormAlert _formAlert;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
         private static TestDirector _tb;
         private long _dt;
 
@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
             _simCardView = new SimCardView(_driver);
             _simCardCreate = new SimCardCreate(_driver);
             _formAlert = new FormAlert(_driver);
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]

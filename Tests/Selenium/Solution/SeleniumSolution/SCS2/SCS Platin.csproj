@@ -97,7 +97,7 @@
     <Compile Include="TestObjects\Contact\ContactCreate.cs" />
     <Compile Include="TestObjects\Contact\ContactEdit.cs" />
     <Compile Include="TestObjects\Contact\ContactView.cs" />
-    <Compile Include="TestObjects\Common\Lobby.cs" />
+    <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
     <Compile Include="TestObjects\Contact\Contact.Designer.cs">
       <AutoGen>True</AutoGen>

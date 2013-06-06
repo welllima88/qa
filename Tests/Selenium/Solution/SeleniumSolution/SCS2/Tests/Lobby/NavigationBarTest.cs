@@ -10,10 +10,8 @@
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
-namespace SeleniumTests
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
     /// <summary>
     /// be careful with menu expander because they prevent some actions and need special handling 
@@ -23,14 +21,14 @@ namespace SeleniumTests
     {
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
-        private static Lobby _lobby;
+        private static TestObjects.Common.LobbyView _lobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup();
-            _lobby = new Lobby(_driver);
+            _lobbyView = new TestObjects.Common.LobbyView(_driver);
         }
 
         [TestInitialize]
@@ -58,41 +56,41 @@ namespace SeleniumTests
         [TestMethod]
         public void Lobby()
         {
-            Assert.IsTrue(_lobby.NavigationBar.Lobby.Displayed);
+            Assert.IsTrue(_lobbyView.NavigationBar.Lobby.Displayed);
         }
 
         [TestMethod]
         public void Administration()
         {
-            Assert.IsTrue(_lobby.NavigationBar.Administration.Displayed);
+            Assert.IsTrue(_lobbyView.NavigationBar.Administration.Displayed);
         }
 
         [TestMethod]
         public void Reporting()
         {
-            Assert.IsTrue(_lobby.NavigationBar.Reporting.Displayed);
+            Assert.IsTrue(_lobbyView.NavigationBar.Reporting.Displayed);
         }
 
         [TestMethod]
         public void MoreMenu()
         {
-            Assert.IsTrue(_lobby.NavigationBar.MoreMenu.Displayed);
+            Assert.IsTrue(_lobbyView.NavigationBar.MoreMenu.Displayed);
         }
 
         [TestMethod]
         public void Help()
         {
-            _lobby.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobby.NavigationBar.Help.Displayed);
-            _lobby.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
+            _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
+            Assert.IsTrue(_lobbyView.NavigationBar.Help.Displayed);
+            _lobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
 
         [TestMethod]
         public void SystemInfo()
         {
-            _lobby.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobby.NavigationBar.SystemInfo.Enabled);
-            _lobby.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
+            _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
+            Assert.IsTrue(_lobbyView.NavigationBar.SystemInfo.Enabled);
+            _lobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
     }
 }

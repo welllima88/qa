@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
         private static MenusTest _menusTests;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
         private static long _dt;
         private List<string> _formAlerts;
         private static string _custId;
@@ -64,7 +64,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
             _navigationBar = new NavigationBar(_driver);
             _formAlert = new FormAlert(_driver);
             _menusTests = new MenusTest();
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
             
             _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
             _dt = DateTime.Now.Ticks; //timestamp for each test

@@ -6,7 +6,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
-    public class Lobby : WebObject, ILogout
+    public class LobbyView : WebObject, ILogout
     {
         public ApplicationInfo ApplicationInfo;
         public Footer Footer;
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
 
-        public Lobby(IWebDriverAdapter driver) : base(driver)
+        public LobbyView(IWebDriverAdapter driver) : base(driver)
         {
             Menu = new LobbyMenu(Driver);
             RecentElements = new RecentElements(Driver);

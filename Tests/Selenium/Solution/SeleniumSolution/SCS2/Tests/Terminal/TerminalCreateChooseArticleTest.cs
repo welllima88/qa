@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
-        private static Lobby _lobby;
+        private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
             _terminalCreate = new TerminalCreate(_driver);
 
             _customerMenu = new CustomerMenu(_driver);
-            _lobby = new Lobby(_driver);
+            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]
