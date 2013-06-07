@@ -68,7 +68,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ScsClassicTestDirector.cs" />
-    <Compile Include="Support\ApplicationInfoTest.cs" />
+    <Compile Include="Support\AddScs2ServiceToUsers.cs" />
     <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />

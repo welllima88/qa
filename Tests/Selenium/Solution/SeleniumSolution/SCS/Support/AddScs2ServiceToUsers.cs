@@ -9,10 +9,11 @@
  * 
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Support
+namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
 {
     /// <summary>
     /// be careful with menu expander because they prevent some actions and need special handling 
@@ -20,16 +21,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Support
     [TestClass]
     public class AddScs2ServiceToUsers
     {
+        private const string BaseUrl = "https://gateint.telekurs.ch/scsc-qa-l";
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
-        private static Lobby _lobby;
+        private string userId = "tksyr";
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup();
-            _lobby = new Lobby(_driver);
+            _tb = new ScsClassicTestDirector();
+            _tb.DefaultTestSetup();
+            _driver = _tb.WebDriver;
         }
 
         [TestInitialize]
@@ -51,18 +53,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Support
         [TestMethod]
         public void CheckLobbyMenu()
         {
-        }
-
-        [TestMethod]
-        public void ApplicationName()
-        {
-            Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
-        }
-
-        [TestMethod]
-        public void Environment()
-        {
-            Assert.IsTrue(_lobby.ApplicationInfo.Environment.Displayed);
+            _driver.Navigate().GoToUrl(BaseUrl +
+                                       "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
+            _driver.SwitchTo().Frame("main");
+            _driver.FindElement(By.CssSelector("img[alt=\"Service hinzufügen\"]")).Click();
+            new SelectElement(_driver.FindElement(By.CssSelector("select[name=\"ServiceId\"]"))).SelectByText("");
+            _driver.FindElement(By.CssSelector("input[type=\"submit\"]")).Click();
+            new SelectElement(_driver.FindElement(By.CssSelector("select[name=\"PTID_Perm\"]"))).SelectByText("ummy");
+            _driver.FindElement(By.CssSelector("input[type=\"submit\"]")).Click();
+            Assert.AreEqual("plgre", _driver.FindElement(By.XPath("//td[2]/font/b")).Text);
         }
     }
 }
