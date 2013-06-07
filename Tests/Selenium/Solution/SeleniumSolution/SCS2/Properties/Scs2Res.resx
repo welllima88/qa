@@ -139,4 +139,7 @@
   <data name="mandant_qa_L" xml:space="preserve">
     <value>tkcposl</value>
   </data>
+  <data name="mandant_qa_K" xml:space="preserve">
+    <value>tkcposk</value>
+  </data>
 </root>

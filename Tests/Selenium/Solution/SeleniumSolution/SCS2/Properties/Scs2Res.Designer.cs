@@ -61,6 +61,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tkcposk.
+        /// </summary>
+        public static string mandant_qa_K {
+            get {
+                return ResourceManager.GetString("mandant_qa_K", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to tkcposl.
         /// </summary>
         public static string mandant_qa_L {
