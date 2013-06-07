@@ -23,7 +23,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
     [TestClass]
     public class AddServiceToUsers
     {
-        private const string BaseUrl = "https://gateint.telekurs.ch/scsc-qa-k";
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
         public TestContext TestContext { get; set; }
@@ -50,21 +49,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
         public static void ClassCleanup()
         {
             _tb.ShutDownTest();
-
         }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "C:\\Users\\siegmund\\Desktop\\KSystemUsers.csv", "KSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "C:\\Users\\siegmund\\Desktop\\KSystemUsers.csv",
+            "KSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
         public void AddScs2ServiceToUsers()
         {
             string userId = Convert.ToString(TestContext.DataRow[0]);
-            _driver.Navigate().GoToUrl(BaseUrl +
+            _driver.Navigate().GoToUrl(_tb.BaseUrl +
                                        "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
             _driver.SwitchTo().Frame("main");
 
             Assert.AreEqual(userId, _driver.FindElement(By.XPath("//td[2]/font/b")).Text);
             Assert.IsTrue(Regex.IsMatch(_driver.FindElement(By.XPath("//tr[9]/td[2]/font/b")).Text, "TKCPOS"),
                           "Mandant is not TKCPOS");
-            Assert.IsFalse(Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"), "Seems to be already mutated");
+            Assert.IsFalse(
+                Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"),
+                "Seems to be already mutated");
 
             _driver.FindElement(By.CssSelector("img[alt=\"Service hinzufügen\"]")).Click();
             new SelectElement(_driver.FindElement(By.CssSelector("select[name=\"ServiceId\"]"))).SelectByText("SCS2.0");
@@ -74,7 +75,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
             _driver.FindElement(By.CssSelector("input[type=\"submit\"]")).Click();
 
             Assert.AreEqual(userId, _driver.FindElement(By.XPath("//td[2]/font/b")).Text);
-            Assert.IsTrue(Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"), "Seems to be already mutated");
+            Assert.IsTrue(
+                Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"),
+                "Seems to be already mutated");
+        }
+
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "C:\\Users\\siegmund\\Desktop\\KSystemUsers.csv",
+            "KSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
+        public void CheckScs2ServiceToUsers()
+        {
+            string userId = Convert.ToString(TestContext.DataRow[0]);
+            _driver.Navigate().GoToUrl(_tb.BaseUrl +
+                                       "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
+            _driver.SwitchTo().Frame("main");
+
+            Assert.AreEqual(userId, _driver.FindElement(By.XPath("//td[2]/font/b")).Text);
+            Assert.IsTrue(Regex.IsMatch(_driver.FindElement(By.XPath("//tr[9]/td[2]/font/b")).Text, "TKCPOS"),
+                          "Mandant is not TKCPOS");
+            Assert.IsFalse(
+                Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"),
+                "Seems to be already mutated");
         }
     }
 }
