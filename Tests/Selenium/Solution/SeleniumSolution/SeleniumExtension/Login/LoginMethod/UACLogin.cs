@@ -1,5 +1,4 @@
 using SIX.SCS.QA.Selenium.Extension.Login.LoginPages;
-using SIX.SCS.QA.Selenium.Extension.TestObjects;
 
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
 {
