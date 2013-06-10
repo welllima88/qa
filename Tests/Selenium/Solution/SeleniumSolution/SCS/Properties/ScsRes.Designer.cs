@@ -61,6 +61,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tkcposk.
+        /// </summary>
+        internal static string mandant_qa_K {
+            get {
+                return ResourceManager.GetString("mandant_qa_K", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to tkcposl.
         /// </summary>
         internal static string mandant_qa_L {
@@ -88,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scss-qa-k/.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scsc-qa-k/.
         /// </summary>
         internal static string WES_QA_K {
             get {

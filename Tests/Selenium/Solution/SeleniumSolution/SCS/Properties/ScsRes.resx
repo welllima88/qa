@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="mandant_qa_K" xml:space="preserve">
+    <value>tkcposk</value>
+  </data>
+  <data name="mandant_qa_L" xml:space="preserve">
+    <value>tkcposl</value>
+  </data>
   <data name="UAC_DEV" xml:space="preserve">
     <value>https://mdzhwcweb01/mgmt/</value>
     <comment>UAC</comment>
@@ -125,12 +131,9 @@
     <value>https://gate.telekurs.ch/scss/</value>
   </data>
   <data name="WES_QA_K" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scss-qa-k/</value>
+    <value>https://gate.telekurs.ch/scsc-qa-k/</value>
   </data>
   <data name="WES_QA_L" xml:space="preserve">
     <value>https://gateint.telekurs.ch/scsc-qa-l/</value>
   </data>
-	<data name="mandant_qa_L">
-		<value xml:space="preserve">tkcposl</value>
-	</data>
 </root>
