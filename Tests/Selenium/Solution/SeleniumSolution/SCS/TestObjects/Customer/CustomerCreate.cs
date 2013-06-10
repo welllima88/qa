@@ -5,10 +5,19 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
 {
-    public class CustomerCreate :WebObject, ICustomerCreate
+    public class CustomerCreate : WebObject, ICustomerCreate
     {
-        public CustomerCreate(IWebDriverAdapter driver):base(driver)
-        {            
+        public CustomerCreate(IWebDriverAdapter driver) : base(driver)
+        {
+        }
+
+        public string CustomerSegment
+        {
+            set
+            {
+                Driver.FindAdaptedElement(By.CssSelector("#CustomerSegment")).Selector().
+                    SelectByText(value);
+            }
         }
 
         #region ICustomerCreate Members
@@ -182,15 +191,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         public string Segment
         {
             set { throw new NotImplementedException(); }
-        }
-
-        public string CustomerSegment
-        {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector("#CustomerSegment")).Selector().
-                    SelectByText(value);
-            }
         }
 
         #endregion

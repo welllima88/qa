@@ -5,10 +5,15 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
 {
-    public class CustomerView : WebObject,ICustomerView
+    public class CustomerView : WebObject, ICustomerView
     {
-        public CustomerView(IWebDriverAdapter driver):base(driver)
+        public CustomerView(IWebDriverAdapter driver) : base(driver)
         {
+        }
+
+        public string CustomerSegment
+        {
+            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSegment")).Text; }
         }
 
         #region ICustomerView Members
@@ -240,11 +245,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         public string Segment
         {
             get { throw new NotImplementedException(); }
-        }
-
-        public string CustomerSegment
-        {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSegment")).Text; }
         }
 
         #endregion

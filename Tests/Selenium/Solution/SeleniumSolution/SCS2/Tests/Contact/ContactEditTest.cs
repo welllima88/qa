@@ -12,7 +12,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
     [TestClass]
     public class ContactEditTest
     {
-        private string _contactId;
         private static ContactEdit _contactEdit;
         private static ContactView _contactView;
         private static IWebDriverAdapter _driver;
@@ -23,6 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
         private static ContactMenu _contactMenu;
         private static MenusTest _menusTests;
         private static LobbyView _lobby;
+        private readonly string _contactId;
         private long _dt;
         private List<string> _formAlerts;
 

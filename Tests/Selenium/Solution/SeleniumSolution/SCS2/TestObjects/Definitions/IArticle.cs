@@ -10,6 +10,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
         string NetType { get; set; }
         string SbsArticleNumber { get; set; }
         string CashIntegrated { get; set; }
-        List<string> Supplier { get; }                
+        List<string> Supplier { get; }
     }
 }

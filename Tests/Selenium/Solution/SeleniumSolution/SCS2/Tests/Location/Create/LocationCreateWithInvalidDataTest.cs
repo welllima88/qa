@@ -57,7 +57,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestInitialize]
         public void TestInit()
         {
-
         }
 
         [TestCleanup]

@@ -120,7 +120,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 
         [TestInitialize]
         public void TestInit()
-        {      
+        {
         }
 
         [TestCleanup]

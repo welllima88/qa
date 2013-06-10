@@ -10,6 +10,7 @@
  */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
@@ -21,14 +22,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
     {
         private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
-        private static TestObjects.Common.LobbyView _lobbyView;
+        private static LobbyView _lobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup();
-            _lobbyView = new TestObjects.Common.LobbyView(_driver);
+            _lobbyView = new LobbyView(_driver);
         }
 
         [TestInitialize]
@@ -83,7 +84,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         public void LanguageEnglish()
         {
             _lobbyView.MetaNavBar.Languages.Click();
-            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Displayed); //Enabled, if displayed is making problems
+            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Displayed);
+                //Enabled, if displayed is making problems
             _lobbyView.MetaNavBar.Languages.Click();
         }
     }

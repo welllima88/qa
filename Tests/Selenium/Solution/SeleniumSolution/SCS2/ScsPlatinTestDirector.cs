@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 
             var lobby = new LobbyView(WebDriver);
             StartUpTest(baseAdress, login, lobby);
-            
+
             return WebDriver;
         }
 

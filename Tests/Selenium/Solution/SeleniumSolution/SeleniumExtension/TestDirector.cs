@@ -13,14 +13,14 @@ namespace SIX.SCS.QA.Selenium.Extension
     public class TestDirector
     {
         private const double TimeOutSeconds = 30;
+        protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
+        protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
         private readonly string _auth;
         private readonly string _environment;
         private ILogin _login;
         private ILoginCheck _loginCheck;
         private ILogout _logout;
         private ILogoutCheck _logoutCheck;
-        protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
-        protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
 
         public TestDirector(string environment, string auth)
         {

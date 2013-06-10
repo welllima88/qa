@@ -24,7 +24,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         private static MenusTest _menusTests;
         private static LobbyView _lobby;
         private static long _dt;
-        private List<string> _formAlerts;
         private static string _custId;
         private static string _customerName;
         private static string _supplier;
@@ -49,6 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         private static string _fax;
         private static string _web;
         private static string _segment;
+        private List<string> _formAlerts;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -65,7 +65,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
             _formAlert = new FormAlert(_driver);
             _menusTests = new MenusTest();
             _lobby = new LobbyView(_driver);
-            
+
             _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
@@ -101,7 +101,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestInitialize]
         public void TestInit()
         {
-            
         }
 
         [TestCleanup]
@@ -128,7 +127,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void EditCustomerAndCancel()
         {
-
             _customerMenu.CustomerEdit.Click();
 
             _customerEdit.CustomerName = "SYR Sele Kunde AAA";

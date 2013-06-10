@@ -131,6 +131,8 @@ namespace SIX.SCS.QA.Selenium.Extension
             return WaitForElementPresent(locator, 2);
         }
 
+        #endregion
+
         /// <summary>
         /// Wait for an element found by locator is displayed within the given timeout
         /// </summary>
@@ -154,8 +156,6 @@ namespace SIX.SCS.QA.Selenium.Extension
             } while (retry > 0);
             throw new NoSuchElementException(locator.ToString());
         }
-
-        #endregion
 
         /// <summary>
         /// 

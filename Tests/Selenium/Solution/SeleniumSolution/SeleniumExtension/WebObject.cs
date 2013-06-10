@@ -26,13 +26,9 @@ namespace SIX.SCS.QA.Selenium.Extension
         //   throw new NotSupportedException("The default constructor is not allowed to be used to avoid missing webdriver reference");
         //}
 
-        #region IWebObject Members
-
         /// <summary>
         /// overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by the constructor)
         /// </summary>
         public IWebDriverAdapter Driver { get; private set; }
-
-        #endregion
     }
 }
