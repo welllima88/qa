@@ -126,85 +126,85 @@
   <data name="MetaNavBar_Languages" xml:space="preserve">
     <value>td#metaNavBar a#ctl00_hplLanguages.menu</value>
   </data>
-	<data name="LobbyNews_NewsElements">
-		<value xml:space="preserve">div.container ul</value>
-	</data>
-	<data name="LobbyNews_NewsTitle">
-		<value xml:space="preserve">div.container span#ctl00_bodyContentPlaceHolder_lblNewsTitle h2</value>
-	</data>
-	<data name="Lobby_CompanyLogo">
-		<value><![CDATA[html>body>form>img.companyLogo]]></value>
-	</data>
-	<data name="Lobby_Headline">
-		<value xml:space="preserve">td#content h1</value>
-	</data>
-	<data name="FormAlert_FormAlertElements">
-		<value xml:space="preserve">div.formAlert ul li</value>
-	</data>
-	<data name="NavigationBar_Prefix">
-		<value><![CDATA[td#tabNavBar ]]></value>
-	</data>
-	<data name="NavigationBar_Lobby">
-		<value><![CDATA[td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='Default']]]></value>
-	</data>
-	<data name="NavigationBar_Administration">
-		<value><![CDATA[td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']]]></value>
-	</data>
-	<data name="NavigationBar_Reporting">
-		<value><![CDATA[td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']]]></value>
-	</data>
-	<data name="NavigationBar_MoreMenu">
-		<value xml:space="preserve">td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink</value>
-	</data>
-	<data name="NavigationBar_Current">
-		<value xml:space="preserve">a#ctl00_hplMenuMenuCurrent</value>
-	</data>
-	<data name="QuickSearch_SearchField">
-		<value><![CDATA[div#searchBar>input#searchText]]></value>
-	</data>
-	<data name="QuickSearch_SearchButton">
-		<value><![CDATA[div#searchBar>p#searchSubmit]]></value>
-	</data>
-	<data name="RecentElements_Elements">
-		<value><![CDATA[div.container a[id*='ElementHistory']]]></value>
-	</data>
-	<data name="RecentElements_RecentElement_Prefix">
-		<value xml:space="preserve">a#ctl00_bodyContentPlaceHolder_rptElementHistory_ctl</value>
-	</data>
-	<data name="RecentElements_RecentElement_Suffix">
-		<value xml:space="preserve">_hplElementHistory</value>
-	</data>
-	<data name="RecentMassmutations_Header">
-		<value xml:space="preserve">#ctl00_bodyContentPlaceHolder_lblBatchTitle</value>
-	</data>
-	<data name="RecentMassmutations_Elements">
-		<value><![CDATA[div.container a[id$='_hplBatchHistory']]]></value>
-	</data>
-	<data name="RecentMassmutations_RecentElement_Prefix">
-		<value xml:space="preserve">div.container a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl</value>
-	</data>
-	<data name="RecentMassmutations_RecentElement_Suffix">
-		<value xml:space="preserve">_hplBatchHistory</value>
-	</data>
-	<data name="Footer_Feedback">
-		<value><![CDATA[td#footerNavigationBar>a#ctl00_hplFeedback]]></value>
-	</data>
-	<data name="Footer_Disclaimer">
-		<value><![CDATA[td#footerNavigationBar>a[href*='/disclaimer.aspx']]]></value>
-	</data>
-	<data name="Footer_Copyright">
-		<value><![CDATA[td#footerNavigationBar>div#copyright]]></value>
-	</data>
-	<data name="Footer_PrintPage">
-		<value><![CDATA[td#footerFunctionBar>a[href*='JavaScript:Page.Print()']]]></value>
-	</data>
-	<data name="Footer_ScrollUp">
-		<value><![CDATA[td#footerFunctionBar>a[href*='JavaScript:window.scroll(0,0)']]]></value>
-	</data>
-	<data name="ApplicationInfo_ApplicationName">
-		<value xml:space="preserve">div#applicationBar div#applicationInformation span#ctl00_lblApplicationName</value>
-	</data>
-	<data name="ApplicationInfo_Environment">
-		<value xml:space="preserve">div#applicationBar div#applicationInformation span#ctl00_lblEnvironmentText</value>
-	</data>
+  <data name="LobbyNews_NewsElements" xml:space="preserve">
+    <value>div.container ul</value>
+  </data>
+  <data name="LobbyNews_NewsTitle" xml:space="preserve">
+    <value>div.container span#ctl00_bodyContentPlaceHolder_lblNewsTitle h2</value>
+  </data>
+  <data name="Lobby_CompanyLogo" xml:space="preserve">
+    <value>html&gt;body&gt;form&gt;img.companyLogo</value>
+  </data>
+  <data name="Lobby_Headline" xml:space="preserve">
+    <value>td#content h1</value>
+  </data>
+  <data name="FormAlert_FormAlertElements" xml:space="preserve">
+    <value>div.formAlert ul li</value>
+  </data>
+  <data name="NavigationBar_Prefix" xml:space="preserve">
+    <value>td#tabNavBar </value>
+  </data>
+  <data name="NavigationBar_Lobby" xml:space="preserve">
+    <value>td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/Lobby/']</value>
+  </data>
+  <data name="NavigationBar_Administration" xml:space="preserve">
+    <value>td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']</value>
+  </data>
+  <data name="NavigationBar_Reporting" xml:space="preserve">
+    <value>td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']</value>
+  </data>
+  <data name="NavigationBar_MoreMenu" xml:space="preserve">
+    <value>td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink</value>
+  </data>
+  <data name="NavigationBar_Current" xml:space="preserve">
+    <value>a#ctl00_hplMenuMenuCurrent</value>
+  </data>
+  <data name="QuickSearch_SearchField" xml:space="preserve">
+    <value>div#searchBar&gt;input#searchText</value>
+  </data>
+  <data name="QuickSearch_SearchButton" xml:space="preserve">
+    <value>div#searchBar&gt;p#searchSubmit</value>
+  </data>
+  <data name="RecentElements_Elements" xml:space="preserve">
+    <value>div.container a[id*='ElementHistory']</value>
+  </data>
+  <data name="RecentElements_RecentElement_Prefix" xml:space="preserve">
+    <value>a#ctl00_bodyContentPlaceHolder_rptElementHistory_ctl</value>
+  </data>
+  <data name="RecentElements_RecentElement_Suffix" xml:space="preserve">
+    <value>_hplElementHistory</value>
+  </data>
+  <data name="RecentMassmutations_Header" xml:space="preserve">
+    <value>#ctl00_bodyContentPlaceHolder_lblBatchTitle</value>
+  </data>
+  <data name="RecentMassmutations_Elements" xml:space="preserve">
+    <value>div.container a[id$='_hplBatchHistory']</value>
+  </data>
+  <data name="RecentMassmutations_RecentElement_Prefix" xml:space="preserve">
+    <value>div.container a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl</value>
+  </data>
+  <data name="RecentMassmutations_RecentElement_Suffix" xml:space="preserve">
+    <value>_hplBatchHistory</value>
+  </data>
+  <data name="Footer_Feedback" xml:space="preserve">
+    <value>td#footerNavigationBar&gt;a#ctl00_hplFeedback</value>
+  </data>
+  <data name="Footer_Disclaimer" xml:space="preserve">
+    <value>td#footerNavigationBar&gt;a[href*='/disclaimer.aspx']</value>
+  </data>
+  <data name="Footer_Copyright" xml:space="preserve">
+    <value>td#footerNavigationBar&gt;div#copyright</value>
+  </data>
+  <data name="Footer_PrintPage" xml:space="preserve">
+    <value>td#footerFunctionBar&gt;a[href*='JavaScript:Page.Print()']</value>
+  </data>
+  <data name="Footer_ScrollUp" xml:space="preserve">
+    <value>td#footerFunctionBar&gt;a[href*='JavaScript:window.scroll(0,0)']</value>
+  </data>
+  <data name="ApplicationInfo_ApplicationName" xml:space="preserve">
+    <value>div#applicationBar div#applicationInformation span#ctl00_lblApplicationName</value>
+  </data>
+  <data name="ApplicationInfo_Environment" xml:space="preserve">
+    <value>div#applicationBar div#applicationInformation span#ctl00_lblEnvironmentText</value>
+  </data>
 </root>
