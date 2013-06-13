@@ -31,12 +31,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article
 
         public bool Status
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("#ArticleState")).Selected; }
+            get { return Driver.FindAdaptedElement(By.CssSelector("input#Article_IsActive")).Selected; }
         }
 
         public string NetType
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("#NetType")).Selector().SelectedOption.Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector("#NetType")).Text; }
         }
 
         public string SbsArticleNumber
