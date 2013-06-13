@@ -72,7 +72,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -82,7 +82,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             //_contactCreate.CancelButton.Click();
@@ -96,7 +96,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -155,7 +155,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -165,7 +165,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -183,7 +183,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -193,7 +193,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -211,7 +211,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -221,7 +221,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -239,7 +239,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -249,7 +249,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -267,7 +267,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -277,7 +277,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -296,7 +296,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -306,7 +306,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -314,7 +314,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.AreEqual(_contactView.Salutation, "Herr");
             Assert.AreEqual(_contactView.FirstName, "Marc");
             Assert.AreEqual(_contactView.Name, "Siegmund SYR AUTO");
-            Assert.AreEqual(_contactView.Language, "Deutsch");
+            Assert.AreEqual(_contactView.Language, "de");
             Assert.AreEqual(_contactView.Telephone, "+41 58 399 6237 - 1");
             Assert.AreEqual(_contactView.Mobile, "+41 58 399 6237 - 2");
             Assert.AreEqual(_contactView.Fax, "+41 58 399 6237 - 3");
@@ -324,7 +324,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.AreEqual(_contactView.Zip, "55555");
             Assert.AreEqual(_contactView.City, "Berlin");
             Assert.AreEqual(_contactView.Region, "Mitte");
-            Assert.AreEqual(_contactView.Country, "Deutschland [DE]");
+            Assert.AreEqual(_contactView.Country, "DE");
             Assert.AreEqual(_contactView.AddressAddition, "Zusatz1");
         }
 
@@ -336,7 +336,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Salutation = "Herr";
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Language = "Deutsch [de]";
+            _contactCreate.Language = "de";
             _contactCreate.Telephone = "+41 58 399 6237 - 1";
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
@@ -346,7 +346,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
             _contactCreate.Region = "Mitte";
-            _contactCreate.Country = "Deutschland [DE]";
+            _contactCreate.Country = "DE";
             _contactCreate.AddressAddition = "Zusatz1";
 
             _contactCreate.SaveButton.Click();
@@ -356,7 +356,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.AreEqual(_contactView.Salutation, "Herr");
             Assert.AreEqual(_contactView.FirstName, "Marc");
             Assert.AreEqual(_contactView.Name, "Siegmund SYR AUTO");
-            Assert.AreEqual(_contactView.Language, "Deutsch [de]");
+            Assert.AreEqual(_contactView.Language, "de");
             Assert.AreEqual(_contactView.Telephone, "+41 58 399 6237 - 1");
             Assert.AreEqual(_contactView.Mobile, "+41 58 399 6237 - 2");
             Assert.AreEqual(_contactView.Fax, "+41 58 399 6237 - 3");
@@ -366,7 +366,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
             Assert.AreEqual(_contactView.Zip, "55555");
             Assert.AreEqual(_contactView.City, "Berlin");
             Assert.AreEqual(_contactView.Region, "Mitte");
-            Assert.AreEqual(_contactView.Country, "Deutschland [DE]");
+            Assert.AreEqual(_contactView.Country, "DE");
             Assert.AreEqual(_contactView.AddressAddition, "Zusatz1");
         }
 
