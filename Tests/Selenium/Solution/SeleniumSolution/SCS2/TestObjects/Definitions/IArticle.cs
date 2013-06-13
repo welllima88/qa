@@ -4,12 +4,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
     public interface IArticle
     {
-        string Name { get; set; }
-        bool Status { get; set; }
-        string TerminalType { get; set; }
-        string NetType { get; set; }
-        string SbsArticleNumber { get; set; }
-        string CashIntegrated { get; set; }
+        string Name { get; }
+        bool Status { get; }
+        string NetType { get; }
+        string SbsArticleNumber { get; }
+        string CardReaderType { get; }
+        string ContactlessIndicator { get; }
+        string PosInterface { get; }
+        string Color { get; }
+        string SoftwareId { get; }
+        string TrxSubmLim { get; }
+        string TrxTransLim { get; }
         List<string> Supplier { get; }
+        string RecallInterval { get; }
     }
 }
