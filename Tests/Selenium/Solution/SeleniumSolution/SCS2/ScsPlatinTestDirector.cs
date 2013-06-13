@@ -13,8 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             ILogin login;
             string baseAdress;
 
-            FireFoxSetupWithUac(out login, out baseAdress);
-
+            FireFoxSetUpWithCertifacte(out login, out baseAdress);
             var lobby = new LobbyView(WebDriver);
             StartUpTest(baseAdress, login, lobby);
 
