@@ -43,7 +43,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
             _tb.ShutDownTest();
         }
 
-
         [TestMethod]
         public void ArticlelName()
         {
