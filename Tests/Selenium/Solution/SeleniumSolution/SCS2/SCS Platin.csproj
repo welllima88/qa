@@ -63,6 +63,16 @@
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
+    <Compile Include="TestObjects\Contact\ContactEditRes.Designer.cs">
+      <DependentUpon>ContactEditRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Contact\ContactCreateRes.Designer.cs">
+      <DependentUpon>ContactCreateRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="TestObjects\Definitions\IArticle.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
@@ -99,10 +109,10 @@
     <Compile Include="TestObjects\Contact\ContactView.cs" />
     <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
-    <Compile Include="TestObjects\Contact\Contact.Designer.cs">
+    <Compile Include="TestObjects\Contact\ContactViewRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Contact.resx</DependentUpon>
+      <DependentUpon>ContactViewRes.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Customer\Customer.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -282,9 +292,17 @@
       <LastGenOutput>Menu.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Contact\Contact.resx">
+    <EmbeddedResource Include="TestObjects\Contact\ContactViewRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Contact.Designer.cs</LastGenOutput>
+      <LastGenOutput>ContactViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Contact\ContactEditRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactEditRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Contact\ContactCreateRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactCreateRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Customer\Customer.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
