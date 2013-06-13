@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(
-                    ContactCreateRes.Country)).Selector().SelectByText(value);
+                    ContactCreateRes.Country)).Selector().SelectByValue(value);
             }
             get
             {
