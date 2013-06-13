@@ -19,42 +19,42 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 
         public string FirstName
         {
-            get { return Driver.FindElement(By.CssSelector(Contact.FirstName)).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.FirstName)).Text; }
         }
 
         public string Name
         {
-            get { return Driver.FindElement(By.CssSelector(Contact.Name)).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Name)).Text; }
         }
 
         public string Salutation
         {
-            get { return Driver.FindElement(By.CssSelector(Contact.Salutation)).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Salutation)).Text; }
         }
 
         public string Country
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Country")).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Country)).Text; }
         }
 
         public string Language
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Language")).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Language)).Text; }
         }
 
         public string Telephone
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Telephone")).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Telephone)).Text; }
         }
 
         public string Mobile
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Telephone2")).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Mobile)).Text; }
         }
 
         public string Fax
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Fax")).Text; }
+            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Fax)).Text; }
         }
 
         public string Email

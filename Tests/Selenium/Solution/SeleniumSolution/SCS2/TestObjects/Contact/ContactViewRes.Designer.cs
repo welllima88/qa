@@ -22,14 +22,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Contact {
+    public class ContactViewRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Contact() {
+        internal ContactViewRes() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact.Contact", typeof(Contact).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact.ContactViewRes", typeof(ContactViewRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_AddressAddition.
+        ///   Looks up a localized string similar to #Address_AddressAddition.
         /// </summary>
         public static string AddressAddition {
             get {
@@ -70,7 +70,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_City.
+        ///   Looks up a localized string similar to #Address_City.
         /// </summary>
         public static string City {
             get {
@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_CountryId.
+        ///   Looks up a localized string similar to #Address_Country.
         /// </summary>
         public static string Country {
             get {
@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Email.
+        ///   Looks up a localized string similar to #Address_Email.
         /// </summary>
         public static string Email {
             get {
@@ -97,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Fax.
+        ///   Looks up a localized string similar to #Address_Fax.
         /// </summary>
         public static string Fax {
             get {
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_FirstName.
+        ///   Looks up a localized string similar to #Person_FirstName.
         /// </summary>
         public static string FirstName {
             get {
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_LanguageId.
+        ///   Looks up a localized string similar to #Address_Language.
         /// </summary>
         public static string Language {
             get {
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Mobile.
+        ///   Looks up a localized string similar to #Address_Telephone2.
         /// </summary>
         public static string Mobile {
             get {
@@ -133,7 +133,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_LastName.
+        ///   Looks up a localized string similar to #Person_LastName.
         /// </summary>
         public static string Name {
             get {
@@ -142,7 +142,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_PO.
+        ///   Looks up a localized string similar to #Address_PO.
         /// </summary>
         public static string Po {
             get {
@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Region.
+        ///   Looks up a localized string similar to #Address_Region.
         /// </summary>
         public static string Region {
             get {
@@ -160,7 +160,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Salutation.
+        ///   Looks up a localized string similar to #Person_Title.
         /// </summary>
         public static string Salutation {
             get {
@@ -169,7 +169,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Street.
+        ///   Looks up a localized string similar to #Address_Street.
         /// </summary>
         public static string Street {
             get {
@@ -178,7 +178,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_Telephone.
+        ///   Looks up a localized string similar to #Address_Telephone.
         /// </summary>
         public static string Telephone {
             get {
@@ -187,7 +187,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #PersonData_Contact_ZIP.
+        ///   Looks up a localized string similar to #Address_ZIP.
         /// </summary>
         public static string Zip {
             get {
