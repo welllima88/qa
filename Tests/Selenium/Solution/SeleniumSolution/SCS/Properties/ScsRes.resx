@@ -128,12 +128,12 @@
     <comment>UAC</comment>
   </data>
   <data name="WES_Production" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scss/</value>
+    <value>https://gate.telekurs.ch/scss</value>
   </data>
   <data name="WES_QA_K" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scsc-qa-k/</value>
+    <value>https://gate.telekurs.ch/scsc-qa-k</value>
   </data>
   <data name="WES_QA_L" xml:space="preserve">
-    <value>https://gateint.telekurs.ch/scsc-qa-l/</value>
+    <value>https://gateint.telekurs.ch/scsc-qa-l</value>
   </data>
 </root>

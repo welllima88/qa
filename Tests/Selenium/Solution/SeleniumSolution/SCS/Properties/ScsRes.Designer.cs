@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scss/.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scss.
         /// </summary>
         internal static string WES_Production {
             get {
@@ -97,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scsc-qa-k/.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scsc-qa-k.
         /// </summary>
         internal static string WES_QA_K {
             get {
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scsc-qa-l/.
+        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scsc-qa-l.
         /// </summary>
         internal static string WES_QA_L {
             get {

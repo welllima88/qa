@@ -128,13 +128,13 @@
     <value>six_scs_auto</value>
   </data>
   <data name="WES_Production" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scs2c/</value>
+    <value>https://gate.telekurs.ch/scs2c</value>
   </data>
   <data name="WES_QA_K" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scs2c-qa-k/</value>
+    <value>https://gate.telekurs.ch/scs2c-qa-k</value>
   </data>
   <data name="WES_QA_L" xml:space="preserve">
-    <value>https://gateint.telekurs.ch/scs2c-qa-l/</value>
+    <value>https://gateint.telekurs.ch/scs2c-qa-l</value>
   </data>
   <data name="mandant_qa_L" xml:space="preserve">
     <value>tkcposl</value>
