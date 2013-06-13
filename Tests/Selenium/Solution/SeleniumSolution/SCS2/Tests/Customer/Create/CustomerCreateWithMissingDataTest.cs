@@ -94,7 +94,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.IsTrue(_formAlerts.Count == 1);
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!"));
+            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
         }
 
         [TestMethod]
