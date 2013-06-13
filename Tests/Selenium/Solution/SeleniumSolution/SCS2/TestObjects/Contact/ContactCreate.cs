@@ -16,26 +16,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.FirstName)).TypeText(
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.FirstName)).TypeText(
                     value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.FirstName)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.FirstName)).Text; }
         }
 
         public string Name
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Name)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Name)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Name)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Name)).Text; }
         }
 
         public string Salutation
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Salutation)).TypeText(
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Salutation)).TypeText(
                     value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Salutation)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Salutation)).Text; }
         }
 
         public string Country
@@ -43,12 +43,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(
-                    ContactNewRes.Country)).Selector().SelectByText(value);
+                    ContactCreateRes.Country)).Selector().SelectByText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(
-                    ContactNewRes.Country)).Selector().SelectedOption.Text;
+                    ContactCreateRes.Country)).Selector().SelectedOption.Text;
             }
         }
 
@@ -58,42 +58,42 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             {
                 Driver.FindAdaptedElement(
                     By.CssSelector(
-                        ContactNewRes.Language)).Selector().SelectByValue(value);
+                        ContactCreateRes.Language)).Selector().SelectByValue(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(
                     By.CssSelector(
-                        ContactNewRes.Language)).Selector().SelectedOption.Text;
+                        ContactCreateRes.Language)).Selector().SelectedOption.Text;
             }
         }
 
         public string Telephone
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Telephone)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Telephone)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Telephone)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Telephone)).Text; }
         }
 
         public string Mobile
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Mobile)).TypeText(
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Mobile)).TypeText(
                     value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Mobile)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Mobile)).Text; }
         }
 
         public string Fax
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Fax)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Fax)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Fax)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Fax)).Text; }
         }
 
         public string Email
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Email)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Email)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Email)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Email)).Text; }
         }
 
 
@@ -101,53 +101,53 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Street)).TypeText(
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).TypeText(
                     value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Street)).Text;
+                return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).Text;
                 ;
             }
         }
 
         public string Po
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Po)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Po)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Po)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Po)).Text; }
         }
 
         public string Zip
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Zip)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Zip)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Zip)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Zip)).Text; }
         }
 
         public string City
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.City)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.City)).Text; }
+            set { Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.City)).TypeText(value); }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.City)).Text; }
         }
 
         public string Region
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Region)).TypeText(
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Region)).TypeText(
                     value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.Region)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Region)).Text; }
         }
 
         public string AddressAddition
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.AddressAddition)).
+                Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).
                     TypeText(
                         value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(ContactNewRes.AddressAddition)).Text; }
+            get { return Driver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).Text; }
         }
 
         public IWebElement SaveButton
