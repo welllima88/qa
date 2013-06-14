@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
-    public interface ILocationView
+    public interface ILocation
     {
         string CompanyName { get; }
         string Guid { get; }
@@ -23,7 +23,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
         string Telephone { get; }
         string Mobile { get; }
         string Fax { get; }
-        IWebElement EditButton { get; }
         string Region { get; }
     }
 }
