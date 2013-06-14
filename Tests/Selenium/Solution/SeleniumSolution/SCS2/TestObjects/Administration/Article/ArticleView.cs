@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("input.button[value='Speichern']")); }
+            get { return Driver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region IArticle Members

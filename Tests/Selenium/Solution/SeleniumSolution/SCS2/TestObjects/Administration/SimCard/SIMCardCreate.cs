@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 
         public IWebElement SaveButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("input.button[value='Speichern']")); }
+            get { return _driver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region ISimCardElement Members

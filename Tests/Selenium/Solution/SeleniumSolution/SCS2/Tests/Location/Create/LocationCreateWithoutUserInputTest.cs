@@ -55,12 +55,32 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         }
 
         [TestMethod]
-        public void CreateLocationWithIncompleteDataFailed()
+        public void NumberOfAlerts()
         {
             Assert.IsTrue(_formAlerts.Count == 4);
+        }
+
+        [TestMethod]
+        public void CompanyMissing()
+        {
             Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!"));
+        }
+
+        [TestMethod]
+        public void StreetAndNumberMissing()
+        {
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+        }
+
+        [TestMethod]
+        public void ZipMissing()
+        {
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+        }
+
+        [TestMethod]
+        public void CityMissing()
+        {
             Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
         }
     }

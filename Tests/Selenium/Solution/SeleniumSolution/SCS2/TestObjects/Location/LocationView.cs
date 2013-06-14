@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 {
-    public class LocationView : WebObject, ILocationView
+    public class LocationView : WebObject, ILocation
     {
         public LocationView(IWebDriverAdapter driver) : base(driver)
         {

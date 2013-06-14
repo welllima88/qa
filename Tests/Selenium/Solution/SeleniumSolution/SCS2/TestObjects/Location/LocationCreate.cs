@@ -92,7 +92,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("input.button[value='Speichern']")); }
+            get { return Driver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region ILocation Members

@@ -419,8 +419,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationEdit.Fax = "";
             _locationEdit.Web = "";
 
-            _locationEdit.Language = "Englisch [en]";
-            _locationEdit.Country = "Schweiz [CH]";
+            _locationEdit.Language = "en";
+            _locationEdit.Country = "CH";
 
             _locationCreate.SaveButton.Click();
 
@@ -446,8 +446,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             Assert.AreEqual("", _locationView.Po);
             Assert.AreEqual("", _locationView.AdressAddition);
             Assert.AreEqual("Kreuzlingen", _locationView.City);
-            Assert.AreEqual("Englisch [en]", _locationView.Language);
-            Assert.AreEqual("Schweiz [CH]", _locationView.Country);
+            StringAssert.Contains(_locationView.Language, "[en]");
+            StringAssert.Contains(_locationView.Country, "[CH]");
             Assert.AreEqual("", _locationView.Email);
             Assert.AreEqual("", _locationView.Telephone);
             Assert.AreEqual("", _locationView.Mobile);
