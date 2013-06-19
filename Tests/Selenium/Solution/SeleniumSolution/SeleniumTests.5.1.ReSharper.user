@@ -8,68 +8,67 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/f:TerminalData.cs" caret="148" fromTop="4" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Customer/f:CustomerCreate.cs" caret="359" fromTop="11" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:TestObjects/f:WebObject.cs" caret="646" fromTop="5" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:TestObjects/f:IWebObject.cs" caret="215" fromTop="8" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:SuggestorWebElementAdapter.cs" caret="1965" fromTop="12" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:NotCheckableElementException.cs" caret="89" fromTop="4" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:NotSelectableElementException.cs" caret="0" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:CustomerEditTest.cs" caret="0" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Contact/f:ContactCreateTest.cs" caret="472" fromTop="11" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:CetrelCustomerCreateTest.cs" caret="369" fromTop="8" />
-      <File id="3202B79E-97DD-449C-9833-C584DE26EFB4/f:app.config" caret="0" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:MultipleCustomerCreateTest.cs" caret="1974" fromTop="66" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:app.config" caret="578" fromTop="10" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:WebElementAdapter.cs" caret="931" fromTop="26" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:WebDriverAdapter.cs" caret="445" fromTop="7" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Common/f:RecentMassmutations.cs" caret="1207" fromTop="20" />
-      <File id="3202B79E-97DD-449C-9833-C584DE26EFB4/f:CustomerCreateIntegrationTest.cs" caret="1036" fromTop="12" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:Login/d:LoginMethod/f:SecurIdLogin.cs" caret="2793" fromTop="14" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:Login/d:LoginMethod/f:CertificateLogin.cs" caret="1415" fromTop="12" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:Login/d:LoginMethod/f:UACLogin.cs" caret="712" fromTop="19" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Login/f:LoginTest.cs" caret="1448" fromTop="15" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:General Checks/f:LobbyTest.cs" caret="3083" fromTop="24" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:CustomerCreateTest.cs" caret="18401" fromTop="8" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/f:ScsPlatinTestDirector.cs" caret="703" fromTop="11" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:TestDirector.cs" caret="4473" fromTop="18" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="564" fromTop="15" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="647" fromTop="20" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Contact/f:ContactView.cs" caret="948" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Contact/f:ContactEdit.cs" caret="545" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Contact/f:ContactCreate.cs" caret="386" fromTop="13" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Administration/d:SIMCard/f:SimCardViewTest.cs" caret="600" fromTop="10" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Administration/d:SIMCard/f:SimCardCreateTest.cs" caret="1251" fromTop="30" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/f:Smoke Test.orderedtest" caret="372" fromTop="2" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/d:Create/f:CustomerCreateGuiTest.cs" caret="1306" fromTop="5" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:CustomerTestForSuggestors.cs" caret="669" fromTop="16" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Administration/d:SIMCard/f:SimCardEditTest.cs" caret="1506" fromTop="35" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/d:Create/f:CustomerCreateWithSBSExportTest.cs" caret="1941" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Contact/f:ContactCreateTest.cs" caret="1918" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/f:LocationEditTest.cs" caret="1938" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Contact/f:ContactEditTest.cs" caret="1945" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/f:ScsPlatinTestDirector.cs" caret="370" fromTop="10" />
+      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:WebDriverAdapter.cs" caret="651" fromTop="17" />
+      <File id="6D095BBA-2ED9-4E34-9F85-A99D43A94FFB/d:Tests/f:SanityCheck.cs" caret="2108" fromTop="21" />
+      <File id="6D095BBA-2ED9-4E34-9F85-A99D43A94FFB/f:ScsClassicTestDirector.cs" caret="921" fromTop="26" />
+      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/f:TestDirector.cs" caret="756" fromTop="21" />
+      <File id="6D095BBA-2ED9-4E34-9F85-A99D43A94FFB/d:Support/f:AddScs2ServiceToUsers.cs" caret="1086" fromTop="12" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/d:Edit/f:CustomerEditTest.cs" caret="2151" fromTop="0" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/f:MultipleCustomerCreateTest.cs" caret="1033" fromTop="3" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Lobby/f:ApplicationNewsTest.cs" caret="1246" fromTop="15" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Customer/d:Create/f:CustomerCreateWithMissingDataTest.cs" caret="0" fromTop="0" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithMissingTest.cs" caret="4557" fromTop="94" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithInvalidDataTest.cs" caret="1692" fromTop="0" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithoutUserInputTest.cs" caret="1370" fromTop="0" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithMinimalInputAndSBSExportAndSave.cs" caret="1300" fromTop="0" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithMinimalInputAndSave.cs" caret="2071" fromTop="25" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="2297" fromTop="53" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Definitions/f:ILocation.cs" caret="770" fromTop="25" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="1208" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="469" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:Login/d:LoginMethod/f:UACLogin.cs" caret="1257" fromTop="7" />
-      <File id="D82EFC2F-3E2D-4892-9D5D-327139693BB4/d:Login/d:LoginMethod/f:UACLogin.cs" caret="311" fromTop="8" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="3" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="5" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="12" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="10" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="23" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="21" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="15" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1462" fromTop="14" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="836" fromTop="18" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1184" fromTop="28" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="890" fromTop="15" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1121" fromTop="14" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="1378" fromTop="21" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="184" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="21" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="24" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Terminal/d:EventLog/f:TerminalEventLog.cs" caret="295" fromTop="8" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="166" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="21" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="11" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="28" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="12" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="17" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1915" fromTop="23" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="0" fromTop="0" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1465" fromTop="17" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1891" fromTop="21" />
-      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Terminal/d:EventLog/f:BasicEventLogTest.cs" caret="1684" fromTop="14" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5066" fromTop="43" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5218" fromTop="40" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5369" fromTop="46" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5516" fromTop="43" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5677" fromTop="43" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5828" fromTop="43" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="5973" fromTop="40" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="6115" fromTop="20" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="488" fromTop="14" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="851" fromTop="22" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateAndSave.cs" caret="957" fromTop="23" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:Tests/d:Location/d:Create/f:LocationCreateWithMinimalInputAndSave.cs" caret="2107" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3852" fromTop="7" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="4745" fromTop="162" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="3958" fromTop="15" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="4097" fromTop="20" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="4224" fromTop="25" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Definitions/f:ILocation.cs" caret="770" fromTop="25" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="3821" fromTop="24" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3852" fromTop="29" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3852" fromTop="36" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3852" fromTop="36" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3852" fromTop="143" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3725" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="3667" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="3837" fromTop="29" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="4253" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="3821" fromTop="49" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationEdit.cs" caret="1208" fromTop="26" />
+      <File id="4E9CD23D-6DAC-46B5-A8B2-9966647CB131/d:TestObjects/d:Location/f:LocationCreate.cs" caret="558" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -87,18 +86,18 @@
     <ItemStatistics item="Default">
       <Item value="FirefoxBinary`0" priority="1" />
       <Item value="firefoxBinary" priority="1" />
-      <Item value="new" priority="16" />
+      <Item value="new" priority="25" />
       <Item value="FirefoxBinary" priority="0" />
       <Item value="email" priority="0" />
       <Item value="customerName" priority="0" />
-      <Item value="public" priority="17" />
+      <Item value="public" priority="31" />
       <Item value="class" priority="1" />
       <Item value="override" priority="0" />
-      <Item value="void" priority="5" />
+      <Item value="void" priority="13" />
       <Item value="static" priority="3" />
       <Item value="CustomerMenu" priority="1" />
-      <Item value="_driver" priority="8" />
-      <Item value="value" priority="1" />
+      <Item value="_driver" priority="13" />
+      <Item value="value" priority="4" />
       <Item value="throw" priority="4" />
       <Item value="NotSupportedException" priority="1" />
       <Item value="loginCheck" priority="12" />
@@ -108,29 +107,29 @@
       <Item value="WebServiceHelper`0" priority="1" />
       <Item value="loginPage" priority="3" />
       <Item value="logoutPage" priority="3" />
-      <Item value="abstract" priority="1" />
+      <Item value="abstract" priority="2" />
       <Item value="ILogoutPage`0" priority="2" />
       <Item value="ILogoutCheck`0" priority="9" />
       <Item value="ILoginCheck`0" priority="4" />
       <Item value="IWebDriver`0" priority="7" />
-      <Item value="driver" priority="53" />
+      <Item value="driver" priority="60" />
       <Item value="NotImplementedException" priority="2" />
       <Item value="UacLogin`0" priority="4" />
-      <Item value="interface" priority="0" />
-      <Item value="_lobby" priority="0" />
+      <Item value="interface" priority="1" />
+      <Item value="_lobby" priority="1" />
       <Item value="_userName" priority="0" />
       <Item value="_password" priority="0" />
       <Item value="Authentication`0" priority="1" />
       <Item value="as" priority="0" />
       <Item value="Authentication" priority="0" />
       <Item value="authentication" priority="0" />
-      <Item value="private" priority="5" />
-      <Item value="WebDriver" priority="4" />
+      <Item value="private" priority="7" />
+      <Item value="WebDriver" priority="7" />
       <Item value="baseUrl" priority="0" />
       <Item value="BaseUrl" priority="0" />
       <Item value="ilLogoutCheck" priority="0" />
-      <Item value="ILogin`0" priority="1" />
-      <Item value="login" priority="6" />
+      <Item value="ILogin`0" priority="2" />
+      <Item value="login" priority="10" />
       <Item value="ILogout`0" priority="1" />
       <Item value="logout" priority="1" />
       <Item value="CertificateLogin`0" priority="2" />
@@ -140,43 +139,43 @@
       <Item value="_logout" priority="0" />
       <Item value="_logoutCheck" priority="0" />
       <Item value="_wes" priority="1" />
-      <Item value="return" priority="5" />
-      <Item value="IWebDriverAdapter`0" priority="3" />
+      <Item value="return" priority="17" />
+      <Item value="IWebDriverAdapter`0" priority="6" />
       <Item value="webDriverAdapter" priority="5" />
       <Item value="_webDriver" priority="4" />
-      <Item value="FireFoxWebDriverAdapter`0" priority="0" />
+      <Item value="FireFoxWebDriverAdapter`0" priority="2" />
       <Item value="InternetExplorerDriver`0" priority="0" />
-      <Item value="_tb" priority="2" />
-      <Item value="auth" priority="1" />
+      <Item value="_tb" priority="4" />
+      <Item value="auth" priority="3" />
       <Item value="app" priority="1" />
       <Item value="_headMenu" priority="1" />
       <Item value="ICustomerView`0" priority="0" />
       <Item value="CustomerCreate`0" priority="0" />
       <Item value="List&lt;string&gt;" priority="0" />
       <Item value="WebDriverAdapter" priority="3" />
-      <Item value="by" priority="0" />
-      <Item value="By`0" priority="1" />
+      <Item value="by" priority="4" />
+      <Item value="By`0" priority="2" />
       <Item value="companyName" priority="0" />
       <Item value="ThreadStaticAttribute`0" priority="2" />
       <Item value="_customerMenu" priority="0" />
-      <Item value="_customerCreate" priority="0" />
-      <Item value="Ignore" priority="0" />
+      <Item value="_customerCreate" priority="2" />
+      <Item value="Ignore" priority="5" />
       <Item value="_locationMenu" priority="0" />
-      <Item value="StringAssert`0" priority="0" />
-      <Item value="Regex" priority="0" />
+      <Item value="StringAssert`0" priority="3" />
+      <Item value="Regex" priority="2" />
       <Item value="var" priority="1" />
-      <Item value="SCS" priority="3" />
+      <Item value="SCS" priority="4" />
       <Item value="QA" priority="2" />
       <Item value="Selenium" priority="1" />
       <Item value="Tests" priority="4" />
       <Item value="TestObjects" priority="1" />
       <Item value="Scs2TestDirector`0" priority="3" />
-      <Item value="string" priority="0" />
-      <Item value="base" priority="16" />
-      <Item value="browser" priority="0" />
-      <Item value="TestDirector`0" priority="0" />
+      <Item value="string" priority="12" />
+      <Item value="base" priority="20" />
+      <Item value="browser" priority="3" />
+      <Item value="TestDirector`0" priority="2" />
       <Item value="virtual" priority="1" />
-      <Item value="NotSupportedException`0" priority="0" />
+      <Item value="NotSupportedException`0" priority="4" />
       <Item value="NotImplementedException`0" priority="0" />
       <Item value="p" priority="0" />
       <Item value="scs" priority="0" />
@@ -192,22 +191,22 @@
       <Item value="File`0" priority="0" />
       <Item value="Lobby`0" priority="0" />
       <Item value="loginTest" priority="0" />
-      <Item value="null" priority="2" />
-      <Item value="IWebElement`0" priority="0" />
+      <Item value="null" priority="4" />
+      <Item value="IWebElement`0" priority="3" />
       <Item value="_testDirector" priority="1" />
       <Item value="Support" priority="0" />
       <Item value="UI" priority="0" />
-      <Item value="WebDriverAdapter`0" priority="1" />
+      <Item value="WebDriverAdapter`0" priority="2" />
       <Item value="set" priority="3" />
-      <Item value="WebObject`0" priority="6" />
+      <Item value="WebObject`0" priority="7" />
       <Item value="sealed" priority="1" />
-      <Item value="get" priority="1" />
-      <Item value="protected" priority="0" />
+      <Item value="get" priority="4" />
+      <Item value="protected" priority="3" />
       <Item value="AbstractWebObject`0" priority="0" />
       <Item value="AbandonedMutexException" priority="0" />
-      <Item value="IWebObject`0" priority="0" />
-      <Item value="Customer" priority="2" />
-      <Item value="Driver" priority="1" />
+      <Item value="IWebObject`0" priority="2" />
+      <Item value="Customer" priority="30" />
+      <Item value="Driver" priority="6" />
       <Item value="SCSClassics" priority="3" />
       <Item value="Terminal" priority="0" />
       <Item value="TerminalConfigDetailsCreate`0" priority="0" />
@@ -223,34 +222,121 @@
       <Item value="EventLog" priority="1" />
       <Item value="_eventLog" priority="0" />
       <Item value="_terminalEventLog" priority="0" />
-      <Item value="Assert`0" priority="0" />
-      <Item value="CollectionAssert`0" priority="0" />
+      <Item value="Assert`0" priority="9" />
+      <Item value="CollectionAssert`0" priority="2" />
+      <Item value="Location`0" priority="17" />
+      <Item value="_menusTests" priority="0" />
+      <Item value="_contactMenu" priority="0" />
+      <Item value="ContactMenu" priority="0" />
+      <Item value="MenuObject`0" priority="0" />
+      <Item value="_simCardView" priority="0" />
+      <Item value="Newtonsoft" priority="0" />
+      <Item value="IWebElementAdapter`0" priority="3" />
+      <Item value="Suffix" priority="0" />
+      <Item value="Dashboard`0" priority="0" />
+      <Item value="TerminalDashboard`0" priority="0" />
+      <Item value="_terminalDashboard" priority="0" />
+      <Item value="FixInfo`0" priority="0" />
+      <Item value="_terminFixInfo" priority="1" />
+      <Item value="ServiceCenter" priority="1" />
+      <Item value="Pms" priority="0" />
+      <Item value="Pms`0" priority="0" />
+      <Item value="Acquirers" priority="0" />
+      <Item value="List&lt;Acquirer&gt;" priority="0" />
+      <Item value="Brand" priority="0" />
+      <Item value="Brands`0" priority="0" />
+      <Item value="List&lt;Brand&gt;" priority="0" />
+      <Item value="Component`0" priority="0" />
+      <Item value="ICollection" priority="0" />
+      <Item value="Composite`0" priority="0" />
+      <Item value="Tree" priority="0" />
+      <Item value="IComponent`0" priority="3" />
+      <Item value="_composite" priority="1" />
+      <Item value="webComponent" priority="1" />
+      <Item value="IList" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="ComponentModel.Design" priority="0" />
+      <Item value="BrowserSetup`0" priority="0" />
+      <Item value="InternetExplorerWebDriverAdapter`0" priority="0" />
+      <Item value="DriverRes`0" priority="6" />
+      <Item value="Scs2Res`0" priority="0" />
+      <Item value="if" priority="4" />
+      <Item value="else" priority="3" />
+      <Item value="_environment" priority="0" />
+      <Item value="base_Adress" priority="1" />
+      <Item value="_browser" priority="0" />
+      <Item value="break" priority="4" />
+      <Item value="baseAdress" priority="0" />
+      <Item value="true" priority="2" />
+      <Item value="false" priority="1" />
+      <Item value="this" priority="1" />
+      <Item value="_formAlerts" priority="1" />
+      <Item value="_formAlert" priority="1" />
+      <Item value="_terminalTraceLogConfigEdit" priority="0" />
+      <Item value="_terminalTraceLogConfigView" priority="0" />
+      <Item value="FormAlert" priority="0" />
+      <Item value="ResetCustomerData`0" priority="0" />
+      <Item value="CustomerCreateAndCancelTest`0" priority="0" />
+      <Item value="customerCreateAndCancelTest" priority="0" />
+      <Item value="TestMethod" priority="1" />
+      <Item value="_customerView" priority="0" />
+      <Item value="_agency" priority="0" />
+      <Item value="_sbsBillingTenant" priority="1" />
+      <Item value="_supplier" priority="0" />
+      <Item value="_sbsCurrency" priority="0" />
+      <Item value="_companyName" priority="0" />
+      <Item value="_streetName" priority="0" />
+      <Item value="_zip" priority="0" />
+      <Item value="_city" priority="0" />
+      <Item value="_language" priority="0" />
+      <Item value="_customerSegment" priority="0" />
+      <Item value="_segment" priority="0" />
+      <Item value="TestCategory" priority="1" />
+      <Item value="bool" priority="0" />
+      <Item value="GCCollectionMode`0" priority="0" />
+      <Item value="Article" priority="0" />
+      <Item value="_articleEdit" priority="2" />
+      <Item value="ArticleEdit`0" priority="0" />
+      <Item value="ReadOnlyCollection&lt;IWebElement&gt;" priority="0" />
+      <Item value="sups" priority="0" />
+      <Item value="_recentElements" priority="0" />
+      <Item value="LobbyView`0" priority="2" />
+      <Item value="PlainProfile" priority="0" />
+      <Item value="_locationCreate" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Extension.WebDriverAdapter">
       <Item value="FindAdaptedElement`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Extension.IWebElementAdapter">
-      <Item value="TypeText`0" priority="2" />
-      <Item value="Selector`0" priority="4" />
+      <Item value="TypeText`0" priority="7" />
+      <Item value="Selector`0" priority="7" />
+      <Item value="Text" priority="16" />
+      <Item value="Click`0" priority="0" />
+      <Item value="SetCheckbox`0" priority="1" />
+      <Item value="GetAttribute`0" priority="0" />
+      <Item value="Selected" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OpenQA.Selenium.Support.UI.SelectElement">
       <Item value="SelectByText`0" priority="1" />
       <Item value="Options" priority="0" />
+      <Item value="SelectByValue`0" priority="0" />
+      <Item value="SelectedOption" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Login.ILoginPage">
       <Item value="Login`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Lobby">
       <Item value="MetaNavBar" priority="1" />
-      <Item value="Menu" priority="0" />
+      <Item value="Menu" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.MetaNavBar">
       <Item value="Logout" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OpenQA.Selenium.IWebElement">
-      <Item value="Click`0" priority="2" />
-      <Item value="Displayed" priority="0" />
+      <Item value="Click`0" priority="3" />
+      <Item value="Displayed" priority="3" />
       <Item value="Enabled" priority="1" />
+      <Item value="Text" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Login.ILoginCheck">
       <Item value="CheckLogInSucess`0" priority="2" />
@@ -266,14 +352,20 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Extension.IWebDriverAdapter">
       <Item value="Url" priority="0" />
-      <Item value="FindAdaptedElement`0" priority="1" />
+      <Item value="FindAdaptedElement`0" priority="7" />
       <Item value="FindElement`0" priority="0" />
+      <Item value="FindSuggesterElement`0" priority="1" />
+      <Item value="WaitForElementPresent`0" priority="0" />
+      <Item value="Navigate`0" priority="0" />
+      <Item value="FindAdaptedElements`0" priority="1" />
+      <Item value="WebElementsAsStringList`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Login.Authentication">
       <Item value="DoLogout`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu.LobbyMenu">
       <Item value="Lobby" priority="0" />
+      <Item value="SimCardMenu" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Login.ILogin">
       <Item value="Login`0" priority="0" />
@@ -297,17 +389,21 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:OpenQA.Selenium.INavigation">
       <Item value="Back`0" priority="0" />
-      <Item value="Refresh`0" priority="0" />
+      <Item value="Refresh`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@OpenQA.Selenium.By">
-      <Item value="CssSelector`0" priority="1" />
+      <Item value="CssSelector`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer.CustomerCreate">
       <Item value="SbsBillingTenant" priority="0" />
       <Item value="SapNumber" priority="0" />
+      <Item value="CategoryCode" priority="0" />
+      <Item value="Supplier" priority="0" />
+      <Item value="Segment" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu.CustomerMenu">
       <Item value="Customer" priority="0" />
+      <Item value="CustomerDeactivate" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu.LocationMenu">
       <Item value="Location" priority="0" />
@@ -316,11 +412,12 @@
       <Item value="Sleep`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert">
-      <Item value="Matches`0" priority="0" />
+      <Item value="Matches`0" priority="2" />
+      <Item value="Contains`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Extension.TestDirector">
       <Item value="BaseUrl" priority="1" />
-      <Item value="WebDriver" priority="1" />
+      <Item value="WebDriver" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.Scs2TestDirector">
       <Item value="WebDriver" priority="0" />
@@ -347,13 +444,178 @@
       <Item value="Count" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
-      <Item value="IsTrue`0" priority="0" />
+      <Item value="IsTrue`0" priority="6" />
+      <Item value="IsNotNull`0" priority="1" />
+      <Item value="AreEqual`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert">
-      <Item value="Contains`0" priority="0" />
+      <Item value="Contains`0" priority="1" />
+      <Item value="AllItemsAreNotNull`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
       <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location.Location">
+      <Item value="CompanyName" priority="0" />
+      <Item value="GUID" priority="0" />
+      <Item value="StreetName" priority="0" />
+      <Item value="Zip" priority="0" />
+      <Item value="City" priority="0" />
+      <Item value="Language" priority="0" />
+      <Item value="Country" priority="0" />
+      <Item value="SapNumber" priority="0" />
+      <Item value="Po" priority="0" />
+      <Item value="AdressAddition" priority="0" />
+      <Item value="Email" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="Telephone" priority="0" />
+      <Item value="Mobile" priority="0" />
+      <Item value="Fax" priority="0" />
+      <Item value="Region" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer.Customer">
+      <Item value="CompanyName" priority="0" />
+      <Item value="CustomerName" priority="0" />
+      <Item value="Supplier" priority="0" />
+      <Item value="SbsBillingTenant" priority="0" />
+      <Item value="StreetName" priority="0" />
+      <Item value="Zip" priority="0" />
+      <Item value="City" priority="0" />
+      <Item value="SbsCurrency" priority="0" />
+      <Item value="Agency" priority="0" />
+      <Item value="Language" priority="0" />
+      <Item value="Country" priority="0" />
+      <Item value="Po" priority="0" />
+      <Item value="AdressAddition" priority="0" />
+      <Item value="SapNumber" priority="0" />
+      <Item value="Telephone" priority="0" />
+      <Item value="Mobile" priority="0" />
+      <Item value="Fax" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="Region" priority="0" />
+      <Item value="CategoryCode" priority="0" />
+      <Item value="SupportContract" priority="0" />
+      <Item value="CashIntegrator" priority="0" />
+      <Item value="CustomerSegment" priority="0" />
+      <Item value="WebView" priority="0" />
+      <Item value="LanguageView" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu.ContactMenu">
+      <Item value="Contact" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu.SimCardMenu">
+      <Item value="SimCardManagement" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard.SimCardView">
+      <Item value="SimCardElement" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard.SimCardElementView">
+      <Item value="MobileNumber" priority="0" />
+      <Item value="SimCardNumber" priority="0" />
+      <Item value="Pin" priority="0" />
+      <Item value="Puk" priority="0" />
+      <Item value="TerminalId" priority="0" />
+      <Item value="Status" priority="0" />
+      <Item value="Region" priority="0" />
+      <Item value="Usage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.FixInfo">
+      <Item value="Terminal" priority="0" />
+      <Item value="Location" priority="0" />
+      <Item value="Customer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.TerminalInfo">
+      <Item value="Article" priority="0" />
+      <Item value="ExternTerminalId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.LocationInfo">
+      <Item value="Adress" priority="1" />
+      <Item value="Ep2Id" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.CustomerInfo">
+      <Item value="Id" priority="0" />
+      <Item value="Info" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Add`0" priority="0" />
+      <Item value="Remove`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Extension.Properties.Driver">
+      <Item value="FirefoxProfile_Certificate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Extension.ISuggesterWebElement">
+      <Item value="Suggestor`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.ScsPlatinTestDirector">
+      <Item value="browser" priority="0" />
+      <Item value="auth" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties.Scs2Res">
+      <Item value="WES_QA_L" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Extension.Properties.DriverRes">
+      <Item value="Firefox" priority="1" />
+      <Item value="DEV" priority="0" />
+      <Item value="InternetExplorer" priority="0" />
+      <Item value="FirefoxProfile" priority="0" />
+      <Item value="FirefoxProfile_Certificate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Contains`0" priority="0" />
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.FormAlert">
+      <Item value="FormAlertList" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.TraceLogConfig.TerminalTraceLogConfig">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.TraceLogConfig.TerminalTraceLogConfigEdit">
+      <Item value="ActivatedUntil" priority="0" />
+      <Item value="Parameter" priority="0" />
+      <Item value="Medium" priority="0" />
+      <Item value="DestinationAddress" priority="0" />
+      <Item value="DestinationPort" priority="0" />
+      <Item value="TelephoneIsdn" priority="0" />
+      <Item value="TelephonePstn" priority="0" />
+      <Item value="DestinationUrl" priority="0" />
+      <Item value="DestinationUrlPort" priority="0" />
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer.CustomerView">
+      <Item value="SbsBillingTenant" priority="0" />
+      <Item value="Segment" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article.ArticleEdit">
+      <Item value="Name" priority="0" />
+      <Item value="NetType" priority="1" />
+      <Item value="SbsArticleNumber" priority="0" />
+      <Item value="Status" priority="0" />
+      <Item value="Supplier" priority="0" />
+      <Item value="TerminalType" priority="0" />
+      <Item value="CashIntegrated" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SIX.SCS.QA.Selenium.Extension.TestRegExpPatterns">
+      <Item value="SbsAdressNoOpt" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location.LocationCreate">
+      <Item value="SapNumber" priority="0" />
+      <Item value="Language" priority="0" />
+      <Item value="Country" priority="0" />
+      <Item value="Zip" priority="0" />
+      <Item value="City" priority="0" />
+      <Item value="AdressAddition" priority="0" />
+      <Item value="Po" priority="0" />
+      <Item value="Region" priority="0" />
+      <Item value="Telephone" priority="0" />
+      <Item value="Mobile" priority="0" />
+      <Item value="Fax" priority="0" />
+      <Item value="Email" priority="0" />
+      <Item value="Web" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

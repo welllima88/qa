@@ -3,6 +3,7 @@ using SIX.SCS.QA.Selenium.Extension.Login;
 using SIX.SCS.QA.Selenium.Extension.Login.LoginMethod;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
 {
@@ -13,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
             ILogin login;
             string baseAdress;
 
-            FireFoxSetUpWithCertifacte(out login, out baseAdress);
+            FireFoxSetUpWithSecurId(out login, out baseAdress);
 
             var lobby = new Scs(WebDriver);
             StartUpTest(baseAdress, login, lobby);
@@ -26,6 +27,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
             FireFoxWebDriverAdapter(CertifacteProfile);
             login = new CertificateLogin(ScsRes.mandant_qa_K, WebDriver);
             baseAdress = ScsRes.WES_QA_K;
+        }
+
+        private void FireFoxSetUpWithSecurId(out ILogin login, out string baseAdress)
+        {
+            FireFoxWebDriverAdapter(PlainProfile);
+            login = new NoLogin();
+            baseAdress = Scs2Res.WES_Production;
         }
     }
 }

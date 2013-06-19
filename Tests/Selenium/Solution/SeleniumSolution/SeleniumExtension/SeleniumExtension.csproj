@@ -69,6 +69,7 @@
     <Compile Include="Login\ILogout.cs" />
     <Compile Include="Login\ILogoutCheck.cs" />
     <Compile Include="Login\LoginMethod\CertificateLogin.cs" />
+    <Compile Include="Login\LoginMethod\NoLogin.cs" />
     <Compile Include="Login\LoginMethod\SecurIdLogin.cs" />
     <Compile Include="Login\LoginMethod\UACLogin.cs" />
     <Compile Include="Login\LoginPages\UacLoginPage.cs" />
