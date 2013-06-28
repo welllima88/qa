@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2c.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2.
         /// </summary>
         public static string WES_Production {
             get {
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2c-qa-k.
+        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scs2c-qa-k.
         /// </summary>
         public static string WES_QA_K {
             get {
