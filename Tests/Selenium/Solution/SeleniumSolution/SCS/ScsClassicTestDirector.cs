@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
             ILogin login;
             string baseAdress;
 
-            FireFoxSetUpWithSecurId(out login, out baseAdress);
+            FireFoxSetUpWithCertifacte(out login, out baseAdress);
 
             var lobby = new Scs(WebDriver);
             StartUpTest(baseAdress, login, lobby);

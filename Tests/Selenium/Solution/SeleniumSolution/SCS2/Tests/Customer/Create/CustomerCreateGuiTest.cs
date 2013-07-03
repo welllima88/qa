@@ -62,12 +62,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerMenu.CustomerCreate.Click();
             Assert.AreEqual("Neuer Kunde", _lobby.Headline.Text);
         }
-
-        [TestMethod]
-        public void CreateCustomerMenu()
-        {
-            _menusTests.LobbyMenu(_lobbyMenu);
-            _customerMenu.CustomerCreate.Click();
-        }
     }
 }

@@ -211,6 +211,7 @@
     <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationNewsTest.cs" />
+    <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\RecentElementsTest.cs" />
     <Compile Include="Tests\Lobby\MetaNavigationBarTest.cs" />
     <Compile Include="Tests\Lobby\NavigationBarTest.cs" />

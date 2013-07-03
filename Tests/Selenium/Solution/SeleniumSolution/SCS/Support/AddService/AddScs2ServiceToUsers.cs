@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
         {
             _tb = new ScsClassicTestDirector();
             _tb.DefaultTestSetup();
-            _driver = _tb.WebDriver;            
+            _driver = _tb.WebDriver;
         }
 
         [TestInitialize]
@@ -53,15 +53,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-            "C:\\Users\\siegmund\\Desktop\\ProdSystemUsers.csv",
-            "ProdSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
+            "C:\\Users\\siegmund\\Desktop\\KSystemUsers.csv",
+            "KSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
         public void AddScs2ServiceToUsers()
         {
             string userId = Convert.ToString(TestContext.DataRow[0]);
 
             OpenUserPage(userId);
-
-            _driver.SwitchTo().Frame("main");
 
             CheckUser(userId);
             CheckMandant();
@@ -119,8 +117,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
             string userId = Convert.ToString(TestContext.DataRow[0]);
             OpenUserPage(userId);
 
-            _driver.SwitchTo().Frame("main");
-
             CheckUser(userId);
             CheckMandant();
             CheckNewServiceIsSet();
@@ -130,6 +126,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
         {
             _driver.Navigate().GoToUrl(_tb.BaseUrl +
                                        "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
+            _driver.SwitchTo().Frame("main");
         }
     }
 }
