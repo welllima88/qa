@@ -49,30 +49,35 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Lobby()
         {
             Assert.IsTrue(_lobbyView.NavigationBar.Lobby.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Administration()
         {
             Assert.IsTrue(_lobbyView.NavigationBar.Administration.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Reporting()
         {
             Assert.IsTrue(_lobbyView.NavigationBar.Reporting.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MoreMenu()
         {
             Assert.IsTrue(_lobbyView.NavigationBar.MoreMenu.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Help()
         {
             _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
@@ -81,6 +86,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void SystemInfo()
         {
             _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu

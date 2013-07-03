@@ -50,60 +50,70 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Lobby()
         {
             Assert.IsTrue(_lobbyMenu.Lobby.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void NotAssignedTickets()
         {
             Assert.IsTrue(_lobbyMenu.Ticket.NotAssigned.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MyGroupTickets()
         {
             Assert.IsTrue(_lobbyMenu.Ticket.MyGroup.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MyTickets()
         {
             Assert.IsTrue(_lobbyMenu.Ticket.My.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationBusinessTemplateMigrate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.BusinessTemplateMigrate.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationContractCreate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.ContractCreate.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationTerminalCreate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.TerminalCreate.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationLocationCreate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.LocationCreate.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationCustomerCreate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.CustomerCreate.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void CustomerCreate()
         {
             Assert.IsTrue(_lobbyMenu.Customer.CustomerCreate.Displayed);

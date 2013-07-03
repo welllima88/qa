@@ -49,24 +49,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void User()
         {
             Assert.IsTrue(_lobbyView.MetaNavBar.User.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Logout()
         {
             Assert.IsTrue(_lobbyView.MetaNavBar.Logout.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Languages()
         {
             Assert.IsTrue(_lobbyView.MetaNavBar.Languages.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void LanguageGerman()
         {
             _lobbyView.MetaNavBar.Languages.Click();
@@ -76,6 +80,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void LanguageEnglish()
         {
             _lobbyView.MetaNavBar.Languages.Click();

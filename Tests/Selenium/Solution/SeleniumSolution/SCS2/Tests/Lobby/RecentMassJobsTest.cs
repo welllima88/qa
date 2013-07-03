@@ -49,6 +49,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void RecentMassmutationsContainer()
         {
             Assert.IsTrue(_lobbyView.RecentMassmutations.MostRecent.Displayed);

@@ -49,6 +49,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MostRecentContainer()
         {
             Assert.IsTrue(_lobbyView.RecentElements.MostRecent.Displayed);

@@ -49,12 +49,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void SearchField()
         {
             Assert.IsTrue(_lobbyView.QuickSearch.SearchField.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void SearchButton()
         {
             Assert.IsTrue(_lobbyView.QuickSearch.SearchButton.Displayed);

@@ -47,13 +47,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         {
             _tb.ShutDownTest();
         }
-
+        [TestCategory("LobbyCheck")]
         [TestMethod]
         public void ApplicationName()
         {
             Assert.IsTrue(_lobbyView.ApplicationInfo.ApplicationName.Displayed);
         }
-
+        [TestCategory("LobbyCheck")]
         [TestMethod]
         public void Environment()
         {

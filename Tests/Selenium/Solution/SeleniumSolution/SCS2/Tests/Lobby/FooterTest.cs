@@ -49,30 +49,35 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Copyright()
         {
             Assert.IsTrue(_lobbyView.Footer.Copyright.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Disclaimer()
         {
             Assert.IsTrue(_lobbyView.Footer.Disclaimer.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void Feedback()
         {
             Assert.IsTrue(_lobbyView.Footer.Feedback.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void PrintPage()
         {
             Assert.IsTrue(_lobbyView.Footer.PrintPage.Displayed);
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void ScrollUp()
         {
             Assert.IsTrue(_lobbyView.Footer.ScrollUp.Displayed);

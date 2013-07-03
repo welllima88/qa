@@ -8,6 +8,7 @@
  * http://openbook.galileocomputing.de/csharp/kap31.htm#t25
  * 
  */
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -15,7 +16,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
     /// <summary>
-    /// be careful with menu expander because they prevent some actions and need special handling 
+    ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestClass]
     public class ApplicationNewsTest
@@ -49,6 +50,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void ApplicationNews()
         {
             Assert.IsTrue(_lobbyView.LobbyNews.NewsTitle.Displayed);
