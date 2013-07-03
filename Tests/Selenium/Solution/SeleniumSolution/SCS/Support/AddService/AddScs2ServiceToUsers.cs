@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
         {
             _tb = new ScsClassicTestDirector();
             _tb.DefaultTestSetup();
-            _driver = _tb.WebDriver;
+            _driver = _tb.WebDriver;            
         }
 
         [TestInitialize]
