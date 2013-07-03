@@ -136,4 +136,7 @@
   <data name="WES_QA_L" xml:space="preserve">
     <value>https://gateint.telekurs.ch/scsc-qa-l</value>
   </data>
+  <data name="mandant_prod" xml:space="preserve">
+    <value>tkcpos</value>
+  </data>
 </root>
