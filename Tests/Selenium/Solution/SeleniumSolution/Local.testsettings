@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestSettings name="Local" id="24cb8083-8405-46f3-a974-d9757312ad02" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<TestSettings name="Selenium" id="24cb8083-8405-46f3-a974-d9757312ad02" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>These are default test settings for a local test run.</Description>
   <Deployment enabled="false" />
+  <NamingScheme baseName="SYR - Selenium Test" useDefault="false" />
   <Execution>
     <Timeouts testTimeout="0" />
     <TestTypeSpecific>
