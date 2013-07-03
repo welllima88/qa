@@ -49,12 +49,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
-        public void CheckLobbyMenu()
-        {
-        }
-
-
-        [TestMethod]
         public void MostRecentContainer()
         {
             Assert.IsTrue(_lobbyView.RecentElements.MostRecent.Displayed);

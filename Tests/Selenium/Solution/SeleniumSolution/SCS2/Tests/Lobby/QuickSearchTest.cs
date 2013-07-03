@@ -49,11 +49,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
-        public void CheckLobbyMenu()
-        {
-        }
-
-        [TestMethod]
         public void SearchField()
         {
             Assert.IsTrue(_lobbyView.QuickSearch.SearchField.Displayed);

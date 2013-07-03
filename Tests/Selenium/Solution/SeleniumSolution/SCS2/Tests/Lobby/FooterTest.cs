@@ -49,11 +49,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         }
 
         [TestMethod]
-        public void CheckLobbyMenu()
-        {
-        }
-
-        [TestMethod]
         public void Copyright()
         {
             Assert.IsTrue(_lobbyView.Footer.Copyright.Displayed);
