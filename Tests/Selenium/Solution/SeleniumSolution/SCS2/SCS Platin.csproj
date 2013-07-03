@@ -252,7 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Tests\Smoke Test.orderedtest">
+    <None Include="Tests\SmokeTest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Tests\Regressiontest.orderedtest">
