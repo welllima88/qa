@@ -67,7 +67,7 @@
       <DependentUpon>ScsRes.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsClassicTestDirector.cs" />
-    <Compile Include="Support\AddScs2ServiceToUsers.cs" />
+    <Compile Include="Support\AddService\AddScs2ServiceToUsers.cs" />
     <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
@@ -82,9 +82,6 @@
     <Compile Include="TestObjects\Menu\TerminalMenu.cs" />
     <Compile Include="TestObjects\Menu\TicketMenu.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
-    <Compile Include="Tests\Customer\CetrelCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\CustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\CustomerEditTest.cs" />
     <Compile Include="Tests\SanityCheck.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,10 +92,12 @@
     <EmbeddedResource Include="Properties\ScsRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
+    <Folder Include="Tests\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SCS2\SCS Platin.csproj">
@@ -109,6 +108,9 @@
       <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
       <Name>SeleniumExtension</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

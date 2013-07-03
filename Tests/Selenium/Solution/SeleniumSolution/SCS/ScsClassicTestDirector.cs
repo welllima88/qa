@@ -31,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
         private void FireFoxSetUpWithSecurId(out ILogin login, out string baseAdress)
         {
             FireFoxWebDriverAdapter(PlainProfile);
-            login = new NoLogin();
+            login = new SecurIdLogin("tksyr", "",ScsRes.mandant_prod,"",WebDriver);
             baseAdress = ScsRes.WES_Production;
         }
     }
