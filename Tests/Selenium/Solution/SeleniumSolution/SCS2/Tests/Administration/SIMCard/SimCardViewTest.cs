@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
         }
 
         [TestMethod]
-        public void CheckLobbyMenu()
+        public void SimCardMenu()
         {
             Assert.IsTrue(_lobby.Menu.SimCard.SimCardManagement.Displayed);
         }
