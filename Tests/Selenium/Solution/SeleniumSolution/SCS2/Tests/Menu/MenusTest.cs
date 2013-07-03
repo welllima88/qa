@@ -176,19 +176,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
             Assert.IsTrue(contactMenu.Contact.Displayed);
             Assert.IsTrue(contactMenu.ContactEdit.Displayed);
         }
-
-        public void LobbyMenu(LobbyMenu lobbyMenu)
-        {
-            Assert.IsTrue(lobbyMenu.Lobby.Displayed);
-            Assert.IsTrue(lobbyMenu.Customer.CustomerCreate.Displayed);
-            Assert.IsTrue(lobbyMenu.MassMutation.CustomerCreate.Displayed);
-            Assert.IsTrue(lobbyMenu.MassMutation.LocationCreate.Displayed);
-            Assert.IsTrue(lobbyMenu.MassMutation.TerminalCreate.Displayed);
-            Assert.IsTrue(lobbyMenu.MassMutation.ContractCreate.Displayed);
-            Assert.IsTrue(lobbyMenu.MassMutation.BusinessTemplateMigrate.Displayed);
-            Assert.IsTrue(lobbyMenu.Ticket.My.Displayed);
-            Assert.IsTrue(lobbyMenu.Ticket.MyGroup.Displayed);
-            Assert.IsTrue(lobbyMenu.Ticket.NotAssigned.Displayed);
-        }
     }
 }
