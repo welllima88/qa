@@ -12,27 +12,12 @@ namespace SIX.SCS.QA.Selenium.Extension
 {
     public class TestDirector
     {
-        private const double TimeOutSeconds = 30;
         protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
         protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
-        private readonly string _auth;
-        private readonly string _environment;
         private ILogin _login;
         private ILoginCheck _loginCheck;
         private ILogout _logout;
         private ILogoutCheck _logoutCheck;
-
-        public TestDirector(string environment, string auth)
-        {
-            _environment = environment;
-            _auth = auth;
-        }
-
-        public TestDirector()
-        {
-            _environment = DriverRes.DEV;
-            _auth = DriverRes.UAC;
-        }
 
         public IWebDriverAdapter WebDriver { get; private set; }
 
@@ -71,8 +56,9 @@ namespace SIX.SCS.QA.Selenium.Extension
         protected void StartUpTest(string baseUrl, ILogin login, ILogout logout, ILoginCheck loginCheck = null,
                                    ILogoutCheck logoutCheck = null)
         {
-            WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(TimeOutSeconds));
-            WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(TimeOutSeconds));
+            WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
+            WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(20));
 
             _login = login;
             _loginCheck = loginCheck;
