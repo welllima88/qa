@@ -178,16 +178,13 @@
     <value>a[href*='/BillingAddress/Edit?CUSTOMERID=']</value>
   </data>
   <data name="LobbyMenu_Lobby" xml:space="preserve">
-    <value>a[href*='Default.aspx']</value>
+    <value>a[href*='/Lobby/']</value>
   </data>
   <data name="LocationMenu_Location" xml:space="preserve">
     <value>a[href*='/Location/?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_TerminalCreate" xml:space="preserve">
     <value>a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']</value>
-  </data>
-  <data name="LocationMenu_InfotextCreate" xml:space="preserve">
-    <value>a[href*='Default.aspx']</value>
   </data>
   <data name="LocationMenu_ContactCreate" xml:space="preserve">
     <value>a[href*='Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=']</value>
@@ -289,15 +286,21 @@
     <value>a[href*='/Terminal/TerminalForms.aspx?TERMINALID=']</value>
   </data>
   <data name="TicketMenu_NotAssigned" xml:space="preserve">
-    <value>a[href*='/TicketList.asp?ListType=notassign']</value>
+    <value>a[href*='/TicketIntegration/UnAssignedTickets/']</value>
   </data>
   <data name="TicketMenu_MyGroup" xml:space="preserve">
-    <value>a[href*='/TicketList.asp?ListType=pending']</value>
+    <value>a[href*='/TicketIntegration/MyGroupTickets/']</value>
   </data>
   <data name="TicketMenu_My" xml:space="preserve">
-    <value>a[href*='/TicketList.asp?ListType=personal']</value>
+    <value>a[href*='/TicketIntegration/MyPersonalTickets/']</value>
   </data>
   <data name="SimCardMenu_SimCardManagement" xml:space="preserve">
     <value>a[href*='/SIMCard'</value>
+  </data>
+  <data name="CustomerMenu_InfotextCreate" xml:space="preserve">
+    <value>a[href*='/CustomerInfoText/Create?&amp;CUSTOMERID=']</value>
+  </data>
+  <data name="LocationMenu_InfotextCreate" xml:space="preserve">
+    <value>a[href*='/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=']</value>
   </data>
 </root>

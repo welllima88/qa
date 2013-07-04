@@ -178,6 +178,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to a[href*=&apos;/CustomerInfoText/Create?&amp;CUSTOMERID=&apos;].
+        /// </summary>
+        internal static string CustomerMenu_InfotextCreate {
+            get {
+                return ResourceManager.GetString("CustomerMenu_InfotextCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to a[href*=&apos;/Location/New?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_LocationCreate {
@@ -241,7 +250,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Default.aspx&apos;].
+        ///   Looks up a localized string similar to a[href*=&apos;/Lobby/&apos;].
         /// </summary>
         internal static string LobbyMenu_Lobby {
             get {
@@ -268,7 +277,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Default.aspx&apos;].
+        ///   Looks up a localized string similar to a[href*=&apos;/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string LocationMenu_InfotextCreate {
             get {
@@ -583,7 +592,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketList.asp?ListType=personal&apos;].
+        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/MyPersonalTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_My {
             get {
@@ -592,7 +601,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketList.asp?ListType=pending&apos;].
+        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/MyGroupTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_MyGroup {
             get {
@@ -601,7 +610,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketList.asp?ListType=notassign&apos;].
+        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/UnAssignedTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_NotAssigned {
             get {
