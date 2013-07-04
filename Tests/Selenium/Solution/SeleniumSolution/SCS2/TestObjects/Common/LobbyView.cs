@@ -38,6 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             ApplicationInfo = new ApplicationInfo(Driver);
             LobbyNews = new LobbyNews(Driver);
             QuickSearch = new QuickSearch(Driver);
+            ProcessTickets = new ProcessTickets(Driver);
         }
 
         public IWebElement CompanyLogo
