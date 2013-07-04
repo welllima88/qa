@@ -13,9 +13,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public LobbyMenu Menu;
         public MetaNavBar MetaNavBar;
         public NavigationBar NavigationBar;
+        public ProcessTickets ProcessTickets;
         public QuickSearch QuickSearch;
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
+
+        #region ILogout Members
+
+        public void Logout()
+        {
+            MetaNavBar.Logout.Click();
+        }
+
+        #endregion
 
         public LobbyView(IWebDriverAdapter driver) : base(driver)
         {
@@ -39,14 +49,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         {
             get { return Driver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
         }
-
-        #region ILogout Members
-
-        public void Logout()
-        {
-            MetaNavBar.Logout.Click();
-        }
-
-        #endregion
     }
 }

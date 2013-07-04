@@ -207,4 +207,13 @@
   <data name="ApplicationInfo_Environment" xml:space="preserve">
     <value>div#applicationBar div#applicationInformation span#ctl00_lblEnvironmentText</value>
   </data>
+  <data name="ProcessTickets_Container" xml:space="preserve">
+    <value>ul#TicketList</value>
+  </data>
+  <data name="ProcessTickets_Newest" xml:space="preserve">
+    <value>ul#BatchHistoryList</value>
+  </data>
+  <data name="ProcessTickets_Oldest" xml:space="preserve">
+    <value>ul#ElementHistoryList</value>
+  </data>
 </root>

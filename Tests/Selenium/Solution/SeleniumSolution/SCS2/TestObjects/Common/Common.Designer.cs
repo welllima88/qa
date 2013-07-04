@@ -250,6 +250,33 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ul#TicketList.
+        /// </summary>
+        internal static string ProcessTickets_Container {
+            get {
+                return ResourceManager.GetString("ProcessTickets_Container", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#BatchHistoryList.
+        /// </summary>
+        internal static string ProcessTickets_Newest {
+            get {
+                return ResourceManager.GetString("ProcessTickets_Newest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ElementHistoryList.
+        /// </summary>
+        internal static string ProcessTickets_Oldest {
+            get {
+                return ResourceManager.GetString("ProcessTickets_Oldest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to div#searchBar&gt;p#searchSubmit.
         /// </summary>
         internal static string QuickSearch_SearchButton {
