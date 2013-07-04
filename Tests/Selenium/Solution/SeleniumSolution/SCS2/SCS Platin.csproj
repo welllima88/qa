@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
+    <Compile Include="TestObjects\Common\ProcessTickets.cs" />
     <Compile Include="TestObjects\Contact\ContactEditRes.Designer.cs">
       <DependentUpon>ContactEditRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -211,6 +212,7 @@
     <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationNewsTest.cs" />
+    <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\RecentElementsTest.cs" />
     <Compile Include="Tests\Lobby\MetaNavigationBarTest.cs" />
