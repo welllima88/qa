@@ -8,6 +8,7 @@
  * http://openbook.galileocomputing.de/csharp/kap31.htm#t25
  * 
  */
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -15,7 +16,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
     /// <summary>
-    /// be careful with menu expander because they prevent some actions and need special handling 
+    ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestClass]
     public class MetaNavigationBarTest
@@ -75,7 +76,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         {
             _lobbyView.MetaNavBar.Languages.Click();
             Assert.IsTrue(_lobbyView.MetaNavBar.Language("Deutsch").Displayed);
-            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Enabled);
             _lobbyView.MetaNavBar.Languages.Click();
         }
 
@@ -84,8 +84,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         public void LanguageEnglish()
         {
             _lobbyView.MetaNavBar.Languages.Click();
-            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Displayed);
-                //Enabled, if displayed is making problems
+            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Enabled); //Enabled, if displayed is making problems
             _lobbyView.MetaNavBar.Languages.Click();
         }
     }
