@@ -16,7 +16,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support
+namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

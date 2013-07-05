@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Extension.Login.LoginPages
+namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 {
     public class WesSecurIdLoginPage : WebObject
     {

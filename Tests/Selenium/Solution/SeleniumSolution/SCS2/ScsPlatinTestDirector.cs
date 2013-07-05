@@ -1,6 +1,6 @@
 ﻿using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.Login;
-using SIX.SCS.QA.Selenium.Extension.Login.LoginMethod;
+using SIX.SCS.QA.Selenium.Extension.Authentication;
+using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 

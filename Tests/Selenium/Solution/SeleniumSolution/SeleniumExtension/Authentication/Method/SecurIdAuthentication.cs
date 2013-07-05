@@ -1,9 +1,9 @@
 using System;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Login.LoginPages;
+using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
 
-namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
+namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
 {
     public class SecurIdAuthentication : WebObject, IAuthentication, ILogoutCheck
 
