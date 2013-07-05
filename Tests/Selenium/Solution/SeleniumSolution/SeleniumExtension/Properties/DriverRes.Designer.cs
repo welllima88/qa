@@ -70,15 +70,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Firefox.
-        /// </summary>
-        internal static string Firefox {
-            get {
-                return ResourceManager.GetString("Firefox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SeleWithCertificate.
         /// </summary>
         internal static string FirefoxProfile_Certificate {

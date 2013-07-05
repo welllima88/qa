@@ -120,10 +120,6 @@
   <data name="DEV" xml:space="preserve">
     <value>DEV</value>
   </data>
-  <data name="Firefox" xml:space="preserve">
-    <value>Firefox</value>
-    <comment>Browser where tests are running e.g. Firefox, InternetExplorer, Opera, Chrome</comment>
-  </data>
   <data name="FirefoxProfile_Certificate" xml:space="preserve">
     <value>SeleWithCertificate</value>
   </data>

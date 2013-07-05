@@ -3,22 +3,22 @@ using SIX.SCS.QA.Selenium.Extension.Login.LoginPages;
 
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
 {
-    public class CertificateLogin : WebObject, ILogin, ILogoutCheck
+    public class CertificateAuthentication : WebObject, IAuthentication, ILogoutCheck
     {
         private readonly string _mandant;
         private readonly WesCertificateLoginPage _wes;
 
-        public CertificateLogin(string mandant, IWebDriverAdapter driver) : base(driver)
+        public CertificateAuthentication(string mandant, IWebDriverAdapter driver) : base(driver)
         {
             _mandant = mandant;
             _wes = new WesCertificateLoginPage(driver);
         }
 
-        #region ILogin Members
+        #region IAuthentication Members
 
         public void Login()
         {
-            // choose tenant and login/submit:
+            // choose tenant and authentication/submit:
             _wes.Mandant(_mandant).Click();
             _wes.LoginButton.Click();
         }

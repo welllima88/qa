@@ -1,8 +1,8 @@
 namespace SIX.SCS.QA.Selenium.Extension.Login.LoginMethod
 {
-    public class NoLogin : ILogin, ILogoutCheck
+    public class NoAuthentication : IAuthentication, ILogoutCheck
     {
-        #region ILogin Members
+        #region IAuthentication Members
 
         public void Login()
         {
