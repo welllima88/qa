@@ -10,7 +10,7 @@ using SIX.SCS.QA.Selenium.Extension.Properties;
 
 namespace SIX.SCS.QA.Selenium.Extension
 {
-    public class TestDirector
+    public abstract class TestDirector
     {
         protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
         protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
@@ -28,6 +28,9 @@ namespace SIX.SCS.QA.Selenium.Extension
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
 
             WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+            WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
+            WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(20));
         }
 
         /// <summary>
@@ -55,13 +58,10 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <param name="logout"></param>
         /// <param name="loginCheck"></param>
         /// <param name="logoutCheck"></param>
-        protected void StartUpTest(string baseUrl, IAuthentication authentication, ILogout logout, ILoginCheck loginCheck = null,
+        protected void StartUpTest(string baseUrl, IAuthentication authentication, ILogout logout,
+                                   ILoginCheck loginCheck = null,
                                    ILogoutCheck logoutCheck = null)
         {
-            WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-            WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
-            WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(20));
-
             _authentication = authentication;
             _loginCheck = loginCheck;
             _logout = logout;
