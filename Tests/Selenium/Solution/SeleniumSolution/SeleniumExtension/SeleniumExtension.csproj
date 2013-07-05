@@ -66,7 +66,7 @@
     <Compile Include="IWebGuiElement.cs" />
     <Compile Include="Authentication\IAuthentication.cs" />
     <Compile Include="Authentication\ILoginCheck.cs" />
-    <Compile Include="Authentication\ILogout.cs" />
+    <Compile Include="Authentication\IApplication.cs" />
     <Compile Include="Authentication\ILogoutCheck.cs" />
     <Compile Include="Authentication\Method\CertificateAuthentication.cs" />
     <Compile Include="Authentication\Method\NoAuthentication.cs" />

@@ -15,10 +15,8 @@ namespace SIX.SCS.QA.Selenium.Extension
     {
         protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
         protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
+        private IApplication _application;
         private IAuthentication _authentication;
-        private ILoginCheck _loginCheck;
-        private ILogout _logout;
-        private ILogoutCheck _logoutCheck;
 
         public IWebDriverAdapter WebDriver { get; private set; }
 
@@ -29,6 +27,7 @@ namespace SIX.SCS.QA.Selenium.Extension
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
 
             WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+
             WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
             WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
             WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(20));
@@ -56,22 +55,15 @@ namespace SIX.SCS.QA.Selenium.Extension
         ///     - SecureId
         ///     - UAF
         /// </param>
-        /// <param name="logout"></param>
-        /// <param name="loginCheck"></param>
-        /// <param name="logoutCheck"></param>
-        protected void StartUpTest(string baseUrl, IAuthentication authentication, ILogout logout,
-                                   ILoginCheck loginCheck = null,
-                                   ILogoutCheck logoutCheck = null)
+        /// <param name="application"></param>
+        protected void StartUpTest(string baseUrl, IAuthentication authentication, IApplication application)
         {
             _authentication = authentication;
-            _loginCheck = loginCheck;
-            _logout = logout;
-            _logoutCheck = logoutCheck;
+            _application = application;
 
             BaseUrl = WebDriver.Url = baseUrl; // essential to avoid constructor actions
 
             _authentication.Login();
-            if (_loginCheck != null) _loginCheck.CheckLogInSucess();
         }
 
         public virtual IWebDriverAdapter DefaultTestSetup(TestEnvironment environment)
@@ -85,12 +77,11 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        ///     logout with check and shutdown of driver
+        ///     application with check and shutdown of driver
         /// </summary>
         public void ShutDownTest()
         {
-            _logout.Logout();
-            if (_logoutCheck != null) _logoutCheck.CheckLogOutSucess();
+            _application.Logout();
             WebDriver.Quit();
         }
     }

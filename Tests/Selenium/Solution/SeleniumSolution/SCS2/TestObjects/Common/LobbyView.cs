@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
-    public class LobbyView : WebObject, ILogout
+    public class LobbyView : WebObject, IApplication
     {
         public ApplicationInfo ApplicationInfo;
         public Footer Footer;
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         public RecentElements RecentElements;
         public RecentMassmutations RecentMassmutations;
 
-        #region ILogout Members
+        #region IApplication Members
 
         public void Logout()
         {

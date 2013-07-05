@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common
 {
-    public class Scs : ILoginCheck, ILogout
+    public class Scs : ILoginCheck, IApplication
     {
         private readonly HeadMenu _headMenu;
 
@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common
 
         #endregion
 
-        #region ILogout Members
+        #region IApplication Members
 
         public void Logout()
         {
