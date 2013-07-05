@@ -10,27 +10,27 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
     {
         public override IWebDriverAdapter DefaultTestSetup()
         {
-            ILogin login;
+            IAuthentication authentication;
             string baseAdress;
 
-            FireFoxSetupWithUac(out login, out baseAdress);
+            FireFoxSetupWithUac(out authentication, out baseAdress);
             var lobby = new LobbyView(WebDriver);
-            StartUpTest(baseAdress, login, lobby);
+            StartUpTest(baseAdress, authentication, lobby);
 
             return WebDriver;
         }
 
-        private void FireFoxSetUpWithCertifacte(out ILogin login, out string baseAdress)
+        private void FireFoxSetUpWithCertifacte(out IAuthentication authentication, out string baseAdress)
         {
             FireFoxWebDriverAdapter(CertifacteProfile);
-            login = new CertificateLogin(Scs2Res.mandant_qa_L, WebDriver);
+            authentication = new CertificateAuthentication(Scs2Res.mandant_qa_L, WebDriver);
             baseAdress = Scs2Res.WES_QA_L;
         }
 
-        private void FireFoxSetupWithUac(out ILogin login, out string baseAdress)
+        private void FireFoxSetupWithUac(out IAuthentication authentication, out string baseAdress)
         {
             FireFoxWebDriverAdapter(PlainProfile);
-            login = new UacLogin(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
+            authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
             baseAdress = Scs2Res.UAC_DEV;
         }
     }

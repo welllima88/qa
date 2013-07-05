@@ -30,8 +30,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
             _testDirector = new ScsClassicTestDirector();
             _driver = _testDirector.WebDriver;
 
-            // var auth = new UacLogin("six_scs_auto", "six_scs_auto_pw",_driver);
-            // var auth = new CertificateLogin("tkcposl", _driver);
+            // var auth = new UacAuthentication("six_scs_auto", "six_scs_auto_pw",_driver);
+            // var auth = new CertificateAuthentication("tkcposl", _driver);
             // var app = new Scs(_driver);
 
             //_testDirector.SetupTest("https://gateint.telekurs.ch/scsc-qa-l/", auth, app, app, auth);
