@@ -1,8 +1,9 @@
 using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
-using SIX.SCS.QA.Selenium.Extension.Login;
+using SIX.SCS.QA.Selenium.Extension.Authentication;
 using SIX.SCS.QA.Selenium.Extension.Properties;
+using SIX.SCS.QA.Selenium.Extension.Settings;
 
 // http://www.seleniumwiki.com/category/visual-studio-2010/
 // http://code.google.com/p/selenium/downloads/list
@@ -92,18 +93,5 @@ namespace SIX.SCS.QA.Selenium.Extension
             if (_logoutCheck != null) _logoutCheck.CheckLogOutSucess();
             WebDriver.Quit();
         }
-    }
-
-    public abstract class TestEnvironment
-    {
-        public string BaseUrls;
-        public string BrowserProfileName;
-        public SeleniumConfig SeleniumConfig;
-    }
-
-    public class SeleniumConfig
-    {
-        public string ImplicitlyWait;
-        public string SetScriptTimeout;
     }
 }

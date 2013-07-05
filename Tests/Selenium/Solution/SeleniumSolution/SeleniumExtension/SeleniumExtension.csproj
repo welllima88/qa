@@ -64,17 +64,17 @@
     <Compile Include="IWebDriverAdapter.cs" />
     <Compile Include="IWebElementAdapter.cs" />
     <Compile Include="IWebGuiElement.cs" />
-    <Compile Include="Login\IAuthentication.cs" />
-    <Compile Include="Login\ILoginCheck.cs" />
-    <Compile Include="Login\ILogout.cs" />
-    <Compile Include="Login\ILogoutCheck.cs" />
-    <Compile Include="Login\LoginMethod\CertificateAuthentication.cs" />
-    <Compile Include="Login\LoginMethod\NoAuthentication.cs" />
-    <Compile Include="Login\LoginMethod\SecurIdAuthentication.cs" />
-    <Compile Include="Login\LoginMethod\UacAuthentication.cs" />
-    <Compile Include="Login\LoginPages\UacLoginPage.cs" />
-    <Compile Include="Login\LoginPages\WesCertificateLoginPage.cs" />
-    <Compile Include="Login\LoginPages\WesSecurIdLoginPage.cs" />
+    <Compile Include="Authentication\IAuthentication.cs" />
+    <Compile Include="Authentication\ILoginCheck.cs" />
+    <Compile Include="Authentication\ILogout.cs" />
+    <Compile Include="Authentication\ILogoutCheck.cs" />
+    <Compile Include="Authentication\Method\CertificateAuthentication.cs" />
+    <Compile Include="Authentication\Method\NoAuthentication.cs" />
+    <Compile Include="Authentication\Method\SecurIdAuthentication.cs" />
+    <Compile Include="Authentication\Method\UacAuthentication.cs" />
+    <Compile Include="Authentication\WebPages\UacLoginPage.cs" />
+    <Compile Include="Authentication\WebPages\WesCertificateLoginPage.cs" />
+    <Compile Include="Authentication\WebPages\WesSecurIdLoginPage.cs" />
     <Compile Include="NotCheckableElementException.cs" />
     <Compile Include="NotSelectableElementException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,8 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DriverRes.resx</DependentUpon>
     </Compile>
+    <Compile Include="Settings\SeleniumConfig.cs" />
     <Compile Include="SuggestorWebElementAdapter.cs" />
     <Compile Include="TestDirector.cs" />
+    <Compile Include="Settings\TestEnvironment.cs" />
+    <Compile Include="Settings\Timeouts.cs" />
     <Compile Include="WebObject.cs" />
     <Compile Include="IWebObject.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
