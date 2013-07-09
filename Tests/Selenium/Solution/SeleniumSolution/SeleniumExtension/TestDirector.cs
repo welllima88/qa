@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Extension
 
             WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
             WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
-            WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(20));
+            WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(30));
         }
 
         /// <summary>

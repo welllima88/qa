@@ -13,14 +13,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             IAuthentication authentication;
             string baseAdress;
 
-            FireFoxSetupWithUac(out authentication, out baseAdress);
+            Qal(out authentication, out baseAdress);
             var lobby = new LobbyView(WebDriver);
             StartUpTest(baseAdress, authentication, lobby);
 
             return WebDriver;
         }
 
-        private void FireFoxSetUpWithCertifacte(out IAuthentication authentication, out string baseAdress)
+        private void Qal(out IAuthentication authentication, out string baseAdress)
         {
             FireFoxWebDriverAdapter(CertifacteProfile);
             authentication = new CertificateAuthentication(Scs2Res.mandant_qa_L, WebDriver);

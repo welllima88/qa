@@ -200,7 +200,7 @@
     <Compile Include="Tests\BuildTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
-    <Compile Include="Tests\Contact\Copy of ContactCreateTest.cs" />
+    <Compile Include="Tests\Contact\Create\Copy of ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithoutDataTest.cs" />
