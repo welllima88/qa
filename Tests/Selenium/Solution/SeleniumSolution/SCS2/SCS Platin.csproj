@@ -198,8 +198,13 @@
     <Compile Include="TestObjects\Administration\SimCard\SIMCardEdit.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SIMCardCreate.cs" />
     <Compile Include="Tests\BuildTest.cs" />
-    <Compile Include="Tests\Contact\ContactCreateTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
+    <Compile Include="Tests\Contact\Copy of ContactCreateTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateWithoutDataTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
@@ -287,6 +292,7 @@
     <EmbeddedResource Include="TestObjects\Common\Common.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Common.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
       <Generator>ResXFileCodeGenerator</Generator>

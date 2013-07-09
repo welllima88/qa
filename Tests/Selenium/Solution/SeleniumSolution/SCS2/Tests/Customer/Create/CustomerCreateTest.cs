@@ -148,9 +148,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void MostRecent()
         {
+            string url = _driver.Url;
+
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
 
+            Assert.AreEqual(url, _driver.Url, true);
             Assert.AreEqual(_custId, _customerView.CustomerNumber);
         }
 
