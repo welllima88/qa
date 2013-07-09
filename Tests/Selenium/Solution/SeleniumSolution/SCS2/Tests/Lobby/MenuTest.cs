@@ -86,6 +86,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
+        public void MassMutationAcquirerChange()
+        {
+            Assert.IsTrue(_lobbyMenu.MassMutation.AcquirerChange.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
+        public void SimCardManagement()
+        {
+            Assert.IsTrue(_lobbyMenu.MassMutation.SimCardManage.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationContractCreate()
         {
             Assert.IsTrue(_lobbyMenu.MassMutation.ContractCreate.Displayed);

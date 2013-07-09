@@ -118,189 +118,192 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ContactMenu_Contact" xml:space="preserve">
-    <value>a[href*='/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=']</value>
   </data>
   <data name="ContactMenu_ContactEdit" xml:space="preserve">
-    <value>a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
   </data>
   <data name="CustomerMenu_Customer" xml:space="preserve">
-    <value>a[href*='/Customer/CustomerEdit.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Customer/CustomerEdit.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_CustomerCreate" xml:space="preserve">
-    <value>a[href*='/Customer/CustomerEdit.aspx?PageMode=new']</value>
+    <value>td#leftHandMenu a[href*='/Customer/CustomerEdit.aspx?PageMode=new']</value>
   </data>
   <data name="CustomerMenu_LocationCreate" xml:space="preserve">
-    <value>a[href*='/Location/New?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Location/New?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_TerminalCreate" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalNew.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalNew.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_UserCreate" xml:space="preserve">
-    <value>a[href*='/LoginNew.asp?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/LoginNew.asp?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_CustomerEdit" xml:space="preserve">
-    <value>a[href*='/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_CustomerDeactivate" xml:space="preserve">
-    <value>a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_LocationsOfCustomer" xml:space="preserve">
-    <value>a[href*='Location/LocationList.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='Location/LocationList.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_TerminalsOfCustomerLocation" xml:space="preserve">
-    <value>a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']</value>
   </data>
   <data name="CustomerMenu_AllMpds" xml:space="preserve">
-    <value>a[href*='/Mpd/list?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Mpd/list?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_AllTerminals" xml:space="preserve">
-    <value>a[href*='Terminal/TerminalList.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Tickets" xml:space="preserve">
-    <value>a[href*='TicketList.asp?ListType=customer&amp;CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='TicketList.asp?ListType=customer&amp;CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Users" xml:space="preserve">
-    <value>a[href*='User/UserList.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='User/UserList.aspx?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Contacts" xml:space="preserve">
-    <value>a[href*='/Person/CustomerPersonList?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Person/CustomerPersonList?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_ContactCreate" xml:space="preserve">
-    <value>a[href*='/Person/CustomerPersonNew?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Person/CustomerPersonNew?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_BillingAdresses" xml:space="preserve">
-    <value>a[href*='BillingAddress/List?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='BillingAddress/List?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_BillingAdressCreate" xml:space="preserve">
-    <value>a[href*='BillingAddress/New?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='BillingAddress/New?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_BillingAddressEdit" xml:space="preserve">
-    <value>a[href*='/BillingAddress/Edit?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/BillingAddress/Edit?CUSTOMERID=']</value>
   </data>
   <data name="LobbyMenu_Lobby" xml:space="preserve">
-    <value>a[href*='/Lobby/']</value>
+    <value>td#leftHandMenu a[href*='/Lobby/']</value>
   </data>
   <data name="LocationMenu_Location" xml:space="preserve">
-    <value>a[href*='/Location/?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='/Location/?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_TerminalCreate" xml:space="preserve">
-    <value>a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_ContactCreate" xml:space="preserve">
-    <value>a[href*='Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_LocationEdit" xml:space="preserve">
-    <value>a[href*='Location/Edit?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Location/Edit?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_LocationQuit" xml:space="preserve">
-    <value>a[href*='Location.asp?mode=Cancel&amp;LocationFunction=']</value>
+    <value>td#leftHandMenu a[href*='Location.asp?mode=Cancel&amp;LocationFunction=']</value>
   </data>
   <data name="LocationMenu_Terminals" xml:space="preserve">
-    <value>a[href*='Terminal/TerminalList.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Contacts" xml:space="preserve">
-    <value>a[href*='Person/PersonList.aspx?CUSTOMERID='][href*='&amp;LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Person/PersonList.aspx?CUSTOMERID='][href*='&amp;LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Infotexts" xml:space="preserve">
-    <value>a[href*='InfoText/LocationInfoTextList.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='InfoText/LocationInfoTextList.aspx?LOCATIONID=']</value>
   </data>
   <data name="MassMutationMenu_CustomerCreate" xml:space="preserve">
-    <value>a[href*='/MassMutation/CustomersFileUpload.aspx']</value>
+    <value>td#leftHandMenu a[href*='/MassMutation/CustomersFileUpload.aspx']</value>
   </data>
   <data name="MassMutationMenu_LocationCreate" xml:space="preserve">
-    <value>a[href*='/MassMutation/LocationsFileUpload.aspx']</value>
+    <value>td#leftHandMenu a[href*='/MassMutation/LocationsFileUpload.aspx']</value>
   </data>
   <data name="MassMutationMenu_TerminalCreate" xml:space="preserve">
-    <value>a[href*='/MassMutation/TerminalsFileUpload.aspx']</value>
+    <value>td#leftHandMenu a[href*='/MassMutation/TerminalsFileUpload.aspx']</value>
   </data>
   <data name="MassMutationMenu_ContractCreate" xml:space="preserve">
-    <value>a[href*='/MassMutation/ContractsFileUpload.aspx']</value>
+    <value>td#leftHandMenu a[href*='/MassMutation/ContractsFileUpload.aspx']</value>
   </data>
   <data name="MassMutationMenu_BusinessTemplateMigrate" xml:space="preserve">
-    <value>a[href*='/MassMutation/BTMigrationFileUpload.aspx']</value>
-  </data>
-  <data name="Prefix" xml:space="preserve">
-    <value>td#leftHandMenu </value>
+    <value>td#leftHandMenu a[href*='/MassMutation/BTMigrationFileUpload.aspx']</value>
   </data>
   <data name="TerminalAnalysisMenu_GklpBlock" xml:space="preserve">
-    <value>a[href*='/GKLP/GKLPBlock.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/GKLP/GKLPBlock.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_SetFastInitFlag" xml:space="preserve">
-    <value>a[href*='/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_ResetComAdresses" xml:space="preserve">
-    <value>a[href*='/Terminal/ResetNetAddr.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/ResetNetAddr.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_TerminalEvents" xml:space="preserve">
-    <value>a[href*='/TerminalS3Log.asp?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalS3Log.asp?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_FoMessages" xml:space="preserve">
-    <value>a[href*='/FoMessage/Index?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/FoMessage/Index?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_FoQueries" xml:space="preserve">
-    <value>a[href*='/Terminal/FOQueries.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/FOQueries.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_Ep2TraceLog" xml:space="preserve">
-    <value>a[href*='/TerminalEP2Log.asp?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalEP2Log.asp?TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_SendOverview" xml:space="preserve">
-    <value>a[href*='/Admin/MessageTransport/Overview.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Admin/MessageTransport/Overview.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Terminal" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_ContractCreate" xml:space="preserve">
-    <value>a[href*='/Contract/ContractNew.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Contract/ContractNew.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_InfotextCreate" xml:space="preserve">
-    <value>a[href*='/InfoText/TerminalInfoTextNew.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/InfoText/TerminalInfoTextNew.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_TicketCreate" xml:space="preserve">
-    <value>a[href*='/ticket.asp?WindowName=NewTicket&amp;CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/ticket.asp?WindowName=NewTicket&amp;CUSTOMERID=']</value>
   </data>
   <data name="TerminalMenu_ServiceCenterCreate" xml:space="preserve">
-    <value>a[href*='/Contract/ServiceCenterCreate.aspx?']</value>
+    <value>td#leftHandMenu a[href*='/Contract/ServiceCenterCreate.aspx?']</value>
   </data>
   <data name="TerminalMenu_PmsCreate" xml:space="preserve">
-    <value>a[href*='/Contract/PMSCreate.aspx?']</value>
+    <value>td#leftHandMenu a[href*='/Contract/PMSCreate.aspx?']</value>
   </data>
   <data name="TerminalMenu_Edit" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalView.aspx?PageMode=edit&amp;TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalView.aspx?PageMode=edit&amp;TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Deactivate" xml:space="preserve">
-    <value>a[href*='/Terminal/?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Duplicate" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalDuplicate.aspx?']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalDuplicate.aspx?']</value>
   </data>
   <data name="TerminalMenu_Replace" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalReplace.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalReplace.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Tickets" xml:space="preserve">
-    <value>a[href*='/TicketList.asp?ListType=terminal&amp;TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/TicketList.asp?ListType=terminal&amp;TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Infotexts" xml:space="preserve">
-    <value>a[href*='/InfoText/TerminalInfoTextList.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/InfoText/TerminalInfoTextList.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Forms" xml:space="preserve">
-    <value>a[href*='/Terminal/TerminalForms.aspx?TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/Terminal/TerminalForms.aspx?TERMINALID=']</value>
   </data>
   <data name="TicketMenu_NotAssigned" xml:space="preserve">
-    <value>a[href*='/TicketIntegration/UnAssignedTickets/']</value>
+    <value>td#leftHandMenu a[href*='/TicketIntegration/UnAssignedTickets/']</value>
   </data>
   <data name="TicketMenu_MyGroup" xml:space="preserve">
-    <value>a[href*='/TicketIntegration/MyGroupTickets/']</value>
+    <value>td#leftHandMenu a[href*='/TicketIntegration/MyGroupTickets/']</value>
   </data>
   <data name="TicketMenu_My" xml:space="preserve">
-    <value>a[href*='/TicketIntegration/MyPersonalTickets/']</value>
+    <value>td#leftHandMenu a[href*='/TicketIntegration/MyPersonalTickets/']</value>
   </data>
-  <data name="SimCardMenu_SimCardManagement" xml:space="preserve">
-    <value>a[href*='/SIMCard'</value>
+  <data name="SimCardManagement" xml:space="preserve">
+    <value>td#leftHandMenu a[href*='/SIMCard']</value>
   </data>
   <data name="CustomerMenu_InfotextCreate" xml:space="preserve">
-    <value>a[href*='/CustomerInfoText/Create?&amp;CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/CustomerInfoText/Create?&amp;CUSTOMERID=']</value>
   </data>
   <data name="LocationMenu_InfotextCreate" xml:space="preserve">
-    <value>a[href*='/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=']</value>
+  </data>
+  <data name="AcquirerChange" xml:space="preserve">
+    <value>td#leftHandMenu a[href*='/MassAcqExchange']</value>
+  </data>
+  <data name="Prefix" xml:space="preserve">
+    <value>td#leftHandMenu</value>
   </data>
 </root>

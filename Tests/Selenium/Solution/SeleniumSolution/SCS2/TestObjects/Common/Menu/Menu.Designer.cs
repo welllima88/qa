@@ -61,7 +61,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassAcqExchange&apos;].
+        /// </summary>
+        internal static string AcquirerChange {
+            get {
+                return ResourceManager.GetString("AcquirerChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=&apos;].
         /// </summary>
         internal static string ContactMenu_Contact {
             get {
@@ -70,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=&apos;].
         /// </summary>
         internal static string ContactMenu_ContactEdit {
             get {
@@ -79,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Mpd/list?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Mpd/list?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_AllMpds {
             get {
@@ -88,7 +97,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_AllTerminals {
             get {
@@ -97,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/BillingAddress/Edit?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/BillingAddress/Edit?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_BillingAddressEdit {
             get {
@@ -106,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;BillingAddress/New?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;BillingAddress/New?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_BillingAdressCreate {
             get {
@@ -115,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;BillingAddress/List?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;BillingAddress/List?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_BillingAdresses {
             get {
@@ -124,7 +133,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Person/CustomerPersonNew?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/CustomerPersonNew?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_ContactCreate {
             get {
@@ -133,7 +142,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Person/CustomerPersonList?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/CustomerPersonList?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_Contacts {
             get {
@@ -142,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Customer/CustomerEdit.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_Customer {
             get {
@@ -151,7 +160,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=new&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=new&apos;].
         /// </summary>
         internal static string CustomerMenu_CustomerCreate {
             get {
@@ -160,7 +169,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Customer/CustomerDeactivate.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Customer/CustomerDeactivate.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_CustomerDeactivate {
             get {
@@ -169,7 +178,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_CustomerEdit {
             get {
@@ -178,7 +187,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/CustomerInfoText/Create?&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/CustomerInfoText/Create?&amp;CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_InfotextCreate {
             get {
@@ -187,7 +196,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Location/New?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Location/New?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_LocationCreate {
             get {
@@ -196,7 +205,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Location/LocationList.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location/LocationList.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_LocationsOfCustomer {
             get {
@@ -205,7 +214,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalNew.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalNew.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_TerminalCreate {
             get {
@@ -214,7 +223,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=&apos;].
         /// </summary>
         internal static string CustomerMenu_TerminalsOfCustomerLocation {
             get {
@@ -223,7 +232,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;TicketList.asp?ListType=customer&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;TicketList.asp?ListType=customer&amp;CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_Tickets {
             get {
@@ -232,7 +241,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/LoginNew.asp?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/LoginNew.asp?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_UserCreate {
             get {
@@ -241,7 +250,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;User/UserList.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;User/UserList.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_Users {
             get {
@@ -250,7 +259,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Lobby/&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Lobby/&apos;].
         /// </summary>
         internal static string LobbyMenu_Lobby {
             get {
@@ -259,7 +268,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_ContactCreate {
             get {
@@ -268,7 +277,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Person/PersonList.aspx?CUSTOMERID=&apos;][href*=&apos;&amp;LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/PersonList.aspx?CUSTOMERID=&apos;][href*=&apos;&amp;LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_Contacts {
             get {
@@ -277,7 +286,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=&apos;].
         /// </summary>
         internal static string LocationMenu_InfotextCreate {
             get {
@@ -286,7 +295,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;InfoText/LocationInfoTextList.aspx?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;InfoText/LocationInfoTextList.aspx?LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_Infotexts {
             get {
@@ -295,7 +304,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Location/?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Location/?LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_Location {
             get {
@@ -304,7 +313,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Location/Edit?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location/Edit?LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_LocationEdit {
             get {
@@ -313,7 +322,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Location.asp?mode=Cancel&amp;LocationFunction=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location.asp?mode=Cancel&amp;LocationFunction=&apos;].
         /// </summary>
         internal static string LocationMenu_LocationQuit {
             get {
@@ -322,7 +331,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Terminal/TerminalNew.aspx?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalNew.aspx?LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_TerminalCreate {
             get {
@@ -331,7 +340,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;Terminal/TerminalList.aspx?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_Terminals {
             get {
@@ -340,7 +349,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/MassMutation/BTMigrationFileUpload.aspx&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/BTMigrationFileUpload.aspx&apos;].
         /// </summary>
         internal static string MassMutationMenu_BusinessTemplateMigrate {
             get {
@@ -349,7 +358,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/MassMutation/ContractsFileUpload.aspx&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/ContractsFileUpload.aspx&apos;].
         /// </summary>
         internal static string MassMutationMenu_ContractCreate {
             get {
@@ -358,7 +367,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/MassMutation/CustomersFileUpload.aspx&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/CustomersFileUpload.aspx&apos;].
         /// </summary>
         internal static string MassMutationMenu_CustomerCreate {
             get {
@@ -367,7 +376,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/MassMutation/LocationsFileUpload.aspx&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/LocationsFileUpload.aspx&apos;].
         /// </summary>
         internal static string MassMutationMenu_LocationCreate {
             get {
@@ -376,7 +385,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/MassMutation/TerminalsFileUpload.aspx&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/TerminalsFileUpload.aspx&apos;].
         /// </summary>
         internal static string MassMutationMenu_TerminalCreate {
             get {
@@ -385,7 +394,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu .
+        ///   Looks up a localized string similar to td#leftHandMenu.
         /// </summary>
         internal static string Prefix {
             get {
@@ -394,16 +403,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/SIMCard&apos;.
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/SIMCard&apos;].
         /// </summary>
-        internal static string SimCardMenu_SimCardManagement {
+        internal static string SimCardManagement {
             get {
-                return ResourceManager.GetString("SimCardMenu_SimCardManagement", resourceCulture);
+                return ResourceManager.GetString("SimCardManagement", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TerminalEP2Log.asp?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalEP2Log.asp?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_Ep2TraceLog {
             get {
@@ -412,7 +421,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/FoMessage/Index?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/FoMessage/Index?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_FoMessages {
             get {
@@ -421,7 +430,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/FOQueries.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/FOQueries.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_FoQueries {
             get {
@@ -430,7 +439,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/GKLP/GKLPBlock.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/GKLP/GKLPBlock.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_GklpBlock {
             get {
@@ -439,7 +448,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/ResetNetAddr.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/ResetNetAddr.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_ResetComAdresses {
             get {
@@ -448,7 +457,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Admin/MessageTransport/Overview.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Admin/MessageTransport/Overview.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_SendOverview {
             get {
@@ -457,7 +466,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_SetFastInitFlag {
             get {
@@ -466,7 +475,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TerminalS3Log.asp?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalS3Log.asp?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalAnalysisMenu_TerminalEvents {
             get {
@@ -475,7 +484,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Contract/ContractNew.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/ContractNew.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_ContractCreate {
             get {
@@ -484,7 +493,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Deactivate {
             get {
@@ -493,7 +502,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalDuplicate.aspx?&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalDuplicate.aspx?&apos;].
         /// </summary>
         internal static string TerminalMenu_Duplicate {
             get {
@@ -502,7 +511,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=edit&amp;TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=edit&amp;TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Edit {
             get {
@@ -511,7 +520,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalForms.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalForms.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Forms {
             get {
@@ -520,7 +529,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/InfoText/TerminalInfoTextNew.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/TerminalInfoTextNew.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_InfotextCreate {
             get {
@@ -529,7 +538,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/InfoText/TerminalInfoTextList.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/TerminalInfoTextList.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Infotexts {
             get {
@@ -538,7 +547,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Contract/PMSCreate.aspx?&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/PMSCreate.aspx?&apos;].
         /// </summary>
         internal static string TerminalMenu_PmsCreate {
             get {
@@ -547,7 +556,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalReplace.aspx?TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalReplace.aspx?TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Replace {
             get {
@@ -556,7 +565,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Contract/ServiceCenterCreate.aspx?&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/ServiceCenterCreate.aspx?&apos;].
         /// </summary>
         internal static string TerminalMenu_ServiceCenterCreate {
             get {
@@ -565,7 +574,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Terminal {
             get {
@@ -574,7 +583,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/ticket.asp?WindowName=NewTicket&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/ticket.asp?WindowName=NewTicket&amp;CUSTOMERID=&apos;].
         /// </summary>
         internal static string TerminalMenu_TicketCreate {
             get {
@@ -583,7 +592,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketList.asp?ListType=terminal&amp;TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketList.asp?ListType=terminal&amp;TERMINALID=&apos;].
         /// </summary>
         internal static string TerminalMenu_Tickets {
             get {
@@ -592,7 +601,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/MyPersonalTickets/&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/MyPersonalTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_My {
             get {
@@ -601,7 +610,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/MyGroupTickets/&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/MyGroupTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_MyGroup {
             get {
@@ -610,7 +619,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a[href*=&apos;/TicketIntegration/UnAssignedTickets/&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/UnAssignedTickets/&apos;].
         /// </summary>
         internal static string TicketMenu_NotAssigned {
             get {

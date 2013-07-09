@@ -34,5 +34,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
         {
             get { return Driver.FindElement(By.CssSelector(Menu.MassMutationMenu_BusinessTemplateMigrate)); }
         }
+
+        public IWebElement AcquirerChange
+        {
+            get { return Driver.FindElement(By.CssSelector(Menu.AcquirerChange)); }
+        }
+
+        public IWebElement SimCardManage
+        {
+            get { return Driver.FindElement(By.CssSelector(Menu.SimCardManagement)); }
+        }
     }
 }
