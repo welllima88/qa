@@ -20,22 +20,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         public IWebElement MostRecent
         {
-            get { return RecentElement(1); }
-        }
-
-        public List<String> RecentElementsAsList()
-        {
-            return Driver.WebElementsAsStringList(Elements);
-        }
-
-        public IWebElement RecentElement(int elementNo)
-        {
-            IWebElement e =
-                Driver.FindElement(
-                    By.CssSelector(Common.RecentElements_RecentElement_Prefix +
-                                   (elementNo - 1).ToString("00") +
-                                   Common.RecentElements_RecentElement_Suffix));
-            return e;
-        }
+            get { return Elements[0]; }
+        }        
     }
 }
