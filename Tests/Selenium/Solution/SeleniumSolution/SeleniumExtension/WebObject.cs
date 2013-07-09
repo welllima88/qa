@@ -29,6 +29,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <summary>
         /// overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by the constructor)
         /// </summary>
-        public IWebDriverAdapter Driver { get; private set; }
+        protected IWebDriverAdapter Driver { get; private set; }
     }
 }
