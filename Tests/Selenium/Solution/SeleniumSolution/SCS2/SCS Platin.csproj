@@ -65,6 +65,7 @@
       <DependentUpon>Scs2Res.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
+    <Compile Include="Settings\DevEnvironment.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
     <Compile Include="TestObjects\Common\ProcessTickets.cs" />
     <Compile Include="TestObjects\Contact\ContactEditRes.Designer.cs">
