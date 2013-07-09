@@ -322,7 +322,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to div.container a[id$=&apos;_hplBatchHistory&apos;].
+        ///   Looks up a localized string similar to div.container&gt;ul#BatchHistoryList&gt;li&gt;a.
         /// </summary>
         internal static string RecentMassmutations_Elements {
             get {

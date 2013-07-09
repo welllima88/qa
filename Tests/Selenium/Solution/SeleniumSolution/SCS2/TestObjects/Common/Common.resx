@@ -178,7 +178,7 @@
     <value>#ctl00_bodyContentPlaceHolder_lblBatchTitle</value>
   </data>
   <data name="RecentMassmutations_Elements" xml:space="preserve">
-    <value>div.container a[id$='_hplBatchHistory']</value>
+    <value>div.container&gt;ul#BatchHistoryList&gt;li&gt;a</value>
   </data>
   <data name="RecentMassmutations_RecentElement_Prefix" xml:space="preserve">
     <value>div.container a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl</value>
