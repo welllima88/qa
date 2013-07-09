@@ -53,14 +53,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         {
             get
             {
+                return Driver.FindElement(By.CssSelector("div.menuMore>a.first"));
                 //return Driver.FindElement(By.CssSelector("div.menuMore a[text=\"Hilfe\"]")); 
-                return Driver.FindElement(By.XPath("//div[@class='menuMore']/a[text()='Hilfe']"));
+                //return Driver.FindElement(By.XPath("//div[@class='menuMore']/a[text()='Hilfe']"));
             }
         }
 
         public IWebElement SystemInfo
         {
-            get { return Driver.FindElement(By.XPath("//div[@class='menuMore']/a[text()='Systeminfo']")); }
+            get { return Driver.FindElement(By.CssSelector("div.menuMore>a.last")); }
         }
 
         public IWebElement Current
