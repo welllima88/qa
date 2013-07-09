@@ -295,7 +295,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to div.container a[id*=&apos;ElementHistory&apos;].
+        ///   Looks up a localized string similar to div.container&gt;ul#ElementHistoryList&gt;li&gt;a.
         /// </summary>
         internal static string RecentElements_Elements {
             get {

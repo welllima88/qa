@@ -166,7 +166,7 @@
     <value>div#searchBar&gt;p#searchSubmit</value>
   </data>
   <data name="RecentElements_Elements" xml:space="preserve">
-    <value>div.container a[id*='ElementHistory']</value>
+    <value>div.container&gt;ul#ElementHistoryList&gt;li&gt;a</value>
   </data>
   <data name="RecentElements_RecentElement_Prefix" xml:space="preserve">
     <value>a#ctl00_bodyContentPlaceHolder_rptElementHistory_ctl</value>
