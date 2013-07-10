@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 {
     [TestClass]
     public class ContactEditTest

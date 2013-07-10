@@ -199,7 +199,7 @@
     <Compile Include="TestObjects\Administration\SimCard\SIMCardCreate.cs" />
     <Compile Include="Tests\BuildTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
-    <Compile Include="Tests\Contact\ContactEditTest.cs" />
+    <Compile Include="Tests\Contact\Edit\ContactEditTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithNoDataTest.cs" />

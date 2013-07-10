@@ -2,30 +2,23 @@
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 {
     [TestClass]
     public class CustomerCreateWithSbsExportTest
     {
-        private const int MillisecondsTimeout = 1000;
+        private const int WaitMilliseconds = 1000;
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
         private static IWebDriverAdapter _driver;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
         private static TestDirector _tb;
-        private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
-        private static LobbyMenu _lobbyMenu;
-        private static MenusTest _menusTests;
-        private static LobbyView _lobby;
 
         private long _dt;
+        private string _custId;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -33,41 +26,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             //before first test-method starts
             _tb = new ScsPlatinTestDirector();
             _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _lobbyMenu = new LobbyMenu(_driver);
             _customerMenu = new CustomerMenu(_driver);
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
-            _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Default.aspx";
             _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
 
-        [TestCleanup]
-        public void TestCleanup()
-        {
-            _customerMenu.CustomerDeactivate.Click();
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
-        }
-
-        [TestMethod]
-        [TestCategory("SmokeTest")]
-        public void CreateCustomerWithSbsAndMinimalAndSave()
-        {
             _customerMenu.CustomerCreate.Click();
 
             _customerCreate.Supplier = "SIX Payment Services AG";
@@ -81,20 +49,34 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
 
             _customerCreate.SaveButton.Click();
+            _custId = _customerView.CustomerNumber;
 
             Assert.AreEqual("SYR SBS Kunde" + _dt, _customerView.CustomerName);
-            string custId = _customerView.CustomerNumber;
+        }
 
-            //check/read customerId
+        [TestCleanup]
+        public void TestCleanup()
+        {
+        }
 
-            Assert.AreEqual(custId, _customerView.CustomerNumber);
-            Assert.AreEqual(custId, _customerView.SbsDebitNumber);
+        [ClassCleanup]
+        public static void ClassCleanup()
+        {
+            //after last test-method finished
+            _tb.ShutDownTest();
+        }
 
-            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+        [TestMethod]
+        [TestCategory("SBS"), TestCategory("Customer")]
+        public void SbsDebitorNumberGeneratedFromCustomerId()
+        {
+            Assert.AreEqual(_custId, _customerView.SbsDebitNumber);
+        }
 
-            Assert.AreEqual("SIX Payment Services AG", _customerView.Supplier);
-
+        [TestMethod]
+        [TestCategory("SBS"), TestCategory("Customer")]
+        public void SbsAdressNumberGeneratedFromSbs()
+        {
             int retry = 4;
             do
             {
@@ -105,19 +87,27 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
                 }
                 catch (AssertFailedException)
                 {
-                    Thread.Sleep(MillisecondsTimeout);
+                    Thread.Sleep(WaitMilliseconds);
                     //carefull
                     //_driver.Navigate().Refresh(); doesn't work proper, so this is better:
                     _customerMenu.Customer.Click();
                     retry--;
                 }
             } while (retry > 0);
+        }
 
-            Assert.AreEqual("SYR SBS Firma" + _dt, _customerView.CompanyName);
-            Assert.AreEqual("SbsRoad. 201", _customerView.StreetNo);
-            Assert.AreEqual("8008", _customerView.Zip);
-            Assert.AreEqual("SBS", _customerView.City);
-            Assert.AreEqual("CHF", _customerView.SbsCurrency);
+        [TestMethod]
+        [TestCategory("SBS"), TestCategory("Customer")]
+        public void SbsDebitorNumberCorrectFormat()
+        {
+            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+        }
+
+        [TestMethod]
+        [TestCategory("SBS"), TestCategory("Customer")]
+        public void SbsAdressNumberCorrectFormat()
+        {
+            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
         }
     }
 }

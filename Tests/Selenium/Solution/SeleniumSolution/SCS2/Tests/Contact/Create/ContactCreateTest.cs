@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("Zusatz1", _contactView.AddressAddition, );
+            Assert.AreEqual("Zusatz1", _contactView.AddressAddition);
         }
 
         [TestMethod]
