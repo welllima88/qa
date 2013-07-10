@@ -13,18 +13,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     public class ContactCreateWithMissingDataTest
     {
         private static ContactCreate _contactCreate;
-        private static ContactView _contactView;
         private static IWebDriverAdapter _driver;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
         private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
-        private static ContactMenu _contactMenu;
-        private static MenusTest _menusTests;
-        private static LobbyView _lobby;
 
-        private long _dt;
         private List<string> _formAlerts;
 
         [ClassInitialize]
@@ -36,20 +29,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
 
             _customerMenu = new CustomerMenu(_driver);
             _contactCreate = new ContactCreate(_driver);
-            _contactView = new ContactView(_driver);
-            _contactMenu = new ContactMenu(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
             _formAlert = new FormAlert(_driver);
-            _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
         }
 
         [TestInitialize]
         public void TestInit()
         {
             _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=401152";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _customerMenu.ContactCreate.Click();
 
