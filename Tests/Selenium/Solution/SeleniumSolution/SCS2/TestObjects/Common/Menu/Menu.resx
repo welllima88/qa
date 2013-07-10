@@ -124,7 +124,7 @@
     <value>td#leftHandMenu a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
   </data>
   <data name="CustomerMenu_Customer" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Customer/CustomerEdit.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_CustomerCreate" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Customer/CustomerEdit.aspx?PageMode=new']</value>

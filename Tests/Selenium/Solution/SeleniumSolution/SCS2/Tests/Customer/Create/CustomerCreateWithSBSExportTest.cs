@@ -17,8 +17,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
 
-        private long _dt;
-        private string _custId;
+        private static long _dt;
+        private static string _custId;
+        private int _numberOfRetries;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -29,11 +30,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerMenu = new CustomerMenu(_driver);
             _customerCreate = new CustomerCreate(_driver);
             _customerView = new CustomerView(_driver);
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _customerMenu.CustomerCreate.Click();
@@ -50,7 +46,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 
             _customerCreate.SaveButton.Click();
             _custId = _customerView.CustomerNumber;
+        }
 
+        [TestInitialize]
+        public void TestInit()
+        {
             Assert.AreEqual("SYR SBS Kunde" + _dt, _customerView.CustomerName);
         }
 
@@ -77,7 +77,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestCategory("SBS"), TestCategory("Customer")]
         public void SbsAdressNumberGeneratedFromSbs()
         {
-            int retry = 4;
+            _numberOfRetries = 4;
+            int retry = _numberOfRetries;
             do
             {
                 try

@@ -67,6 +67,11 @@
     <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="Settings\DevEnvironment.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
+    <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Menu.resx</DependentUpon>
+    </Compile>
     <Compile Include="TestObjects\Common\ProcessTickets.cs" />
     <Compile Include="TestObjects\Contact\ContactEditRes.Designer.cs">
       <DependentUpon>ContactEditRes.resx</DependentUpon>
@@ -103,11 +108,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.resx</DependentUpon>
-    </Compile>
-    <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Menu.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Contact\ContactCreate.cs" />
     <Compile Include="TestObjects\Contact\ContactEdit.cs" />
@@ -295,8 +295,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Contact\ContactViewRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

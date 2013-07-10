@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=&apos;].
         /// </summary>
         internal static string CustomerMenu_Customer {
             get {
