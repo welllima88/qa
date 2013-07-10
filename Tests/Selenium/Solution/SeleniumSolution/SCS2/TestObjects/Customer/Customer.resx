@@ -190,7 +190,7 @@
     <value>#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</value>
   </data>
   <data name="Segment" xml:space="preserve">
-    <value>#ctl00_bodyContentPlaceHolder_customerSegment</value>
+    <value>select#ctl00_bodyContentPlaceHolder_customerSegment</value>
   </data>
   <data name="GUID" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_customerGUIDLabel</value>
@@ -209,5 +209,8 @@
   </data>
   <data name="LanguageView" xml:space="preserve">
     <value>#ctl00_bodyContentPlaceHolder_addressControl_sugLanguage</value>
+  </data>
+  <data name="SegmentView" xml:space="preserve">
+    <value>span#ctl00_bodyContentPlaceHolder_rowCustomerSegment</value>
   </data>
 </root>

@@ -30,12 +30,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
-                    Selector().SelectByText(value);
+                       Selector().SelectByText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
-                    Selector().SelectedOption.Text;
+                              Selector().SelectedOption.Text;
             }
         }
 
@@ -56,12 +56,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
-                    .TypeText(value);
+                      .TypeText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
-                    .Text;
+                             .Text;
             }
         }
 
@@ -76,12 +76,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Region)).
-                    TypeText(value);
+                       TypeText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Region)).
-                    Text;
+                              Text;
             }
         }
 
@@ -90,12 +90,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
-                    TypeText(value);
+                       TypeText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
-                    Text;
+                              Text;
             }
         }
 
@@ -104,12 +104,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
-                    TypeText(value);
+                       TypeText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
-                    Text;
+                              Text;
             }
         }
 
@@ -124,12 +124,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Email)).
-                    TypeText(value);
+                       TypeText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Email)).
-                    Text;
+                              Text;
             }
         }
 
@@ -157,12 +157,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
-                    Selector().SelectByText(value);
+                       Selector().SelectByText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
-                    Selector().SelectedOption.Text;
+                              Selector().SelectedOption.Text;
             }
         }
 
@@ -210,7 +210,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             {
                 Driver.FindAdaptedElement(
                     By.CssSelector(Customer.SupportContract)).Selector().
-                    SelectByText(value);
+                       SelectByText(value);
             }
             get
             {
@@ -224,7 +224,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).
-                    TypeText(value);
+                       TypeText(value);
             }
             get { return Driver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).Text; }
         }
@@ -271,14 +271,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             {
                 Driver.FindAdaptedElement(
                     By.CssSelector(Customer.CashIntegrator)).Selector()
-                    .
-                    SelectByText(value);
+                      .
+                       SelectByText(value);
             }
             get
             {
                 return Driver.FindAdaptedElement(
                     By.CssSelector(Customer.CashIntegrator)).Selector()
-                    .SelectedOption.Text;
+                             .SelectedOption.Text;
             }
         }
 
@@ -287,13 +287,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set
             {
                 Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
-                    SelectByText(value);
+                       SelectByText(value);
             }
-            get
-            {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
-                    SelectedOption.Text;
-            }
+            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Text; }
         }
 
         #endregion

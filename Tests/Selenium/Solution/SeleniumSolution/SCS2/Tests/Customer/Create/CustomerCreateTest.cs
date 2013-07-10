@@ -307,7 +307,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void Segment()
         {
-            Assert.AreEqual(_segment, _customerCreate.Segment);
+            Assert.AreEqual(_segment, _customerView.Segment);
         }
     }
 }

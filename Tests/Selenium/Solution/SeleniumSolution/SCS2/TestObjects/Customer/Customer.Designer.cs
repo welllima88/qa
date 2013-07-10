@@ -268,11 +268,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_customerSegment.
+        ///   Looks up a localized string similar to select#ctl00_bodyContentPlaceHolder_customerSegment.
         /// </summary>
         public static string Segment {
             get {
                 return ResourceManager.GetString("Segment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to span#ctl00_bodyContentPlaceHolder_rowCustomerSegment.
+        /// </summary>
+        public static string SegmentView {
+            get {
+                return ResourceManager.GetString("SegmentView", resourceCulture);
             }
         }
         

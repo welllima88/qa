@@ -169,7 +169,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         public string Segment
         {
-            get { return Driver.FindElement(By.CssSelector(Customer.Segment)).Text; }
+            get { return Driver.FindElement(By.CssSelector(Customer.SegmentView)).Text; }
         }
 
         #endregion
