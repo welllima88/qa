@@ -200,10 +200,9 @@
     <Compile Include="Tests\BuildTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\ContactEditTest.cs" />
-    <Compile Include="Tests\Contact\Create\Copy of ContactCreateTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
-    <Compile Include="Tests\Contact\Create\ContactCreateWithoutDataTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
