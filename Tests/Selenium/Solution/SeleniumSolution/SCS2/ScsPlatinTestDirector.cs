@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             IAuthentication authentication;
             string baseAdress;
 
-            Qal(out authentication, out baseAdress);
+            Dev(out authentication, out baseAdress);
             var lobby = new LobbyView(WebDriver);
             StartUpTest(baseAdress, authentication, lobby);
 
@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             baseAdress = Scs2Res.WES_QA_L;
         }
 
-        private void FireFoxSetupWithUac(out IAuthentication authentication, out string baseAdress)
+        private void Dev(out IAuthentication authentication, out string baseAdress)
         {
             FireFoxWebDriverAdapter(PlainProfile);
             authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort, WebDriver);
