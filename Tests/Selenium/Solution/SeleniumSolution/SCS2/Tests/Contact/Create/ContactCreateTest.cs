@@ -73,73 +73,73 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual(_contactView.FirstName, "Marc");
+            Assert.AreEqual("Marc", _contactView.FirstName);
         }
 
         [TestMethod]
         public void LastName()
         {
-            Assert.AreEqual(_contactView.Name, "Siegmund SYR AUTO");
+            Assert.AreEqual("Siegmund SYR AUTO", _contactView.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            StringAssert.Contains(_contactView.Language, "[de]");
+            StringAssert.Contains("[de]", _contactView.Language);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual(_contactView.Telephone, "+41 58 399 6237 - 1");
+            Assert.AreEqual("+41 58 399 6237 - 1", _contactView.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual(_contactView.Mobile, "+41 58 399 6237 - 2");
+            Assert.AreEqual("+41 58 399 6237 - 2", _contactView.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual(_contactView.Fax, "+41 58 399 6237 - 3");
+            Assert.AreEqual("+41 58 399 6237 - 3", _contactView.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual(_contactView.Email, "contact@six-group.com");
+            Assert.AreEqual("contact@six-group.com", _contactView.Email);
         }
 
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual(_contactView.Street, "Kontakt-Weg 1");
+            Assert.AreEqual("Kontakt-Weg 1", _contactView.Street);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual(_contactView.Po, "POC");
+            Assert.AreEqual("POC", _contactView.Po);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual(_contactView.Zip, "55555");
+            Assert.AreEqual("55555", _contactView.Zip);
         }
 
         [TestMethod]
         public void RegionCreateContactAndSave()
         {
-            Assert.AreEqual(_contactView.Region, "Mitte");
+            Assert.AreEqual("Mitte", _contactView.Region);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual(_contactView.City, "Berlin");
+            Assert.AreEqual("Berlin", _contactView.City);
         }
 
         [TestMethod]
@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual(_contactView.AddressAddition, "Zusatz1");
+            Assert.AreEqual("Zusatz1", _contactView.AddressAddition, );
         }
 
         [TestMethod]
