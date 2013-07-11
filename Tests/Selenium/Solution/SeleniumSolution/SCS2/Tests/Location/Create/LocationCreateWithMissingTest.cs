@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;

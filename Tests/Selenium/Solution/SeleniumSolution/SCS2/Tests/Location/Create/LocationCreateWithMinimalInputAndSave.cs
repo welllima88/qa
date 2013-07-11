@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;

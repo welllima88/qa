@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;

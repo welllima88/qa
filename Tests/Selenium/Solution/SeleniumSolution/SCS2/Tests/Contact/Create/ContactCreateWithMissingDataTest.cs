@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
 {

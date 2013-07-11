@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
-    using System;
-    
-    
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
