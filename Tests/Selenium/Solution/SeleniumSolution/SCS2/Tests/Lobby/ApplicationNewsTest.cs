@@ -19,6 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestClass]
+    [Ignore]
     public class ApplicationNewsTest
     {
         private static IWebDriverAdapter _driver;
