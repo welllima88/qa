@@ -1,0 +1,9 @@
+﻿useful:
+
+Copy and replace with reg-Exp
+
+Language = \".* \[{..}\]\";
+Language = "\1";
+
+Branchencode:
+\"{....}\: .*\"
