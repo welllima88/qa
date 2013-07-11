@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
@@ -29,7 +28,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         private static LobbyView _lobby;
 
         private long _dt;
-        private List<string> _formAlerts;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
