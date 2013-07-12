@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
     {
         public Dev(IWebDriverAdapter webDriver)
         {
-            BaseUrls = Scs2Res.UAC_DEV;
+            BaseUrl = Scs2Res.UAC_DEV;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
             Application = new LobbyView(webDriver);
             Authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort, webDriver);

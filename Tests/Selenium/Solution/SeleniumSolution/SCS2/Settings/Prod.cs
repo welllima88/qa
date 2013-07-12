@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
     {
         public Prod(IWebDriverAdapter webDriver)
         {
-            BaseUrls = Scs2Res.WES_Production;
+            BaseUrl = Scs2Res.WES_Production;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
             Application = new LobbyView(webDriver);
             Authentication = new SecurIdAuthentication("user","pass",Scs2Res.mandant_prod,"securId", webDriver);

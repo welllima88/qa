@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
     {
         public QaL(IWebDriverAdapter webDriver)
         {
-            BaseUrls = Scs2Res.WES_QA_L;
+            BaseUrl = Scs2Res.WES_QA_L;
             BrowserProfileName = DriverRes.FirefoxProfile_Certificate;
             Application = new LobbyView(webDriver);
             Authentication = new CertificateAuthentication(Scs2Res.mandant_qa_L, webDriver);
