@@ -142,4 +142,7 @@
   <data name="mandant_qa_K" xml:space="preserve">
     <value>tkcposk</value>
   </data>
+  <data name="mandant_prod" xml:space="preserve">
+    <value>tkcpos</value>
+  </data>
 </root>
