@@ -18,20 +18,15 @@ namespace SIX.SCS.QA.Selenium.Extension
         private IApplication _application;
         private IAuthentication _authentication;
 
-        public IWebDriverAdapter WebDriver { get; private set; }
+        public static IWebDriverAdapter WebDriver { get; protected set; }
 
         public string BaseUrl { get; private set; }
 
-        protected void FireFoxWebDriverAdapter(string profileName)
+        protected static void FireFoxWebDriverAdapter(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
 
             WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
-
-            WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-            WebDriver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(10));
-            // not supported anymore:
-            // WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(30));
         }
 
         /// <summary>
