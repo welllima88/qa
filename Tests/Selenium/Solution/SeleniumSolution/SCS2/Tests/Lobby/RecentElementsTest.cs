@@ -8,6 +8,7 @@
  * http://openbook.galileocomputing.de/csharp/kap31.htm#t25
  * 
  */
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
@@ -15,39 +16,19 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
 {
     /// <summary>
-    /// be careful with menu expander because they prevent some actions and need special handling 
+    ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestClass]
     public class RecentElementsTest
     {
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static LobbyView _lobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup();
-            _lobbyView = new LobbyView(_driver);
+            _lobbyView = new LobbyView();
+            TestLauncher.Navigate("");
         }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _tb.ShutDownTest();
-        }
-
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MostRecentContainer()

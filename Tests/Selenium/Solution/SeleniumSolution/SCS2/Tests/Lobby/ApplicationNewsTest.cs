@@ -22,34 +22,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
     [Ignore]
     public class ApplicationNewsTest
     {
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static LobbyView _lobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup();
-            _lobbyView = new LobbyView(_driver);
+            _lobbyView = new LobbyView();
+            TestLauncher.Navigate("");
         }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _tb.ShutDownTest();
-        }
-
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void ApplicationNews()

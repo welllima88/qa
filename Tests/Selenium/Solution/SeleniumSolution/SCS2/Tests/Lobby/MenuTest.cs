@@ -21,32 +21,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
     [TestClass]
     public class MenuTest
     {
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static LobbyMenu _lobbyMenu;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup();
-            _lobbyMenu = new LobbyMenu(_driver);
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _tb.ShutDownTest();
+            _lobbyMenu = new LobbyMenu();
+            TestLauncher.Navigate("");
         }
 
         [TestMethod]
