@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
@@ -13,29 +12,21 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
     {
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
         private static FormAlert _formAlert;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
         private long _dt;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            // no need Test
-            //run IEDriverServer:           
-            // todo find a way after refactorring to start up IE again
-            //_tb = new ScsPlatinTestDirector("IE");
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _customerCreate = new CustomerCreate(_driver);
-            _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
-            _customerMenu = new CustomerMenu(_driver);
+            _customerCreate = new CustomerCreate();
+            _customerView = new CustomerView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
+            _customerMenu = new CustomerMenu();
         }
 
         [TestInitialize]
@@ -48,15 +39,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         [TestCleanup]
         public void TestCleanup()
         {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            ////not necessary: Scs2TestDirector does it!
-            //_ieDriverServer.Close();            
-            //_ieDriverServer.Kill();
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

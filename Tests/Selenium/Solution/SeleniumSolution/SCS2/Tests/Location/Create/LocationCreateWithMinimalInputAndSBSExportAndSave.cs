@@ -1,12 +1,10 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 {
@@ -15,56 +13,29 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
     {
         private const int MillisecondsTimeout = 1000;
         private static LocationView _locationView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static TestDirector _tb;
-        private static FormAlert _formAlert;
         private static LocationCreate _locationCreate;
         private static LocationMenu _locationMenu;
         private static CustomerMenu _customerMenu;
-        private static MenusTest _menusTests;
         private static CustomerView _customerView;
         private static LobbyView _lobby;
-
-        private long _dt;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _customerMenu = new CustomerMenu(_driver);
-            _customerView = new CustomerView(_driver);
-            _locationMenu = new LocationMenu(_driver);
-            _locationCreate = new LocationCreate(_driver);
-            _locationView = new LocationView(_driver);
-            _recentElements = new RecentElements(_driver);
-
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
-            _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerView = new CustomerView();
+            _locationMenu = new LocationMenu();
+            _locationCreate = new LocationCreate();
+            _locationView = new LocationView();
+            _navigationBar = new NavigationBar();
+            _lobby = new LobbyView();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=404871";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
         }
 
         [TestMethod]

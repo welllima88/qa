@@ -12,10 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
     public class LocationCreateWithMinimalInputAndSave
     {
         private static LocationView _locationView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static LocationCreate _locationCreate;
         private static LocationMenu _locationMenu;
         private static CustomerMenu _customerMenu;
@@ -29,22 +27,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _customerMenu = new CustomerMenu(_driver);
-            _customerView = new CustomerView(_driver);
-            _locationMenu = new LocationMenu(_driver);
-            _locationCreate = new LocationCreate(_driver);
-            _locationView = new LocationView(_driver);
-            _recentElements = new RecentElements(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerView = new CustomerView();
+            _locationMenu = new LocationMenu();
+            _locationCreate = new LocationCreate();
+            _locationView = new LocationView();
+            _recentElements = new RecentElements();
 
-            _navigationBar = new NavigationBar(_driver);
+            _navigationBar = new NavigationBar();
             _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
+            _lobby = new LobbyView();
 
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=404871";
-            
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
+
             _customerMenu.LocationCreate.Click();
 
             _locationCreate.CompanyName = "SYR Standort SELE A";
@@ -59,23 +54,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 
             _locId = _locationView.Guid;
             _ep2MerchantId = _locationView.Ep2MerchantId;
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

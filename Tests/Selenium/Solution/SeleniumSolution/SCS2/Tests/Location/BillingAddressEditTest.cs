@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location;
@@ -14,10 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
     {
         private static BillingAddressView _billingAddressView;
         private static BillingAddressEdit _billingAddressEdit;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static BillingAddressCreate _billingAddressCreate;
         private static CustomerMenu _customerMenu;
@@ -28,39 +24,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-
-            _customerMenu = new CustomerMenu(_driver);
-            _billingAddressCreate = new BillingAddressCreate(_driver);
-            _billingAddressEdit = new BillingAddressEdit(_driver);
-            _billingAddressView = new BillingAddressView(_driver);
-            _recentElements = new RecentElements(_driver);
+            _customerMenu = new CustomerMenu();
+            _billingAddressCreate = new BillingAddressCreate();
+            _billingAddressEdit = new BillingAddressEdit();
+            _billingAddressView = new BillingAddressView();
+            _recentElements = new RecentElements();
             _menusTests = new MenusTest();
 
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl +
-                          "/BillingAddress?CustomerId=404840&BillingAddressId=1ef8d828-44ec-4304-8385-df0088cb0fc7";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            TestLauncher.Navigate(
+                "/BillingAddress?CustomerId=404840&BillingAddressId=1ef8d828-44ec-4304-8385-df0088cb0fc7");
+            _dt = TestLauncher.GenerateTestId();
         }
 
         [TestMethod]

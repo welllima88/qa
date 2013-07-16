@@ -1,9 +1,7 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
 {
@@ -12,43 +10,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
     {
         private static SimCardView _simCardView;
         private static SimCardCreate _simCardCreate;
-        private static IWebDriverAdapter _driver;
-        private static FormAlert _formAlert;
-        private static LobbyView _lobby;
-        private static TestDirector _tb;
-        private long _dt;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-
-            _simCardView = new SimCardView(_driver);
-            _simCardCreate = new SimCardCreate(_driver);
-            _formAlert = new FormAlert(_driver);
-            _lobby = new LobbyView(_driver);
+            _simCardView = new SimCardView();
+            _simCardCreate = new SimCardCreate();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/SIMCard/New";
-            //_driver.Url = _tb.BaseUrl + "/Pages/Admin/AdminOverview.aspx";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            TestLauncher.Navigate("/SIMCard/New");
         }
 
         [TestMethod]

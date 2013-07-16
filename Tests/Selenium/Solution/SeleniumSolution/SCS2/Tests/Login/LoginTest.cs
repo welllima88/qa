@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
@@ -7,33 +6,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Login
     [TestClass]
     public class LoginTest
     {
-        private static TestDirector _tb;
-        private static IWebDriverAdapter _driver;
         private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup();
-            _lobby = new LobbyView(_driver);
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            _lobby = new LobbyView();
+            TestLauncher.Navigate("");
         }
 
         [TestCategory("BasicLoginTest")]

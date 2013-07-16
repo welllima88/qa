@@ -14,10 +14,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
     {
         private static ContactEdit _contactEdit;
         private static ContactView _contactView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static ContactMenu _contactMenu;
         private static MenusTest _menusTests;
@@ -34,37 +32,21 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-
-            _contactMenu = new ContactMenu(_driver);
-            _contactEdit = new ContactEdit(_driver);
-            _contactView = new ContactView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
+            _contactMenu = new ContactMenu();
+            _contactEdit = new ContactEdit();
+            _contactView = new ContactView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
             _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
+            _lobby = new LobbyView();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Person/PersonEdit.aspx?PageMode=view&PersonId=" + _contactId;
+            TestLauncher.Navigate("/Pages/Person/PersonEdit.aspx?PageMode=view&PersonId=" + _contactId);
             _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

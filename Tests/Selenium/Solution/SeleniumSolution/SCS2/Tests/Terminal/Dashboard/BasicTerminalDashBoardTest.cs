@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal;
@@ -13,10 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
     {
         private static TerminalCreate _terminalCreate;
         private static TerminalView _terminalView;
-        private static IWebDriverAdapter _driver;
-        private static NavigationBar _navigationBar;
+
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static TerminalMenu _terminalMenu;
         private static CustomerMenu _customerMenu;
@@ -26,36 +23,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _terminalCreate = new TerminalCreate(_driver);
-            _terminalView = new TerminalView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
+            _terminalCreate = new TerminalCreate();
+            _terminalView = new TerminalView();
+            _recentElements = new RecentElements();
 
-            _formAlert = new FormAlert(_driver);
-            _terminalMenu = new TerminalMenu(_driver);
-            _customerMenu = new CustomerMenu(_driver);
+            _formAlert = new FormAlert();
+            _terminalMenu = new TerminalMenu();
+            _customerMenu = new CustomerMenu();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036";
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
             _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

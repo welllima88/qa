@@ -11,41 +11,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
     {
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _customerCreate = new CustomerCreate(_driver);
-            _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-            _driver.Url = _tb.BaseUrl + "/Default.aspx";
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            _customerMenu = new CustomerMenu();
+            _customerCreate = new CustomerCreate();
+            _customerView = new CustomerView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
+            TestLauncher.Navigate("");
         }
 
         [TestMethod]

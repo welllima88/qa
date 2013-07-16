@@ -15,10 +15,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
     {
         private static LocationView _locationView;
         private static LocationEdit _locationEdit;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static LocationCreate _locationCreate;
         private static LocationMenu _locationMenu;
@@ -30,39 +28,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-
-            _locationMenu = new LocationMenu(_driver);
-            _locationCreate = new LocationCreate(_driver);
-            _locationEdit = new LocationEdit(_driver);
-            _locationView = new LocationView(_driver);
-            _recentElements = new RecentElements(_driver);
+            _locationMenu = new LocationMenu();
+            _locationCreate = new LocationCreate();
+            _locationEdit = new LocationEdit();
+            _locationView = new LocationView();
+            _recentElements = new RecentElements();
             _menusTests = new MenusTest();
 
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
-            _lobby = new LobbyView(_driver);
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
+            _lobby = new LobbyView();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457";
+            TestLauncher.Navigate("/Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
             _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

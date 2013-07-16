@@ -13,8 +13,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         private const int WaitMilliseconds = 1000;
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
 
         private static long _dt;
@@ -24,13 +22,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _customerCreate = new CustomerCreate(_driver);
-            _customerView = new CustomerView(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerCreate = new CustomerCreate();
+            _customerView = new CustomerView();
             _dt = DateTime.Now.Ticks; //timestamp for each test
+
+            TestLauncher.Navigate("");
 
             _customerMenu.CustomerCreate.Click();
 
@@ -52,18 +49,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         public void TestInit()
         {
             Assert.AreEqual("SYR SBS Kunde" + _dt, _customerView.CustomerName);
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

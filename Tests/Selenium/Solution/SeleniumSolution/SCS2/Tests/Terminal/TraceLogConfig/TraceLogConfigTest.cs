@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.TraceLogConfig;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
@@ -9,19 +8,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
     {
         private static TerminalTraceLogConfigView _terminalTraceLogConfigView;
         private static TerminalTraceLogConfigEdit _terminalTraceLogConfigEdit;
-        private static IWebDriverAdapter _driver;
-        private static ScsPlatinTestDirector _tb;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _terminalTraceLogConfigEdit = new TerminalTraceLogConfigEdit(_driver);
-            _terminalTraceLogConfigView = new TerminalTraceLogConfigView(_driver);
+            _terminalTraceLogConfigEdit = new TerminalTraceLogConfigEdit();
+            _terminalTraceLogConfigView = new TerminalTraceLogConfigView();
 
-            _driver.Url = _tb.BaseUrl + "/TracelogConfig/Edit/?TerminalId=21011402";
+            TestLauncher.Navigate("/TracelogConfig/Edit/?TerminalId=21011402");
 
             _terminalTraceLogConfigEdit.ActivatedUntil.TypeText("Date");
             _terminalTraceLogConfigEdit.Parameter.TypeText("Parameter");
@@ -35,23 +29,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
             _terminalTraceLogConfigEdit.DestinationUrlPort.TypeText("22222");
 
             _terminalTraceLogConfigEdit.Save.Click();
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

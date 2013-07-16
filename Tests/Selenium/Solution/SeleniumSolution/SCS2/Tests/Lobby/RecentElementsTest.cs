@@ -10,7 +10,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
@@ -27,8 +26,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         public static void ClassInit(TestContext testContext)
         {
             _lobbyView = new LobbyView();
+
             TestLauncher.Navigate("");
         }
+
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MostRecentContainer()

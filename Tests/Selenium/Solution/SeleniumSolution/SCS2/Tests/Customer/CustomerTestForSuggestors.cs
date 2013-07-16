@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
@@ -11,37 +10,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
     public class CustomerTestForSuggestors
     {
         private static CustomerCreate _customerCreate;
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
         private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _customerCreate = new CustomerCreate(_driver);
-            _customerMenu = new CustomerMenu(_driver);
-            _lobby = new LobbyView(_driver);
-        }
-
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _tb.ShutDownTest();
+            _customerCreate = new CustomerCreate();
+            _customerMenu = new CustomerMenu();
+            _lobby = new LobbyView();
         }
 
         [TestMethod]

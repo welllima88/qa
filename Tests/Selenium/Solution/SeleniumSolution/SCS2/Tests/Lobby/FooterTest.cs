@@ -10,7 +10,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
@@ -29,6 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
             _lobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
+
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Copyright()

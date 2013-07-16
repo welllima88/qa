@@ -1,6 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.TraceLogConfig;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
@@ -10,37 +8,18 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
     {
         private static TerminalTraceLogConfigView _terminalTraceLogConfigView;
         private static TerminalTraceLogConfigEdit _terminalTraceLogConfigEdit;
-        private static FormAlert _formAlert;
-        private static IWebDriverAdapter _driver;
-        private static ScsPlatinTestDirector _tb;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
-            _terminalTraceLogConfigEdit = new TerminalTraceLogConfigEdit(_driver);
-            _terminalTraceLogConfigView = new TerminalTraceLogConfigView(_driver);
-            _formAlert = new FormAlert(_driver);
+            _terminalTraceLogConfigEdit = new TerminalTraceLogConfigEdit();
+            _terminalTraceLogConfigView = new TerminalTraceLogConfigView();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/TracelogConfig/Edit/?TerminalId=21011402";
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
+            TestLauncher.Navigate("/TracelogConfig/Edit/?TerminalId=21011402");
         }
 
         [TestMethod]

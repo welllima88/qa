@@ -15,15 +15,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
     {
         private static CustomerEdit _customerEdit;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
         private static MenusTest _menusTests;
         private static LobbyView _lobby;
-        private static long _dt;
+
         private static string _custId;
         private static string _customerName;
         private static string _supplier;
@@ -53,21 +51,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-
-            _customerMenu = new CustomerMenu(_driver);
-            _customerEdit = new CustomerEdit(_driver);
-            _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerEdit = new CustomerEdit();
+            _customerView = new CustomerView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
             _menusTests = new MenusTest();
-            _lobby = new LobbyView(_driver);
+            _lobby = new LobbyView();
 
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=405125";
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
 
             _custId = _customerView.CustomerNumber;
             _customerName = _customerView.CustomerName;
@@ -96,23 +89,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
             _mobile = _customerView.Mobile;
             _fax = _customerView.Fax;
             _web = _customerView.Web;
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

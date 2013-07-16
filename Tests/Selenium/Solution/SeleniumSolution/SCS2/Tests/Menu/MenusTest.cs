@@ -8,8 +8,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
     [TestClass]
     public class MenusTest
     {
-        private static TestDirector _tb;
-        private static IWebDriverAdapter _driver;
         private static CustomerMenu _customerMenu;
         private static LocationMenu _locationMenu;
         private static TerminalMenu _terminalMenu;
@@ -17,43 +15,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _locationMenu = new LocationMenu(_driver);
-            _terminalMenu = new TerminalMenu(_driver);
+            _customerMenu = new CustomerMenu();
+            _locationMenu = new LocationMenu();
+            _terminalMenu = new TerminalMenu();
         }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
-        }
-
 
         [TestMethod]
         public void CustomerMenuTest()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=85036";
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
             CustomerMenuCheck(_customerMenu);
         }
 
         [TestMethod]
         public void LocationMenuTest()
         {
-            _driver.Url = _tb.BaseUrl + "/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e";
+            TestLauncher.Navigate("/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
             LocationMenuCheck(_locationMenu);
             _customerMenu.Customer.Click();
             CustomerMenuCheck(_customerMenu);
@@ -62,8 +39,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
         [TestMethod]
         public void TerminalMenuTest()
         {
-            _driver.Url = _tb.BaseUrl +
-                          "/Pages/Terminal/TerminalView.aspx?PageMode=view&CustomerId=400805&TerminalId=30980051";
+            TestLauncher.Navigate(
+                "/Pages/Terminal/TerminalView.aspx?PageMode=view&CustomerId=400805&TerminalId=30980051");
 
             TerminalMenuCheck(_terminalMenu);
 
@@ -112,19 +89,21 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu
             //http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
 
             //http://darrellgrainger.blogspot.ch/2012/01/css-for-webdriver-revisited.html
-            IWebElement e = _driver.FindElement(By.CssSelector("a[href*='Customer/CustomerEdit.aspx?PageMode=new']"));
-            _driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
-            _driver.FindElement(By.CssSelector("td:contains(\" Neuer Kunde\"]"));
-            _driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
-            _driver.FindElement(By.CssSelector("td::contains(' Neuer Kunde')"));
-            _driver.FindElement(By.CssSelector("td[innertext='Neuer Kunde']"));
-            _driver.FindElement(By.CssSelector("td:contains('^ Neuer Kunde$')"));
-            _driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
-            _driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
+            IWebDriverAdapter driver = TestLauncher.TestDirector.WebDriver;
 
-            _driver.FindElement(By.CssSelector("td[textContent()=\" Neuer Kunde\"]"));
+            IWebElement e = driver.FindElement(By.CssSelector("a[href*='Customer/CustomerEdit.aspx?PageMode=new']"));
+            driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
+            driver.FindElement(By.CssSelector("td:contains(\" Neuer Kunde\"]"));
+            driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
+            driver.FindElement(By.CssSelector("td::contains(' Neuer Kunde')"));
+            driver.FindElement(By.CssSelector("td[innertext='Neuer Kunde']"));
+            driver.FindElement(By.CssSelector("td:contains('^ Neuer Kunde$')"));
+            driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
+            driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
 
-            _driver.FindElement(By.XPath("//td[text()=' Kunde']"));
+            driver.FindElement(By.CssSelector("td[textContent()=\" Neuer Kunde\"]"));
+
+            driver.FindElement(By.XPath("//td[text()=' Kunde']"));
             e.Click();
         }
 

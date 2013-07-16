@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location;
@@ -15,10 +13,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
     {
         private static BillingAddressView _billingAddressView;
         private static BillingAddressCreate _billingAddressCreate;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static MenusTest _menusTest;
         private static CustomerMenu _customerMenu;
@@ -29,38 +25,22 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login
+            _customerMenu = new CustomerMenu();
+            _billingAddressCreate = new BillingAddressCreate();
+            _billingAddressView = new BillingAddressView();
+            _recentElements = new RecentElements();
 
-            _customerMenu = new CustomerMenu(_driver);
-            _billingAddressCreate = new BillingAddressCreate(_driver);
-            _billingAddressView = new BillingAddressView(_driver);
-            _recentElements = new RecentElements(_driver);
-
-            _navigationBar = new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
-            _customerMenu = new CustomerMenu(_driver);
+            _navigationBar = new NavigationBar();
+            _formAlert = new FormAlert();
+            _customerMenu = new CustomerMenu();
             _menusTest = new MenusTest();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=404871";
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
             _dt = DateTime.Now.Ticks; //timestamp for each test
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]
@@ -250,8 +230,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
 
             _menusTest.CustomerMenuCheck(_customerMenu);
 
-            //var locId = _driver.PageSource.;
-            _driver.FindElement(By.PartialLinkText("SYR ReAd SELE A")).Click();
             Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
@@ -294,7 +272,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             //var locId = _driver.PageSource.;
-            _driver.FindElement(By.PartialLinkText("SYR ReAd SELE A")).Click();
             Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();

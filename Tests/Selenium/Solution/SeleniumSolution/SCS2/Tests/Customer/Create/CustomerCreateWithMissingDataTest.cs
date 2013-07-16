@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
@@ -11,8 +10,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
     public class CustomerCreateWithMissingDataTest
     {
         private static CustomerCreate _customerCreate;
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
 
@@ -21,13 +18,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _customerCreate = new CustomerCreate(_driver);
-            _formAlert = new FormAlert(_driver);
-            _driver.Url = _tb.BaseUrl + "/Default.aspx";
+            _customerMenu = new CustomerMenu();
+            _customerCreate = new CustomerCreate();
+            _formAlert = new FormAlert();
+            TestLauncher.Navigate("");
+
             _customerMenu.CustomerCreate.Click();
 
             // Suggester set once, because not in focus of tests:
@@ -70,8 +65,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [ClassCleanup]
         public static void ClassCleanup()
         {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
 

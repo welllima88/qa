@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact;
@@ -12,8 +11,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     public class ContactCreateWithNoDataTest
     {
         private static ContactCreate _contactCreate;
-        private static IWebDriverAdapter _driver;
-        private static TestDirector _tb;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
 
@@ -22,44 +19,23 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-
-            _customerMenu = new CustomerMenu(_driver);
-            _contactCreate = new ContactCreate(_driver);
-            new ContactView(_driver);
-            new ContactMenu(_driver);
-            new RecentElements(_driver);
-            new NavigationBar(_driver);
-            _formAlert = new FormAlert(_driver);
+            _customerMenu = new CustomerMenu();
+            _contactCreate = new ContactCreate();
+            new ContactView();
+            new ContactMenu();
+            new RecentElements();
+            new NavigationBar();
+            _formAlert = new FormAlert();
             new MenusTest();
-            new LobbyView(_driver);
+            new LobbyView();
 
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=401152";
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             _customerMenu.ContactCreate.Click();
 
             _contactCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]

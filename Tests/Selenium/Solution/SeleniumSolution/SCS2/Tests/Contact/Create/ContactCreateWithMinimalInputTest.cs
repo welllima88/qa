@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact;
@@ -11,26 +10,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     {
         private static ContactCreate _contactCreate;
         private static ContactView _contactView;
-        private static IWebDriverAdapter _driver;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
         private static LobbyView _lobby;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
+            _customerMenu = new CustomerMenu();
+            _contactCreate = new ContactCreate();
+            _contactView = new ContactView();
+            _recentElements = new RecentElements();
+            _lobby = new LobbyView();
 
-            _customerMenu = new CustomerMenu(_driver);
-            _contactCreate = new ContactCreate(_driver);
-            _contactView = new ContactView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _lobby = new LobbyView(_driver);
-
-            _driver.Url = _tb.BaseUrl + "/Pages/Customer/CustomerEdit.aspx?CustomerId=401152";
+            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             _customerMenu.ContactCreate.Click();
 
@@ -41,23 +34,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
             _contactCreate.City = "Berlin";
 
             _contactCreate.SaveButton.Click();
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownTest();
         }
 
         [TestMethod]
@@ -147,10 +123,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void RecentElements()
         {
-            string url = _driver.Url;
+            string url = TestLauncher.TestDirector.WebDriver.Url;
             _lobby.NavigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
-            Assert.AreEqual(_driver.Url, url, false);
+            Assert.AreEqual(TestLauncher.TestDirector.WebDriver.Url, url, false);
         }
     }
 }

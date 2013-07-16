@@ -12,10 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
     {
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
 
         private static string _adressAddition;
@@ -49,16 +47,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _customerCreate = new CustomerCreate(_driver);
-            _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerCreate = new CustomerCreate();
+            _customerView = new CustomerView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
 
-            _driver.Url = _tb.BaseUrl + "/Default.aspx";
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _supplier = "SIX Payment Services AG";
@@ -85,6 +79,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _mobile = "0032 58 399 6237";
             _fax = "0033 58 399 6237";
             _web = "www.six-group.com/de-intern";
+
+            TestLauncher.Navigate("");
 
             _customerMenu.CustomerCreate.Click();
 
@@ -132,10 +128,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         public static void ClassCleanup()
         {
             _customerMenu.CustomerDeactivate.Click();
-            //_customerView.
-
-            //after last test-method finished
-            _tb.ShutDownTest();
+            //_customerView.            
         }
 
 
@@ -148,12 +141,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void MostRecent()
         {
-            string url = _driver.Url;
+            string url = TestLauncher.TestDirector.WebDriver.Url;
 
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
 
-            Assert.AreEqual(url, _driver.Url, true);
+            Assert.AreEqual(url, TestLauncher.TestDirector.WebDriver.Url, true);
             Assert.AreEqual(_custId, _customerView.CustomerNumber);
         }
 

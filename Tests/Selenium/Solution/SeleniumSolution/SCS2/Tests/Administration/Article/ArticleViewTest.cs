@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
@@ -9,38 +8,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
     public class ArticleViewTest
     {
         private static IArticle _articleView;
-        private static TestDirector _tb;
 
-        private static IWebDriverAdapter _driver;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _articleView = new ArticleView(_driver);
+            _articleView = new ArticleView();
 
-            _driver.Url = _tb.BaseUrl + "/Article/Edit?Id=CF03DF69-5AE1-422B-8C37-DCE143157D98";
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //_customerView.
-
-            //after last test-method finished
-            _tb.ShutDownTest();
+            TestLauncher.Navigate("/Article/Edit?Id=CF03DF69-5AE1-422B-8C37-DCE143157D98");
         }
 
         [TestMethod]

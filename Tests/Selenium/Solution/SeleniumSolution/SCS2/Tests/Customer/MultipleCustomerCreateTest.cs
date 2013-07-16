@@ -42,15 +42,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         }
 
         [TestMethod]
+        //TODO probably not working
         public void RunMultiBrowser()
         {
             int no = NumberOfThreads;
             Thread browserInstance;
             while (no > 0)
             {
-                var customerCreateAndCancelTest = new CustomerCreateAndCancelTest();
+                var customerCreateAndCancelTest = new CustomerCreateTest();
 //                customerCreateTest.
-                browserInstance = new Thread(customerCreateAndCancelTest.CreateCustomerAndCancel);
+                browserInstance = new Thread(customerCreateAndCancelTest.AdressAddition);
                 browserInstance.Start();
                 no--;
             }
@@ -73,9 +74,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
         public void EnterValidCustomerDataAndCancel()
         {
             var tb = new ScsPlatinTestDirector();
-            IWebDriverAdapter driver = tb.DefaultTestSetup();
-            var customerMenu = new CustomerMenu(driver);
-            var customerCreate = new CustomerCreate(driver);
+            IWebDriverAdapter driver = tb.PrepareBrowser();
+
+            var customerMenu = new CustomerMenu();
+            var customerCreate = new CustomerCreate();
 
             customerMenu.CustomerCreate.Click();
             customerCreate.CustomerName = "Selenium Test will cancel";
@@ -89,7 +91,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             customerCreate.CancelButton.Click();
             Assert.IsTrue(customerMenu.CustomerCreate.Displayed);
 
-            tb.ShutDownTest();
+            tb.ShutDownBrowser();
         }
     }
 }

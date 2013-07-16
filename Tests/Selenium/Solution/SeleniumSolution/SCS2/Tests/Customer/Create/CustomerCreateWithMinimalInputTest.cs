@@ -12,10 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
     {
         private static CustomerCreate _customerCreate;
         private static CustomerView _customerView;
-        private static IWebDriverAdapter _driver;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static TestDirector _tb;
         private static CustomerMenu _customerMenu;
 
         private static long _dt;
@@ -34,16 +32,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            _tb = new ScsPlatinTestDirector();
-            _driver = _tb.DefaultTestSetup(); //default QA-L with certificate login and 10 seconds response timeout
-            _customerMenu = new CustomerMenu(_driver);
-            _customerCreate = new CustomerCreate(_driver);
-            _customerView = new CustomerView(_driver);
-            _recentElements = new RecentElements(_driver);
-            _navigationBar = new NavigationBar(_driver);
+            _customerMenu = new CustomerMenu();
+            _customerCreate = new CustomerCreate();
+            _customerView = new CustomerView();
+            _recentElements = new RecentElements();
+            _navigationBar = new NavigationBar();
 
-            _driver.Url = _tb.BaseUrl + "/Default.aspx";
+            TestLauncher.Navigate("");
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _customerName = "SYR Kunde" + _dt;
@@ -80,20 +75,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestInitialize]
         public void TestInit()
         {
+            TestLauncher.Navigate("");
         }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _customerMenu.CustomerDeactivate.Click();
-            _tb.ShutDownTest();
-        }
-
 
         [TestMethod]
         public void CustomerName()
