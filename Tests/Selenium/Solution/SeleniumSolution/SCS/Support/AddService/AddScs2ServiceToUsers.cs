@@ -24,16 +24,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
     [TestClass]
     public class AddServiceToUsers
     {
-        private static IWebDriverAdapter _driver;
         private static TestDirector _tb;
+        private static IWebDriverAdapter _driver;
         public TestContext TestContext { get; set; }
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _tb = new ScsClassicTestDirector();
-            _tb.DefaultTestSetup();
-            _driver = _tb.WebDriver;
+            _driver = _tb.PrepareBrowser();
         }
 
         [TestInitialize]
@@ -49,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
         [ClassCleanup]
         public static void ClassCleanup()
         {
-            _tb.ShutDownTest();
+            _tb.ShutDownBrowser();
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",

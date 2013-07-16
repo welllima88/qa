@@ -4,18 +4,17 @@ using SIX.SCS.QA.Selenium.Extension;
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
 {
     /// <summary>
-    /// Summary description for UnitTest
+    ///     Summary description for UnitTest
     /// </summary>
     [TestClass]
     public class SanityCheck
     {
         private static TestDirector _testDirector;
-        private static IWebDriverAdapter _driver;
 
         /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
+        ///     Gets or sets the test context which provides
+        ///     information about and functionality for the current test run.
+        /// </summary>
         public TestContext TestContext { get; set; }
 
         #region Additional test attributes
@@ -28,14 +27,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
         public static void MyClassInitialize(TestContext testContext)
         {
             _testDirector = new ScsClassicTestDirector();
-            _driver = _testDirector.WebDriver;
 
             // var auth = new UacAuthentication("six_scs_auto", "six_scs_auto_pw",_driver);
             // var auth = new CertificateAuthentication("tkcposl", _driver);
             // var app = new Scs(_driver);
 
             //_testDirector.SetupTest("https://gateint.telekurs.ch/scsc-qa-l/", auth, app, app, auth);
-            _testDirector.DefaultTestSetup();
+            _testDirector.PrepareBrowser();
         }
 
         //
@@ -43,7 +41,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
         [ClassCleanup]
         public static void MyClassCleanup()
         {
-            _testDirector.ShutDownTest();
+            _testDirector.ShutDownBrowser();
         }
 
         //

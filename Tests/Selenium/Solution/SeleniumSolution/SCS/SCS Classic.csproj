@@ -76,7 +76,12 @@
       <DependentUpon>ScsRes.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsClassicTestDirector.cs" />
+    <Compile Include="Settings\Dev.cs" />
+    <Compile Include="Settings\Prod.cs" />
+    <Compile Include="Settings\QaK.cs" />
+    <Compile Include="Settings\QaL.cs" />
     <Compile Include="Support\AddService\AddScs2ServiceToUsers.cs" />
+    <Compile Include="TestLauncher.cs" />
     <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
