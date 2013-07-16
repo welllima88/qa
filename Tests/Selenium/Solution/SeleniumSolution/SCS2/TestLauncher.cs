@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
             TestDirector.WebDriver.Url = TestDirector.TestEnvironment.BaseUrl + urlSuffix;
         }
 
-        public static long TestGenId()
+        public static long GenerateTestId()
         {
             return DateTime.Now.Ticks;
         }

@@ -42,6 +42,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEV|AnyCPU'">
     <OutputPath>bin\DEV\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QAL|AnyCPU'">
     <OutputPath>bin\QAL\</OutputPath>
@@ -68,13 +70,17 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestLauncher.cs" />
     <Compile Include="Properties\Scs2Res.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Scs2Res.resx</DependentUpon>
     </Compile>
     <Compile Include="ScsPlatinTestDirector.cs" />
-    <Compile Include="Settings\DevEnvironment.cs" />
+    <Compile Include="Settings\Prod.cs" />
+    <Compile Include="Settings\QaK.cs" />
+    <Compile Include="Settings\QaL.cs" />
+    <Compile Include="Settings\Dev.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
     <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -216,7 +222,6 @@
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
-    <Compile Include="Tests\Customer\Create\CustomerCreateAndCancelTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateGuiTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithSBSExportTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
@@ -285,6 +290,7 @@
   <ItemGroup>
     <Content Include="GoodToKnow\DataSource.txt" />
     <Content Include="GoodToKnow\RegReplace.txt" />
+    <Content Include="GoodToKnow\WebLinks.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
