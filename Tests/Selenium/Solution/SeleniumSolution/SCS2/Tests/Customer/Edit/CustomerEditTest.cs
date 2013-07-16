@@ -100,65 +100,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
             _menusTests.CustomerMenuCheck(_customerMenu);
         }
 
-        [TestMethod]
-        public void EditCustomerAndCancel()
-        {
-            _customerMenu.CustomerEdit.Click();
-
-            _customerEdit.CustomerName = "SYR Sele Kunde AAA";
-
-            _customerEdit.CompanyName = "SYR Sele Firma AAA";
-            _customerEdit.StreetName = "Hardturmstr. 2011";
-            _customerEdit.Zip = "80222";
-            _customerEdit.City = "Zürichhh";
-            _customerEdit.Po = "PFO111";
-            _customerEdit.AdressAddition = "Etage 333";
-            _customerEdit.Region = "Reggg";
-            _customerEdit.SapNumber = "4449";
-
-            _customerEdit.Agency = "C01 Bellia Antoine";
-            _customerEdit.Language = "Kroatisch [hr]";
-            _customerEdit.Country = "Albanien [AL]";
-            _customerEdit.Email = "marc.siegmund@six-group.commmm";
-            _customerEdit.Telephone = "0031 58 399 623777";
-            _customerEdit.Mobile = "0032 58 399 623777";
-            _customerEdit.Fax = "0033 58 399 623777";
-            _customerEdit.Web = "www.six-group.com/de-internnnn";
-
-            _customerEdit.CancelButton.Click();
-
-            Assert.AreEqual(_custId, _customerView.CustomerNumber);
-            Assert.AreEqual(_customerName, _customerView.CustomerName);
-            Assert.AreEqual(_supplier, _customerView.Supplier);
-            Assert.AreEqual(_sbsDebitNumber, _customerView.SbsDebitNumber);
-            Assert.AreEqual(_sbsAdressNumber, _customerView.SbsAdressNumber);
-            Assert.AreEqual(_sbsBillingTenant, _customerView.SbsBillingTenant);
-            Assert.AreEqual(_sbsCurrency, _customerView.SbsCurrency);
-            Assert.AreEqual(_sapNumber, _customerView.SapNumber);
-            Assert.AreEqual(_segment, _customerView.Segment);
-            Assert.AreEqual(_ep2MerchantId, _customerView.Ep2MerchantId);
-
-            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
-
-            Assert.AreEqual(_companyName, _customerView.CompanyName);
-            Assert.AreEqual(_po, _customerView.Po);
-            Assert.AreEqual(_adressAddition, _customerView.AdressAddition);
-            Assert.AreEqual(_streetName, _customerView.StreetNo);
-            Assert.AreEqual(_zip, _customerView.Zip);
-            Assert.AreEqual(_city, _customerView.City);
-            Assert.AreEqual(_agency, _customerView.Agency);
-            Assert.AreEqual(_language, _customerView.Language);
-            Assert.AreEqual(_country, _customerView.Country);
-            Assert.AreEqual(_email, _customerView.Email);
-            Assert.AreEqual(_telephone, _customerView.Telephone);
-            Assert.AreEqual(_mobile, _customerView.Mobile);
-            Assert.AreEqual(_fax, _customerView.Fax);
-            Assert.AreEqual(_web, _customerView.Web);
-        }
-
-        [Ignore]
+       [Ignore]
         [TestMethod]
         public void EditCustomerDoesNotAllowCustomerNumberChange()
         {
@@ -183,53 +125,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void EditCustomerDoesNotAllowSbsCurrencyChange()
         {
-            throw new NotImplementedException();
-            //Todo implement ignored tests
+            throw new NotImplementedException();            
         }
 
-        [TestMethod]
-        public void EditCustomerWithInvalidDataFailed()
-        {
-            _customerMenu.CustomerEdit.Click();
-
-            _customerEdit.CustomerName = "SYR Sele Kunde A$°";
-
-            _customerEdit.CompanyName = "SYR Sele Firma A$°";
-            _customerEdit.StreetName = "Hardturmstr. 201$°";
-            _customerEdit.Zip = "802$°";
-            _customerEdit.City = "Zürich$°";
-            _customerEdit.Po = "PFO1$°";
-            _customerEdit.AdressAddition = "Etage 3$°";
-            _customerEdit.Region = "Reg 3[]$°";
-            _customerEdit.SapNumber = "4}$°";
-
-            _customerEdit.Agency = "SIX Payment Services (Europe)";
-            _customerEdit.Language = "Deutsch [de]";
-            _customerEdit.Country = "Schweiz [CH]";
-            _customerEdit.Email = "marc.siegmund@six-grou$°p.com";
-            _customerEdit.Telephone = "0031 58 399 6237}$°";
-            _customerEdit.Mobile = "0032 58 399 6237}$°";
-            _customerEdit.Fax = "0033 58 399 6237}$°";
-            _customerEdit.Web = "www.six-^°@}$.com/de-inte[]rn$°";
-
-            _customerEdit.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
-            Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"), "web adress not validated");
-            Assert.IsTrue(_formAlerts.Count == 13);
-        }
 
         [TestMethod]
         public void EditCustomerWithoutCompanyNameFailed()
