@@ -6,12 +6,12 @@ using OpenQA.Selenium.Support.UI;
 namespace SIX.SCS.QA.Selenium.Extension
 {
     /// <summary>
-    /// This class adds selenium features which we often need in Zebra and used in common instead of selenium theWebElement. This class extends 
+    ///     This class adds selenium features which we often need in Zebra and used in common instead of selenium theWebElement. This class extends
     /// </summary>
     public class WebElementAdapter : IWebElementAdapter
     {
         /// <summary>
-        /// provide the public member
+        ///     provide the public member
         /// </summary>
         private readonly IWebElement _theWebElement;
 
@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         #region IWebElementAdapter Members
 
         /// <summary>
-        /// Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.) can be executed
+        ///     Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.) can be executed
         /// </summary>
         /// <returns>SelectElement for the actual WebElement</returns>
         public SelectElement Selector()
@@ -52,7 +52,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        /// ensures and sets the the value for a checkbox if necessary
+        ///     ensures and sets the the value for a checkbox if necessary
         /// </summary>
         /// <param name="userInput"></param>
         public void SetCheckbox(bool userInput)

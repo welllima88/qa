@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 namespace SIX.SCS.QA.Selenium.Extension
 {
     /// <summary>
-    /// This WebDriver adapter adds one method to make use of adapted web elements
+    ///     This WebDriver adapter adds one method to make use of adapted web elements
     /// </summary>
     public class WebDriverAdapter : IWebDriverAdapter
     {
@@ -26,7 +26,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="by"></param>
         /// <returns></returns>
@@ -122,7 +121,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        /// Wait for an element found by locator is displayed within the default timeout
+        ///     Wait for an element found by locator is displayed within the default timeout
         /// </summary>
         /// <param name="locator">locator for element for which it should be wait</param>
         /// <returns>the found element (otherwise exception)</returns>
@@ -134,7 +133,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         #endregion
 
         /// <summary>
-        /// Wait for an element found by locator is displayed within the given timeout
+        ///     Wait for an element found by locator is displayed within the given timeout
         /// </summary>
         /// <param name="locator">locator for element for which it should be wait</param>
         /// <param name="timeout">timeout [s] after how many seconds the wait shoul be canceled</param>
@@ -158,7 +157,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
         /// <returns></returns>

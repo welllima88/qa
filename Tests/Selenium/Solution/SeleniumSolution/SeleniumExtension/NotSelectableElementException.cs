@@ -3,7 +3,7 @@
 namespace SIX.SCS.QA.Selenium.Extension
 {
     /// <summary>
-    /// This exception is thrown, if the Selector is not a select WebElement
+    ///     This exception is thrown, if the Selector is not a select WebElement
     /// </summary>
     public class NotSelectableElementException : Exception
     {
