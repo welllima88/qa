@@ -1,32 +1,22 @@
 using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
-using SIX.SCS.QA.Selenium.Extension.Authentication;
-using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-
-// http://www.seleniumwiki.com/category/visual-studio-2010/
-// http://code.google.com/p/selenium/downloads/list
-// http://msdn.microsoft.com/en-us/library/ff770525.aspx
 
 namespace SIX.SCS.QA.Selenium.Extension
 {
+    [TestClass]
     public abstract class TestDirector
     {
-        protected static readonly string CertifacteProfile = DriverRes.FirefoxProfile_Certificate;
-        protected static readonly string PlainProfile = DriverRes.FirefoxProfile_Plain;
-        private IApplication _application;
-        private IAuthentication _authentication;
-
-        public static IWebDriverAdapter WebDriver { get; protected set; }
-
+        public IWebDriverAdapter WebDriver;
+        public abstract TestEnvironment TestEnvironment { get; }
         public string BaseUrl { get; private set; }
 
-        protected static void FireFoxWebDriverAdapter(string profileName)
+        private void CreateFirefoxWebDriverInstance(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-
-            WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
 
         /// <summary>
@@ -38,47 +28,44 @@ namespace SIX.SCS.QA.Selenium.Extension
         protected void InternetExplorerWebDriverAdapter(string driverPath)
         {
             //@"D:\_tfs\ScsDev\QA\Tests\Selenium\IEDriver"
-            WebDriver = new WebDriverAdapter(new InternetExplorerDriver(driverPath));
+            WebObject.WebDriver = new WebDriverAdapter(new InternetExplorerDriver(driverPath));
         }
 
         /// <summary>
         ///     Execute the required authentication procedure to fulfill the basic precondition of testing.
         /// </summary>
-        /// <param name="baseUrl">sets the base url for testing e.g. "https://gateint.telekurs.ch/scsc-qa-l" </param>
-        /// <param name="authentication">
-        ///     Choose the appropiate authentication strategy authentication by:
-        ///     - certifacte
-        ///     - SecureId
-        ///     - UAF
-        /// </param>
-        /// <param name="application"></param>
-        protected void StartUpTest(string baseUrl, IAuthentication authentication, IApplication application)
+        protected void LoginWebApplication()
         {
-            _authentication = authentication;
-            _application = application;
-
-            BaseUrl = WebDriver.Url = baseUrl; // essential to avoid constructor actions
-
-            _authentication.Login();
+            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl; // essential to avoid constructor actions
+            TestEnvironment.Authentication.Login();
         }
 
-        public virtual IWebDriverAdapter DefaultTestSetup(TestEnvironment environment)
+        public IWebDriverAdapter PrepareBrowser()
         {
-            throw new NotImplementedException("sub class has to implement this method");
+            CreateFirefoxWebDriverInstance(TestEnvironment.BrowserProfileName);
+            ConfigureTimeouts();
+            LoginWebApplication();
+
+            return WebDriver;
         }
 
-        public virtual IWebDriverAdapter DefaultTestSetup()
+        private void ConfigureTimeouts()
         {
-            throw new NotImplementedException("sub class has to implement this method");
+            WebDriver.Manage()
+                     .Timeouts()
+                     .SetPageLoadTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetPageLoadTimeout));
+            WebDriver.Manage()
+                     .Timeouts()
+                     .SetScriptTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout));
+            WebDriver.Manage()
+                     .Timeouts()
+                     .ImplicitlyWait(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.ImplicitlyWait));
         }
 
-        /// <summary>
-        ///     application with check and shutdown of driver
-        /// </summary>
-        public void ShutDownTest()
+        public void ShutDownBrowser()
         {
-            _application.Logout();
-            WebDriver.Quit();
+            TestEnvironment.Application.Logout();
+            WebObject.WebDriver.Quit();
         }
     }
 }
