@@ -1,7 +1,7 @@
 namespace SIX.SCS.QA.Selenium.Extension
 {
     /// <summary>
-    /// This abstract WebObject bundles features for all test objects, like Driver Reference and locator information
+    ///     This abstract WebObject bundles features for all test objects, like WebDriver Reference and locator information
     /// </summary>
     public abstract class WebObject : IWebObject
     {
@@ -9,13 +9,17 @@ namespace SIX.SCS.QA.Selenium.Extension
         protected string Suffix = "";
 
         /// <summary>
-        /// This abstract class of an WebObject defines the essential constructor for initializing the WebDriver reference.
-        /// It is also used for adding features to all test objects
+        ///     This abstract class of an WebObject defines the essential constructor for initializing the WebDriver reference.
+        ///     It is also used for adding features to all test objects
         /// </summary>
         /// <param name="driver"></param>
         protected WebObject(IWebDriverAdapter driver)
         {
-            Driver = driver;
+            WebDriver = driver;
+        }
+
+        protected WebObject()
+        {
         }
 
         // /// <summary>
@@ -27,8 +31,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         //}
 
         /// <summary>
-        /// overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by the constructor)
+        ///     overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by the constructor)
         /// </summary>
-        protected IWebDriverAdapter Driver { get; private set; }
+        public static IWebDriverAdapter WebDriver { get; set; }
     }
 }
