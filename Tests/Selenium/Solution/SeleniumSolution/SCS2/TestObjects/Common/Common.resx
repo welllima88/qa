@@ -133,7 +133,7 @@
     <value>div.container span#ctl00_bodyContentPlaceHolder_lblNewsTitle h2</value>
   </data>
   <data name="Lobby_CompanyLogo" xml:space="preserve">
-    <value>html&gt;body&gt;form&gt;img.companyLogo</value>
+    <value>html&gt;body&gt;img.companyLogo</value>
   </data>
   <data name="Lobby_Headline" xml:space="preserve">
     <value>td#content h1</value>
