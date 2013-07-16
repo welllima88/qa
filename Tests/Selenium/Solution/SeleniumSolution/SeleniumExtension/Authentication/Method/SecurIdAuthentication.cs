@@ -15,22 +15,21 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         private readonly WesSecurIdLoginPage _wes;
 
         /// <summary>
-        /// The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved due to security, so after test run the data will not be available anymore. But there is no further protection like encryption or forced data destruction.
+        ///     The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved due to security, so after test run the data will not be available anymore. But there is no further protection like encryption or forced data destruction.
         /// </summary>
         /// <param name="userName">username e.g. "tksyr"</param>
         /// <param name="password">password for userName</param>
         /// <param name="mandant">e.g. "TKCPOS"</param>
         /// <param name="securId">4 digits (fix password) + 6 digits securId-token</param>
         /// <param name="webDriverAdapter"></param>
-        public SecurIdAuthentication(String userName, String password, String mandant, String securId,
-                            IWebDriverAdapter webDriverAdapter) : base(webDriverAdapter)
+        public SecurIdAuthentication(String userName, String password, String mandant, String securId)
             //todo remove driver object and create page data object with this reference
         {
             _securId = securId;
             _userName = userName;
             _password = password;
             _mandant = mandant;
-            _wes = new WesSecurIdLoginPage(webDriverAdapter);
+            _wes = new WesSecurIdLoginPage();
         }
 
         #region IAuthentication Members

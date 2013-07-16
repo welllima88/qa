@@ -8,10 +8,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         private readonly string _mandant;
         private readonly WesCertificateLoginPage _wes;
 
-        public CertificateAuthentication(string mandant, IWebDriverAdapter driver) : base(driver)
+        public CertificateAuthentication(string mandant)
         {
             _mandant = mandant;
-            _wes = new WesCertificateLoginPage(driver);
+            _wes = new WesCertificateLoginPage();
         }
 
         #region IAuthentication Members

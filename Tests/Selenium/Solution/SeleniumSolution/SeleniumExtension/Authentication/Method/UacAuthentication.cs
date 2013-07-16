@@ -8,17 +8,17 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         private readonly UacLoginPage _uacLoginPage;
         private readonly string _userName = "six_scs_auto_PW";
 
-        public UacAuthentication(string userName, string password, IWebDriverAdapter driver) : base(driver)
+        public UacAuthentication(string userName, string password)
         {
             _userName = userName;
             _password = password;
-            _uacLoginPage = new UacLoginPage(driver);
+            _uacLoginPage = new UacLoginPage();
         }
 
         #region IAuthentication Members
 
         /// <summary>
-        /// uses UAC authentication for the test user "six_scs_auto"
+        ///     uses UAC authentication for the test user "six_scs_auto"
         /// </summary>
         public void Login()
         {
