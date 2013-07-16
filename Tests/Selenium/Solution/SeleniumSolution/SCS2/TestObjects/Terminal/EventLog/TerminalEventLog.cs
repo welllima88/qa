@@ -34,5 +34,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.EventLog
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("td#content table tbody tr.Summary")); }
         }
+
+        public IWebElement Export
+        {
+            get { return WebDriver.FindElement(By.CssSelector("input[value='Export']")); }
+        }
     }
 }

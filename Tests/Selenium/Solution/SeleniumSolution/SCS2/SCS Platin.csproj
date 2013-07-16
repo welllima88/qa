@@ -264,7 +264,7 @@
     <Compile Include="Tests\Terminal\OnlineFinancialAdviceValidation.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\FixTerminalInfoTests.cs" />
-    <Compile Include="Tests\Terminal\EventLog\BasicEventLogTest.cs" />
+    <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
