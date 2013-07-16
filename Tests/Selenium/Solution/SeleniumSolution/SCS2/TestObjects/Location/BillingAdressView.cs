@@ -5,13 +5,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 {
     public class BillingAddressView : WebObject
     {
-        public BillingAddressView(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public string CompanyName
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_LocationName")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_LocationName")).Text; }
         }
 
         public string StreetName
@@ -19,8 +15,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_Street"))
-                        .Text;
+                    WebDriver.FindElement(By.CssSelector("#LocationData_Street"))
+                             .Text;
             }
         }
 
@@ -29,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_ZIP")).Text;
+                    WebDriver.FindElement(By.CssSelector("#LocationData_ZIP")).Text;
             }
         }
 
@@ -38,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_City")).Text;
+                    WebDriver.FindElement(By.CssSelector("#LocationData_City")).Text;
             }
         }
 
@@ -48,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_LanguageId")).Text;
+                    WebDriver.FindElement(By.CssSelector("#LocationData_LanguageId")).Text;
             }
         }
 
@@ -57,49 +53,49 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector("#LocationData_CountryId")).Text;
+                    WebDriver.FindElement(By.CssSelector("#LocationData_CountryId")).Text;
             }
         }
 
 
         public string Po
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_PO")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_PO")).Text; }
         }
 
         public string AdressAddition
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
         }
 
         public string Email
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Email")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_Email")).Text; }
         }
 
         public string Web
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Web")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_Web")).Text; }
         }
 
         public string Telephone
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Telephone")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_Telephone")).Text; }
         }
 
         public string Mobile
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Mobile")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_Mobile")).Text; }
         }
 
         public string Fax
         {
-            get { return Driver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
         }
 
         public IWebElement EditButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
     }
 }

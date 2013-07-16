@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
@@ -7,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
     {
         //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
 
-        public TechnicalViewPortlet(IWebDriverAdapter driver) : base(driver)
+        public TechnicalViewPortlet()
         {
             PortletId = "div#frame_TerminalTechnicalViewpointPortlet ";
         }
@@ -17,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(1)" + Suffix));
             }
@@ -28,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(3)" + Suffix));
             }
@@ -39,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(4)" + Suffix));
             }
@@ -50,7 +49,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(5)" + Suffix));
             }
@@ -61,7 +60,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(6)" + Suffix));
             }

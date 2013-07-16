@@ -6,33 +6,30 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 {
-    internal class SimCardView
+    internal class SimCardView : WebObject
     {
-        private readonly IWebDriverAdapter _driver;
-
         public SimCardElementView SimCardElement;
         public SimCardHistory SimCardHistory;
 
-        public SimCardView(IWebDriver driver)
+        public SimCardView()
         {
-            _driver = new WebDriverAdapter(driver);
-            SimCardElement = new SimCardElementView(_driver);
-            SimCardHistory = new SimCardHistory(_driver);
+            SimCardElement = new SimCardElementView();
+            SimCardHistory = new SimCardHistory();
         }
 
         public IWebElement LockButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("button[name='lock']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='lock']")); }
         }
 
         public IWebElement UnlinkButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("button[name='unlink']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='unlink']")); }
         }
 
         public IWebElement EditButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("button[name='edit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")); }
         }
 
         public Collection<ISimCardElement> SimCardList
@@ -42,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 
         public IWebElement CreateButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
         }
     }
 }

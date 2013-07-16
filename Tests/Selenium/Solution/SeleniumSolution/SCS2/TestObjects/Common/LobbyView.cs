@@ -27,28 +27,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 
         #endregion
 
-        public LobbyView(IWebDriverAdapter driver) : base(driver)
+        public LobbyView()
         {
-            Menu = new LobbyMenu(Driver);
-            RecentElements = new RecentElements(Driver);
-            RecentMassmutations = new RecentMassmutations(Driver);
-            NavigationBar = new NavigationBar(Driver);
-            Footer = new Footer(Driver);
-            MetaNavBar = new MetaNavBar(Driver);
-            ApplicationInfo = new ApplicationInfo(Driver);
-            LobbyNews = new LobbyNews(Driver);
-            QuickSearch = new QuickSearch(Driver);
-            ProcessTickets = new ProcessTickets(Driver);
+            Menu = new LobbyMenu();
+            RecentElements = new RecentElements();
+            RecentMassmutations = new RecentMassmutations();
+            NavigationBar = new NavigationBar();
+            Footer = new Footer();
+            MetaNavBar = new MetaNavBar();
+            ApplicationInfo = new ApplicationInfo();
+            LobbyNews = new LobbyNews();
+            QuickSearch = new QuickSearch();
+            ProcessTickets = new ProcessTickets();
         }
 
         public IWebElement CompanyLogo
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Lobby_CompanyLogo)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Lobby_CompanyLogo)); }
         }
 
         public IWebElement Headline
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
         }
     }
 }

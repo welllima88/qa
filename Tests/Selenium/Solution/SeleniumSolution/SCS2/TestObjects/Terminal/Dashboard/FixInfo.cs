@@ -3,7 +3,7 @@
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
     /// <summary>
-    /// This object bundles the fix view elements of the "Terminal Dashboard"
+    ///     This object bundles the fix view elements of the "Terminal Dashboard"
     /// </summary>
     public class FixInfo : WebObject
     {
@@ -11,12 +11,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         public readonly LocationInfo Location;
         public readonly TerminalInfo Terminal;
 
-        public FixInfo(IWebDriverAdapter webDriver) : base(webDriver)
+        public FixInfo()
         {
             Prefix = "";
-            Customer = new CustomerInfo(webDriver);
-            Location = new LocationInfo(webDriver);
-            Terminal = new TerminalInfo(webDriver);
+            Customer = new CustomerInfo();
+            Location = new LocationInfo();
+            Terminal = new TerminalInfo();
         }
     }
 }

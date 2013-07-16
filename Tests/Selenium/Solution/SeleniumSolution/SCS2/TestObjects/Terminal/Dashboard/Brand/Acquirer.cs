@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Bra
     {
         public List<BrandContract> Brands;
 
-        public Acquirer(IWebDriverAdapter driver) : base(driver)
+        public Acquirer()
         {
             Brands = new List<BrandContract>(5);
         }

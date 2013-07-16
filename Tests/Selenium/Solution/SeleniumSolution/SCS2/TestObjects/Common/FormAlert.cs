@@ -8,18 +8,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class FormAlert : WebObject
     {
-        public FormAlert(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public List<String> FormAlertList
         {
-            get { return Driver.WebElementsAsStringList(FormAlertElements); }
+            get { return WebDriver.WebElementsAsStringList(FormAlertElements); }
         }
 
         public ReadOnlyCollection<IWebElement> FormAlertElements
         {
-            get { return Driver.FindElements(By.CssSelector(Common.FormAlert_FormAlertElements)); }
+            get { return WebDriver.FindElements(By.CssSelector(Common.FormAlert_FormAlertElements)); }
         }
     }
 }

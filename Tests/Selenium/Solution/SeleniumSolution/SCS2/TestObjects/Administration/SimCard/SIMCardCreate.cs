@@ -5,18 +5,11 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 {
-    internal class SimCardCreate : ISimCardElement
+    internal class SimCardCreate : WebObject, ISimCardElement
     {
-        private readonly IWebDriverAdapter _driver;
-
-        public SimCardCreate(IWebDriverAdapter driver)
-        {
-            _driver = driver;
-        }
-
         public IWebElement SaveButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region ISimCardElement Members
@@ -24,31 +17,31 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
         public string NetProvider
         {
             get { throw new NotSupportedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_NetworkProviderId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_NetworkProviderId")).Selector().SelectByText(value); }
         }
 
         public string SimCardNumber
         {
             get { throw new NotSupportedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_CardNumber")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_CardNumber")).TypeText(value); }
         }
 
         public string MobileNumber
         {
             get { throw new NotSupportedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_MobileNumber")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_MobileNumber")).TypeText(value); }
         }
 
         public string Pin
         {
             get { throw new NotSupportedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_PIN")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PIN")).TypeText(value); }
         }
 
         public string Puk
         {
             get { throw new NotSupportedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TypeText(value); }
         }
 
         public bool Status
@@ -66,13 +59,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
         public string Region
         {
             get { throw new NotImplementedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_LocationId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_LocationId")).Selector().SelectByText(value); }
         }
 
         public string Usage
         {
             get { throw new NotImplementedException(); }
-            set { _driver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Selector().SelectByText(value); }
         }
 
         #endregion

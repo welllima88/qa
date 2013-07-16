@@ -5,18 +5,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Bra
 {
     public class ServiceCenter : WebObject
     {
-        public ServiceCenter(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElementAdapter ExternId
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("#ExternId")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ExternId")); }
         }
 
         public IWebElementAdapter NetAdress
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("#SCNetAddress")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SCNetAddress")); }
         }
     }
 }

@@ -1,10 +1,8 @@
-﻿using SIX.SCS.QA.Selenium.Extension;
-
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
+﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
     public class ContactsPortlet : PortletViewBase
     {
-        public ContactsPortlet(IWebDriverAdapter driver) : base(driver)
+        public ContactsPortlet()
         {
             PortletId = "div#frame_ContactPortlet";
         }

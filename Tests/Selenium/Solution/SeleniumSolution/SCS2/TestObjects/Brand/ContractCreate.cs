@@ -9,9 +9,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
     {
         private ContractSelect _contractSelect;
 
-        public ContractCreate(IWebDriverAdapter driver) : base(driver)
+        public ContractCreate()
         {
-            _contractSelect = new ContractSelect(Driver);
+            _contractSelect = new ContractSelect();
             //throw new NotImplementedException();
         }
 
@@ -27,48 +27,49 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 
         private void ClickEditContract(String brand, String brandType)
         {
-            Driver.FindElement(
+            WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
-                Click();
+                      Click();
         }
 
         public void SelectMcc(String mcc)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyCategoryCode_sugCategoryCode"))
-                .Selector().SelectByText(mcc);
+                     .Selector().SelectByText(mcc);
         }
 
         public void SetVpNo(String vpNo)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .TypeText(vpNo);
+                     .TypeText(vpNo);
         }
 
         public void SelectBusinessTemplate(String businessTemplate)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                SelectByText(businessTemplate);
+                      SelectByText(businessTemplate);
         }
 
         public void SetDcc(bool dccEnabeled)
         {
-            Driver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']")).SetCheckbox(dccEnabeled);
+            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']")).SetCheckbox(dccEnabeled);
         }
 
         public void SetDccBaseCurrency(String dccBaseCurrency)
         {
-            Driver.FindElement(By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
-                .Click();
+            WebDriver.FindElement(
+                By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
+                     .Click();
         }
 
         public void SaveAndCreate()
         {
-            Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
+            WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
         }
     }
 }

@@ -5,15 +5,8 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 {
-    internal class SimCardListView
+    internal class SimCardListView : WebObject
     {
-        private readonly IWebDriverAdapter _driver;
-
-        public SimCardListView(IWebDriver driver)
-        {
-            _driver = new WebDriverAdapter(driver);
-        }
-
         public Collection<ISimCardElement> SimCardList
         {
             get
@@ -25,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 
         public IWebElement CreateButton
         {
-            get { return _driver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
         }
     }
 }

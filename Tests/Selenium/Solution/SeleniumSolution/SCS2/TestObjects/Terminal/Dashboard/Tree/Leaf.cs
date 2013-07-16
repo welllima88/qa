@@ -4,8 +4,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Tre
 {
     public class Leaf : WebObject, IWebObject
     {
-        public Leaf(IWebDriverAdapter driver) : base(driver)
-        {
-        }
     }
 }

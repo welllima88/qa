@@ -5,13 +5,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Bra
 {
     public class Pms : WebObject
     {
-        public Pms(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElementAdapter NetAdress
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector("#PMSNetAddress")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#PMSNetAddress")); }
         }
     }
 }

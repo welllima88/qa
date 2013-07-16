@@ -5,10 +5,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
 {
     public class Terminal : WebObject
     {
-        public Terminal(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         private string Name { get; set; }
 
         private string SAPNo { get; set; }

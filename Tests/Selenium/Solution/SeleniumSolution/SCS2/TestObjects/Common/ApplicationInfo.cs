@@ -5,13 +5,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class ApplicationInfo : WebObject
     {
-        public ApplicationInfo(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElement ApplicationName
         {
-            get { return Driver.FindElement(By.CssSelector(Common.ApplicationInfo_ApplicationName)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.ApplicationInfo_ApplicationName)); }
         }
 
         public IWebElement Environment
@@ -19,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Common.ApplicationInfo_Environment));
             }
         }

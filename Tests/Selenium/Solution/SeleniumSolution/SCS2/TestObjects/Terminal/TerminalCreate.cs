@@ -8,11 +8,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         public TerminalConfigCreate TerminalConfigCreate;
         public TerminalConfigDetailsCreate TerminalConfigDetailsCreate;
 
-        public TerminalCreate(IWebDriverAdapter driver) : base(driver)
+        public TerminalCreate()
         {
-            TerminalChooser = new TerminalChooser(Driver);
-            TerminalConfigCreate = new TerminalConfigCreate(Driver);
-            TerminalConfigDetailsCreate = new TerminalConfigDetailsCreate(Driver);
+            TerminalChooser = new TerminalChooser();
+            TerminalConfigCreate = new TerminalConfigCreate();
+            TerminalConfigDetailsCreate = new TerminalConfigDetailsCreate();
         }
     }
 }

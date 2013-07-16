@@ -5,7 +5,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
 {
     public abstract class PortletViewBase : WebObject
     {
-        protected PortletViewBase(IWebDriverAdapter driver) : base(driver)
+        protected PortletViewBase()
         {
             Suffix = " div.portletKeyValueRow div.treeGridValueCol";
             Prefix = "tbody div#dashboarditems div ";
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Prefix + PortletId + "h1.portlet-header"));
             }
         }
@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Prefix + PortletId + "h1 span[title='refresh']"));
             }
         }
@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Prefix + PortletId + "h1 span[title='minimize']"));
             }
         }

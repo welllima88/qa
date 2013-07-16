@@ -5,28 +5,24 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class Footer : WebObject
     {
-        public Footer(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElement Feedback
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Footer_Feedback)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Feedback)); }
         }
 
         public IWebElement Disclaimer
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Footer_Disclaimer)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Disclaimer)); }
         }
 
         public IWebElement Copyright
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Footer_Copyright)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Copyright)); }
         }
 
         public IWebElement PrintPage
         {
-            get { return Driver.FindElement(By.CssSelector(Common.Footer_PrintPage)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_PrintPage)); }
         }
 
         public IWebElement ScrollUp
@@ -34,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Common.Footer_ScrollUp));
+                    WebDriver.FindElement(By.CssSelector(Common.Footer_ScrollUp));
             }
         }
     }

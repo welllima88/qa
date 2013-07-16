@@ -6,18 +6,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class LobbyNews : WebObject
     {
-        public LobbyNews(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public ReadOnlyCollection<IWebElement> NewsElements
         {
-            get { return Driver.FindElements(By.CssSelector(Common.LobbyNews_NewsElements)); }
+            get { return WebDriver.FindElements(By.CssSelector(Common.LobbyNews_NewsElements)); }
         }
 
         public IWebElement NewsTitle
         {
-            get { return Driver.FindElement(By.CssSelector(Common.LobbyNews_NewsTitle)); }
+            get { return WebDriver.FindElement(By.CssSelector(Common.LobbyNews_NewsTitle)); }
         }
     }
 }

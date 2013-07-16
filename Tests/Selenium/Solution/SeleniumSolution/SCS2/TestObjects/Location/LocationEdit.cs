@@ -10,10 +10,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         private readonly LocationCreate _locationCreate;
         private readonly LocationView _locationView;
 
-        public LocationEdit(IWebDriverAdapter driver) : base(driver)
+        public LocationEdit()
         {
-            _locationCreate = new LocationCreate(Driver);
-            _locationView = new LocationView(Driver);
+            _locationCreate = new LocationCreate();
+            _locationView = new LocationView();
         }
 
         public IWebElement SaveButton
@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("button[name='cancel']")); }
+            get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
         }
 
         #region ILocation Members
@@ -136,7 +136,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Guid
         {
-            get { return Driver.FindElement(By.CssSelector(Location.GUID)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(Location.GUID)).Text; }
         }
 
         #endregion

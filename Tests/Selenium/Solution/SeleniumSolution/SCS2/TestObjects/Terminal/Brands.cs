@@ -8,9 +8,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
     {
         public ContractView ContractView;
 
-        public Brands(IWebDriverAdapter driver) : base(driver)
+        public Brands()
         {
-            ContractView = new ContractView(Driver);
+            ContractView = new ContractView();
         }
 
         public IWebElement BrandsDataTab
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.PartialLinkText(
                             "span#ctl00_bodyContentPlaceHolder_tbcTerminalData td.tab[textContent='Brands']"));
             }

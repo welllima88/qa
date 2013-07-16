@@ -10,17 +10,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         public Brands Brands;
         public Parameter Parameter;
 
-        public TerminalView(IWebDriverAdapter driver) : base(driver)
+        public TerminalView()
         {
-            Article = new Article(Driver);
-            Base = new Base(Driver);
-            Brands = new Brands(Driver);
-            Parameter = new Parameter(Driver);
+            Article = new Article();
+            Base = new Base();
+            Brands = new Brands();
+            Parameter = new Parameter();
         }
 
         public IWebElement EditButton
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input[value='Bearbeiten']")); }
         }
     }
 }

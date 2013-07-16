@@ -14,20 +14,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
         public TerminalTextsPortlet TerminalTextsPortlet;
         public TroubleTicketsPortlet TroubleTicketsPortlet;
 
-        public TerminalDashboard(IWebDriverAdapter driver) : base(driver)
+        public TerminalDashboard()
         {
-            FixInfo = new FixInfo(Driver);
-            BrandsPortlet = new BrandPortlet(Driver);
-            ContactsPortlet = new ContactsPortlet(Driver);
-            TechnicalViewPortlet = new TechnicalViewPortlet(Driver);
-            SalesContractPortlet = new SalesContractPortlet(Driver);
-            TerminalTextsPortlet = new TerminalTextsPortlet(Driver);
-            TroubleTicketsPortlet = new TroubleTicketsPortlet(Driver);
+            FixInfo = new FixInfo();
+            BrandsPortlet = new BrandPortlet();
+            ContactsPortlet = new ContactsPortlet();
+            TechnicalViewPortlet = new TechnicalViewPortlet();
+            SalesContractPortlet = new SalesContractPortlet();
+            TerminalTextsPortlet = new TerminalTextsPortlet();
+            TroubleTicketsPortlet = new TroubleTicketsPortlet();
         }
 
         public IWebElement EditButton
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='Bearbeiten']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input[value='Bearbeiten']")); }
         }
     }
 }

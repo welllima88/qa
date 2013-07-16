@@ -6,12 +6,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 {
     public class ContractEdit : WebObject
     {
-        public ContractEdit(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         /// <summary>
-        /// Clicks edit on the desired brand
+        ///     Clicks edit on the desired brand
         /// </summary>
         /// <param name="brand">brand name e.g. "American Express [635]"</param>
         public void ClickBrandContractEdit(String brand)
@@ -20,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
         }
 
         /// <summary>
-        /// /// Clicks edit on the desired acquirer
+        ///     /// Clicks edit on the desired acquirer
         /// </summary>
         /// <param name="acquirer">"Protokoll EP2 [281]" for SIX Payment Services (Multipay)</param>
         public void ClickAcquirerContractEdit(String acquirer)
@@ -30,52 +26,52 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 
         private void ClickEditContract(String brand, String brandType)
         {
-            Driver.FindElement(
+            WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
-                Click();
+                      Click();
         }
 
         /// <summary>
-        /// Sets the MCC (merchant category code)
+        ///     Sets the MCC (merchant category code)
         /// </summary>
         /// <param name="mcc">e.g. "5111: STATIONERY/OFF-SUPP/PRINTING"</param>
         public void SelectMcc(String mcc)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyCategoryCode_sugCategoryCode"))
-                .Selector().SelectByText(mcc);
+                     .Selector().SelectByText(mcc);
         }
 
         public void SetVpNo(String vpNo)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .TypeText(vpNo);
+                     .TypeText(vpNo);
         }
 
         /// <summary>
-        /// Sets the desired Business Template for apply the appropiate settings for limits, functions etc. in Frontoffice
+        ///     Sets the desired Business Template for apply the appropiate settings for limits, functions etc. in Frontoffice
         /// </summary>
         /// <param name="businessTemplate">default: "( Keine )"</param>
         public void SelectBusinessTemplate(String businessTemplate)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                SelectByText(businessTemplate);
+                      SelectByText(businessTemplate);
         }
 
 
         public void SetDcc(bool dccEnabeled)
         {
-            var a = new ContractCreate(Driver);
+            var a = new ContractCreate();
             a.SetDcc(dccEnabeled);
         }
 
         public void SaveAndCreateBrand()
         {
-            var cc = new ContractCreate(Driver);
+            var cc = new ContractCreate();
             cc.SaveAndCreate();
         }
     }

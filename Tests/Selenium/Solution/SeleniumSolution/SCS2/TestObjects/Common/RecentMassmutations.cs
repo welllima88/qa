@@ -7,18 +7,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
 {
     public class RecentMassmutations : WebObject
     {
-        public RecentMassmutations(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public String Header
         {
-            get { return Driver.FindElement(By.CssSelector(Common.RecentMassmutations_Header)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(Common.RecentMassmutations_Header)).Text; }
         }
 
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return Driver.FindElements(By.CssSelector(Common.RecentMassmutations_Elements)); }
+            get { return WebDriver.FindElements(By.CssSelector(Common.RecentMassmutations_Elements)); }
         }
 
         public IWebElement MostRecent

@@ -6,91 +6,87 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
     public class ContactView : WebObject, IContactView
     {
-        public ContactView(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElement EditButton
         {
-            get { return Driver.FindElement(By.CssSelector("button[name='edit']")); }
+            get { return WebDriver.FindElement(By.CssSelector("button[name='edit']")); }
         }
 
         #region IContactView Members
 
         public string FirstName
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.FirstName)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.FirstName)).Text; }
         }
 
         public string Name
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Name)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Name)).Text; }
         }
 
         public string Salutation
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Salutation)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Salutation)).Text; }
         }
 
         public string Country
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Country)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Country)).Text; }
         }
 
         public string Language
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Language)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Language)).Text; }
         }
 
         public string Telephone
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Telephone)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Telephone)).Text; }
         }
 
         public string Mobile
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Mobile)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Mobile)).Text; }
         }
 
         public string Fax
         {
-            get { return Driver.FindElement(By.CssSelector(ContactViewRes.Fax)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Fax)).Text; }
         }
 
         public string Email
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Email")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_Email")).Text; }
         }
 
 
         public string Street
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Street")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_Street")).Text; }
         }
 
         public string Po
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_PO")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_PO")).Text; }
         }
 
         public string Zip
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_ZIP")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_ZIP")).Text; }
         }
 
         public string City
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_City")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_City")).Text; }
         }
 
         public string Region
         {
-            get { return Driver.FindElement(By.CssSelector("#Address_Region")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_Region")).Text; }
         }
 
         public string CreateDate
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
         }
 
         public string AddressAddition
@@ -98,7 +94,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector("#Address_AddressAddition")).Text;
             }
         }

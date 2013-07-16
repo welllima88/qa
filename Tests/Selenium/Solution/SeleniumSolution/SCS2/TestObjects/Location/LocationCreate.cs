@@ -7,107 +7,21 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 {
     public class LocationCreate : WebObject, ILocation
     {
-        public LocationCreate(IWebDriverAdapter driver)
-            : base(driver)
-        {
-        }
-
-        public string Zip
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Zip)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string City
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.City)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string AdressAddition
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.AdressAddition)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Po
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Po)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Region
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Region)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Telephone
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Telephone)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Mobile
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Mobile)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Fax
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Fax)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Email
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Email)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string SapNumber
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.SapNumber)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string CompanyName
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.CompanyName)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string StreetName
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.StreetName)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
-        public string Web
-        {
-            set { Driver.FindAdaptedElement(By.CssSelector(Location.Web)).TypeText(value); }
-            get { throw new NotSupportedException(); }
-        }
-
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region ILocation Members
 
         public string Country
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Location.Country)).Selector().SelectByValue(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Country)).Selector().SelectByValue(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector(Location.Country)).Selector().
-                        SelectedOption.Text;
+                    WebDriver.FindAdaptedElement(By.CssSelector(Location.Country)).Selector().
+                              SelectedOption.Text;
             }
         }
 
@@ -134,18 +48,93 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public string Language
         {
-            set
-            {
-                Driver.FindAdaptedElement(By.CssSelector(Location.Language)).Selector().SelectByValue(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Language)).Selector().SelectByValue(value); }
             get
             {
                 return
-                    Driver.FindAdaptedElement(By.CssSelector(Location.Language)).Selector().
-                        SelectedOption.Text;
+                    WebDriver.FindAdaptedElement(By.CssSelector(Location.Language)).Selector().
+                              SelectedOption.Text;
             }
         }
 
         #endregion
+
+        public string Zip
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Zip)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string City
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.City)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string AdressAddition
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.AdressAddition)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Po
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Po)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Region
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Region)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Telephone
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Telephone)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Mobile
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Mobile)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Fax
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Fax)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Email
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Email)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string SapNumber
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.SapNumber)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string CompanyName
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.CompanyName)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string StreetName
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.StreetName)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
+
+        public string Web
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Web)).TypeText(value); }
+            get { throw new NotSupportedException(); }
+        }
     }
 }

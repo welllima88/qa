@@ -4,8 +4,5 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard.Bra
 {
     public class BrandContract : WebObject
     {
-        public BrandContract(IWebDriverAdapter driver) : base(driver)
-        {
-        }
     }
 }

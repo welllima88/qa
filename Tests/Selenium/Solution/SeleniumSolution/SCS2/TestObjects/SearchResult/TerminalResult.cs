@@ -1,11 +1,8 @@
-﻿using SIX.SCS.QA.Selenium.Extension;
-
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
+﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
 {
     internal class TerminalResult : AbstractSearchResult
     {
-        public TerminalResult(IWebDriverAdapter driver)
-            : base(driver)
+        public TerminalResult()
         {
             Prefix = "div#terminalDiv.container ";
         }

@@ -11,13 +11,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         public bool PurchaseWithCashbackForced;
         public bool ReleaseChangeBlocked;
 
-        public TerminalConfigDetailsCreate(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public string Article
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text; }
         }
 
         public string DeliveryDate
@@ -25,17 +21,17 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                        .GetAttribute("value");
+                             .GetAttribute("value");
             }
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                    .TypeText(value);
+                         .TypeText(value);
             }
         }
 
@@ -43,10 +39,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_ddInstallType"))
-                    .Selector().SelectByText(value);
+                         .Selector().SelectByText(value);
             }
         }
 
@@ -54,10 +50,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_inpInstallTypeRemark"))
-                    .TypeText(value);
+                         .TypeText(value);
             }
         }
 
@@ -65,10 +61,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyContractType_ddHandoverType"))
-                    .Selector().SelectByText(value);
+                         .Selector().SelectByText(value);
             }
         }
 
@@ -76,10 +72,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_ddPosInterface"))
-                    .Selector().SelectByText(value);
+                         .Selector().SelectByText(value);
             }
         }
 
@@ -87,10 +83,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_inpECRText"))
-                    .TypeText(value);
+                         .TypeText(value);
             }
         }
 
@@ -98,34 +94,34 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertySupportLevel_ddSupportContract"))
-                    .Selector().SelectByText(value);
+                         .Selector().SelectByText(value);
             }
         }
 
         /// <summary>
-        /// 5 rows á 32 characters
+        ///     5 rows á 32 characters
         /// </summary>
         public string ReceiptText
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                    .TypeText(value);
+                         .TypeText(value);
             }
 
 
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                        .GetAttribute("value");
+                             .GetAttribute("value");
             }
         }
 
@@ -133,21 +129,21 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyCurrentReleaseId_ddNewReleaseId"))
-                    .Selector().SelectByText(value);
+                         .Selector().SelectByText(value);
             }
         }
 
         public IWebElement BackButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")); }
         }
     }
 }

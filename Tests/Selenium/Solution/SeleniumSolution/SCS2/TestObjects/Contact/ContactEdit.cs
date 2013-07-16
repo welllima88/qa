@@ -9,30 +9,30 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         private readonly ContactCreate _contactCreate;
         private readonly ContactView _contactView;
 
-        public ContactEdit(IWebDriverAdapter driver) : base(driver)
+        public ContactEdit()
         {
-            _contactCreate = new ContactCreate(Driver);
-            _contactView = new ContactView(Driver);
+            _contactCreate = new ContactCreate();
+            _contactView = new ContactView();
         }
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
         }
 
         public IWebElement ClickCancel
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnCancel")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnCancel")); }
         }
 
         public IWebElement ClickAdressFromLocation
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }
         }
 
         #region IContactEdit Members

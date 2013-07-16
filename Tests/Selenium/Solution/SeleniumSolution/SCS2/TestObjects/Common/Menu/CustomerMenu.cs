@@ -1,37 +1,32 @@
 ﻿using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
 {
     public class CustomerMenu : MenuObject
     {
-        public CustomerMenu(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public IWebElement Customer
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_Customer)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_Customer)); }
         }
 
         public IWebElement CustomerCreate
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerCreate)); }
         }
 
         public IWebElement LocationCreate
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_LocationCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_LocationCreate)); }
         }
 
         public IWebElement TerminalCreate
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_TerminalCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_TerminalCreate)); }
         }
 
         public IWebElement UserCreate
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_UserCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_UserCreate)); }
         }
 
         public IWebElement CustomerEdit
@@ -39,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_CustomerEdit));
             }
         }
@@ -49,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerDeactivate));
+                    WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_CustomerDeactivate));
             }
         }
 
@@ -58,7 +53,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_LocationsOfCustomer));
             }
         }
@@ -68,7 +63,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_TerminalsOfCustomerLocation));
             }
         }
@@ -78,7 +73,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_AllMpds));
+                    WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_AllMpds));
             }
         }
 
@@ -87,7 +82,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_AllTerminals));
+                    WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_AllTerminals));
             }
         }
 
@@ -96,7 +91,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_Tickets));
+                    WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_Tickets));
             }
         }
 
@@ -105,7 +100,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_Users));
             }
         }
@@ -115,7 +110,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_Contacts));
             }
         }
@@ -125,7 +120,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(By.CssSelector(Menu.CustomerMenu_ContactCreate));
+                    WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_ContactCreate));
             }
         }
 
@@ -134,7 +129,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_BillingAdresses));
             }
         }
@@ -144,14 +139,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get
             {
                 return
-                    Driver.FindElement(
+                    WebDriver.FindElement(
                         By.CssSelector(Menu.CustomerMenu_BillingAdressCreate));
             }
         }
 
         public IWebElement BillingAddressEdit
         {
-            get { return Driver.FindElement(By.CssSelector(Menu.CustomerMenu_BillingAddressEdit)); }
+            get { return WebDriver.FindElement(By.CssSelector(Menu.CustomerMenu_BillingAddressEdit)); }
         }
     }
 }

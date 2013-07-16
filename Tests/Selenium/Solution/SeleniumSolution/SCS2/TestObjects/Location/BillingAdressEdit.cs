@@ -7,9 +7,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
     {
         private readonly BillingAddressCreate _billingAddressCreate;
 
-        public BillingAddressEdit(IWebDriverAdapter driver) : base(driver)
+        public BillingAddressEdit()
         {
-            _billingAddressCreate = new BillingAddressCreate(Driver);
+            _billingAddressCreate = new BillingAddressCreate();
         }
 
         public string CompanyName
@@ -90,7 +90,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("button[name='cancel']")); }
+            get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
         }
     }
 }

@@ -6,13 +6,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
 {
     public class ContractView : WebObject
     {
-        public ContractView(IWebDriverAdapter driver) : base(driver)
+        public ContractView()
         {
             throw new NotImplementedException(); //everything done?? -> no, get List and data for brands (on terminal)
         }
 
         /// <summary>
-        /// calls Edit page for desired brand (sub contract/provider)
+        ///     calls Edit page for desired brand (sub contract/provider)
         /// </summary>
         /// <param name="brand">use for example as parameter "American Express [635]"</param>
         public void ClickBrandContractEdit(String brand)
@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
         }
 
         /// <summary>
-        /// calls Edit page for desired acquirer (main contract/provider)
+        ///     calls Edit page for desired acquirer (main contract/provider)
         /// </summary>
         /// <param name="acquirer">for example "Multipay ep2" needs as parameter "Protokoll EP2 [281]"</param>
         public void ClickAcquirerContractEdit(String acquirer)
@@ -31,46 +31,45 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
         }
 
         /// <summary>
-        /// helper method
+        ///     helper method
         /// </summary>
         /// <param name="brand"></param>
         /// <param name="brandType"></param>
         private void ClickEditContract(String brand, String brandType)
         {
-            Driver.FindElement(
+            WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
-                Click();
+                      Click();
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="mcc">use for example "5111: STATIONERY/OFF-SUPP/PRINTING"</param>
         public void SelectMcc(String mcc)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyCategoryCode_sugCategoryCode"))
-                .Selector().SelectByText(mcc);
+                     .Selector().SelectByText(mcc);
         }
 
         public void SetVpNo(String vpNo)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .TypeText(vpNo);
+                     .TypeText(vpNo);
         }
 
         /// <summary>
-        /// Selects an FO template and overrides the default setting (in Frontoffice)
+        ///     Selects an FO template and overrides the default setting (in Frontoffice)
         /// </summary>
         /// <param name="businessTemplate">use for example "( Keine )"</param>
         public void SelectBusinessTemplate(String businessTemplate)
         {
-            Driver.FindAdaptedElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                SelectByText(businessTemplate);
+                      SelectByText(businessTemplate);
         }
     }
 }

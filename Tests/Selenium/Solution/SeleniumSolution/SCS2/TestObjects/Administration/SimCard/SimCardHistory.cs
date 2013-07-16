@@ -8,18 +8,14 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
 {
     internal class SimCardHistory : WebObject
     {
-        public SimCardHistory(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
         public ReadOnlyCollection<IWebElement> HistoryElements
         {
-            get { return Driver.FindElements(By.CssSelector("table.dataTable tbody tr")); }
+            get { return WebDriver.FindElements(By.CssSelector("table.dataTable tbody tr")); }
         }
 
         public List<String> HistoryList
         {
-            get { return Driver.WebElementsAsStringList(HistoryElements); }
+            get { return WebDriver.WebElementsAsStringList(HistoryElements); }
         }
     }
 }

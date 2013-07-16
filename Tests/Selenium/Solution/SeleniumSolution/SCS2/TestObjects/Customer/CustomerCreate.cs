@@ -6,82 +6,77 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 {
     public class CustomerCreate : WebObject, ICustomerCreate
     {
-        public CustomerCreate(IWebDriverAdapter driver)
-            : base(driver)
-        {
-        }
-
         public string Ep2MerchantId
         {
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).Text; }
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.Ep2MerchantId)).TypeText(value); }
         }
 
         #region ICustomerCreate Members
 
         public string Country
         {
-            set { Driver.FindSuggesterElement(By.CssSelector(Customer.Country)).Suggestor(value); }
-            get { return Driver.FindElement(By.CssSelector(Customer.Country)).Text; }
+            set { WebDriver.FindSuggesterElement(By.CssSelector(Customer.Country)).Suggestor(value); }
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Country)).Text; }
         }
 
         public string SbsBillingTenant
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
-                       Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
+                          Selector().SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
-                              Selector().SelectedOption.Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsBillingTenant)).
+                                 Selector().SelectedOption.Text;
             }
         }
 
         public string Zip
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Zip)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Zip)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.Zip)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Zip)).Text; }
         }
 
         public string City
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.City)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.City)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.City)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.City)).Text; }
         }
 
         public string AdressAddition
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
-                      .TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
+                         .TypeText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
-                             .Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.AdressAddition))
+                                .Text;
             }
         }
 
         public string Po
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Po)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Po)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.Po)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Po)).Text; }
         }
 
         public string Region
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Region)).
-                       TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Region)).
+                          TypeText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Region)).
-                              Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Region)).
+                                 Text;
             }
         }
 
@@ -89,13 +84,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
-                       TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
+                          TypeText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
-                              Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Telephone)).
+                                 Text;
             }
         }
 
@@ -103,52 +98,52 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
-                       TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
+                          TypeText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
-                              Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Mobile)).
+                                 Text;
             }
         }
 
         public string Fax
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Fax)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Fax)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.Fax)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Fax)).Text; }
         }
 
         public string Email
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Email)).
-                       TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Email)).
+                          TypeText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Email)).
-                              Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Email)).
+                                 Text;
             }
         }
 
         public string CustomerName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerName)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerName)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerName)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerName)).Text; }
         }
 
         public string SapNumber
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.SapNumber)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.SapNumber)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.SapNumber)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.SapNumber)).Text; }
         }
 
         public string CompanyName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.CompanyName)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.CompanyName)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.CompanyName)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.CompanyName)).Text; }
         }
 
 
@@ -156,13 +151,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
-                       Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
+                          Selector().SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
-                              Selector().SelectedOption.Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Supplier)).
+                                 Selector().SelectedOption.Text;
             }
         }
 
@@ -171,7 +166,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.SbsCurrency)).Selector
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsCurrency)).Selector
                     ().SelectByText(value);
             }
         }
@@ -180,12 +175,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindSuggesterElement(
+                WebDriver.FindSuggesterElement(
                     By.CssSelector(Customer.CategoryCode)).Suggestor(value);
             }
             get
             {
-                return Driver.FindElement(
+                return WebDriver.FindElement(
                     By.CssSelector(Customer.CategoryCode)).Text;
             }
         }
@@ -194,12 +189,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
                     ().SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
+                return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Agency)).Selector
                     ().SelectedOption.Text;
             }
         }
@@ -208,13 +203,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(Customer.SupportContract)).Selector().
-                       SelectByText(value);
+                          SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector(Customer.SupportContract)).Selector().SelectedOption.Text;
             }
         }
@@ -223,62 +218,62 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).
-                       TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).
+                          TypeText(value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.StreetName)).Text; }
         }
 
         public string Language
         {
             set
             {
-                Driver.FindSuggesterElement(By.CssSelector(
+                WebDriver.FindSuggesterElement(By.CssSelector(
                     Customer.Language)).Suggestor(value);
             }
             get
             {
-                return Driver.FindElement(By.CssSelector(
+                return WebDriver.FindElement(By.CssSelector(
                     Customer.Language)).Text;
             }
         }
 
         public string Web
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.Web)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Web)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.Web)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Web)).Text; }
         }
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
         }
 
         public string CustomerNumber
         {
-            set { Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).TypeText(value); }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).Text; }
         }
 
         public string CashIntegrator
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector(Customer.CashIntegrator)).Selector()
-                      .
-                       SelectByText(value);
+                         .
+                          SelectByText(value);
             }
             get
             {
-                return Driver.FindAdaptedElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector(Customer.CashIntegrator)).Selector()
-                             .SelectedOption.Text;
+                                .SelectedOption.Text;
             }
         }
 
@@ -286,10 +281,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
-                       SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Selector().
+                          SelectByText(value);
             }
-            get { return Driver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Segment)).Text; }
         }
 
         #endregion
