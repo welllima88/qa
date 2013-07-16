@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void Language()
         {
-            StringAssert.Contains("[de]", _contactView.Language);
+            StringAssert.Contains(_contactView.Language, "[de]");
         }
 
         [TestMethod]
