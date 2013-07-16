@@ -7,8 +7,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.EventLog
     public class BasicEventLogTest
     {
         private static TerminalEventLog _terminalEventLog;
-        private static ScsPlatinTestDirector _tb;
-
+        
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
@@ -19,18 +18,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.EventLog
         public void TestInit()
         {
             TestLauncher.Navigate("/EP2TerminalLog?TerminalId=30093271");
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            //after last test-method finished
-            _tb.ShutDownBrowser();
         }
 
         [TestMethod]
