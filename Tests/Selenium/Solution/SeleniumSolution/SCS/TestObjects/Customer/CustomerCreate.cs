@@ -15,8 +15,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#CustomerSegment")).Selector().
-                    SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#CustomerSegment")).Selector().
+                          SelectByText(value);
             }
         }
 
@@ -26,8 +26,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("select[name='CountryId']"))
-                    .Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("select[name='CountryId']"))
+                         .Selector().SelectByText(value);
             }
         }
 
@@ -35,69 +35,69 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#BillingTenant")).
-                    Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#BillingTenant")).
+                          Selector().SelectByText(value);
             }
         }
 
         public string Zip
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='PLZ']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='PLZ']")).TypeText(value); }
         }
 
         public string City
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Ort']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Ort']")).TypeText(value); }
         }
 
         public string AdressAddition
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Zusatz']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Zusatz']")).TypeText(value); }
         }
 
         public string Po
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Postfach']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Postfach']")).TypeText(value); }
         }
 
         public string Region
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Region']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Region']")).TypeText(value); }
         }
 
         public string Telephone
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Telefon']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon']")).TypeText(value); }
         }
 
         public string Mobile
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Telefon2']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon2']")).TypeText(value); }
         }
 
         public string Fax
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Fax']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Fax']")).TypeText(value); }
         }
 
         public string Email
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Email']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Email']")).TypeText(value); }
         }
 
         public string CustomerName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TypeText(value); }
         }
 
         public string SapNumber
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='SapNumber']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='SapNumber']")).TypeText(value); }
         }
 
         public string CompanyName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("td[name='Name']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("td[name='Name']")).TypeText(value); }
         }
 
 
@@ -105,8 +105,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#StructureId")).
-                    Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#StructureId")).
+                          Selector().SelectByText(value);
             }
         }
 
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("#SBSCurrency")).Selector
+                WebDriver.FindAdaptedElement(By.CssSelector("#SBSCurrency")).Selector
                     ().SelectByText(value);
             }
         }
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector("select[name='CategoryCode']")).Selector().SelectByText(value);
             }
         }
@@ -133,7 +133,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(By.CssSelector("select[name='Agency']")).Selector
+                WebDriver.FindAdaptedElement(By.CssSelector("select[name='Agency']")).Selector
                     ().SelectByText(value);
             }
         }
@@ -142,45 +142,45 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector("select[name='SupportContractId]'")).Selector().
-                    SelectByText(value);
+                          SelectByText(value);
             }
         }
 
         public string StreetName
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='Strasse']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Strasse']")).TypeText(value); }
         }
 
         public string Language
         {
             set
             {
-                Driver.FindAdaptedElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector("select[name='LanguageId]'")).Selector().
-                    SelectByText(value);
+                          SelectByText(value);
             }
         }
 
         public string Web
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='www']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='www']")).TypeText(value); }
         }
 
         public IWebElement CancelButton
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='abbrechen']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input[value='abbrechen']")); }
         }
 
         public IWebElement SaveButton
         {
-            get { return Driver.FindElement(By.CssSelector("input[value='weiter']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input[value='weiter']")); }
         }
 
         public string CustomerNumber
         {
-            set { Driver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TypeText(value); }
         }
 
         public string CashIntegrator
