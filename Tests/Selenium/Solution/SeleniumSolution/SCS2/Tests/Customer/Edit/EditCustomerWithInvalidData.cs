@@ -53,7 +53,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void CustomerNameError()
         {
-            CollectionAssert.Contains(_formAlerts,"Kundenname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Kundenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void MobileNumberError()
         {
-            CollectionAssert.Contains(_formAlerts,"Mobiltelefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
@@ -89,7 +89,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void StreetAndNumberError()
         {
-            CollectionAssert.Contains(_formAlerts,"Strasse / Nr: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
@@ -101,7 +101,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void PoError()
         {
-            CollectionAssert.Contains(_formAlerts,"Postfach: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
@@ -119,19 +119,20 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         [TestMethod]
         public void EmailError()
         {
-            CollectionAssert.Contains(_formAlerts,"Email: Dies ist keine gültige E-Mail Adresse!");
+            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
         }
 
         [TestMethod]
         public void WebAddressError()
         {
-            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!", "web adress not validated");
+            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!",
+                                      "web adress not validated");
         }
 
         [TestMethod]
         public void NumberOfFormAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 13);
+            Assert.AreEqual(13, _formAlerts.Count);
         }
     }
 }

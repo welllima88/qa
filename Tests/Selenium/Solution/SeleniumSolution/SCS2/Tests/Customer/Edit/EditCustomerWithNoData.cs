@@ -47,19 +47,9 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         }
 
         [TestMethod]
-        public void EditCustomerWithoutCompanyNameFailed()
-        {
-            _customerEdit.CompanyName = "";
-            _formAlerts = _formAlert.FormAlertList;
-
-            Assert.IsTrue(_formAlerts.Count == 1);
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
-        }
-
-        [TestMethod]
         public void NumberOfFormAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 5);
+            Assert.AreEqual(5, _formAlerts.Count);
         }
 
         [TestMethod]
