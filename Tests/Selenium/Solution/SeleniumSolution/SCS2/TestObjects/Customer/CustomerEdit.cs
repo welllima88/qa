@@ -18,6 +18,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         #region ICustomerEdit Members
 
+        public string Segment
+        {
+            set { _customerCreate.Segment = value; }
+            get { return _customerCreate.Segment; }
+        }
+
         public string CustomerName
         {
             set { _customerCreate.CustomerName = value; }
@@ -182,12 +188,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set { _customerCreate.CashIntegrator = value; }
             get { return _customerCreate.CashIntegrator; }
-        }
-
-        public string Segment
-        {
-            set { _customerCreate.Segment = value; }
-            get { return _customerCreate.Segment; }
         }
 
         #endregion
