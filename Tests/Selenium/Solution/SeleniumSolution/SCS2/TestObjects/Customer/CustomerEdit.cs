@@ -184,6 +184,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return _customerCreate.CashIntegrator; }
         }
 
+        public string Segment
+        {
+            set { _customerCreate.Segment = value; }
+            get { return _customerCreate.Segment; }
+        }
+
         #endregion
     }
 }
