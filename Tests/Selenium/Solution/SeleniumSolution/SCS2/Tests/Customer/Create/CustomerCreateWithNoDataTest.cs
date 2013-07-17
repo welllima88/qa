@@ -50,7 +50,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void CustomerNumberOfFormAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 7);
+            Assert.AreEqual(7, _formAlerts.Count);
         }
 
         [TestMethod]

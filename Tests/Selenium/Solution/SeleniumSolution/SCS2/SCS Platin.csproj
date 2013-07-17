@@ -227,6 +227,12 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMissingDataTest.cs" />
+    <Compile Include="Tests\Customer\Edit\Copy %282%29 of CustomerEditTest.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditKeepsDataTest.cs" />
+    <Compile Include="Tests\Customer\Edit\EditCustomerWithNoData.cs" />
+    <Compile Include="Tests\Customer\Edit\EditCustomerWithMissingData.cs" />
+    <Compile Include="Tests\Customer\Edit\EditCustomerWithInvalidData.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditAndCancelTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />

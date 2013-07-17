@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestMethod]
         public void NumberOfAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 4);
+            Assert.AreEqual(4, _formAlerts.Count);
         }
 
         [TestMethod]

@@ -58,7 +58,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
             _customerMenu.TerminalCreate.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 7);
+            Assert.AreEqual(7, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("Mandant: Dies ist ein Pflichtfeld!"));

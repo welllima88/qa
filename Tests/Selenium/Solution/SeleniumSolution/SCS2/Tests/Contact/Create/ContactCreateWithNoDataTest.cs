@@ -71,7 +71,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void NumberOfFormAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 5);
+            Assert.AreEqual(5,_formAlerts.Count );
         }
     }
 }

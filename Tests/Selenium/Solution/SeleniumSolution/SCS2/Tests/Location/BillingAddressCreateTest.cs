@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
             Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
             Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
-            Assert.IsTrue(_formAlerts.Count == 12);
+            Assert.AreEqual(12, _formAlerts.Count);
         }
 
         [TestMethod]
@@ -90,7 +90,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 5);
+            Assert.AreEqual(5, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
@@ -121,7 +121,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
+            Assert.AreEqual(1, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld!"));
         }
 
@@ -148,7 +148,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
+            Assert.AreEqual(1, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
         }
 
@@ -175,7 +175,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
+            Assert.AreEqual(1, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
         }
 
@@ -202,7 +202,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _billingAddressCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Count == 1);
+            Assert.AreEqual(1, _formAlerts.Count);
             Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
         }
 

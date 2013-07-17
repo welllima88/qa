@@ -123,7 +123,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestMethod]
         public void NumberOfFormAlerts()
         {
-            Assert.IsTrue(_formAlerts.Count == 12);
+            Assert.AreEqual(12, _formAlerts.Count);
         }
     }
 }

@@ -63,7 +63,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
         {
             SetOnlineFinancialAndSave("11");
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsFalse(_formAlerts.Count == 1);
+            Assert.AreEqual(1, _formAlerts.Count);
         }
 
         private static void SetOnlineFinancialAndSave(string value)
