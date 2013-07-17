@@ -40,25 +40,25 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestMethod]
         public void CompanyMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!");
         }
 
         [TestMethod]
         public void StreetAndNumberMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void ZipMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CityMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
     }
 }

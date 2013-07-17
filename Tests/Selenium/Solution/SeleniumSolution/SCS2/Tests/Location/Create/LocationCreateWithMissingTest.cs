@@ -60,7 +60,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
@@ -74,7 +74,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
@@ -102,7 +102,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
     }
 }

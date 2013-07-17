@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension;
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 {
     /// <summary>
-    /// The TestLauncher prepares Browser with a concrete TestDirector and keeps this 
+    ///     The TestLauncher prepares Browser with a concrete TestDirector and keeps this
     /// </summary>
     [TestClass]
     public static class TestLauncher

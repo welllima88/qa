@@ -59,13 +59,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.Dashboard
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(7, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Mandant: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Kundenname: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Mandant: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Land: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]

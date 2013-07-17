@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
 
             _formAlerts = _formAlert.FormAlertList;
             CollectionAssert.Contains(_formAlerts, "unknown TerminalId");
-            Assert.AreEqual(1,_formAlerts.Count);
+            Assert.AreEqual(1, _formAlerts.Count);
         }
 
         [TestMethod]
@@ -99,7 +99,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
 
             _formAlerts = _formAlert.FormAlertList;
             CollectionAssert.Contains(_formAlerts, "unknown TerminalId");
-            Assert.AreEqual(1,_formAlerts.Count);
+            Assert.AreEqual(1, _formAlerts.Count);
         }
     }
 }

@@ -60,91 +60,91 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithInvalidCustomerNameFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Kundenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCustomerNumberFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Kundennummer: Ihre Eingabe ist ungültig!"));
+            CollectionAssert.Contains(_formAlerts, "Kundennummer: Ihre Eingabe ist ungültig!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCompanyNameFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidAdressAdditionFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidTelephoneFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidMobileFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidFaxFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidStreetNumberFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidZipFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidPoFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCityFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidRegionFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidEmailFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
+            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidWebFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
+            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidEp2MerchantIdFailed()
         {
-            Assert.IsTrue(_formAlerts.Contains("Dies ist keine gültige EP2 Händlernummer."));
+            CollectionAssert.Contains(_formAlerts, "Dies ist keine gültige EP2 Händlernummer.");
         }
     }
 }

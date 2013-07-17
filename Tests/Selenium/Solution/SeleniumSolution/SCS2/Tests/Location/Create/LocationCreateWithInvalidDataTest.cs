@@ -51,73 +51,73 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestMethod]
         public void CompanyNameInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void AdressAdditionInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void TelephoneInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void MobileNumberInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void FaxInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void StreetNumberInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void ZipInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void PoInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CityInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void RegionInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
+            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void EmailInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
+            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
         }
 
         [TestMethod]
         public void WebInvalid()
         {
-            Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
+            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!");
         }
 
         [TestMethod]

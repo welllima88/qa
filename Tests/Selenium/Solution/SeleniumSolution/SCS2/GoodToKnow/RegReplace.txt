@@ -7,3 +7,11 @@ Language = "\1";
 
 Branchencode:
 \"{....}\: .*\"
+
+
+
+
+---------------
+Assert\.IsTrue\(_formAlerts.Contains\((.*)\)\)
+->
+CollectionAssert.Contains(_formAlerts,$1)

@@ -160,19 +160,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _menusTests.ContactMenuCheck(_contactMenu);
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Vorname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Nachname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Email Adresse!"));
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
-            Assert.AreEqual(12,_formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Vorname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Nachname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Email Adresse!");
+            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
+            Assert.AreEqual(12, _formAlerts.Count);
         }
 
         [TestMethod]
@@ -204,8 +204,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count );
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
             _contactEdit.CancelButton.Click();
         }
 
@@ -240,8 +240,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _formAlerts = _formAlert.FormAlertList;
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count );
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
             _contactEdit.CancelButton.Click();
         }
 
@@ -278,12 +278,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Kundenname: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
 
             _contactEdit.CancelButton.Click();
         }
@@ -319,8 +319,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _formAlerts = _formAlert.FormAlertList;
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
             _contactEdit.CancelButton.Click();
         }
 
@@ -353,8 +353,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
             _contactEdit.CancelButton.Click();
         }
 
@@ -387,8 +387,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count );
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            Assert.AreEqual(1, _formAlerts.Count);
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
             _contactEdit.CancelButton.Click();
         }
 

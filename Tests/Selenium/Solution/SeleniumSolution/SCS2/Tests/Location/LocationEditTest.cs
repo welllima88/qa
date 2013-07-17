@@ -143,19 +143,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Zusatz: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Telefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Mobiltelefon: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Fax: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Postfach: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Region (Kurzzeichen): Ungültige Zeichen gefunden!"));
-            Assert.IsTrue(_formAlerts.Contains("Email: Dies ist keine gültige E-Mail Adresse!"));
-            Assert.IsTrue(_formAlerts.Contains("Web: Dies ist keine gültige Web Adresse!"));
-            Assert.AreEqual(12,_formAlerts.Count, "Wrong number of form alerts");
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
+            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!");
+            Assert.AreEqual(12, _formAlerts.Count, "Wrong number of form alerts");
         }
 
         [TestMethod]
@@ -182,7 +182,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1,_formAlerts.Count,"Wrong number of form alerts");
+            Assert.AreEqual(1, _formAlerts.Count, "Wrong number of form alerts");
             Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"),
                           "Wrong text in form alerts");
             _locationEdit.CancelButton.Click();
@@ -211,10 +211,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
             Assert.AreEqual(4, _formAlerts.Count);
         }
 
@@ -252,7 +252,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
@@ -280,7 +280,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
@@ -308,7 +308,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]

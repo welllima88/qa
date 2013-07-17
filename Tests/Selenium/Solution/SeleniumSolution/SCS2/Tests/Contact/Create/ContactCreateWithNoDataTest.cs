@@ -41,37 +41,37 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void FirstNameMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Vorname: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Vorname: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void SurnameMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Nachname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Nachname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void StreetMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void ZipMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CityMissing()
         {
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void NumberOfFormAlerts()
         {
-            Assert.AreEqual(5,_formAlerts.Count );
+            Assert.AreEqual(5, _formAlerts.Count);
         }
     }
 }

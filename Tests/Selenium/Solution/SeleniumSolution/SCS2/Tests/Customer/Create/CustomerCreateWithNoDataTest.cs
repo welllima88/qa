@@ -56,44 +56,44 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void CustomerNameMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Kundenname: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Kundenname: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CompanyNameMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void SupplierMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Mandant: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Mandant: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void StreetNumberMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Strasse / Nr: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void ZipMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("PLZ: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CityMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Ort: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
 
 
         [TestMethod]
         public void CountryMissingFormAlert()
         {
-            Assert.IsTrue(_formAlerts.Contains("Land: Dies ist ein Pflichtfeld!"));
+            CollectionAssert.Contains(_formAlerts, "Land: Dies ist ein Pflichtfeld!");
         }
     }
 }
