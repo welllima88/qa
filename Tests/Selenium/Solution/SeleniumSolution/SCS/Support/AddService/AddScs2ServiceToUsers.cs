@@ -29,26 +29,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
         public TestContext TestContext { get; set; }
 
         [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        public static void Prepare(TestContext testContext)
         {
-            _tb = new ScsClassicTestDirector();
-            _driver = _tb.PrepareBrowser();
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            _tb.ShutDownBrowser();
+            _tb = TestLauncher.TestDirector;
+            _driver = _tb.WebDriver;
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
