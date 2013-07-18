@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
             BaseUrl = ScsRes.WES_Production;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
             Application = new LobbyView();
-            Authentication = new SecurIdAuthentication("user", "pass", Scs2Res.mandant_prod, "securId");
+            Authentication = new SecurIdAuthentication();
             SeleniumConfig = new SeleniumConfig {Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10}};
         }
     }
