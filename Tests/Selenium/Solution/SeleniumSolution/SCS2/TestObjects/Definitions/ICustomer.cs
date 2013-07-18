@@ -2,8 +2,9 @@
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
-    public interface ICustomerEdit
+    public interface ICustomer
     {
+        string Guid { set; get; }
         string CustomerName { set; get; }
         string SapNumber { set; get; }
         string CompanyName { set; get; }
@@ -18,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
         string CategoryCode { set; get; }
         string Agency { set; get; }
         string SupportContract { set; get; }
-        string StreetName { set; get; }
+        string StreetNo { set; get; }
         string Language { set; get; }
         string Country { set; get; }
         string Zip { set; get; }
@@ -31,7 +32,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
         string Fax { set; get; }
         string Email { set; get; }
         string Web { set; get; }
-        IWebElement SaveButton { get; }
-        IWebElement CancelButton { get; }
+        string Segment { set; get; }
     }
 }
