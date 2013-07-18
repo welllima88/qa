@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
             _customerEdit.CustomerName = "SYR Sele Kunde A$°";
 
             _customerEdit.CompanyName = "SYR Sele Firma A$°";
-            _customerEdit.StreetName = "Hardturmstr. 201$°";
+            _customerEdit.StreetNo = "Hardturmstr. 201$°";
             _customerEdit.Zip = "802$°";
             _customerEdit.City = "Zürich$°";
             _customerEdit.Po = "PFO1$°";

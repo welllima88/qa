@@ -32,7 +32,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
 
             _customerEdit.CustomerName = "SYR Sele Kunde A";
             _customerEdit.CompanyName = "SYR Sele Firma A";
-            _customerEdit.StreetName = "Hardturmstr. 201";
+            _customerEdit.StreetNo = "Hardturmstr. 201";
             _customerEdit.Zip = "8021";
             _customerEdit.City = "Zürich";
             _customerEdit.Po = "PFO1";
@@ -64,7 +64,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
         {
             _customerMenu.CustomerEdit.Click();
 
-            _customerEdit.StreetName = "";
+            _customerEdit.StreetNo = "";
 
             _customerEdit.SaveButton.Click();
 
