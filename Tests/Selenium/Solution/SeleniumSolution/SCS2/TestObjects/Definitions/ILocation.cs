@@ -6,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
     {
         string CompanyName { get; }
         string Guid { get; }
-        string StreetName { get; }
+        string StreetNo { get; }
         string Zip { get; }
         string City { get; }
         String SbsDebitNumber { get; }
