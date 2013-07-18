@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.CustomerName = "SYR SBS Kunde" + _dt;
 
             _customerCreate.CompanyName = "SYR SBS Firma" + _dt;
-            _customerCreate.StreetName = "SbsRoad. 201";
+            _customerCreate.StreetNo = "SbsRoad. 201";
             _customerCreate.Zip = "8008";
             _customerCreate.City = "SBS";
             _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";

@@ -44,8 +44,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.CustomerName = customerName;
             string companyName = "SYR Cetrel Firma Create";
             _customerCreate.CompanyName = companyName;
-            string streetName = "Luxemburgerli 1a";
-            _customerCreate.StreetName = streetName;
+            string StreetNo = "Luxemburgerli 1a";
+            _customerCreate.StreetNo = StreetNo;
             string zip = "11247";
             _customerCreate.Zip = zip;
             string city = "Luxemburg";
@@ -98,7 +98,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             Assert.AreEqual(po, _customerView.Po);
             Assert.AreEqual(adressAddition, _customerView.AdressAddition);
             Assert.AreEqual(region, _customerView.Region);
-            Assert.AreEqual(streetName, _customerView.StreetNo);
+            Assert.AreEqual(StreetNo, _customerView.StreetNo);
             Assert.AreEqual(zip, _customerView.Zip);
             Assert.AreEqual(city, _customerView.City);
             Assert.AreEqual(agency, _customerView.Agency);

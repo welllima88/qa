@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
 
             _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetName = "Hardturmstr. 201";
+            _customerCreate.StreetNo = "Hardturmstr. 201";
             _customerCreate.Zip = "8021";
             _customerCreate.City = "Zürich";
             _customerCreate.Po = "PFO1";
@@ -93,7 +93,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutStreetAndNumberFailed()
         {
-            _customerCreate.StreetName = "";
+            _customerCreate.StreetNo = "";
             _customerCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;

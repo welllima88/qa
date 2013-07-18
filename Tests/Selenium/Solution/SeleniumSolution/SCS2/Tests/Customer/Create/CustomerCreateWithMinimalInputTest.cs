@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             _customerCreate.CustomerName = _customerName;
 
             _customerCreate.CompanyName = _companyName;
-            _customerCreate.StreetName = _streetName;
+            _customerCreate.StreetNo = _streetName;
             _customerCreate.Zip = _zip;
             _customerCreate.City = _city;
 

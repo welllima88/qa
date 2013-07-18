@@ -35,7 +35,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
 
             _customerCreate.CompanyName = "SYR Sele Firma A$°";
             _customerCreate.CustomerNumber = "^@}$°";
-            _customerCreate.StreetName = "Hardturmstr. 201$°";
+            _customerCreate.StreetNo = "Hardturmstr. 201$°";
             _customerCreate.Zip = "802$°";
             _customerCreate.City = "Zürich$°";
             _customerCreate.Po = "PFO1$°";
