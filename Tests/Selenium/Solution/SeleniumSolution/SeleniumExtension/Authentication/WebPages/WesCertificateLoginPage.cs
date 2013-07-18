@@ -29,7 +29,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divinputlabel")); }
         }
 
-
         public IWebElement Mandant(string mandant)
         {
             return

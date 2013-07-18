@@ -5,32 +5,37 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
 {
-    public class CustomerView : WebObject, ICustomerView
+    public class CustomerView : WebObject, ICustomer
     {
-        public CustomerView(IWebDriverAdapter driver) : base(driver)
-        {
-        }
-
-        public string CustomerSegment
+        public string Segment
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSegment")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         #region ICustomerView Members
 
+        public IWebElement EditButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+        }
+
         public string CompanyName
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCompanyName")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string Guid
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerGUIDLabel")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string CustomerName
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string Supplier
@@ -41,6 +46,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier")).
                               Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string SbsBillingTenant
@@ -52,6 +58,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                              .
                               Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string StreetNo
@@ -63,6 +70,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Zip
@@ -73,6 +81,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string City
@@ -83,11 +92,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_cityTextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string SbsCurrency
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsCurrency")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public String CustomerNumber
@@ -108,8 +119,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
         public String Agency
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowAgency_sugAgency")).Text; }
+            set { throw new NotImplementedException(); }
         }
-
 
         public string Language
         {
@@ -119,6 +130,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugLanguage"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Country
@@ -129,11 +141,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugCountry"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector("span[id$='ep2numberTextBox']")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string Po
@@ -143,6 +157,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_poTextBox")).Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string AdressAddition
@@ -153,11 +168,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox")).Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string SapNumber
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_sapNumberInput")).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string Email
@@ -169,6 +186,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(
                         By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Telephone
@@ -179,6 +197,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Mobile
@@ -190,6 +209,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Fax
@@ -200,16 +220,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_faxTextBox"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string Web
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webLink")).Text; }
-        }
-
-        public IWebElement EditButton
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            set { throw new NotImplementedException(); }
         }
 
         public string Region
@@ -220,6 +237,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_regionTextBox")).
                               Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string CategoryCode
@@ -230,6 +248,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string SupportContract
@@ -241,6 +260,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract"))
                              .Text;
             }
+            set { throw new NotImplementedException(); }
         }
 
         public string CashIntegrator
@@ -252,11 +272,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator"))
                              .Text;
             }
-        }
-
-        public string Segment
-        {
-            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
 
         #endregion
