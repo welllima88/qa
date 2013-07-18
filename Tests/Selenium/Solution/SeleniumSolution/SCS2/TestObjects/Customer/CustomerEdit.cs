@@ -31,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string Segment
         {
             set { _customerCreate.Segment = value; }
-            get { return _customerCreate.Segment; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SegmentView)).Text; }
         }
 
         public string Guid
@@ -43,24 +43,25 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string CustomerName
         {
             set { _customerCreate.CustomerName = value; }
-            get { return _customerCreate.CustomerName; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerName)).GetCssValue("value"); }
         }
 
         public string SapNumber
         {
             set { _customerCreate.SapNumber = value; }
-            get { return _customerCreate.SapNumber; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SapNumber)).GetCssValue("value"); }
         }
 
         public string CompanyName
         {
             set { _customerCreate.CompanyName = value; }
-            get { return _customerCreate.CompanyName; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CompanyName)).GetCssValue("value"); }
         }
 
         public string Supplier
         {
             get { return _customerView.Supplier; }
+            set { throw new NotImplementedException(); }
         }
 
         public String CustomerNumber
@@ -81,22 +82,25 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public String SbsCurrency
         {
             get { return _customerView.SbsCurrency; }
+            set { throw new NotImplementedException(); }
         }
 
         public String SbsBillingTenant
         {
             get { return _customerView.SbsBillingTenant; }
+            set { throw new NotImplementedException(); }
         }
 
         public String Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
+            set { throw new NotImplementedException(); }
         }
 
         public string CategoryCode
         {
             set { _customerCreate.CategoryCode = value; }
-            get { return _customerCreate.CategoryCode; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CategoryCode)).GetCssValue("value"); }
         }
 
         public string Agency
@@ -114,7 +118,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string StreetNo
         {
             set { _customerCreate.StreetNo = value; }
-            get { return _customerCreate.StreetNo; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.StreetName)).GetCssValue("value"); }
         }
 
         public string Language
@@ -132,61 +136,61 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string Zip
         {
             set { _customerCreate.Zip = value; }
-            get { return _customerCreate.Zip; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Zip)).GetCssValue("value"); }
         }
 
         public string City
         {
             set { _customerCreate.City = value; }
-            get { return _customerCreate.City; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.City)).GetCssValue("value"); }
         }
 
         public string AdressAddition
         {
             set { _customerCreate.AdressAddition = value; }
-            get { return _customerCreate.AdressAddition; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.AdressAddition)).GetCssValue("value"); }
         }
 
         public string Po
         {
             set { _customerCreate.Po = value; }
-            get { return _customerCreate.Po; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Po)).GetCssValue("value"); }
         }
 
         public string Region
         {
             set { _customerCreate.Region = value; }
-            get { return _customerCreate.Region; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Region)).GetCssValue("value"); }
         }
 
         public string Telephone
         {
             set { _customerCreate.Telephone = value; }
-            get { return _customerCreate.Telephone; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Telephone)).GetCssValue("value"); }
         }
 
         public string Mobile
         {
             set { _customerCreate.Mobile = value; }
-            get { return _customerCreate.Mobile; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Mobile)).GetCssValue("value"); }
         }
 
         public string Fax
         {
             set { _customerCreate.Fax = value; }
-            get { return _customerCreate.Fax; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Fax)).GetCssValue("value"); }
         }
 
         public string Email
         {
             set { _customerCreate.Email = value; }
-            get { return _customerCreate.Email; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Email)).GetCssValue("value"); }
         }
 
         public string Web
         {
             set { _customerCreate.Web = value; }
-            get { return _customerCreate.Web; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).GetCssValue("value"); }
         }
 
         public string CashIntegrator
