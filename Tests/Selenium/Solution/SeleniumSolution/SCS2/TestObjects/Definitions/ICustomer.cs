@@ -2,17 +2,17 @@
 {
     public interface ICustomer
     {
-        string Guid { set; get; }
+        string Guid { get; }
         string CustomerName { set; get; }
         string SapNumber { set; get; }
         string CompanyName { set; get; }
-        string Supplier { get; }
+        string Supplier { get; set; }
         string CustomerNumber { get; }
         string SbsDebitNumber { get; }
         string SbsAdressNumber { get; }
-        string SbsCurrency { get; }
-        string SbsBillingTenant { get; }
-        string Ep2MerchantId { get; }
+        string SbsCurrency { get; set; }
+        string SbsBillingTenant { get; set; }
+        string Ep2MerchantId { get; set; }
         string CashIntegrator { set; get; }
         string CategoryCode { set; get; }
         string Agency { set; get; }

@@ -134,10 +134,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContactViewRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestObjects\Customer\Customer.Designer.cs">
+    <Compile Include="TestObjects\Customer\CustomerRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Customer.resx</DependentUpon>
+      <DependentUpon>CustomerRes.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
     <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
@@ -332,9 +332,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ContactCreateRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Customer\Customer.resx">
+    <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Customer.Designer.cs</LastGenOutput>
+      <LastGenOutput>CustomerRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Location\Location.resx">
