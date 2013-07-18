@@ -62,7 +62,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
                       SelectByText(businessTemplate);
         }
 
-
         public void SetDcc(bool dccEnabeled)
         {
             var a = new ContractCreate();

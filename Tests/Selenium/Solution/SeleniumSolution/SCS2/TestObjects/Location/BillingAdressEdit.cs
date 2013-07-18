@@ -17,7 +17,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             set { _billingAddressCreate.CompanyName = value; }
         }
 
-
         public string StreetName
         {
             set { _billingAddressCreate.StreetName = value; }

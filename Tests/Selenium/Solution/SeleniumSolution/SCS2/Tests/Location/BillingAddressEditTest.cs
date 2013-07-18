@@ -99,7 +99,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         {
             _customerMenu.BillingAddressEdit.Click();
 
-
             _billingAddressEdit.CompanyName = "SYR Sele Firma A$°";
             _billingAddressEdit.StreetName = "Hardturmstr. 201$°";
             _billingAddressEdit.Zip = "802$°";

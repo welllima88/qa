@@ -5,23 +5,151 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 {
-    public class CustomerView : WebObject, ICustomerView
+    public class CustomerView : WebObject, ICustomer
     {
         #region ICustomerView Members
 
-        public string CompanyName
+        public string CustomerName
         {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.CompanyName)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(Customer.CustomerName)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public IWebElement EditButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
 
         public string Guid
         {
             get { return WebDriver.FindElement(By.CssSelector(Customer.GUID)).Text; }
+            set { throw new NotImplementedException(); }
         }
 
-        public string CustomerName
+        public string CashIntegrator
         {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.CustomerName)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(Customer.CashIntegrator)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string CompanyName
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.CompanyName)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string SapNumber
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.SapNumber)).Text; }
+            set { throw new NotSupportedException("Not available in create mode"); }
+        }
+
+        public string StreetNo
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.StreetName)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Zip
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Zip)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string City
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.City)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public String Agency
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Agency)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Language
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.LanguageView)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Country
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.CountryView)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Po
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Po)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string AdressAddition
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.AdressAddition)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Email
+        {
+            // ":not(label)" is necessary because rendering tag is a span if no email and a if it is set
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
+            }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Telephone
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Telephone)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Mobile
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Mobile)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Fax
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Fax)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Web
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.WebView)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Region
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.Region)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string CategoryCode
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.CategoryCodeView)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string SupportContract
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.SupportContract)).Text; }
+            set { throw new NotImplementedException(); }
+        }
+
+        public string Segment
+        {
+            get { return WebDriver.FindElement(By.CssSelector(Customer.SegmentView)).Text; }
+            set { throw new NotImplementedException(); }
         }
 
         public string Supplier
@@ -32,21 +160,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string SbsBillingTenant
         {
             get { return WebDriver.FindElement(By.CssSelector(Customer.SbsBillingTenant)).Text; }
-        }
-
-        public string StreetNo
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.StreetName)).Text; }
-        }
-
-        public string Zip
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Zip)).Text; }
-        }
-
-        public string City
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.City)).Text; }
         }
 
         public string SbsCurrency
@@ -75,98 +188,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return WebDriver.FindElement(By.CssSelector("span[id$='_customerSbsAddressLabel']")).Text; }
         }
 
-        public String Agency
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Agency)).Text; }
-        }
-
-
-        public string Language
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.LanguageView)).Text; }
-        }
-
-        public string Country
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.CountryView)).Text; }
-        }
-
-
-        public string Po
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Po)).Text; }
-        }
-
-        public string AdressAddition
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.AdressAddition)).Text; }
-        }
-
-        public string SapNumber
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.SapNumber)).Text; }
-        }
-
-        public string Email
-        {
-            // ":not(label)" is necessary because rendering tag is a span if no email and a if it is set
-            get
-            {
-                return
-                    WebDriver.FindElement(
-                        By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
-            }
-        }
-
-        public string Telephone
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Telephone)).Text; }
-        }
-
-        public string Mobile
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Mobile)).Text; }
-        }
-
-        public string Fax
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Fax)).Text; }
-        }
-
-        public string Web
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.WebView)).Text; }
-        }
-
-        public IWebElement EditButton
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
-        }
-
-        public string Region
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.Region)).Text; }
-        }
-
-        public string CategoryCode
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.CategoryCodeView)).Text; }
-        }
-
-        public string SupportContract
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.SupportContract)).Text; }
-        }
-
-        public string CashIntegrator
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.CashIntegrator)).Text; }
-        }
-
-        public string Segment
-        {
-            get { return WebDriver.FindElement(By.CssSelector(Customer.SegmentView)).Text; }
-        }
+        string ICustomer.CustomerName { get; set; }
 
         #endregion
     }

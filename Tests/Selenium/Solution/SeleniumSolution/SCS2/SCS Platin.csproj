@@ -199,9 +199,7 @@
     <Compile Include="TestObjects\Definitions\IContactCreate.cs" />
     <Compile Include="TestObjects\Definitions\IContactEdit.cs" />
     <Compile Include="TestObjects\Definitions\IContactView.cs" />
-    <Compile Include="TestObjects\Definitions\ICustomerCreate.cs" />
-    <Compile Include="TestObjects\Definitions\ICustomerEdit.cs" />
-    <Compile Include="TestObjects\Definitions\ICustomerView.cs" />
+    <Compile Include="TestObjects\Definitions\ICustomer.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />
     <Compile Include="TestObjects\Definitions\ISimCardElement.cs" />
@@ -227,7 +225,7 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMissingDataTest.cs" />
-    <Compile Include="Tests\Customer\Edit\Copy %282%29 of CustomerEditTest.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditWithMinamalDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditKeepsDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithNoData.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithMissingData.cs" />

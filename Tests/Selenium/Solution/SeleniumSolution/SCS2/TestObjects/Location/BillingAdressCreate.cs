@@ -72,12 +72,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Email")).TypeText(value); }
         }
 
-
         public string CompanyName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TypeText(value); }
         }
-
 
         public string StreetName
         {

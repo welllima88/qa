@@ -114,7 +114,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
                          .TypeText(value);
             }
 
-
             get
             {
                 return

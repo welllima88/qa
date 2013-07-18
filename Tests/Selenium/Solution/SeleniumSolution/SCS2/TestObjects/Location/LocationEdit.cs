@@ -50,16 +50,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get { return _locationView.SbsAdressNumber; }
         }
 
-
         public String Ep2MerchantId
         {
             get { return _locationView.Ep2MerchantId; }
         }
 
-        public string StreetName
+        public string StreetNo
         {
-            set { _locationCreate.StreetName = value; }
-            get { return _locationCreate.StreetName; }
+            set { _locationCreate.StreetNo = value; }
+            get { return _locationCreate.StreetNo; }
         }
 
         public string Language

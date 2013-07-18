@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
+﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
     public interface ICustomer
     {

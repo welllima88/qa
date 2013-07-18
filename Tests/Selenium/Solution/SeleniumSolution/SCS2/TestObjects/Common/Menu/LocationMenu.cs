@@ -9,7 +9,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
             get { return WebDriver.FindElement(By.CssSelector(Menu.LocationMenu_Location)); }
         }
 
-
         public IWebElement TerminalCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(Menu.LocationMenu_TerminalCreate)); }

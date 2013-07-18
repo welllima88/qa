@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get { return WebDriver.FindElement(By.CssSelector(Location.GUID)).Text; }
         }
 
-        public string StreetName
+        public string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.StreetName)).Text; }
         }
@@ -48,7 +48,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.SbsAdressNumber)).Text; }
         }
-
 
         public string Language
         {

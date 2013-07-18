@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 {
-    public class CustomerEdit : WebObject, ICustomerEdit
+    public class CustomerEdit : WebObject, ICustomer
     {
         private readonly CustomerCreate _customerCreate;
         private readonly CustomerView _customerView;
@@ -18,10 +18,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 
         #region ICustomerEdit Members
 
+        public IWebElement SaveButton
+        {
+            get { return _customerCreate.SaveButton; }
+        }
+
+        public IWebElement CancelButton
+        {
+            get { return _customerCreate.CancelButton; }
+        }
+
         public string Segment
         {
             set { _customerCreate.Segment = value; }
             get { return _customerCreate.Segment; }
+        }
+
+        public string Guid
+        {
+            get { throw new NotSupportedException("Not available in create mode"); }
+            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public string CustomerName
@@ -41,7 +57,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             set { _customerCreate.CompanyName = value; }
             get { return _customerCreate.CompanyName; }
         }
-
 
         public string Supplier
         {
@@ -96,10 +111,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return _customerCreate.SupportContract; }
         }
 
-        public string StreetName
+        public string StreetNo
         {
-            set { _customerCreate.StreetName = value; }
-            get { return _customerCreate.StreetName; }
+            set { _customerCreate.StreetNo = value; }
+            get { return _customerCreate.StreetNo; }
         }
 
         public string Language
@@ -172,16 +187,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         {
             set { _customerCreate.Web = value; }
             get { return _customerCreate.Web; }
-        }
-
-        public IWebElement SaveButton
-        {
-            get { return _customerCreate.SaveButton; }
-        }
-
-        public IWebElement CancelButton
-        {
-            get { return _customerCreate.CancelButton; }
         }
 
         public string CashIntegrator

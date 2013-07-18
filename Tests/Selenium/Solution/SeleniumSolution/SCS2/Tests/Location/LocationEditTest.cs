@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             string companyName = _locationView.CompanyName;
             string po = _locationView.Po;
             string adressAddition = _locationView.AdressAddition;
-            string streetName = _locationView.StreetName;
+            string streetName = _locationView.StreetNo;
             string zip = _locationView.Zip;
             string city = _locationView.City;
             string language = _locationView.Language;
@@ -75,7 +75,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "SYR Sele Firma AAA";
-            _locationEdit.StreetName = "Hardturmstr. 2011";
+            _locationEdit.StreetNo = "Hardturmstr. 2011";
             _locationEdit.Zip = "80222";
             _locationEdit.City = "Zürichhh";
             _locationEdit.Po = "PFO111";
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             Assert.AreEqual(companyName, _locationView.CompanyName);
             Assert.AreEqual(po, _locationView.Po);
             Assert.AreEqual(adressAddition, _locationView.AdressAddition);
-            Assert.AreEqual(streetName, _locationView.StreetName);
+            Assert.AreEqual(streetName, _locationView.StreetNo);
             Assert.AreEqual(zip, _locationView.Zip);
             Assert.AreEqual(city, _locationView.City);
             Assert.AreEqual(language, _locationView.Language);
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "SYR Sele Firma A$°";
-            _locationEdit.StreetName = "Hardturmstr. 201$°";
+            _locationEdit.StreetNo = "Hardturmstr. 201$°";
             _locationEdit.Zip = "802$°";
             _locationEdit.City = "Zürich$°";
             _locationEdit.Po = "PFO1$°";
@@ -163,7 +163,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
         {
             _locationMenu.LocationEdit.Click();
 
-            _locationEdit.StreetName = "Hardturmstr. 201";
+            _locationEdit.StreetNo = "Hardturmstr. 201";
             _locationEdit.Zip = "8021";
             _locationEdit.City = "Zürich";
             _locationEdit.Po = "PFO1";
@@ -194,7 +194,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "";
-            _locationEdit.StreetName = "";
+            _locationEdit.StreetNo = "";
             _locationEdit.Zip = "";
             _locationEdit.City = "";
             _locationEdit.Po = "";
@@ -233,7 +233,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "SYR Sele Firma A";
-            _locationEdit.StreetName = "";
+            _locationEdit.StreetNo = "";
             _locationEdit.Zip = "8021";
             _locationEdit.City = "Zürich";
             _locationEdit.Po = "PFO1";
@@ -261,7 +261,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "SYR Sele Firma A";
-            _locationEdit.StreetName = "Hardturmstr. 201";
+            _locationEdit.StreetNo = "Hardturmstr. 201";
             _locationEdit.Zip = "8021";
             _locationEdit.City = "";
             _locationEdit.Po = "PFO1";
@@ -289,7 +289,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             _locationMenu.LocationEdit.Click();
 
             _locationEdit.CompanyName = "SYR Sele Firma A";
-            _locationEdit.StreetName = "Hardturmstr. 201";
+            _locationEdit.StreetNo = "Hardturmstr. 201";
             _locationEdit.Zip = "";
             _locationEdit.City = "Zürich";
             _locationEdit.Po = "PFO1";
@@ -326,7 +326,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             Assert.AreEqual(_locationEdit.SbsAdressNumber, sbsAdressNumber);
 
             _locationEdit.CompanyName = "SYR Standort SELE B";
-            _locationEdit.StreetName = "Am Bärenplatz 2";
+            _locationEdit.StreetNo = "Am Bärenplatz 2";
             _locationEdit.Zip = "8001";
             _locationEdit.City = "Kreuzlingen";
             _locationEdit.Po = "PO2-A";
@@ -358,7 +358,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             StringAssert.Matches(_locationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
             StringAssert.Matches(_locationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            Assert.AreEqual("Am Bärenplatz 2", _locationView.StreetName);
+            Assert.AreEqual("Am Bärenplatz 2", _locationView.StreetNo);
             Assert.AreEqual("1331", _locationView.SapNumber);
             Assert.AreEqual("SYR Standort SELE B", _locationView.CompanyName);
             Assert.AreEqual("8001", _locationView.Zip);
@@ -389,7 +389,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             Assert.AreEqual(_locationEdit.SbsAdressNumber, sbsAdressNumber);
 
             _locationEdit.CompanyName = "SYR Standort SELE B";
-            _locationEdit.StreetName = "Am Bärenplatz 2";
+            _locationEdit.StreetNo = "Am Bärenplatz 2";
             _locationEdit.Zip = "8001";
             _locationEdit.City = "Kreuzlingen";
             _locationEdit.Po = "";
@@ -421,7 +421,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
             StringAssert.Matches(_locationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
             StringAssert.Matches(_locationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            Assert.AreEqual("Am Bärenplatz 2", _locationView.StreetName);
+            Assert.AreEqual("Am Bärenplatz 2", _locationView.StreetNo);
             Assert.AreEqual("", _locationView.SapNumber);
             Assert.AreEqual("SYR Standort SELE B", _locationView.CompanyName);
             Assert.AreEqual("8001", _locationView.Zip);

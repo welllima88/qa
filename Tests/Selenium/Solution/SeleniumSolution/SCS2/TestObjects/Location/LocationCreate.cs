@@ -45,7 +45,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get { throw new NotSupportedException("will be generated"); }
         }
 
-
         public string Language
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(Location.Language)).Selector().SelectByValue(value); }
@@ -125,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             get { throw new NotSupportedException(); }
         }
 
-        public string StreetName
+        public string StreetNo
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(Location.StreetName)).TypeText(value); }
             get { throw new NotSupportedException(); }

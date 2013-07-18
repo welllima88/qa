@@ -39,7 +39,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ArticleSbsNumber")).Text; }
         }
 
-
         public string CardReaderType
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#CardReaderType")).Text; }

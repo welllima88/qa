@@ -32,7 +32,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         public void TestInit()
         {
             _locationCreate.CompanyName = "SYR Sele Firma A";
-            _locationCreate.StreetName = "Hardturmstr. 201";
+            _locationCreate.StreetNo = "Hardturmstr. 201";
             _locationCreate.Zip = "8021";
             _locationCreate.City = "Zürich";
             _locationCreate.Po = "PFO1";
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         {
             _customerMenu.LocationCreate.Click();
 
-            _locationCreate.StreetName = "";
+            _locationCreate.StreetNo = "";
 
             _locationCreate.SaveButton.Click();
 

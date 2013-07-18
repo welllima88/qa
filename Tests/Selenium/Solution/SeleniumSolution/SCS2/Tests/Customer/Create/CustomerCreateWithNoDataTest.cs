@@ -46,7 +46,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         {
         }
 
-
         [TestMethod]
         public void CustomerNumberOfFormAlerts()
         {
@@ -88,7 +87,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         {
             CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
         }
-
 
         [TestMethod]
         public void CountryMissingFormAlert()

@@ -51,7 +51,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 //
 //Similarly, there are some scenarios when submitting an HTML form via WebElement's submit() method may have the same effect. This can happen if the driver calls the JavaScript submit() function on the form, and there is an onSubmit event handler that calls the JavaScript alert(), confirm(), or prompt() functions.
 
-
             //http://stackoverflow.com/questions/11430773/javascript-with-webdriver-selenium-2
             _customerCreate.StreetNo = "Hardturmstr. 201";
             _customerCreate.Zip = "5555";

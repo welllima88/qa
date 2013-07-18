@@ -9,7 +9,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Article
     {
         private static IArticle _articleView;
 
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {

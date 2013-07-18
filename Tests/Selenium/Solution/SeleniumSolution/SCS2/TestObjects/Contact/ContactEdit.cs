@@ -91,7 +91,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return _contactCreate.Email; }
         }
 
-
         public string Street
         {
             set { _contactCreate.Street = value; }

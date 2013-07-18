@@ -131,7 +131,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             //_customerView.            
         }
 
-
         [TestMethod]
         public void CustomerName()
         {

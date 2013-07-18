@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
             _customerMenu.LocationCreate.Click();
 
             _locationCreate.CompanyName = "SYR Standort SELE A";
-            _locationCreate.StreetName = "Bröselstr. 201a-c";
+            _locationCreate.StreetNo = "Bröselstr. 201a-c";
             _locationCreate.Zip = "55555";
             _locationCreate.City = "München";
 
@@ -103,7 +103,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
         [TestMethod]
         public void StreetName()
         {
-            Assert.AreEqual("Bröselstr. 201a-c", _locationView.StreetName);
+            Assert.AreEqual("Bröselstr. 201a-c", _locationView.StreetNo);
         }
 
         [TestMethod]
@@ -193,7 +193,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
             _customerMenu.LocationCreate.Click();
             Assert.AreEqual(language, _locationCreate.Language);
         }
-
 
         [TestMethod]
         public void CreateLocationCheckNavBar()

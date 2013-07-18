@@ -38,7 +38,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
             }
         }
 
-
         public string Language
         {
             get
@@ -56,7 +55,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
                     WebDriver.FindElement(By.CssSelector("#LocationData_CountryId")).Text;
             }
         }
-
 
         public string Po
         {

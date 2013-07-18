@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
             _customerMenu.LocationCreate.Click();
 
             _locationCreate.CompanyName = "SYR Sele Firma A$°";
-            _locationCreate.StreetName = "Hardturmstr. 201$°";
+            _locationCreate.StreetNo = "Hardturmstr. 201$°";
             _locationCreate.Zip = "802$°";
             _locationCreate.City = "Zürich$°";
             _locationCreate.Po = "PFO1$°";

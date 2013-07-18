@@ -92,7 +92,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Email)).Text; }
         }
 
-
         public string Street
         {
             set

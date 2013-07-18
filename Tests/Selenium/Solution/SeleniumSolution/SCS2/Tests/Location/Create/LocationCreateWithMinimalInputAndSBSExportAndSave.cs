@@ -44,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
             _customerMenu.LocationCreate.Click();
 
             _locationCreate.CompanyName = "SYR SBS Standort A";
-            _locationCreate.StreetName = "SBS Way 201a-c";
+            _locationCreate.StreetNo = "SBS Way 201a-c";
             _locationCreate.Zip = "4554";
             _locationCreate.City = "SBS";
 
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
                     retry--;
                 }
             } while (retry > 0);
-            Assert.AreEqual("SBS Way 201a-c", _locationView.StreetName);
+            Assert.AreEqual("SBS Way 201a-c", _locationView.StreetNo);
             Assert.AreEqual("4554", _locationView.Zip);
             Assert.AreEqual("SBS", _locationView.City);
         }
@@ -97,7 +97,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Create
             _customerMenu.LocationCreate.Click();
             Assert.AreEqual(language, _locationCreate.Language);
         }
-
 
         [TestMethod]
         public void CreateLocationCheckNavBar()

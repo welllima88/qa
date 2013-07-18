@@ -1,10 +1,11 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
 {
-    public class CustomerCreate : WebObject, ICustomerCreate
+    public class CustomerCreate : WebObject, ICustomer
     {
         public string Ep2MerchantId
         {
@@ -13,6 +14,26 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         }
 
         #region ICustomerCreate Members
+
+        public IWebElement CancelButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
+        }
+
+        public IWebElement SaveButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
+        }
+
+        public string SbsCurrency
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsCurrency)).Selector
+                    ().SelectByText(value);
+            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsCurrency)).Selector().SelectedOption.Text; }
+        }
 
         public string Country
         {
@@ -128,6 +149,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             }
         }
 
+        public string Guid
+        {
+            get { throw new NotSupportedException("Not available in create mode"); }
+            set { throw new NotSupportedException("Not available in create mode"); }
+        }
+
         public string CustomerName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerName)).TypeText(value); }
@@ -146,7 +173,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.CompanyName)).Text; }
         }
 
-
         public string Supplier
         {
             set
@@ -161,14 +187,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             }
         }
 
-
-        public string SbsCurrency
+        public string SbsAdressNumber
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector(Customer.SbsCurrency)).Selector
-                    ().SelectByText(value);
-            }
+            get { throw new NotSupportedException("Not available in create mode"); }
+            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public string CategoryCode
@@ -214,7 +236,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             }
         }
 
-        public string StreetName
+        public string StreetNo
         {
             set
             {
@@ -244,20 +266,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.Web)).Text; }
         }
 
-        public IWebElement CancelButton
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
-        }
-
-        public IWebElement SaveButton
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
-        }
-
         public string CustomerNumber
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Customer.CustomerNumber)).Text; }
+        }
+
+        public string SbsDebitNumber
+        {
+            get { throw new NotSupportedException("Not available in create mode"); }
+            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public string CashIntegrator

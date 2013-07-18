@@ -28,7 +28,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             // Suggester set once, because not in focus of tests:
         }
 
-
         [TestInitialize]
         public void TestInit()
         {
@@ -66,7 +65,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
         public static void ClassCleanup()
         {
         }
-
 
         [TestMethod]
         public void CreateCustomerWithoutCustomerNameFailed()
@@ -122,7 +120,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
         }
-
 
         [TestMethod]
         public void CreateCustomerWithoutMandantFailed()
