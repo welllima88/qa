@@ -53,7 +53,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
 
 
             //http://stackoverflow.com/questions/11430773/javascript-with-webdriver-selenium-2
-            _customerCreate.StreetName = "Hardturmstr. 201";
+            _customerCreate.StreetNo = "Hardturmstr. 201";
             _customerCreate.Zip = "5555";
             _customerCreate.City = "Zürich";
             _customerCreate.SbsCurrency = "EUR";
@@ -87,7 +87,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _customerCreate.CustomerName = "Selenium Test IE";
 
             _customerCreate.CompanyName = "SYR Firma DEMO" + _dt;
-            _customerCreate.StreetName = "Hardturmstr. 201";
+            _customerCreate.StreetNo = "Hardturmstr. 201";
             _customerCreate.Zip = "5555";
             _customerCreate.City = "Zürich";
 

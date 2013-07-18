@@ -83,7 +83,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             customerCreate.CustomerName = "Selenium Test will cancel";
             customerCreate.Supplier = "SIX Payment Services AG";
             customerCreate.SbsBillingTenant = "SIX Payment Services AG";
-            customerCreate.StreetName = "Hardturmstr. 201";
+            customerCreate.StreetNo = "Hardturmstr. 201";
             customerCreate.Zip = "5555";
             customerCreate.City = "Zürich";
             customerCreate.SbsCurrency = "EUR";

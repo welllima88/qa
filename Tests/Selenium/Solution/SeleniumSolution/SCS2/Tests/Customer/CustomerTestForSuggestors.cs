@@ -44,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer
             _customerCreate.CustomerName = "SYR Sele Kunde A";
 
             _customerCreate.CompanyName = "";
-            _customerCreate.StreetName = "";
+            _customerCreate.StreetNo = "";
             _customerCreate.Zip = "";
             _customerCreate.City = "";
 
