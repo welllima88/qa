@@ -40,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public string Country
         {
             set { WebDriver.FindSuggesterElement(By.CssSelector(CustomerRes.Country)).Suggestor(value); }
-            get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Country)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Country)).GetAttribute("value"); }
         }
 
         public string SbsBillingTenant
@@ -258,7 +258,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
             get
             {
                 return WebDriver.FindElement(By.CssSelector(
-                    CustomerRes.Language)).Text;
+                    CustomerRes.Language)).GetAttribute("value");
             }
         }
 
