@@ -117,35 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DEV" xml:space="preserve">
-    <value>DEV</value>
-  </data>
-  <data name="FirefoxProfile_Certificate" xml:space="preserve">
-    <value>SeleWithCertificate</value>
-  </data>
-  <data name="FirefoxProfile_Plain" xml:space="preserve">
-    <value>SeleWithOutCertificate</value>
-  </data>
-  <data name="InternetExplorer" xml:space="preserve">
-    <value>InternetExplorer</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Production" xml:space="preserve">
-    <value>Production</value>
-  </data>
-  <data name="QAK" xml:space="preserve">
-    <value>QAK</value>
-  </data>
-  <data name="QAL" xml:space="preserve">
-    <value>QAL</value>
-  </data>
-  <data name="UAC" xml:space="preserve">
-    <value>UAC</value>
-  </data>
-  <data name="WES_Certificate" xml:space="preserve">
-    <value>WES_Certificate</value>
-  </data>
-  <data name="WES_SecurId" xml:space="preserve">
-    <value>WES_SecurId</value>
+  <data name="password_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
