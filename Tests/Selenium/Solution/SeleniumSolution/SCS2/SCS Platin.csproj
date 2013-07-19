@@ -219,6 +219,8 @@
     <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
+    <Compile Include="Tests\Customer\Create\CustomerCreateWithManualCustomerNumberTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateGuiTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithSBSExportTest.cs" />
@@ -233,6 +235,9 @@
     <Compile Include="Tests\Customer\Edit\CustomerEditAndCancelTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
+    <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
+    <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
+    <Compile Include="TestObjects\Customer\CustomerDeactivation.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationNewsTest.cs" />
     <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
@@ -249,7 +254,8 @@
     <Compile Include="Tests\Location\Create\LocationCreateAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
-    <Compile Include="Tests\Location\LocationEditTest.cs" />
+    <Compile Include="Tests\Location\Edit\Copy of LocationEditTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditAndSaveTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMissingTest.cs" />
     <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />
     <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
