@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         private readonly string _password;
         private readonly string _securId;
         private readonly string _userName;
-        private readonly WesSecurIdLoginPage _wes;
+        private WesSecurIdLoginPage _wes;
 
         /// <summary>
         ///     The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved due to security, so after test run the data will not be available anymore. But there is no further protection like encryption or forced data destruction.
@@ -21,23 +21,33 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         /// <param name="password">password for userName</param>
         /// <param name="mandant">e.g. "TKCPOS"</param>
         /// <param name="securId">4 digits (fix password) + 6 digits securId-token</param>
-        /// <param name="webDriverAdapter"></param>
-        public SecurIdAuthentication(String userName, String password, String mandant, String securId)
-            //todo remove driver object and create page data object with this reference
+        public SecurIdAuthentication(String userName, String password, String mandant, String securId)            
         {
             _securId = securId;
             _userName = userName;
             _password = password;
             _mandant = mandant;
-            _wes = new WesSecurIdLoginPage();
+        }
+
+        public SecurIdAuthentication()
+        {
+            var inputBox = new SecurIdDialogBox();
+            inputBox.Show();
+
+            _securId = inputBox.securId.Text;
+            _userName = inputBox.userName.Text;
+            _password = inputBox.password.Text;
+            _mandant = inputBox.mandant.Text;
+            // inputBox.doLogin.
         }
 
         #region IAuthentication Members
 
         public void Login()
         {
+            _wes = new WesSecurIdLoginPage();
             StringAssert.Matches(_wes.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
-            Assert.AreEqual(_wes.InputLabel.Text, "WES SecurID-Login");
+            Assert.AreEqual("WES SecurID-Login", _wes.InputLabel.Text);
 
             _wes.Mandant = _mandant;
             _wes.User = _userName;
