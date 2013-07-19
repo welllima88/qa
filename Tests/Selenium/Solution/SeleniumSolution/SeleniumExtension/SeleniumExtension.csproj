@@ -60,7 +60,18 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\Method\SecurIdDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\Method\SecurIdDialogBox.Designer.cs">
+      <DependentUpon>SecurIdDialogBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="ISuggesterWebElement.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings\ITestEnvironment.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
     <Compile Include="IWebElementAdapter.cs" />
@@ -103,21 +114,35 @@
     <Folder Include="TestEntities\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Authentication\Method\SecurIdDialogBox.resx">
+      <DependentUpon>SecurIdDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\DriverRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DriverRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.2.33.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support">
       <HintPath>..\packages\Selenium.Support.2.33.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
