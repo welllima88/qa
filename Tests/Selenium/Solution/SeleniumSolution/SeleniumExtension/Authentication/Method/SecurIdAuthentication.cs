@@ -21,24 +21,12 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         /// <param name="password">password for userName</param>
         /// <param name="mandant">e.g. "TKCPOS"</param>
         /// <param name="securId">4 digits (fix password) + 6 digits securId-token</param>
-        public SecurIdAuthentication(String userName, String password, String mandant, String securId)            
+        public SecurIdAuthentication(String userName, String password, String mandant, String securId)
         {
             _securId = securId;
             _userName = userName;
             _password = password;
             _mandant = mandant;
-        }
-
-        public SecurIdAuthentication()
-        {
-            var inputBox = new SecurIdDialogBox();
-            inputBox.Show();
-
-            _securId = inputBox.securId.Text;
-            _userName = inputBox.userName.Text;
-            _password = inputBox.password.Text;
-            _mandant = inputBox.mandant.Text;
-            // inputBox.doLogin.
         }
 
         #region IAuthentication Members
