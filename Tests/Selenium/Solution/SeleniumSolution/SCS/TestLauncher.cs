@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
 {
@@ -11,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestDirector = new ScsClassicTestDirector();
+            TestDirector = new TestDirector(new Prod());
             TestDirector.PrepareBrowser();
         }
 

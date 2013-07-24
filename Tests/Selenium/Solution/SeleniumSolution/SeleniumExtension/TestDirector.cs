@@ -7,10 +7,16 @@ using SIX.SCS.QA.Selenium.Extension.Settings;
 namespace SIX.SCS.QA.Selenium.Extension
 {
     [TestClass]
-    public abstract class TestDirector
+    public class TestDirector
     {
+        public TestEnvironment TestEnvironment;
         public IWebDriverAdapter WebDriver;
-        public abstract TestEnvironment TestEnvironment { get; }
+
+        public TestDirector(TestEnvironment testEnvironment)
+        {
+            TestEnvironment = testEnvironment;
+        }
+
         public string BaseUrl { get; private set; }
 
         private void CreateFirefoxWebDriverInstance(string profileName)

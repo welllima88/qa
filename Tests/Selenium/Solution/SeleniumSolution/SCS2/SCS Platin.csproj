@@ -77,7 +77,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scs2Res.resx</DependentUpon>
     </Compile>
-    <Compile Include="ScsPlatinTestDirector.cs" />
     <Compile Include="Settings\Prod.cs" />
     <Compile Include="Settings\QaK.cs" />
     <Compile Include="Settings\QaL.cs" />

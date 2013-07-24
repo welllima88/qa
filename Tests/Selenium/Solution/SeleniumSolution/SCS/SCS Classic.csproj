@@ -76,7 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScsRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="ScsClassicTestDirector.cs" />
     <Compile Include="Settings\Dev.cs" />
     <Compile Include="Settings\Prod.cs" />
     <Compile Include="Settings\QaK.cs" />
@@ -97,7 +96,6 @@
     <Compile Include="TestObjects\Menu\TerminalMenu.cs" />
     <Compile Include="TestObjects\Menu\TicketMenu.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
-    <Compile Include="Tests\SanityCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

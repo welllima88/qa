@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Settings;
+using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
 {
@@ -11,6 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
     public static class TestLauncher
     {
         public static TestDirector TestDirector;
+        public static TestEnvironment TestEnvironment;
 
         public static void Navigate(string urlSuffix)
         {
@@ -25,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestDirector = new ScsPlatinTestDirector();
+            TestDirector = new TestDirector(new Prod());
             TestDirector.PrepareBrowser();
         }
 
