@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension
@@ -23,13 +23,12 @@ namespace SIX.SCS.QA.Selenium.Extension
             try
             {
                 IWebElement suggestElement =
-                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext='" + innerText + "']"));
+                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext*='" + innerText + "']"));
                 suggestElement.Click();
             }
-                //catch (NoSuchElementException)
-            catch (Exception ex)
+            catch (NoSuchElementException ex) // hope no other exceptions occur
             {
-                Console.Error.WriteLine("warning: skip 'click' on suggestor element [" + innerText + "] " + ex.Message);
+                Debug.WriteLine("warning: skip 'click' on suggestor element [" + innerText + "] " + ex.Message);
             }
         }
 
