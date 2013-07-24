@@ -6,9 +6,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics
 {
     public class ScsClassicTestDirector : TestDirector
     {
+        private readonly TestEnvironment _testEnvironment = new Prod();
+
         public override TestEnvironment TestEnvironment
         {
-            get { return new QaL(); }
+            get { return _testEnvironment; }
         }
     }
 }
