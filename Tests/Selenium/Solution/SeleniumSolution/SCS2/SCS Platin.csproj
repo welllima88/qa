@@ -57,6 +57,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.2.33.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
@@ -291,6 +292,7 @@
     <Folder Include="TestData\dev\" />
     <Folder Include="TestData\qaK\" />
     <Folder Include="TestData\qaL\" />
+    <Folder Include="TestObjects\Administration\TerminalReleases\" />
     <Folder Include="TestObjects\Common\Navigation\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
     <Folder Include="Tests\Administration\Agency\" />
