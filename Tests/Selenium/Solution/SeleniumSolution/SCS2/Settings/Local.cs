@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
             Authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort);
             SeleniumConfig = new SeleniumConfig
                 {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 15, SetPageLoadTimeout = 40}
                 };
         }
     }

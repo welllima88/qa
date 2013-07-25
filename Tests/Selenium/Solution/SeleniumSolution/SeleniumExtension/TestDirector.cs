@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Extension
     [TestClass]
     public class TestDirector
     {
-        public TestEnvironment TestEnvironment;
+        public readonly TestEnvironment TestEnvironment;
         public IWebDriverAdapter WebDriver;
 
         public TestDirector(TestEnvironment testEnvironment)
