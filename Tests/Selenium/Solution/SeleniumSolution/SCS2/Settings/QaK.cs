@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
             BrowserProfileName = DriverRes.FirefoxProfile_Certificate;
             Application = new LobbyView();
             Authentication = new CertificateAuthentication(Scs2Res.mandant_qa_K);
-            SeleniumConfig = new SeleniumConfig {Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10}};
+            SeleniumConfig = new SeleniumConfig { Timeouts = new Timeouts { ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30 } };
         }
     }
 }
