@@ -71,6 +71,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Settings\Local.cs" />
     <Compile Include="TestLauncher.cs" />
     <Compile Include="Properties\Scs2Res.Designer.cs">
       <AutoGen>True</AutoGen>

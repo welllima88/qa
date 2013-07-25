@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestDirector = new TestDirector(new Prod());
+            TestDirector = new TestDirector(new Dev());
             TestDirector.PrepareBrowser();
         }
 

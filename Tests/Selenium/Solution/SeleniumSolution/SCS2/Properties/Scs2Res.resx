@@ -145,4 +145,8 @@
   <data name="mandant_prod" xml:space="preserve">
     <value>tkcpos</value>
   </data>
+  <data name="UAC_LOCAL" xml:space="preserve">
+    <value>https://wksiegmund01/scs2/</value>
+    <comment>UAC</comment>
+  </data>
 </root>

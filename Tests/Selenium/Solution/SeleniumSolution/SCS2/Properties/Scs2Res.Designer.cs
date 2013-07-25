@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties
-{
-
-
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -93,6 +93,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties
         public static string UAC_DEV {
             get {
                 return ResourceManager.GetString("UAC_DEV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://wksiegmund01/scs2/.
+        /// </summary>
+        public static string UAC_LOCAL {
+            get {
+                return ResourceManager.GetString("UAC_LOCAL", resourceCulture);
             }
         }
         
