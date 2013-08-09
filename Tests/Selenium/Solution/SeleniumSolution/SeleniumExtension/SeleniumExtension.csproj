@@ -61,12 +61,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentication\Method\SecurIdDialogBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Authentication\Method\SecurIdDialogBox.Designer.cs">
-      <DependentUpon>SecurIdDialogBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -114,9 +109,6 @@
     <Folder Include="TestEntities\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Authentication\Method\SecurIdDialogBox.resx">
-      <DependentUpon>SecurIdDialogBox.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\DriverRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DriverRes.Designer.cs</LastGenOutput>
