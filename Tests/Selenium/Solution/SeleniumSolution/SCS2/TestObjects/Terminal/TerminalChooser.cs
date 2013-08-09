@@ -73,7 +73,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
            WebDriver.FindElement(By.XPath("//td[contains(text(),'" + value + "')]")).Click();
            WebDriver.FindElement(By.XPath("//a[@class=level1/td[text()=\" xentissimo\"]")).Click();
            WebDriver.FindElement(By.CssSelector("a.level1 td[textContent~=\"" + value + "\"]")).Click();
-           WebDriver.FindElement(By.CssSelector("a.level1[textContent~='xentissimo']")).Click();
+           WebDriver.FindElement(By.CssSelector("a.level1[textContent*ç='xentissimo']")).Click();
            WebDriver.FindElement(By.CssSelector("a.level1 td[textContent~=\"" + value + "\"]")).Click();
            WebDriver.FindElement(By.CssSelector("td[textContent=' " + value + "'].data")).Click();
            WebDriver.FindElement(By.CssSelector("a.level" + level + " td[textContent~='" + value + "'].data")).Click();

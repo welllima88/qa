@@ -36,8 +36,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-            "C:\\Users\\siegmund\\Desktop\\KSystemUsers.csv",
-            "KSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
+            "C:\\Users\\siegmund\\Desktop\\ProdSystemUsers.csv",
+            "ProdSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
         public void AddScs2ServiceToUsers()
         {
             string userId = Convert.ToString(TestContext.DataRow[0]);

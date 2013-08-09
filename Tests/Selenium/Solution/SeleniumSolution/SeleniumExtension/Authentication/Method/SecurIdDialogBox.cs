@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
@@ -6,26 +7,43 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
     public partial class SecurIdDialogBox : Form, IAuthentication
     {
         private IAuthentication _authentication;
+        private bool _loginActionPerformed;
 
         public SecurIdDialogBox()
         {
             InitializeComponent();
-            Show();
         }
 
+        // todo doesn't work to prompt for user input (because of testing framework??), alternatively wait for "onButtonPressed" of Webpage?
         public void Login()
         {
-            
+            var wp = new Thread(WaitForLoginButtonPressed);
+            wp.Name = "WaitForLoginThread";
+            wp.Start();
+            wp.Join();
         }
 
-        private void DoLoginClick(object sender, EventArgs e)
+        public void WaitForLoginButtonPressed()
         {
-            // avoid second click/call
-            Enabled = false;
+            while (!_loginActionPerformed)
+            {
+                // wait active for loginButton was pressed
+                Thread.Sleep(88);
+            }
+            PerformLogin();
+        }
 
-            // just now take Data and do login 
+        private void PerformLogin()
+        {
             _authentication = new SecurIdAuthentication(userName.Text, password.Text, mandant.Text, securId.Text);
             _authentication.Login();
+        }
+
+        private void OnLoginButtonClicked(object sender, EventArgs e)
+        {
+            // prevent second click/call and 'tell' that login shall be performed
+            loginButton.Enabled = false;
+            _loginActionPerformed = true;
         }
     }
 }

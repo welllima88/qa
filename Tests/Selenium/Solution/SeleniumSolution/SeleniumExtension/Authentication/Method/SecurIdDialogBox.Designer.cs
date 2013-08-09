@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.doLogin = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,15 +41,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.savePic)).BeginInit();
             this.SuspendLayout();
             // 
-            // doLogin
+            // loginButton
             // 
-            this.doLogin.Location = new System.Drawing.Point(12, 289);
-            this.doLogin.Name = "doLogin";
-            this.doLogin.Size = new System.Drawing.Size(260, 23);
-            this.doLogin.TabIndex = 0;
-            this.doLogin.Text = "Login";
-            this.doLogin.UseVisualStyleBackColor = true;
-            this.doLogin.Click += new System.EventHandler(this.DoLoginClick);
+            this.loginButton.Location = new System.Drawing.Point(12, 289);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(260, 23);
+            this.loginButton.TabIndex = 0;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.OnLoginButtonClicked);
             // 
             // label1
             // 
@@ -144,8 +144,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.doLogin);
+            this.Controls.Add(this.loginButton);
             this.Name = "SecurIdDialogBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SecurId Login";
             ((System.ComponentModel.ISupportInitialize)(this.savePic)).EndInit();
             this.ResumeLayout(false);
@@ -155,7 +156,7 @@
 
         #endregion
 
-        public System.Windows.Forms.Button doLogin;
+        public System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
