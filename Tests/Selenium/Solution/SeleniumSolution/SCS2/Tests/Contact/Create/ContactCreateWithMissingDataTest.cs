@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
             _contactCreate.Mobile = "+41 58 399 6237 - 2";
             _contactCreate.Fax = "+41 58 399 6237 - 3";
             _contactCreate.Email = "contact@six-group.com";
-            _contactCreate.Street = "Kontakt-Weg 1";
+            _contactCreate.StreetNo = "Kontakt-Weg 1";
             _contactCreate.Po = "POC";
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
@@ -80,7 +80,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _contactCreate.Street = "";
+            _contactCreate.StreetNo = "";
 
             _contactCreate.SaveButton.Click();
 

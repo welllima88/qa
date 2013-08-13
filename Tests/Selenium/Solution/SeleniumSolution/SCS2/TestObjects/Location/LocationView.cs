@@ -27,16 +27,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.StreetName)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Zip
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Zip)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string City
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.City)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public String SbsDebitNumber
@@ -57,6 +60,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string Country
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Country)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Ep2MerchantId
@@ -72,11 +76,13 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string Po
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Po)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string AdressAddition
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.AdressAddition)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Email
@@ -107,6 +113,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string Region
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Region)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         #endregion

@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactEdit : WebObject, IContactEdit
+    public class ContactEdit : WebObject, IContact
     {
         private readonly ContactCreate _contactCreate;
         private readonly ContactView _contactView;
@@ -91,10 +91,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return _contactCreate.Email; }
         }
 
-        public string Street
+        public string StreetNo
         {
-            set { _contactCreate.Street = value; }
-            get { return _contactCreate.Street; }
+            set { _contactCreate.StreetNo = value; }
+            get { return _contactCreate.StreetNo; }
         }
 
         public string Po
@@ -126,7 +126,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return _contactView.CreateDate; }
         }
 
-        public string Addition
+        public string AdressAddition
         {
             set { _contactCreate.AddressAddition = value; }
             get { return _contactCreate.AddressAddition; }

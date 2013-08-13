@@ -103,6 +103,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="TestObjects\Definitions\IAdress.cs" />
     <Compile Include="TestObjects\Definitions\IArticle.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
     <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
@@ -201,9 +202,7 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="TestObjects\Definitions\IContactCreate.cs" />
-    <Compile Include="TestObjects\Definitions\IContactEdit.cs" />
-    <Compile Include="TestObjects\Definitions\IContactView.cs" />
+    <Compile Include="TestObjects\Definitions\IContact.cs" />
     <Compile Include="TestObjects\Definitions\ICustomer.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />

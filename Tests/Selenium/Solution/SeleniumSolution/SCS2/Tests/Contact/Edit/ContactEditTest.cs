@@ -73,7 +73,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             string email = _contactView.Email;
 
             string po = _contactView.Po;
-            string street = _contactView.Street;
+            string StreetNo = _contactView.StreetNo;
             string zip = _contactView.Zip;
             string city = _contactView.City;
 
@@ -95,7 +95,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -103,7 +103,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.CancelButton.Click();
 
@@ -120,7 +120,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             Assert.AreEqual(email, _contactView.Email);
 
             Assert.AreEqual(po, _contactView.Po);
-            Assert.AreEqual(street, _contactView.Street);
+            Assert.AreEqual(StreetNo, _contactView.StreetNo);
             Assert.AreEqual(zip, _contactView.Zip);
             Assert.AreEqual(city, _contactView.City);
             Assert.AreEqual(region, _contactView.Region);
@@ -145,7 +145,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com[]rn$°";
 
             _contactEdit.Po = "Pof[]rn$°";
-            _contactEdit.Street = "Strasse 1[]rn$°";
+            _contactEdit.StreetNo = "Strasse 1[]rn$°";
             _contactEdit.Zip = "[]rn$°";
             _contactEdit.City = "City[]rn$°";
             _contactEdit.Region = "Reg[]rn$°";
@@ -153,7 +153,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr[]rn$°";
+            _contactEdit.AdressAddition = "Addr[]rn$°";
 
             _contactEdit.SaveButton.Click();
 
@@ -191,7 +191,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -199,7 +199,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
 
@@ -225,7 +225,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -233,7 +233,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
 
@@ -261,7 +261,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "";
 
             _contactEdit.Po = "";
-            _contactEdit.Street = "";
+            _contactEdit.StreetNo = "";
             _contactEdit.Zip = "";
             _contactEdit.City = "";
             _contactEdit.Region = "";
@@ -269,7 +269,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "";
+            _contactEdit.AdressAddition = "";
 
             _contactEdit.SaveButton.Click();
 
@@ -304,7 +304,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -312,7 +312,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
 
@@ -340,7 +340,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "";
             _contactEdit.Region = "Reg";
@@ -348,7 +348,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
 
@@ -374,7 +374,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -382,7 +382,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
 
@@ -408,7 +408,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "tksyr_contact@six-group.com";
 
             _contactEdit.Po = "Pof";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "Reg";
@@ -416,7 +416,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "Addr-Add";
+            _contactEdit.AdressAddition = "Addr-Add";
 
             _contactEdit.SaveButton.Click();
             _navigationBar.Lobby.Click();
@@ -433,7 +433,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             Assert.AreEqual("tksyr_contact@six-group.com", _contactView.Email);
 
             Assert.AreEqual("Pof", _contactView.Po);
-            Assert.AreEqual("Strasse 1", _contactView.Street);
+            Assert.AreEqual("Strasse 1", _contactView.StreetNo);
             Assert.AreEqual("2351", _contactView.Zip);
             Assert.AreEqual("City", _contactView.City);
             Assert.AreEqual("Reg", _contactView.Region);
@@ -456,7 +456,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _contactEdit.Email = "";
 
             _contactEdit.Po = "";
-            _contactEdit.Street = "Strasse 1";
+            _contactEdit.StreetNo = "Strasse 1";
             _contactEdit.Zip = "2351";
             _contactEdit.City = "City";
             _contactEdit.Region = "";
@@ -464,7 +464,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.Addition = "";
+            _contactEdit.AdressAddition = "";
 
             _contactEdit.SaveButton.Click();
             _navigationBar.Lobby.Click();
@@ -481,7 +481,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             Assert.AreEqual("", _contactView.Email);
 
             Assert.AreEqual("", _contactView.Po);
-            Assert.AreEqual("Strasse 1", _contactView.Street);
+            Assert.AreEqual("Strasse 1", _contactView.StreetNo);
             Assert.AreEqual("2351", _contactView.Zip);
             Assert.AreEqual("City", _contactView.City);
             Assert.AreEqual("", _contactView.Region);

@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
 
             _contactCreate.FirstName = "Marc";
             _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.Street = "Kontakt-Weg 1";
+            _contactCreate.StreetNo = "Kontakt-Weg 1";
             _contactCreate.Zip = "55555";
             _contactCreate.City = "Berlin";
 
@@ -81,7 +81,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual("Kontakt-Weg 1", _contactView.Street);
+            Assert.AreEqual("Kontakt-Weg 1", _contactView.StreetNo);
         }
 
         [TestMethod]

@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
             _contactCreate.Mobile = "+41 58 399 ^@}$° - 2";
             _contactCreate.Fax = "+41 58 399 ^@}$° - 3";
             _contactCreate.Email = "con^@}$°tact@six-group.com";
-            _contactCreate.Street = "Kontakt-^@}$° 1";
+            _contactCreate.StreetNo = "Kontakt-^@}$° 1";
             _contactCreate.Po = "P^@}$°";
             _contactCreate.Zip = "^@}$°";
             _contactCreate.City = "^City@}$°";

@@ -4,9 +4,25 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactCreate : WebObject, IContactCreate
+    public class ContactCreate : WebObject, IContact
     {
         #region IContactCreate Members
+
+        public string AddressAddition
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).
+                          TypeText(
+                              value);
+            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).Text; }
+        }
+
+        public IWebElement SaveButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
+        }
 
         public string FirstName
         {
@@ -34,6 +50,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Salutation)).Text; }
         }
 
+        
         public string Country
         {
             set
@@ -92,19 +109,19 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Email)).Text; }
         }
 
-        public string Street
+        public string StreetNo
         {
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).TypeText(
                     value);
             }
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).Text;
-                ;
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).Text; }
         }
+
+        public string CreateDate { get; private set; }
+
+        public string AdressAddition { get; set; }
 
         public string Po
         {
@@ -132,22 +149,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
                     value);
             }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Region)).Text; }
-        }
-
-        public string AddressAddition
-        {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).
-                          TypeText(
-                              value);
-            }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.AddressAddition)).Text; }
-        }
-
-        public IWebElement SaveButton
-        {
-            get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #endregion
