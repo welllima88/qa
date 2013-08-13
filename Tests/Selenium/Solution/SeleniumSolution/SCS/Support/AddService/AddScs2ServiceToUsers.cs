@@ -11,6 +11,7 @@
 
 using System;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -91,6 +92,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Support.AddService
                 Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text, "^[\\s\\S]*SCS2 Dummy[\\s\\S]*$"),
                 "Seems to be already mutated");
         }
+
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
             "C:\\Users\\siegmund\\Desktop\\ProdSystemUsers.csv",
