@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>NSP Terminal bearbeiten</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">NSP Terminal bearbeiten</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepTerminal']/h1</td>
+	<td>TeminalId</td>
+</tr>
+<!---->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Terminal bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Terminal bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_ddTerminalStatus</td>
+	<td>Aktiviert</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_ddTerminalSubStatus</td>
+	<td>Aktiviert</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText</td>
+	<td>SYR: NSP Terminal mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblTerminalTypeValue']/span</td>
+	<td>easycash2 (NSP)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_ddSoftware</td>
+	<td>(Artikel beibehalten)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblRefSystemValue']/span</td>
+	<td>GICC</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblNetTypeValue']/span</td>
+	<td>ISDN B-Kanal (ISDNB)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_dtpCreateDate</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4}</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddClosureMethod</td>
+	<td>Null Self</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_tipClosureSwitchTime</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddAttendanceIndicator</td>
+	<td>attended terminal unattended terminal no terminal used</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddLocationIndicator</td>
+	<td>on premises of card acceptor facility off premises of card acceptor facility on premises of cardholder no terminal used</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCaptureCapabilities</td>
+	<td>terminal/operator has no card capture capabilities terminal/operator has card capture capabilities</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCATLevelIndicator</td>
+	<td>not a CAT transaction authorized CAT Level 1 (automated dispensing machine, with PIN) authorized CAT Level 2 (self-service terminal) authorized CAT Level 3 (limited amount terminal) authorized CAT Level 4 (in-flight commerce) authorized CAT Level 6 (e-commerce; to be set when DE 022='81x') radio frequency input device (transponder; not for European acquirers)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddInputCapabilities</td>
+	<td>unknow, or unspecified no terminal used magnetic stripe reader bar code (for future use) optical character recognition (for future use) magnetic stripe reader and EMV-compatible ICC reader key entry only magnetic stripe reader and key entry magnetic stripe reader, key entry and EMV-compatible ICC reader EMV-compatible ICC reader</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_tipClosureSwitchTime</td>
+	<td>11:11:22</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddAttendanceIndicator</td>
+	<td>label=unattended terminal</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddLocationIndicator</td>
+	<td>label=off premises of card acceptor facility</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCaptureCapabilities</td>
+	<td>label=terminal/operator has card capture capabilities</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCATLevelIndicator</td>
+	<td>label=authorized CAT Level 2 (self-service terminal)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddInputCapabilities</td>
+	<td>label=magnetic stripe reader and EMV-compatible ICC reader</td>
+</tr>
+<!---->
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnCancel</td>
+	<td>Abbrechen</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnSave</td>
+	<td>Speichern</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnSave</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblStatusViewValue']/span</td>
+	<td>Aktiviert</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalInfoText</td>
+	<td>SYR: NSP Terminal mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblTerminalTypeValue']/span</td>
+	<td>easycash2 (NSP)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblRefSystemValue']/span</td>
+	<td>GICC</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblNetTypeValue']/span</td>
+	<td>ISDN B-Kanal (ISDNB)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_dtpCreateDate</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4}</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddClosureMethod</td>
+	<td>Self</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_tipClosureSwitchTime</td>
+	<td>exact:11:11:22</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddAttendanceIndicator</td>
+	<td>unattended terminal</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddLocationIndicator</td>
+	<td>off premises of card acceptor facility</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCaptureCapabilities</td>
+	<td>terminal/operator has card capture capabilities</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddCATLevelIndicator</td>
+	<td>authorized CAT Level 2 (self-service terminal)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyParameterStreamline_ddInputCapabilities</td>
+	<td>magnetic stripe reader and EMV-compatible ICC reader</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_rptMainMenu_ctl00_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td>*: *,*,*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalInfoText</td>
+	<td>SYR: NSP Terminal mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

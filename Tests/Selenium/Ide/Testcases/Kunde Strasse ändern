@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/" />
+<title>Kunde Strasse ändern</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Kunde Strasse ändern</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_rptMainMenu_ctl01_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpSearch</td>
+	<td>tksyr</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_bodyContentPlaceHolder_btnStartSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:85036: TKSYR, Hohlstr. 100, 8080 Zürich, CH</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_bodyContentPlaceHolder_btnEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox</td>
+	<td>Main stra 23</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_bodyContentPlaceHolder_saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox</td>
+	<td>Main stra 23</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Feedback checks</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Feedback checks</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_hplFeedback</td>
+	<td>Rückmeldung</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_hplFeedback</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td#content span h1</td>
+	<td>Feedbackformular</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>id=tableStructure.4.2</td>
+	<td>Feedbackformular <br /> Mit diesem Formular können Sie eine Mitteilung an den SCS Support senden. Bitte geben Sie die Art der Mitteilung an: Anregung oder Idee Problem&nbsp;&nbsp;&nbsp;Beschreiben Sie bitte, wie der Fehler oder das Problem entstanden ist, oder beschreiben Sie und möglichst detailliert Ihre Idee. Beschreibung der Idee oder des Problems:&nbsp;&nbsp;&nbsp;Welche Aktion führten Sie gerade aus?&nbsp;&nbsp;&nbsp;Was für ein Resultat haben Sie erwartet?&nbsp;&nbsp;&nbsp;Ist das Problem reproduzierbar? Ja Nein Was sind die genauen Schritte um das Problem auszulösen?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblInfoText']/span</td>
+	<td>Mit diesem Formular können Sie eine Mitteilung an den SCS Support senden.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_ddlCategories</td>
+	<td>Anregung oder Idee Problem</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblDetailText']/span</td>
+	<td>Beschreiben Sie bitte, wie der Fehler oder das Problem entstanden ist, oder beschreiben Sie und möglichst detailliert Ihre Idee.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblEnterIdea']/span</td>
+	<td>Beschreibung der Idee oder des Problems:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblEnterLastAction']/span</td>
+	<td>exact:Welche Aktion führten Sie gerade aus?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblRedo']/span</td>
+	<td>exact:Ist das Problem reproduzierbar?</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rdbRedoYes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rdbRedoNo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepFeedback']/div[2]/span[8]/label</td>
+	<td>Ja</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepFeedback']/div[2]/span[9]/label</td>
+	<td>Nein</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblEnterSteps']/span</td>
+	<td>exact:Was sind die genauen Schritte um das Problem auszulösen?</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_ddlCategories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_ddlCategories</td>
+	<td>Anregung oder Idee Problem</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpDescription</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpLastAction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpResult</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpSteps</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnBack</td>
+	<td>Zurück</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnSend</td>
+	<td>Senden</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpDescription</td>
+	<td>Automatischer Check des Feedback-Formulars ${DateTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpLastAction</td>
+	<td>TKSYR prüft das Feedbackformular ${DateTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpResult</td>
+	<td>Das Feedbackformular automatisch wird ausgefüllt und ohne Fehler weitergeleitet</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rdbRedoYes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpSteps</td>
+	<td>&quot;Ich&quot; wähle automatisiert die Art der Mitteilung, füge eine Beschreibung der Idee ein, sage, dass ich das Feedbackformular ausfülle und schreibe im nächsten Feld, dass ich eine korrekte Weiterleitung erwarte, die sich natürlich reprouduzieren lässt.<br /><br />Hochachtungsvoll<br />Marc Siegmund mit automatisiertem Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnSend</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblFeedbackSentTitle']/h1</td>
+	<td>Nachricht gesendet</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='content']/div/p</td>
+	<td>Ihr Feedback wurde erfolgreich an den SCS Support gesendet. Bitte verwenden Sie für Rückfragen die folgende Nummer:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_lblFeedbackNumber</td>
+	<td>regexp:([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_lblFeedbackNumber</td>
+	<td>feedbackId</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnGoBack</td>
+	<td>Zurück</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnGoBack</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_hplSimpleUserInfo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcUser']/table/tbody/tr/td</td>
+	<td>Rückmeldungen</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcUser']/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='ctl00_bodyContentPlaceHolder_tbcUser_gdvFeedbackInnerGrid_top_head']/td[3]/div/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//td[@id='ctl00_bodyContentPlaceHolder_tbcUser_gdvFeedbackInnerGrid_footer']/table/tbody/tr/td[2]/div/div</td>
+	<td>regexp:Seite [1-9]+[0-9]* .* \([1-9]+[0-9]* Einträge\)</td>
+</tr>
+<!--Suboptimal-->
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Anregung oder Idee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='ctl00_bodyContentPlaceHolder_tbcUser_gdvFeedbackInnerGrid_top_head']/td[3]/div/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='ctl00_bodyContentPlaceHolder_tbcUser_gdvFeedbackInnerGrid_top_head']/td[3]/div/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>${feedbackId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Automatischer Check des Feedback-Formulars ${DateTime}*(${feedbackId})</td>
+</tr>
+</tbody></table>
+</body>
+</html>

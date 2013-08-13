@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Terminal mit Verträgen anlegen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Terminal mit Verträgen anlegen</td></tr>
+</thead><tbody>
+<tr>
+	<td>selectFrame</td>
+	<td>main</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Neues Terminal erstellen&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=ArticleId</td>
+	<td>label=xentissimo MOBILE CETREL, LU, WLAN</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=InstallTypeDescription</td>
+	<td>SYR AUTO SELENIUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=ReleaseId</td>
+	<td>value=5801</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='SendNotification'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_21604</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=Provider_21604</td>
+	<td>label=Maestro Cetrel ep2 [1013]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_99987</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=Provider_99987</td>
+	<td>label=VPAY Cetrel SV EP2 [1231]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_19269</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=Provider_19269</td>
+	<td>label=MasterCard Cetrel ep2 [1015]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_21625</td>
+	<td></td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>name=Provider_21625</td>
+	<td>label=Aurora Cetrel ep2 [1017]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_21626</td>
+	<td></td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>name=Provider_21626</td>
+	<td>label=Bancomat Cetrel ep2 [1019]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_19286</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=Provider_19286</td>
+	<td>label=VISA Cetrel ep2 [1011]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=Card_19268</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=Provider_19268</td>
+	<td>label=Diners Cetrel ep2 [1028]</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>css=#Card_600004</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_600004&quot;]</td>
+	<td>label=SIX Payment Services Service Center ep2 [300]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#Card_600005</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_600005&quot;]</td>
+	<td>label=SIX Payment Services PMS ep2 [518]</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=ContractNumber_1026</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=ContractNumber_1009</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=forward</td>
+	<td></td>
+</tr>
+<!--Problem to CLICK!-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input[name=&quot;forward&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScriptAndWait</td>
+	<td>{frames[name=&quot;main&quot;].document.forms[1].submit();}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

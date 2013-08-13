@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Kunde bearbeiten</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Kunde bearbeiten</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerNumberInput</td>
+	<td>KundenNr</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerGUIDLabel</td>
+	<td>GUID</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowEP2MerchantID_ep2numberTextBox</td>
+	<td>ep2MerchantId</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerSbsLabel</td>
+	<td>SBSDebitorNr</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerSbsAddressLabel</td>
+	<td>SBSAdressNr</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerSbsCurrency</td>
+	<td>SBSWaehrung</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerNameTextBox</td>
+	<td>SELE Kunde AUTO B ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerNumberInput</td>
+	<td>${KundenNr}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerNameTextBox</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_sapNumberInput</td>
+	<td>SAPCNRB</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_customerSbsLabel']/span</td>
+	<td>regexp:[0-9]{1,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_customerSbsLabel']/span</td>
+	<td>${SBSDebitorNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_rowCustomerSBSAddress']</td>
+	<td>regexp:[0-9]{0,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_rowCustomerSBSAddress']</td>
+	<td>${SBSAdressNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='ctl00_bodyContentPlaceHolder_rowCustomerSBSCurrency']/td[2]</td>
+	<td>${SBSWaehrung}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier</td>
+	<td>SIX Payment Services AG</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDowntbx</td>
+	<td>5172: PETROLEUM/PETROL PRODUCTS</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDowntbx</td>
+	<td>\</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@inttext=&quot;5172: PETROLEUM/PETROL PRODUCTS&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@inttext=&quot;5172: PETROLEUM/PETROL PRODUCTS&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDowntbx</td>
+	<td>5172: PETROLEUM/PETROL PRODUCTS</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowAgency_sugAgency</td>
+	<td>A03 Brun Albert</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox</td>
+	<td>Strasse NR</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract</td>
+	<td>Kein Supportvertrag Hotline und Wartung kostenpflichtig Hotline Pauschal/keine Wartung Hotline Pauschal/Wartung Paketpost Hotline Pauschal/Wartung vor Ort Mo.-Fr. 24H Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H Hotline Pauschal/Wartung vor Ort Mo.-So. 24H Hotline Pauschal/Wartung vor Ort Mo.-So. 12H kostenpflichtig Hotline Pauschal/Wartung vor Ort Mo.-So. 6H Hotline kostenpflichtig/Wartung Paketpost Hotline Pauschal/Wartung vor Ort Mo.-So. 48H Hotline kostenpflichtig/Wartung vor Ort Mo.-So. 48H TKM Hotline Pauschal/Wartung vor Ort Mo.-So. 12H TKM Hotline Pauschal/Wartung vor Ort Mo.-So. 12H kostenpflichtig TKM Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H TKM Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H kostenpflichtig ServicePaket Light ServicePaket Comfort - Postversand ServicePaket Pro - Störungsbehebung vor Ort Mo-Sa 24h ServicePaket Pro+ - Störungsbehebung vor Ort Mo-So 5h ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h Repair from Mo-Fr 08h00-17h00 Repair for Sa only 08h00-22h00 Repair From Mo-Sa 8h00-22h00 Repair from Mo-Su 24h/24 and 7j/7 SPA Servicepaket Complete SPA Servicepaket Advance</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract</td>
+	<td>ServicePaket Comfort - Postversand</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</td>
+	<td>label=Fela Management AG, Diessenhofen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_customerSbsBillingTenantLabel &gt; span</td>
+	<td>SIX Payment Services AG</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpCompanyName</td>
+	<td>SELE Firma AUTO B</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugLanguagetbx</td>
+	<td>Englisch [en]</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugLanguagetbx</td>
+	<td>\</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@inttext=&quot;Englisch [en]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@inttext=&quot;Englisch [en]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugLanguagetbx</td>
+	<td>Englisch [en]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx</td>
+	<td>Dänemark [DK]</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx</td>
+	<td>\</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@inttext=&quot;Dänemark [DK]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@inttext=&quot;Dänemark [DK]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_sugCountrytbx</td>
+	<td>Dänemark [DK]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_zipTextBox</td>
+	<td>4441</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_cityTextBox</td>
+	<td>Ort2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox</td>
+	<td>Zusatz</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_poTextBox</td>
+	<td>Postfach</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_regionTextBox</td>
+	<td>Region2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox</td>
+	<td>+49 0123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox</td>
+	<td>+49 1234567890</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_faxTextBox</td>
+	<td>+49 2345678901</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_emailTextBox</td>
+	<td>email@six-group.com/de</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_addressControl_webTextBox</td>
+	<td>six-group.com/de</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerNameTextBox</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowEP2MerchantID_ep2numberTextBox</td>
+	<td>${ep2MerchantId}</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_bodyContentPlaceHolder_saveButton</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Datensatz wird synchronisiert*!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerNameTextBox</td>
+	<td>SELE Kunde AUTO B ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerNumberInput</td>
+	<td>regexp:[0-9]{1,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerNumberInput</td>
+	<td>${KundenNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_customerGUIDLabel']/span</td>
+	<td>regexp:([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_customerGUIDLabel']/span</td>
+	<td>${GUID}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerSbsLabel</td>
+	<td>regexp:[0-9]{1,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerSbsLabel</td>
+	<td>${SBSDebitorNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerSbsAddressLabel</td>
+	<td>regexp:[0-9]{0,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerSbsAddressLabel</td>
+	<td>${SBSAdressNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_sapNumberInput</td>
+	<td>SAPCNRB</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_customerSbsCurrency</td>
+	<td>${SBSWaehrung}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier</td>
+	<td>SIX Payment Services AG</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown</td>
+	<td>5172: PETROLEUM/PETROL PRODUCTS</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowAgency_sugAgency</td>
+	<td>A03 Brun Albert</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract</td>
+	<td>ServicePaket Comfort - Postversand</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator</td>
+	<td>Fela Management AG, Diessenhofen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_customerSbsBillingTenantLabel &gt; span</td>
+	<td>SIX Payment Services AG</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpCompanyName</td>
+	<td>SELE Firma AUTO B</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_rowEP2MerchantID_ep2numberTextBox</td>
+	<td>regexp:[a-zA-Z0-9]{0,7}[0-9]{0,8}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox</td>
+	<td>Strasse NR</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_zipTextBox</td>
+	<td>4441</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_cityTextBox</td>
+	<td>Ort2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_sugLanguage</td>
+	<td>Englisch [en]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_addressControl_sugCountry']/div</td>
+	<td>Dänemark [DK]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_addressAdditionTextBox</td>
+	<td>Zusatz</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_poTextBox</td>
+	<td>Postfach</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_regionTextBox</td>
+	<td>Region2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox</td>
+	<td>+49 0123456789</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox</td>
+	<td>+49 1234567890</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_faxTextBox</td>
+	<td>+49 2345678901</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_emailLink</td>
+	<td>email@six-group.com/de</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_addressControl_webLink</td>
+	<td>six-group.com/de</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>id=tableStructure.4.2</td>
+	<td>regexp:[0-9]+: SELE Kunde AUTO B ${DateTime}, Strasse NR, 4441 Ort2 <br /> Kundenname SELE Kunde AUTO B ${DateTime} GUID des Kunden ([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})Kundennummer [0-9]+ SAP-Nummer SAPCNRB Debitor Nr. [0-9]+ SBS Adressnr. [0-9]* SBS Währung EUR Mandant SIX Payment Services AG Branchencode 5172: PETROLEUM/PETROL PRODUCTS Agentur A03 Brun Albert Supportvertrag ServicePaket Comfort - Postversand Kassenintegrator Fela Management AG, Diessenhofen Wes mandant - kein Wes Mandant - EP2 Händler Nummer [a-zA-Z0-9]{0,7}[0-9]{0,8} Firmenname SELE Firma AUTO B Zusatz Zusatz&nbsp;&nbsp;&nbsp;Telefon +49 0123456789 Strasse / Nr Strasse NR Mobiltelefon +49 1234567890 Postfach Postfach Fax +49 2345678901 PLZ 4441 Email email@six-group.com/de Ort Ort2 Web http:// six-group.com/de Region (Kurzzeichen) Region2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sprache Englisch [en]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Land Denmark [DK]</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_rptMainMenu_ctl00_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul#ElementHistoryList&gt;li&gt;a</td>
+	<td>*SELE Kunde AUTO B*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=ul#ElementHistoryList&gt;li&gt;a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_customerNameTextBox</td>
+	<td>SELE Kunde AUTO B ${DateTime}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Menü checks.html">Menü checks</a></td></tr>
+<tr><td><a href="Verwaltung checks.html">Verwaltung checks</a></td></tr>
+<tr><td><a href="Testcases/Kunde anlegen.html">Kunde anlegen</a></td></tr>
+<tr><td><a href="Kunden checks.html">Kunden checks</a></td></tr>
+<tr><td><a href="Testcases/Kunde bearbeiten.html">Zentraladresse bearbeiten</a></td></tr>
+<tr><td><a href="Kunde kündigen.html">Kunde kündigen</a></td></tr>
+<tr><td><a href="Testcases/Standort anlegen.html">Standort anlegen</a></td></tr>
+<tr><td><a href="Standort checks.html">Standort checks</a></td></tr>
+<tr><td><a href="Testcases/Standort bearbeiten.html">Standort bearbeiten</a></td></tr>
+<tr><td><a href="Rechnungsadresse anlegen.html">Rechnungsadresse anlegen</a></td></tr>
+<tr><td><a href="Rechnungsadresse bearbeiten.html">Rechnungsadresse bearbeiten</a></td></tr>
+<tr><td><a href="Testcases/Standort löschen.html">Standort löschen</a></td></tr>
+<tr><td><a href="Terminal anlegen.html">Terminal anlegen</a></td></tr>
+<tr><td><a href="Terminal mit Verträge anlegen.html">Terminal mit Verträge anlegen</a></td></tr>
+<tr><td><a href="Vertrag anlegen.html">Vertrag anlegen</a></td></tr>
+<tr><td><a href="Ticket schliessen.html">Ticket schliessen</a></td></tr>
+<tr><td><a href="Terminal kündigen.html">Terminal kündigen</a></td></tr>
+<tr><td><a href="Testcases/Kontakt anlegen.html">Kontakt anlegen</a></td></tr>
+<tr><td><a href="Kontakt checks.html">Kontakt checks</a></td></tr>
+<tr><td><a href="Testcases/Kontakt bearbeiten.html">Kontakt bearbeiten</a></td></tr>
+<tr><td><a href="Testcases/Kontakt löschen.html">Kontakt löschen</a></td></tr>
+<tr><td><a href="Testcases/User anlegen.html">User anlegen</a></td></tr>
+<tr><td><a href="User checks.html">User checks</a></td></tr>
+<tr><td><a href="Testcases/User löschen.html">User löschen</a></td></tr>
+<tr><td><a href="Berechtigungsvorlagen.html">Berechtigungsvorlagen</a></td></tr>
+<tr><td><a href="Help/Artikel checks.html">Artikel checks</a></td></tr>
+<tr><td><a href="Help/Acquirer checks.html">Acquirer checks</a></td></tr>
+<tr><td><a href="Help/Multipay checks.html">Multipay checks</a></td></tr>
+<tr><td><a href="Help/SIX Pay checks.html">SIX Pay checks</a></td></tr>
+</tbody></table>
+</body>
+</html>

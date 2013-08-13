@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/" />
+<title>Terminal anlegen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Terminal anlegen</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//td[3]/a[@title=&quot;Neues Terminal erstellen&quot;]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=ArticleId</td>
+	<td>label=xentissimo MOBILE WLAN, TCP/IP</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='weiter &gt;&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=InstallTypeDescription</td>
+	<td>SYR AUTO SELE ${DateTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Line1</td>
+	<td>${DateTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Line2</td>
+	<td>SYR SELE</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PLZ</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Ort</td>
+	<td>AUTO-Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='weiter &gt;&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=SendNotification</td>
+	<td></td>
+</tr>
+<!--tricky move:-->
+<tr>
+	<td>runScriptAndWait</td>
+	<td>{frames[name=&quot;main&quot;].document.forms[1].submit();}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScriptAndWait</td>
+	<td>{frames[name=&quot;main&quot;].document.forms[1].submit();}</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>assertTable</td>
+	<td>//table[2].0.0</td>
+	<td>regexp:\d+(fo migriert)</td>
+</tr>
+<tr>
+	<td>storeTable</td>
+	<td>//table[2].0.0</td>
+	<td>terminalId</td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>link=Error*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//font/table/tbody/tr/td</td>
+	<td>${DateTime}<br />SYR SELE<br />12345 AUTO-Test</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[@id='c1artiMM']/td[3]/font</td>
+	<td>xentissimo MOBILE WLAN, TCP/IP</td>
+</tr>
+</tbody></table>
+</body>
+</html>

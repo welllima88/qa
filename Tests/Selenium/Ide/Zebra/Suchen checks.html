@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Suchen checks</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Suchen checks</td></tr>
+</thead><tbody>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_rptMainMenu_ctl01_hplMainMenu</td>
+	<td>Suchen</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_rptMainMenu_ctl01_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/h1</td>
+	<td>Suchen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblSearchSimpleDesc']/span</td>
+	<td>exact:Sie können z.B. nach Terminals, Kunden, Standorte Benutzern suchen. Dafür steht in jeder Ansicht auch die Schnellsuche oben rechts im Menü zur Verfügung. Wildcards wie in:„SIX*AG“ sind erlaubt, können allerdings die Suchzeit verlängern oder zu viele Resultate liefern.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_cbxAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[2]/label</td>
+	<td>Alles (Sucht nach Kunden, Standorte und Terminals. Nach Geräten wird nicht gesucht.)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl00_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[3]/label</td>
+	<td>Kunden (Sucht nach dem Firmennamen und Kundennummer.)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl01_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[4]/label</td>
+	<td>Standorte (Sucht nach dem Standortnamen, der Standortnummer, der Strasse, der Postleitzahl und Ort.)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl02_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[5]/label</td>
+	<td>Terminals (Logische Geräte - Sucht nach der internen und externen TerminalID, dem Belegkopf und dem Passwort.)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl03_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[6]/label</td>
+	<td>Geräte (Physische Geräte - Sucht nach der Seriennummer.)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl04_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[7]/label</td>
+	<td>Kontakte (Sucht nach Vornamen, Nachname und E-Mail Adresse)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptLookupType_ctl05_cbxItem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepSearch']/div[2]/span[8]/label</td>
+	<td>Benutzer (Sucht nach Benutzername, Nachname, Vorname und E-Mail Adresse)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnStartSearch</td>
+	<td>Suche starten</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnStartSearch</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

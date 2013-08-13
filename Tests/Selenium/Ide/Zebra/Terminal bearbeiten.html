@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Terminal bearbeiten</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Terminal bearbeiten</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_lepTerminal']/h1</td>
+	<td>TeminalId</td>
+</tr>
+<!---->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Terminal bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnEdit</td>
+	<td>Bearbeiten</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Terminal bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_hplMenuMenuCurrent</td>
+	<td>Terminal</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td>Aktiviert - Aktiviert</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText</td>
+	<td>SYR: Infotext für Terminal automatisch mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblTerminalTypeValue']/span</td>
+	<td>xentissimo</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_ddSoftware</td>
+	<td>(Artikel beibehalten)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblRefSystemValue']/span</td>
+	<td>EP2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblNetTypeValue']/span</td>
+	<td>TCP/IP ep2 (DNS) (TCPIPEP2)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_dtpCreateDate</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptServiceCenter_ctl00_hplName</td>
+	<td>SIX Payment Services Service Center ep2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptPMS_ctl00_hplName</td>
+	<td>SIX Payment Services PMS ep2</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyDeliveryDate_dtpDeliveryDate</td>
+	<td>10.10.2000</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyInstallType_ddInstallType</td>
+	<td>Abholung Ablösung (POS durch ep2) Besitzerwechsel Installation mit Garantie Besitzerwechsel Installation ohne Garantie Besitzerwechsel Postversand mit Garantie Besitzerwechsel Postversand ohne Garantie DCC-Schulung nach Postversand Erneuter Installationsversuch Installation Installation Bock Installation durch Kunde Installation EU- HUB Installation nach Postversand Installation Upgrade EP2 Installation Witzig Postversand Postversand EU Hub Standortwechsel Inhouse Standortwechsel vor Ort Umrüstung Umrüstung Inhouse Umrüstung vor Ort</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyInstallType_ddInstallType</td>
+	<td>label=Installation</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyInstallType_inpInstallTypeRemark</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyInstallType_inpInstallTypeRemark</td>
+	<td>SYR: Installationsbemerkung für automatisch bearbeitetes Terminal mit Selenium</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyColor_sugColortbx</td>
+	<td>Schwarz</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyColor_sugColortbx</td>
+	<td>\</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@inttext=&quot;Schwarz&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@inttext=&quot;Schwarz&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyColor_sugColortbx</td>
+	<td>Schwarz</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyContractType_ddHandoverType</td>
+	<td>( Keine ) Kaufvertrag Leihgerät Mietvertrag Kaufvertrag Revisionsterminal Überlassung</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyContractType_ddHandoverType</td>
+	<td>label=Mietvertrag</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyLanguageId_sugLanguageIdtbx</td>
+	<td>Bulgarisch [bg]</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyLanguageId_sugLanguageIdtbx</td>
+	<td>\</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@inttext=&quot;Bulgarisch [bg]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@inttext=&quot;Bulgarisch [bg]&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyLanguageId_sugLanguageIdtbx</td>
+	<td>Bulgarisch [bg]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyPosInterface_ddPosInterface</td>
+	<td>Stufe 2 Kassenintegration IFSF-EPS KESS MPD MPD over IP Keine Kassenschnittstelle VEZ VEZ ep2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyPosInterface_ddPosInterface</td>
+	<td>label=VEZ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyPosInterface_inpECRText</td>
+	<td>SYR AUTO Kassentext VEZ</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertySupportLevel_ddSupportContract</td>
+	<td>Kein Supportvertrag Hotline und Wartung kostenpflichtig Hotline Pauschal/keine Wartung Hotline Pauschal/Wartung Paketpost Hotline Pauschal/Wartung vor Ort Mo.-Fr. 24H Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H Hotline Pauschal/Wartung vor Ort Mo.-So. 24H Hotline Pauschal/Wartung vor Ort Mo.-So. 12H kostenpflichtig Hotline Pauschal/Wartung vor Ort Mo.-So. 6H Hotline kostenpflichtig/Wartung Paketpost Hotline Pauschal/Wartung vor Ort Mo.-So. 48H Hotline kostenpflichtig/Wartung vor Ort Mo.-So. 48H TKM Hotline Pauschal/Wartung vor Ort Mo.-So. 12H TKM Hotline Pauschal/Wartung vor Ort Mo.-So. 12H kostenpflichtig TKM Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H TKM Hotline Pauschal/Wartung vor Ort Mo.-Fr. 6H kostenpflichtig ServicePaket Light ServicePaket Comfort - Postversand ServicePaket Pro - Störungsbehebung vor Ort Mo-Sa 24h ServicePaket Pro+ - Störungsbehebung vor Ort Mo-So 5h ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h Repair from Mo-Fr 08h00-17h00 Repair for Sa only 08h00-22h00 Repair From Mo-Sa 8h00-22h00 Repair from Mo-Su 24h/24 and 7j/7 SPA Servicepaket Complete SPA Servicepaket Advance</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertySupportLevel_ddSupportContract</td>
+	<td>label=Hotline kostenpflichtig/Wartung Paketpost</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyLine1_btnResetLocation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl00_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl02_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl04_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl06_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl08_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl10_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl12_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl14_cbxFunctionBit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl01_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl03_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl05_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl07_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl09_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl11_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl13_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl15_cbxFunctionBit</td>
+	<td>off</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySerial_lblSerial']/span</td>
+	<td>Nicht zugeordnet</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyExternTerminalId_ddExtTermId</td>
+	<td>(unbekannt) AppoId BazId Swisscom Sunrise Orange TRT3 Mobitel A1 SiMobil SIX via Swisscom</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_pageParameter']/table/tbody/tr[3]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_pageParameter']/table/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCurrentReleaseId_lblCurrentReleaseDesc']/span</td>
+	<td>(Nicht geladen)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCurrentReleaseId_ddNewReleaseId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCurrentReleaseId_dtpNotBefore</td>
+	<td>11.11.2011 11:11:11</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyPassword_valueText</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyIsReleaseChangeBlocked_valueBool</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCallPrefix_valueText</td>
+	<td>+41</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCloseBatchTime_valueText</td>
+	<td>0011</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyRecallInterval_ddRecallIntervall</td>
+	<td>Jede Stunde Jeden Tag Jede Woche</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyRecallInterval_ddRecallIntervall</td>
+	<td>label=Jede Stunde</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDSub_ddDSub</td>
+	<td>PMS (unverschlüsselt) Acquirer PMS &amp; Acquirer (unverschlüsselt) PMS PMS &amp; Acquirer</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAutoDataSubm_valueBool</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataSubmTrigg_ddDataSubmTrigg</td>
+	<td>Zeit Einlieferung nicht verwendet, keine Einlieferung nach Schichtende Zeit Einlieferung aktiviert, keine Einlieferung nach Schichtende Zeit Einlieferung nicht benutzt, Einlieferung nach Schichtende Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataSubmTrigg_ddDataSubmTrigg</td>
+	<td>label=Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataSubmTime_inpDataSubmTime</td>
+	<td>11:11:11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySubmInt_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxSubmLim_valueText</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxSubmLim_valueText</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTrigg_ddDataTransTrigg</td>
+	<td>Zeit Einlieferung nicht verwendet, keine Einlieferung nach Schichtende Zeit Einlieferung aktiviert, keine Einlieferung nach Schichtende Zeit Einlieferung nicht benutzt, Einlieferung nach Schichtende Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTrigg_ddDataTransTrigg</td>
+	<td>label=Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTime_inpDataTransTime</td>
+	<td>11:11:11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTransInt_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxTransLim_valueText</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxTransLim_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAutoDeclRef_valueBool</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyMaxStor_valueText</td>
+	<td>1111111</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySOSChip_valueBool</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyFinBalInd_valueBool</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTELDTransTrigg_ddTELDTransTrigg</td>
+	<td>Keine Logübermittlung nach Einlieferung oder Schichtende Übermittlung der Logdaten nach Einlieferung der Transaktionsdaten Übermittlung der Logdaten nach Schichtende Übermittlung der Logdaten nach Einlieferung und/oder Schichtende</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTELDTransTrigg_ddTELDTransTrigg</td>
+	<td>label=Übermittlung der Logdaten nach Einlieferung und/oder Schichtende</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrmSleepTimer_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyNegReceiptInd_ddNegReceiptInd</td>
+	<td>Der Beleg wird nicht ausgedruckt Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyNegReceiptInd_ddNegReceiptInd</td>
+	<td>label=Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyConfigReceiptInd_ddConfigReceiptInd</td>
+	<td>Der Beleg wird nicht ausgedruckt Der Beleg wird immer ausgedruckt Der Beleg wird nach einer Änderung ausgedruckt</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyConfigReceiptInd_ddConfigReceiptInd</td>
+	<td>label=Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAcquierInitReceiptInd_ddAcquierInitReceiptInd</td>
+	<td>Der Beleg wird nicht ausgedruckt Der Beleg wird immer ausgedruckt Der Beleg wird nach einer Änderung ausgedruckt</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAcquierInitReceiptInd_ddAcquierInitReceiptInd</td>
+	<td>label=Der Beleg wird nach einer Änderung ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySubmTransmReceiptInd_ddSubmTransmReceiptInd</td>
+	<td>Der Beleg wird nicht ausgedruckt Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySubmTransmReceiptInd_ddSubmTransmReceiptInd</td>
+	<td>label=Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrmRebootInt_ddTrmRebootInt</td>
+	<td>1 2 3-default 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrmRebootInt_ddTrmRebootInt</td>
+	<td>label=5</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDCCind_cbxDCC</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyIsCashBackEnabled_cbCB</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyInstalment_valueBool</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_hplMenuMenuCurrent</td>
+	<td>Terminal</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td>Aktiviert - Aktiviert</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalInfoText</td>
+	<td>SYR: Infotext für Terminal automatisch mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblTerminalTypeValue']/span</td>
+	<td>xentissimo</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblRefSystemValue']/span</td>
+	<td>EP2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblNetTypeValue']/span</td>
+	<td>TCP/IP ep2 (DNS) (TCPIPEP2)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_dtpCreateDate</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptServiceCenter_ctl00_hplName</td>
+	<td>SIX Payment Services Service Center ep2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptPMS_ctl00_hplName</td>
+	<td>SIX Payment Services PMS ep2</td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyDeliveryDate_dtpDeliveryDate</td>
+	<td>10.10.2000 00:00:00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyInstallType_ddInstallType</td>
+	<td>Installation</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyNetworkConfiguration_lblStatus']/span</td>
+	<td>Inaktiv</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyColor_sugColor']/div</td>
+	<td>Schwarz</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyContractType_ddHandoverType</td>
+	<td>Mietvertrag</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyLanguageId_sugLanguageId</td>
+	<td>Bulgarisch [bg]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyPosInterface_ddPosInterface</td>
+	<td>VEZ</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyPosInterface_inpECRText</td>
+	<td>SYR AUTO Kassentext VEZ</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertySupportLevel_ddSupportContract</td>
+	<td>Hotline kostenpflichtig/Wartung Paketpost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertySupportLevel_dtpCreateTime</td>
+	<td>regexp:[0-9]{2}.[0-9]{2}.[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl00_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl02_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl04_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl06_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl08_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl10_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl12_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl14_cbxFunctionBit_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl01_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl03_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl05_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl07_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl09_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl11_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl13_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpArticle_tpArticlePropertyFunctions_rptFunctions_ctl15_cbxFunctionBit_true</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySerial_lblSerial']/span</td>
+	<td>Nicht zugeordnet</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyExternTerminalId_ddExtTermId</td>
+	<td>(unbekannt)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_pageParameter']/table/tbody/tr[3]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_pageParameter']/table/tbody/tr[4]/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//*[@id=&quot;ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCurrentReleaseId_lblNewReleaseDesc&quot;]/span</td>
+	<td>XE_EP2_*_*(*)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCurrentReleaseId_dtpNotBefore</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyIsReleaseChangeBlocked_valueBool_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCallPrefix_valueText</td>
+	<td>+41</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyPassword_valueText</td>
+	<td>regexp:[0-9]{6,12}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyCloseBatchTime_valueText</td>
+	<td>0011</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyRecallInterval_ddRecallIntervall</td>
+	<td>Jede Stunde</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDSub_ddDSub</td>
+	<td>PMS</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAutoDataSubm_valueBool_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataSubmTrigg_ddDataSubmTrigg</td>
+	<td>Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataSubmTime_inpDataSubmTime</td>
+	<td>exact:11:11:00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySubmInt_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxSubmLim_valueText</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTrigg_ddDataTransTrigg</td>
+	<td>Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTrigg_ddDataTransTrigg</td>
+	<td>Zeit Einlieferung aktiviert, Einlieferung nach Schichtende</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDataTransTime_inpDataTransTime</td>
+	<td>exact:11:11:00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTransInt_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrxTransLim_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAutoDeclRef_valueBool_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyMaxStor_valueText</td>
+	<td>1111111</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySOSChip_valueBool_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyFinBalInd_valueBool_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTELDTransTrigg_ddTELDTransTrigg</td>
+	<td>Übermittlung der Logdaten nach Einlieferung und/oder Schichtende</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrmSleepTimer_valueText</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyNegReceiptInd_ddNegReceiptInd</td>
+	<td>Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyConfigReceiptInd_ddConfigReceiptInd</td>
+	<td>Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyAcquierInitReceiptInd_ddAcquierInitReceiptInd</td>
+	<td>Der Beleg wird nach einer Änderung ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertySubmTransmReceiptInd_ddSubmTransmReceiptInd</td>
+	<td>Der Beleg wird immer ausgedruckt</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyTrmRebootInt_ddTrmRebootInt</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyDCCind_cbxDCC_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyIsCashBackEnabled_cbCB_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_tpParameter_tpParameterPropertyInstalment_valueBool_true</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>click</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table/tbody/tr/td[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_btnAddContract</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData']/table.1.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>page</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_rptMainMenu_ctl00_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td>* [*]: *,*,*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalInfoText</td>
+	<td>SYR: Infotext für Terminal automatisch mit Selnium bearbeiten ${DateTime}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

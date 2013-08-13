@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Standort bearbeiten mit falschen Eingaben verhindern</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standort bearbeiten mit falschen Eingaben verhindern</td></tr>
+</thead><tbody>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Standort bearbeiten</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Standort bearbeiten</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_LocationName</td>
+	<td>12345678901234567890123456789012345678901234567890123456</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_LocationName</td>
+	<td>123456789012345678901234567890123456789012345678</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_SapNumber</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_SapNumber</td>
+	<td>123456789012</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_AddressAddition</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_AddressAddition</td>
+	<td>123456789012345678901234567890123456789012345678</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Street</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Street</td>
+	<td>123456789012345678901234567890123456789012345678</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_PO</td>
+	<td>12345678901234567890123456789012345678901234567890123</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_PO</td>
+	<td>123456789012345678901234567890</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_ZIP</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_ZIP</td>
+	<td>123456789012</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_City</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_City</td>
+	<td>12345678901234567890123456789012345678</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Region</td>
+	<td>1234567890123456789012345678901234567890123456789</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Region</td>
+	<td>123456789012</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Telephone</td>
+	<td>1234567890123456789012</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Telephone</td>
+	<td>12345678901234567890</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Mobile</td>
+	<td>1234567890123456789012</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Mobile</td>
+	<td>12345678901234567890</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Fax</td>
+	<td>1234567890123456789012</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Fax</td>
+	<td>12345678901234567890</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Email</td>
+	<td>1234@s.de/12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Email</td>
+	<td>1234@s.de/123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Web</td>
+	<td>123456s.de12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=LocationData_Web</td>
+	<td>123456s.de123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</td>
+</tr>
+<!---->
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Speichern']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>Überprüfung Fehlgeschlagen</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

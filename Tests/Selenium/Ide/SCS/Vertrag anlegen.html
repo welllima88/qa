@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/" />
+<title>Vertrag anlegen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Vertrag anlegen</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Vertrag hinzufügen&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[name=&quot;SendNotification&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#Card_19265</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_19265&quot;]</td>
+	<td>label=American Express SIX Payment Services (Europe) EP2 [1203]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#Card_99991</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_99991&quot;]</td>
+	<td>label=Jelmoli Geschenkkarte ep2 [848]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#Card_21604</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_21604&quot;]</td>
+	<td>label=Maestro Intl. SIX Payment Services ep2 [361]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#Card_19286</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=select[name=&quot;Provider_19286&quot;]</td>
+	<td>label=VISA Aduno ep2 [365]</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>select</td>
+	<td>css=select[name=&quot;CategoryCode_1202&quot;]</td>
+	<td>label=SWISS</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select[name=&quot;PanTrunc_1203&quot;]</td>
+	<td>label=cardholder and merchant receipt</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>css=#1203CurrenciesAvailable</td>
+	<td>label=GBP</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>type</td>
+	<td>css=input[name=&quot;ContractNumber_848&quot;]</td>
+	<td>0123456789</td>
+</tr>
+<!---->
+<!--Save:-->
+<tr>
+	<td>click</td>
+	<td>//input[@value='weiter &gt;&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScriptAndWait</td>
+	<td>{frames[name=&quot;main&quot;].document.forms[1].submit();}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScriptAndWait</td>
+	<td>{try{bSelAllMultiples();}catch(e){} 			try&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CheckBaseCurrency('1203,848,361,365');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch(e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ 				return;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 			frames[name=&quot;main&quot;].document.forms[1].submit();}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

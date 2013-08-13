@@ -1,0 +1,65 @@
+using System;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+
+namespace SeleniumTests
+{
+    [TestFixture]
+    public class Login
+    {
+        private IWebDriver driver;
+        private StringBuilder verificationErrors;
+        private string baseURL;
+        
+        [SetUp]
+        public void SetupTest()
+        {
+            driver = new FirefoxDriver();
+            baseURL = "https://gateint.telekurs.ch/zebrac-qa-l/";
+            verificationErrors = new StringBuilder();
+        }
+        
+        [TearDown]
+        public void TeardownTest()
+        {
+            try
+            {
+                driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
+        
+        [Test]
+        public void TheLoginTest()
+        {
+            driver.Navigate().GoToUrl("https://gateint.telekurs.ch/zebrac-qa-l/");
+            driver.FindElement(By.XPath("//input[@name='client' and @value='tkcposl']")).Click();
+            // ERROR: Caught exception [Error: locator strategy either id or name must be specified explicitly.]
+            // ERROR: Caught exception [ERROR: Unsupported command [isTextPresent]]
+            // ERROR: Caught exception [ERROR: Unsupported command [isTextPresent]]
+            // ERROR: Caught exception [ERROR: Unsupported command [isTextPresent]]
+            Assert.IsTrue(IsElementPresent(By.XPath("//html/body/form/img")));
+        }
+        private bool IsElementPresent(By by)
+        {
+            try
+            {
+                driver.FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+    }
+}

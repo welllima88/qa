@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://mdzhwcweb01/" />
+<title>Kontakt anlegen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Kontakt anlegen</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Neuen Kontakt erfassen&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Anrede</td>
+	<td>Herr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Vorname</td>
+	<td>Marc ${DateTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Name</td>
+	<td>Siegmund</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Position</td>
+	<td>Leader Position</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Firma</td>
+	<td>Firma</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=LanguageId</td>
+	<td>label=English [en]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatStrasse</td>
+	<td>Strasse privat 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=GeschStrasse</td>
+	<td>Strasse geschäftlich 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatPostfach</td>
+	<td>PF p 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatPLZ</td>
+	<td>PLZP1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatOrt</td>
+	<td>Ort privat 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatRegion</td>
+	<td>Region privat 1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=PrivatCountryId</td>
+	<td>label=Deutschland [DE]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatTelefon</td>
+	<td>01110111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatTelefon2</td>
+	<td>02220222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatMobil</td>
+	<td>03330333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatFax</td>
+	<td>04440444</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatEmail</td>
+	<td>marc.siegmund@six-group.com/privat</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=Privatwww</td>
+	<td>www.six.privat.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=PrivatServiceDesc</td>
+	<td>Zusatz p 1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].0.1</td>
+	<td>Herr</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].1.1</td>
+	<td>Marc ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].2.1</td>
+	<td>Siegmund</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].3.1</td>
+	<td>Leader Position</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].4.1</td>
+	<td>Firma</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].5.1</td>
+	<td>English</td>
+</tr>
+<!--do not check business adress(//table[5].6.1)-->
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].1.1</td>
+	<td>Strasse privat 1</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].2.1</td>
+	<td>PF p 1</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].3.1</td>
+	<td>PLZP1</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].4.1</td>
+	<td>Ort privat 1</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].5.1</td>
+	<td>Region privat 1</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].6.1</td>
+	<td>Deutschland</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].7.1</td>
+	<td>01110111</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].8.1</td>
+	<td>02220222</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].9.1</td>
+	<td>03330333</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].10.1</td>
+	<td>04440444</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].11.1</td>
+	<td>marc.siegmund@six-group.com/privat</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].12.1</td>
+	<td>www.six.privat.com</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[7].14.1</td>
+	<td>Zusatz p 1</td>
+</tr>
+</tbody></table>
+</body>
+</html>

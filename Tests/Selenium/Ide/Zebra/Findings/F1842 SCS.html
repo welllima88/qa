@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>F1842 SCS</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">F1842 SCS</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://gateint.telekurs.ch/scsc-qa-l/Terminal.asp?TerminalId=30093390</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Funktionen</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[name=&quot;pwcb&quot;][disabled=&quot;false&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[name=&quot;pwcb&quot;][checked=&quot;false&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//td[2]/table/tbody/tr[7]/td[1]/input[@name='pwcb']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[2]/table/tbody/tr[7]/td[2]/font</td>
+	<td>Purchase with Cashback</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Terminal Status&quot;] &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Parameter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[name=&quot;IsCashBackEnabled&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[name=&quot;IsCashBackEnabled&quot;][checked=&quot;false&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[name=&quot;IsCashBackEnabled&quot;][disabled=&quot;true&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Neues Terminal erstellen&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select[name=&quot;ArticleId&quot;]</td>
+	<td>label=xentissimo MOBILE WLAN, TCP/IP</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[11]/td/font</td>
+	<td>Kauf mit Bargeldauszahlung forciert</td>
+</tr>
+<!--erstellen Version unterstützt-->
+<tr>
+	<td>select</td>
+	<td>css=select[name=&quot;ReleaseId&quot;]</td>
+	<td>label=XE_EP2_520_12_110_C3 &quot;für BNR Test&quot; (11.10.2012)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input#IsCashBackEnabled[disabled=&quot;false&quot;]</td>
+	<td>html body center table tbody tr td input#IsCashBackEnabled</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input#IsCashBackEnabled[checked=&quot;false&quot;]</td>
+	<td>html body center table tbody tr td input#IsCashBackEnabled</td>
+</tr>
+<!--erstellen Version unterstützt-->
+<tr>
+	<td>select</td>
+	<td>css=select[name=&quot;ReleaseId&quot;]</td>
+	<td>label=XE_EP2_3_02_253 &quot;&quot; (22.02.2008)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input#IsCashBackEnabled[disabled=&quot;true&quot;]</td>
+	<td>html body center table tbody tr td input#IsCashBackEnabled</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input#IsCashBackEnabled[checked=&quot;false&quot;]</td>
+	<td>html body center table tbody tr td input#IsCashBackEnabled</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Terminalstatus ändern</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Terminalstatus ändern</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button[name=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>css=input.button</td>
+	<td>Speichern</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#StateAndSubState</td>
+	<td>Aktiviert - Aktiviert Aktiviert - Saisonterminal Aktiviert - Nachts kein Strom Aktiviert - Geweckt Aktiviert - Abgelöst Deaktiviert - Unbenutzt Deaktiviert - Deaktiviert Deaktiviert - Kurzmiete Gekündigt - Gekündigt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[name=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=#StateAndSubState</td>
+	<td>label=Aktiviert - Abgelöst</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=#StateAndSubState</td>
+	<td>label=Deaktiviert - Deaktiviert</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=#StateAndSubState</td>
+	<td>label=Gekündigt - Gekündigt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Terminal kündigen</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button[name=&quot;cancel&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button[name=&quot;cancel&quot;]</td>
+	<td>Nein</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>css=input.button</td>
+	<td>Ja</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='content']/form/div[3]/p</td>
+	<td>regexp:Wollen Sie das Terminal \d+ wirklich kündigen?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#Motivation</td>
+	<td>SYR Test - automatischer Statuswechsel mit Selenium</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.titleInfo</td>
+	<td>*Gekündigt*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td>Gekündigt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalStatus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#StateAndSubState</td>
+	<td>Gekündigt - Gekündigt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#Motivation</td>
+	<td>asdff</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

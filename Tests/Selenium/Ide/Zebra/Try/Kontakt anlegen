@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Kontakt anlegen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Kontakt anlegen</td></tr>
+</thead><tbody>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_trvNavigation_Node1_Node10LinkButton</td>
+	<td>Neuer Kontakt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Neuer Kontakt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpFirstName</td>
+	<td>Marc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpName</td>
+	<td>Siegmund</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_sugSalutationtbx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>ctl00_bodyContentPlaceHolder_sugSalutationtbx</td>
+	<td>Herr</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Herr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>ctl00_bodyContentPlaceHolder_sugSalutationtbx</td>
+	<td>Herr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_sugLanguagetbx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>ctl00_bodyContentPlaceHolder_sugLanguagetbx</td>
+	<td>Italienisch [it]</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Italienisch [it]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>ctl00_bodyContentPlaceHolder_sugLanguagetbx</td>
+	<td>Italienisch [it]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_sugCountrytbx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>ctl00_bodyContentPlaceHolder_sugCountrytbx</td>
+	<td>France [FR]</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>France [FR]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>ctl00_bodyContentPlaceHolder_sugCountrytbx</td>
+	<td>France [FR]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpPhone</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpPhone2</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpFax</td>
+	<td>2345678901</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpMail</td>
+	<td>marc.siegmund@six-group.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>ctl00_bodyContentPlaceHolder_btnFromLocation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_btnFromLocation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpStreet</td>
+	<td>Strasse Nr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpPOBox</td>
+	<td>Postfach</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpZIP</td>
+	<td>88888</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ctl00_bodyContentPlaceHolder_inpCity</td>
+	<td>Ort</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpRegion</td>
+	<td>Region</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>ctl00_bodyContentPlaceHolder_btnSave</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_sugSalutation</td>
+	<td>Herr</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpFirstName</td>
+	<td>Marc</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpName</td>
+	<td>Siegmund</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpPhone</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpPhone2</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpFax</td>
+	<td>2345678901</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpMail</td>
+	<td>marc.siegmund@six-group.com</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpStreet</td>
+	<td>Strasse Nr</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpPOBox</td>
+	<td>Postfach</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpZIP</td>
+	<td>88888</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpCity</td>
+	<td>Ort</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_inpRegion</td>
+	<td>Region</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_sugLanguage</td>
+	<td>Italienisch [it]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>ctl00_bodyContentPlaceHolder_sugCountry</td>
+	<td>France [FR]</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>ctl00_bodyContentPlaceHolder_inpCreateDate</td>
+	<td>regexp:[\d{2}.\d{2}.\d{4} \d{2}:\d{2}:\d{2}]</td>
+</tr>
+</tbody></table>
+</body>
+</html>

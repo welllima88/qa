@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Cetrel Terminal auswahl checks</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cetrel Terminal auswahl checks</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>//td[3]/a[@title=&quot;Neues Terminal erstellen&quot;]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].2.1</td>
+	<td>ATM (Luxembourg)CCV Petrol CTAC Indoor (LUX)CCV Petrol CTAC Outdoor (LUX)davinci1 VENDING, TCP/IP (Internet)davinci2 VENDING, MPD, TCP/IP (Internet)KeyWareLuxair (NSP)MPDSaferpay Phone Mailorder TerminalSaferpay POS TerminalSaferpay POS Vending TerminalSaferpay Secure PayGate TerminalSaferpay Virtual TerminalTokheim Petrol CTAC Indoor (LUX)Tokheim Petrol CTAC Outdoor (LUX)xenta AUTONOM CETREL, LU, ISDNBxenta AUTONOM CETREL, LU, PSTNxenta AUTONOM CETREL, LU, TCP/IPxenta AUTONOM, CETREL, LU (Private Network)xenta COMPACT CETREL, LU, ISDNBxenta COMPACT CETREL, LU, PSTNxenta COMPACT CETREL, LU, TCPIPxenta PINPAD CETREL, LU, MPD (Internet)xenta PINPAD, CETREL, LU, (Private Network)xenta PINPAD, TCP/IP (Private Network LU) onlyTestxenta VENDING, CETREL, LU, MPD (Internet)xentissimo MOBILE CETREL, LU, GPRSxentissimo MOBILE CETREL, LU, WLANxentissimo PINPAD WLAN TCP/IP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=ArticleId</td>
+	<td>label=xentissimo MOBILE CETREL, LU, WLAN</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='weiter &gt;&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].4.1</td>
+	<td>Cetrel InstalliertCetrel Kunde Installiert</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@title=&quot;Kunden Status&quot;]/img</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

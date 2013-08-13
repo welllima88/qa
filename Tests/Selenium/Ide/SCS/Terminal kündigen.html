@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/" />
+<title>Terminal kündigen</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Terminal kündigen</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeText</td>
+	<td>//body/center/table[2]/tbody/tr/td/font/b</td>
+	<td>terminalId</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=TerminalFunctions</td>
+	<td>label=Terminal kündigen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//center/font</td>
+	<td>regexp:Wollen Sie das Terminal \d+ wirklich kündigen?<br /><br /> Die Kündigung kann nicht rückgängig gemacht werden!</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=abbr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//input[@value='kündigen']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='kündigen']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//center/font</td>
+	<td>Geben Sie einen InfoText ein, warum das Terminal gekündigt werden soll.</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>//table[5].0.0</td>
+	<td>Infotext</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=zurueck</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=infotext</td>
+	<td>AUTO Selenium SYR kündigen</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='sendtype'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=comment</td>
+	<td>Acquirer-Meldung AUTO-Selenium-TEST SYR Terminal kündigen</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=Submit1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body/center/table[2]/tbody/tr/td/font/b</td>
+	<td>*${terminalId}*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//body/center/table[2]/tbody/tr/td/font[2]/b/font</td>
+	<td>GEKÜNDIGT</td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>link=Error*</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

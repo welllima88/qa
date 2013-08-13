@@ -1,0 +1,12 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.*;
+import java.util.regex.Pattern;
+
+public class Untitled extends SeleneseTestCase {
+	public void setUp() throws Exception {
+		setUp("http://change-this-to-the-site-you-are-testing/", "*chrome");
+	}
+	public void testUntitled() throws Exception {
+	}
+}
