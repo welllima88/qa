@@ -58,8 +58,6 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="WebDriver, Version=2.35.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.WebDriver.2.35.0\lib\net40\WebDriver.dll</HintPath>
@@ -93,13 +91,13 @@
       <DependentUpon>Menu.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Common\ProcessTickets.cs" />
-    <Compile Include="TestObjects\Contact\ContactEditRes.Designer.cs">
-      <DependentUpon>ContactEditRes.resx</DependentUpon>
+    <Compile Include="TestObjects\Person\PersonEditRes.Designer.cs">
+      <DependentUpon>PersonEditRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestObjects\Contact\ContactCreateRes.Designer.cs">
-      <DependentUpon>ContactCreateRes.resx</DependentUpon>
+    <Compile Include="TestObjects\Person\PersonCreateRes.Designer.cs">
+      <DependentUpon>PersonCreateRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -130,15 +128,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestObjects\Contact\ContactPersonCreate.cs" />
-    <Compile Include="TestObjects\Contact\ContactPersonEdit.cs" />
-    <Compile Include="TestObjects\Contact\ContactPersonView.cs" />
+    <Compile Include="TestObjects\Person\PersonCreate.cs" />
+    <Compile Include="TestObjects\Person\PersonEdit.cs" />
+    <Compile Include="TestObjects\Person\PersonView.cs" />
     <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
-    <Compile Include="TestObjects\Contact\ContactViewRes.Designer.cs">
+    <Compile Include="TestObjects\Person\PersonViewRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ContactViewRes.resx</DependentUpon>
+      <DependentUpon>PersonViewRes.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Customer\CustomerRes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -337,17 +335,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Menu.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Contact\ContactViewRes.resx">
+    <EmbeddedResource Include="TestObjects\Person\PersonViewRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ContactViewRes.Designer.cs</LastGenOutput>
+      <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Contact\ContactEditRes.resx">
+    <EmbeddedResource Include="TestObjects\Person\PersonEditRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ContactEditRes.Designer.cs</LastGenOutput>
+      <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Contact\ContactCreateRes.resx">
+    <EmbeddedResource Include="TestObjects\Person\PersonCreateRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ContactCreateRes.Designer.cs</LastGenOutput>
+      <LastGenOutput>PersonCreateRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

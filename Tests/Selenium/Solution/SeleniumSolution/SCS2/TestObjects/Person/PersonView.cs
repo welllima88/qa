@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Person
 {
     public class PersonView : WebObject, IPerson
     {
@@ -31,49 +31,49 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 
         public string FirstName
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.FirstName)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.FirstName)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Name
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Name)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Name)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Salutation
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Salutation)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Salutation)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Country
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Country)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Country)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Language
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Language)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Language)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Telephone
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Telephone)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Telephone)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Mobile
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Mobile)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Mobile)).Text; }
             set { throw new NotSupportedException(); }
         }
 
         public string Fax
         {
-            get { return WebDriver.FindElement(By.CssSelector(ContactViewRes.Fax)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Fax)).Text; }
             set { throw new NotSupportedException(); }
         }
 

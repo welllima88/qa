@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Person
 {
     public class PersonEdit : WebObject, IPerson
     {

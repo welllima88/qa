@@ -8,7 +8,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Edit
 {
     [TestClass]
     public class LocationEditTest
