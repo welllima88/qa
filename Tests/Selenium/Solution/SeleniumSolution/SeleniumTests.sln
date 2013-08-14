@@ -12,6 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS Platin", "SCS2\SCS Plat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{20517DF7-28B0-4749-864B-0E815ECD5152}"
 	ProjectSection(SolutionItems) = preProject
+		E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp = E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp
 		Documents\Test-Automatisierung-Konzept.docx = Documents\Test-Automatisierung-Konzept.docx
 		Documents\TESTAUTOMATISIERUNG.cayra = Documents\TESTAUTOMATISIERUNG.cayra
 		Documents\TESTAUTOMATISIERUNG.mm = Documents\TESTAUTOMATISIERUNG.mm

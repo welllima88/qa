@@ -146,6 +146,7 @@
       <DependentUpon>CustomerRes.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Definitions\INetType.cs" />
+    <Compile Include="TestObjects\Definitions\IAgency.cs" />
     <Compile Include="TestObjects\Definitions\IPerson.cs" />
     <Compile Include="TestObjects\Definitions\ISupplier.cs" />
     <Compile Include="TestObjects\Definitions\ITerminalType.cs" />
@@ -294,6 +295,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="TestData\TestDataExcel.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TestData\dev\" />
