@@ -213,6 +213,7 @@
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />
     <Compile Include="TestObjects\Definitions\ISimCardElement.cs" />
+    <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Article\ArticleViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />
@@ -305,7 +306,6 @@
     <Folder Include="TestObjects\Administration\TerminalReleases\" />
     <Folder Include="TestObjects\Common\Navigation\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
-    <Folder Include="Tests\Administration\Agency\" />
     <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>
