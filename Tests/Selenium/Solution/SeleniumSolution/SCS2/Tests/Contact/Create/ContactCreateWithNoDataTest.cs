@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithNoDataTest
     {
-        private static ContactCreate _contactCreate;
+        private static PersonCreate _personCreate;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
 
@@ -20,8 +20,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         public static void ClassInit(TestContext testContext)
         {
             _customerMenu = new CustomerMenu();
-            _contactCreate = new ContactCreate();
-            new ContactView();
+            _personCreate = new PersonCreate();
+            new PersonView();
             new ContactMenu();
             new RecentElements();
             new NavigationBar();
@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
 
             _customerMenu.ContactCreate.Click();
 
-            _contactCreate.SaveButton.Click();
+            _personCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
         }

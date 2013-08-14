@@ -1,10 +1,11 @@
+using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactCreate : WebObject, IContact
+    public class PersonCreate : WebObject, IPerson
     {
         #region IContactCreate Members
 
@@ -23,6 +24,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         {
             get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
+
+        public string CreateDate { get; private set; }
 
         public string FirstName
         {
@@ -50,7 +53,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Salutation)).Text; }
         }
 
-        
         public string Country
         {
             set
@@ -109,6 +111,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Email)).Text; }
         }
 
+        public string Web
+        {
+            get { throw new NotSupportedException(); }
+            set { throw new NotSupportedException(); }
+        }
+
         public string StreetNo
         {
             set
@@ -118,8 +126,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(ContactCreateRes.Street)).Text; }
         }
-
-        public string CreateDate { get; private set; }
 
         public string AdressAddition { get; set; }
 

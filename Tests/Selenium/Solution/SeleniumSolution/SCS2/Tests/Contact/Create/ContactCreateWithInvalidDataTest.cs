@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithInvalidDataTest
     {
-        private static ContactCreate _contactCreate;
+        private static PersonCreate _personCreate;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
 
@@ -19,28 +19,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         public static void ClassInit(TestContext testContext)
         {
             _customerMenu = new CustomerMenu();
-            _contactCreate = new ContactCreate();
+            _personCreate = new PersonCreate();
             _formAlert = new FormAlert();
 
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             _customerMenu.ContactCreate.Click();
 
-            _contactCreate.Salutation = "Herr^@}$°";
-            _contactCreate.FirstName = "Marc^@}$°";
-            _contactCreate.Name = "SYR AUTO ^@}$°";
-            _contactCreate.Telephone = "+41 58 399 ^@}$° - 1";
-            _contactCreate.Mobile = "+41 58 399 ^@}$° - 2";
-            _contactCreate.Fax = "+41 58 399 ^@}$° - 3";
-            _contactCreate.Email = "con^@}$°tact@six-group.com";
-            _contactCreate.StreetNo = "Kontakt-^@}$° 1";
-            _contactCreate.Po = "P^@}$°";
-            _contactCreate.Zip = "^@}$°";
-            _contactCreate.City = "^City@}$°";
-            _contactCreate.Region = "Re^@}$°";
-            _contactCreate.AddressAddition = "Add^@}$°";
+            _personCreate.Salutation = "Herr^@}$°";
+            _personCreate.FirstName = "Marc^@}$°";
+            _personCreate.Name = "SYR AUTO ^@}$°";
+            _personCreate.Telephone = "+41 58 399 ^@}$° - 1";
+            _personCreate.Mobile = "+41 58 399 ^@}$° - 2";
+            _personCreate.Fax = "+41 58 399 ^@}$° - 3";
+            _personCreate.Email = "con^@}$°tact@six-group.com";
+            _personCreate.StreetNo = "Kontakt-^@}$° 1";
+            _personCreate.Po = "P^@}$°";
+            _personCreate.Zip = "^@}$°";
+            _personCreate.City = "^City@}$°";
+            _personCreate.Region = "Re^@}$°";
+            _personCreate.AddressAddition = "Add^@}$°";
 
-            _contactCreate.SaveButton.Click();
+            _personCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
         }

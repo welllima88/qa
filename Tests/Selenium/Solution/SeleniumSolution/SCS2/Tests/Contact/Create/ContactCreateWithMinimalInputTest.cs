@@ -8,8 +8,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMinimalInputTest
     {
-        private static ContactCreate _contactCreate;
-        private static ContactView _contactView;
+        private static PersonCreate _personCreate;
+        private static PersonView _personView;
         private static RecentElements _recentElements;
         private static CustomerMenu _customerMenu;
         private static LobbyView _lobby;
@@ -18,8 +18,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
         public static void ClassInit(TestContext testContext)
         {
             _customerMenu = new CustomerMenu();
-            _contactCreate = new ContactCreate();
-            _contactView = new ContactView();
+            _personCreate = new PersonCreate();
+            _personView = new PersonView();
             _recentElements = new RecentElements();
             _lobby = new LobbyView();
 
@@ -27,97 +27,97 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
 
             _customerMenu.ContactCreate.Click();
 
-            _contactCreate.FirstName = "Marc";
-            _contactCreate.Name = "Siegmund SYR AUTO";
-            _contactCreate.StreetNo = "Kontakt-Weg 1";
-            _contactCreate.Zip = "55555";
-            _contactCreate.City = "Berlin";
+            _personCreate.FirstName = "Marc";
+            _personCreate.Name = "Siegmund SYR AUTO";
+            _personCreate.StreetNo = "Kontakt-Weg 1";
+            _personCreate.Zip = "55555";
+            _personCreate.City = "Berlin";
 
-            _contactCreate.SaveButton.Click();
+            _personCreate.SaveButton.Click();
         }
 
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc", _contactView.FirstName);
+            Assert.AreEqual("Marc", _personView.FirstName);
         }
 
         [TestMethod]
         public void LastName()
         {
-            Assert.AreEqual("Siegmund SYR AUTO", _contactView.Name);
+            Assert.AreEqual("Siegmund SYR AUTO", _personView.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            StringAssert.Contains(_contactView.Language, "[de]");
+            StringAssert.Contains(_personView.Language, "[de]");
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual("", _contactView.Telephone);
+            Assert.AreEqual("", _personView.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual("", _contactView.Mobile);
+            Assert.AreEqual("", _personView.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual("", _contactView.Fax);
+            Assert.AreEqual("", _personView.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual("", _contactView.Email);
+            Assert.AreEqual("", _personView.Email);
         }
 
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual("Kontakt-Weg 1", _contactView.StreetNo);
+            Assert.AreEqual("Kontakt-Weg 1", _personView.StreetNo);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual("", _contactView.Po);
+            Assert.AreEqual("", _personView.Po);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("55555", _contactView.Zip);
+            Assert.AreEqual("55555", _personView.Zip);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.AreEqual("", _contactView.Region);
+            Assert.AreEqual("", _personView.Region);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("Berlin", _contactView.City);
+            Assert.AreEqual("Berlin", _personView.City);
         }
 
         [TestMethod]
         public void Country()
         {
-            StringAssert.Contains(_contactView.Country, "[CH]");
+            StringAssert.Contains(_personView.Country, "[CH]");
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("", _contactView.AddressAddition);
+            Assert.AreEqual("", _personView.AddressAddition);
         }
 
         [TestMethod]

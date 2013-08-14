@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact.ContactCreateRes", typeof(ContactCreateRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.ContactPerson.ContactCreateRes", typeof(ContactCreateRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

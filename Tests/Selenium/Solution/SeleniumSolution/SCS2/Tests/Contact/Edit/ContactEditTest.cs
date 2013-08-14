@@ -12,8 +12,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
     [TestClass]
     public class ContactEditTest
     {
-        private static ContactEdit _contactEdit;
-        private static ContactView _contactView;
+        private static PersonEdit _personEdit;
+        private static PersonView _personView;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static FormAlert _formAlert;
@@ -33,8 +33,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         public static void ClassInit(TestContext testContext)
         {
             _contactMenu = new ContactMenu();
-            _contactEdit = new ContactEdit();
-            _contactView = new ContactView();
+            _personEdit = new PersonEdit();
+            _personView = new PersonView();
             _recentElements = new RecentElements();
             _navigationBar = new NavigationBar();
             _formAlert = new FormAlert();
@@ -55,76 +55,76 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             _menusTests.ContactMenuCheck(_contactMenu);
             _contactMenu.ContactEdit.Click();
             _menusTests.ContactMenuCheck(_contactMenu);
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
             _menusTests.ContactMenuCheck(_contactMenu);
         }
 
         [TestMethod]
         public void EditContactAndCancel()
         {
-            string salutation = _contactView.Salutation;
-            string firstName = _contactView.FirstName;
-            string name = _contactView.Name;
-            string language = _contactView.Language;
+            string salutation = _personView.Salutation;
+            string firstName = _personView.FirstName;
+            string name = _personView.Name;
+            string language = _personView.Language;
 
-            string telephone = _contactView.Telephone;
-            string mobile = _contactView.Mobile;
-            string fax = _contactView.Fax;
-            string email = _contactView.Email;
+            string telephone = _personView.Telephone;
+            string mobile = _personView.Mobile;
+            string fax = _personView.Fax;
+            string email = _personView.Email;
 
-            string po = _contactView.Po;
-            string StreetNo = _contactView.StreetNo;
-            string zip = _contactView.Zip;
-            string city = _contactView.City;
+            string po = _personView.Po;
+            string StreetNo = _personView.StreetNo;
+            string zip = _personView.Zip;
+            string city = _personView.City;
 
-            string region = _contactView.Region;
-            string country = _contactView.Country;
+            string region = _personView.Region;
+            string country = _personView.Country;
 
             _menusTests.ContactMenuCheck(_contactMenu);
 
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc";
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc";
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
 
             _menusTests.ContactMenuCheck(_contactMenu);
 
-            Assert.AreEqual(salutation, _contactView.Salutation);
-            Assert.AreEqual(firstName, _contactView.FirstName);
-            Assert.AreEqual(name, _contactView.Name);
-            Assert.AreEqual(language, _contactView.Language);
+            Assert.AreEqual(salutation, _personView.Salutation);
+            Assert.AreEqual(firstName, _personView.FirstName);
+            Assert.AreEqual(name, _personView.Name);
+            Assert.AreEqual(language, _personView.Language);
 
-            Assert.AreEqual(telephone, _contactView.Telephone);
-            Assert.AreEqual(mobile, _contactView.Mobile);
-            Assert.AreEqual(fax, _contactView.Fax);
-            Assert.AreEqual(email, _contactView.Email);
+            Assert.AreEqual(telephone, _personView.Telephone);
+            Assert.AreEqual(mobile, _personView.Mobile);
+            Assert.AreEqual(fax, _personView.Fax);
+            Assert.AreEqual(email, _personView.Email);
 
-            Assert.AreEqual(po, _contactView.Po);
-            Assert.AreEqual(StreetNo, _contactView.StreetNo);
-            Assert.AreEqual(zip, _contactView.Zip);
-            Assert.AreEqual(city, _contactView.City);
-            Assert.AreEqual(region, _contactView.Region);
-            Assert.AreEqual(country, _contactView.Country);
+            Assert.AreEqual(po, _personView.Po);
+            Assert.AreEqual(StreetNo, _personView.StreetNo);
+            Assert.AreEqual(zip, _personView.Zip);
+            Assert.AreEqual(city, _personView.City);
+            Assert.AreEqual(region, _personView.Region);
+            Assert.AreEqual(country, _personView.Country);
         }
 
         [TestMethod]
@@ -134,28 +134,28 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
 
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc[]rn$°";
-            _contactEdit.Name = "Siegmund[]rn$°";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc[]rn$°";
+            _personEdit.Name = "Siegmund[]rn$°";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789[]rn$°";
-            _contactEdit.Mobile = "1234567890[]rn$°";
-            _contactEdit.Fax = "2345678901[]rn$°";
-            _contactEdit.Email = "tksyr_contact@six-group.com[]rn$°";
+            _personEdit.Telephone = "0123456789[]rn$°";
+            _personEdit.Mobile = "1234567890[]rn$°";
+            _personEdit.Fax = "2345678901[]rn$°";
+            _personEdit.Email = "tksyr_contact@six-group.com[]rn$°";
 
-            _contactEdit.Po = "Pof[]rn$°";
-            _contactEdit.StreetNo = "Strasse 1[]rn$°";
-            _contactEdit.Zip = "[]rn$°";
-            _contactEdit.City = "City[]rn$°";
-            _contactEdit.Region = "Reg[]rn$°";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof[]rn$°";
+            _personEdit.StreetNo = "Strasse 1[]rn$°";
+            _personEdit.Zip = "[]rn$°";
+            _personEdit.City = "City[]rn$°";
+            _personEdit.Region = "Reg[]rn$°";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr[]rn$°";
+            _personEdit.AdressAddition = "Addr[]rn$°";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _menusTests.ContactMenuCheck(_contactMenu);
 
@@ -180,33 +180,33 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "";
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "";
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -214,35 +214,35 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc";
-            _contactEdit.Name = "";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc";
+            _personEdit.Name = "";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -250,32 +250,32 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "";
-            _contactEdit.FirstName = "";
-            _contactEdit.Name = "";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "";
+            _personEdit.FirstName = "";
+            _personEdit.Name = "";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "";
-            _contactEdit.Mobile = "";
-            _contactEdit.Fax = "";
-            _contactEdit.Email = "";
+            _personEdit.Telephone = "";
+            _personEdit.Mobile = "";
+            _personEdit.Fax = "";
+            _personEdit.Email = "";
 
-            _contactEdit.Po = "";
-            _contactEdit.StreetNo = "";
-            _contactEdit.Zip = "";
-            _contactEdit.City = "";
-            _contactEdit.Region = "";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "";
+            _personEdit.StreetNo = "";
+            _personEdit.Zip = "";
+            _personEdit.City = "";
+            _personEdit.Region = "";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "";
+            _personEdit.AdressAddition = "";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
@@ -285,7 +285,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
             CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
             CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
 
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -293,35 +293,35 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc";
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc";
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -329,33 +329,33 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc";
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc";
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -363,33 +363,33 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc";
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc";
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
             CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
-            _contactEdit.CancelButton.Click();
+            _personEdit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -397,47 +397,47 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Herr";
-            _contactEdit.FirstName = "Marc" + _dt;
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Französisch [fr]";
+            _personEdit.Salutation = "Herr";
+            _personEdit.FirstName = "Marc" + _dt;
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Französisch [fr]";
 
-            _contactEdit.Telephone = "0123456789";
-            _contactEdit.Mobile = "1234567890";
-            _contactEdit.Fax = "2345678901";
-            _contactEdit.Email = "tksyr_contact@six-group.com";
+            _personEdit.Telephone = "0123456789";
+            _personEdit.Mobile = "1234567890";
+            _personEdit.Fax = "2345678901";
+            _personEdit.Email = "tksyr_contact@six-group.com";
 
-            _contactEdit.Po = "Pof";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "Reg";
-            _contactEdit.Country = "Frankreich [FR]";
+            _personEdit.Po = "Pof";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "Reg";
+            _personEdit.Country = "Frankreich [FR]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "Addr-Add";
+            _personEdit.AdressAddition = "Addr-Add";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
 
-            Assert.AreEqual("Herr", _contactView.Salutation);
-            Assert.AreEqual("Marc" + _dt, _contactView.FirstName);
-            Assert.AreEqual("Siegmund", _contactView.Name);
-            Assert.AreEqual("French", _contactView.Language);
+            Assert.AreEqual("Herr", _personView.Salutation);
+            Assert.AreEqual("Marc" + _dt, _personView.FirstName);
+            Assert.AreEqual("Siegmund", _personView.Name);
+            Assert.AreEqual("French", _personView.Language);
 
-            Assert.AreEqual("0123456789", _contactView.Telephone);
-            Assert.AreEqual("1234567890", _contactView.Mobile);
-            Assert.AreEqual("2345678901", _contactView.Fax);
-            Assert.AreEqual("tksyr_contact@six-group.com", _contactView.Email);
+            Assert.AreEqual("0123456789", _personView.Telephone);
+            Assert.AreEqual("1234567890", _personView.Mobile);
+            Assert.AreEqual("2345678901", _personView.Fax);
+            Assert.AreEqual("tksyr_contact@six-group.com", _personView.Email);
 
-            Assert.AreEqual("Pof", _contactView.Po);
-            Assert.AreEqual("Strasse 1", _contactView.StreetNo);
-            Assert.AreEqual("2351", _contactView.Zip);
-            Assert.AreEqual("City", _contactView.City);
-            Assert.AreEqual("Reg", _contactView.Region);
-            Assert.AreEqual("Frankreich [FR]", _contactView.Country);
+            Assert.AreEqual("Pof", _personView.Po);
+            Assert.AreEqual("Strasse 1", _personView.StreetNo);
+            Assert.AreEqual("2351", _personView.Zip);
+            Assert.AreEqual("City", _personView.City);
+            Assert.AreEqual("Reg", _personView.Region);
+            Assert.AreEqual("Frankreich [FR]", _personView.Country);
         }
 
         [TestMethod]
@@ -445,47 +445,47 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
         {
             _contactMenu.ContactEdit.Click();
 
-            _contactEdit.Salutation = "Frau";
-            _contactEdit.FirstName = "Marc" + _dt;
-            _contactEdit.Name = "Siegmund";
-            _contactEdit.Language = "Italienisch [it]";
+            _personEdit.Salutation = "Frau";
+            _personEdit.FirstName = "Marc" + _dt;
+            _personEdit.Name = "Siegmund";
+            _personEdit.Language = "Italienisch [it]";
 
-            _contactEdit.Telephone = "";
-            _contactEdit.Mobile = "";
-            _contactEdit.Fax = "";
-            _contactEdit.Email = "";
+            _personEdit.Telephone = "";
+            _personEdit.Mobile = "";
+            _personEdit.Fax = "";
+            _personEdit.Email = "";
 
-            _contactEdit.Po = "";
-            _contactEdit.StreetNo = "Strasse 1";
-            _contactEdit.Zip = "2351";
-            _contactEdit.City = "City";
-            _contactEdit.Region = "";
-            _contactEdit.Country = "Italien [IT]";
+            _personEdit.Po = "";
+            _personEdit.StreetNo = "Strasse 1";
+            _personEdit.Zip = "2351";
+            _personEdit.City = "City";
+            _personEdit.Region = "";
+            _personEdit.Country = "Italien [IT]";
 
-            StringAssert.Matches(_contactEdit.CreateDate, TestRegExpPatterns.DateTime);
+            StringAssert.Matches(_personEdit.CreateDate, TestRegExpPatterns.DateTime);
 
-            _contactEdit.AdressAddition = "";
+            _personEdit.AdressAddition = "";
 
-            _contactEdit.SaveButton.Click();
+            _personEdit.SaveButton.Click();
             _navigationBar.Lobby.Click();
             _recentElements.MostRecent.Click();
 
-            Assert.AreEqual("Frau", _contactView.Salutation);
-            Assert.AreEqual("Marc" + _dt, _contactView.FirstName);
-            Assert.AreEqual("Siegmund", _contactView.Name);
-            Assert.AreEqual("Italienisch [it]", _contactView.Language);
+            Assert.AreEqual("Frau", _personView.Salutation);
+            Assert.AreEqual("Marc" + _dt, _personView.FirstName);
+            Assert.AreEqual("Siegmund", _personView.Name);
+            Assert.AreEqual("Italienisch [it]", _personView.Language);
 
-            Assert.AreEqual("", _contactView.Telephone);
-            Assert.AreEqual("", _contactView.Mobile);
-            Assert.AreEqual("", _contactView.Fax);
-            Assert.AreEqual("", _contactView.Email);
+            Assert.AreEqual("", _personView.Telephone);
+            Assert.AreEqual("", _personView.Mobile);
+            Assert.AreEqual("", _personView.Fax);
+            Assert.AreEqual("", _personView.Email);
 
-            Assert.AreEqual("", _contactView.Po);
-            Assert.AreEqual("Strasse 1", _contactView.StreetNo);
-            Assert.AreEqual("2351", _contactView.Zip);
-            Assert.AreEqual("City", _contactView.City);
-            Assert.AreEqual("", _contactView.Region);
-            Assert.AreEqual("Italien [IT]", _contactView.Country);
+            Assert.AreEqual("", _personView.Po);
+            Assert.AreEqual("Strasse 1", _personView.StreetNo);
+            Assert.AreEqual("2351", _personView.Zip);
+            Assert.AreEqual("City", _personView.City);
+            Assert.AreEqual("", _personView.Region);
+            Assert.AreEqual("Italien [IT]", _personView.Country);
         }
 
         [TestMethod]

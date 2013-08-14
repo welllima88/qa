@@ -55,6 +55,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string Language
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Language)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Country
@@ -88,26 +89,31 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
         public string Email
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Email)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Web
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Web)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Telephone
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Telephone)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Mobile
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Mobile)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Fax
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Fax)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Region

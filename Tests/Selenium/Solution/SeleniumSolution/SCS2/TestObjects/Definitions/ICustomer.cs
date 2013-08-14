@@ -1,6 +1,6 @@
 ﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
-    public interface ICustomer : IAdress, ILocation
+    public interface ICustomer : ILocation
     {
         string CustomerName { set; get; }
         string Supplier { get; set; }

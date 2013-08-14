@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
 {
-    public class ContactView : WebObject, IContact
+    public class PersonView : WebObject, IPerson
     {
         public IWebElement EditButton
         {
@@ -22,6 +22,11 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
                     WebDriver.FindElement(
                         By.CssSelector("#Address_AddressAddition")).Text;
             }
+        }
+
+        public string CreateDate
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
         }
 
         public string FirstName
@@ -78,6 +83,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
             set { throw new NotSupportedException(); }
         }
 
+        public string Web
+        {
+            get { throw new NotSupportedException(); }
+            set { throw new NotSupportedException(); }
+        }
+
         public string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_Street")).Text; }
@@ -108,11 +119,6 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Contact
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_Region")).Text; }
             set { throw new NotSupportedException(); }
-        }
-
-        public string CreateDate
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
         }
 
         #endregion

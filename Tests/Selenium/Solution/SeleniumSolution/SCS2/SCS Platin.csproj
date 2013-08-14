@@ -130,9 +130,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestObjects\Contact\ContactCreate.cs" />
-    <Compile Include="TestObjects\Contact\ContactEdit.cs" />
-    <Compile Include="TestObjects\Contact\ContactView.cs" />
+    <Compile Include="TestObjects\Contact\ContactPersonCreate.cs" />
+    <Compile Include="TestObjects\Contact\ContactPersonEdit.cs" />
+    <Compile Include="TestObjects\Contact\ContactPersonView.cs" />
     <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
     <Compile Include="TestObjects\Contact\ContactViewRes.Designer.cs">
@@ -145,9 +145,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomerRes.resx</DependentUpon>
     </Compile>
+    <Compile Include="TestObjects\Definitions\IContact.cs" />
     <Compile Include="TestObjects\Definitions\INetType.cs" />
     <Compile Include="TestObjects\Definitions\IAgency.cs" />
-    <Compile Include="TestObjects\Definitions\IPerson.cs" />
     <Compile Include="TestObjects\Definitions\ISupplier.cs" />
     <Compile Include="TestObjects\Definitions\ITerminalType.cs" />
     <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
@@ -207,7 +207,7 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="TestObjects\Definitions\IContact.cs" />
+    <Compile Include="TestObjects\Definitions\ContactPerson.cs" />
     <Compile Include="TestObjects\Definitions\ICustomer.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />

@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
     public static class TestLauncher
     {
         public static TestDirector TestDirector;
-        
+
         public static void Navigate(string urlSuffix)
         {
             TestDirector.WebDriver.Url = TestEnvironment.BaseUrl + urlSuffix;
