@@ -7,11 +7,10 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Agency
 {
     public class AgencyCreate : WebObject, IAgency
     {
-        public IWebElement CreateAgencyButton
+        public IWebElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[name='create']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button#save")); }
         }
-
         public string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).Text; }
@@ -81,6 +80,30 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Agency
                          .Selector()
                          .SelectByText(value);
             }
+        }
+
+        public string SbsAgentId
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).TypeText(value); }
+        }
+
+        public string Telephone
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TypeText(value); }
+        }
+
+        public string Language
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber"))
+                             .Selector()
+                             .SelectedOption.Text;
+            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Selector().SelectByText(value); }
         }
     }
 }
