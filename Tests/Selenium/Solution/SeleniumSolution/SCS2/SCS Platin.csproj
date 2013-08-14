@@ -146,6 +146,8 @@
       <DependentUpon>CustomerRes.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Definitions\INetType.cs" />
+    <Compile Include="TestObjects\Definitions\IPerson.cs" />
+    <Compile Include="TestObjects\Definitions\ISupplier.cs" />
     <Compile Include="TestObjects\Definitions\ITerminalType.cs" />
     <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
     <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />

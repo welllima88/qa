@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
@@ -74,13 +76,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Article
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxTransLim")).Text; }
         }
 
-        public List<string> Supplier
+        public ICollection Supplier
         {
             get
             {
                 return
-                    WebDriver.WebElementsAsStringList(
-                        WebDriver.FindElements(By.CssSelector("td#content form div table.dataTable tbody tr td")));
+                    WebDriver.FindElements(By.CssSelector("td#content form div table.dataTable tbody tr td"));
             }
         }
 
