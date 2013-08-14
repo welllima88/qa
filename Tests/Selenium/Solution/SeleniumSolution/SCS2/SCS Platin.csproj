@@ -207,7 +207,7 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="TestObjects\Definitions\ContactPerson.cs" />
+    <Compile Include="TestObjects\Definitions\IPerson.cs" />
     <Compile Include="TestObjects\Definitions\ICustomer.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />
