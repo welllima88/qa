@@ -1,7 +1,8 @@
 ﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
-    public interface INetType
+    public interface ISupplier
     {
-        string Name { get; set; }
+        string Id { get; }
+        string Name { get; }
     }
 }

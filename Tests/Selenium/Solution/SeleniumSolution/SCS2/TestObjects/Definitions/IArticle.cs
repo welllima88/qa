@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
 {
@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
         string SoftwareId { get; }
         string TrxSubmLim { get; }
         string TrxTransLim { get; }
-        List<string> Supplier { get; }
         string RecallInterval { get; }
+        ICollection Supplier { get; }
     }
 }
