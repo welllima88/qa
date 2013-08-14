@@ -84,7 +84,10 @@
     <Compile Include="Settings\QaK.cs" />
     <Compile Include="Settings\QaL.cs" />
     <Compile Include="Settings\Dev.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
     <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
     <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

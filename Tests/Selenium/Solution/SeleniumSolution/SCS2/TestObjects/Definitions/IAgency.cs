@@ -4,6 +4,6 @@
     {
         string Name { get; set; }
         string DisplayName { get; set; }
-        ISupplier Supplier { get; set; }
+        string Supplier { get; set; }
     }
 }
