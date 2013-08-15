@@ -1,97 +1,17 @@
 Generated File. Do not edit.
 
 [HEADER]
-Version|0.15|$
+Version|0.16|$
 Arch|x86-msvc|$
 
 [PLUGINS]
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 10.0\Reader\browser\nppdf32.dll|$
-10.1.6.1|$
-1360967483000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 10.1.6|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 10.0\Reader\AIR\nppdf32.dll|$
-10.1.6.1|$
-1360967476000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 10.1.6|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
-npGoogleUpdate3.dll|$
-C:\Users\siegmund\AppData\Local\Google\Update\1.3.21.135\npGoogleUpdate3.dll|$
-1.3.21.135|$
-1360316109946|0|1|$
-Google Update|$
-Google Update|$
-2
-0|application/x-vnd.google.update3webcontrol.3|||$
-1|application/x-vnd.google.oneclickctrl.9|||$
-npGoogleUpdate3.dll|$
-C:\Program Files (x86)\Google\Update\1.3.21.135\npGoogleUpdate3.dll|$
-1.3.21.135|$
-1360262546704|0|1|$
-Google Update|$
-Google Update|$
-2
-0|application/x-vnd.google.update3webcontrol.3|||$
-1|application/x-vnd.google.oneclickctrl.9|||$
-npgeplugin.dll|$
-C:\Program Files (x86)\Google\Google Earth\plugin\npgeplugin.dll|$
-7.0.2.8415|$
-1355450334503|0|4|$
-GEPlugin|$
-Google Earth Plugin|$
-1
-0|application/geplugin|GEPlugin||$
-np32dsw_1168638.dll|$
-C:\Windows\SysWOW64\Adobe\Director\np32dsw_1168638.dll|$
-11.6.8.638|$
-1349344148000|0|4|$
-Adobe Shockwave for Director Netscape plug-in, version 11.6.8.638|$
-Shockwave for Director|$
-1
-0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
-npnv3dv.dll|$
-C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dv.dll|$
-7.17.13.697|$
-1349191532000|0|4|$
-NVIDIA 3D Vision plugin for Mozilla browsers|$
-NVIDIA 3D Vision|$
-3
-0|image/jps|JPEG-based stereo image|jps|$
-1|image/pns|PNG-based stereo image|pns|$
-2|image/mpo|Multi-Picture Format image|mpo|$
-npnv3dvstreaming.dll|$
-C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dvstreaming.dll|$
-7.17.13.697|$
-1349191494000|0|4|$
-NVIDIA 3D Vision Streaming plugin for Mozilla browsers|$
-NVIDIA 3D VISION|$
-1
-0|application/mozilla-3DV-streaming-plugin|npnv3dvstreaming|rts|$
 npjp2.dll|$
-C:\Program Files (x86)\Java\jre6\bin\plugin2\npjp2.dll|$
-6.0.350.10|$
-1346178299000|0|4|$
-Next Generation Java Plug-in 1.6.0_35 for Mozilla browsers|$
-Java(TM) Platform SE 6 U35|$
-34
+C:\Program Files (x86)\Java\jre7\bin\plugin2\npjp2.dll|$
+10.25.2.17|$
+1372331680084|0|0|$
+Next Generation Java Plug-in 10.25.2 for Mozilla browsers|$
+Java(TM) Platform SE 7 U25|$
+38
 0|application/x-java-applet|Java Applet||$
 1|application/x-java-bean|JavaBeans||$
 2|application/x-java-vm|||$
@@ -123,54 +43,162 @@ Java(TM) Platform SE 6 U35|$
 28|application/x-java-bean;version=1.5|||$
 29|application/x-java-applet;version=1.6|||$
 30|application/x-java-bean;version=1.6|||$
-31|application/x-java-applet;jpi-version=1.6.0_35|||$
-32|application/x-java-bean;jpi-version=1.6.0_35|||$
-33|application/x-java-vm-npruntime|||$
+31|application/x-java-applet;version=1.7|||$
+32|application/x-java-bean;version=1.7|||$
+33|application/x-java-applet;jpi-version=1.7.0_25|||$
+34|application/x-java-bean;jpi-version=1.7.0_25|||$
+35|application/x-java-vm-npruntime|||$
+36|application/x-java-applet;deploy=10.25.2|||$
+37|application/x-java-applet;javafx=2.2.25|||$
 npdeployJava1.dll|$
 C:\Windows\SysWOW64\npdeployJava1.dll|$
-6.0.350.10|$
-1346178296000|0|4|$
+10.25.2.17|$
+1372331677444|0|0|$
 NPRuntime Script Plug-in Library for Java(TM) Deploy|$
-Java Deployment Toolkit 6.0.350.10|$
+Java Deployment Toolkit 7.0.250.17|$
 1
 0|application/java-deployment-toolkit|||$
-np32dsw_1166636.dll|$
-C:\Windows\SysWOW64\Adobe\Director\np32dsw_1166636.dll|$
-11.6.6.636|$
-1344442552000|0|4|$
-Adobe Shockwave for Director Netscape plug-in, version 11.6.6.636|$
-Shockwave for Director|$
+nproozz.dll|$
+C:\Program Files (x86)\Roozz\nproozz.dll|$
+3.2.32.0|$
+1369130954000|0|0|$
+Run games and apps in the webpage|$
+Roozz plugin|$
 1
-0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
+0|application/roozz-plugin|Roozz plugin|applist|$
 npctrl.dll|$
-C:\Program Files (x86)\Microsoft Silverlight\5.1.10411.0\npctrl.dll|$
-5.1.10411.0|$
-1334099728000|0|4|$
-5.1.10411.0|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrl.dll|$
+5.1.20513.0|$
+1368450876000|0|0|$
+5.1.20513.0|$
 Silverlight Plug-In|$
 2
 0|application/x-silverlight|npctrl|scr|$
 1|application/x-silverlight-2|||$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 10.0\Reader\AIR\nppdf32.dll|$
+10.1.7.27|$
+1368172652000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 10.1.7|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 10.0\Reader\browser\nppdf32.dll|$
+10.1.7.27|$
+1368172646000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 10.1.7|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npgtpo3dautoplugin.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgtpo3dautoplugin.dll|$
+0.1.44.24|$
+1364230608000|0|0|$
+Google Talk Plugin Video Accelerator version:0.1.44.24|$
+Google Talk Plugin Video Accelerator|$
+1
+0|application/vnd.gtpo3d.auto|||$
+npo1d.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npo1d.dll|$
+3.17.0.12440|$
+1364230602000|0|0|$
+Version 3.17.0.12440|$
+Google Talk Plugin Video Renderer|$
+1
+0|application/o1d|Google Talk Plugin Video Renderer|o1d|$
+npgoogletalk.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgoogletalk.dll|$
+3.17.0.12440|$
+1364230600000|0|0|$
+Version 3.17.0.12440|$
+Google Talk Plugin|$
+1
+0|application/googletalk|Google voice and video chat|googletalk|$
+npGoogleUpdate3.dll|$
+C:\Users\siegmund\AppData\Local\Google\Update\1.3.21.135\npGoogleUpdate3.dll|$
+1.3.21.135|$
+1360316109946|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+npnv3dv.dll|$
+C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dv.dll|$
+7.17.13.1106|$
+1358493416000|0|0|$
+NVIDIA 3D Vision plugin for Mozilla browsers|$
+NVIDIA 3D Vision|$
+3
+0|image/jps|JPEG-based stereo image|jps|$
+1|image/pns|PNG-based stereo image|pns|$
+2|image/mpo|Multi-Picture Format image|mpo|$
+npnv3dvstreaming.dll|$
+C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dvstreaming.dll|$
+7.17.13.1106|$
+1358493416000|0|0|$
+NVIDIA 3D Vision Streaming plugin for Mozilla browsers|$
+NVIDIA 3D VISION|$
+1
+0|application/mozilla-3DV-streaming-plugin|npnv3dvstreaming|rts|$
+npgeplugin.dll|$
+C:\Program Files (x86)\Google\Google Earth\plugin\npgeplugin.dll|$
+7.0.2.8415|$
+1355450334503|0|0|$
+GEPlugin|$
+Google Earth Plugin|$
+1
+0|application/geplugin|GEPlugin||$
+np32dsw_1168638.dll|$
+C:\Windows\SysWOW64\Adobe\Director\np32dsw_1168638.dll|$
+11.6.8.638|$
+1349344148000|0|0|$
+Adobe Shockwave for Director Netscape plug-in, version 11.6.8.638|$
+Shockwave for Director|$
+1
+0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
+NPWLPG.dll|$
+C:\Program Files (x86)\Windows Live\Photo Gallery\NPWLPG.dll|$
+16.4.3505.912|$
+1347461858000|0|0|$
+NPWLPG|$
+Photo Gallery|$
+2
+0|application/x-wlpg3-detect|Photo Gallery|wlpg|$
+1|application/x-wlpg-detect|Photo Gallery|wlpg|$
+np32dsw_1166636.dll|$
+C:\Windows\SysWOW64\Adobe\Director\np32dsw_1166636.dll|$
+11.6.6.636|$
+1344442552000|0|0|$
+Adobe Shockwave for Director Netscape plug-in, version 11.6.6.636|$
+Shockwave for Director|$
+1
+0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
 np32dsw.dll|$
 C:\Windows\SysWOW64\Adobe\Director\np32dsw.dll|$
 11.6.3.633|$
-1321968972000|0|4|$
+1321968972000|0|0|$
 Adobe Shockwave for Director Netscape plug-in, version 11.6.3.633|$
 Shockwave for Director|$
 1
 0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
-NPWPIDetector.dll|$
-C:\Program Files\Microsoft\Web Platform Installer\NPWPIDetector.dll|$
-1.1.0.4|$
-1301689150000|0|4|$
-wpidetector|$
-WPI Detector 1.4|$
-1
-0|application/wpi-plugin|||$
 NPSPWRAP.DLL|$
 C:\PROGRA~2\MICROS~1\Office14\NPSPWRAP.DLL|$
 14.0.4761.1000|$
-1269454958000|0|4|$
+1269454958000|0|0|$
 The plug-in allows you to open and edit files using Microsoft Office applications|$
 Microsoft Office 2010|$
 1
@@ -178,7 +206,7 @@ Microsoft Office 2010|$
 NPAUTHZ.DLL|$
 C:\PROGRA~2\MICROS~1\Office14\NPAUTHZ.DLL|$
 14.0.4730.1010|$
-1263066138000|0|4|$
+1263066138000|0|0|$
 Office Authorization plug-in for NPAPI browsers|$
 Microsoft Office 2010|$
 1
@@ -186,7 +214,7 @@ Microsoft Office 2010|$
 NPSWF32.dll|$
 C:\Windows\system32\Macromed\Flash\NPSWF32.dll|$
 10.0.12.36|$
-1223177042000|0|4|$
+1223177042000|0|0|$
 Shockwave Flash 10.0 r12|$
 Shockwave Flash|$
 2
@@ -194,7 +222,7 @@ Shockwave Flash|$
 1|application/futuresplash|FutureSplash movie|spl|$
 
 [INVALID]
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrlui.dll|$
+1368450876000|$
 C:\Windows\SysWOW64\npmproxy.dll|$
 1247534171654|$
-C:\Program Files (x86)\Microsoft Silverlight\5.1.10411.0\npctrlui.dll|$
-1334099728000|$
