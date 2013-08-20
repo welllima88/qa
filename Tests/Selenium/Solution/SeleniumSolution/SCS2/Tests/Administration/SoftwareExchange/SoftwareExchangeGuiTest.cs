@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SoftwareExchange;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SoftwareExchange
