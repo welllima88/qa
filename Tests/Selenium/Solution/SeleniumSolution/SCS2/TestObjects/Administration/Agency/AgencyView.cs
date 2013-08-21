@@ -94,11 +94,16 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Agency
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SupplierMandantId"))
+                    WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
                              .Selector()
                              .SelectedOption.Text;
             }
-            set { throw new NotSupportedException(); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
+                           .Selector()
+                           .SelectByValue(value);
+            }
         }
     }
 }
