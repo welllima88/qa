@@ -1,41 +1,97 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.Agency;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.Agency
 {
     [TestClass]
     public class AgencyEditTest
     {
-        private static AgencyView _agency;
+        private static AgencyView _agencyView;
+        private static AgencyEdit _agencyEdit;
         private static string _nameDyn;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _agency = new AgencyView();
+            _agencyEdit = new AgencyEdit();
+            _agencyView = new AgencyView();
+
             _nameDyn = "SYR " + TestLauncher.GenerateTestId();
 
-            TestLauncher.Navigate("/Agency/Edit?AgencyId=ce4c835f-7cdb-47f6-91c5-4de527703f29");
+            TestLauncher.Navigate("/Agency/Edit?AgencyId=59ddd48b-f265-40f5-beac-9529a1d9454f");
 
-            _agency.Name = _nameDyn;
-            _agency.DisplayName = _nameDyn + "D";
-            _agency.StreetNo = "Agentur-Str. 12a";
-            _agency.Zip = "10235";
-            _agency.City = "Hamburg";
-            _agency.Country = "DE";
-            _agency.Language = "DE";
-            _agency.Telephone = "DE";
-            _agency.Supplier = "Alle Fremdhersteller";
-            _agency.SbsAgentId = "881144";
+            _agencyEdit.Name = _nameDyn;
+            _agencyEdit.DisplayName = _nameDyn + "D";
+            _agencyEdit.StreetNo = "Agentur-Str. 12a";
+            _agencyEdit.Zip = "10235";
+            _agencyEdit.City = "Hamburg";
+            _agencyEdit.Country = "DE";
+            _agencyEdit.Language = "de";
+            _agencyEdit.Telephone = "+41 58 399 6237";
+            _agencyEdit.Supplier = "Alle Fremdhersteller";
+            _agencyEdit.SbsAgentId = "881144";
 
-            _agency.SaveButton.Click();
+            _agencyEdit.SaveButton.Click();
         }
 
         [TestMethod]
-        public void ArticlelName()
+        public void Name()
         {
-            Assert.AreEqual("yomani XR S C O PINPAD, TCP/IP (IP)", _agency.Name);
+            Assert.AreEqual(_nameDyn, _agencyView.Name);
+        }
+
+        [TestMethod]
+        public void DisplayName()
+        {
+            Assert.AreEqual(_nameDyn + "D", _agencyView.DisplayName);
+        }
+
+        [TestMethod]
+        public void StreetNo()
+        {
+            Assert.AreEqual("Agentur-Str. 12a", _agencyView.StreetNo);
+        }
+
+        [TestMethod]
+        public void Zip()
+        {
+            Assert.AreEqual("10235", _agencyView.Zip);
+        }
+
+        [TestMethod]
+        public void City()
+        {
+            Assert.AreEqual("Hamburg", _agencyView.City);
+        }
+
+        [TestMethod]
+        public void Country()
+        {
+            Assert.AreEqual("DE", _agencyView.Country);
+        }
+
+        [TestMethod]
+        public void Language()
+        {
+            Assert.AreEqual("DE", _agencyView.Language);
+        }
+
+        [TestMethod]
+        public void Telephone()
+        {
+            Assert.AreEqual("+41 58 399 6237", _agencyView.Telephone);
+        }
+
+        [TestMethod]
+        public void Supplier()
+        {
+            Assert.AreEqual("_foreign_supplier_all", _agencyView.Supplier);
+        }
+
+        [TestMethod]
+        public void SbsAgentId()
+        {
+            Assert.AreEqual("881144", _agencyView.SbsAgentId);
         }
     }
 }
