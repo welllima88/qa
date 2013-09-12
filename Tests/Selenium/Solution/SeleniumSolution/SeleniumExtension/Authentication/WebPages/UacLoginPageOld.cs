@@ -2,7 +2,7 @@
 
 namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 {
-    public class UacLoginPageOld : WebObject
+    public class UacLoginPageOld : WebObject, IUacLoginPage
     {
         public string UserName
         {
