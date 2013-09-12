@@ -20,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 
         public IWebElement LoginButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input.loginInput[alt='Login']")); }
+            get { return WebDriver.FindElement(By.CssSelector("input[alt='Login']")); }
         }
     }
 }
