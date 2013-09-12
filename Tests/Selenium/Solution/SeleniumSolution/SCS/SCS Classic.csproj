@@ -91,15 +91,9 @@
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
-    <Compile Include="TestObjects\Menu\ContactMenu.cs" />
-    <Compile Include="TestObjects\Menu\CustomerMenu.cs" />
     <Compile Include="TestObjects\Menu\HeadMenu.cs" />
-    <Compile Include="TestObjects\Menu\LocationMenu.cs" />
-    <Compile Include="TestObjects\Menu\MassMutationMenu.cs" />
-    <Compile Include="TestObjects\Menu\TerminalAnalysisMenu.cs" />
-    <Compile Include="TestObjects\Menu\TerminalMenu.cs" />
-    <Compile Include="TestObjects\Menu\TicketMenu.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
+    <Compile Include="Tests\BasicTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
