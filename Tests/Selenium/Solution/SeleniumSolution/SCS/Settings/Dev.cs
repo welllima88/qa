@@ -1,4 +1,5 @@
 ﻿using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
+using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
@@ -14,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
             BaseUrl = ScsRes.UAC_DEV;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
             Application = new Scs();
-            Authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort);
+            Authentication = new UacAuthentication(new UacLoginPageOld(), Scs2Res.uac_username, Scs2Res.uac_passwort);
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
