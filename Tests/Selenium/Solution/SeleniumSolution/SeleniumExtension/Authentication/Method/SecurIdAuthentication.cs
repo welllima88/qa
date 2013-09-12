@@ -1,11 +1,10 @@
 using System;
-using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
 
 namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
 {
-    public class SecurIdAuthentication : WebObject, IAuthentication, ILogoutCheck
+    public class SecurIdAuthentication : WebObject, IAuthentication
 
     {
         private readonly string _mandant;
@@ -29,8 +28,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
             _mandant = mandant;
         }
 
-        #region IAuthentication Members
-
         public void Login()
         {
             _wes = new WesSecurIdLoginPage();
@@ -46,20 +43,5 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
             _wes.SecurId = _securId;
             _wes.LoginButton.Click();
         }
-
-        #endregion
-
-        #region ILogoutCheck Members
-
-        public void CheckLogOutSucess()
-        {
-            Assert.AreEqual("Logout", _wes.LogoutLabel.Text);
-            Assert.AreEqual("Sie haben sich erfolgreich abgemeldet. \nBitte schliessen Sie jetzt Ihren Browser!",
-                            _wes.LogoutMessage.Text);
-            Assert.IsTrue(Regex.IsMatch(_wes.LogoutHeader.Text,
-                                        "^SIX [\\s\\S]* - WES.*"));
-        }
-
-        #endregion
     }
 }

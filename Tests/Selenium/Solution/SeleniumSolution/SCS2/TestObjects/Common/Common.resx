@@ -216,4 +216,7 @@
   <data name="ProcessTickets_Oldest" xml:space="preserve">
     <value>ul#ElementHistoryList</value>
   </data>
+  <data name="RecentElements_MostRecent" xml:space="preserve">
+    <value>div.container&gt;ul#ElementHistoryList&gt;li:first&gt;a</value>
+  </data>
 </root>

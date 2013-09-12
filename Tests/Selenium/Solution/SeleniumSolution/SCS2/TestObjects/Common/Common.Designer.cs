@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
-{
-
-
+namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -300,6 +300,15 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
         internal static string RecentElements_Elements {
             get {
                 return ResourceManager.GetString("RecentElements_Elements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div.container&gt;ul#ElementHistoryList&gt;li:first&gt;a.
+        /// </summary>
+        internal static string RecentElements_MostRecent {
+            get {
+                return ResourceManager.GetString("RecentElements_MostRecent", resourceCulture);
             }
         }
         
