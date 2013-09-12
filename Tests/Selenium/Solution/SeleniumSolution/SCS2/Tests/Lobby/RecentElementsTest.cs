@@ -20,13 +20,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
     [TestClass]
     public class RecentElementsTest
     {
-        private static LobbyView _lobbyView;
+        private static RecentElements _recentElements;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
-
+            _recentElements = new RecentElements();
             TestLauncher.Navigate("");
         }
 
@@ -34,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void MostRecentContainer()
         {
-            Assert.IsTrue(_lobbyView.RecentElements.MostRecent.Displayed);
+            Assert.IsTrue(_recentElements.MostRecent.Displayed);
         }
     }
 }
