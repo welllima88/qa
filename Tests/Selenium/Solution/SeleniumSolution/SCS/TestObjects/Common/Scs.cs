@@ -16,7 +16,8 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common
         public void Logout()
         {
             // TODO: doesn't work so make it work
-            //_headMenu.Logout.Click();
+            TestLauncher.TestDirector.WebDriver.SwitchTo().Frame("head");
+            _headMenu.Logout.Click();
         }
     }
 }
