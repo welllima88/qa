@@ -2,7 +2,7 @@
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
 {
@@ -12,9 +12,12 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
         {
             BaseUrl = ScsRes.WES_Production;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
-            Application = new LobbyView();
+            Application = new Scs();
             Authentication = new SecurIdDialogBox();
-            SeleniumConfig = new SeleniumConfig { Timeouts = new Timeouts { ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30 } };
+            SeleniumConfig = new SeleniumConfig
+                {
+                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+                };
         }
     }
 }

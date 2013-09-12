@@ -2,8 +2,8 @@
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
+using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
 {
@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
         {
             BaseUrl = ScsRes.UAC_DEV;
             BrowserProfileName = DriverRes.FirefoxProfile_Plain;
-            Application = new LobbyView();
+            Application = new Scs();
             Authentication = new UacAuthentication(Scs2Res.uac_username, Scs2Res.uac_passwort);
             SeleniumConfig = new SeleniumConfig
                 {
