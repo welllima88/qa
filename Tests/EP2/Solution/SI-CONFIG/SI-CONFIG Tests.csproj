@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C828CF02-3114-4E87-A42C-A6B157D361C0}</ProjectGuid>
+    <ProjectGuid>{1EEA35E4-073B-4393-A3A7-B69963178449}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.QA.Tests.EP2.COI</RootNamespace>
-    <AssemblyName>COITests</AssemblyName>
+    <RootNamespace>SIX.SCS.QA.Tests.EP2.SICONFIG</RootNamespace>
+    <AssemblyName>SI-CONFIG Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
