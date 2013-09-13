@@ -1,11 +1,11 @@
-﻿using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
+﻿using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Properties;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings
 {
     public class Local : TestEnvironment
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.EventLog;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.EventLog;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.EventLog
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.EventLog
 {
     [TestClass]
     public class EventLogGuiTest

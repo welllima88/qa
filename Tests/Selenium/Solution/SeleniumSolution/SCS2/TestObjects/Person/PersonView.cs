@@ -1,9 +1,9 @@
 using System;
 using OpenQA.Selenium;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Person
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person
 {
     public class PersonView : WebObject, IPerson
     {

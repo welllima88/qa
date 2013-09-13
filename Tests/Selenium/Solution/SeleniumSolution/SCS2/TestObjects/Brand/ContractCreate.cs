@@ -2,7 +2,7 @@ using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Brand
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Brand
 {
     public class ContractCreate : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed

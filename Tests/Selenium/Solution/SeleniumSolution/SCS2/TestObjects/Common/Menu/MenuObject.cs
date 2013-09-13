@@ -1,6 +1,6 @@
 ﻿using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu
 {
     public abstract class MenuObject : WebObject
     {

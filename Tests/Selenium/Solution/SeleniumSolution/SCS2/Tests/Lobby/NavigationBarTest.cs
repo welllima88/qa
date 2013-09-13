@@ -10,9 +10,9 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Lobby
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

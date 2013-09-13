@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.EventLog
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.EventLog
 {
     public class TerminalEventLog : WebObject
     {

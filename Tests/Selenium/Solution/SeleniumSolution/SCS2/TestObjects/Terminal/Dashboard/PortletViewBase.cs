@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.Dashboard
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.Dashboard
 {
     public abstract class PortletViewBase : WebObject
     {

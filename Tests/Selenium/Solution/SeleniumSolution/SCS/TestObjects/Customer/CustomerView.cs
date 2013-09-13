@@ -1,9 +1,9 @@
 ﻿using System;
 using OpenQA.Selenium;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
+namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 {
     public class CustomerView : WebObject, ICustomer
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Create
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {
     [TestClass]
     public class CustomerCreateGuiTest

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SoftwareExchange;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.SoftwareExchange;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SoftwareExchange
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExchange
 {
     [TestClass]
     public class SoftwareExchangeTest

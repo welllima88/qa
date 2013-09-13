@@ -1,4 +1,4 @@
-﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
+﻿namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.SearchResult
 {
     internal class UserResult : AbstractSearchResult
     {

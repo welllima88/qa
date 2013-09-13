@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
-{
-
-
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer.CustomerRes", typeof(CustomerRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer.CustomerRes", typeof(CustomerRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

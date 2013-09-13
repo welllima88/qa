@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
 {
     [TestClass]
     public class TerminalCreateChooseArticleTest

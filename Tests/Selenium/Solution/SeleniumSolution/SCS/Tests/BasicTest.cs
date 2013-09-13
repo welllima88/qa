@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Tests
+namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Tests
 {
     [TestClass]
     public class BasicTest

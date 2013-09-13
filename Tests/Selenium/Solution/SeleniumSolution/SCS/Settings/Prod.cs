@@ -1,10 +1,10 @@
-﻿using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
+﻿using SIX.SCS.QA.SCSClassics.Tests.Selenium.Properties;
+using SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-using SIX.SCS.QA.Selenium.Tests.SCSClassics.Properties;
-using SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Common;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.Settings
+namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 {
     public class Prod : TestEnvironment
     {

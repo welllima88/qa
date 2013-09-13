@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Tests.SCSPlatin.Properties.Scs2Res", typeof(Scs2Res).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.SCSPlatin.Tests.Selenium.Properties.Scs2Res", typeof(Scs2Res).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

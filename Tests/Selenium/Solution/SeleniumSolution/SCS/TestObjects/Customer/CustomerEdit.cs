@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSClassics.TestObjects.Customer
+namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 {
     public class CustomerEdit
     {

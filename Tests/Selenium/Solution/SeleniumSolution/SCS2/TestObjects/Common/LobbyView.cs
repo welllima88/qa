@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Authentication;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common
 {
     public class LobbyView : WebObject, IApplication
     {

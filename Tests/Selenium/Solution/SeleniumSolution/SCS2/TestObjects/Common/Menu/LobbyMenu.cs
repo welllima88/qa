@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu
 {
     /// <summary>
     ///     css Locator have problems with menu so use xpath until resolved the reason...

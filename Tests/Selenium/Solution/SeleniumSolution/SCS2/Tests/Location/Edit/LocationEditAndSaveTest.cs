@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Location.Edit
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 {
     [TestClass]
     public class LocationEditAndSaveTest

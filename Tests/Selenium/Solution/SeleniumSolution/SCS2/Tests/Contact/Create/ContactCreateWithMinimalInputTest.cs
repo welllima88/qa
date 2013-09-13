@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Person;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Create
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 {
     [TestClass]
     public class ContactCreateWithMinimalInputTest

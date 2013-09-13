@@ -1,4 +1,4 @@
-﻿namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions
+﻿namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions
 {
     public interface IPerson : IAdress, IContact
     {

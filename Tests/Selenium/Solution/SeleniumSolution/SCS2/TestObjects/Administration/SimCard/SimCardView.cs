@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.SimCard
 {
     internal class SimCardView : WebObject
     {

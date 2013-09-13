@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Customer;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Customer.Edit
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
 {
     [TestClass]
     public class CustomerEditKeepsDataTest

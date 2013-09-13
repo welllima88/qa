@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Settings;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
     /// <summary>
     ///     The TestLauncher prepares Browser with a concrete TestDirector and keeps this

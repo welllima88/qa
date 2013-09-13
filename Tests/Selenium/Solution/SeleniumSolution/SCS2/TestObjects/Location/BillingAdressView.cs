@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Location
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location
 {
     public class BillingAddressView : WebObject
     {

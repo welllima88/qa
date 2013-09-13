@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Person;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Menu;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Contact.Edit
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
 {
     [TestClass]
     public class ContactEditTest

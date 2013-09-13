@@ -1,9 +1,9 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Administration.SimCard;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Common;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.SimCard;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Administration.SIMCard
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 {
     [TestClass]
     public class SimCardCreateTest

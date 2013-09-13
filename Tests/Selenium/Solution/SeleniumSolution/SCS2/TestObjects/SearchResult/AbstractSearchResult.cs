@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.SearchResult
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.SearchResult
 {
     public abstract class AbstractSearchResult : WebObject
     {

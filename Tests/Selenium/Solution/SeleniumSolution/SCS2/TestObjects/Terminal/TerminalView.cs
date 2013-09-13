@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal
 {
     public class TerminalView : WebObject
     {

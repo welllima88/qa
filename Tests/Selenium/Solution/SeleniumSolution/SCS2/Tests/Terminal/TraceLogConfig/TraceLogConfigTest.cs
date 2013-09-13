@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Tests.SCSPlatin.TestObjects.Terminal.TraceLogConfig;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.TraceLogConfig;
 
-namespace SIX.SCS.QA.Selenium.Tests.SCSPlatin.Tests.Terminal.TraceLogConfig
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
 {
     [TestClass]
     public class TraceLogConfigActivateTest
