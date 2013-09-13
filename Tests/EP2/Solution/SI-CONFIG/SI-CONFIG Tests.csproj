@@ -43,8 +43,9 @@
     <Reference Include="log4net">
       <HintPath>packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="SIX.EP2.Core">
-      <HintPath>packages\SIX.EP2.Core.1.0.4938.116\lib\net40\SIX.EP2.Core.dll</HintPath>
+    <Reference Include="SIX.EP2.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SIX.EP2.Core.1.1.1.37\lib\net40\SIX.EP2.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
