@@ -1,22 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COI Tests", "COI\COI Tests.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COI", "COI\COI.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SI-CONFIG Tests", "SI-CONFIG\SI-CONFIG Tests.csproj", "{1EEA35E4-073B-4393-A3A7-B69963178449}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SI-CONFIG", "SI-CONFIG\SI-CONFIG.csproj", "{1EEA35E4-073B-4393-A3A7-B69963178449}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 3
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
-		SccProjectUniqueName0 = COI\\COI\u0020Tests.csproj
-		SccProjectName0 = COI
-		SccLocalPath0 = COI
-		SccProjectUniqueName1 = SI-CONFIG\\SI-CONFIG\u0020Tests.csproj
-		SccProjectName1 = SI-CONFIG
-		SccLocalPath1 = SI-CONFIG
-		SccLocalPath2 = .
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = COI\\COI.csproj
+		SccProjectName1 = COI
+		SccLocalPath1 = COI
+		SccProjectUniqueName2 = SI-CONFIG\\SI-CONFIG.csproj
+		SccProjectName2 = SI-CONFIG
+		SccLocalPath2 = SI-CONFIG
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
