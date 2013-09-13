@@ -13,10 +13,10 @@ Global
 		SccProjectUniqueName0 = COI\\COI\u0020Tests.csproj
 		SccProjectName0 = COI
 		SccLocalPath0 = COI
-		SccLocalPath1 = .
-		SccProjectUniqueName2 = SI-CONFIG\\SI-CONFIG\u0020Tests.csproj
-		SccProjectName2 = SI-CONFIG
-		SccLocalPath2 = SI-CONFIG
+		SccProjectUniqueName1 = SI-CONFIG\\SI-CONFIG\u0020Tests.csproj
+		SccProjectName1 = SI-CONFIG
+		SccLocalPath1 = SI-CONFIG
+		SccLocalPath2 = .
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
