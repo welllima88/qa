@@ -5,9 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COI", "COI\COI.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SI-CONFIG", "SI-CONFIG\SI-CONFIG.csproj", "{1EEA35E4-073B-4393-A3A7-B69963178449}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{167E7615-B2DE-4C65-9532-1752C810FC99}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
 		SccLocalPath0 = .
@@ -17,6 +19,9 @@ Global
 		SccProjectUniqueName2 = SI-CONFIG\\SI-CONFIG.csproj
 		SccProjectName2 = SI-CONFIG
 		SccLocalPath2 = SI-CONFIG
+		SccProjectUniqueName3 = Common\\Common.csproj
+		SccProjectName3 = Common
+		SccLocalPath3 = Common
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +36,10 @@ Global
 		{1EEA35E4-073B-4393-A3A7-B69963178449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EEA35E4-073B-4393-A3A7-B69963178449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EEA35E4-073B-4393-A3A7-B69963178449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167E7615-B2DE-4C65-9532-1752C810FC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167E7615-B2DE-4C65-9532-1752C810FC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167E7615-B2DE-4C65-9532-1752C810FC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167E7615-B2DE-4C65-9532-1752C810FC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

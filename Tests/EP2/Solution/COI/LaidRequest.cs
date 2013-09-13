@@ -3,8 +3,14 @@
 namespace SIX.SCS.QA.Tests.EP2.COI
 {
     [TestClass]
-    public class UnitTest1
+    public class LaidRequest
     {
+        
+        [TestInitialize]
+        public void PrepareCoiMessage()
+        {
+            
+        }
         [TestMethod]
         public void TestMethod1()
         {
