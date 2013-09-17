@@ -12,16 +12,16 @@ Global
 		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = COI\\COI.csproj
-		SccProjectName1 = COI
-		SccLocalPath1 = COI
-		SccProjectUniqueName2 = SI-CONFIG\\SI-CONFIG.csproj
-		SccProjectName2 = SI-CONFIG
-		SccLocalPath2 = SI-CONFIG
-		SccProjectUniqueName3 = Common\\Common.csproj
-		SccProjectName3 = Common
-		SccLocalPath3 = Common
+		SccProjectUniqueName0 = COI\\COI.csproj
+		SccProjectName0 = COI
+		SccLocalPath0 = COI
+		SccProjectUniqueName1 = SI-CONFIG\\SI-CONFIG.csproj
+		SccProjectName1 = SI-CONFIG
+		SccLocalPath1 = SI-CONFIG
+		SccProjectUniqueName2 = Common\\Common.csproj
+		SccProjectName2 = Common
+		SccLocalPath2 = Common
+		SccLocalPath3 = .
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
