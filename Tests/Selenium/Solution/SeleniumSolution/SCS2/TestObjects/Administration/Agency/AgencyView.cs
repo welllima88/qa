@@ -101,8 +101,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.Agency
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
-                           .Selector()
-                           .SelectByValue(value);
+                         .Selector()
+                         .SelectByValue(value);
             }
         }
     }

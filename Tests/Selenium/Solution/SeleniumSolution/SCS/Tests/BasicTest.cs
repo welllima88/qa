@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Tests
 
         [TestMethod]
         public void DommyTest()
-        {           
+        {
         }
     }
 }
