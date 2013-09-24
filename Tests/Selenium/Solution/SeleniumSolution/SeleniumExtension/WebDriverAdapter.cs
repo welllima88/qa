@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using OpenQA.Selenium;
 
@@ -53,7 +54,7 @@ namespace SIX.SCS.QA.Selenium.Extension
             return new WebElementAdapter(_webDriver.FindElement(by));
         }
 
-        List<string> IWebDriverAdapter.WebElementsAsStringList(ReadOnlyCollection<IWebElement> webElements)
+        List<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElement> webElements)
         {
             return WebElementsAsStringList(webElements);
         }
@@ -163,24 +164,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         public static List<String> WebElementsAsStringList(IEnumerable<IWebElement> webElements)
         {
             var items = new List<String>(5);
-            foreach (IWebElement item in webElements)
-            {
-                items.Add(item.Text);
-            }
+            items.AddRange(webElements.Select(item => item.Text));
             return items;
-        }
-
-        private bool IsElementPresent(By by)
-        {
-            try
-            {
-                FindElement(by);
-                return true;
-            }
-            catch (NoSuchElementException)
-            {
-                return false;
-            }
         }
     }
 }

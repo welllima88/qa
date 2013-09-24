@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by);
         //todo modify to string and use CSS-Locator as default
         IWebElementAdapter FindAdaptedElement(By by);
-        List<String> WebElementsAsStringList(ReadOnlyCollection<IWebElement> webElements);
+        List<String> WebElementsAsStringList(IEnumerable<IWebElement> webElements);
         ISuggesterWebElement FindSuggesterElement(By by);
         IWebElement WaitForElementPresent(By locator);
     }

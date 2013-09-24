@@ -56,11 +56,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.TraceLogConfi
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[value='speichern']")); }
         }
 
-        public IWebElementAdapter Cancel
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='cancel']")); }
-        }
-
         public IWebElementAdapter Deactivate
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='deactivate']")); }

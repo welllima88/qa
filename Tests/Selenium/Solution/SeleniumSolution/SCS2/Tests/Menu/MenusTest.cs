@@ -1,7 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
 {
@@ -79,32 +77,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
             Assert.IsTrue(terminalMenu.AnalysisMenu.FoQueries.Displayed);
             Assert.IsTrue(terminalMenu.AnalysisMenu.Ep2TraceLog.Displayed);
             Assert.IsTrue(terminalMenu.AnalysisMenu.SendOverview.Displayed);
-        }
-
-        private void TryOut()
-        {
-            //css is horr for text stuff -> consequence will be I use fance xpath!!!
-            //http://sqa.stackexchange.com/questions/362/a-way-to-match-on-text-using-css-locators
-            //http://sauceio.com/index.php/2010/03/selenium-tips-finding-elements-by-their-inner-text-using-contains-a-css-pseudo-class/
-            //http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
-
-            //http://darrellgrainger.blogspot.ch/2012/01/css-for-webdriver-revisited.html
-            IWebDriverAdapter driver = TestLauncher.TestDirector.WebDriver;
-
-            IWebElement e = driver.FindElement(By.CssSelector("a[href*='Customer/CustomerEdit.aspx?PageMode=new']"));
-            driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
-            driver.FindElement(By.CssSelector("td:contains(\" Neuer Kunde\"]"));
-            driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
-            driver.FindElement(By.CssSelector("td::contains(' Neuer Kunde')"));
-            driver.FindElement(By.CssSelector("td[innertext='Neuer Kunde']"));
-            driver.FindElement(By.CssSelector("td:contains('^ Neuer Kunde$')"));
-            driver.FindElement(By.CssSelector("td[textContent=' Neuer Kunde']"));
-            driver.FindElement(By.CssSelector("td[textContent=\" Neuer Kunde\"]"));
-
-            driver.FindElement(By.CssSelector("td[textContent()=\" Neuer Kunde\"]"));
-
-            driver.FindElement(By.XPath("//td[text()=' Kunde']"));
-            e.Click();
         }
 
         // change to a more generic solution (list of elements <testobj>)

@@ -74,6 +74,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
 
         public void EnterValidCustomerDataAndCancel()
         {
+            // TODO: not Working
             var tb = new TestDirector(new QaL());
             IWebDriverAdapter driver = tb.PrepareBrowser();
 

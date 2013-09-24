@@ -4,7 +4,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu
 {
     public class TerminalMenu : MenuObject
     {
-        public TerminalAnalysisMenu AnalysisMenu;
+        public readonly TerminalAnalysisMenu AnalysisMenu;
 
         public TerminalMenu()
         {

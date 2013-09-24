@@ -73,14 +73,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             Assert.AreEqual("SBS", _locationView.City);
         }
 
-        [Ignore] //obsolete
-        [TestMethod]
-        public void AgencyOfCustomerIsUsedForAgencyOfLocation()
-        {
-            string agency = _customerView.Agency;
-            _customerMenu.LocationCreate.Click();
-            //Assert.AreEqual(agency, _locationCreate.Agency);
-        }
 
         [TestMethod]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()

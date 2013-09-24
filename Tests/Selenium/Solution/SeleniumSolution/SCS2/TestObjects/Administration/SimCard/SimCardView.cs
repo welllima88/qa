@@ -8,8 +8,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.SimCard
 {
     internal class SimCardView : WebObject
     {
-        public SimCardElementView SimCardElement;
-        public SimCardHistory SimCardHistory;
+        public readonly SimCardElementView SimCardElement;
+        public readonly SimCardHistory SimCardHistory;
 
         public SimCardView()
         {

@@ -30,10 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
             const string termType = "xentissimo";
             const string article = "xentissimo MOBILE WLAN, TCP/IP";
 
-            _terminalCreate.TerminalChooser.TerminalType = termType;
-            _terminalCreate.TerminalChooser.TerminalSubType = "mobile";
-            _terminalCreate.TerminalChooser.NetType = "WLAN";
-            _terminalCreate.TerminalChooser.Article = " " + article;
+            _terminalCreate.TerminalChooser.Article = article;
 
             Assert.IsTrue(_terminalCreate.TerminalConfigCreate.TerminalType.Equals(termType));
 

@@ -148,7 +148,6 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
         public string SbsAdressNumber
         {
             get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
         }
 
         public string SbsCurrency

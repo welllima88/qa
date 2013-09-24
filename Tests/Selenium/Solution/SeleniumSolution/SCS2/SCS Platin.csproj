@@ -197,9 +197,6 @@
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Tree\Leaf.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Tree\Composite.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Tree\IComponent.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
@@ -282,7 +279,6 @@
     <Compile Include="TestObjects\Location\LocationCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateTest.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalData.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
     <Compile Include="Tests\Login\LoginTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
@@ -310,12 +306,14 @@
     <Folder Include="TestObjects\Administration\TerminalReleases\" />
     <Folder Include="TestObjects\Common\Navigation\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
+    <Folder Include="TestObjects\Terminal\Dashboard\Tree\" />
     <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GoodToKnow\DataSource.txt" />
     <Content Include="GoodToKnow\RegReplace.txt" />
+    <Content Include="GoodToKnow\TryLocator.txt" />
     <Content Include="GoodToKnow\WebLinks.txt" />
   </ItemGroup>
   <ItemGroup>

@@ -26,11 +26,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
         }
 
-        public IWebElement ClickCancel
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnCancel")); }
-        }
-
         public IWebElement ClickAdressFromLocation
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }

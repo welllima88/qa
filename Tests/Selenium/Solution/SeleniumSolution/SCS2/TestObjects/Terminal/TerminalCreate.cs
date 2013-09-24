@@ -4,9 +4,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal
 {
     public class TerminalCreate : WebObject
     {
-        public TerminalChooser TerminalChooser;
-        public TerminalConfigCreate TerminalConfigCreate;
-        public TerminalConfigDetailsCreate TerminalConfigDetailsCreate;
+        public readonly TerminalChooser TerminalChooser;
+        public readonly TerminalConfigCreate TerminalConfigCreate;
+        public readonly TerminalConfigDetailsCreate TerminalConfigDetailsCreate;
 
         public TerminalCreate()
         {

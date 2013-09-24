@@ -7,30 +7,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common
 {
     public class LobbyView : WebObject, IApplication
     {
-        public ApplicationInfo ApplicationInfo;
-        public Footer Footer;
-        public LobbyNews LobbyNews;
-        public LobbyMenu Menu;
-        public MetaNavBar MetaNavBar;
-        public NavigationBar NavigationBar;
-        public ProcessTickets ProcessTickets;
-        public QuickSearch QuickSearch;
-        public RecentElements RecentElements;
-        public RecentMassmutations RecentMassmutations;
-
-        #region IApplication Members
-
-        public void Logout()
-        {
-            MetaNavBar.Logout.Click();
-        }
-
-        #endregion
+        public readonly ApplicationInfo ApplicationInfo;
+        public readonly Footer Footer;
+        public readonly LobbyNews LobbyNews;
+        public readonly LobbyMenu Menu;
+        public readonly MetaNavBar MetaNavBar;
+        public readonly NavigationBar NavigationBar;
+        public readonly ProcessTickets ProcessTickets;
+        public readonly QuickSearch QuickSearch;
+        public readonly RecentMassmutations RecentMassmutations;
+        public readonly RecentElements RecentElements;
 
         public LobbyView()
         {
             Menu = new LobbyMenu();
-            RecentElements = new RecentElements();
+            RecentElements=new RecentElements();
             RecentMassmutations = new RecentMassmutations();
             NavigationBar = new NavigationBar();
             Footer = new Footer();
@@ -49,6 +40,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common
         public IWebElement Headline
         {
             get { return WebDriver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
+        }
+
+        public void Logout()
+        {
+            MetaNavBar.Logout.Click();
         }
     }
 }

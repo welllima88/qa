@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu
     /// </summary>
     public class LobbyMenu : MenuObject
     {
-        public CustomerMenu Customer;
+        public readonly CustomerMenu Customer;
         public LocationMenu LocationMenu;
         public MassMutationMenu MassMutation;
         public SimCardMenu SimCard;

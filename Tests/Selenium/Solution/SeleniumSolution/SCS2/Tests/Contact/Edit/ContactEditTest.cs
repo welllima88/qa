@@ -73,7 +73,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             string email = _personView.Email;
 
             string po = _personView.Po;
-            string StreetNo = _personView.StreetNo;
+            string streetNo = _personView.StreetNo;
             string zip = _personView.Zip;
             string city = _personView.City;
 
@@ -120,7 +120,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             Assert.AreEqual(email, _personView.Email);
 
             Assert.AreEqual(po, _personView.Po);
-            Assert.AreEqual(StreetNo, _personView.StreetNo);
+            Assert.AreEqual(streetNo, _personView.StreetNo);
             Assert.AreEqual(zip, _personView.Zip);
             Assert.AreEqual(city, _personView.City);
             Assert.AreEqual(region, _personView.Region);

@@ -23,7 +23,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer
         public string Guid
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.GUID)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public string CashIntegrator

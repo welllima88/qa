@@ -12,11 +12,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.SimCard
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
-        public IWebElement CancelButton
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[name='cancel']")); }
-        }
-
         #region ISimCardElement Members
 
         public string NetProvider

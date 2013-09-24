@@ -65,7 +65,6 @@
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
-    <Compile Include="Settings\ITestEnvironment.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
     <Compile Include="IWebElementAdapter.cs" />
     <Compile Include="IWebGuiElement.cs" />

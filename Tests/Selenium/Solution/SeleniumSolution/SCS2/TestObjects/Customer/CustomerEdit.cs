@@ -37,7 +37,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer
         public string Guid
         {
             get { throw new NotSupportedException("Not available in create mode"); }
-            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public string CustomerName
@@ -94,7 +93,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Customer
         public String Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
-            set { throw new NotImplementedException(); }
+            set { throw new NotSupportedException(); }
         }
 
         public string CategoryCode

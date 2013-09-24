@@ -7,11 +7,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.Article
 {
     public class ArticleView : WebObject, IArticle
     {
-        public IWebElement CancelButton
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[name='cancel']")); }
-        }
-
         public IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }

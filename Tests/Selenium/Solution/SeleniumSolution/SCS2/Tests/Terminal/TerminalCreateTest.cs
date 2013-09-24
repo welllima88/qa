@@ -61,9 +61,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         public void CreateTerminalMinimalAndSave()
         {
             _customerMenu.TerminalCreate.Click();
-            _terminalCreate.TerminalChooser.TerminalType = "xentissimo";
-            _terminalCreate.TerminalChooser.TerminalSubType = "mobile";
-            _terminalCreate.TerminalChooser.NetType = "WLAN";
+
             _terminalCreate.TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
 
             _terminalCreate.TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
@@ -93,9 +91,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         {
             _customerMenu.TerminalCreate.Click();
 
-            _terminalCreate.TerminalChooser.TerminalType = "xentissimo";
-            _terminalCreate.TerminalChooser.TerminalSubType = "mobile";
-            _terminalCreate.TerminalChooser.NetType = "WLAN";
             _terminalCreate.TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
 
             _terminalCreate.TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
@@ -152,9 +147,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         {
             _customerMenu.TerminalCreate.Click();
 
-            _terminalCreate.TerminalChooser.TerminalType = "yomani";
-            _terminalCreate.TerminalChooser.TerminalSubType = "AUTONOM";
-            _terminalCreate.TerminalChooser.NetType = "TCPIP";
             _terminalCreate.TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (IP)";
 
             _terminalCreate.TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
