@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://gateint.telekurs.ch/zebrac-qa-l/" />
+<title>Standort bearbeiten</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Standort bearbeiten</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{(new Date()).getTime()}</td>
+	<td>DateTime</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=LocationData_Address_SBSDebitNumber</td>
+	<td>SBSDebitorNr</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=LocationData_Address_SBSAddressNumber</td>
+	<td>SBSAdressNr</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=LocationData_LocationGUID</td>
+	<td>GUID</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=Location_EP2MerchantId</td>
+	<td>ep2MerchantId</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href*='/Location/Edit?']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_LocationName</td>
+	<td>Standort Firma SELE-AUTO B ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationGUID</td>
+	<td>regexp:([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationGUID</td>
+	<td>${GUID}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_SapNumber</td>
+	<td>SAPNRBB</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSDebitNumber</td>
+	<td>regexp:[0-9]{1,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSDebitNumber</td>
+	<td>${SBSDebitorNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSAddressNumber</td>
+	<td>regexp:[0-9]{0,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSAddressNumber</td>
+	<td>${SBSAdressNr}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_AddressAddition</td>
+	<td>Zusatz 2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Street</td>
+	<td>Strasse Nr 2b-c</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_PO</td>
+	<td>PF222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_ZIP</td>
+	<td>55555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_City</td>
+	<td>Dort-Ort</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Region</td>
+	<td>Beach</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=LocationData_LanguageId</td>
+	<td>Spanisch [es]</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=LocationData_CountryId</td>
+	<td>Spanien [ES]</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Telephone</td>
+	<td>1111111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Mobile</td>
+	<td>22222222222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Fax</td>
+	<td>333333333333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Email</td>
+	<td>scs-test@six-group.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=LocationData_Web</td>
+	<td>six-group.com/de</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='content']/form/div/div[13]/div[2]</td>
+	<td>regexp:[a-zA-Z0-9]{0,7}[0-9]{0,8}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//td[@id='content']/form/div/div[13]/div[2]</td>
+	<td>${ep2MerchantId}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@class=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<!---->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Datensatz wird synchronisiert*!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationName</td>
+	<td>Standort Firma SELE-AUTO B ${DateTime}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationGUID</td>
+	<td>regexp:([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationGUID</td>
+	<td>${GUID}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSDebitNumber</td>
+	<td>regexp:[0-9]{1,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSDebitNumber</td>
+	<td>${SBSDebitorNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSAddressNumber</td>
+	<td>regexp:[0-9]{0,7}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Address_SBSAddressNumber</td>
+	<td>${SBSAdressNr}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_SapNumber</td>
+	<td>SAPNRBB</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_AddressAddition</td>
+	<td>Zusatz 2</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Street</td>
+	<td>Strasse Nr 2b-c</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_PO</td>
+	<td>PF222</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_ZIP</td>
+	<td>55555</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_City</td>
+	<td>Dort-Ort</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Region</td>
+	<td>Beach</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LanguageId</td>
+	<td>Spanish [es]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_CountryId</td>
+	<td>Spanien [ES]</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Telephone</td>
+	<td>1111111111</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Mobile</td>
+	<td>22222222222</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Fax</td>
+	<td>333333333333</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Email</td>
+	<td>scs-test@six-group.com/de</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_Web</td>
+	<td>six-group.com/de</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=Location_EP2MerchantId</td>
+	<td>regexp:[a-zA-Z0-9]{0,7}[0-9]{0,8}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=Location_EP2MerchantId</td>
+	<td>${ep2MerchantId}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_AgencyId</td>
+	<td>D01 Key Account</td>
+</tr>
+<tr>
+	<td>verifyTable</td>
+	<td>id=tableStructure.4.2</td>
+	<td>regexp:.*[0-9]+: Standort Firma SELE-AUTO B ${DateTime}, Strasse Nr 2b-c, 55555, Dort-Ort Firmenname<br /> Standort Firma SELE-AUTO B ${DateTime}<br /> <br /> GUID des Standortes<br /> ([\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12})<br /> <br /> Debitor Nr.<br /> [0-9]+<br /> SAP-Nummer<br /> SAPNRBB<br /> <br /> SBS Adressnr.<br /> [0-9]*<br /> <br /> Adresszusatz<br /> Zusatz 2<br /> Telefon<br /> 1111111111<br /> <br /> Strasse / Nr<br /> Strasse Nr 2b-c<br /> Mobiltelefon<br /> 22222222222<br /> <br /> Postfach<br /> PF222<br /> Fax<br /> 333333333333<br /> <br /> PLZ<br /> 55555<br /> Email<br /> scs-test@six-group.com/de<br /> <br /> Ort<br /> Dort-Ort<br /> Web<br /> six-group.com/de<br /> <br /> Region<br /> Beach<br /> <br /> Land<br /> Spain [ES]<br /> Sprache<br /> Spanish [es]<br /> <br /> EP2 Händler Nummer<br /> [a-zA-Z0-9]{0,7}[0-9]{0,8}<br /> <br /> Agentur<br /> D01 Key Account</td>
+</tr>
+<!---->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_rptMainMenu_ctl00_hplMainMenu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td>*Standort Firma SELE-AUTO B ${DateTime}*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_bodyContentPlaceHolder_rptElementHistory_ctl00_hplElementHistory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=LocationData_LocationName</td>
+	<td>Standort Firma SELE-AUTO B ${DateTime}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
