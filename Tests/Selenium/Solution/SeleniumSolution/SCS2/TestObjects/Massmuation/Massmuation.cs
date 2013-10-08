@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Massmuation
     {
         public string Title
         {
-            get { return WebDriver.FindElement(By.XPath("//span[@id='ctl00_bodyContentPlaceHolder_lblMainTitle']/h1")).Text; }
+            get { return WebDriver.FindElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblMainTitle>h1")).Text; }
         }
 
         public string Description
