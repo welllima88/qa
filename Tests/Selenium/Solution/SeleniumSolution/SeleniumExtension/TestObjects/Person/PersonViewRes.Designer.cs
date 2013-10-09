@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person {
-    using System;
-    
-    
+namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

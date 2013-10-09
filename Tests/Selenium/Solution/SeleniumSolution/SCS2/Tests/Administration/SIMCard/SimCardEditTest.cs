@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
 using SIX.SCS.QA.Selenium.Extension.Properties;

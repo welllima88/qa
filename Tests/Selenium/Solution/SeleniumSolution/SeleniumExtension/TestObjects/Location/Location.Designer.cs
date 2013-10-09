@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location {
-    using System;
-    
-    
+namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

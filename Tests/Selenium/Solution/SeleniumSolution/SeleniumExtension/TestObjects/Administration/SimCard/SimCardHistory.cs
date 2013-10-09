@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {
-    internal class SimCardHistory : WebObject
+    public class SimCardHistory : WebObject
     {
         private ReadOnlyCollection<IWebElement> HistoryElements
         {

@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {
-    internal class SimCardElementView : WebObject, ISimCardElement
+    public class SimCardElementView : WebObject, ISimCardElement
     {
         #region ISimCardElement Members
 
