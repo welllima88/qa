@@ -5,7 +5,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         protected MenuObject()
         {
             // "//td[@id='leftHandMenu']/span[@id=\"ctl00_trvNavigation\"]/descendant::";
-            Prefix = Menu.Prefix;
+            Prefix = MenuRes.Prefix;
         }
     }
 }

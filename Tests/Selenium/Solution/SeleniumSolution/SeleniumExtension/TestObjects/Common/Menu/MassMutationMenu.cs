@@ -6,37 +6,37 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
     {
         public IWebElement CustomerCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.MassMutationMenu_CustomerCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_CustomerCreate)); }
         }
 
         public IWebElement LocationCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.MassMutationMenu_LocationCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_LocationCreate)); }
         }
 
         public IWebElement TerminalCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.MassMutationMenu_TerminalCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_TerminalCreate)); }
         }
 
         public IWebElement ContractCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.MassMutationMenu_ContractCreate)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_ContractCreate)); }
         }
 
         public IWebElement BusinessTemplateMigrate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.MassMutationMenu_BusinessTemplateMigrate)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_BusinessTemplateMigrate)); }
         }
 
         public IWebElement AcquirerChange
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.AcquirerChange)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.AcquirerChange)); }
         }
 
         public IWebElement SimCardManage
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.SimCardManagement)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
         }
     }
 }

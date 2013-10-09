@@ -166,10 +166,6 @@
     <Folder Include="TestData\dev\" />
     <Folder Include="TestData\qaK\" />
     <Folder Include="TestData\qaL\" />
-    <Folder Include="TestObjects\Administration\TerminalReleases\" />
-    <Folder Include="TestObjects\Common\Navigation\" />
-    <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
-    <Folder Include="TestObjects\Terminal\Dashboard\Tree\" />
     <Folder Include="Tests\Feedback\" />
     <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />

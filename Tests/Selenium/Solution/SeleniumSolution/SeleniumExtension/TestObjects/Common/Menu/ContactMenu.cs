@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Menu.ContactMenu_Contact));
+                        By.CssSelector(MenuRes.ContactMenu_Contact));
             }
         }
 
@@ -20,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Menu.ContactMenu_ContactEdit));
+                        By.CssSelector(MenuRes.ContactMenu_ContactEdit));
             }
         }
     }

@@ -16,42 +16,42 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 
         public IWebElement GklpBlock
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_GklpBlock)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_GklpBlock)); }
         }
 
         public IWebElement SetFastInitFlag
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_SetFastInitFlag)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_SetFastInitFlag)); }
         }
 
         public IWebElement ResetComAdresses
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_ResetComAdresses)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_ResetComAdresses)); }
         }
 
         public IWebElement TerminalEvents
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_TerminalEvents)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_TerminalEvents)); }
         }
 
         public IWebElement FoMessages
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_FoMessages)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_FoMessages)); }
         }
 
         public IWebElement FoQueries
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_FoQueries)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_FoQueries)); }
         }
 
         public IWebElement Ep2TraceLog
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_Ep2TraceLog)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_Ep2TraceLog)); }
         }
 
         public IWebElement SendOverview
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.TerminalAnalysisMenu_SendOverview)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_SendOverview)); }
         }
     }
 }

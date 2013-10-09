@@ -6,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
     {
         public IWebElement SimCardManagement
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.SimCardManagement)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
         }
     }
 }

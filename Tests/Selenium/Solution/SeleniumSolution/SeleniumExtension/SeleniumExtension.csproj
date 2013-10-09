@@ -121,8 +121,8 @@
     <Compile Include="TestObjects\Common\Menu\LobbyMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\LocationMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\MassMutationMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
-      <DependentUpon>Menu.resx</DependentUpon>
+    <Compile Include="TestObjects\Common\Menu\MenuRes.Designer.cs">
+      <DependentUpon>MenuRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -253,9 +253,9 @@
       <LastGenOutput>Common.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
+    <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+      <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">

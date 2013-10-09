@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 
         public IWebElement Lobby
         {
-            get { return WebDriver.FindElement(By.CssSelector(Menu.LobbyMenu_Lobby)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
         }
     }
 }
