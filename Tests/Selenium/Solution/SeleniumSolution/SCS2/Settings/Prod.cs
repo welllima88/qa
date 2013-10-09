@@ -1,4 +1,4 @@
-﻿using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Properties;
+﻿using System;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Properties;
@@ -10,8 +10,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings
     {
         public Prod()
         {
-            BaseUrl = Scs2Res.WES_Production;
-            BrowserProfileName = DriverRes.FirefoxProfile_Plain;
+            BaseUrl = new Uri(Scs2Res.WES_Production);
+            BrowserProfileName = Scs2Res.FirefoxProfile_Plain;
             Application = new LobbyView();
             Authentication = new SecurIdAuthentication("user", "pass", Scs2Res.mandant_prod, "securId");
             SeleniumConfig = new SeleniumConfig

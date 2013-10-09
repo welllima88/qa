@@ -1,4 +1,4 @@
-﻿using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Properties;
+﻿using System;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Properties;
@@ -10,8 +10,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings
     {
         public QaL()
         {
-            BaseUrl = Scs2Res.WES_QA_L;
-            BrowserProfileName = DriverRes.FirefoxProfile_Certificate;
+            BaseUrl = new Uri(Scs2Res.WES_QA_L);
+            BrowserProfileName = Scs2Res.FirefoxProfile_Certificate;
             Application = new LobbyView();
             Authentication = new CertificateAuthentication(Scs2Res.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
