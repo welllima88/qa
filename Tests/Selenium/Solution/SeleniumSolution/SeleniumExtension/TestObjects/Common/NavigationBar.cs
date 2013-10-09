@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Common.NavigationBar_Lobby));
+                        By.CssSelector(CommonRes.NavigationBar_Lobby));
             }
         }
 
@@ -20,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Common.NavigationBar_Administration));
+                        By.CssSelector(CommonRes.NavigationBar_Administration));
             }
         }
 
@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Common.NavigationBar_Reporting));
+                        By.CssSelector(CommonRes.NavigationBar_Reporting));
             }
         }
 
@@ -40,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Common.NavigationBar_MoreMenu));
+                        By.CssSelector(CommonRes.NavigationBar_MoreMenu));
             }
         }
 
@@ -61,7 +61,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public IWebElement Current
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.NavigationBar_Current)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.NavigationBar_Current)); }
         }
     }
 }

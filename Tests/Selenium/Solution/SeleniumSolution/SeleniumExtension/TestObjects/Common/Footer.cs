@@ -6,22 +6,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public IWebElement Feedback
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Feedback)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Feedback)); }
         }
 
         public IWebElement Disclaimer
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Disclaimer)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
         }
 
         public IWebElement Copyright
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_Copyright)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright)); }
         }
 
         public IWebElement PrintPage
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Footer_PrintPage)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_PrintPage)); }
         }
 
         public IWebElement ScrollUp
@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(Common.Footer_ScrollUp));
+                    WebDriver.FindElement(By.CssSelector(CommonRes.Footer_ScrollUp));
             }
         }
     }

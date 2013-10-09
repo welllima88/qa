@@ -8,12 +8,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public String Header
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.RecentMassmutations_Header)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentMassmutations_Header)).Text; }
         }
 
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector(Common.RecentMassmutations_Elements)); }
+            get { return WebDriver.FindElements(By.CssSelector(CommonRes.RecentMassmutations_Elements)); }
         }
 
         public IWebElement MostRecent

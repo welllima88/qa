@@ -6,17 +6,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public IWebElement Oldest
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.ProcessTickets_Oldest)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Oldest)); }
         }
 
         public IWebElement Newest
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.ProcessTickets_Newest)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Newest)); }
         }
 
         public IWebElement Container
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.ProcessTickets_Container)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Container)); }
         }
     }
 }

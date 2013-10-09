@@ -6,17 +6,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public IWebElement Logout
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.MetaNavBar_Logout)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
         }
 
         public IWebElement User
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.MetaNavBar_User)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_User)); }
         }
 
         public IWebElement Languages
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.MetaNavBar_Languages)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
         }
 
         public IWebElement Language(string language)

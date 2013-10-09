@@ -107,8 +107,8 @@
     <Compile Include="TestObjects\Brand\ContractSelect.cs" />
     <Compile Include="TestObjects\Brand\ContractView.cs" />
     <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
-    <Compile Include="TestObjects\Common\Common.Designer.cs">
-      <DependentUpon>Common.resx</DependentUpon>
+    <Compile Include="TestObjects\Common\CommonRes.Designer.cs">
+      <DependentUpon>CommonRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -248,9 +248,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Common\Common.resx">
+    <EmbeddedResource Include="TestObjects\Common\CommonRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+      <LastGenOutput>CommonRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">

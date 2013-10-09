@@ -6,12 +6,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public IWebElement SearchField
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.QuickSearch_SearchField)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)); }
         }
 
         public IWebElement SearchButton
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.QuickSearch_SearchButton)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchButton)); }
         }
     }
 }

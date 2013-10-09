@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public ReadOnlyCollection<IWebElement> FormAlertElements
         {
-            get { return WebDriver.FindElements(By.CssSelector(Common.FormAlert_FormAlertElements)); }
+            get { return WebDriver.FindElements(By.CssSelector(CommonRes.FormAlert_FormAlertElements)); }
         }
     }
 }

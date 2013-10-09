@@ -33,12 +33,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public IWebElement CompanyLogo
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Lobby_CompanyLogo)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Lobby_CompanyLogo)); }
         }
 
         public IWebElement Headline
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.Lobby_Headline)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Lobby_Headline)); }
         }
 
         public void Logout()

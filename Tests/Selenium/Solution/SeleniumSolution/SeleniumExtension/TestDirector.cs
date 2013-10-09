@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// </summary>
         protected void LoginWebApplication()
         {
-            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsolutePath;
+            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
                 // essential to avoid constructor actions
             TestEnvironment.Authentication.Login();
         }

@@ -7,12 +7,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public ReadOnlyCollection<IWebElement> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector(Common.RecentElements_Elements)); }
+            get { return WebDriver.FindElements(By.CssSelector(CommonRes.RecentElements_Elements)); }
         }
 
         public IWebElement MostRecent
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.RecentElements_MostRecent)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
         }
     }
 }

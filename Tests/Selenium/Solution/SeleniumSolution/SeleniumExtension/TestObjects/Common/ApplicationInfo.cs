@@ -6,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public IWebElement ApplicationName
         {
-            get { return WebDriver.FindElement(By.CssSelector(Common.ApplicationInfo_ApplicationName)); }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ApplicationInfo_ApplicationName)); }
         }
 
         public IWebElement Environment
@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(Common.ApplicationInfo_Environment));
+                        By.CssSelector(CommonRes.ApplicationInfo_Environment));
             }
         }
     }

@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 
         public static void Navigate(string urlSuffix)
         {
-            TestDirector.WebDriver.Url = new Uri(TestEnvironment.BaseUrl, urlSuffix).AbsolutePath;
+            TestDirector.WebDriver.Url = new Uri(TestEnvironment.BaseUrl, urlSuffix).AbsoluteUri;
         }
 
         public static long GenerateTestId()
