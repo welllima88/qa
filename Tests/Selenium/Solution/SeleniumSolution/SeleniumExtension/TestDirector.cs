@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// <summary>
         ///     Execute the required authentication procedure to fulfill the basic precondition of testing.
         /// </summary>
-        protected void LoginWebApplication()
+        public void Login()
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
                 // essential to avoid constructor actions
@@ -47,8 +47,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         {
             CreateFirefoxWebDriverInstance(TestEnvironment.BrowserProfileName);
             ConfigureTimeouts();
-            LoginWebApplication();
-
             return WebDriver;
         }
 
@@ -67,8 +65,12 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public void ShutDownBrowser()
         {
-            TestEnvironment.Application.Logout();
             WebObject.WebDriver.Quit();
+        }
+
+        public void Logout()
+        {
+            TestEnvironment.Application.Logout();
         }
     }
 }
