@@ -1,12 +1,10 @@
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 
 namespace SIX.SCS.QA.Selenium.Extension
 {
-    [TestClass]
     public class TestDirector
     {
         public IWebDriverAdapter WebDriver;
@@ -40,7 +38,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         /// </summary>
         protected void LoginWebApplication()
         {
-            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsolutePath; // essential to avoid constructor actions
+            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsolutePath;
+                // essential to avoid constructor actions
             TestEnvironment.Authentication.Login();
         }
 
