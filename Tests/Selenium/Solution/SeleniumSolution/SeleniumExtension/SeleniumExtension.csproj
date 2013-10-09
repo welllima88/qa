@@ -80,10 +80,10 @@
     <Compile Include="NotCheckableElementException.cs" />
     <Compile Include="NotSelectableElementException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\DriverRes.Designer.cs">
+    <Compile Include="Properties\Scs2Res.Designer.cs">
+      <DependentUpon>Scs2Res.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DriverRes.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings\SeleniumConfig.cs" />
     <Compile Include="SuggestorWebElementAdapter.cs" />
@@ -100,13 +100,12 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TestEntities\" />
+    <Folder Include="Selenium\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\DriverRes.resx">
+    <EmbeddedResource Include="Properties\Scs2Res.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>DriverRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GoodToKnow\DataSource.txt" />
+    <Content Include="GoodToKnow\RegReplace.txt" />
+    <Content Include="GoodToKnow\TryLocator.txt" />
+    <Content Include="GoodToKnow\WebLinks.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
