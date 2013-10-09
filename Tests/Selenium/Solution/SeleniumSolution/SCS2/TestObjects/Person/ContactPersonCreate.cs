@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person
 {
-    public class PersonCreate : WebObject, IPerson
+    public class ContactPersonCreate : WebObject, IContactPerson
     {
         #region IContactCreate Members
 

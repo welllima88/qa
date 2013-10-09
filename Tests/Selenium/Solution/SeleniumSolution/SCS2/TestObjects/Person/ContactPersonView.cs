@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person
 {
-    public class PersonView : WebObject, IPerson
+    public class ContactPersonView : WebObject, IContactPerson
     {
         public IWebElement EditButton
         {
