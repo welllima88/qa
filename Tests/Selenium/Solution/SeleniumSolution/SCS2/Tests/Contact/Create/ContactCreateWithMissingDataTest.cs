@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMissingDataTest
     {
-        private static PersonCreate _personCreate;
+        private static ContactPersonCreate _contactPersonCreate;
         private static FormAlert _formAlert;
         private static CustomerMenu _customerMenu;
 
@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         public static void ClassInit(TestContext testContext)
         {
             _customerMenu = new CustomerMenu();
-            _personCreate = new PersonCreate();
+            _contactPersonCreate = new ContactPersonCreate();
             _formAlert = new FormAlert();
         }
 
@@ -30,21 +30,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.Salutation = "Herr";
-            _personCreate.FirstName = "Marc";
-            _personCreate.Name = "Siegmund SYR AUTO";
-            _personCreate.Language = "de";
-            _personCreate.Telephone = "+41 58 399 6237 - 1";
-            _personCreate.Mobile = "+41 58 399 6237 - 2";
-            _personCreate.Fax = "+41 58 399 6237 - 3";
-            _personCreate.Email = "contact@six-group.com";
-            _personCreate.StreetNo = "Kontakt-Weg 1";
-            _personCreate.Po = "POC";
-            _personCreate.Zip = "55555";
-            _personCreate.City = "Berlin";
-            _personCreate.Region = "Mitte";
-            _personCreate.Country = "DE";
-            _personCreate.AddressAddition = "Zusatz1";
+            _contactPersonCreate.Salutation = "Herr";
+            _contactPersonCreate.FirstName = "Marc";
+            _contactPersonCreate.Name = "Siegmund SYR AUTO";
+            _contactPersonCreate.Language = "de";
+            _contactPersonCreate.Telephone = "+41 58 399 6237 - 1";
+            _contactPersonCreate.Mobile = "+41 58 399 6237 - 2";
+            _contactPersonCreate.Fax = "+41 58 399 6237 - 3";
+            _contactPersonCreate.Email = "contact@six-group.com";
+            _contactPersonCreate.StreetNo = "Kontakt-Weg 1";
+            _contactPersonCreate.Po = "POC";
+            _contactPersonCreate.Zip = "55555";
+            _contactPersonCreate.City = "Berlin";
+            _contactPersonCreate.Region = "Mitte";
+            _contactPersonCreate.Country = "DE";
+            _contactPersonCreate.AddressAddition = "Zusatz1";
         }
 
         [TestMethod]
@@ -52,9 +52,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.FirstName = "";
+            _contactPersonCreate.FirstName = "";
 
-            _personCreate.SaveButton.Click();
+            _contactPersonCreate.SaveButton.Click();
             _formAlerts = _formAlert.FormAlertList;
 
             Assert.AreEqual(1, _formAlerts.Count);
@@ -66,9 +66,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.Name = "";
+            _contactPersonCreate.Name = "";
 
-            _personCreate.SaveButton.Click();
+            _contactPersonCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
@@ -80,9 +80,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.StreetNo = "";
+            _contactPersonCreate.StreetNo = "";
 
-            _personCreate.SaveButton.Click();
+            _contactPersonCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
@@ -94,9 +94,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.City = "";
+            _contactPersonCreate.City = "";
 
-            _personCreate.SaveButton.Click();
+            _contactPersonCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
@@ -108,9 +108,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             _customerMenu.ContactCreate.Click();
 
-            _personCreate.Zip = "";
+            _contactPersonCreate.Zip = "";
 
-            _personCreate.SaveButton.Click();
+            _contactPersonCreate.SaveButton.Click();
 
             _formAlerts = _formAlert.FormAlertList;
             Assert.AreEqual(1, _formAlerts.Count);
