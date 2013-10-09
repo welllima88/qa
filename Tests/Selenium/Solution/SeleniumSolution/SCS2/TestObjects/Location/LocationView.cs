@@ -17,6 +17,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location
         public string CompanyName
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.CompanyName)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Guid
@@ -67,11 +68,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location
         public string Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Ep2MerchantId)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string SapNumber
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.SapNumber)).Text; }
+            set { throw new NotSupportedException(); }
         }
 
         public string Po

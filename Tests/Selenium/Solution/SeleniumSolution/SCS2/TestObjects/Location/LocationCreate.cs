@@ -27,7 +27,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location
 
         public string Ep2MerchantId
         {
-            get { throw new NotSupportedException(); }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
 
         public string SbsDebitNumber
