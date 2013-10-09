@@ -146,7 +146,7 @@
     <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
-    <Compile Include="Tests\Terminal\OnlineFinancialAdviceValidation.cs" />
+    <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidation.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\FixTerminalInfoTests.cs" />
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
