@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 
         public static void Navigate(string urlSuffix)
         {
-            TestDirector.WebDriver.Url = TestEnvironment.BaseUrl + urlSuffix;
+            TestDirector.WebDriver.Url = new Uri(TestEnvironment.BaseUrl, urlSuffix).AbsolutePath;
         }
 
         public static long GenerateTestId()
@@ -35,6 +35,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         public static void StopTestDirector()
         {
             TestDirector.ShutDownBrowser();
+        }
+
+        public static void Navigate()
+        {
+            Navigate("");
         }
     }
 }
