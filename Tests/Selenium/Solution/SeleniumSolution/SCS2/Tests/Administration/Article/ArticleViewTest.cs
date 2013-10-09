@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.Article;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Article
 {

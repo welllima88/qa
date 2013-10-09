@@ -1,4 +1,5 @@
 using System;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {

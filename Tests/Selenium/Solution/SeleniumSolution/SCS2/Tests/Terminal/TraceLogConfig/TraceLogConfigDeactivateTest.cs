@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.TraceLogConfig;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
 {

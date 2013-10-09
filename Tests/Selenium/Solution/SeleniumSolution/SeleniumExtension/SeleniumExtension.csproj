@@ -90,6 +90,146 @@
     <Compile Include="TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
+    <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
+    <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SIMCardCreate.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SIMCardEdit.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardElementView.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardListView.cs" />
+    <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />
+    <Compile Include="TestObjects\Administration\SoftwareExchange\SoftwareExchangeCreate.cs" />
+    <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
+    <Compile Include="TestObjects\Brand\ContractCreate.cs" />
+    <Compile Include="TestObjects\Brand\ContractEdit.cs" />
+    <Compile Include="TestObjects\Brand\ContractSelect.cs" />
+    <Compile Include="TestObjects\Brand\ContractView.cs" />
+    <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
+    <Compile Include="TestObjects\Common\Common.Designer.cs">
+      <DependentUpon>Common.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Common\Footer.cs" />
+    <Compile Include="TestObjects\Common\FormAlert.cs" />
+    <Compile Include="TestObjects\Common\LobbyNews.cs" />
+    <Compile Include="TestObjects\Common\LobbyView.cs" />
+    <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\CustomerMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\LobbyMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\LocationMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\MassMutationMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\Menu.Designer.cs">
+      <DependentUpon>Menu.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Common\Menu\MenuObject.cs" />
+    <Compile Include="TestObjects\Common\Menu\SimCardMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TerminalAnalysisMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
+    <Compile Include="TestObjects\Common\MetaNavBar.cs" />
+    <Compile Include="TestObjects\Common\NavigationBar.cs" />
+    <Compile Include="TestObjects\Common\ProcessTickets.cs" />
+    <Compile Include="TestObjects\Common\QuickSearch.cs" />
+    <Compile Include="TestObjects\Common\RecentElements.cs" />
+    <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
+    <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
+    <Compile Include="TestObjects\Customer\CustomerDeactivation.cs" />
+    <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
+    <Compile Include="TestObjects\Customer\CustomerRes.Designer.cs">
+      <DependentUpon>CustomerRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Customer\CustomerView.cs" />
+    <Compile Include="TestObjects\Definitions\IAdress.cs" />
+    <Compile Include="TestObjects\Definitions\IAgency.cs" />
+    <Compile Include="TestObjects\Definitions\IArticle.cs" />
+    <Compile Include="TestObjects\Definitions\IContact.cs" />
+    <Compile Include="TestObjects\Definitions\IContactPerson.cs" />
+    <Compile Include="TestObjects\Definitions\ICustomer.cs" />
+    <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
+    <Compile Include="TestObjects\Definitions\ILocation.cs" />
+    <Compile Include="TestObjects\Definitions\INetType.cs" />
+    <Compile Include="TestObjects\Definitions\ISimCardElement.cs" />
+    <Compile Include="TestObjects\Definitions\ISupplier.cs" />
+    <Compile Include="TestObjects\Definitions\ITerminalType.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
+    <Compile Include="TestObjects\Location\BillingAdressView.cs" />
+    <Compile Include="TestObjects\Location\Location.Designer.cs">
+      <DependentUpon>Location.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Location\LocationCreate.cs" />
+    <Compile Include="TestObjects\Location\LocationEdit.cs" />
+    <Compile Include="TestObjects\Location\LocationView.cs" />
+    <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
+    <Compile Include="TestObjects\Massmuation\Massmuation.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonView.cs" />
+    <Compile Include="TestObjects\Person\PersonCreateRes.Designer.cs">
+      <DependentUpon>PersonCreateRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Person\PersonEditRes.Designer.cs">
+      <DependentUpon>PersonEditRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Person\PersonViewRes.Designer.cs">
+      <DependentUpon>PersonViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\SearchResult\AbstractSearchResult.cs" />
+    <Compile Include="TestObjects\SearchResult\CustomerResult.cs" />
+    <Compile Include="TestObjects\SearchResult\LocationResult.cs" />
+    <Compile Include="TestObjects\SearchResult\MpdResult.cs" />
+    <Compile Include="TestObjects\SearchResult\SimCardResult.cs" />
+    <Compile Include="TestObjects\SearchResult\TerminalResult.cs" />
+    <Compile Include="TestObjects\SearchResult\UserResult.cs" />
+    <Compile Include="TestObjects\Terminal\Article.cs" />
+    <Compile Include="TestObjects\Terminal\Base.cs" />
+    <Compile Include="TestObjects\Terminal\Brands.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Acquirer.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandContract.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Pms.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Brand\ServiceCenter.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\ContactsPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TestObjects\Terminal\Dashboard\FixInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\SalesContractPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TechnicalViewPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalDashboard.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
+    <Compile Include="TestObjects\Terminal\Functionbits.cs" />
+    <Compile Include="TestObjects\Terminal\Parameter.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalView.cs" />
+    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
+    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="WebObject.cs" />
     <Compile Include="IWebObject.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
@@ -107,6 +247,41 @@
     <EmbeddedResource Include="Properties\Scs2Res.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Common\Common.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Common\Menu\Menu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Location\Location.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Location.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Person\PersonCreateRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonCreateRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Person\PersonEditRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Person\PersonViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Terminal\Dashboard\Dashboard.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

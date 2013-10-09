@@ -7,6 +7,9 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Location;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 {

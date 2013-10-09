@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Terminal.EventLog;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.EventLog;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.EventLog
 {

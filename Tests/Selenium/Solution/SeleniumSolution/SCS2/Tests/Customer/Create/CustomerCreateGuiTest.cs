@@ -2,6 +2,8 @@
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {

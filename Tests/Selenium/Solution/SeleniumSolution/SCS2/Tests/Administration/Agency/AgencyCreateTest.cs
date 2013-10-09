@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Administration.Agency;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
 {

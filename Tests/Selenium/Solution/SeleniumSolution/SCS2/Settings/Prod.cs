@@ -3,6 +3,7 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Properties;
 using SIX.SCS.QA.Selenium.Extension.Settings;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings
 {

@@ -4,6 +4,9 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Person;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 {
