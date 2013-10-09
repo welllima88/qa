@@ -221,6 +221,7 @@
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
+    <Compile Include="TestObjects\Terminal\FinancialConfig\FinancialConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
     <Compile Include="TestObjects\Terminal\Parameter.cs" />
     <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />

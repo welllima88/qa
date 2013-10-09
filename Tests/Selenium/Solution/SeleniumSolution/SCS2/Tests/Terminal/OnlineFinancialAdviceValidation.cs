@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.FinancialConfig;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
 {
@@ -9,12 +9,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
     public class OnlineFinancialAdviceValidation
     {
         private static FormAlert _formAlert;
+        private static FinancialConfigEdit _financialConfig;
         private List<string> _formAlerts;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             _formAlert = new FormAlert();
+            _financialConfig = new FinancialConfigEdit();
         }
 
         [TestInitialize]
@@ -25,7 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         }
 
         [TestMethod]
-        public void CharactersOnlyNotAllowed()
+        public void CharactersNotAllowed()
         {
             SetOnlineFinancialAndSave("ab");
             _formAlerts = _formAlert.FormAlertList;
@@ -66,14 +68,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
             Assert.AreEqual(1, _formAlerts.Count);
         }
 
-        private static void SetOnlineFinancialAndSave(string value)
+        private static void SetOnlineFinancialAndSave(string queueSize)
         {
-            TestLauncher.TestDirector.WebDriver.FindAdaptedElement(
-                By.CssSelector(
-                    "#ctl00_bodyContentPlaceHolder_tbcTerminalData_tpFinancialconfig_tpFinancialconfigPropertyMaxFinAdvQueueSize_valueText"))
-                        .TypeText(value);
-            TestLauncher.TestDirector.WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave"))
-                        .Click();
+            _financialConfig.AdviceQueueSize = queueSize;
         }
     }
 }
