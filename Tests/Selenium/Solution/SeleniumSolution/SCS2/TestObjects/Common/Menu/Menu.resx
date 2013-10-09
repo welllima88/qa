@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ContactMenu_Contact" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/Person/ContactPersonEdit.aspx?PageMode=view&amp;PERSONID=']</value>
   </data>
   <data name="ContactMenu_ContactEdit" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='/Pages/Person/ContactPersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
   </data>
   <data name="CustomerMenu_Customer" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=']</value>
@@ -187,7 +187,7 @@
     <value>td#leftHandMenu a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_ContactCreate" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='Person/ContactPersonEdit.aspx?PageMode=new&amp;LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_LocationEdit" xml:space="preserve">
     <value>td#leftHandMenu a[href*='Location/Edit?LOCATIONID=']</value>

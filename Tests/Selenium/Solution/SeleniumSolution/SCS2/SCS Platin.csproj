@@ -95,6 +95,7 @@
       <DependentUpon>Menu.resx</DependentUpon>
     </Compile>
     <Compile Include="TestObjects\Common\ProcessTickets.cs" />
+    <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
     <Compile Include="TestObjects\Person\PersonEditRes.Designer.cs">
       <DependentUpon>PersonEditRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -132,9 +133,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Common.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestObjects\Person\PersonCreate.cs" />
-    <Compile Include="TestObjects\Person\PersonEdit.cs" />
-    <Compile Include="TestObjects\Person\PersonView.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
+    <Compile Include="TestObjects\Person\ContactPersonView.cs" />
     <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
     <Compile Include="TestObjects\Person\PersonViewRes.Designer.cs">
@@ -206,7 +207,7 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="TestObjects\Definitions\IPerson.cs" />
+    <Compile Include="TestObjects\Definitions\IContactPerson.cs" />
     <Compile Include="TestObjects\Definitions\ICustomer.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />
@@ -239,6 +240,7 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMissingDataTest.cs" />
+    <Compile Include="Properties\Urls.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditWithMinamalDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditKeepsDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithNoData.cs" />
@@ -281,6 +283,13 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateTest.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
     <Compile Include="Tests\Login\LoginTest.cs" />
+    <Compile Include="TestObjects\Massmuation\Massmuation.cs" />
+    <Compile Include="Tests\Massmutation\ContractMassmuationTest.cs" />
+    <Compile Include="Tests\Massmutation\BtMassmuationTest.cs" />
+    <Compile Include="Tests\Massmutation\TerminalMassmuationTest.cs" />
+    <Compile Include="Tests\Massmutation\AcquirerChangeTest.cs" />
+    <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
+    <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
     <Compile Include="Tests\Terminal\OnlineFinancialAdviceValidation.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
@@ -291,6 +300,7 @@
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigTest.cs" />
+    <Compile Include="Worklow\CustomerCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -307,6 +317,7 @@
     <Folder Include="TestObjects\Common\Navigation\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Merchant\" />
     <Folder Include="TestObjects\Terminal\Dashboard\Tree\" />
+    <Folder Include="Tests\Feedback\" />
     <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>

@@ -70,7 +70,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=view&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/ContactPersonEdit.aspx?PageMode=view&amp;PERSONID=&apos;].
         /// </summary>
         internal static string ContactMenu_Contact {
             get {
@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/PersonEdit.aspx?PageMode=edit&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/ContactPersonEdit.aspx?PageMode=edit&amp;PERSONID=&apos;].
         /// </summary>
         internal static string ContactMenu_ContactEdit {
             get {
@@ -268,7 +268,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/PersonEdit.aspx?PageMode=new&amp;LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/ContactPersonEdit.aspx?PageMode=new&amp;LOCATIONID=&apos;].
         /// </summary>
         internal static string LocationMenu_ContactCreate {
             get {
