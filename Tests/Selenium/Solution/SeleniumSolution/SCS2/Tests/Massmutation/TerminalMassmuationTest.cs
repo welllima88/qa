@@ -56,6 +56,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Terminal")]
         public void DownloadTemplate()
         {
+            //TODO Fails, until new deployed (old htmlid)
             Assert.AreEqual("Excel Vorlage herunterladen", _massmuation.DownloadTemplate);
         }
     }
