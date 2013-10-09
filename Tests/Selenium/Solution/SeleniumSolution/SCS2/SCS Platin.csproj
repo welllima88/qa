@@ -73,6 +73,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScsPlatinTestEnvironment.cs" />
     <Compile Include="TestLauncher.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyCreateTest.cs" />

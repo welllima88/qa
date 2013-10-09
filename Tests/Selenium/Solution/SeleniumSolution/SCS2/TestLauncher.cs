@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         public static void LaunchTestDirector(TestContext testContext)
         {
             TestDirector = new TestDirector();
-            TestEnvironment.PrepareForDev();
+            ScsPlatinTestEnvironment.PrepareForDev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
         }
