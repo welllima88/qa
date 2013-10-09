@@ -9,10 +9,6 @@ namespace SIX.SCS.QA.Selenium.Extension
     {
         public IWebDriverAdapter WebDriver;
 
-        public TestDirector(TestEnvironment testEnvironment)
-        {
-        }
-
         public string BaseUrl { get; private set; }
 
         private void CreateFirefoxWebDriverInstance(string profileName)

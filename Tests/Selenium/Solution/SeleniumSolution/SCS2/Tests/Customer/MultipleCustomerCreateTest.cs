@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Settings;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -75,7 +74,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
         public void EnterValidCustomerDataAndCancel()
         {
             // TODO: not Working
-            var tb = new TestDirector(new QaL());
+            var tb = new TestDirector();
             IWebDriverAdapter driver = tb.PrepareBrowser();
 
             var customerMenu = new CustomerMenu();

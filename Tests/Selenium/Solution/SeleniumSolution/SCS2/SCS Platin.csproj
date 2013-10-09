@@ -73,12 +73,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Settings\Local.cs" />
     <Compile Include="TestLauncher.cs" />
-    <Compile Include="Settings\Prod.cs" />
-    <Compile Include="Settings\QaK.cs" />
-    <Compile Include="Settings\QaL.cs" />
-    <Compile Include="Settings\Dev.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyCreateTest.cs" />
     <Compile Include="Tests\Administration\Article\ArticleViewTest.cs" />
