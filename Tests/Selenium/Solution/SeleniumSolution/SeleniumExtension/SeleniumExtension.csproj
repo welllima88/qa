@@ -95,6 +95,7 @@
     <Compile Include="TestRegExpPatterns.cs" />
     <Compile Include="WebDriverAdapter.cs" />
     <Compile Include="WebElementAdapter.cs" />
+    <Compile Include="Worklow\CustomerCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
