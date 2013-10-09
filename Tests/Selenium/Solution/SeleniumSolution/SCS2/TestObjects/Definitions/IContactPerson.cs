@@ -1,6 +1,9 @@
 ﻿namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestObjects.Definitions
 {
-    public interface IPerson : IAdress, IContact
+    /// <summary>
+    /// the contact person has adress and contact fields 
+    /// </summary>
+    public interface IContactPerson : IAdress, IContact
     {
         string FirstName { set; get; }
         string Name { set; get; }
