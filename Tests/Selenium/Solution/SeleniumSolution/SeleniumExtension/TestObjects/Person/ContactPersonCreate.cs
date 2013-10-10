@@ -1,14 +1,13 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
-    public class ContactPersonCreate : WebObject, IContactPerson
+    public class ContactPersonCreate : WebObject
     {
         #region IContactCreate Members
 
-        public string AddressAddition
+        public static string AddressAddition
         {
             set
             {
@@ -19,14 +18,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.AddressAddition)).Text; }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
-        public string CreateDate { get; private set; }
+        public static string CreateDate { get; private set; }
 
-        public string FirstName
+        public static string FirstName
         {
             set
             {
@@ -36,13 +35,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.FirstName)).Text; }
         }
 
-        public string Name
+        public static string Name
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Name)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Name)).Text; }
         }
 
-        public string Salutation
+        public static string Salutation
         {
             set
             {
@@ -52,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Salutation)).Text; }
         }
 
-        public string Country
+        public static string Country
         {
             set
             {
@@ -66,7 +65,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             }
         }
 
-        public string Language
+        public static string Language
         {
             set
             {
@@ -82,13 +81,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Telephone)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Telephone)).Text; }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             set
             {
@@ -98,13 +97,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Mobile)).Text; }
         }
 
-        public string Fax
+        public static string Fax
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Fax)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Fax)).Text; }
         }
 
-        public string Email
+        public static string Email
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Email)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Email)).Text; }
@@ -116,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set { throw new NotSupportedException(); }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
             set
             {
@@ -128,25 +127,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public string AdressAddition { get; set; }
 
-        public string Po
+        public static string Po
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Po)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Po)).Text; }
         }
 
-        public string Zip
+        public static string Zip
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Zip)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Zip)).Text; }
         }
 
-        public string City
+        public static string City
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.City)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.City)).Text; }
         }
 
-        public string Region
+        public static string Region
         {
             set
             {

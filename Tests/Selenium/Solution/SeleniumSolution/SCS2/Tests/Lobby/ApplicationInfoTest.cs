@@ -20,12 +20,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class ApplicationInfoTest
     {
-        private static LobbyView _lobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -48,14 +45,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestMethod]
         public void ApplicationName()
         {
-            Assert.IsTrue(_lobbyView.ApplicationInfo.ApplicationName.Displayed);
+            Assert.IsTrue(ApplicationInfo.ApplicationName.Displayed);
         }
 
         [TestCategory("LobbyCheck")]
         [TestMethod]
         public void Environment()
         {
-            Assert.IsTrue(_lobbyView.ApplicationInfo.Environment.Displayed);
+            Assert.IsTrue(ApplicationInfo.Environment.Displayed);
         }
     }
 }

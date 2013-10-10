@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
     {
         public CustomerCreator()
         {
-            var dt = DateTime.Now.Ticks; //timestamp for each test
+            long dt = DateTime.Now.Ticks; //timestamp for each test
 
             Supplier = "SIX Payment Services AG";
             SbsCurrency = "EUR";

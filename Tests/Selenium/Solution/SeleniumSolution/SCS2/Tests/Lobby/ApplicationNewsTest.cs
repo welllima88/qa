@@ -21,12 +21,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [Ignore]
     public class ApplicationNewsTest
     {
-        private static LobbyView _lobbyView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
+            LobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void ApplicationNews()
         {
-            Assert.IsTrue(_lobbyView.LobbyNews.NewsTitle.Displayed);
+            Assert.IsTrue(LobbyView.LobbyNews.NewsTitle.Displayed);
         }
     }
 }

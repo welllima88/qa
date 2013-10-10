@@ -1,19 +1,16 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {
-    public class SimCardEdit : WebObject, ISimCardElement
+    public class SimCardEdit : WebObject
     {
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
-        #region ISimCardElement Members
-
-        public string NetProvider
+        public static string NetProvider
         {
             get { throw new NotImplementedException(); }
             set
@@ -23,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string SimCardNumber
+        public static string SimCardNumber
         {
             get { throw new NotImplementedException(); }
             set
@@ -33,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string MobileNumber
+        public static string MobileNumber
         {
             get { throw new NotImplementedException(); }
             set
@@ -43,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string Pin
+        public static string Pin
         {
             get { throw new NotImplementedException(); }
             set
@@ -53,7 +50,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string Puk
+        public static string Puk
         {
             get { throw new NotImplementedException(); }
             set
@@ -63,7 +60,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public bool Status
+        public static bool Status
         {
             get { throw new NotImplementedException(); }
             set
@@ -73,7 +70,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string TerminalId
+        public static string TerminalId
         {
             get { throw new NotImplementedException(); }
             set
@@ -83,7 +80,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string Region
+        public static string Region
         {
             get { throw new NotImplementedException(); }
             set
@@ -93,7 +90,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public string Usage
+        public static string Usage
         {
             get { throw new NotImplementedException(); }
             set
@@ -102,7 +99,5 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
                           Selector().SelectByText(value);
             }
         }
-
-        #endregion
     }
 }

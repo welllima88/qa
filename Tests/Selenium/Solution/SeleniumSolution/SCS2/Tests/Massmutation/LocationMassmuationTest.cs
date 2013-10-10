@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
@@ -10,23 +10,18 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
     [TestClass]
     public class LocationMassmuationTest
     {
-        private static LobbyView _lobbyView;
-        private static Massmuation _massmuation;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
-            _massmuation = new Massmuation();
             TestLauncher.Navigate("");
-            _lobbyView.Menu.MassMutation.LocationCreate.Click();
+            LobbyMenu.MassMutation.LocationCreate.Click();
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Location")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Standorte erstellen", _massmuation.Title);
+            Assert.AreEqual("Mehrere Standorte erstellen", Massmuation.Title);
         }
 
         [TestMethod]
@@ -35,28 +30,28 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         {
             Assert.AreEqual(
                 "Bitte geben Sie den Pfad zum Excel File mit den Standortdaten an. Bitte stellen Sie sicher, dass sie das richtige File mit der Bezeichnung SCA verwenden. Die Bezeichnung befindet sich im Exceldatei an der Spalte B1. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
-                _massmuation.Description);
+                Massmuation.Description);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Location")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", _massmuation.FileUploadButton.Text);
+            Assert.AreEqual("", Massmuation.FileUploadButton.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Location")]
         public void FileChooser()
         {
-            Assert.AreEqual("", _massmuation.FileChooser.Text);
+            Assert.AreEqual("", Massmuation.FileChooser.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Location")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", _massmuation.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", Massmuation.DownloadTemplate);
         }
     }
 }

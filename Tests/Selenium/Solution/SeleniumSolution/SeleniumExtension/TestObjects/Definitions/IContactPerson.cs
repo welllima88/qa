@@ -1,7 +1,7 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions
 {
     /// <summary>
-    /// the contact person has adress and contact fields 
+    ///     the contact person has adress and contact fields
     /// </summary>
     public interface IContactPerson : IAdress, IContact
     {

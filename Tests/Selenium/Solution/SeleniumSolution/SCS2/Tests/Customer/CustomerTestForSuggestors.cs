@@ -9,48 +9,48 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
     [Ignore]
     public class CustomerTestForSuggestors
     {
-        private static CustomerCreate _customerCreate;
-        private static CustomerMenu _customerMenu;
-        private static LobbyView _lobby;
+        private static CustomerCreate CustomerCreate;
+        private static CustomerMenu CustomerMenu;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerCreate = new CustomerCreate();
-            _customerMenu = new CustomerMenu();
-            _lobby = new LobbyView();
+            CustomerCreate = new CustomerCreate();
+            CustomerMenu = new CustomerMenu();
+            LobbyView = new LobbyView();
         }
 
         [TestMethod]
         public void CreateCustomerOnlySuggesterAndCancelToCheckSuggestor()
         {
-            _customerMenu.CustomerCreate.Click();
-            _customerCreate.CustomerName = "Selenium Test will cancel for SUGGESTER";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.CancelButton.Click();
-            Assert.IsTrue(_lobby.Headline.Displayed);
-            Assert.IsTrue(_lobby.Menu.Customer.CustomerCreate.Displayed);
+            CustomerMenu.CustomerCreate.Click();
+            CustomerCreate.CustomerName = "Selenium Test will cancel for SUGGESTER";
+            CustomerCreate.Language = "Deutsch [de]";
+            CustomerCreate.Country = "Schweiz [CH]";
+            CustomerCreate.CancelButton.Click();
+            Assert.IsTrue(LobbyView.Headline.Displayed);
+            Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
         }
 
         [TestMethod]
         public void CreateCustomerAndCancelToCheckSuggestor()
         {
-            _customerMenu.CustomerCreate.Click();
+            CustomerMenu.CustomerCreate.Click();
 
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "CHF";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
+            CustomerCreate.Supplier = "SIX Payment Services AG";
+            CustomerCreate.SbsCurrency = "CHF";
+            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
+            CustomerCreate.CustomerName = "SYR Sele Kunde A";
 
-            _customerCreate.CompanyName = "";
-            _customerCreate.StreetNo = "";
-            _customerCreate.Zip = "";
-            _customerCreate.City = "";
+            CustomerCreate.CompanyName = "";
+            CustomerCreate.StreetNo = "";
+            CustomerCreate.Zip = "";
+            CustomerCreate.City = "";
 
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.Language = "Deutsch [de]";
+            CustomerCreate.Country = "Schweiz [CH]";
+            CustomerCreate.SaveButton.Click();
         }
     }
 }

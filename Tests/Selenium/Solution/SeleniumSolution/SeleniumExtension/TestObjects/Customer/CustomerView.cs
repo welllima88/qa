@@ -1,10 +1,9 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 {
-    public class CustomerView : WebObject, ICustomer
+    public class CustomerView : WebObject
     {
         #region ICustomerView Members
 
@@ -150,31 +149,31 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotImplementedException(); }
         }
 
-        public string Supplier
+        public static string Supplier
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Supplier)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string SbsBillingTenant
+        public static string SbsBillingTenant
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SbsBillingTenant)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string SbsCurrency
+        public static string SbsCurrency
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SbsCurrency)).Text; }
             set { throw new NotImplementedException(); }
         }
 
         //todo to verify this locators:
-        public String CustomerNumber
+        public static String CustomerNumber
         {
             get { return WebDriver.FindElement(By.CssSelector("span[id$='customerNumberInput']")).Text; }
         }
 
-        public String SbsDebitNumber
+        public static String SbsDebitNumber
         {
             get { return WebDriver.FindElement(By.CssSelector("span[id$='customerSbsLabel']")).Text; }
         }
@@ -185,7 +184,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotImplementedException(); }
         }
 
-        public String SbsAdressNumber
+        public static String SbsAdressNumber
         {
             get { return WebDriver.FindElement(By.CssSelector("span[id$='_customerSbsAddressLabel']")).Text; }
         }

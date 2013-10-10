@@ -4,89 +4,82 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 {
     public class BillingAddressEdit : WebObject
     {
-        private readonly BillingAddressCreate _billingAddressCreate;
-
-        public BillingAddressEdit()
+        public static string CompanyName
         {
-            _billingAddressCreate = new BillingAddressCreate();
+            set { BillingAddressCreate.CompanyName = value; }
         }
 
-        public string CompanyName
+        public static string StreetName
         {
-            set { _billingAddressCreate.CompanyName = value; }
+            set { BillingAddressCreate.StreetName = value; }
         }
 
-        public string StreetName
+        public static string Language
         {
-            set { _billingAddressCreate.StreetName = value; }
+            set { BillingAddressCreate.Language = value; }
         }
 
-        public string Language
+        public static string Country
         {
-            set { _billingAddressCreate.Language = value; }
+            set { BillingAddressCreate.Country = value; }
         }
 
-        public string Country
+        public static string Zip
         {
-            set { _billingAddressCreate.Country = value; }
+            set { BillingAddressCreate.Zip = value; }
         }
 
-        public string Zip
+        public static string City
         {
-            set { _billingAddressCreate.Zip = value; }
+            set { BillingAddressCreate.City = value; }
         }
 
-        public string City
+        public static string AdressAddition
         {
-            set { _billingAddressCreate.City = value; }
+            set { BillingAddressCreate.AdressAddition = value; }
         }
 
-        public string AdressAddition
+        public static string Po
         {
-            set { _billingAddressCreate.AdressAddition = value; }
+            set { BillingAddressCreate.Po = value; }
         }
 
-        public string Po
+        public static string Region
         {
-            set { _billingAddressCreate.Po = value; }
+            set { BillingAddressCreate.Region = value; }
         }
 
-        public string Region
+        public static string Telephone
         {
-            set { _billingAddressCreate.Region = value; }
+            set { BillingAddressCreate.Telephone = value; }
         }
 
-        public string Telephone
+        public static string Mobile
         {
-            set { _billingAddressCreate.Telephone = value; }
+            set { BillingAddressCreate.Mobile = value; }
         }
 
-        public string Mobile
+        public static string Fax
         {
-            set { _billingAddressCreate.Mobile = value; }
+            set { BillingAddressCreate.Fax = value; }
         }
 
-        public string Fax
+        public static string Email
         {
-            set { _billingAddressCreate.Fax = value; }
+            set { BillingAddressCreate.Email = value; }
         }
 
-        public string Email
+        public static string Web
         {
-            set { _billingAddressCreate.Email = value; }
+            set { BillingAddressCreate.Web = value; }
         }
 
-        public string Web
+        public static IWebElement SaveButton
         {
-            set { _billingAddressCreate.Web = value; }
+            get { return BillingAddressCreate.SaveButton; }
         }
 
-        public IWebElement SaveButton
-        {
-            get { return _billingAddressCreate.SaveButton; }
-        }
-
-        public IWebElement CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
         }

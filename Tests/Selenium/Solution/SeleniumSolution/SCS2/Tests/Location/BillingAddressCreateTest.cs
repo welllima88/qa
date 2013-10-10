@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -11,285 +9,256 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
     [TestClass]
     public class BillingAddressCreateTest
     {
-        private static BillingAddressView _billingAddressView;
-        private static BillingAddressCreate _billingAddressCreate;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static FormAlert _formAlert;
-        private static MenusTest _menusTest;
-        private static CustomerMenu _customerMenu;
-
-        private long _dt;
-        private List<string> _formAlerts;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            _customerMenu = new CustomerMenu();
-            _billingAddressCreate = new BillingAddressCreate();
-            _billingAddressView = new BillingAddressView();
-            _recentElements = new RecentElements();
-
-            _navigationBar = new NavigationBar();
-            _formAlert = new FormAlert();
-            _customerMenu = new CustomerMenu();
-            _menusTest = new MenusTest();
-        }
+        private double _dt;
 
         [TestInitialize]
         public void TestInit()
         {
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _dt = TestLauncher.GenerateTestId();
         }
 
         [TestMethod]
         public void CreateBillingAddressWithInvalidDataFailed()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR Sele Firma A$°";
-            _billingAddressCreate.StreetName = "Hardturmstr. 201$°";
-            _billingAddressCreate.Zip = "802$°";
-            _billingAddressCreate.City = "Zürich$°";
-            _billingAddressCreate.Po = "PFO1$°";
-            _billingAddressCreate.AdressAddition = "Etage 3$°";
-            _billingAddressCreate.Region = "Reg 3[]$°";
+            BillingAddressCreate.CompanyName = "SYR Sele Firma A$°";
+            BillingAddressCreate.StreetName = "Hardturmstr. 201$°";
+            BillingAddressCreate.Zip = "802$°";
+            BillingAddressCreate.City = "Zürich$°";
+            BillingAddressCreate.Po = "PFO1$°";
+            BillingAddressCreate.AdressAddition = "Etage 3$°";
+            BillingAddressCreate.Region = "Reg 3[]$°";
 
-            _billingAddressCreate.Language = "Deutsch [de]";
-            _billingAddressCreate.Country = "Schweiz [CH]";
-            _billingAddressCreate.Email = "marc.siegmund@six-grou$°p.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237$";
-            _billingAddressCreate.Mobile = "0032 58 399 6237$";
-            _billingAddressCreate.Fax = "0033 58 399 6237$";
-            _billingAddressCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            BillingAddressCreate.Language = "Deutsch [de]";
+            BillingAddressCreate.Country = "Schweiz [CH]";
+            BillingAddressCreate.Email = "marc.siegmund@six-grou$°p.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237$";
+            BillingAddressCreate.Mobile = "0032 58 399 6237$";
+            BillingAddressCreate.Fax = "0033 58 399 6237$";
+            BillingAddressCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
-            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
-            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!");
-            Assert.AreEqual(12, _formAlerts.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Zusatz: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Telefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Mobiltelefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Fax: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Postfach: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Email: Dies ist keine gültige E-Mail Adresse!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Dies ist keine gültige Web Adresse!");
+            Assert.AreEqual(12, FormAlert.FormAlertList.Count);
         }
 
         [TestMethod]
         public void CreateBillingAddressWithIncompleteDataFailed()
         {
-            _customerMenu.BillingAdressCreate.Click();
+            CustomerMenu.BillingAdressCreate.Click();
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(5, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
-            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
-            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
-            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
-            CollectionAssert.Contains(_formAlerts, "Land: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(5, FormAlert.FormAlertElements.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Land: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateBillingAddressrWithoutCompanyNameFailed()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _billingAddressCreate.CompanyName = "";
-            _billingAddressCreate.StreetName = "Hardturmstr. 201";
-            _billingAddressCreate.Zip = "8021";
-            _billingAddressCreate.City = "Zürich";
-            _billingAddressCreate.Po = "PFO1";
-            _billingAddressCreate.AdressAddition = "Etage 3";
-            _billingAddressCreate.Region = "Reg 55";
-            _billingAddressCreate.Language = "Deutsch [de]";
-            _billingAddressCreate.Country = "Schweiz [CH]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de-intern";
+            BillingAddressCreate.CompanyName = "";
+            BillingAddressCreate.StreetName = "Hardturmstr. 201";
+            BillingAddressCreate.Zip = "8021";
+            BillingAddressCreate.City = "Zürich";
+            BillingAddressCreate.Po = "PFO1";
+            BillingAddressCreate.AdressAddition = "Etage 3";
+            BillingAddressCreate.Region = "Reg 55";
+            BillingAddressCreate.Language = "Deutsch [de]";
+            BillingAddressCreate.Country = "Schweiz [CH]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de-intern";
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateBillingAddressWithoutStreetAndNumberFailed()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR Sele Firma A";
-            _billingAddressCreate.StreetName = "";
-            _billingAddressCreate.Zip = "8021";
-            _billingAddressCreate.City = "Zürich";
-            _billingAddressCreate.Po = "PFO1";
-            _billingAddressCreate.AdressAddition = "Etage 3";
-            _billingAddressCreate.Region = "Reg 55";
-            _billingAddressCreate.Language = "Deutsch [de]";
-            _billingAddressCreate.Country = "Schweiz [CH]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de-intern";
+            BillingAddressCreate.CompanyName = "SYR Sele Firma A";
+            BillingAddressCreate.StreetName = "";
+            BillingAddressCreate.Zip = "8021";
+            BillingAddressCreate.City = "Zürich";
+            BillingAddressCreate.Po = "PFO1";
+            BillingAddressCreate.AdressAddition = "Etage 3";
+            BillingAddressCreate.Region = "Reg 55";
+            BillingAddressCreate.Language = "Deutsch [de]";
+            BillingAddressCreate.Country = "Schweiz [CH]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de-intern";
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateBillingAddressWithoutCityFailed()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR Sele Firma A";
-            _billingAddressCreate.StreetName = "Hardturmstr. 201";
-            _billingAddressCreate.Zip = "8021";
-            _billingAddressCreate.City = "";
-            _billingAddressCreate.Po = "PFO1";
-            _billingAddressCreate.AdressAddition = "Etage 3";
-            _billingAddressCreate.Region = "Reg 55";
-            _billingAddressCreate.Language = "Deutsch [de]";
-            _billingAddressCreate.Country = "Schweiz [CH]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de-intern";
+            BillingAddressCreate.CompanyName = "SYR Sele Firma A";
+            BillingAddressCreate.StreetName = "Hardturmstr. 201";
+            BillingAddressCreate.Zip = "8021";
+            BillingAddressCreate.City = "";
+            BillingAddressCreate.Po = "PFO1";
+            BillingAddressCreate.AdressAddition = "Etage 3";
+            BillingAddressCreate.Region = "Reg 55";
+            BillingAddressCreate.Language = "Deutsch [de]";
+            BillingAddressCreate.Country = "Schweiz [CH]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de-intern";
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateBillingAddressWithoutZipFailed()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR Sele Firma A";
-            _billingAddressCreate.StreetName = "Hardturmstr. 201";
-            _billingAddressCreate.Zip = "";
-            _billingAddressCreate.City = "Zürich";
-            _billingAddressCreate.Po = "PFO1";
-            _billingAddressCreate.AdressAddition = "Etage 3";
-            _billingAddressCreate.Region = "Reg 55";
-            _billingAddressCreate.Language = "Deutsch [de]";
-            _billingAddressCreate.Country = "Schweiz [CH]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de-intern";
+            BillingAddressCreate.CompanyName = "SYR Sele Firma A";
+            BillingAddressCreate.StreetName = "Hardturmstr. 201";
+            BillingAddressCreate.Zip = "";
+            BillingAddressCreate.City = "Zürich";
+            BillingAddressCreate.Po = "PFO1";
+            BillingAddressCreate.AdressAddition = "Etage 3";
+            BillingAddressCreate.Region = "Reg 55";
+            BillingAddressCreate.Language = "Deutsch [de]";
+            BillingAddressCreate.Country = "Schweiz [CH]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de-intern";
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateBillingAddressAndSave()
         {
-            _menusTest.CustomerMenuCheck(_customerMenu);
-            _customerMenu.BillingAdressCreate.Click();
+            MenusTest.CustomerMenuCheck();
+            CustomerMenu.BillingAdressCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR ReAd SELE A";
-            _billingAddressCreate.StreetName = "Rechnungsallee 112";
-            _billingAddressCreate.Zip = "10010";
-            _billingAddressCreate.City = "Stuttgart";
-            _billingAddressCreate.Po = "PO1";
+            BillingAddressCreate.CompanyName = "SYR ReAd SELE A";
+            BillingAddressCreate.StreetName = "Rechnungsallee 112";
+            BillingAddressCreate.Zip = "10010";
+            BillingAddressCreate.City = "Stuttgart";
+            BillingAddressCreate.Po = "PO1";
 
-            _billingAddressCreate.Language = "Swedish [sv]";
-            _billingAddressCreate.Country = "Schweden [SE]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de" + _dt;
+            BillingAddressCreate.Language = "Swedish [sv]";
+            BillingAddressCreate.Country = "Schweden [SE]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de" + _dt;
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
-            _menusTest.CustomerMenuCheck(_customerMenu);
+            MenusTest.CustomerMenuCheck();
 
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
-            _navigationBar.Lobby.Click();
-            _recentElements.MostRecent.Click();
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
 
-            //Assert.AreEqual(locId, _billingAddressView.Guid);
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
+            //Assert.AreEqual(locId, BillingAddressView.Guid);
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
 
-            Assert.AreEqual("Rechnungsallee 112", _billingAddressView.StreetName);
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
-            Assert.AreEqual("10010", _billingAddressView.Zip);
-            Assert.AreEqual("Stuttgart", _billingAddressView.City);
-            Assert.AreEqual("Swedish [sv]", _billingAddressView.Language);
-            Assert.AreEqual("Sweden [SE]", _billingAddressView.Country);
-            Assert.AreEqual("marc.siegmund@six-group.com", _billingAddressView.Email);
-            Assert.AreEqual("0031 58 399 6237", _billingAddressView.Telephone);
-            Assert.AreEqual("0032 58 399 6237", _billingAddressView.Mobile);
-            Assert.AreEqual("0033 58 399 6237", _billingAddressView.Fax);
-            Assert.AreEqual("www.six-group.com/de" + _dt, _billingAddressView.Web);
+            Assert.AreEqual("Rechnungsallee 112", BillingAddressView.StreetName);
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
+            Assert.AreEqual("10010", BillingAddressView.Zip);
+            Assert.AreEqual("Stuttgart", BillingAddressView.City);
+            Assert.AreEqual("Swedish [sv]", BillingAddressView.Language);
+            Assert.AreEqual("Sweden [SE]", BillingAddressView.Country);
+            Assert.AreEqual("marc.siegmund@six-group.com", BillingAddressView.Email);
+            Assert.AreEqual("0031 58 399 6237", BillingAddressView.Telephone);
+            Assert.AreEqual("0032 58 399 6237", BillingAddressView.Mobile);
+            Assert.AreEqual("0033 58 399 6237", BillingAddressView.Fax);
+            Assert.AreEqual("www.six-group.com/de" + _dt, BillingAddressView.Web);
         }
 
         [TestMethod]
         public void CreateBillingAddressWithMinimalAndSave()
         {
-            _customerMenu.BillingAdressCreate.Click();
+            CustomerMenu.BillingAdressCreate.Click();
 
-            _billingAddressCreate.CompanyName = "SYR ReAd SELE A";
-            _billingAddressCreate.StreetName = "Rechnungsallee 112";
-            _billingAddressCreate.Zip = "10010";
-            _billingAddressCreate.City = "Stuttgart";
-            _billingAddressCreate.Po = "PO1";
+            BillingAddressCreate.CompanyName = "SYR ReAd SELE A";
+            BillingAddressCreate.StreetName = "Rechnungsallee 112";
+            BillingAddressCreate.Zip = "10010";
+            BillingAddressCreate.City = "Stuttgart";
+            BillingAddressCreate.Po = "PO1";
 
-            _billingAddressCreate.Language = "Swedish [sv]";
-            _billingAddressCreate.Country = "Schweden [SE]";
-            _billingAddressCreate.Email = "marc.siegmund@six-group.com";
-            _billingAddressCreate.Telephone = "0031 58 399 6237";
-            _billingAddressCreate.Mobile = "0032 58 399 6237";
-            _billingAddressCreate.Fax = "0033 58 399 6237";
-            _billingAddressCreate.Web = "www.six-group.com/de" + _dt;
+            BillingAddressCreate.Language = "Swedish [sv]";
+            BillingAddressCreate.Country = "Schweden [SE]";
+            BillingAddressCreate.Email = "marc.siegmund@six-group.com";
+            BillingAddressCreate.Telephone = "0031 58 399 6237";
+            BillingAddressCreate.Mobile = "0032 58 399 6237";
+            BillingAddressCreate.Fax = "0033 58 399 6237";
+            BillingAddressCreate.Web = "www.six-group.com/de" + _dt;
 
-            _billingAddressCreate.SaveButton.Click();
+            BillingAddressCreate.SaveButton.Click();
 
             //var locId = _driver.PageSource.;
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
-            _navigationBar.Lobby.Click();
-            _recentElements.MostRecent.Click();
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
 
-            //Assert.AreEqual(locId, _billingAddressView.Guid);
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
+            //Assert.AreEqual(locId, BillingAddressView.Guid);
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
 
-            Assert.AreEqual("Rechnungsallee 112", _billingAddressView.StreetName);
-            Assert.AreEqual("SYR ReAd SELE A", _billingAddressView.CompanyName);
-            Assert.AreEqual("10010", _billingAddressView.Zip);
-            Assert.AreEqual("Stuttgart", _billingAddressView.City);
-            Assert.AreEqual("Swedish [sv]", _billingAddressView.Language);
-            Assert.AreEqual("Sweden [SE]", _billingAddressView.Country);
-            Assert.AreEqual("marc.siegmund@six-group.com", _billingAddressView.Email);
-            Assert.AreEqual("0031 58 399 6237", _billingAddressView.Telephone);
-            Assert.AreEqual("0032 58 399 6237", _billingAddressView.Mobile);
-            Assert.AreEqual("0033 58 399 6237", _billingAddressView.Fax);
-            Assert.AreEqual("www.six-group.com/de" + _dt, _billingAddressView.Web);
+            Assert.AreEqual("Rechnungsallee 112", BillingAddressView.StreetName);
+            Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
+            Assert.AreEqual("10010", BillingAddressView.Zip);
+            Assert.AreEqual("Stuttgart", BillingAddressView.City);
+            Assert.AreEqual("Swedish [sv]", BillingAddressView.Language);
+            Assert.AreEqual("Sweden [SE]", BillingAddressView.Country);
+            Assert.AreEqual("marc.siegmund@six-group.com", BillingAddressView.Email);
+            Assert.AreEqual("0031 58 399 6237", BillingAddressView.Telephone);
+            Assert.AreEqual("0032 58 399 6237", BillingAddressView.Mobile);
+            Assert.AreEqual("0033 58 399 6237", BillingAddressView.Fax);
+            Assert.AreEqual("www.six-group.com/de" + _dt, BillingAddressView.Web);
         }
     }
 }

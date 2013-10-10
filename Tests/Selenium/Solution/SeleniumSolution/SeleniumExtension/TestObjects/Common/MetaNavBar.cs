@@ -4,22 +4,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class MetaNavBar : WebObject
     {
-        public IWebElement Logout
+        public static IWebElement Logout
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
         }
 
-        public IWebElement User
+        public static IWebElement User
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_User)); }
         }
 
-        public IWebElement Languages
+        public static IWebElement Languages
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
         }
 
-        public IWebElement Language(string language)
+        public static IWebElement Language(string language)
         {
             return WebDriver.FindElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
         }

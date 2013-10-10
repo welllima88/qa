@@ -1,17 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Login
 {
     [TestClass]
     public class LoginTest
     {
-        private static LobbyView _lobby;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobby = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -19,21 +17,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Login
         [TestMethod]
         public void ApplicationName()
         {
-            Assert.IsTrue(_lobby.ApplicationInfo.ApplicationName.Displayed);
+            Assert.IsTrue(ApplicationInfo.ApplicationName.Displayed);
         }
 
         [TestCategory("BasicLoginTest")]
         [TestMethod]
         public void CompanyLogo()
         {
-            Assert.IsTrue(_lobby.CompanyLogo.Displayed);
+            Assert.IsTrue(LobbyView.CompanyLogo.Displayed);
         }
 
         [TestCategory("BasicLoginTest")]
         [TestMethod]
-        public void LobbyMenu()
+        public void LobbyMenuCheck()
         {
-            Assert.IsTrue(_lobby.Menu.Lobby.Displayed);
+            Assert.IsTrue(LobbyMenu.Lobby.Displayed);
         }
     }
 }

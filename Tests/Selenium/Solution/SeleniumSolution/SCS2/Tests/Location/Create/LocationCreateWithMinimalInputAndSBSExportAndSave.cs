@@ -12,24 +12,24 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
     public class LocationCreateWithMinimalInputAndSbsExportAndSave
     {
         private const int MillisecondsTimeout = 1000;
-        private static LocationView _locationView;
+        private static LocationView LocationView;
         private static NavigationBar _navigationBar;
-        private static LocationCreate _locationCreate;
-        private static LocationMenu _locationMenu;
-        private static CustomerMenu _customerMenu;
-        private static CustomerView _customerView;
-        private static LobbyView _lobby;
+        private static LocationCreate LocationCreate;
+        private static LocationMenu LocationMenu;
+        private static CustomerMenu CustomerMenu;
+        private static CustomerView CustomerView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _customerView = new CustomerView();
-            _locationMenu = new LocationMenu();
-            _locationCreate = new LocationCreate();
-            _locationView = new LocationView();
+            CustomerMenu = new CustomerMenu();
+            CustomerView = new CustomerView();
+            LocationMenu = new LocationMenu();
+            LocationCreate = new LocationCreate();
+            LocationView = new LocationView();
             _navigationBar = new NavigationBar();
-            _lobby = new LobbyView();
+            LobbyView = new LobbyView();
         }
 
         [TestInitialize]
@@ -41,68 +41,67 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         [TestMethod]
         public void CreateLocationWithSbsAndMinimalAndSave()
         {
-            _customerMenu.LocationCreate.Click();
+            CustomerMenu.LocationCreate.Click();
 
-            _locationCreate.CompanyName = "SYR SBS Standort A";
-            _locationCreate.StreetNo = "SBS Way 201a-c";
-            _locationCreate.Zip = "4554";
-            _locationCreate.City = "SBS";
+            LocationCreate.CompanyName = "SYR SBS Standort A";
+            LocationCreate.StreetNo = "SBS Way 201a-c";
+            LocationCreate.Zip = "4554";
+            LocationCreate.City = "SBS";
 
-            _locationCreate.SaveButton.Click();
+            LocationCreate.SaveButton.Click();
 
-            Assert.AreEqual("SYR SBS Standort A", _locationView.CompanyName);
+            Assert.AreEqual("SYR SBS Standort A", LocationView.CompanyName);
 
-            StringAssert.Matches(_locationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             int retry = 10;
             do
             {
                 try
                 {
-                    StringAssert.Matches(_locationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
+                    StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
                 {
                     Thread.Sleep(MillisecondsTimeout);
-                    _locationMenu.Location.Click();
+                    LocationMenu.Location.Click();
                     retry--;
                 }
             } while (retry > 0);
-            Assert.AreEqual("SBS Way 201a-c", _locationView.StreetNo);
-            Assert.AreEqual("4554", _locationView.Zip);
-            Assert.AreEqual("SBS", _locationView.City);
+            Assert.AreEqual("SBS Way 201a-c", LocationView.StreetNo);
+            Assert.AreEqual("4554", LocationView.Zip);
+            Assert.AreEqual("SBS", LocationView.City);
         }
-
 
         [TestMethod]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()
         {
-            string country = _customerView.Country;
-            _customerMenu.LocationCreate.Click();
-            Assert.AreEqual(country, _locationCreate.Country);
+            string country = CustomerView.Country;
+            CustomerMenu.LocationCreate.Click();
+            Assert.AreEqual(country, LocationCreate.Country);
         }
 
         [TestMethod]
         public void LanguageOfCustomerIsUsedForAgencyOfLocation()
         {
-            string language = _customerView.Language;
-            _customerMenu.LocationCreate.Click();
-            Assert.AreEqual(language, _locationCreate.Language);
+            string language = CustomerView.Language;
+            CustomerMenu.LocationCreate.Click();
+            Assert.AreEqual(language, LocationCreate.Language);
         }
 
         [TestMethod]
         public void CreateLocationCheckNavBar()
         {
-            Assert.AreEqual("Kunde", _navigationBar.Current.Text);
-            _customerMenu.LocationCreate.Click();
-            Assert.AreEqual("Kunde", _navigationBar.Current.Text);
+            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
+            CustomerMenu.LocationCreate.Click();
+            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
         }
 
         [TestMethod]
         public void CreateLocationCheckHeadline()
         {
-            _customerMenu.LocationCreate.Click();
-            Assert.AreEqual("Neuer Standort", _lobby.Headline.Text);
+            CustomerMenu.LocationCreate.Click();
+            Assert.AreEqual("Neuer Standort", LobbyView.Headline.Text);
         }
     }
 }

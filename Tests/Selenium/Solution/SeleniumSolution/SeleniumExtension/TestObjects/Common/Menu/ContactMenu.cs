@@ -4,7 +4,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class ContactMenu : MenuObject
     {
-        public IWebElement Contact
+        public static IWebElement Contact
         {
             get
             {
@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement ContactEdit
+        public static IWebElement ContactEdit
         {
             get
             {

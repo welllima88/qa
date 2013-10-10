@@ -1,17 +1,14 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
-    public class ContactPersonView : WebObject, IContactPerson
+    public class ContactPersonView : WebObject
     {
         public IWebElement EditButton
         {
             get { return WebDriver.FindElement(By.CssSelector("button[name='edit']")); }
         }
-
-        #region IContactView Members
 
         public string AddressAddition
         {
@@ -23,60 +20,60 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             }
         }
 
-        public string CreateDate
+        public static string CreateDate
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
         }
 
-        public string FirstName
+        public static string FirstName
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.FirstName)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Name
+        public static string Name
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Name)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Salutation
+        public static string Salutation
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Salutation)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Country
+        public static string Country
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Country)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Language
+        public static string Language
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Language)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Telephone)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Mobile)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Fax
+        public static string Fax
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.Fax)).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Email
+        public static string Email
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_Email")).Text; }
             set { throw new NotSupportedException(); }
@@ -88,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set { throw new NotSupportedException(); }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_Street")).Text; }
             set { throw new NotSupportedException(); }
@@ -96,30 +93,28 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public string AdressAddition { get; set; }
 
-        public string Po
+        public static string Po
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_PO")).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string Zip
+        public static string Zip
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_ZIP")).Text; }
             set { throw new NotSupportedException(); }
         }
 
-        public string City
+        public static string City
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_City")).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Region
+        public static string Region
         {
             get { return WebDriver.FindElement(By.CssSelector("#Address_Region")).Text; }
             set { throw new NotSupportedException(); }
         }
-
-        #endregion
     }
 }

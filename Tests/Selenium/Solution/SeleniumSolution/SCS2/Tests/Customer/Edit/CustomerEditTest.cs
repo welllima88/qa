@@ -12,14 +12,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
     [TestClass]
     public class CustomerEditTest
     {
-        private static CustomerEdit _customerEdit;
-        private static CustomerView _customerView;
+        private static CustomerEdit CustomerEdit;
+        private static CustomerView CustomerView;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
         private static FormAlert _formAlert;
-        private static CustomerMenu _customerMenu;
-        private static MenusTest _menusTests;
-        private static LobbyView _lobby;
+        private static CustomerMenu CustomerMenu;
+        private static MenusTest MenusTests;
+        private static LobbyView LobbyView;
 
         private static string _custId;
         private static string _customerName;
@@ -49,53 +49,53 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _customerEdit = new CustomerEdit();
-            _customerView = new CustomerView();
+            CustomerMenu = new CustomerMenu();
+            CustomerEdit = new CustomerEdit();
+            CustomerView = new CustomerView();
             _recentElements = new RecentElements();
             _navigationBar = new NavigationBar();
             _formAlert = new FormAlert();
-            _menusTests = new MenusTest();
-            _lobby = new LobbyView();
+            MenusTests = new MenusTest();
+            LobbyView = new LobbyView();
 
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
 
-            _custId = _customerView.CustomerNumber;
-            _customerName = _customerView.CustomerName;
-            _supplier = _customerView.Supplier;
+            _custId = CustomerView.CustomerNumber;
+            _customerName = CustomerView.CustomerName;
+            _supplier = CustomerView.Supplier;
 
-            _sbsBillingTenant = _customerView.SbsBillingTenant;
-            _sbsCurrency = _customerView.SbsCurrency;
-            _sapNumber = _customerView.SapNumber;
-            _sbsDebitNumber = _customerView.SbsDebitNumber;
-            _sbsAdressNumber = _customerView.SbsAdressNumber;
-            _segment = _customerView.Segment;
+            _sbsBillingTenant = CustomerView.SbsBillingTenant;
+            _sbsCurrency = CustomerView.SbsCurrency;
+            _sapNumber = CustomerView.SapNumber;
+            _sbsDebitNumber = CustomerView.SbsDebitNumber;
+            _sbsAdressNumber = CustomerView.SbsAdressNumber;
+            _segment = CustomerView.Segment;
 
-            _ep2MerchantId = _customerView.Ep2MerchantId;
+            _ep2MerchantId = CustomerView.Ep2MerchantId;
 
-            _companyName = _customerView.CompanyName;
-            _po = _customerView.Po;
-            _adressAddition = _customerView.AdressAddition;
-            _streetName = _customerView.StreetNo;
-            _zip = _customerView.Zip;
-            _city = _customerView.City;
-            _agency = _customerView.Agency;
-            _language = _customerView.Language;
-            _country = _customerView.Country;
-            _email = _customerView.Email;
-            _telephone = _customerView.Telephone;
-            _mobile = _customerView.Mobile;
-            _fax = _customerView.Fax;
-            _web = _customerView.Web;
+            _companyName = CustomerView.CompanyName;
+            _po = CustomerView.Po;
+            _adressAddition = CustomerView.AdressAddition;
+            _streetName = CustomerView.StreetNo;
+            _zip = CustomerView.Zip;
+            _city = CustomerView.City;
+            _agency = CustomerView.Agency;
+            _language = CustomerView.Language;
+            _country = CustomerView.Country;
+            _email = CustomerView.Email;
+            _telephone = CustomerView.Telephone;
+            _mobile = CustomerView.Mobile;
+            _fax = CustomerView.Fax;
+            _web = CustomerView.Web;
         }
 
         [TestMethod]
         public void CheckLocationMenu()
         {
-            _menusTests.CustomerMenuCheck(_customerMenu);
-            _customerMenu.CustomerEdit.Click();
-            _customerEdit.CancelButton.Click();
-            _menusTests.CustomerMenuCheck(_customerMenu);
+            MenusTest.CustomerMenuCheck();
+            CustomerMenu.CustomerEdit.Click();
+            CustomerEdit.CancelButton.Click();
+            MenusTest.CustomerMenuCheck();
         }
 
         [Ignore]
@@ -129,140 +129,140 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [TestMethod]
         public void EditCustomerAndSave()
         {
-            string customerNumber = _customerView.CustomerNumber;
-            string guid = _customerView.Guid;
-            string sbsDebitNumber = _customerView.SbsDebitNumber;
-            string sbsAdressNumber = _customerView.SbsAdressNumber;
-            string sbsCurrency = _customerView.SbsCurrency;
-            string sbsBillingTenant = _customerView.SbsBillingTenant;
-            string supplier = _customerView.Supplier;
-            string ep2MerchantId = _customerView.Ep2MerchantId;
+            string customerNumber = CustomerView.CustomerNumber;
+            string guid = CustomerView.Guid;
+            string sbsDebitNumber = CustomerView.SbsDebitNumber;
+            string sbsAdressNumber = CustomerView.SbsAdressNumber;
+            string sbsCurrency = CustomerView.SbsCurrency;
+            string sbsBillingTenant = CustomerView.SbsBillingTenant;
+            string supplier = CustomerView.Supplier;
+            string ep2MerchantId = CustomerView.Ep2MerchantId;
 
-            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            _customerMenu.CustomerEdit.Click();
+            CustomerMenu.CustomerEdit.Click();
 
-            Assert.AreEqual(customerNumber, _customerEdit.CustomerNumber);
-            Assert.AreEqual(supplier, _customerEdit.Supplier);
-            Assert.AreEqual(ep2MerchantId, _customerEdit.Ep2MerchantId);
-            Assert.AreEqual(sbsDebitNumber, _customerEdit.SbsDebitNumber);
-            Assert.AreEqual(sbsAdressNumber, _customerEdit.SbsAdressNumber);
-            Assert.AreEqual(sbsCurrency, _customerEdit.SbsCurrency);
-            Assert.AreEqual(sbsBillingTenant, _customerEdit.SbsBillingTenant);
+            Assert.AreEqual(customerNumber, CustomerEdit.CustomerNumber);
+            Assert.AreEqual(supplier, CustomerEdit.Supplier);
+            Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
+            Assert.AreEqual(sbsDebitNumber, CustomerEdit.SbsDebitNumber);
+            Assert.AreEqual(sbsAdressNumber, CustomerEdit.SbsAdressNumber);
+            Assert.AreEqual(sbsCurrency, CustomerEdit.SbsCurrency);
+            Assert.AreEqual(sbsBillingTenant, CustomerEdit.SbsBillingTenant);
 
-            _customerEdit.CustomerName = "SYR Sele Kunde A";
+            CustomerEdit.CustomerName = "SYR Sele Kunde A";
 
-            _customerEdit.CompanyName = "SYR Sele Firma A";
-            _customerEdit.StreetNo = "Hardturmstr. 201";
-            _customerEdit.Zip = "8021";
-            _customerEdit.City = "Zürich";
-            _customerEdit.Po = "PFO1";
-            _customerEdit.AdressAddition = "Etage 3";
-            _customerEdit.Region = "Reg 55";
-            _customerEdit.SapNumber = "5440";
-            _customerEdit.CategoryCode = "5172: PETROLEUM/PETROL PRODUCTS";
-            _customerEdit.SupportContract = "Hotline und Wartung kostenpflichtig";
-            _customerEdit.CashIntegrator = "Wincor Nixdorf AG, Brüttisellen";
+            CustomerEdit.CompanyName = "SYR Sele Firma A";
+            CustomerEdit.StreetNo = "Hardturmstr. 201";
+            CustomerEdit.Zip = "8021";
+            CustomerEdit.City = "Zürich";
+            CustomerEdit.Po = "PFO1";
+            CustomerEdit.AdressAddition = "Etage 3";
+            CustomerEdit.Region = "Reg 55";
+            CustomerEdit.SapNumber = "5440";
+            CustomerEdit.CategoryCode = "5172: PETROLEUM/PETROL PRODUCTS";
+            CustomerEdit.SupportContract = "Hotline und Wartung kostenpflichtig";
+            CustomerEdit.CashIntegrator = "Wincor Nixdorf AG, Brüttisellen";
 
-            _customerEdit.Agency = "SIX Payment Services (Europe)";
-            _customerEdit.Language = "Deutsch [de]";
-            _customerEdit.Country = "Schweiz [CH]";
-            _customerEdit.Email = "marc.siegmund@six-group.com";
-            _customerEdit.Telephone = "0031 58 399 6237";
-            _customerEdit.Mobile = "0032 58 399 6237";
-            _customerEdit.Fax = "0033 58 399 6237";
-            _customerEdit.Web = "www.six-group.com/de-intern";
+            CustomerEdit.Agency = "SIX Payment Services (Europe)";
+            CustomerEdit.Language = "Deutsch [de]";
+            CustomerEdit.Country = "Schweiz [CH]";
+            CustomerEdit.Email = "marc.siegmund@six-group.com";
+            CustomerEdit.Telephone = "0031 58 399 6237";
+            CustomerEdit.Mobile = "0032 58 399 6237";
+            CustomerEdit.Fax = "0033 58 399 6237";
+            CustomerEdit.Web = "www.six-group.com/de-intern";
 
-            _customerEdit.SaveButton.Click();
+            CustomerEdit.SaveButton.Click();
 
-            Assert.AreEqual(customerNumber, _customerView.CustomerNumber);
-            Assert.AreEqual(guid, _customerView.Guid);
+            Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual(guid, CustomerView.Guid);
 
-            _navigationBar.Lobby.Click();
-            _recentElements.MostRecent.Click();
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
 
-            Assert.AreEqual(customerNumber, _customerView.CustomerNumber);
-            Assert.AreEqual(guid, _customerView.Guid);
-            Assert.AreEqual("SYR Sele Kunde A", _customerView.CustomerName);
-            Assert.AreEqual(supplier, _customerView.Supplier);
-            Assert.AreEqual(sbsBillingTenant, _customerView.SbsBillingTenant);
-            Assert.AreEqual(sbsCurrency, _customerView.SbsCurrency);
-            Assert.AreEqual(sbsDebitNumber, _customerView.SbsDebitNumber);
-            Assert.AreEqual(sbsAdressNumber, _customerView.SbsAdressNumber);
-            Assert.AreEqual("5172: PETROLEUM/PETROL PRODUCTS", _customerView.CategoryCode);
-            Assert.AreEqual("Hotline und Wartung kostenpflichtig", _customerView.SupportContract);
-            Assert.AreEqual("Wincor Nixdorf AG, Brüttisellen", _customerView.CashIntegrator);
-            Assert.AreEqual("5440", _customerView.SapNumber);
-            Assert.AreEqual("SYR Sele Kunde A", _customerView.CustomerName);
-            Assert.AreEqual(customerNumber, _customerView.CustomerNumber);
-            Assert.AreEqual("SYR Sele Kunde A", _customerView.CustomerName);
-            Assert.AreEqual("SIX Payment Services AG", _customerView.Supplier);
-            Assert.AreEqual("SIX Payment Services (Europe)", _customerView.SbsBillingTenant);
-            Assert.AreEqual("EUR", _customerView.SbsCurrency);
-            Assert.AreEqual("5440", _customerView.SapNumber);
+            Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual(guid, CustomerView.Guid);
+            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
+            Assert.AreEqual(supplier, CustomerView.Supplier);
+            Assert.AreEqual(sbsBillingTenant, CustomerView.SbsBillingTenant);
+            Assert.AreEqual(sbsCurrency, CustomerView.SbsCurrency);
+            Assert.AreEqual(sbsDebitNumber, CustomerView.SbsDebitNumber);
+            Assert.AreEqual(sbsAdressNumber, CustomerView.SbsAdressNumber);
+            Assert.AreEqual("5172: PETROLEUM/PETROL PRODUCTS", CustomerView.CategoryCode);
+            Assert.AreEqual("Hotline und Wartung kostenpflichtig", CustomerView.SupportContract);
+            Assert.AreEqual("Wincor Nixdorf AG, Brüttisellen", CustomerView.CashIntegrator);
+            Assert.AreEqual("5440", CustomerView.SapNumber);
+            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
+            Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
+            Assert.AreEqual("SIX Payment Services AG", CustomerView.Supplier);
+            Assert.AreEqual("SIX Payment Services (Europe)", CustomerView.SbsBillingTenant);
+            Assert.AreEqual("EUR", CustomerView.SbsCurrency);
+            Assert.AreEqual("5440", CustomerView.SapNumber);
 
-            StringAssert.Matches(_customerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
 
             int retry = 5;
             do
             {
                 try
                 {
-                    StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
+                    StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
                 {
-                    _customerMenu.Customer.Click();
+                    CustomerMenu.Customer.Click();
                     retry--;
                 }
             } while (retry > 0);
 
-            StringAssert.Matches(_customerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(_customerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            Assert.AreEqual("SYR Sele Firma A", _customerView.CompanyName);
-            Assert.AreEqual("PFO1", _customerView.Po);
-            Assert.AreEqual("Etage 3", _customerView.AdressAddition);
-            Assert.AreEqual("Reg 55", _customerView.Region);
-            Assert.AreEqual("Hardturmstr. 201", _customerView.StreetNo);
-            Assert.AreEqual("8021", _customerView.Zip);
-            Assert.AreEqual("Zürich", _customerView.City);
-            Assert.AreEqual("SIX Payment Services (Europe)", _customerView.Agency);
-            Assert.AreEqual("Deutsch [de]", _customerView.Language);
-            Assert.AreEqual("Schweiz [CH]", _customerView.Country);
-            Assert.AreEqual("marc.siegmund@six-group.com", _customerView.Email);
-            Assert.AreEqual("0031 58 399 6237", _customerView.Telephone);
-            Assert.AreEqual("0032 58 399 6237", _customerView.Mobile);
-            Assert.AreEqual("0033 58 399 6237", _customerView.Fax);
-            Assert.AreEqual("www.six-group.com/de-intern", _customerView.Web);
+            Assert.AreEqual("SYR Sele Firma A", CustomerView.CompanyName);
+            Assert.AreEqual("PFO1", CustomerView.Po);
+            Assert.AreEqual("Etage 3", CustomerView.AdressAddition);
+            Assert.AreEqual("Reg 55", CustomerView.Region);
+            Assert.AreEqual("Hardturmstr. 201", CustomerView.StreetNo);
+            Assert.AreEqual("8021", CustomerView.Zip);
+            Assert.AreEqual("Zürich", CustomerView.City);
+            Assert.AreEqual("SIX Payment Services (Europe)", CustomerView.Agency);
+            Assert.AreEqual("Deutsch [de]", CustomerView.Language);
+            Assert.AreEqual("Schweiz [CH]", CustomerView.Country);
+            Assert.AreEqual("marc.siegmund@six-group.com", CustomerView.Email);
+            Assert.AreEqual("0031 58 399 6237", CustomerView.Telephone);
+            Assert.AreEqual("0032 58 399 6237", CustomerView.Mobile);
+            Assert.AreEqual("0033 58 399 6237", CustomerView.Fax);
+            Assert.AreEqual("www.six-group.com/de-intern", CustomerView.Web);
         }
 
         [TestMethod]
         public void EditCustomerCheckNavBar()
         {
-            Assert.AreEqual("Kunde", _navigationBar.Current.Text);
-            _customerMenu.CustomerEdit.Click();
-            Assert.AreEqual("Kunde", _navigationBar.Current.Text);
+            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
+            CustomerMenu.CustomerEdit.Click();
+            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
         }
 
         [TestMethod]
         public void EditCustomerCheckMenu()
         {
-            _menusTests.CustomerMenuCheck(_customerMenu);
-            _customerMenu.CustomerEdit.Click();
-            _menusTests.CustomerMenuCheck(_customerMenu);
+            MenusTest.CustomerMenuCheck();
+            CustomerMenu.CustomerEdit.Click();
+            MenusTest.CustomerMenuCheck();
         }
 
         [TestMethod]
         public void EditCustomerCheckHeadline()
         {
-            StringAssert.Matches(_lobby.Headline.Text, new Regex(@"\d+:.*"));
-            string headLine = _lobby.Headline.Text;
-            _customerMenu.CustomerEdit.Click();
-            StringAssert.Contains(_lobby.Headline.Text, headLine);
+            StringAssert.Matches(LobbyView.Headline.Text, new Regex(@"\d+:.*"));
+            string headLine = LobbyView.Headline.Text;
+            CustomerMenu.CustomerEdit.Click();
+            StringAssert.Contains(LobbyView.Headline.Text, headLine);
         }
     }
 }

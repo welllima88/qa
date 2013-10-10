@@ -136,13 +136,14 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateTest.cs" />
     <Compile Include="Tests\Login\LoginTest.cs" />
     <Compile Include="Tests\Massmutation\ContractMassmuationTest.cs" />
-    <Compile Include="Tests\Massmutation\BtMassmuationTest.cs" />
+    <Compile Include="Tests\Massmutation\BusinessTemplateMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\TerminalMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\AcquirerChangeTest.cs" />
     <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
-    <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidation.cs" />
+    <Compile Include="Tests\Search\SearchForCustomerByIdTest.cs" />
+    <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\FixTerminalInfoTests.cs" />
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
@@ -163,7 +164,6 @@
     <Folder Include="TestData\qaK\" />
     <Folder Include="TestData\qaL\" />
     <Folder Include="Tests\Feedback\" />
-    <Folder Include="Tests\Search\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>
   <ItemGroup>

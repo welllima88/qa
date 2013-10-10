@@ -33,84 +33,84 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void Lobby()
         {
-            Assert.IsTrue(_lobbyMenu.Lobby.Displayed);
+            Assert.IsTrue(LobbyMenu.Lobby.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void NotAssignedTickets()
         {
-            Assert.IsTrue(_lobbyMenu.Ticket.NotAssigned.Displayed);
+            Assert.IsTrue(LobbyMenu.Ticket.NotAssigned.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MyGroupTickets()
         {
-            Assert.IsTrue(_lobbyMenu.Ticket.MyGroup.Displayed);
+            Assert.IsTrue(LobbyMenu.Ticket.MyGroup.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MyTickets()
         {
-            Assert.IsTrue(_lobbyMenu.Ticket.My.Displayed);
+            Assert.IsTrue(LobbyMenu.Ticket.My.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationBusinessTemplateMigrate()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.BusinessTemplateMigrate.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.BusinessTemplateMigrate.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationAcquirerChange()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.AcquirerChange.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.AcquirerChange.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void SimCardManagement()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.SimCardManage.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.SimCardManage.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationContractCreate()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.ContractCreate.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.ContractCreate.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationTerminalCreate()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.TerminalCreate.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.TerminalCreate.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationLocationCreate()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.LocationCreate.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.LocationCreate.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationCustomerCreate()
         {
-            Assert.IsTrue(_lobbyMenu.MassMutation.CustomerCreate.Displayed);
+            Assert.IsTrue(LobbyMenu.MassMutation.CustomerCreate.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void CustomerCreate()
         {
-            Assert.IsTrue(_lobbyMenu.Customer.CustomerCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
         }
     }
 }

@@ -7,26 +7,26 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Quit
     [TestClass]
     public class CustomerDeactivateTest
     {
-        private static CustomerView _customerView;
+        private static CustomerView CustomerView;
         private static CustomerDeactivation _customerDeactivation;
-        private static CustomerMenu _customerMenu;
+        private static CustomerMenu CustomerMenu;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerView = new CustomerView();
+            CustomerView = new CustomerView();
 
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
-            _customerMenu = new CustomerMenu();
+            CustomerMenu = new CustomerMenu();
             _customerDeactivation = new CustomerDeactivation();
         }
 
         [TestMethod]
         public void DeactivateCustomerAndCancel()
         {
-            _customerMenu.CustomerDeactivate.Click();
+            CustomerMenu.CustomerDeactivate.Click();
             _customerDeactivation.Cancel.Click();
-            // StringAssert.DoesNotMatch(_customerView.header,new RegExp("deactivated"));
+            // StringAssert.DoesNotMatch(CustomerView.header,new RegExp("deactivated"));
         }
     }
 }

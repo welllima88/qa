@@ -7,36 +7,30 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {
     public class SimCardView : WebObject
     {
-        public readonly SimCardElementView SimCardElement;
-        public readonly SimCardHistory SimCardHistory;
+        public static SimCardElementView SimCardElement;
+        public static SimCardHistory SimCardHistory;
 
-        public SimCardView()
-        {
-            SimCardElement = new SimCardElementView();
-            SimCardHistory = new SimCardHistory();
-        }
-
-        public IWebElement LockButton
+        public static IWebElement LockButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='lock']")); }
         }
 
-        public IWebElement UnlinkButton
+        public static IWebElement UnlinkButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='unlink']")); }
         }
 
-        public IWebElement EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")); }
         }
 
-        public Collection<ISimCardElement> SimCardList
+        public static Collection<ISimCardElement> SimCardList
         {
             get { throw new NotImplementedException("SIM LIST"); }
         }
 
-        public IWebElement CreateButton
+        public static IWebElement CreateButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
         }

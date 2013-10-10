@@ -1,35 +1,23 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 {
-    public class CustomerEdit : WebObject, ICustomer
+    public class CustomerEdit : WebObject
     {
-        private readonly CustomerCreate _customerCreate;
-        private readonly CustomerView _customerView;
-
-        public CustomerEdit()
+        public static IWebElement SaveButton
         {
-            _customerView = new CustomerView();
-            _customerCreate = new CustomerCreate();
+            get { return CustomerCreate.SaveButton; }
         }
 
-        #region ICustomerEdit Members
-
-        public IWebElement SaveButton
+        public static IWebElement CancelButton
         {
-            get { return _customerCreate.SaveButton; }
-        }
-
-        public IWebElement CancelButton
-        {
-            get { return _customerCreate.CancelButton; }
+            get { return CustomerCreate.CancelButton; }
         }
 
         public string Segment
         {
-            set { _customerCreate.Segment = value; }
+            set { CustomerCreate.Segment = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SegmentView)).Text; }
         }
 
@@ -38,54 +26,54 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { throw new NotSupportedException("Not available in create mode"); }
         }
 
-        public string CustomerName
+        public static string CustomerName
         {
-            set { _customerCreate.CustomerName = value; }
+            set { CustomerCreate.CustomerName = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerName)).GetAttribute("value"); }
         }
 
-        public string SapNumber
+        public static string SapNumber
         {
-            set { _customerCreate.SapNumber = value; }
+            set { CustomerCreate.SapNumber = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SapNumber)).GetAttribute("value"); }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
-            set { _customerCreate.CompanyName = value; }
+            set { CustomerCreate.CompanyName = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CompanyName)).GetAttribute("value"); }
         }
 
         public string Supplier
         {
-            get { return _customerView.Supplier; }
+            get { return CustomerView.Supplier; }
             set { throw new NotImplementedException(); }
         }
 
         public String CustomerNumber
         {
-            get { return _customerView.CustomerNumber; }
+            get { return CustomerView.CustomerNumber; }
         }
 
         public String SbsDebitNumber
         {
-            get { return _customerView.SbsDebitNumber; }
+            get { return CustomerView.SbsDebitNumber; }
         }
 
         public String SbsAdressNumber
         {
-            get { return _customerView.SbsAdressNumber; }
+            get { return CustomerView.SbsAdressNumber; }
         }
 
         public String SbsCurrency
         {
-            get { return _customerView.SbsCurrency; }
+            get { return CustomerView.SbsCurrency; }
             set { throw new NotImplementedException(); }
         }
 
         public String SbsBillingTenant
         {
-            get { return _customerView.SbsBillingTenant; }
+            get { return CustomerView.SbsBillingTenant; }
             set { throw new NotImplementedException(); }
         }
 
@@ -97,106 +85,104 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public string CategoryCode
         {
-            set { _customerCreate.CategoryCode = value; }
+            set { CustomerCreate.CategoryCode = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CategoryCode)).GetAttribute("value"); }
         }
 
-        public string Agency
+        public static string Agency
         {
-            set { _customerCreate.Agency = value; }
-            get { return _customerCreate.Agency; }
+            set { CustomerCreate.Agency = value; }
+            get { return CustomerCreate.Agency; }
         }
 
         public string SupportContract
         {
-            set { _customerCreate.SupportContract = value; }
-            get { return _customerCreate.SupportContract; }
+            set { CustomerCreate.SupportContract = value; }
+            get { return CustomerCreate.SupportContract; }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
-            set { _customerCreate.StreetNo = value; }
+            set { CustomerCreate.StreetNo = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.StreetName)).GetAttribute("value"); }
         }
 
-        public string Language
+        public static string Language
         {
-            set { _customerCreate.Language = value; }
-            get { return _customerCreate.Language; }
+            set { CustomerCreate.Language = value; }
+            get { return CustomerCreate.Language; }
         }
 
-        public string Country
+        public static string Country
         {
-            set { _customerCreate.Country = value; }
-            get { return _customerCreate.Country; }
+            set { CustomerCreate.Country = value; }
+            get { return CustomerCreate.Country; }
         }
 
-        public string Zip
+        public static string Zip
         {
-            set { _customerCreate.Zip = value; }
+            set { CustomerCreate.Zip = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Zip)).GetAttribute("value"); }
         }
 
-        public string City
+        public static string City
         {
-            set { _customerCreate.City = value; }
+            set { CustomerCreate.City = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.City)).GetAttribute("value"); }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
-            set { _customerCreate.AdressAddition = value; }
+            set { CustomerCreate.AdressAddition = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.AdressAddition)).GetAttribute("value"); }
         }
 
-        public string Po
+        public static string Po
         {
-            set { _customerCreate.Po = value; }
+            set { CustomerCreate.Po = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Po)).GetAttribute("value"); }
         }
 
-        public string Region
+        public static string Region
         {
-            set { _customerCreate.Region = value; }
+            set { CustomerCreate.Region = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Region)).GetAttribute("value"); }
         }
 
-        public string Telephone
+        public static string Telephone
         {
-            set { _customerCreate.Telephone = value; }
+            set { CustomerCreate.Telephone = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Telephone)).GetAttribute("value"); }
         }
 
-        public string Mobile
+        public static string Mobile
         {
-            set { _customerCreate.Mobile = value; }
+            set { CustomerCreate.Mobile = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Mobile)).GetAttribute("value"); }
         }
 
-        public string Fax
+        public static string Fax
         {
-            set { _customerCreate.Fax = value; }
+            set { CustomerCreate.Fax = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Fax)).GetAttribute("value"); }
         }
 
-        public string Email
+        public static string Email
         {
-            set { _customerCreate.Email = value; }
+            set { CustomerCreate.Email = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Email)).GetAttribute("value"); }
         }
 
-        public string Web
+        public static string Web
         {
-            set { _customerCreate.Web = value; }
+            set { CustomerCreate.Web = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).GetAttribute("value"); }
         }
 
         public string CashIntegrator
         {
-            set { _customerCreate.CashIntegrator = value; }
-            get { return _customerCreate.CashIntegrator; }
+            set { CustomerCreate.CashIntegrator = value; }
+            get { return CustomerCreate.CashIntegrator; }
         }
-
-        #endregion
     }
 }

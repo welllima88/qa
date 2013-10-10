@@ -4,74 +4,67 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class TerminalMenu : MenuObject
     {
-        public readonly TerminalAnalysisMenu AnalysisMenu;
-
-        public TerminalMenu()
-        {
-            AnalysisMenu = new TerminalAnalysisMenu();
-        }
-
-        public IWebElement Terminal
+        public static IWebElement Terminal
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Terminal)); }
         }
 
-        public IWebElement ContractCreate
+        public static IWebElement ContractCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_ContractCreate)); }
         }
 
-        public IWebElement InfotextCreate
+        public static IWebElement InfotextCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_InfotextCreate)); }
         }
 
-        public IWebElement TicketCreate
+        public static IWebElement TicketCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_TicketCreate)); }
         }
 
-        public IWebElement ServiceCenterCreate
+        public static IWebElement ServiceCenterCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_ServiceCenterCreate)); }
         }
 
-        public IWebElement PmsCreate
+        public static IWebElement PmsCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_PmsCreate)); }
         }
 
-        public IWebElement Edit
+        public static IWebElement Edit
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Edit)); }
         }
 
-        public IWebElement Deactivate
+        public static IWebElement Deactivate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Deactivate)); }
         }
 
-        public IWebElement Duplicate
+        public static IWebElement Duplicate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Duplicate)); }
         }
 
-        public IWebElement Replace
+        public static IWebElement Replace
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Replace)); }
         }
 
-        public IWebElement Tickets
+        public static IWebElement Tickets
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Tickets)); }
         }
 
-        public IWebElement Infotexts
+        public static IWebElement Infotexts
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Infotexts)); }
         }
 
-        public IWebElement Forms
+        public static IWebElement Forms
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalMenu_Forms)); }
         }

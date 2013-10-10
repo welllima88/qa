@@ -4,12 +4,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 {
     public class BillingAddressCreate : WebObject
     {
-        public string Country
+        public static string Country
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_CountryId")).Selector().SelectByText(value); }
         }
 
-        public string Zip
+        public static string Zip
         {
             set
             {
@@ -18,12 +18,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string City
+        public static string City
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_City")).TypeText(value); }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
             set
             {
@@ -32,17 +32,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Po
+        public static string Po
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_PO")).TypeText(value); }
         }
 
-        public string Region
+        public static string Region
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Region")).TypeText(value); }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             set
             {
@@ -51,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             set
             {
@@ -61,37 +61,37 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Fax
+        public static string Fax
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Fax")).TypeText(value); }
         }
 
-        public string Email
+        public static string Email
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Email")).TypeText(value); }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TypeText(value); }
         }
 
-        public string StreetName
+        public static string StreetName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Street")).TypeText(value); }
         }
 
-        public string Language
+        public static string Language
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LanguageId")).Selector().SelectByText(value); }
         }
 
-        public string Web
+        public static string Web
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Web")).TypeText(value); }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input[value=\"Speichern\"]")); }
         }

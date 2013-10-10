@@ -20,12 +20,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class ProcessTicketsTest
     {
-        private static LobbyView _lobbyView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
+            LobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -33,21 +33,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void ProcessTicketsContainer()
         {
-            Assert.IsTrue(_lobbyView.ProcessTickets.Container.Displayed);
+            Assert.IsTrue(LobbyView.ProcessTickets.Container.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void NewestProcessTickets()
         {
-            Assert.IsTrue(_lobbyView.ProcessTickets.Newest.Displayed);
+            Assert.IsTrue(LobbyView.ProcessTickets.Newest.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void OldestProcessTickets()
         {
-            Assert.IsTrue(_lobbyView.ProcessTickets.Oldest.Displayed);
+            Assert.IsTrue(LobbyView.ProcessTickets.Oldest.Displayed);
         }
     }
 }

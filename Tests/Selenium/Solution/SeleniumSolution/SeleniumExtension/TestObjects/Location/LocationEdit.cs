@@ -1,143 +1,129 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 {
-    public class LocationEdit : WebObject, ILocation
+    public class LocationEdit : WebObject
     {
-        private readonly LocationCreate _locationCreate;
-        private readonly LocationView _locationView;
-
-        public LocationEdit()
+        public static IWebElement SaveButton
         {
-            _locationCreate = new LocationCreate();
-            _locationView = new LocationView();
+            get { return LocationCreate.SaveButton; }
         }
 
-        public IWebElement SaveButton
-        {
-            get { return _locationCreate.SaveButton; }
-        }
-
-        public IWebElement CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
         }
 
-        #region ILocation Members
-
-        public string SapNumber
+        public static string SapNumber
         {
-            set { _locationCreate.SapNumber = value; }
-            get { return _locationCreate.SapNumber; }
+            set { LocationCreate.SapNumber = value; }
+            get { return LocationCreate.SapNumber; }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
-            set { _locationCreate.CompanyName = value; }
-            get { return _locationCreate.CompanyName; }
+            set { LocationCreate.CompanyName = value; }
+            get { return LocationCreate.CompanyName; }
         }
 
-        public String SbsDebitNumber
+        public static String SbsDebitNumber
         {
-            get { return _locationView.SbsDebitNumber; }
+            get { return LocationView.SbsDebitNumber; }
         }
 
-        public String SbsAdressNumber
+        public static String SbsAdressNumber
         {
-            get { return _locationView.SbsAdressNumber; }
+            get { return LocationView.SbsAdressNumber; }
         }
 
-        public String Ep2MerchantId
+        public static String Ep2MerchantId
         {
-            get { return _locationView.Ep2MerchantId; }
+            get { return LocationView.Ep2MerchantId; }
             set { throw new NotSupportedException(); }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
-            set { _locationCreate.StreetNo = value; }
-            get { return _locationCreate.StreetNo; }
+            set { LocationCreate.StreetNo = value; }
+            get { return LocationCreate.StreetNo; }
         }
 
-        public string Language
+        public static string Language
         {
-            set { _locationCreate.Language = value; }
-            get { return _locationCreate.Language; }
+            set { LocationCreate.Language = value; }
+            get { return LocationCreate.Language; }
         }
 
-        public string Country
+        public static string Country
         {
-            set { _locationCreate.Country = value; }
-            get { return _locationCreate.Country; }
+            set { LocationCreate.Country = value; }
+            get { return LocationCreate.Country; }
         }
 
-        public string Zip
+        public static string Zip
         {
-            set { _locationCreate.Zip = value; }
-            get { return _locationCreate.Zip; }
+            set { LocationCreate.Zip = value; }
+            get { return LocationCreate.Zip; }
         }
 
-        public string City
+        public static string City
         {
-            set { _locationCreate.City = value; }
-            get { return _locationCreate.City; }
+            set { LocationCreate.City = value; }
+            get { return LocationCreate.City; }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
-            set { _locationCreate.AdressAddition = value; }
-            get { return _locationCreate.AdressAddition; }
+            set { LocationCreate.AdressAddition = value; }
+            get { return LocationCreate.AdressAddition; }
         }
 
-        public string Po
+        public static string Po
         {
-            set { _locationCreate.Po = value; }
-            get { return _locationCreate.Po; }
+            set { LocationCreate.Po = value; }
+            get { return LocationCreate.Po; }
         }
 
-        public string Region
+        public static string Region
         {
-            set { _locationCreate.Region = value; }
-            get { return _locationCreate.Region; }
+            set { LocationCreate.Region = value; }
+            get { return LocationCreate.Region; }
         }
 
-        public string Telephone
+        public static string Telephone
         {
-            set { _locationCreate.Telephone = value; }
-            get { return _locationCreate.Telephone; }
+            set { LocationCreate.Telephone = value; }
+            get { return LocationCreate.Telephone; }
         }
 
-        public string Mobile
+        public static string Mobile
         {
-            set { _locationCreate.Mobile = value; }
-            get { return _locationCreate.Mobile; }
+            set { LocationCreate.Mobile = value; }
+            get { return LocationCreate.Mobile; }
         }
 
-        public string Fax
+        public static string Fax
         {
-            set { _locationCreate.Fax = value; }
-            get { return _locationCreate.Fax; }
+            set { LocationCreate.Fax = value; }
+            get { return LocationCreate.Fax; }
         }
 
-        public string Email
+        public static string Email
         {
-            set { _locationCreate.Email = value; }
-            get { return _locationCreate.Email; }
+            set { LocationCreate.Email = value; }
+            get { return LocationCreate.Email; }
         }
 
-        public string Web
+        public static string Web
         {
-            set { _locationCreate.Web = value; }
-            get { return _locationCreate.Web; }
+            set { LocationCreate.Web = value; }
+            get { return LocationCreate.Web; }
         }
 
-        public string Guid
+        public static string Guid
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.GUID)).Text; }
         }
-
-        #endregion
     }
 }

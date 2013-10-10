@@ -1,26 +1,16 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
-    public class ContactPersonEdit : WebObject, IContactPerson
+    public class ContactPersonEdit : WebObject
     {
-        private readonly ContactPersonCreate _contactPersonCreate;
-        private readonly ContactPersonView _contactPersonView;
-
-        public ContactPersonEdit()
-        {
-            _contactPersonCreate = new ContactPersonCreate();
-            _contactPersonView = new ContactPersonView();
-        }
-
-        public IWebElement CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
         }
@@ -32,63 +22,63 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         #region IContactEdit Members
 
-        public string CreateDate
+        public static string CreateDate
         {
-            get { return _contactPersonView.CreateDate; }
+            get { return ContactPersonView.CreateDate; }
         }
 
-        public string FirstName
+        public static string FirstName
         {
-            set { _contactPersonCreate.FirstName = value; }
-            get { return _contactPersonCreate.FirstName; }
+            set { ContactPersonCreate.FirstName = value; }
+            get { return ContactPersonCreate.FirstName; }
         }
 
-        public string Name
+        public static string Name
         {
-            set { _contactPersonCreate.Name = value; }
-            get { return _contactPersonCreate.Name; }
+            set { ContactPersonCreate.Name = value; }
+            get { return ContactPersonCreate.Name; }
         }
 
-        public string Salutation
+        public static string Salutation
         {
-            set { _contactPersonCreate.Salutation = value; }
-            get { return _contactPersonCreate.Salutation; }
+            set { ContactPersonCreate.Salutation = value; }
+            get { return ContactPersonCreate.Salutation; }
         }
 
-        public string Country
+        public static string Country
         {
-            set { _contactPersonCreate.Country = value; }
-            get { return _contactPersonCreate.Country; }
+            set { ContactPersonCreate.Country = value; }
+            get { return ContactPersonCreate.Country; }
         }
 
-        public string Language
+        public static string Language
         {
-            set { _contactPersonCreate.Language = value; }
-            get { return _contactPersonCreate.Language; }
+            set { ContactPersonCreate.Language = value; }
+            get { return ContactPersonCreate.Language; }
         }
 
-        public string Telephone
+        public static string Telephone
         {
-            set { _contactPersonCreate.Telephone = value; }
-            get { return _contactPersonCreate.Telephone; }
+            set { ContactPersonCreate.Telephone = value; }
+            get { return ContactPersonCreate.Telephone; }
         }
 
-        public string Mobile
+        public static string Mobile
         {
-            set { _contactPersonCreate.Mobile = value; }
-            get { return _contactPersonCreate.Mobile; }
+            set { ContactPersonCreate.Mobile = value; }
+            get { return ContactPersonCreate.Mobile; }
         }
 
-        public string Fax
+        public static string Fax
         {
-            set { _contactPersonCreate.Fax = value; }
-            get { return _contactPersonCreate.Fax; }
+            set { ContactPersonCreate.Fax = value; }
+            get { return ContactPersonCreate.Fax; }
         }
 
-        public string Email
+        public static string Email
         {
-            set { _contactPersonCreate.Email = value; }
-            get { return _contactPersonCreate.Email; }
+            set { ContactPersonCreate.Email = value; }
+            get { return ContactPersonCreate.Email; }
         }
 
         public string Web
@@ -97,40 +87,40 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { throw new NotSupportedException(); }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
-            set { _contactPersonCreate.StreetNo = value; }
-            get { return _contactPersonCreate.StreetNo; }
+            set { ContactPersonCreate.StreetNo = value; }
+            get { return ContactPersonCreate.StreetNo; }
         }
 
-        public string Po
+        public static string Po
         {
-            set { _contactPersonCreate.Po = value; }
-            get { return _contactPersonCreate.Po; }
+            set { ContactPersonCreate.Po = value; }
+            get { return ContactPersonCreate.Po; }
         }
 
-        public string Zip
+        public static string Zip
         {
-            set { _contactPersonCreate.Zip = value; }
-            get { return _contactPersonCreate.Zip; }
+            set { ContactPersonCreate.Zip = value; }
+            get { return ContactPersonCreate.Zip; }
         }
 
-        public string City
+        public static string City
         {
-            set { _contactPersonCreate.City = value; }
-            get { return _contactPersonCreate.City; }
+            set { ContactPersonCreate.City = value; }
+            get { return ContactPersonCreate.City; }
         }
 
-        public string Region
+        public static string Region
         {
-            set { _contactPersonCreate.Region = value; }
-            get { return _contactPersonCreate.Region; }
+            set { ContactPersonCreate.Region = value; }
+            get { return ContactPersonCreate.Region; }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
-            set { _contactPersonCreate.AddressAddition = value; }
-            get { return _contactPersonCreate.AddressAddition; }
+            set { ContactPersonCreate.AddressAddition = value; }
+            get { return ContactPersonCreate.AddressAddition; }
         }
 
         #endregion

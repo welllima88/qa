@@ -2,20 +2,21 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 {
     [TestClass]
     public class SimCardCreateTest
     {
-        private static SimCardView _simCardView;
-        private static LobbyView _lobby;
+        private static SimCardView SimCardView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _simCardView = new SimCardView();
-            _lobby = new LobbyView();
+            SimCardView = new SimCardView();
+            LobbyView = new LobbyView();
         }
 
         [TestInitialize]
@@ -27,20 +28,20 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         [TestMethod]
         public void CheckSimCardView()
         {
-            StringAssert.Matches(_simCardView.SimCardElement.MobileNumber, new Regex(@"\d{10}"));
-            StringAssert.Matches(_simCardView.SimCardElement.SimCardNumber, new Regex(@"\d{18}"));
-            StringAssert.Matches(_simCardView.SimCardElement.Pin, new Regex(@"\d{4}"));
-            StringAssert.Matches(_simCardView.SimCardElement.Puk, new Regex(@"\d{8}"));
-            StringAssert.Matches(_simCardView.SimCardElement.TerminalId, new Regex(@"\d+"));
-            Assert.IsNotNull(_simCardView.SimCardElement.Status);
-            Assert.IsNotNull(_simCardView.SimCardElement.Region);
-            Assert.IsNotNull(_simCardView.SimCardElement.Usage);
+            StringAssert.Matches(SimCardView.SimCardElement.MobileNumber, new Regex(@"\d{10}"));
+            StringAssert.Matches(SimCardView.SimCardElement.SimCardNumber, new Regex(@"\d{18}"));
+            StringAssert.Matches(SimCardView.SimCardElement.Pin, new Regex(@"\d{4}"));
+            StringAssert.Matches(SimCardView.SimCardElement.Puk, new Regex(@"\d{8}"));
+            StringAssert.Matches(SimCardView.SimCardElement.TerminalId, new Regex(@"\d+"));
+            Assert.IsNotNull(SimCardView.SimCardElement.Status);
+            Assert.IsNotNull(SimCardView.SimCardElement.Region);
+            Assert.IsNotNull(SimCardView.SimCardElement.Usage);
         }
 
         [TestMethod]
-        public void SimCardMenu()
+        public void SimCardMenuCheck()
         {
-            Assert.IsTrue(_lobby.Menu.SimCard.SimCardManagement.Displayed);
+            Assert.IsTrue(SimCardMenu.SimCardManagement.Displayed);
         }
 
         [TestMethod]

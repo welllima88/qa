@@ -20,12 +20,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class MetaNavigationBarTest
     {
-        private static LobbyView _lobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
+            new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -33,39 +31,39 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void User()
         {
-            Assert.IsTrue(_lobbyView.MetaNavBar.User.Displayed);
+            Assert.IsTrue(MetaNavBar.User.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Logout()
         {
-            Assert.IsTrue(_lobbyView.MetaNavBar.Logout.Displayed);
+            Assert.IsTrue(MetaNavBar.Logout.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Languages()
         {
-            Assert.IsTrue(_lobbyView.MetaNavBar.Languages.Displayed);
+            Assert.IsTrue(MetaNavBar.Languages.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void LanguageGerman()
         {
-            _lobbyView.MetaNavBar.Languages.Click();
-            Assert.IsTrue(_lobbyView.MetaNavBar.Language("Deutsch").Displayed);
-            _lobbyView.MetaNavBar.Languages.Click();
+            MetaNavBar.Languages.Click();
+            Assert.IsTrue(MetaNavBar.Language("Deutsch").Displayed);
+            MetaNavBar.Languages.Click();
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void LanguageEnglish()
         {
-            _lobbyView.MetaNavBar.Languages.Click();
-            Assert.IsTrue(_lobbyView.MetaNavBar.Language("English").Enabled); //Enabled, if displayed is making problems
-            _lobbyView.MetaNavBar.Languages.Click();
+            MetaNavBar.Languages.Click();
+            Assert.IsTrue(MetaNavBar.Language("English").Enabled); //Enabled, if displayed is making problems
+            MetaNavBar.Languages.Click();
         }
     }
 }

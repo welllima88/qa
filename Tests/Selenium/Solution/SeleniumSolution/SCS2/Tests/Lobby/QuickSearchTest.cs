@@ -20,12 +20,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class QuickSearchTest
     {
-        private static LobbyView _lobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -33,14 +30,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void SearchField()
         {
-            Assert.IsTrue(_lobbyView.QuickSearch.SearchField.Displayed);
+            Assert.IsTrue(QuickSearch.SearchField.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void SearchButton()
         {
-            Assert.IsTrue(_lobbyView.QuickSearch.SearchButton.Displayed);
+            Assert.IsTrue(QuickSearch.SearchButton.Displayed);
         }
     }
 }

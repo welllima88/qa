@@ -4,32 +4,32 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class CustomerMenu : MenuObject
     {
-        public IWebElement Customer
+        public static IWebElement Customer
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Customer)); }
         }
 
-        public IWebElement CustomerCreate
+        public static IWebElement CustomerCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_CustomerCreate)); }
         }
 
-        public IWebElement LocationCreate
+        public static IWebElement LocationCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_LocationCreate)); }
         }
 
-        public IWebElement TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_TerminalCreate)); }
         }
 
-        public IWebElement UserCreate
+        public static IWebElement UserCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_UserCreate)); }
         }
 
-        public IWebElement CustomerEdit
+        public static IWebElement CustomerEdit
         {
             get
             {
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement CustomerDeactivate
+        public static IWebElement CustomerDeactivate
         {
             get
             {
@@ -48,7 +48,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement LocationsOfCustomer
+        public static IWebElement LocationsOfCustomer
         {
             get
             {
@@ -58,7 +58,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement TerminalsOfCustomerLocation
+        public static IWebElement TerminalsOfCustomerLocation
         {
             get
             {
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement AllMpds
+        public static IWebElement AllMpds
         {
             get
             {
@@ -77,7 +77,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement AllTerminals
+        public static IWebElement AllTerminals
         {
             get
             {
@@ -86,7 +86,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement Tickets
+        public static IWebElement Tickets
         {
             get
             {
@@ -95,7 +95,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement Users
+        public static IWebElement Users
         {
             get
             {
@@ -105,7 +105,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement Contacts
+        public static IWebElement Contacts
         {
             get
             {
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement ContactCreate
+        public static IWebElement ContactCreate
         {
             get
             {
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement BillingAdresses
+        public static IWebElement BillingAdresses
         {
             get
             {
@@ -134,7 +134,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement BillingAdressCreate
+        public static IWebElement BillingAdressCreate
         {
             get
             {
@@ -144,7 +144,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             }
         }
 
-        public IWebElement BillingAddressEdit
+        public static IWebElement BillingAddressEdit
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_BillingAddressEdit)); }
         }

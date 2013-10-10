@@ -6,12 +6,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class FormAlert : WebObject
     {
-        public List<string> FormAlertList
+        public static List<string> FormAlertList
         {
             get { return WebDriver.WebElementsAsStringList(FormAlertElements); }
         }
 
-        public ReadOnlyCollection<IWebElement> FormAlertElements
+        public static ReadOnlyCollection<IWebElement> FormAlertElements
         {
             get { return WebDriver.FindElements(By.CssSelector(CommonRes.FormAlert_FormAlertElements)); }
         }

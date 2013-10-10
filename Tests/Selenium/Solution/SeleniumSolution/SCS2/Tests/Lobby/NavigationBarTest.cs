@@ -20,12 +20,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class NavigationBarTest
     {
-        private static LobbyView _lobbyView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
+            LobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -33,46 +33,46 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void Lobby()
         {
-            Assert.IsTrue(_lobbyView.NavigationBar.Lobby.Displayed);
+            Assert.IsTrue(NavigationBar.Lobby.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Administration()
         {
-            Assert.IsTrue(_lobbyView.NavigationBar.Administration.Displayed);
+            Assert.IsTrue(LobbyView.NavigationBar.Administration.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Reporting()
         {
-            Assert.IsTrue(_lobbyView.NavigationBar.Reporting.Displayed);
+            Assert.IsTrue(NavigationBar.Reporting.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MoreMenu()
         {
-            Assert.IsTrue(_lobbyView.NavigationBar.MoreMenu.Displayed);
+            Assert.IsTrue(NavigationBar.MoreMenu.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Help()
         {
-            // _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobbyView.NavigationBar.Help.Enabled);
-            // _lobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
+            // LobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
+            Assert.IsTrue(NavigationBar.Help.Enabled);
+            // LobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void SystemInfo()
         {
-            // _lobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(_lobbyView.NavigationBar.SystemInfo.Enabled); // workaround: enabled instead of displayed
-            // _lobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
+            // LobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
+            Assert.IsTrue(NavigationBar.SystemInfo.Enabled); // workaround: enabled instead of displayed
+            // LobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
     }
 }

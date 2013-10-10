@@ -6,32 +6,20 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
     [TestClass]
     public class MenusTest
     {
-        private static CustomerMenu _customerMenu;
-        private static LocationMenu _locationMenu;
-        private static TerminalMenu _terminalMenu;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            _customerMenu = new CustomerMenu();
-            _locationMenu = new LocationMenu();
-            _terminalMenu = new TerminalMenu();
-        }
-
         [TestMethod]
         public void CustomerMenuTest()
         {
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
-            CustomerMenuCheck(_customerMenu);
+            CustomerMenuCheck();
         }
 
         [TestMethod]
         public void LocationMenuTest()
         {
             TestLauncher.Navigate("/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
-            LocationMenuCheck(_locationMenu);
-            _customerMenu.Customer.Click();
-            CustomerMenuCheck(_customerMenu);
+            LocationMenuCheck();
+            CustomerMenu.Customer.Click();
+            CustomerMenuCheck();
         }
 
         [TestMethod]
@@ -40,92 +28,62 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
             TestLauncher.Navigate(
                 "/Pages/Terminal/TerminalView.aspx?PageMode=view&CustomerId=400805&TerminalId=30980051");
 
-            TerminalMenuCheck(_terminalMenu);
-
-            //CustomerMenuCheck(_customerMenu);
+            //CustomerMenuCheck(CustomerMenu);
 
             //// depending, where the terminal is created a location menu is displayed
-            //if (_locationMenu.Location.Displayed)
+            //if (LocationMenu.Location.Displayed)
             //{
-            //    LocationMenuCheck(_locationMenu);
+            //    LocationMenuCheck(LocationMenu);
             //}
         }
 
-        private static void TerminalMenuCheck(TerminalMenu terminalMenu)
-        {
-            Assert.IsTrue(terminalMenu.Terminal.Displayed);
-            Assert.IsTrue(terminalMenu.ContractCreate.Displayed);
-            Assert.IsTrue(terminalMenu.InfotextCreate.Displayed);
-            Assert.IsTrue(terminalMenu.TicketCreate.Displayed);
-            Assert.IsTrue(terminalMenu.ServiceCenterCreate.Displayed);
-            Assert.IsTrue(terminalMenu.PmsCreate.Displayed);
-            Assert.IsTrue(terminalMenu.Edit.Displayed);
-            Assert.IsTrue(terminalMenu.Deactivate.Displayed);
-            Assert.IsTrue(terminalMenu.Duplicate.Displayed);
-            Assert.IsTrue(terminalMenu.Replace.Displayed);
-            Assert.IsTrue(terminalMenu.Tickets.Displayed);
-            Assert.IsTrue(terminalMenu.Infotexts.Displayed);
-            Assert.IsTrue(terminalMenu.Forms.Displayed);
-
-            terminalMenu.AnalysisMenu.TerminalAnalysis.Click();
-
-            Assert.IsTrue(terminalMenu.AnalysisMenu.GklpBlock.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.SetFastInitFlag.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.ResetComAdresses.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.TerminalEvents.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.FoMessages.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.FoQueries.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.Ep2TraceLog.Displayed);
-            Assert.IsTrue(terminalMenu.AnalysisMenu.SendOverview.Displayed);
-        }
-
         // change to a more generic solution (list of elements <testobj>)
-        public void CustomerMenuCheck(CustomerMenu customerMenu)
+        public static void CustomerMenuCheck()
         {
-            Assert.IsTrue(customerMenu.CustomerCreate.Displayed);
-            Assert.IsTrue(customerMenu.CustomerEdit.Displayed);
-            Assert.IsTrue(customerMenu.CustomerDeactivate.Displayed);
-            Assert.IsTrue(customerMenu.Customer.Displayed);
+            Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.CustomerEdit.Displayed);
+            Assert.IsTrue(CustomerMenu.CustomerDeactivate.Displayed);
+            Assert.IsTrue(CustomerMenu.Customer.Displayed);
 
-            Assert.IsTrue(customerMenu.LocationsOfCustomer.Displayed);
-            Assert.IsTrue(customerMenu.LocationCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.LocationsOfCustomer.Displayed);
+            Assert.IsTrue(CustomerMenu.LocationCreate.Displayed);
 
-            Assert.IsTrue(customerMenu.BillingAdresses.Displayed);
-            Assert.IsTrue(customerMenu.BillingAdressCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.BillingAdresses.Displayed);
+            Assert.IsTrue(CustomerMenu.BillingAdressCreate.Displayed);
 
-            Assert.IsTrue(customerMenu.Tickets.Displayed);
+            Assert.IsTrue(CustomerMenu.Tickets.Displayed);
 
-            Assert.IsTrue(customerMenu.Contacts.Displayed);
-            Assert.IsTrue(customerMenu.ContactCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.Contacts.Displayed);
+            Assert.IsTrue(CustomerMenu.ContactCreate.Displayed);
 
-            Assert.IsTrue(customerMenu.Users.Displayed);
-            Assert.IsTrue(customerMenu.UserCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.Users.Displayed);
+            Assert.IsTrue(CustomerMenu.UserCreate.Displayed);
 
-            Assert.IsTrue(customerMenu.TerminalCreate.Displayed);
-            Assert.IsTrue(customerMenu.TerminalsOfCustomerLocation.Displayed);
-            Assert.IsTrue(customerMenu.TerminalsOfCustomerLocation.Displayed);
+            Assert.IsTrue(CustomerMenu.TerminalCreate.Displayed);
+            Assert.IsTrue(CustomerMenu.TerminalsOfCustomerLocation.Displayed);
+            Assert.IsTrue(CustomerMenu.TerminalsOfCustomerLocation.Displayed);
         }
 
-        public void LocationMenuCheck(LocationMenu locationMenu)
+        public static void LocationMenuCheck()
         {
-            Assert.IsTrue(locationMenu.Location.Displayed);
-            Assert.IsTrue(locationMenu.LocationEdit.Displayed);
-            Assert.IsTrue(locationMenu.LocationQuit.Displayed);
+            Assert.IsTrue(LocationMenu.Location.Displayed);
+            Assert.IsTrue(LocationMenu.LocationEdit.Displayed);
+            Assert.IsTrue(LocationMenu.LocationQuit.Displayed);
 
-            Assert.IsTrue(locationMenu.Contacts.Displayed);
-            Assert.IsTrue(locationMenu.ContactCreate.Displayed);
+            Assert.IsTrue(LocationMenu.Contacts.Displayed);
+            Assert.IsTrue(LocationMenu.ContactCreate.Displayed);
 
-            Assert.IsTrue(locationMenu.InfotextCreate.Displayed);
-            Assert.IsTrue(locationMenu.Infotexts.Displayed);
+            Assert.IsTrue(LocationMenu.InfotextCreate.Displayed);
+            Assert.IsTrue(LocationMenu.Infotexts.Displayed);
 
-            Assert.IsTrue(locationMenu.Terminals.Displayed);
-            Assert.IsTrue(locationMenu.TerminalCreate.Displayed);
+            Assert.IsTrue(LocationMenu.Terminals.Displayed);
+            Assert.IsTrue(LocationMenu.TerminalCreate.Displayed);
         }
 
-        public void ContactMenuCheck(ContactMenu contactMenu)
+        public static void ContactMenuCheck()
         {
-            Assert.IsTrue(contactMenu.Contact.Displayed);
-            Assert.IsTrue(contactMenu.ContactEdit.Displayed);
+            Assert.IsTrue(ContactMenu.Contact.Displayed);
+            Assert.IsTrue(ContactMenu.ContactEdit.Displayed);
         }
     }
 }

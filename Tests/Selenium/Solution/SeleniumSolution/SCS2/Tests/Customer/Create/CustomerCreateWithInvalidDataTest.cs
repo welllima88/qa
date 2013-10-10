@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -9,142 +8,128 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateWithInvalidDataTest
     {
-        private static CustomerCreate _customerCreate;
-        private static FormAlert _formAlert;
-        private static CustomerMenu _customerMenu;
-
-        private static List<string> _formAlerts;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-
-            _customerMenu = new CustomerMenu();
-            _customerCreate = new CustomerCreate();
-            _formAlert = new FormAlert();
-
             TestLauncher.Navigate("");
 
-            _customerMenu.CustomerCreate.Click();
+            CustomerMenu.CustomerCreate.Click();
 
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerCreate.CustomerName = "SYR Sele Kunde A$°";
+            CustomerCreate.Supplier = "SIX Payment Services AG";
+            CustomerCreate.SbsCurrency = "EUR";
+            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
+            CustomerCreate.CustomerName = "SYR Sele Kunde A$°";
 
-            _customerCreate.CompanyName = "SYR Sele Firma A$°";
-            _customerCreate.CustomerNumber = "^@}$°";
-            _customerCreate.StreetNo = "Hardturmstr. 201$°";
-            _customerCreate.Zip = "802$°";
-            _customerCreate.City = "Zürich$°";
-            _customerCreate.Po = "PFO1$°";
-            _customerCreate.AdressAddition = "Etage 3$°";
-            _customerCreate.Region = "Reg 3[]$°";
-            _customerCreate.SapNumber = "444$°";
-            _customerCreate.Ep2MerchantId = "12DDFF_3-3";
-            _customerCreate.Agency = "Albert Brun & Partner";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
-            _customerCreate.Email = "marc.siegmund@six-grou$°p.com";
-            _customerCreate.Telephone = "0031 58 399 6237$";
-            _customerCreate.Mobile = "0032 58 399 6237$";
-            _customerCreate.Fax = "0033 58 399 6237$";
-            _customerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            CustomerCreate.CompanyName = "SYR Sele Firma A$°";
+            CustomerCreate.CustomerNumber = "^@}$°";
+            CustomerCreate.StreetNo = "Hardturmstr. 201$°";
+            CustomerCreate.Zip = "802$°";
+            CustomerCreate.City = "Zürich$°";
+            CustomerCreate.Po = "PFO1$°";
+            CustomerCreate.AdressAddition = "Etage 3$°";
+            CustomerCreate.Region = "Reg 3[]$°";
+            CustomerCreate.SapNumber = "444$°";
+            CustomerCreate.Ep2MerchantId = "12DDFF_3-3";
+            CustomerCreate.Agency = "Albert Brun & Partner";
+            CustomerCreate.Language = "Deutsch [de]";
+            CustomerCreate.Country = "Schweiz [CH]";
+            CustomerCreate.Email = "marc.siegmund@six-grou$°p.com";
+            CustomerCreate.Telephone = "0031 58 399 6237$";
+            CustomerCreate.Mobile = "0032 58 399 6237$";
+            CustomerCreate.Fax = "0033 58 399 6237$";
+            CustomerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
 
-            _customerCreate.SaveButton.Click();
-
-            _formAlerts = _formAlert.FormAlertList;
+            CustomerCreate.SaveButton.Click();
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCustomerNameFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Kundenname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCustomerNumberFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Kundennummer: Ihre Eingabe ist ungültig!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer: Ihre Eingabe ist ungültig!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCompanyNameFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidAdressAdditionFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Zusatz: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Zusatz: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidTelephoneFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Telefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Telefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidMobileFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Mobiltelefon: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Mobiltelefon: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidFaxFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Fax: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Fax: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidStreetNumberFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidZipFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "PLZ: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidPoFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Postfach: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Postfach: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidCityFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Ort: Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidRegionFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidEmailFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Email: Dies ist keine gültige E-Mail Adresse!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Email: Dies ist keine gültige E-Mail Adresse!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidWebFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Web: Dies ist keine gültige Web Adresse!");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Dies ist keine gültige Web Adresse!");
         }
 
         [TestMethod]
         public void CreateCustomerWithInvalidEp2MerchantIdFailed()
         {
-            CollectionAssert.Contains(_formAlerts, "Dies ist keine gültige EP2 Händlernummer.");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Dies ist keine gültige EP2 Händlernummer.");
         }
     }
 }

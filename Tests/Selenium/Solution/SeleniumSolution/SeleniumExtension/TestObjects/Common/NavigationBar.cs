@@ -4,7 +4,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class NavigationBar : WebObject
     {
-        public IWebElement Lobby
+        public static IWebElement Lobby
         {
             get
             {
@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public IWebElement Reporting
+        public static IWebElement Reporting
         {
             get
             {
@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public IWebElement MoreMenu
+        public static IWebElement MoreMenu
         {
             get
             {
@@ -44,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public IWebElement Help
+        public static IWebElement Help
         {
             get
             {
@@ -54,12 +54,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public IWebElement SystemInfo
+        public static IWebElement SystemInfo
         {
             get { return WebDriver.FindElement(By.CssSelector("div.menuMore>a.last")); }
         }
 
-        public IWebElement Current
+        public static IWebElement Current
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.NavigationBar_Current)); }
         }

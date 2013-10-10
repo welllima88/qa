@@ -20,12 +20,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class FooterTest
     {
-        private static LobbyView _lobbyView;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _lobbyView = new LobbyView();
+            LobbyView = new LobbyView();
             TestLauncher.Navigate("");
         }
 
@@ -33,35 +33,35 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void Copyright()
         {
-            Assert.IsTrue(_lobbyView.Footer.Copyright.Displayed);
+            Assert.IsTrue(LobbyView.Footer.Copyright.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Disclaimer()
         {
-            Assert.IsTrue(_lobbyView.Footer.Disclaimer.Displayed);
+            Assert.IsTrue(LobbyView.Footer.Disclaimer.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Feedback()
         {
-            Assert.IsTrue(_lobbyView.Footer.Feedback.Displayed);
+            Assert.IsTrue(LobbyView.Footer.Feedback.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void PrintPage()
         {
-            Assert.IsTrue(_lobbyView.Footer.PrintPage.Displayed);
+            Assert.IsTrue(LobbyView.Footer.PrintPage.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void ScrollUp()
         {
-            Assert.IsTrue(_lobbyView.Footer.ScrollUp.Displayed);
+            Assert.IsTrue(LobbyView.Footer.ScrollUp.Displayed);
         }
     }
 }

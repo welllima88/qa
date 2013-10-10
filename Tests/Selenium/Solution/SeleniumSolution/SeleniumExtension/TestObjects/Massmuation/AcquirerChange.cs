@@ -5,27 +5,27 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
     public class AcquirerChange : WebObject
 
     {
-        public string Title
+        public static string Title
         {
             get { return WebDriver.FindElement(By.CssSelector("td#content>h1")).Text; }
         }
 
-        public string Description
+        public static string Description
         {
             get { return WebDriver.FindElement(By.CssSelector("td#content div>p")).Text; }
         }
 
-        public IWebElementAdapter FileChooser
+        public static IWebElementAdapter FileChooser
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content input[name='filehandle']")); }
         }
 
-        public IWebElementAdapter FileUploadButton
+        public static IWebElementAdapter FileUploadButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#upload")); }
         }
 
-        public string DownloadTemplate
+        public static string DownloadTemplate
         {
             get { return WebDriver.FindElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text; }
         }

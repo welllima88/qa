@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -9,51 +8,39 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateWithMissingDataTest
     {
-        private static CustomerCreate _customerCreate;
-        private static FormAlert _formAlert;
-        private static CustomerMenu _customerMenu;
-
-        private List<string> _formAlerts;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _customerCreate = new CustomerCreate();
-            _formAlert = new FormAlert();
-            TestLauncher.Navigate("");
-
-            _customerMenu.CustomerCreate.Click();
-
-            // Suggester set once, because not in focus of tests:
+            TestLauncher.Navigate();
+            CustomerMenu.CustomerCreate.Click();
         }
 
         [TestInitialize]
         public void TestInit()
         {
-            _customerCreate.CustomerName = "SYR Sele Kunde A";
-            _customerCreate.Supplier = "SIX Payment Services AG";
-            _customerCreate.SbsCurrency = "EUR";
-            _customerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
+            CustomerCreate.CustomerName = "SYR Sele Kunde A";
+            CustomerCreate.Supplier = "SIX Payment Services AG";
+            CustomerCreate.SbsCurrency = "EUR";
+            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
 
-            _customerCreate.CompanyName = "SYR Sele Firma A";
-            _customerCreate.StreetNo = "Hardturmstr. 201";
-            _customerCreate.Zip = "8021";
-            _customerCreate.City = "Zürich";
-            _customerCreate.Po = "PFO1";
-            _customerCreate.AdressAddition = "Etage 3";
-            _customerCreate.Region = "Reg 3";
-            _customerCreate.SapNumber = "4440";
+            CustomerCreate.CompanyName = "SYR Sele Firma A";
+            CustomerCreate.StreetNo = "Hardturmstr. 201";
+            CustomerCreate.Zip = "8021";
+            CustomerCreate.City = "Zürich";
+            CustomerCreate.Po = "PFO1";
+            CustomerCreate.AdressAddition = "Etage 3";
+            CustomerCreate.Region = "Reg 3";
+            CustomerCreate.SapNumber = "4440";
 
-            _customerCreate.Agency = "Albert Brun & Partner";
+            CustomerCreate.Agency = "Albert Brun & Partner";
 
-            _customerCreate.Email = "marc.siegmund@six-group.com";
-            _customerCreate.Telephone = "0031 58 399 6237";
-            _customerCreate.Mobile = "0032 58 399 6237";
-            _customerCreate.Fax = "0033 58 399 6237";
-            _customerCreate.Web = "www.six-group.com/de-intern";
-            _customerCreate.Language = "Deutsch [de]";
-            _customerCreate.Country = "Schweiz [CH]";
+            CustomerCreate.Email = "marc.siegmund@six-group.com";
+            CustomerCreate.Telephone = "0031 58 399 6237";
+            CustomerCreate.Mobile = "0032 58 399 6237";
+            CustomerCreate.Fax = "0033 58 399 6237";
+            CustomerCreate.Web = "www.six-group.com/de-intern";
+            CustomerCreate.Language = "Deutsch [de]";
+            CustomerCreate.Country = "Schweiz [CH]";
         }
 
         [TestCleanup]
@@ -69,67 +56,61 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutCustomerNameFailed()
         {
-            _customerCreate.CustomerName = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.CustomerName = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Kundenname: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundenname: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateCustomerWithoutCompanyNameFailed()
         {
-            _customerCreate.CompanyName = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.CompanyName = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateCustomerWithoutStreetAndNumberFailed()
         {
-            _customerCreate.StreetNo = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.StreetNo = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Strasse / Nr: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateCustomerWithoutCityFailed()
         {
-            _customerCreate.City = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.City = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "Ort: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateCustomerWithoutZipFailed()
         {
-            _customerCreate.Zip = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.Zip = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            Assert.AreEqual(1, _formAlerts.Count);
-            CollectionAssert.Contains(_formAlerts, "PLZ: Dies ist ein Pflichtfeld!");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
         [TestMethod]
         public void CreateCustomerWithoutMandantFailed()
         {
-            _customerCreate.Supplier = "";
-            _customerCreate.SaveButton.Click();
+            CustomerCreate.Supplier = "";
+            CustomerCreate.SaveButton.Click();
 
-            _formAlerts = _formAlert.FormAlertList;
-            // Removed: thx to suggester: Assert.IsTrue(_formAlerts.Count == 1);
-            CollectionAssert.Contains(_formAlerts, "Mandant: Dies ist ein Pflichtfeld!");
+            // Removed: thx to suggester: Assert.IsTrue(FormAlert.FormAlertList.Count == 1);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Mandant: Dies ist ein Pflichtfeld!");
         }
     }
 }

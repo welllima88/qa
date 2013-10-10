@@ -77,20 +77,17 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
             var tb = new TestDirector();
             IWebDriverAdapter driver = tb.PrepareBrowser();
 
-            var customerMenu = new CustomerMenu();
-            var customerCreate = new CustomerCreate();
+            CustomerMenu.CustomerCreate.Click();
+            CustomerCreate.CustomerName = "Selenium Test will cancel";
+            CustomerCreate.Supplier = "SIX Payment Services AG";
+            CustomerCreate.SbsBillingTenant = "SIX Payment Services AG";
+            CustomerCreate.StreetNo = "Hardturmstr. 201";
+            CustomerCreate.Zip = "5555";
+            CustomerCreate.City = "Zürich";
+            CustomerCreate.SbsCurrency = "EUR";
 
-            customerMenu.CustomerCreate.Click();
-            customerCreate.CustomerName = "Selenium Test will cancel";
-            customerCreate.Supplier = "SIX Payment Services AG";
-            customerCreate.SbsBillingTenant = "SIX Payment Services AG";
-            customerCreate.StreetNo = "Hardturmstr. 201";
-            customerCreate.Zip = "5555";
-            customerCreate.City = "Zürich";
-            customerCreate.SbsCurrency = "EUR";
-
-            customerCreate.CancelButton.Click();
-            Assert.IsTrue(customerMenu.CustomerCreate.Displayed);
+            CustomerCreate.CancelButton.Click();
+            Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
 
             tb.ShutDownBrowser();
         }

@@ -8,124 +8,124 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMinimalInputTest
     {
-        private static ContactPersonCreate _contactPersonCreate;
-        private static ContactPersonView _contactPersonView;
+        private static ContactPersonCreate ContactPersonCreate;
+        private static ContactPersonView ContactPersonView;
         private static RecentElements _recentElements;
-        private static CustomerMenu _customerMenu;
-        private static LobbyView _lobby;
+        private static CustomerMenu CustomerMenu;
+        private static LobbyView LobbyView;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _contactPersonCreate = new ContactPersonCreate();
-            _contactPersonView = new ContactPersonView();
+            CustomerMenu = new CustomerMenu();
+            ContactPersonCreate = new ContactPersonCreate();
+            ContactPersonView = new ContactPersonView();
             _recentElements = new RecentElements();
-            _lobby = new LobbyView();
+            LobbyView = new LobbyView();
 
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
-            _customerMenu.ContactCreate.Click();
+            CustomerMenu.ContactCreate.Click();
 
-            _contactPersonCreate.FirstName = "Marc";
-            _contactPersonCreate.Name = "Siegmund SYR AUTO";
-            _contactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            _contactPersonCreate.Zip = "55555";
-            _contactPersonCreate.City = "Berlin";
+            ContactPersonCreate.FirstName = "Marc";
+            ContactPersonCreate.Name = "Siegmund SYR AUTO";
+            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
+            ContactPersonCreate.Zip = "55555";
+            ContactPersonCreate.City = "Berlin";
 
-            _contactPersonCreate.SaveButton.Click();
+            ContactPersonCreate.SaveButton.Click();
         }
 
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc", _contactPersonView.FirstName);
+            Assert.AreEqual("Marc", ContactPersonView.FirstName);
         }
 
         [TestMethod]
         public void LastName()
         {
-            Assert.AreEqual("Siegmund SYR AUTO", _contactPersonView.Name);
+            Assert.AreEqual("Siegmund SYR AUTO", ContactPersonView.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            StringAssert.Contains(_contactPersonView.Language, "[de]");
+            StringAssert.Contains(ContactPersonView.Language, "[de]");
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual("", _contactPersonView.Telephone);
+            Assert.AreEqual("", ContactPersonView.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual("", _contactPersonView.Mobile);
+            Assert.AreEqual("", ContactPersonView.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual("", _contactPersonView.Fax);
+            Assert.AreEqual("", ContactPersonView.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual("", _contactPersonView.Email);
+            Assert.AreEqual("", ContactPersonView.Email);
         }
 
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual("Kontakt-Weg 1", _contactPersonView.StreetNo);
+            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual("", _contactPersonView.Po);
+            Assert.AreEqual("", ContactPersonView.Po);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("55555", _contactPersonView.Zip);
+            Assert.AreEqual("55555", ContactPersonView.Zip);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.AreEqual("", _contactPersonView.Region);
+            Assert.AreEqual("", ContactPersonView.Region);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("Berlin", _contactPersonView.City);
+            Assert.AreEqual("Berlin", ContactPersonView.City);
         }
 
         [TestMethod]
         public void Country()
         {
-            StringAssert.Contains(_contactPersonView.Country, "[CH]");
+            StringAssert.Contains(ContactPersonView.Country, "[CH]");
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("", _contactPersonView.AddressAddition);
+            Assert.AreEqual("", ContactPersonView.AddressAddition);
         }
 
         [TestMethod]
-        public void RecentElements()
+        public void RecentElementsCheck()
         {
             string url = TestLauncher.TestDirector.WebDriver.Url;
-            _lobby.NavigationBar.Lobby.Click();
-            _recentElements.MostRecent.Click();
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
             Assert.AreEqual(TestLauncher.TestDirector.WebDriver.Url, url, false);
         }
     }

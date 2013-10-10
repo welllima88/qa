@@ -4,10 +4,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
 {
     public class TerminalView : WebObject
     {
-        public Article Article;
-        public Base Base;
+        public static Article Article;
+        public static Base Base;
+        public static Parameter Parameter;
         public Brands Brands;
-        public Parameter Parameter;
 
         public TerminalView()
         {

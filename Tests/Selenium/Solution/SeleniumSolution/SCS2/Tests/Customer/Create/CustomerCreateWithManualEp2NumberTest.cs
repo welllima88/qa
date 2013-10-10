@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -9,9 +8,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateWithManualEp2NumberTest
     {
-        private static CustomerCreate _customerCreate;
-        private static CustomerMenu _customerMenu;
-
         private static string _adressAddition;
         private static string _cashIntegrator;
         private static string _agency;
@@ -38,16 +34,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         private static string _telephone;
         private static string _web;
         private static string _zip;
-        private static FormAlert _formAlerts;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _customerCreate = new CustomerCreate();
-            _formAlerts = new FormAlert();
-
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _dt = TestLauncher.GenerateTestId();
 
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";
@@ -76,68 +67,68 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 
             TestLauncher.Navigate("");
 
-            _customerMenu.CustomerCreate.Click();
+            CustomerMenu.CustomerCreate.Click();
 
-            _customerCreate.Supplier = _supplier;
-            _customerCreate.SbsCurrency = _sbsCurrency;
-            _customerCreate.SbsBillingTenant = _sbsBillingTenant;
-            _customerCreate.CustomerName = _customerName;
-            _customerCreate.CategoryCode = _categoryCode;
-            _customerCreate.SupportContract = _supportContract;
-            _customerCreate.CashIntegrator = _cashIntegrator;
-            _customerCreate.Segment = _segment;
-            _customerCreate.CompanyName = _companyName;
-            _customerCreate.StreetNo = _streetName;
-            _customerCreate.Zip = _zip;
-            _customerCreate.City = _city;
-            _customerCreate.Po = _po;
-            _customerCreate.AdressAddition = _adressAddition;
-            _customerCreate.Region = _region;
-            _customerCreate.SapNumber = _sapNumber;
-            _customerCreate.Agency = _agency;
-            _customerCreate.Language = _language;
-            _customerCreate.Country = _country;
-            _customerCreate.Email = _email;
-            _customerCreate.Telephone = _telephone;
-            _customerCreate.Mobile = _mobile;
-            _customerCreate.Fax = _fax;
-            _customerCreate.Web = _web;
+            CustomerCreate.Supplier = _supplier;
+            CustomerCreate.SbsCurrency = _sbsCurrency;
+            CustomerCreate.SbsBillingTenant = _sbsBillingTenant;
+            CustomerCreate.CustomerName = _customerName;
+            CustomerCreate.CategoryCode = _categoryCode;
+            CustomerCreate.SupportContract = _supportContract;
+            CustomerCreate.CashIntegrator = _cashIntegrator;
+            CustomerCreate.Segment = _segment;
+            CustomerCreate.CompanyName = _companyName;
+            CustomerCreate.StreetNo = _streetName;
+            CustomerCreate.Zip = _zip;
+            CustomerCreate.City = _city;
+            CustomerCreate.Po = _po;
+            CustomerCreate.AdressAddition = _adressAddition;
+            CustomerCreate.Region = _region;
+            CustomerCreate.SapNumber = _sapNumber;
+            CustomerCreate.Agency = _agency;
+            CustomerCreate.Language = _language;
+            CustomerCreate.Country = _country;
+            CustomerCreate.Email = _email;
+            CustomerCreate.Telephone = _telephone;
+            CustomerCreate.Mobile = _mobile;
+            CustomerCreate.Fax = _fax;
+            CustomerCreate.Web = _web;
         }
 
         [TestMethod]
         public void TooShortEp2Number()
         {
-            _customerCreate.Ep2MerchantId = "55555";
-            _customerCreate.SaveButton.Click();
-            Assert.AreEqual(1, _formAlerts.FormAlertList.Count);
-            CollectionAssert.Contains(_formAlerts.FormAlertList, "Kundennummer schon vergeben");
+            CustomerCreate.Ep2MerchantId = "55555";
+            CustomerCreate.SaveButton.Click();
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer schon vergeben");
         }
 
         [TestMethod]
         public void NegativeEp2Number()
         {
-            _customerCreate.Ep2MerchantId = "-22";
-            _customerCreate.SaveButton.Click();
-            Assert.AreEqual(1, _formAlerts.FormAlertList.Count);
-            CollectionAssert.Contains(_formAlerts.FormAlertList, "Kundennummer ungültig");
+            CustomerCreate.Ep2MerchantId = "-22";
+            CustomerCreate.SaveButton.Click();
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
 
         [TestMethod]
         public void InvalidCharactersEp2Number()
         {
-            _customerCreate.Ep2MerchantId = "A*%D01111111115";
-            _customerCreate.SaveButton.Click();
-            Assert.AreEqual(1, _formAlerts.FormAlertList.Count);
-            CollectionAssert.Contains(_formAlerts.FormAlertList, "Kundennummer ungültig");
+            CustomerCreate.Ep2MerchantId = "A*%D01111111115";
+            CustomerCreate.SaveButton.Click();
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
 
         [TestMethod]
         public void AlmostValidEp2Number()
         {
-            _customerCreate.Ep2MerchantId = "TKSYR000000014";
-            _customerCreate.SaveButton.Click();
-            Assert.AreEqual(1, _formAlerts.FormAlertList.Count);
-            CollectionAssert.Contains(_formAlerts.FormAlertList, "Kundennummer ungültig");
+            CustomerCreate.Ep2MerchantId = "TKSYR000000014";
+            CustomerCreate.SaveButton.Click();
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
     }
 }

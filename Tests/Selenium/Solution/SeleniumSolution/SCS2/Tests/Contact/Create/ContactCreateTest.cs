@@ -8,134 +8,134 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateTest
     {
-        private static ContactPersonCreate _contactPersonCreate;
-        private static ContactPersonView _contactPersonView;
+        private static ContactPersonCreate ContactPersonCreate;
+        private static ContactPersonView ContactPersonView;
         private static NavigationBar _navigationBar;
         private static RecentElements _recentElements;
-        private static CustomerMenu _customerMenu;
+        private static CustomerMenu CustomerMenu;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _customerMenu = new CustomerMenu();
-            _contactPersonCreate = new ContactPersonCreate();
-            _contactPersonView = new ContactPersonView();
+            CustomerMenu = new CustomerMenu();
+            ContactPersonCreate = new ContactPersonCreate();
+            ContactPersonView = new ContactPersonView();
             _recentElements = new RecentElements();
             _navigationBar = new NavigationBar();
 
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
-            _customerMenu.ContactCreate.Click();
+            CustomerMenu.ContactCreate.Click();
 
-            _contactPersonCreate.Salutation = "Herr";
-            _contactPersonCreate.FirstName = "Marc";
-            _contactPersonCreate.Name = "Siegmund SYR AUTO";
-            _contactPersonCreate.Language = "de";
-            _contactPersonCreate.Telephone = "+41 58 399 6237 - 1";
-            _contactPersonCreate.Mobile = "+41 58 399 6237 - 2";
-            _contactPersonCreate.Fax = "+41 58 399 6237 - 3";
-            _contactPersonCreate.Email = "contact@six-group.com";
-            _contactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            _contactPersonCreate.Po = "POC";
-            _contactPersonCreate.Zip = "55555";
-            _contactPersonCreate.City = "Berlin";
-            _contactPersonCreate.Region = "Mitte";
-            _contactPersonCreate.Country = "DE";
-            _contactPersonCreate.AddressAddition = "Zusatz1";
+            ContactPersonCreate.Salutation = "Herr";
+            ContactPersonCreate.FirstName = "Marc";
+            ContactPersonCreate.Name = "Siegmund SYR AUTO";
+            ContactPersonCreate.Language = "de";
+            ContactPersonCreate.Telephone = "+41 58 399 6237 - 1";
+            ContactPersonCreate.Mobile = "+41 58 399 6237 - 2";
+            ContactPersonCreate.Fax = "+41 58 399 6237 - 3";
+            ContactPersonCreate.Email = "contact@six-group.com";
+            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
+            ContactPersonCreate.Po = "POC";
+            ContactPersonCreate.Zip = "55555";
+            ContactPersonCreate.City = "Berlin";
+            ContactPersonCreate.Region = "Mitte";
+            ContactPersonCreate.Country = "DE";
+            ContactPersonCreate.AddressAddition = "Zusatz1";
 
-            _contactPersonCreate.SaveButton.Click();
+            ContactPersonCreate.SaveButton.Click();
         }
 
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc", _contactPersonView.FirstName);
+            Assert.AreEqual("Marc", ContactPersonView.FirstName);
         }
 
         [TestMethod]
         public void LastName()
         {
-            Assert.AreEqual("Siegmund SYR AUTO", _contactPersonView.Name);
+            Assert.AreEqual("Siegmund SYR AUTO", ContactPersonView.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            StringAssert.Contains(_contactPersonView.Language, "[de]");
+            StringAssert.Contains(ContactPersonView.Language, "[de]");
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual("+41 58 399 6237 - 1", _contactPersonView.Telephone);
+            Assert.AreEqual("+41 58 399 6237 - 1", ContactPersonView.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual("+41 58 399 6237 - 2", _contactPersonView.Mobile);
+            Assert.AreEqual("+41 58 399 6237 - 2", ContactPersonView.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual("+41 58 399 6237 - 3", _contactPersonView.Fax);
+            Assert.AreEqual("+41 58 399 6237 - 3", ContactPersonView.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual("contact@six-group.com", _contactPersonView.Email);
+            Assert.AreEqual("contact@six-group.com", ContactPersonView.Email);
         }
 
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual("Kontakt-Weg 1", _contactPersonView.StreetNo);
+            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual("POC", _contactPersonView.Po);
+            Assert.AreEqual("POC", ContactPersonView.Po);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("55555", _contactPersonView.Zip);
+            Assert.AreEqual("55555", ContactPersonView.Zip);
         }
 
         [TestMethod]
         public void RegionCreateContactAndSave()
         {
-            Assert.AreEqual("Mitte", _contactPersonView.Region);
+            Assert.AreEqual("Mitte", ContactPersonView.Region);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("Berlin", _contactPersonView.City);
+            Assert.AreEqual("Berlin", ContactPersonView.City);
         }
 
         [TestMethod]
         public void Country()
         {
-            StringAssert.Contains(_contactPersonView.Country, "[DE]");
+            StringAssert.Contains(ContactPersonView.Country, "[DE]");
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("Zusatz1", _contactPersonView.AddressAddition);
+            Assert.AreEqual("Zusatz1", ContactPersonView.AddressAddition);
         }
 
         [TestMethod]
-        public void RecentElements()
+        public void RecentElementsCheck()
         {
             string url = TestLauncher.TestDirector.WebDriver.Url;
-            _navigationBar.Lobby.Click();
-            _recentElements.MostRecent.Click();
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
             Assert.AreEqual(url, TestLauncher.TestDirector.WebDriver.Url);
         }
     }

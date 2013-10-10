@@ -1,28 +1,27 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 {
-    public class CustomerCreate : WebObject, ICustomer
+    public class CustomerCreate : WebObject
     {
-        public IWebElement CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_cancelButton")); }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_saveButton")); }
         }
 
-        public string Ep2MerchantId
+        public static string Ep2MerchantId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).Text; }
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).TypeText(value); }
         }
 
-        public string SbsCurrency
+        public static string SbsCurrency
         {
             set
             {
@@ -36,13 +35,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Country
+        public static string Country
         {
             set { WebDriver.FindSuggesterElement(By.CssSelector(CustomerRes.Country)).Suggestor(value); }
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Country)).GetAttribute("value"); }
         }
 
-        public string SbsBillingTenant
+        public static string SbsBillingTenant
         {
             set
             {
@@ -56,19 +55,19 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Zip
+        public static string Zip
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Zip)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Zip)).Text; }
         }
 
-        public string City
+        public static string City
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.City)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.City)).Text; }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
             set
             {
@@ -82,13 +81,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Po
+        public static string Po
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Po)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Po)).Text; }
         }
 
-        public string Region
+        public static string Region
         {
             set
             {
@@ -102,7 +101,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             set
             {
@@ -116,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             set
             {
@@ -130,13 +129,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Fax
+        public static string Fax
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Fax)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Fax)).Text; }
         }
 
-        public string Email
+        public static string Email
         {
             set
             {
@@ -156,25 +155,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotSupportedException("Not available in create mode"); }
         }
 
-        public string CustomerName
+        public static string CustomerName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerName)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerName)).Text; }
         }
 
-        public string SapNumber
+        public static string SapNumber
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SapNumber)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SapNumber)).Text; }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CompanyName)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CompanyName)).Text; }
         }
 
-        public string Supplier
+        public static string Supplier
         {
             set
             {
@@ -194,7 +193,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotSupportedException("Not available in create mode"); }
         }
 
-        public string CategoryCode
+        public static string CategoryCode
         {
             set
             {
@@ -208,7 +207,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Agency
+        public static string Agency
         {
             set
             {
@@ -222,7 +221,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string SupportContract
+        public static string SupportContract
         {
             set
             {
@@ -237,7 +236,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
             set
             {
@@ -247,7 +246,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.StreetName)).Text; }
         }
 
-        public string Language
+        public static string Language
         {
             set
             {
@@ -261,13 +260,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Web
+        public static string Web
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).Text; }
         }
 
-        public string CustomerNumber
+        public static string CustomerNumber
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerNumber)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerNumber)).Text; }
@@ -279,7 +278,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotSupportedException("Not available in create mode"); }
         }
 
-        public string CashIntegrator
+        public static string CashIntegrator
         {
             set
             {
@@ -296,7 +295,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Segment
+        public static string Segment
         {
             set
             {

@@ -4,12 +4,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 {
     public class BillingAddressView : WebObject
     {
-        public string CompanyName
+        public static string CompanyName
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_LocationName")).Text; }
         }
 
-        public string StreetName
+        public static string StreetName
         {
             get
             {
@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Zip
+        public static string Zip
         {
             get
             {
@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string City
+        public static string City
         {
             get
             {
@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Language
+        public static string Language
         {
             get
             {
@@ -46,7 +46,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Country
+        public static string Country
         {
             get
             {
@@ -55,37 +55,37 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Po
+        public static string Po
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_PO")).Text; }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
         }
 
-        public string Email
+        public static string Email
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Email")).Text; }
         }
 
-        public string Web
+        public static string Web
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Web")).Text; }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Telephone")).Text; }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Mobile")).Text; }
         }
 
-        public string Fax
+        public static string Fax
         {
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
         }

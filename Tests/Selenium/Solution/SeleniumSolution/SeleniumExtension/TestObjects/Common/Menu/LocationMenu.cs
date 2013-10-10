@@ -4,47 +4,47 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class LocationMenu : MenuObject
     {
-        public IWebElement Location
+        public static IWebElement Location
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Location)); }
         }
 
-        public IWebElement TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_TerminalCreate)); }
         }
 
-        public IWebElement InfotextCreate
+        public static IWebElement InfotextCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_InfotextCreate)); }
         }
 
-        public IWebElement ContactCreate
+        public static IWebElement ContactCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_ContactCreate)); }
         }
 
-        public IWebElement LocationEdit
+        public static IWebElement LocationEdit
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_LocationEdit)); }
         }
 
-        public IWebElement LocationQuit
+        public static IWebElement LocationQuit
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_LocationQuit)); }
         }
 
-        public IWebElement Terminals
+        public static IWebElement Terminals
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Terminals)); }
         }
 
-        public IWebElement Contacts
+        public static IWebElement Contacts
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Contacts)); }
         }
 
-        public IWebElement Infotexts
+        public static IWebElement Infotexts
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Infotexts)); }
         }

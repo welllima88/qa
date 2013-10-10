@@ -7,23 +7,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
     /// </summary>
     public class LobbyMenu : MenuObject
     {
-        public readonly CustomerMenu Customer;
-        public LocationMenu LocationMenu;
-        public MassMutationMenu MassMutation;
-        public SimCardMenu SimCard;
-        public TerminalMenu TerminalMenu;
-        public TicketMenu Ticket;
+        public static LocationMenu LocationMenu;
+        public static MassMutationMenu MassMutation;
+        public static SimCardMenu SimCard;
+        public static TerminalMenu TerminalMenu;
+        public static TicketMenu Ticket;
+        public CustomerMenu Customer;
 
-        public LobbyMenu()
-        {
-            MassMutation = new MassMutationMenu();
-            Customer = new CustomerMenu();
-            LocationMenu = new LocationMenu();
-            TerminalMenu = new TerminalMenu();
-            Ticket = new TicketMenu();
-        }
-
-        public IWebElement Lobby
+        public static IWebElement Lobby
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
         }

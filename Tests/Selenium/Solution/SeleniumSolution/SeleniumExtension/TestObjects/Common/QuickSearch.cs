@@ -4,12 +4,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class QuickSearch : WebObject
     {
-        public IWebElement SearchField
+        public static IWebElementAdapter SearchField
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)); }
         }
 
-        public IWebElement SearchButton
+        public static IWebElement SearchButton
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchButton)); }
         }

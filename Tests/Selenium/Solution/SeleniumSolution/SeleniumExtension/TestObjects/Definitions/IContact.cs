@@ -1,7 +1,7 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions
 {
     /// <summary>
-    /// defines the ways and media how to contact 
+    ///     defines the ways and media how to contact
     /// </summary>
     public interface IContact
     {
