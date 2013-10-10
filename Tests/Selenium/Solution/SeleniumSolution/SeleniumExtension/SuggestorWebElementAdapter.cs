@@ -28,7 +28,11 @@ namespace SIX.SCS.QA.Selenium.Extension
             }
             catch (NoSuchElementException ex) // hope no other exceptions occur
             {
-                Debug.WriteLine("warning: skip 'click' on suggestor element [" + innerText + "] " + ex.Message);
+                Debug.WriteLine("Warning: skip click - on suggestor [" + innerText + "] " + ex.Message);
+            }
+            catch (ElementNotVisibleException ex) // hope no other exceptions occur
+            {
+                Debug.WriteLine("Error: skip click - suggestor [" + innerText + "] " + ex.Message);
             }
         }
 

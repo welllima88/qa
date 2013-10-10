@@ -2,13 +2,12 @@
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 {
-    public class CustomerCreate : WebObject, ICustomer
+    public class CustomerCreate : WebObject
     {
-        public string Segment
+        public static string Segment
         {
             set
             {
@@ -18,24 +17,22 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        #region ICustomerCreate Members
-
-        public string StreetName
+        public static string StreetName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Strasse']")).TypeText(value); }
         }
 
-        public IWebElement CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input[value='abbrechen']")); }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input[value='weiter']")); }
         }
 
-        public string Country
+        public static string Country
         {
             set
             {
@@ -45,7 +42,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string SbsBillingTenant
+        public static string SbsBillingTenant
         {
             set
             {
@@ -55,87 +52,87 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string Ep2MerchantId
+        public static string Ep2MerchantId
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).GetCssValue("value"); }
         }
 
-        public string Zip
+        public static string Zip
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='PLZ']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string City
+        public static string City
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Ort']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Zusatz']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Po
+        public static string Po
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Postfach']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Region
+        public static string Region
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Region']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon2']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Fax
+        public static string Fax
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Fax']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Email
+        public static string Email
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Email']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Guid { get; set; }
+        public static string Guid { get; set; }
 
-        public string CustomerName
+        public static string CustomerName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string SapNumber
+        public static string SapNumber
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='SapNumber']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("td[name='Name']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string Supplier
+        public static string Supplier
         {
             set
             {
@@ -145,12 +142,12 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string SbsAdressNumber
+        public static string SbsAdressNumber
         {
             get { throw new NotImplementedException(); }
         }
 
-        public string SbsCurrency
+        public static string SbsCurrency
         {
             set
             {
@@ -160,7 +157,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string CategoryCode
+        public static string CategoryCode
         {
             set
             {
@@ -170,7 +167,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string Agency
+        public static string Agency
         {
             set
             {
@@ -180,7 +177,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string SupportContract
+        public static string SupportContract
         {
             set
             {
@@ -191,9 +188,9 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string StreetNo { get; set; }
+        public static string StreetNo { get; set; }
 
-        public string Language
+        public static string Language
         {
             set
             {
@@ -204,26 +201,24 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
             get { throw new NotImplementedException(); }
         }
 
-        public string Web
+        public static string Web
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='www']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string CashIntegrator
+        public static string CashIntegrator
         {
             set { throw new NotSupportedException("CashIntegrator will be set separately"); }
             get { throw new NotImplementedException(); }
         }
 
-        public string CustomerNumber
+        public static string CustomerNumber
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
-        public string SbsDebitNumber { get; private set; }
-
-        #endregion
+        public static string SbsDebitNumber { get; private set; }
     }
 }

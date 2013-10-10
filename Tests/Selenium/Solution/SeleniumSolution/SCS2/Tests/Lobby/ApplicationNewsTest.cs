@@ -28,10 +28,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         }
 
         [TestMethod]
-        [TestCategory("LobbyCheck")]
+        [TestCategory("LobbyNews")]
         public void ApplicationNews()
         {
-            Assert.IsTrue(LobbyView.LobbyNews.NewsTitle.Displayed);
+            Assert.IsTrue(LobbyNews.NewsTitle.Displayed);
         }
     }
 }

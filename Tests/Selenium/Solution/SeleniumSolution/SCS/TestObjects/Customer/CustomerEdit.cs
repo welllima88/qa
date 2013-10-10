@@ -4,162 +4,151 @@ using SIX.SCS.QA.Selenium.Extension;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 {
-    public class CustomerEdit
+    public class CustomerEdit : WebObject
     {
-        private readonly CustomerCreate _customerCreate;
-        private readonly CustomerView _customerView;
-        private readonly IWebDriverAdapter _driver;
-
-        public CustomerEdit(IWebDriverAdapter driver)
-        {
-            _driver = driver;
-            _customerView = new CustomerView();
-            _customerCreate = new CustomerCreate();
-        }
-
         public string CustomerName
         {
-            set { _customerCreate.CustomerName = value; }
+            set { CustomerCreate.CustomerName = value; }
         }
 
         public string SapNumber
         {
-            set { _customerCreate.SapNumber = value; }
+            set { CustomerCreate.SapNumber = value; }
         }
 
         public string CompanyName
         {
-            set { _customerCreate.CompanyName = value; }
+            set { CustomerCreate.CompanyName = value; }
         }
 
         public string Supplier
         {
-            get { return _customerView.Supplier; }
+            get { return CustomerView.Supplier; }
         }
 
         public String CustomerNumber
         {
-            get { return _customerView.CustomerNumber; }
+            get { return CustomerView.CustomerNumber; }
         }
 
         public String SbsDebitNumber
         {
-            get { return _customerView.SbsDebitNumber; }
+            get { return CustomerView.SbsDebitNumber; }
         }
 
         public String SbsAdressNumber
         {
-            get { return _customerView.SbsAdressNumber; }
+            get { return CustomerView.SbsAdressNumber; }
         }
 
         public String SbsCurrency
         {
-            get { return _customerView.SbsCurrency; }
+            get { return CustomerView.SbsCurrency; }
         }
 
         public String SbsBillingTenant
         {
-            get { return _customerView.SbsBillingTenant; }
+            get { return CustomerView.SbsBillingTenant; }
         }
 
         public String Ep2MerchantId
         {
-            get { return _driver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
+            get { return WebDriver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
         }
 
         public string CategoryCode
         {
-            set { _customerCreate.CategoryCode = value; }
+            set { CustomerCreate.CategoryCode = value; }
         }
 
         public string Agency
         {
-            set { _customerCreate.Agency = value; }
+            set { CustomerCreate.Agency = value; }
         }
 
         public string SupportContract
         {
-            set { _customerCreate.SupportContract = value; }
+            set { CustomerCreate.SupportContract = value; }
         }
 
         public string StreetName
         {
-            set { _customerCreate.StreetName = value; }
+            set { CustomerCreate.StreetName = value; }
         }
 
         public string Language
         {
-            set { _customerCreate.Language = value; }
+            set { CustomerCreate.Language = value; }
         }
 
         public string Country
         {
-            set { _customerCreate.Country = value; }
+            set { CustomerCreate.Country = value; }
         }
 
         public string Zip
         {
-            set { _customerCreate.Zip = value; }
+            set { CustomerCreate.Zip = value; }
         }
 
         public string City
         {
-            set { _customerCreate.City = value; }
+            set { CustomerCreate.City = value; }
         }
 
         public string AdressAddition
         {
-            set { _customerCreate.AdressAddition = value; }
+            set { CustomerCreate.AdressAddition = value; }
         }
 
         public string Po
         {
-            set { _customerCreate.Po = value; }
+            set { CustomerCreate.Po = value; }
         }
 
         public string Region
         {
-            set { _customerCreate.Region = value; }
+            set { CustomerCreate.Region = value; }
         }
 
         public string Telephone
         {
-            set { _customerCreate.Telephone = value; }
+            set { CustomerCreate.Telephone = value; }
         }
 
         public string Mobile
         {
-            set { _customerCreate.Mobile = value; }
+            set { CustomerCreate.Mobile = value; }
         }
 
         public string Fax
         {
-            set { _customerCreate.Fax = value; }
+            set { CustomerCreate.Fax = value; }
         }
 
         public string Email
         {
-            set { _customerCreate.Email = value; }
+            set { CustomerCreate.Email = value; }
         }
 
         public string Web
         {
-            set { _customerCreate.Web = value; }
+            set { CustomerCreate.Web = value; }
         }
 
         public IWebElement SaveButton
         {
-            get { return _customerCreate.SaveButton; }
+            get { return CustomerCreate.SaveButton; }
         }
 
         public IWebElement CancelButton
         {
-            get { return _customerCreate.CancelButton; }
+            get { return CustomerCreate.CancelButton; }
         }
 
         public string CashIntegrator
         {
-            set { _customerCreate.CashIntegrator = value; }
+            set { CustomerCreate.CashIntegrator = value; }
         }
     }
 }
