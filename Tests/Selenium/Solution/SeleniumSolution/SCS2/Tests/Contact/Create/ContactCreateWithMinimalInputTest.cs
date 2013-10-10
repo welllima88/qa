@@ -8,21 +8,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMinimalInputTest
     {
-        private static ContactPersonCreate ContactPersonCreate;
-        private static ContactPersonView ContactPersonView;
-        private static RecentElements _recentElements;
-        private static CustomerMenu CustomerMenu;
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            ContactPersonCreate = new ContactPersonCreate();
-            ContactPersonView = new ContactPersonView();
-            _recentElements = new RecentElements();
-            LobbyView = new LobbyView();
-
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             CustomerMenu.ContactCreate.Click();

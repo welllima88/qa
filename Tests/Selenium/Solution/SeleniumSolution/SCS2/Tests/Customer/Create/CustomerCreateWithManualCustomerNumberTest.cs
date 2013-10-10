@@ -65,7 +65,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _fax = "0033 58 399 6237";
             _web = "www.six-group.com/de-intern";
 
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 

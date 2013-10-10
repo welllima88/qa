@@ -20,20 +20,17 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class RecentMassJobsTest
     {
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void RecentMassmutationsContainer()
         {
-            Assert.IsTrue(LobbyView.RecentMassmutations.MostRecent.Displayed);
+            Assert.IsTrue(RecentMassmutations.MostRecent.Displayed);
         }
     }
 }

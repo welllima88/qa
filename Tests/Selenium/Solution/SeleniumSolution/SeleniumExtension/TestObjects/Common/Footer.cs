@@ -4,27 +4,27 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class Footer : WebObject
     {
-        public IWebElement Feedback
+        public static IWebElement Feedback
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Feedback)); }
         }
 
-        public IWebElement Disclaimer
+        public static IWebElement Disclaimer
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
         }
 
-        public IWebElement Copyright
+        public static IWebElement Copyright
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright)); }
         }
 
-        public IWebElement PrintPage
+        public static IWebElement PrintPage
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_PrintPage)); }
         }
 
-        public IWebElement ScrollUp
+        public static IWebElement ScrollUp
         {
             get
             {

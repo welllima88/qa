@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
@@ -11,26 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
     [TestClass]
     public class LocationCreateWithMinimalInputAndSbsExportAndSave
     {
-        private const int MillisecondsTimeout = 1000;
-        private static LocationView LocationView;
-        private static NavigationBar _navigationBar;
-        private static LocationCreate LocationCreate;
-        private static LocationMenu LocationMenu;
-        private static CustomerMenu CustomerMenu;
-        private static CustomerView CustomerView;
-        private static LobbyView LobbyView;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            CustomerMenu = new CustomerMenu();
-            CustomerView = new CustomerView();
-            LocationMenu = new LocationMenu();
-            LocationCreate = new LocationCreate();
-            LocationView = new LocationView();
-            _navigationBar = new NavigationBar();
-            LobbyView = new LobbyView();
-        }
+        private static readonly TimeSpan MillisecondsTimeout = TimeSpan.FromSeconds(1);
 
         [TestInitialize]
         public void TestInit()

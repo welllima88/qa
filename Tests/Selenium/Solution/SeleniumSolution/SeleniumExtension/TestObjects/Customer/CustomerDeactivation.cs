@@ -4,7 +4,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 {
     public class CustomerDeactivation : WebObject
     {
-        public IWebElementAdapter Cancel
+        public static IWebElementAdapter Cancel
         {
             get
             {

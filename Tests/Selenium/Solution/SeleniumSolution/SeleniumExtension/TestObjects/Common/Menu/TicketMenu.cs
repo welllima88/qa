@@ -4,17 +4,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class TicketMenu : MenuObject
     {
-        public IWebElement NotAssigned
+        public static IWebElement NotAssigned
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_NotAssigned)); }
         }
 
-        public IWebElement MyGroup
+        public static IWebElement MyGroup
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_MyGroup)); }
         }
 
-        public IWebElement My
+        public static IWebElement My
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_My)); }
         }

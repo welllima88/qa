@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -10,12 +9,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateTest
     {
-        private static CustomerCreate CustomerCreate;
-        private static CustomerView CustomerView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static CustomerMenu CustomerMenu;
-
         private static string _adressAddition;
         private static string _cashIntegrator;
         private static string _agency;
@@ -47,13 +40,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerCreate = new CustomerCreate();
-            CustomerView = new CustomerView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _dt = TestLauncher.GenerateTestId();
 
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";

@@ -13,7 +13,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         {
             TestLauncher.Navigate();
 
-            //do test actions already here
             CustomerMenu.CustomerCreate.Click();
             CustomerCreate.SaveButton.Click();
         }

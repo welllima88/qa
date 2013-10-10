@@ -5,145 +5,145 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SoftwareExcha
 {
     public class SoftwareExchangeCreate : WebObject
     {
-        public IWebElement SelectedTerminalType
+        public static IWebElement SelectedTerminalType
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedTerminalType")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement IncludeDeactivated
+        public static IWebElement IncludeDeactivated
         {
             get { return WebDriver.FindElement(By.CssSelector("#IncludeDeactivated")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement IncludeCancelled
+        public static IWebElement IncludeCancelled
         {
             get { return WebDriver.FindElement(By.CssSelector("#IncludeCancelled")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectedCurrentRelease
+        public static IWebElement SelectedCurrentRelease
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedCurrentRelease")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement AllowTerminalsWithNoCurrentRelease
+        public static IWebElement AllowTerminalsWithNoCurrentRelease
         {
             get { return WebDriver.FindElement(By.CssSelector("#AllowTerminalsWithNoCurrentRelease")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectedNetType
+        public static IWebElement SelectedNetType
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedNetType")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement TidRangeStart
+        public static IWebElement TidRangeStart
         {
             get { return WebDriver.FindElement(By.CssSelector("#TidRangeStart")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement TidRangeEnd
+        public static IWebElement TidRangeEnd
         {
             get { return WebDriver.FindElement(By.CssSelector("#TidRangeEnd")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement TerminalIdSelection
+        public static IWebElement TerminalIdSelection
         {
             get { return WebDriver.FindElement(By.CssSelector("#TerminalIdSelection")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement RecallNextFrom
+        public static IWebElement RecallNextFrom
         {
             get { return WebDriver.FindElement(By.CssSelector("#RecallNextFrom")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement RecallNextUntil
+        public static IWebElement RecallNextUntil
         {
             get { return WebDriver.FindElement(By.CssSelector("#RecallNextUntil")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectedSupplierMandant
+        public static IWebElement SelectedSupplierMandant
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedSupplierMandant")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement IncludeKeyAccounts
+        public static IWebElement IncludeKeyAccounts
         {
             get { return WebDriver.FindElement(By.CssSelector("#IncludeKeyAccounts")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement CustomerIds
+        public static IWebElement CustomerIds
         {
             get { return WebDriver.FindElement(By.CssSelector("#CustomerIds")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement Zips
+        public static IWebElement Zips
         {
             get { return WebDriver.FindElement(By.CssSelector("#Zips")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectedCountry
+        public static IWebElement SelectedCountry
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedCountry")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement ResultLimit
+        public static IWebElement ResultLimit
         {
             get { return WebDriver.FindElement(By.CssSelector("#ResultLimit")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement RefreshButton
+        public static IWebElement RefreshButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input#refresh")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement BatchTitle
+        public static IWebElement BatchTitle
         {
             get { return WebDriver.FindElement(By.CssSelector("#BatchTitle")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectAllSwitch
+        public static IWebElement SelectAllSwitch
         {
             get { return WebDriver.FindElement(By.CssSelector("#selectAllSwitch")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectOddEvenSwitch
+        public static IWebElement SelectOddEvenSwitch
         {
             get { return WebDriver.FindElement(By.CssSelector("#selectOddEvenSwitch")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement SelectedNewRelease
+        public static IWebElement SelectedNewRelease
         {
             get { return WebDriver.FindElement(By.CssSelector("#SelectedNewRelease")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement StartDateTime
+        public static IWebElement StartDateTime
         {
             get { return WebDriver.FindElement(By.CssSelector("#StartDateTime")); }
             set { throw new NotImplementedException(); }
         }
 
-        public IWebElement BatchCreateButton
+        public static IWebElement BatchCreateButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input#execute']")); }
             set { throw new NotImplementedException(); }

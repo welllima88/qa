@@ -5,52 +5,52 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
 {
     public class TerminalTraceLogConfigEdit : WebObject
     {
-        public IWebElementAdapter ActivatedUntil
+        public static IWebElementAdapter ActivatedUntil
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#activateTill")); }
         }
 
-        public IWebElementAdapter Parameter
+        public static IWebElementAdapter Parameter
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")); }
         }
 
-        public SelectElement Medium
+        public static SelectElement Medium
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationDevice")).Selector(); }
         }
 
-        public IWebElementAdapter DestinationAddress
+        public static IWebElementAdapter DestinationAddress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")); }
         }
 
-        public IWebElementAdapter DestinationPort
+        public static IWebElementAdapter DestinationPort
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")); }
         }
 
-        public IWebElementAdapter TelephoneIsdn
+        public static IWebElementAdapter TelephoneIsdn
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")); }
         }
 
-        public IWebElementAdapter TelephonePstn
+        public static IWebElementAdapter TelephonePstn
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")); }
         }
 
-        public IWebElementAdapter DestinationUrl
+        public static IWebElementAdapter DestinationUrl
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")); }
         }
 
-        public IWebElementAdapter DestinationUrlPort
+        public static IWebElementAdapter DestinationUrlPort
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")); }
         }
 
-        public IWebElementAdapter Save
+        public static IWebElementAdapter Save
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[value='speichern']")); }
         }

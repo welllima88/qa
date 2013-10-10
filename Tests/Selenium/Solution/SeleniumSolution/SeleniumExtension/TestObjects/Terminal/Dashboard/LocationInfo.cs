@@ -7,17 +7,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     /// </summary>
     public class LocationInfo : WebObject
     {
-        public IWebElementAdapter Name
+        public static IWebElementAdapter Name
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Name)); }
         }
 
-        public IWebElementAdapter Ep2Id
+        public static IWebElementAdapter Ep2Id
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Ep2Id)); }
         }
 
-        public IWebElementAdapter Adress
+        public static IWebElementAdapter Adress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Adress)); }
         }

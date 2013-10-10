@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return CustomerCreate.CancelButton; }
         }
 
-        public string Segment
+        public static string Segment
         {
             set { CustomerCreate.Segment = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SegmentView)).Text; }
@@ -44,46 +44,46 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CompanyName)).GetAttribute("value"); }
         }
 
-        public string Supplier
+        public static string Supplier
         {
             get { return CustomerView.Supplier; }
             set { throw new NotImplementedException(); }
         }
 
-        public String CustomerNumber
+        public static String CustomerNumber
         {
             get { return CustomerView.CustomerNumber; }
         }
 
-        public String SbsDebitNumber
+        public static String SbsDebitNumber
         {
             get { return CustomerView.SbsDebitNumber; }
         }
 
-        public String SbsAdressNumber
+        public static String SbsAdressNumber
         {
             get { return CustomerView.SbsAdressNumber; }
         }
 
-        public String SbsCurrency
+        public static String SbsCurrency
         {
             get { return CustomerView.SbsCurrency; }
             set { throw new NotImplementedException(); }
         }
 
-        public String SbsBillingTenant
+        public static String SbsBillingTenant
         {
             get { return CustomerView.SbsBillingTenant; }
             set { throw new NotImplementedException(); }
         }
 
-        public String Ep2MerchantId
+        public static String Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
             set { throw new NotSupportedException(); }
         }
 
-        public string CategoryCode
+        public static string CategoryCode
         {
             set { CustomerCreate.CategoryCode = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CategoryCode)).GetAttribute("value"); }
@@ -95,7 +95,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return CustomerCreate.Agency; }
         }
 
-        public string SupportContract
+        public static string SupportContract
         {
             set { CustomerCreate.SupportContract = value; }
             get { return CustomerCreate.SupportContract; }
@@ -179,7 +179,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).GetAttribute("value"); }
         }
 
-        public string CashIntegrator
+        public static string CashIntegrator
         {
             set { CustomerCreate.CashIntegrator = value; }
             get { return CustomerCreate.CashIntegrator; }

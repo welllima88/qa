@@ -10,24 +10,24 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Login
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
-        [TestCategory("BasicLoginTest")]
+        [TestCategory("Application")]
         [TestMethod]
         public void ApplicationName()
         {
             Assert.IsTrue(ApplicationInfo.ApplicationName.Displayed);
         }
 
-        [TestCategory("BasicLoginTest")]
+        [TestCategory("Logo")]
         [TestMethod]
         public void CompanyLogo()
         {
             Assert.IsTrue(LobbyView.CompanyLogo.Displayed);
         }
 
-        [TestCategory("BasicLoginTest")]
+        [TestCategory("LobbyMenu")]
         [TestMethod]
         public void LobbyMenuCheck()
         {

@@ -9,32 +9,32 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.EventLog
         /// <summary>
         ///     Mulit selectable list for choosing log event entries by severity
         /// </summary>
-        public SelectElement SeverityList
+        public static SelectElement SeverityList
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#SelectedSeverities")).Selector(); }
         }
 
-        public SelectElement TimeSpan
+        public static SelectElement TimeSpan
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#SelectedTimeSpan")).Selector(); }
         }
 
-        public SelectElement EventTypes
+        public static SelectElement EventTypes
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#SelectedEventTypes")).Selector(); }
         }
 
-        public IWebElement EventTable
+        public static IWebElement EventTable
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("tbody tr#rowContent td#content table")); }
         }
 
-        public ReadOnlyCollection<IWebElementAdapter> EventList
+        public static ReadOnlyCollection<IWebElementAdapter> EventList
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("td#content table tbody tr.Summary")); }
         }
 
-        public IWebElement Export
+        public static IWebElement Export
         {
             get { return WebDriver.FindElement(By.CssSelector("input[value='Export']")); }
         }

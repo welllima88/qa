@@ -12,15 +12,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
     [TestClass]
     public class CustomerEditTest
     {
-        private static CustomerEdit CustomerEdit;
-        private static CustomerView CustomerView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static FormAlert _formAlert;
-        private static CustomerMenu CustomerMenu;
-        private static MenusTest MenusTests;
-        private static LobbyView LobbyView;
-
         private static string _custId;
         private static string _customerName;
         private static string _supplier;
@@ -49,15 +40,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerEdit = new CustomerEdit();
-            CustomerView = new CustomerView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-            _formAlert = new FormAlert();
-            MenusTests = new MenusTest();
-            LobbyView = new LobbyView();
-
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
 
             _custId = CustomerView.CustomerNumber;

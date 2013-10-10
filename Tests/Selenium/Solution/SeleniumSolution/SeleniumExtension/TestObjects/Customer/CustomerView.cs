@@ -12,84 +12,84 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
 
-        public string CustomerName
+        public static string CustomerName
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CustomerName)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Guid
+        public static string Guid
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.GUID)).Text; }
         }
 
-        public string CashIntegrator
+        public static string CashIntegrator
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CashIntegrator)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string CompanyName
+        public static string CompanyName
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CompanyName)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string SapNumber
+        public static string SapNumber
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SapNumber)).Text; }
             set { throw new NotSupportedException("Not available in create mode"); }
         }
 
-        public string StreetNo
+        public static string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.StreetName)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Zip
+        public static string Zip
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Zip)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string City
+        public static string City
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.City)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public String Agency
+        public static String Agency
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Agency)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Language
+        public static string Language
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.LanguageView)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Country
+        public static string Country
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CountryView)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Po
+        public static string Po
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Po)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string AdressAddition
+        public static string AdressAddition
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.AdressAddition)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Email
+        public static string Email
         {
             // ":not(label)" is necessary because rendering tag is a span if no email and a if it is set
             get
@@ -101,49 +101,49 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set { throw new NotImplementedException(); }
         }
 
-        public string Telephone
+        public static string Telephone
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Telephone)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Mobile
+        public static string Mobile
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Mobile)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Fax
+        public static string Fax
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Fax)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Web
+        public static string Web
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.WebView)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Region
+        public static string Region
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Region)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string CategoryCode
+        public static string CategoryCode
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CategoryCodeView)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string SupportContract
+        public static string SupportContract
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SupportContract)).Text; }
             set { throw new NotImplementedException(); }
         }
 
-        public string Segment
+        public static string Segment
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SegmentView)).Text; }
             set { throw new NotImplementedException(); }
@@ -178,7 +178,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindElement(By.CssSelector("span[id$='customerSbsLabel']")).Text; }
         }
 
-        public string Ep2MerchantId
+        public static string Ep2MerchantId
         {
             get { return WebDriver.FindElement(By.CssSelector("span[id$='ep2numberTextBox']")).Text; }
             set { throw new NotImplementedException(); }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -11,9 +10,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     public class CustomerCreateWithSbsExportTest
     {
         private const int WaitMilliseconds = 1000;
-        private static CustomerCreate CustomerCreate;
-        private static CustomerView CustomerView;
-        private static CustomerMenu CustomerMenu;
 
         private static long _dt;
         private static string _custId;
@@ -22,12 +18,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerCreate = new CustomerCreate();
-            CustomerView = new CustomerView();
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _dt = TestLauncher.GenerateTestId();
 
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 

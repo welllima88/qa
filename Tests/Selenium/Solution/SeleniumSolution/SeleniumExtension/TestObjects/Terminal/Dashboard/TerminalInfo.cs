@@ -7,22 +7,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     /// </summary>
     public class TerminalInfo : WebObject
     {
-        public IWebElementAdapter TerminalId
+        public static IWebElementAdapter TerminalId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_TerminalId)); }
         }
 
-        public IWebElementAdapter ExternTerminalId
+        public static IWebElementAdapter ExternTerminalId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_ExternTerminalId)); }
         }
 
-        public IWebElementAdapter Article
+        public static IWebElementAdapter Article
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_Article)); }
         }
 
-        public IWebElementAdapter Status
+        public static IWebElementAdapter Status
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.TerminalInfo_Status)); }
         }

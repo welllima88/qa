@@ -7,22 +7,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     /// </summary>
     public class CustomerInfo : WebObject
     {
-        public IWebElementAdapter Name
+        public static IWebElementAdapter Name
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Name)); }
         }
 
-        public IWebElementAdapter Adress
+        public static IWebElementAdapter Adress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Adress)); }
         }
 
-        public IWebElementAdapter Info
+        public static IWebElementAdapter Info
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Info)); }
         }
 
-        public IWebElementAdapter Id
+        public static IWebElementAdapter Id
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Id)); }
         }

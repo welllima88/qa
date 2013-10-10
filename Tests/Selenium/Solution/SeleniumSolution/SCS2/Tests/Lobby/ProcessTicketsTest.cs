@@ -20,34 +20,31 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class ProcessTicketsTest
     {
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void ProcessTicketsContainer()
         {
-            Assert.IsTrue(LobbyView.ProcessTickets.Container.Displayed);
+            Assert.IsTrue(ProcessTickets.Container.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void NewestProcessTickets()
         {
-            Assert.IsTrue(LobbyView.ProcessTickets.Newest.Displayed);
+            Assert.IsTrue(ProcessTickets.Newest.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void OldestProcessTickets()
         {
-            Assert.IsTrue(LobbyView.ProcessTickets.Oldest.Displayed);
+            Assert.IsTrue(ProcessTickets.Oldest.Displayed);
         }
     }
 }

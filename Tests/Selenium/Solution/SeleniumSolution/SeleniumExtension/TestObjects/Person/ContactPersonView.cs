@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("button[name='edit']")); }
         }
 
-        public string AddressAddition
+        public static string AddressAddition
         {
             get
             {

@@ -8,16 +8,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
     [TestClass]
     public class SimCardViewTest
     {
-        private static SimCardView SimCardView;
-        private static SimCardCreate _simCardCreate;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            SimCardView = new SimCardView();
-            _simCardCreate = new SimCardCreate();
-        }
-
         [TestInitialize]
         public void TestInit()
         {
@@ -35,14 +25,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
             string region = "Schweiz";
             string usage = "Kauf";
 
-            _simCardCreate.NetProvider = netProvider;
-            _simCardCreate.SimCardNumber = simCardNumber;
-            _simCardCreate.MobileNumber = mobileNumber;
-            _simCardCreate.Pin = pin;
-            _simCardCreate.Puk = puk;
-            _simCardCreate.Region = region;
-            _simCardCreate.Usage = usage;
-            _simCardCreate.SaveButton.Click();
+            SimCardCreate.NetProvider = netProvider;
+            SimCardCreate.SimCardNumber = simCardNumber;
+            SimCardCreate.MobileNumber = mobileNumber;
+            SimCardCreate.Pin = pin;
+            SimCardCreate.Puk = puk;
+            SimCardCreate.Region = region;
+            SimCardCreate.Usage = usage;
+            SimCardCreate.SaveButton.Click();
 
             Assert.AreEqual(SimCardView.SimCardElement.NetProvider, netProvider);
             Assert.AreEqual(SimCardView.SimCardElement.SimCardNumber, simCardNumber);

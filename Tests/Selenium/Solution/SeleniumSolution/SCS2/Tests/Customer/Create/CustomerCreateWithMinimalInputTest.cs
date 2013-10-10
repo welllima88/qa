@@ -10,12 +10,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateWithMinimalInputTest
     {
-        private static CustomerCreate CustomerCreate;
-        private static CustomerView CustomerView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static CustomerMenu CustomerMenu;
-
         private static long _dt;
         private static string _custId;
         private static string _customerName;
@@ -32,13 +26,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerCreate = new CustomerCreate();
-            CustomerView = new CustomerView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _customerName = "SYR Kunde" + _dt;
@@ -75,7 +63,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]

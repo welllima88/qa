@@ -5,26 +5,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 {
     public class TerminalDashboard : WebObject
     {
-        public BrandPortlet BrandsPortlet;
-        public ContactsPortlet ContactsPortlet;
-        public FixInfo FixInfo;
-        public SalesContractPortlet SalesContractPortlet;
-        public TechnicalViewPortlet TechnicalViewPortlet;
-        public TerminalTextsPortlet TerminalTextsPortlet;
-        public TroubleTicketsPortlet TroubleTicketsPortlet;
+        public static BrandPortlet BrandsPortlet;
+        public static ContactsPortlet ContactsPortlet;
+        public static TerminFixInfo TerminFixInfo;
+        public static SalesContractPortlet SalesContractPortlet;
+        public static TechnicalViewPortlet TechnicalViewPortlet;
+        public static TerminalTextsPortlet TerminalTextsPortlet;
+        public static TroubleTicketsPortlet TroubleTicketsPortlet;
 
-        public TerminalDashboard()
-        {
-            FixInfo = new FixInfo();
-            BrandsPortlet = new BrandPortlet();
-            ContactsPortlet = new ContactsPortlet();
-            TechnicalViewPortlet = new TechnicalViewPortlet();
-            SalesContractPortlet = new SalesContractPortlet();
-            TerminalTextsPortlet = new TerminalTextsPortlet();
-            TroubleTicketsPortlet = new TroubleTicketsPortlet();
-        }
-
-        public IWebElement EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindElement(By.CssSelector("input[value='Bearbeiten']")); }
         }

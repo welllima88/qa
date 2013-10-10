@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation;
 
@@ -11,16 +10,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
     [TestClass]
     public class ContractMassmuationTest
     {
-        private static LobbyView LobbyView;
-        private static Massmuation Massmuation;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            Massmuation = new Massmuation();
-            TestLauncher.Navigate("");
-            LobbyMenu.MassMutation.ContractCreate.Click();
+            TestLauncher.Navigate();
+            MassMutationMenu.ContractCreate.Click();
         }
 
         [TestMethod]

@@ -4,37 +4,37 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class MassMutationMenu : MenuObject
     {
-        public IWebElement CustomerCreate
+        public static IWebElement CustomerCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_CustomerCreate)); }
         }
 
-        public IWebElement LocationCreate
+        public static IWebElement LocationCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_LocationCreate)); }
         }
 
-        public IWebElement TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_TerminalCreate)); }
         }
 
-        public IWebElement ContractCreate
+        public static IWebElement ContractCreate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_ContractCreate)); }
         }
 
-        public IWebElement BusinessTemplateMigrate
+        public static IWebElement BusinessTemplateMigrate
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_BusinessTemplateMigrate)); }
         }
 
-        public IWebElement AcquirerChange
+        public static IWebElement AcquirerChange
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.AcquirerChange)); }
         }
 
-        public IWebElement SimCardManage
+        public static IWebElement SimCardManage
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
         }

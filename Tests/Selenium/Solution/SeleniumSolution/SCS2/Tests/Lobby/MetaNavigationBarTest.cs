@@ -23,8 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]

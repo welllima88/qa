@@ -9,22 +9,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CetrelCustomerCreateTest
     {
-        private static CustomerCreate CustomerCreate;
-        private static CustomerView CustomerView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static CustomerMenu CustomerMenu;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            //before first test-method starts
-            CustomerMenu = new CustomerMenu();
-            CustomerCreate = new CustomerCreate();
-            CustomerView = new CustomerView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]

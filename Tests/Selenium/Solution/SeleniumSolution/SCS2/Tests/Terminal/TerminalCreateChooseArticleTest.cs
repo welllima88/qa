@@ -7,17 +7,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
     [TestClass]
     public class TerminalCreateChooseArticleTest
     {
-        private static TerminalCreate TerminalCreate;
-        private static LobbyView LobbyView;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            TerminalCreate = new TerminalCreate();
-
-            LobbyView = new LobbyView();
-        }
-
         [TestInitialize]
         public void TestInit()
         {

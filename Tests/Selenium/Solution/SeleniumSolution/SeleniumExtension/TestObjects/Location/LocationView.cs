@@ -117,7 +117,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set { throw new NotSupportedException(); }
         }
 
-        public string Region
+        public static string Region
         {
             get { return WebDriver.FindElement(By.CssSelector(Location.Region)).Text; }
             set { throw new NotSupportedException(); }

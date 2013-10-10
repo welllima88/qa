@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public IWebElement Administration
+        public static IWebElement Administration
         {
             get
             {

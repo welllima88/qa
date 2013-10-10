@@ -4,17 +4,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class ProcessTickets : WebObject
     {
-        public IWebElement Oldest
+        public static IWebElement Oldest
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Oldest)); }
         }
 
-        public IWebElement Newest
+        public static IWebElement Newest
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Newest)); }
         }
 
-        public IWebElement Container
+        public static IWebElement Container
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Container)); }
         }

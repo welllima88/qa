@@ -21,13 +21,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [Ignore]
     public class ApplicationNewsTest
     {
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]

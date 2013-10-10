@@ -1,10 +1,9 @@
 using System.Collections;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article
 {
-    public class ArticleView : WebObject, IArticle
+    public class ArticleView : WebObject
     {
         public IWebElement SaveButton
         {
@@ -13,62 +12,62 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article
 
         #region IArticle Members
 
-        public string Name
+        public static string Name
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ArticleName")).Text; }
         }
 
-        public bool Status
+        public static bool Status
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Article_IsActive")).Selected; }
         }
 
-        public string NetType
+        public static string NetType
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#NetType")).Text; }
         }
 
-        public string SbsArticleNumber
+        public static string SbsArticleNumber
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ArticleSbsNumber")).Text; }
         }
 
-        public string CardReaderType
+        public static string CardReaderType
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#CardReaderType")).Text; }
         }
 
-        public string ContactlessIndicator
+        public static string ContactlessIndicator
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ContactlessInd")).Text; }
         }
 
-        public string PosInterface
+        public static string PosInterface
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#PosInterface")).Text; }
         }
 
-        public string Color
+        public static string Color
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#Color")).Text; }
         }
 
-        public string SoftwareId
+        public static string SoftwareId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SoftwareId")).Text; }
         }
 
-        public string TrxSubmLim
+        public static string TrxSubmLim
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxSubmLim")).Text; }
         }
 
-        public string TrxTransLim
+        public static string TrxTransLim
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxTransLim")).Text; }
         }
 
-        public ICollection Supplier
+        public static ICollection Supplier
         {
             get
             {
@@ -77,7 +76,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article
             }
         }
 
-        public string RecallInterval
+        public static string RecallInterval
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#RecallInterval")).Text; }
         }

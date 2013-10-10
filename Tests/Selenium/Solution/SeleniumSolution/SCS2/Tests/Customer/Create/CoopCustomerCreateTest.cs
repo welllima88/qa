@@ -9,11 +9,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CoopCustomerCreateTest
     {
-        private static CustomerCreate CustomerCreate;
-        private static CustomerView CustomerView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static CustomerMenu CustomerMenu;
         private static string _supplier;
         private static string _customerName;
         private static string _companyName;
@@ -37,13 +32,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerCreate = new CustomerCreate();
-            CustomerView = new CustomerView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 

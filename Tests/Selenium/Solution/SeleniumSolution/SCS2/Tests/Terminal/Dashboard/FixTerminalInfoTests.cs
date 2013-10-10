@@ -7,14 +7,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
     [TestClass]
     public class FixTerminalInfoTests
     {
-        private static FixInfo _terminFixInfo;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            _terminFixInfo = new FixInfo();
-        }
-
         [TestInitialize]
         public void TestInit()
         {
@@ -24,26 +16,26 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void TerminalInfoCheck()
         {
-            StringAssert.Matches(_terminFixInfo.Terminal.Article.Text, new Regex(@"\w+"));
-            StringAssert.Matches(_terminFixInfo.Terminal.TerminalId.Text, new Regex(@"\d+"));
-            StringAssert.Matches(_terminFixInfo.Terminal.ExternTerminalId.Text, new Regex(@"\w+"));
+            StringAssert.Matches(TerminalInfo.Article.Text, new Regex(@"\w+"));
+            StringAssert.Matches(TerminalInfo.TerminalId.Text, new Regex(@"\d+"));
+            StringAssert.Matches(TerminalInfo.ExternTerminalId.Text, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void LocationlInfoCheck()
         {
-            StringAssert.Matches(_terminFixInfo.Location.Adress.Text, new Regex(@"\w+"));
-            StringAssert.Matches(_terminFixInfo.Location.Ep2Id.Text, new Regex(@"\w{8}\d{7}"));
-            StringAssert.Matches(_terminFixInfo.Location.Name.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.Adress.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.Ep2Id.Text, new Regex(@"\w{8}\d{7}"));
+            StringAssert.Matches(LocationInfo.Name.Text, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void CustomerInfoCheck()
         {
-            StringAssert.Matches(_terminFixInfo.Customer.Adress.Text, new Regex(@"\w+"));
-            StringAssert.Matches(_terminFixInfo.Customer.Id.Text, new Regex(@"\d+"));
-            StringAssert.Matches(_terminFixInfo.Customer.Name.Text, new Regex(@"\w+"));
-            StringAssert.Matches(_terminFixInfo.Customer.Info.Text, new Regex(@"\w+"));
+            StringAssert.Matches(CustomerInfo.Adress.Text, new Regex(@"\w+"));
+            StringAssert.Matches(CustomerInfo.Id.Text, new Regex(@"\d+"));
+            StringAssert.Matches(CustomerInfo.Name.Text, new Regex(@"\w+"));
+            StringAssert.Matches(CustomerInfo.Info.Text, new Regex(@"\w+"));
         }
     }
 }

@@ -6,17 +6,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class RecentMassmutations : WebObject
     {
-        public String Header
+        public static String Header
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentMassmutations_Header)).Text; }
         }
 
-        public ReadOnlyCollection<IWebElement> Elements
+        public static ReadOnlyCollection<IWebElement> Elements
         {
             get { return WebDriver.FindElements(By.CssSelector(CommonRes.RecentMassmutations_Elements)); }
         }
 
-        public IWebElement MostRecent
+        public static IWebElement MostRecent
         {
             get { return Elements[0]; }
         }

@@ -20,48 +20,45 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class FooterTest
     {
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Copyright()
         {
-            Assert.IsTrue(LobbyView.Footer.Copyright.Displayed);
+            Assert.IsTrue(Footer.Copyright.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Disclaimer()
         {
-            Assert.IsTrue(LobbyView.Footer.Disclaimer.Displayed);
+            Assert.IsTrue(Footer.Disclaimer.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void Feedback()
         {
-            Assert.IsTrue(LobbyView.Footer.Feedback.Displayed);
+            Assert.IsTrue(Footer.Feedback.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void PrintPage()
         {
-            Assert.IsTrue(LobbyView.Footer.PrintPage.Displayed);
+            Assert.IsTrue(Footer.PrintPage.Displayed);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void ScrollUp()
         {
-            Assert.IsTrue(LobbyView.Footer.ScrollUp.Displayed);
+            Assert.IsTrue(Footer.ScrollUp.Displayed);
         }
     }
 }

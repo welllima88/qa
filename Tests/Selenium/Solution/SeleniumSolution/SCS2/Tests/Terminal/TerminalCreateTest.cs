@@ -9,33 +9,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
     [TestClass]
     public class TerminalCreateTest
     {
-        private static TerminalCreate TerminalCreate;
-        private static TerminalView TerminalView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static FormAlert _formAlert;
-        private static TerminalMenu TerminalMenu;
-        private static CustomerMenu CustomerMenu;
         private long _dt;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            TerminalCreate = new TerminalCreate();
-            TerminalView = new TerminalView();
-            _recentElements = new RecentElements();
-            _navigationBar = new NavigationBar();
-
-            _formAlert = new FormAlert();
-            TerminalMenu = new TerminalMenu();
-            CustomerMenu = new CustomerMenu();
-        }
 
         [TestInitialize]
         public void TestInit()
         {
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
-            _dt = DateTime.Now.Ticks; //timestamp for each test
+            _dt = TestLauncher.GenerateTestId();
         }
 
         [TestMethod]

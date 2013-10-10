@@ -1,43 +1,42 @@
 using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {
-    public class SimCardCreate : WebObject, ISimCardElement
+    public class SimCardCreate : WebObject
     {
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
         #region ISimCardElement Members
 
-        public string NetProvider
+        public static string NetProvider
         {
             get { throw new NotSupportedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_NetworkProviderId")).Selector().SelectByText(value); }
         }
 
-        public string SimCardNumber
+        public static string SimCardNumber
         {
             get { throw new NotSupportedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_CardNumber")).TypeText(value); }
         }
 
-        public string MobileNumber
+        public static string MobileNumber
         {
             get { throw new NotSupportedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_MobileNumber")).TypeText(value); }
         }
 
-        public string Pin
+        public static string Pin
         {
             get { throw new NotSupportedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PIN")).TypeText(value); }
         }
 
-        public string Puk
+        public static string Puk
         {
             get { throw new NotSupportedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TypeText(value); }
@@ -55,13 +54,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set { throw new NotSupportedException(); }
         }
 
-        public string Region
+        public static string Region
         {
             get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_LocationId")).Selector().SelectByText(value); }
         }
 
-        public string Usage
+        public static string Usage
         {
             get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Selector().SelectByText(value); }

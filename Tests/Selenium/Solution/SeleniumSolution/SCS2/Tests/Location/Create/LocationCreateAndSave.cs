@@ -10,29 +10,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
     [TestClass]
     public class LocationCreateAndSave
     {
-        private static LocationView LocationView;
-        private static NavigationBar _navigationBar;
-        private static RecentElements _recentElements;
-        private static LocationCreate LocationCreate;
-        private static CustomerMenu CustomerMenu;
-        private static CustomerView CustomerView;
-        private static LobbyView LobbyView;
-
         private static string _locId;
         private static string _ep2MerchantId;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerView = new CustomerView();
-            LocationCreate = new LocationCreate();
-            LocationView = new LocationView();
-            _recentElements = new RecentElements();
-
-            _navigationBar = new NavigationBar();
-            LobbyView = new LobbyView();
-
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
 
             CustomerMenu.LocationCreate.Click();

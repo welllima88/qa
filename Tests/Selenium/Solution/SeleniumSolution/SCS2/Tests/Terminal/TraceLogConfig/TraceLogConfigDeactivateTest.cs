@@ -6,16 +6,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
     [TestClass]
     public class TraceLogConfigDeactivateTest
     {
-        private static TerminalTraceLogConfigView _terminalTraceLogConfigView;
-        private static TerminalTraceLogConfigEdit _terminalTraceLogConfigEdit;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            _terminalTraceLogConfigEdit = new TerminalTraceLogConfigEdit();
-            _terminalTraceLogConfigView = new TerminalTraceLogConfigView();
-        }
-
         [TestInitialize]
         public void TestInit()
         {
@@ -25,45 +15,46 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         [TestMethod]
         public void ChangeTraceLogConfigAndSave()
         {
-            _terminalTraceLogConfigEdit.ActivatedUntil.TypeText("Date");
-            _terminalTraceLogConfigEdit.Parameter.TypeText("Parameter");
-            _terminalTraceLogConfigEdit.Medium.SelectByValue("2 Local");
-            _terminalTraceLogConfigEdit.Medium.SelectByValue("1 Remote");
-            _terminalTraceLogConfigEdit.DestinationAddress.TypeText("111.111.111.111");
-            _terminalTraceLogConfigEdit.DestinationPort.TypeText("11111");
-            _terminalTraceLogConfigEdit.TelephoneIsdn.TypeText("004412345677890");
-            _terminalTraceLogConfigEdit.TelephonePstn.TypeText("003312345677890");
-            _terminalTraceLogConfigEdit.DestinationUrl.TypeText("www.six-group.com");
-            _terminalTraceLogConfigEdit.DestinationUrlPort.TypeText("22222");
+            TerminalTraceLogConfigEdit.ActivatedUntil.TypeText("Date");
+            TerminalTraceLogConfigEdit.Parameter.TypeText("Parameter");
 
-            _terminalTraceLogConfigEdit.Save.Click();
+            TerminalTraceLogConfigEdit.Medium.SelectByValue("2 Local");
+            TerminalTraceLogConfigEdit.Medium.SelectByValue("1 Remote");
+            TerminalTraceLogConfigEdit.DestinationAddress.TypeText("111.111.111.111");
+            TerminalTraceLogConfigEdit.DestinationPort.TypeText("11111");
+            TerminalTraceLogConfigEdit.TelephoneIsdn.TypeText("004412345677890");
+            TerminalTraceLogConfigEdit.TelephonePstn.TypeText("003312345677890");
+            TerminalTraceLogConfigEdit.DestinationUrl.TypeText("www.six-group.com");
+            TerminalTraceLogConfigEdit.DestinationUrlPort.TypeText("22222");
 
-            Assert.AreEqual(_terminalTraceLogConfigView.ActivatedUntil, "Date");
-            Assert.AreEqual(_terminalTraceLogConfigView.Parameter, "Parameter");
-            Assert.AreEqual(_terminalTraceLogConfigView.Medium, "1 Remote");
-            Assert.AreEqual(_terminalTraceLogConfigView.Medium, "2 Local");
-            Assert.AreEqual(_terminalTraceLogConfigView.DestinationAddress, "111.111.111.111");
-            Assert.AreEqual(_terminalTraceLogConfigView.DestinationPort, "11111");
-            Assert.AreEqual(_terminalTraceLogConfigView.TelephoneIsdn, "004412345677890");
-            Assert.AreEqual(_terminalTraceLogConfigView.TelephonePstn, "003312345677890");
-            Assert.AreEqual(_terminalTraceLogConfigView.DestinationUrl, "www.six-group.com");
-            Assert.AreEqual(_terminalTraceLogConfigView.DestinationUrlPort, "22222");
+            TerminalTraceLogConfigEdit.Save.Click();
+
+            Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "Date");
+            Assert.AreEqual(TerminalTraceLogConfigView.Parameter, "Parameter");
+            Assert.AreEqual(TerminalTraceLogConfigView.Medium, "1 Remote");
+            //Assert.AreEqual(TerminalTraceLogConfigView.Medium, "2 Local");
+            Assert.AreEqual(TerminalTraceLogConfigView.DestinationAddress, "111.111.111.111");
+            Assert.AreEqual(TerminalTraceLogConfigView.DestinationPort, "11111");
+            Assert.AreEqual(TerminalTraceLogConfigView.TelephoneIsdn, "004412345677890");
+            Assert.AreEqual(TerminalTraceLogConfigView.TelephonePstn, "003312345677890");
+            Assert.AreEqual(TerminalTraceLogConfigView.DestinationUrl, "www.six-group.com");
+            Assert.AreEqual(TerminalTraceLogConfigView.DestinationUrlPort, "22222");
             // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(_terminalEventLog.EventList, "at least List with");
+            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
 
         [TestMethod]
         public void SetDateInThePastFailed()
         {
             // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(_terminalEventLog.EventList, "at least List with");
+            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
 
         [TestMethod]
         public void WihtEmptyParameterFailed()
         {
             // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(_terminalEventLog.EventList, "at least List with");
+            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
     }
 }

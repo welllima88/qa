@@ -13,8 +13,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate("");
-            LobbyMenu.MassMutation.CustomerCreate.Click();
+            TestLauncher.Navigate();
+            MassMutationMenu.CustomerCreate.Click();
         }
 
         [TestMethod]

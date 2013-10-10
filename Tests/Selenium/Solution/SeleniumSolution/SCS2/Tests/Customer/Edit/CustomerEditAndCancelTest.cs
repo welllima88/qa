@@ -9,10 +9,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
     [Ignore]
     public class CustomerEditAndCancel
     {
-        private static CustomerEdit CustomerEdit;
-        private static CustomerView CustomerView;
-        private static CustomerMenu CustomerMenu;
-
         private static string _custId;
         private static string _customerName;
         private static string _supplier;
@@ -41,10 +37,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerMenu = new CustomerMenu();
-            CustomerEdit = new CustomerEdit();
-            CustomerView = new CustomerView();
-
             TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
 
             _custId = CustomerView.CustomerNumber;

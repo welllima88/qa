@@ -20,13 +20,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class NavigationBarTest
     {
-        private static LobbyView LobbyView;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            LobbyView = new LobbyView();
-            TestLauncher.Navigate("");
+            TestLauncher.Navigate();
         }
 
         [TestMethod]
@@ -40,7 +37,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void Administration()
         {
-            Assert.IsTrue(LobbyView.NavigationBar.Administration.Displayed);
+            Assert.IsTrue(NavigationBar.Administration.Displayed);
         }
 
         [TestMethod]
