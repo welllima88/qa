@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
 {
     [TestClass]
-    public class LocationCreateWithMissingTest
+    public class LocationCreateWithMissingDataTest
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
