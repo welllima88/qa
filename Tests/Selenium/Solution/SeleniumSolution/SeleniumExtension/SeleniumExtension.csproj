@@ -80,8 +80,8 @@
     <Compile Include="NotCheckableElementException.cs" />
     <Compile Include="NotSelectableElementException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Scs2Res.Designer.cs">
-      <DependentUpon>Scs2Res.resx</DependentUpon>
+    <Compile Include="Properties\ScsRes.Designer.cs">
+      <DependentUpon>ScsRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -245,9 +245,9 @@
     <Folder Include="Selenium\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Scs2Res.resx">
+    <EmbeddedResource Include="Properties\ScsRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Scs2Res.Designer.cs</LastGenOutput>
+      <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\CommonRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>

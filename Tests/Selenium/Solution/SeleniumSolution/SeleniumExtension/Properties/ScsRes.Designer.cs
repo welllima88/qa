@@ -22,14 +22,14 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Scs2Res {
+    public class ScsRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Scs2Res() {
+        internal ScsRes() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Extension.Properties.Scs2Res", typeof(Scs2Res).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Extension.Properties.ScsRes", typeof(ScsRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -106,7 +106,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://mdzhwcweb01/scs2.
+        ///   Looks up a localized string similar to https://mdzhwcweb01/scs2/.
         /// </summary>
         public static string UAC_DEV {
             get {
@@ -142,7 +142,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2/.
         /// </summary>
         public static string WES_Production {
             get {
@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scs2c-qa-k.
+        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scs2c-qa-k/.
         /// </summary>
         public static string WES_QA_K {
             get {
@@ -160,7 +160,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scs2c-qa-l.
+        ///   Looks up a localized string similar to https://gateint.telekurs.ch/scs2c-qa-l/.
         /// </summary>
         public static string WES_QA_L {
             get {
