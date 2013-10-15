@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
@@ -9,14 +10,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
         [TestMethod]
         public void CustomerMenuTest()
         {
-            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
+            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
             CustomerMenuCheck();
         }
 
         [TestMethod]
         public void LocationMenuTest()
         {
-            TestLauncher.Navigate("/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
+            TestDirector.Navigate("/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
             LocationMenuCheck();
             CustomerMenu.Customer.Click();
             CustomerMenuCheck();
@@ -25,7 +26,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
         [TestMethod]
         public void TerminalMenuTest()
         {
-            TestLauncher.Navigate(
+            TestDirector.Navigate(
                 "/Pages/Terminal/TerminalView.aspx?PageMode=view&CustomerId=400805&TerminalId=30980051");
 
             //CustomerMenuCheck(CustomerMenu);

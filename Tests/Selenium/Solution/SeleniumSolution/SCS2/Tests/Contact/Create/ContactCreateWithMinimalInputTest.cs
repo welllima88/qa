@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
@@ -11,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
+            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             CustomerMenu.ContactCreate.Click();
 
@@ -111,10 +112,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void RecentElementsCheck()
         {
-            string url = TestLauncher.TestDirector.WebDriver.Url;
+            string url = TestDirector.WebDriver.Url;
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
-            Assert.AreEqual(TestLauncher.TestDirector.WebDriver.Url, url, false);
+            Assert.AreEqual(TestDirector.WebDriver.Url, url, false);
         }
     }
 }

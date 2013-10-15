@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -11,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
+            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
             CustomerMenu.CustomerEdit.Click();
 
             CustomerEdit.CustomerName = "";

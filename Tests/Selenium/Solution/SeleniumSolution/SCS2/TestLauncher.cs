@@ -6,19 +6,11 @@ using SIX.SCS.QA.Selenium.Extension.Settings;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
     /// <summary>
-    ///     The TestLauncher prepares Browser with a concrete TestDirector and keeps this
+    ///     The TestLauncher prepares Browser with TestDirector and keeps this
     /// </summary>
     [TestClass]
     public static class TestLauncher
     {
-        public static TestDirector TestDirector;
-
-        public static void Navigate(string urlSuffix = "")
-        {
-            var suff = new Uri(urlSuffix, UriKind.Relative);
-            var url = new Uri(TestEnvironment.BaseUrl, suff);
-            TestDirector.WebDriver.Url = url.AbsoluteUri;
-        }
 
         public static long GenerateTestId()
         {
@@ -28,8 +20,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestDirector = new TestDirector();
-            ScsPlatinTestEnvironment.PrepareForDev();
+            ScsPlatinTestEnvironment.LoadConfigurationDev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
         }

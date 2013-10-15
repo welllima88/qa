@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 
@@ -10,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/Pages/Terminal/TerminalNew.aspx?CUSTOMERID=400805");
+            TestDirector.Navigate("/Pages/Terminal/TerminalNew.aspx?CUSTOMERID=400805");
         }
 
         [TestMethod]

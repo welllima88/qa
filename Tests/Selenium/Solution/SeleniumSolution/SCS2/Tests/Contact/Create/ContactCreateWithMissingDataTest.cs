@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
@@ -11,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
+            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             CustomerMenu.ContactCreate.Click();
 

@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/SIMCard/New");
+            TestDirector.Navigate("/SIMCard/New");
         }
 
         [TestMethod]

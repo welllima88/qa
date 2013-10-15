@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.EventLog;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.EventLog
@@ -9,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.EventLog
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate("/TerminalLog?TerminalId=30092715");
+            TestDirector.Navigate("/TerminalLog?TerminalId=30092715");
         }
 
         [TestMethod]

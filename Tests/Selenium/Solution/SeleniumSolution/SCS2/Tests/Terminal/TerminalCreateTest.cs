@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
@@ -14,7 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
+            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
             _dt = TestLauncher.GenerateTestId();
         }
 

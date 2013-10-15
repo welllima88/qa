@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
@@ -9,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/TracelogConfig/Edit/?TerminalId=21011402");
+            TestDirector.Navigate("/TracelogConfig/Edit/?TerminalId=21011402");
         }
 
         [TestMethod]

@@ -26,7 +26,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestLauncher.Navigate();
+            TestDirector.Navigate();
             _dt = DateTime.Now.Ticks; //timestamp for each test
 
             _customerName = "SYR Kunde" + _dt;
@@ -63,7 +63,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate();
+            TestDirector.Navigate();
         }
 
         [TestMethod]

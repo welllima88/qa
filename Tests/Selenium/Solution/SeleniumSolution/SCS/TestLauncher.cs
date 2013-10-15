@@ -7,19 +7,19 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium
     [TestClass]
     public static class TestLauncher
     {
-        public static TestDirector TestDirector;
-
+        
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestDirector = new TestDirector();
             ScsClassiicTestEnvironment.Dev();
             TestDirector.PrepareBrowser();
+            TestDirector.Login();
         }
 
         [AssemblyCleanup]
         public static void StopTestDirector()
         {
+            TestDirector.Logout();
             TestDirector.ShutDownBrowser();
         }
     }

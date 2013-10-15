@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -65,7 +66,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _fax = "0033 58 399 6237";
             _web = "www.six-group.com/de-intern";
 
-            TestLauncher.Navigate();
+            TestDirector.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 

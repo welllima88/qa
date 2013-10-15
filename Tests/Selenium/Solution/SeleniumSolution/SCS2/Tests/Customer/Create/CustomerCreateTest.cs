@@ -67,7 +67,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _fax = "0033 58 399 6237";
             _web = "www.six-group.com/de-intern";
 
-            TestLauncher.Navigate();
+            TestDirector.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 
@@ -127,12 +127,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestMethod]
         public void MostRecent()
         {
-            string url = TestLauncher.TestDirector.WebDriver.Url;
+            string url = TestDirector.WebDriver.Url;
 
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
 
-            Assert.AreEqual(url, TestLauncher.TestDirector.WebDriver.Url, true);
+            Assert.AreEqual(url, TestDirector.WebDriver.Url, true);
             Assert.AreEqual(_custId, CustomerView.CustomerNumber);
         }
 

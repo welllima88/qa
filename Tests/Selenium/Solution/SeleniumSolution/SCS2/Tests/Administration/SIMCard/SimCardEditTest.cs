@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
@@ -11,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         public void TestInit()
         {
             // SIMCard/EditCard?simCardId=11
-            TestLauncher.Navigate("/SIMCard/Details?SIMCardId=1");
+            TestDirector.Navigate("/SIMCard/Details?SIMCardId=1");
         }
 
         [TestMethod]

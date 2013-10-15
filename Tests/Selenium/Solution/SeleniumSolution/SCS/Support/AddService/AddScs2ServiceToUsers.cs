@@ -24,15 +24,13 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
     [TestClass]
     public class AddServiceToUsers
     {
-        private static TestDirector _tb;
         private static IWebDriverAdapter _driver;
         public TestContext TestContext { get; set; }
 
         [ClassInitialize]
         public static void Prepare(TestContext testContext)
         {
-            _tb = TestLauncher.TestDirector;
-            _driver = _tb.WebDriver;
+            _driver = TestDirector.WebDriver;
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
@@ -107,7 +105,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
 
         private static void OpenUserPage(string userId)
         {
-            _driver.Navigate().GoToUrl(_tb.BaseUrl +
+            _driver.Navigate().GoToUrl(TestDirector.BaseUrl +
                                        "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
             _driver.SwitchTo().Frame("main");
         }

@@ -74,8 +74,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
         public void EnterValidCustomerDataAndCancel()
         {
             // TODO: not Working
-            var tb = new TestDirector();
-            IWebDriverAdapter driver = tb.PrepareBrowser();
+            IWebDriverAdapter driver = TestDirector.PrepareBrowser();
 
             CustomerMenu.CustomerCreate.Click();
             CustomerCreate.CustomerName = "Selenium Test will cancel";
@@ -89,7 +88,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
             CustomerCreate.CancelButton.Click();
             Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
 
-            tb.ShutDownBrowser();
+            TestDirector.ShutDownBrowser();
         }
     }
 }

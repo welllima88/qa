@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
     public class ScsPlatinTestEnvironment : TestEnvironment
     {
-        public static void PrepareForDev()
+        public static void LoadConfigurationDev()
         {
             BaseUrl = new Uri(ScsRes.UAC_DEV);
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
@@ -21,7 +21,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
                 };
         }
 
-        public static void PrepareForLocal()
+        public static void LoadConfigurationLocal()
         {
             BaseUrl = new Uri(ScsRes.UAC_LOCAL);
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
                 };
         }
 
-        public static void PrepareForProd()
+        public static void LoadConfigurationProd()
         {
             BaseUrl = new Uri(ScsRes.WES_Production);
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
                 };
         }
 
-        public static void PrepareForQaK()
+        public static void LoadConfigurationQaK()
         {
             BaseUrl = new Uri(ScsRes.WES_QA_K);
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
@@ -57,7 +57,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
                 };
         }
 
-        public static void PrepareForQaL()
+        public static void LoadConfigurationQaL()
         {
             BaseUrl = new Uri(ScsRes.WES_QA_L);
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;

@@ -20,7 +20,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         {
             _dt = TestLauncher.GenerateTestId();
 
-            TestLauncher.Navigate();
+            TestDirector.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
 
