@@ -100,7 +100,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         }
 
         [TestMethod]
-        public void Ep2MerchantId()
+        public void Ep2MerchantIdPattern()
         {
             StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
         }
