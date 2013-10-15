@@ -6,7 +6,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 {
     [TestClass]
-    public class EditLocationAndCancelTest
+    public class LocationEditAndCancelTest
     {
         private string _adressAddition;
         private string _city;
