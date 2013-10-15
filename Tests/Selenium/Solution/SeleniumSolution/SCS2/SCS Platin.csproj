@@ -127,10 +127,14 @@
     <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Location\Edit\Copy of LocationEditAndSaveTest.cs" />
-    <Compile Include="Tests\Location\Edit\EditLocationWithInvalidDataTest.cs" />
-    <Compile Include="Tests\Location\Edit\EditLocationAndCancelTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithMinimalInputTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithNoChangeTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithoutUserInputTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithMissingDataTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithInvalidDataTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditAndCancelTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditAndSaveTest.cs" />
-    <Compile Include="Tests\Location\Create\LocationCreateWithMissingTest.cs" />
+    <Compile Include="Tests\Location\Create\LocationCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />
     <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
     <Compile Include="Tests\Lobby\RecentMassJobsTest.cs" />

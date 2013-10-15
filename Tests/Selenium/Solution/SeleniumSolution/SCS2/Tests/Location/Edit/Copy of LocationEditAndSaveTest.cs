@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 {
     [TestClass]
-    public class LocationEditAndSaveTest
+    public class LocationEditWithoutReasonTest
     {
         [TestInitialize]
         public void TestInit()
