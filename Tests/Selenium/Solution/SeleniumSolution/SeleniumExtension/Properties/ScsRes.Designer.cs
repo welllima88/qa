@@ -142,7 +142,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2/.
+        ///   Looks up a localized string similar to https://gate.telekurs.ch/scs2s/.
         /// </summary>
         public static string WES_Production {
             get {

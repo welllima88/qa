@@ -128,7 +128,7 @@
     <value>six_scs_auto</value>
   </data>
   <data name="WES_Production" xml:space="preserve">
-    <value>https://gate.telekurs.ch/scs2/</value>
+    <value>https://gate.telekurs.ch/scs2s/</value>
   </data>
   <data name="WES_QA_K" xml:space="preserve">
     <value>https://gateint.telekurs.ch/scs2c-qa-k/</value>
