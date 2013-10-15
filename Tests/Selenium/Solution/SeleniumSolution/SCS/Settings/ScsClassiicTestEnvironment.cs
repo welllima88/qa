@@ -1,5 +1,4 @@
 ﻿using System;
-using SIX.SCS.QA.SCSClassics.Tests.Selenium.Properties;
 using SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
 using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
@@ -12,10 +11,10 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
     {
         public static void Dev()
         {
-            BaseUrl = new Uri(ScsRes.UAC_DEV);
-            BrowserProfileName = Scs2Res.FirefoxProfile_Plain;
+            BaseUrl = new Uri("https://mdzhwcweb01/scs2/");
+            BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Scs();
-            Authentication = new UacAuthentication(new UacLoginPageOld(), Scs2Res.uac_username, Scs2Res.uac_passwort);
+            Authentication = new UacAuthentication(new UacLoginPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
@@ -24,8 +23,8 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 
         public static void Prod()
         {
-            BaseUrl = new Uri(ScsRes.WES_Production);
-            BrowserProfileName = Scs2Res.FirefoxProfile_Plain;
+            BaseUrl = new Uri("https://gate.telekurs.ch/scss");
+            BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Scs();
             Authentication = new SecurIdDialogBox();
             SeleniumConfig = new SeleniumConfig
@@ -36,10 +35,10 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 
         public static void QaK()
         {
-            BaseUrl = new Uri(ScsRes.WES_QA_K);
-            BrowserProfileName = Scs2Res.FirefoxProfile_Certificate;
+            BaseUrl = new Uri("https://gateint.telekurs.ch/scsc-qa-k/");
+            BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Scs();
-            Authentication = new CertificateAuthentication(Scs2Res.mandant_qa_K);
+            Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
@@ -48,10 +47,10 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 
         public static void QaL()
         {
-            BaseUrl = new Uri(ScsRes.WES_QA_L);
-            BrowserProfileName = Scs2Res.FirefoxProfile_Certificate;
+            BaseUrl = new Uri("https://gateint.telekurs.ch/scs2c-qa-l/");
+            BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Scs();
-            Authentication = new CertificateAuthentication(Scs2Res.mandant_qa_L);
+            Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
