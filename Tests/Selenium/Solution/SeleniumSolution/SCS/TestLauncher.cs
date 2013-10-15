@@ -7,7 +7,6 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium
     [TestClass]
     public static class TestLauncher
     {
-        
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {

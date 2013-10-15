@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.Settings;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
@@ -11,7 +10,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
     [TestClass]
     public static class TestLauncher
     {
-
         public static long GenerateTestId()
         {
             return DateTime.Now.Ticks;
