@@ -126,7 +126,9 @@
     <Compile Include="Tests\Location\Create\LocationCreateAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
-    <Compile Include="Tests\Location\Edit\Copy of LocationEditTest.cs" />
+    <Compile Include="Tests\Location\Edit\Copy of LocationEditAndSaveTest.cs" />
+    <Compile Include="Tests\Location\Edit\EditLocationWithInvalidDataTest.cs" />
+    <Compile Include="Tests\Location\Edit\EditLocationAndCancelTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditAndSaveTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMissingTest.cs" />
     <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />

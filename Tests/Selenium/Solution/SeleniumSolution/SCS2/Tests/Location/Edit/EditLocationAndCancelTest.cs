@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         [TestInitialize]
         public void TestInit()
         {
-            TestLauncher.Navigate("/Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
+            TestLauncher.Navigate("Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
             _guid = LocationView.Guid;
 
             _sapNumber = LocationView.SapNumber;
