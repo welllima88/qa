@@ -63,13 +63,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual("DE", AgencyView.Country);
+            Assert.AreEqual("Deutschland", AgencyView.Country);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("DE", AgencyView.Language);
+            Assert.AreEqual("Deutsch [de]", AgencyView.Language);
         }
 
         [TestMethod]
