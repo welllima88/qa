@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article
@@ -67,12 +67,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Article
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxTransLim")).Text; }
         }
 
-        public static ICollection Supplier
+        public static List<string> Supplier
         {
             get
             {
                 return
-                    WebDriver.FindElements(By.CssSelector("td#content form div table.dataTable tbody tr td"));
+                    WebDriver.WebElementsAsStringList(
+                        WebDriver.FindElements(By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
             }
         }
 
