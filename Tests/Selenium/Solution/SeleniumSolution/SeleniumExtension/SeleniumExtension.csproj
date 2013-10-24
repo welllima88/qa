@@ -161,8 +161,8 @@
     <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
     <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
     <Compile Include="TestObjects\Location\BillingAdressView.cs" />
-    <Compile Include="TestObjects\Location\Location.Designer.cs">
-      <DependentUpon>Location.resx</DependentUpon>
+    <Compile Include="TestObjects\Location\LocationRes.Designer.cs">
+      <DependentUpon>LocationRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -264,9 +264,9 @@
       <LastGenOutput>CustomerRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Location\Location.resx">
+    <EmbeddedResource Include="TestObjects\Location\LocationRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Location.Designer.cs</LastGenOutput>
+      <LastGenOutput>LocationRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Person\PersonCreateRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
