@@ -12,16 +12,16 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         {
             TestDirector.Navigate("TracelogConfig/Edit/?TerminalId=21011402");
 
-            TerminalTraceLogConfigEdit.ActivatedUntil.TypeText("Date");
-            TerminalTraceLogConfigEdit.Parameter.TypeText("Parameter");
-            TerminalTraceLogConfigEdit.Medium.SelectByValue("2 Local");
-            TerminalTraceLogConfigEdit.Medium.SelectByValue("1 Remote");
-            TerminalTraceLogConfigEdit.DestinationAddress.TypeText("111.111.111.111");
-            TerminalTraceLogConfigEdit.DestinationPort.TypeText("11111");
-            TerminalTraceLogConfigEdit.TelephoneIsdn.TypeText("004412345677890");
-            TerminalTraceLogConfigEdit.TelephonePstn.TypeText("003312345677890");
-            TerminalTraceLogConfigEdit.DestinationUrl.TypeText("www.six-group.com");
-            TerminalTraceLogConfigEdit.DestinationUrlPort.TypeText("22222");
+            TerminalTraceLogConfigEdit.ActivatedUntil = "24.10.2020";
+            TerminalTraceLogConfigEdit.Parameter = "Parameter";
+            TerminalTraceLogConfigEdit.Medium = "2";
+            TerminalTraceLogConfigEdit.Medium = "1";
+            TerminalTraceLogConfigEdit.DestinationAddress = "111.111.111.111";
+            TerminalTraceLogConfigEdit.DestinationPort = "11111";
+            TerminalTraceLogConfigEdit.TelephoneIsdn = "004412345677890";
+            TerminalTraceLogConfigEdit.TelephonePstn = "003312345677890";
+            TerminalTraceLogConfigEdit.DestinationUrl = "www.six-group.com";
+            TerminalTraceLogConfigEdit.DestinationUrlPort = "22222";
 
             TerminalTraceLogConfigEdit.Save.Click();
         }
@@ -29,9 +29,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         [TestMethod]
         public void ActivatedUntil()
         {
-            Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "Date");
-            // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
+            Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "24.10.2020");
         }
 
         [TestMethod]
@@ -43,7 +41,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         [TestMethod]
         public void Medium()
         {
-            Assert.AreEqual(TerminalTraceLogConfigView.Medium, "1 Remote");
+            Assert.AreEqual(TerminalTraceLogConfigView.Medium, "Remote");
         }
 
         [TestMethod]
@@ -80,20 +78,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         public void DestinationUrlPort()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.DestinationUrlPort, "22222");
-        }
-
-        [TestMethod]
-        public void SetDateInThePastFailed()
-        {
-            // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
-        }
-
-        [TestMethod]
-        public void WihtEmptyParameterFailed()
-        {
-            // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
-            // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
     }
 }
