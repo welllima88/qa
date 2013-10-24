@@ -123,7 +123,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 
         public static string Guid
         {
-            get { return WebDriver.FindElement(By.CssSelector(Location.GUID)).Text; }
+            get { return WebDriver.FindElement(By.CssSelector(LocationRes.GUID)).Text; }
+        }
+
+        public static string Reason
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason"))
+                             .Selector()
+                             .SelectedOption.Text;
+            }
+            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByValue(value); }
+        }
+
+        public static string ReasonRemark
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).Text; }
+            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).TypeText(value); }
         }
     }
 }
