@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/TracelogConfig/Edit/?TerminalId=21011402");
+            TestDirector.Navigate("TracelogConfig/Edit/?TerminalId=21011402");
         }
 
         [TestMethod]

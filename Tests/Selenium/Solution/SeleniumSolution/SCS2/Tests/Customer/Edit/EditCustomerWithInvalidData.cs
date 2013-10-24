@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
 
             CustomerMenu.CustomerEdit.Click();
 

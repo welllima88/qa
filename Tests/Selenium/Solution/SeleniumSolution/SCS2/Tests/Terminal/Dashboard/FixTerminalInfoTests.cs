@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/TerminalDashboard/?TerminalId=30381643");
+            TestDirector.Navigate("TerminalDashboard/?TerminalId=30381643");
         }
 
         [TestMethod]

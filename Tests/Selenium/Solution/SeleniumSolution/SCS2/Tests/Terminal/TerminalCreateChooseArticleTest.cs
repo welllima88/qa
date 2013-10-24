@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/Pages/Terminal/TerminalNew.aspx?CUSTOMERID=400805");
+            TestDirector.Navigate("Pages/Terminal/TerminalNew.aspx?CUSTOMERID=400805");
         }
 
         [TestMethod]

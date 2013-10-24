@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExcha
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("/MasterSoftwareExchange/");
+            TestDirector.Navigate("MasterSoftwareExchange/");
         }
 
         [TestMethod]

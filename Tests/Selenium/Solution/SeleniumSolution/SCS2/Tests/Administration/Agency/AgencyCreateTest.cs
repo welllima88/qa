@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         {
             _nameDyn = "SYR " + TestLauncher.GenerateTestId();
 
-            TestDirector.Navigate("/Agency/Create");
+            TestDirector.Navigate("Agency/Create");
 
             AgencyCreate.Name = _nameDyn;
             AgencyCreate.DisplayName = _nameDyn + "D";

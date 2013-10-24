@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         public void TestInit()
         {
             // SIMCard/EditCard?simCardId=11
-            TestDirector.Navigate("/SIMCard/Details?SIMCardId=1");
+            TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
         }
 
         [TestMethod]

@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/SIMCard/New");
+            TestDirector.Navigate("SIMCard/New");
         }
 
         [TestMethod]
@@ -32,6 +32,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
             SimCardCreate.Puk = puk;
             SimCardCreate.Region = region;
             SimCardCreate.Usage = usage;
+
             SimCardCreate.SaveButton.Click();
 
             Assert.AreEqual(SimCardView.SimCardElement.NetProvider, netProvider);

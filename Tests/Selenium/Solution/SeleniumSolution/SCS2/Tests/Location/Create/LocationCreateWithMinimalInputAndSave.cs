@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
 
             CustomerMenu.LocationCreate.Click();
 

@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
         }
 
         [TestMethod]

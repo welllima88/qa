@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Article
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("/Article/Edit?Id=CF03DF69-5AE1-422B-8C37-DCE143157D98");
+            TestDirector.Navigate("Article/Edit?Id=CF03DF69-5AE1-422B-8C37-DCE143157D98");
         }
 
         [TestMethod]

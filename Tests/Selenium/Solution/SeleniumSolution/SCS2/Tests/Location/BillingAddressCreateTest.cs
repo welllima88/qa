@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
             _dt = TestLauncher.GenerateTestId();
         }
 

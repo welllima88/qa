@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.EventLog
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("/TerminalLog?TerminalId=30092715");
+            TestDirector.Navigate("TerminalLog?TerminalId=30092715");
         }
 
         [TestMethod]

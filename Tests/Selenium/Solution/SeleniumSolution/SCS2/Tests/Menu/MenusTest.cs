@@ -10,14 +10,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
         [TestMethod]
         public void CustomerMenuTest()
         {
-            TestDirector.Navigate("/Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=85036");
             CustomerMenuCheck();
         }
 
         [TestMethod]
         public void LocationMenuTest()
         {
-            TestDirector.Navigate("/Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
+            TestDirector.Navigate("Location/?LocationId=13404719-47a4-4686-8e22-161d3cd9903e");
             LocationMenuCheck();
             CustomerMenu.Customer.Click();
             CustomerMenuCheck();

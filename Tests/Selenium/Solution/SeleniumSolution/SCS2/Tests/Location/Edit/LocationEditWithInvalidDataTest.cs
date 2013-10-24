@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("/Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
+            TestDirector.Navigate("Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
             LocationMenu.LocationEdit.Click();
 
             LocationEdit.CompanyName = "SYR Sele Firma A$°";
