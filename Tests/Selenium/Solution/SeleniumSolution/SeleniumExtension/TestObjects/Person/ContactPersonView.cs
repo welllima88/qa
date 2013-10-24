@@ -76,7 +76,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string Web
         {
-            get { throw new NotSupportedException(); }
+            get { return WebDriver.FindElement(By.CssSelector("#Address_Web")).Text; }
             set { throw new NotSupportedException(); }
         }
 
