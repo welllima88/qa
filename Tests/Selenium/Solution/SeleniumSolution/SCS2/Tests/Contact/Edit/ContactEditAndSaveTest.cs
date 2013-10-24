@@ -10,17 +10,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
     [TestClass]
     public class ContactEditAndSaveTest
     {
-        private readonly string _contactId;
-        private double _dt;
-
-        public ContactEditAndSaveTest(string contactId)
-        {
-            _contactId = contactId;
-        }
+        private static string _contactId;
+        private static double _dt;
 
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit(TestContext testContext)
         {
+            _contactId = "1";
             TestDirector.Navigate("Pages/Person/ContactPersonEdit.aspx?PageMode=view&PersonId=" + _contactId);
             _dt = TestLauncher.GenerateTestId();
 
