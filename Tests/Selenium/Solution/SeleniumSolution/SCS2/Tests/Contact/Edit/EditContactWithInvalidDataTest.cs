@@ -32,8 +32,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.City = "City[]rn$°";
             ContactPersonEdit.Region = "Reg[]rn$°";
             ContactPersonEdit.Country = "Frankreich [FR]";
-
             ContactPersonEdit.AdressAddition = "Addr[]rn$°";
+            //ContactPersonEdit.Web = "Web[]rn$°";
 
             ContactPersonEdit.SaveButton.Click();
         }
@@ -108,6 +108,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         public void AdressAdditionInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Zusatz: Ungültige Zeichen gefunden!");
+        }
+
+        [TestMethod]
+        [Ignore] //todo uncomment assignment in class init
+        public void WebInvalid()
+        {
+            CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]

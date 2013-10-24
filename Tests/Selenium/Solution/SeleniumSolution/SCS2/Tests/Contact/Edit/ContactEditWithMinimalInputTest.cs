@@ -126,6 +126,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         }
 
         [TestMethod]
+        [Ignore]
         public void Web()
         {
             Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
