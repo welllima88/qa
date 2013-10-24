@@ -18,49 +18,49 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         [TestMethod]
         public void MobileNumber()
         {
-            StringAssert.Matches(SimCardView.SimCardElement.MobileNumber, new Regex(@"\d{10}"));
+            StringAssert.Matches(SimCardView.MobileNumber, new Regex(@"\d{10}"));
         }
 
         [TestMethod]
         public void SimCardNumber()
         {
-            StringAssert.Matches(SimCardView.SimCardElement.SimCardNumber, new Regex(@"\d{18}"));
+            StringAssert.Matches(SimCardView.SimCardNumber, new Regex(@"\d{18}"));
         }
 
         [TestMethod]
         public void Pin()
         {
-            StringAssert.Matches(SimCardView.SimCardElement.Pin, new Regex(@"\d{4}"));
+            StringAssert.Matches(SimCardView.Pin, new Regex(@"\d{4}"));
         }
 
         [TestMethod]
         public void Puk()
         {
-            StringAssert.Matches(SimCardView.SimCardElement.Puk, new Regex(@"\d{8}"));
+            StringAssert.Matches(SimCardView.Puk, new Regex(@"\d{8}"));
         }
 
         [TestMethod]
         public void TerminalId()
         {
-            StringAssert.Matches(SimCardView.SimCardElement.TerminalId, new Regex(@"\d+"));
+            StringAssert.Matches(SimCardView.TerminalId, new Regex(@"\d+"));
         }
 
         [TestMethod]
         public void Status()
         {
-            Assert.IsNotNull(SimCardView.SimCardElement.Status);
+            Assert.IsNotNull(SimCardView.Status);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.IsNotNull(SimCardView.SimCardElement.Region);
+            Assert.IsNotNull(SimCardView.Region);
         }
 
         [TestMethod]
         public void Usage()
         {
-            Assert.IsNotNull(SimCardView.SimCardElement.Usage);
+            Assert.IsNotNull(SimCardView.Usage);
         }
 
         [TestMethod]

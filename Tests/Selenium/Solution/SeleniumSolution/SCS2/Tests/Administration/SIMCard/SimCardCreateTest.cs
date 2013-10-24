@@ -35,19 +35,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 
             SimCardCreate.SaveButton.Click();
 
-            Assert.AreEqual(SimCardView.SimCardElement.NetProvider, netProvider);
-            Assert.AreEqual(SimCardView.SimCardElement.SimCardNumber, simCardNumber);
-            Assert.AreEqual(SimCardView.SimCardElement.MobileNumber, mobileNumber);
-            Assert.AreEqual(SimCardView.SimCardElement.Pin, pin);
-            Assert.AreEqual(SimCardView.SimCardElement.Puk, puk);
-            Assert.AreEqual(SimCardView.SimCardElement.Status, true);
-            Assert.AreEqual(SimCardView.SimCardElement.TerminalId, "");
-            Assert.AreEqual(SimCardView.SimCardElement.Region, region);
-            Assert.AreEqual(SimCardView.SimCardElement.Usage, usage);
+            Assert.AreEqual(SimCardView.NetProvider, netProvider);
+            Assert.AreEqual(SimCardView.SimCardNumber, simCardNumber);
+            Assert.AreEqual(SimCardView.MobileNumber, mobileNumber);
+            Assert.AreEqual(SimCardView.Pin, pin);
+            Assert.AreEqual(SimCardView.Puk, puk);
+            Assert.AreEqual(SimCardView.Status, true);
+            Assert.AreEqual(SimCardView.TerminalId, "");
+            Assert.AreEqual(SimCardView.Region, region);
+            Assert.AreEqual(SimCardView.Usage, usage);
 
-            Assert.IsTrue(SimCardView.SimCardHistory.HistoryList.Count == 1);
+            Assert.IsTrue(SimCardHistory.HistoryList.Count == 1);
             // "13.12.2012 15:49:27 tksyr SIM-Karte erfasst"
-            StringAssert.Matches(SimCardView.SimCardHistory.HistoryList[0],
+            StringAssert.Matches(SimCardHistory.HistoryList[0],
                                  new Regex(TestRegExpPatterns.DateTime + " " + TestRegExpPatterns.UserName +
                                            " SIM Karte erfasst"));
         }

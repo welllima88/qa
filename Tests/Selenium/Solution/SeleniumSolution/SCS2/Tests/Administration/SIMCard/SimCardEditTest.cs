@@ -32,13 +32,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 
             SimCardEdit.SaveButton.Click();
 
-            Assert.AreEqual(SimCardView.SimCardElement.NetProvider, "SIX via Swisscom");
-            Assert.AreEqual(SimCardView.SimCardElement.SimCardNumber, "0123456789012345678");
-            Assert.AreEqual(SimCardView.SimCardElement.MobileNumber, "1234567890");
-            Assert.AreEqual(SimCardView.SimCardElement.Pin, "4321");
-            Assert.AreEqual(SimCardView.SimCardElement.Puk, "22446688");
-            Assert.AreEqual(SimCardView.SimCardElement.Status, true);
-            Assert.AreEqual(SimCardView.SimCardElement.TerminalId, "21012730");
+            Assert.AreEqual(SimCardView.NetProvider, "SIX via Swisscom");
+            Assert.AreEqual(SimCardView.SimCardNumber, "0123456789012345678");
+            Assert.AreEqual(SimCardView.MobileNumber, "1234567890");
+            Assert.AreEqual(SimCardView.Pin, "4321");
+            Assert.AreEqual(SimCardView.Puk, "22446688");
+            Assert.AreEqual(SimCardView.Status, true);
+            Assert.AreEqual(SimCardView.TerminalId, "21012730");
         }
 
         [TestMethod]
