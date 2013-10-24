@@ -127,7 +127,7 @@
     <value>#PersonData_Salutation</value>
   </data>
   <data name="Country" xml:space="preserve">
-    <value>select#ccc</value>
+    <value>select#PersonData_Contact_CountryId</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>#PersonData_Contact_LanguageId</value>

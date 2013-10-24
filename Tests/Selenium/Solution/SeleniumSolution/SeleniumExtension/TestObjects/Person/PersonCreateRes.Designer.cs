@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to select#ccc.
+        ///   Looks up a localized string similar to select#PersonData_Contact_CountryId.
         /// </summary>
         public static string Country {
             get {

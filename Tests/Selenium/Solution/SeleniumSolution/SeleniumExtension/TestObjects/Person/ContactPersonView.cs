@@ -20,11 +20,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             }
         }
 
-        public static string CreateDate
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpCreateDate")).Text; }
-        }
-
         public static string FirstName
         {
             get { return WebDriver.FindElement(By.CssSelector(PersonViewRes.FirstName)).Text; }

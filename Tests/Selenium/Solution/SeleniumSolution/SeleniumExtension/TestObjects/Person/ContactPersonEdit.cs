@@ -7,24 +7,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
     {
         public static IWebElement CancelButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            get { return WebDriver.FindElement(By.CssSelector("button#cancel")); }
         }
 
         public static IWebElement SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
+            get { return WebDriver.FindElement(By.CssSelector("input#save")); }
         }
-
+        //TODO test this explicit! because in edit mode not available
         public IWebElement ClickAdressFromLocation
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }
-        }
-
-        #region IContactEdit Members
-
-        public static string CreateDate
-        {
-            get { return ContactPersonView.CreateDate; }
         }
 
         public static string FirstName
@@ -122,7 +115,5 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set { ContactPersonCreate.AddressAddition = value; }
             get { return ContactPersonCreate.AddressAddition; }
         }
-
-        #endregion
     }
 }
