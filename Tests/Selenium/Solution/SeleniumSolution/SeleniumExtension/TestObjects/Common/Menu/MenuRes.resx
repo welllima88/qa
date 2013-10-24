@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ContactMenu_Contact" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Pages/Person/ContactPersonEdit.aspx?PageMode=view&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='/Person/?PERSONID=']</value>
   </data>
   <data name="ContactMenu_ContactEdit" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Pages/Person/ContactPersonEdit.aspx?PageMode=edit&amp;PERSONID=']</value>
+    <value>td#leftHandMenu a[href*='Person/Edit?PERSONID=']</value>
   </data>
   <data name="CustomerMenu_Customer" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=']</value>

@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MenuRes {
+    public class MenuRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu.MenuRes", typeof(MenuRes).Assembly);
@@ -51,7 +51,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,25 +63,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassAcqExchange&apos;].
         /// </summary>
-        internal static string AcquirerChange {
+        public static string AcquirerChange {
             get {
                 return ResourceManager.GetString("AcquirerChange", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/ContactPersonEdit.aspx?PageMode=view&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/?PERSONID=&apos;].
         /// </summary>
-        internal static string ContactMenu_Contact {
+        public static string ContactMenu_Contact {
             get {
                 return ResourceManager.GetString("ContactMenu_Contact", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Person/ContactPersonEdit.aspx?PageMode=edit&amp;PERSONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/Edit?PERSONID=&apos;].
         /// </summary>
-        internal static string ContactMenu_ContactEdit {
+        public static string ContactMenu_ContactEdit {
             get {
                 return ResourceManager.GetString("ContactMenu_ContactEdit", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Mpd/list?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_AllMpds {
+        public static string CustomerMenu_AllMpds {
             get {
                 return ResourceManager.GetString("CustomerMenu_AllMpds", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_AllTerminals {
+        public static string CustomerMenu_AllTerminals {
             get {
                 return ResourceManager.GetString("CustomerMenu_AllTerminals", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/BillingAddress/Edit?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_BillingAddressEdit {
+        public static string CustomerMenu_BillingAddressEdit {
             get {
                 return ResourceManager.GetString("CustomerMenu_BillingAddressEdit", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;BillingAddress/New?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_BillingAdressCreate {
+        public static string CustomerMenu_BillingAdressCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_BillingAdressCreate", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;BillingAddress/List?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_BillingAdresses {
+        public static string CustomerMenu_BillingAdresses {
             get {
                 return ResourceManager.GetString("CustomerMenu_BillingAdresses", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/CustomerPersonNew?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_ContactCreate {
+        public static string CustomerMenu_ContactCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_ContactCreate", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/CustomerPersonList?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_Contacts {
+        public static string CustomerMenu_Contacts {
             get {
                 return ResourceManager.GetString("CustomerMenu_Contacts", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_Customer {
+        public static string CustomerMenu_Customer {
             get {
                 return ResourceManager.GetString("CustomerMenu_Customer", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=new&apos;].
         /// </summary>
-        internal static string CustomerMenu_CustomerCreate {
+        public static string CustomerMenu_CustomerCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_CustomerCreate", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Customer/CustomerDeactivate.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_CustomerDeactivate {
+        public static string CustomerMenu_CustomerDeactivate {
             get {
                 return ResourceManager.GetString("CustomerMenu_CustomerDeactivate", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_CustomerEdit {
+        public static string CustomerMenu_CustomerEdit {
             get {
                 return ResourceManager.GetString("CustomerMenu_CustomerEdit", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/CustomerInfoText/Create?&amp;CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_InfotextCreate {
+        public static string CustomerMenu_InfotextCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_InfotextCreate", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Location/New?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_LocationCreate {
+        public static string CustomerMenu_LocationCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_LocationCreate", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location/LocationList.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_LocationsOfCustomer {
+        public static string CustomerMenu_LocationsOfCustomer {
             get {
                 return ResourceManager.GetString("CustomerMenu_LocationsOfCustomer", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalNew.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_TerminalCreate {
+        public static string CustomerMenu_TerminalCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_TerminalCreate", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_TerminalsOfCustomerLocation {
+        public static string CustomerMenu_TerminalsOfCustomerLocation {
             get {
                 return ResourceManager.GetString("CustomerMenu_TerminalsOfCustomerLocation", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;TicketList.asp?ListType=customer&amp;CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_Tickets {
+        public static string CustomerMenu_Tickets {
             get {
                 return ResourceManager.GetString("CustomerMenu_Tickets", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/LoginNew.asp?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_UserCreate {
+        public static string CustomerMenu_UserCreate {
             get {
                 return ResourceManager.GetString("CustomerMenu_UserCreate", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;User/UserList.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string CustomerMenu_Users {
+        public static string CustomerMenu_Users {
             get {
                 return ResourceManager.GetString("CustomerMenu_Users", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Lobby/&apos;].
         /// </summary>
-        internal static string LobbyMenu_Lobby {
+        public static string LobbyMenu_Lobby {
             get {
                 return ResourceManager.GetString("LobbyMenu_Lobby", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/ContactPersonEdit.aspx?PageMode=new&amp;LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_ContactCreate {
+        public static string LocationMenu_ContactCreate {
             get {
                 return ResourceManager.GetString("LocationMenu_ContactCreate", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/PersonList.aspx?CUSTOMERID=&apos;][href*=&apos;&amp;LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_Contacts {
+        public static string LocationMenu_Contacts {
             get {
                 return ResourceManager.GetString("LocationMenu_Contacts", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=&apos;].
         /// </summary>
-        internal static string LocationMenu_InfotextCreate {
+        public static string LocationMenu_InfotextCreate {
             get {
                 return ResourceManager.GetString("LocationMenu_InfotextCreate", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;InfoText/LocationInfoTextList.aspx?LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_Infotexts {
+        public static string LocationMenu_Infotexts {
             get {
                 return ResourceManager.GetString("LocationMenu_Infotexts", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Location/?LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_Location {
+        public static string LocationMenu_Location {
             get {
                 return ResourceManager.GetString("LocationMenu_Location", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location/Edit?LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_LocationEdit {
+        public static string LocationMenu_LocationEdit {
             get {
                 return ResourceManager.GetString("LocationMenu_LocationEdit", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Location.asp?mode=Cancel&amp;LocationFunction=&apos;].
         /// </summary>
-        internal static string LocationMenu_LocationQuit {
+        public static string LocationMenu_LocationQuit {
             get {
                 return ResourceManager.GetString("LocationMenu_LocationQuit", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalNew.aspx?LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_TerminalCreate {
+        public static string LocationMenu_TerminalCreate {
             get {
                 return ResourceManager.GetString("LocationMenu_TerminalCreate", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalList.aspx?LOCATIONID=&apos;].
         /// </summary>
-        internal static string LocationMenu_Terminals {
+        public static string LocationMenu_Terminals {
             get {
                 return ResourceManager.GetString("LocationMenu_Terminals", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/BTMigrationFileUpload.aspx&apos;].
         /// </summary>
-        internal static string MassMutationMenu_BusinessTemplateMigrate {
+        public static string MassMutationMenu_BusinessTemplateMigrate {
             get {
                 return ResourceManager.GetString("MassMutationMenu_BusinessTemplateMigrate", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/ContractsFileUpload.aspx&apos;].
         /// </summary>
-        internal static string MassMutationMenu_ContractCreate {
+        public static string MassMutationMenu_ContractCreate {
             get {
                 return ResourceManager.GetString("MassMutationMenu_ContractCreate", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/CustomersFileUpload.aspx&apos;].
         /// </summary>
-        internal static string MassMutationMenu_CustomerCreate {
+        public static string MassMutationMenu_CustomerCreate {
             get {
                 return ResourceManager.GetString("MassMutationMenu_CustomerCreate", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/LocationsFileUpload.aspx&apos;].
         /// </summary>
-        internal static string MassMutationMenu_LocationCreate {
+        public static string MassMutationMenu_LocationCreate {
             get {
                 return ResourceManager.GetString("MassMutationMenu_LocationCreate", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/MassMutation/TerminalsFileUpload.aspx&apos;].
         /// </summary>
-        internal static string MassMutationMenu_TerminalCreate {
+        public static string MassMutationMenu_TerminalCreate {
             get {
                 return ResourceManager.GetString("MassMutationMenu_TerminalCreate", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu.
         /// </summary>
-        internal static string Prefix {
+        public static string Prefix {
             get {
                 return ResourceManager.GetString("Prefix", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/SIMCard&apos;].
         /// </summary>
-        internal static string SimCardManagement {
+        public static string SimCardManagement {
             get {
                 return ResourceManager.GetString("SimCardManagement", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalEP2Log.asp?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_Ep2TraceLog {
+        public static string TerminalAnalysisMenu_Ep2TraceLog {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_Ep2TraceLog", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/FoMessage/Index?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_FoMessages {
+        public static string TerminalAnalysisMenu_FoMessages {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_FoMessages", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/FOQueries.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_FoQueries {
+        public static string TerminalAnalysisMenu_FoQueries {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_FoQueries", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/GKLP/GKLPBlock.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_GklpBlock {
+        public static string TerminalAnalysisMenu_GklpBlock {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_GklpBlock", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/ResetNetAddr.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_ResetComAdresses {
+        public static string TerminalAnalysisMenu_ResetComAdresses {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_ResetComAdresses", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Admin/MessageTransport/Overview.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_SendOverview {
+        public static string TerminalAnalysisMenu_SendOverview {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_SendOverview", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_SetFastInitFlag {
+        public static string TerminalAnalysisMenu_SetFastInitFlag {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_SetFastInitFlag", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalS3Log.asp?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalAnalysisMenu_TerminalEvents {
+        public static string TerminalAnalysisMenu_TerminalEvents {
             get {
                 return ResourceManager.GetString("TerminalAnalysisMenu_TerminalEvents", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/ContractNew.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_ContractCreate {
+        public static string TerminalMenu_ContractCreate {
             get {
                 return ResourceManager.GetString("TerminalMenu_ContractCreate", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Deactivate {
+        public static string TerminalMenu_Deactivate {
             get {
                 return ResourceManager.GetString("TerminalMenu_Deactivate", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalDuplicate.aspx?&apos;].
         /// </summary>
-        internal static string TerminalMenu_Duplicate {
+        public static string TerminalMenu_Duplicate {
             get {
                 return ResourceManager.GetString("TerminalMenu_Duplicate", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=edit&amp;TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Edit {
+        public static string TerminalMenu_Edit {
             get {
                 return ResourceManager.GetString("TerminalMenu_Edit", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalForms.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Forms {
+        public static string TerminalMenu_Forms {
             get {
                 return ResourceManager.GetString("TerminalMenu_Forms", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/TerminalInfoTextNew.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_InfotextCreate {
+        public static string TerminalMenu_InfotextCreate {
             get {
                 return ResourceManager.GetString("TerminalMenu_InfotextCreate", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/TerminalInfoTextList.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Infotexts {
+        public static string TerminalMenu_Infotexts {
             get {
                 return ResourceManager.GetString("TerminalMenu_Infotexts", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/PMSCreate.aspx?&apos;].
         /// </summary>
-        internal static string TerminalMenu_PmsCreate {
+        public static string TerminalMenu_PmsCreate {
             get {
                 return ResourceManager.GetString("TerminalMenu_PmsCreate", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalReplace.aspx?TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Replace {
+        public static string TerminalMenu_Replace {
             get {
                 return ResourceManager.GetString("TerminalMenu_Replace", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Contract/ServiceCenterCreate.aspx?&apos;].
         /// </summary>
-        internal static string TerminalMenu_ServiceCenterCreate {
+        public static string TerminalMenu_ServiceCenterCreate {
             get {
                 return ResourceManager.GetString("TerminalMenu_ServiceCenterCreate", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Terminal {
+        public static string TerminalMenu_Terminal {
             get {
                 return ResourceManager.GetString("TerminalMenu_Terminal", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/ticket.asp?WindowName=NewTicket&amp;CUSTOMERID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_TicketCreate {
+        public static string TerminalMenu_TicketCreate {
             get {
                 return ResourceManager.GetString("TerminalMenu_TicketCreate", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketList.asp?ListType=terminal&amp;TERMINALID=&apos;].
         /// </summary>
-        internal static string TerminalMenu_Tickets {
+        public static string TerminalMenu_Tickets {
             get {
                 return ResourceManager.GetString("TerminalMenu_Tickets", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/MyPersonalTickets/&apos;].
         /// </summary>
-        internal static string TicketMenu_My {
+        public static string TicketMenu_My {
             get {
                 return ResourceManager.GetString("TicketMenu_My", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/MyGroupTickets/&apos;].
         /// </summary>
-        internal static string TicketMenu_MyGroup {
+        public static string TicketMenu_MyGroup {
             get {
                 return ResourceManager.GetString("TicketMenu_MyGroup", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TicketIntegration/UnAssignedTickets/&apos;].
         /// </summary>
-        internal static string TicketMenu_NotAssigned {
+        public static string TicketMenu_NotAssigned {
             get {
                 return ResourceManager.GetString("TicketMenu_NotAssigned", resourceCulture);
             }
