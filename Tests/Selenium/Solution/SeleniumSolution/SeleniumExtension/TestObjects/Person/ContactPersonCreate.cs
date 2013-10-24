@@ -111,8 +111,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string Web
         {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Web)).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Web)).Text; }
         }
 
         public static string StreetNo
