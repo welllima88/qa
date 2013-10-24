@@ -21,7 +21,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Salutation = "Herr";
             ContactPersonEdit.FirstName = "Marc[]rn$°";
             ContactPersonEdit.Name = "Siegmund[]rn$°";
-            ContactPersonEdit.Language = "Italienisch [it]";
+            ContactPersonEdit.Language = "it";
             ContactPersonEdit.Telephone = "0123456789[]rn$°";
             ContactPersonEdit.Mobile = "1234567890[]rn$°";
             ContactPersonEdit.Fax = "2345678901[]rn$°";
@@ -31,9 +31,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Zip = "[]rn$°";
             ContactPersonEdit.City = "City[]rn$°";
             ContactPersonEdit.Region = "Reg[]rn$°";
-            ContactPersonEdit.Country = "Frankreich [FR]";
+            ContactPersonEdit.Country = "IT";
             ContactPersonEdit.AdressAddition = "Addr[]rn$°";
-            //ContactPersonEdit.Web = "Web[]rn$°";
+            // ContactPersonEdit.Web = "Web[]rn$°";
 
             ContactPersonEdit.SaveButton.Click();
         }
