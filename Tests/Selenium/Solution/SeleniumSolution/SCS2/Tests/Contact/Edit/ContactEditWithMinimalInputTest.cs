@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         public static void TestInit(TestContext testContext)
         {
             _contactId = "1";
-            TestDirector.Navigate("Pages/Person/ContactPersonEdit.aspx?PageMode=view&PersonId=" + _contactId);
+            TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             _dt = TestLauncher.GenerateTestId();
 
             ContactMenu.ContactEdit.Click();

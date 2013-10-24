@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
-            TestDirector.Navigate("Pages/Person/ContactPersonEdit.aspx?PageMode=view&PersonId=" + ContactId);
+            TestDirector.Navigate("Person/?PERSONID=" + ContactId);
             
             _salutation = ContactPersonView.Salutation;
             _firstName = ContactPersonView.FirstName;
