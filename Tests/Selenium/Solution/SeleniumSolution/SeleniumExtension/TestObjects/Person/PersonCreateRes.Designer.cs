@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to select#PersonData_Contact_CountryId.
+        ///   Looks up a localized string similar to select#ccc.
         /// </summary>
         public static string Country {
             get {
@@ -183,6 +183,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person {
         public static string Telephone {
             get {
                 return ResourceManager.GetString("Telephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to input#web.
+        /// </summary>
+        public static string Web {
+            get {
+                return ResourceManager.GetString("Web", resourceCulture);
             }
         }
         

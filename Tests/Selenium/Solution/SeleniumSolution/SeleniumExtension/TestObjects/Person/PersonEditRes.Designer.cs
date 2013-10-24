@@ -187,6 +187,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #PersonData_Contact_Web.
+        /// </summary>
+        public static string Web {
+            get {
+                return ResourceManager.GetString("Web", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to #PersonData_Contact_ZIP.
         /// </summary>
         public static string Zip {

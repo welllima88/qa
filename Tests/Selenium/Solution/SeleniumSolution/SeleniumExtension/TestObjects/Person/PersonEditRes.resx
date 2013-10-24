@@ -162,4 +162,7 @@
   <data name="AddressAddition" xml:space="preserve">
     <value>#PersonData_Contact_AddressAddition</value>
   </data>
+  <data name="Web" xml:space="preserve">
+    <value>#PersonData_Contact_Web</value>
+  </data>
 </root>
