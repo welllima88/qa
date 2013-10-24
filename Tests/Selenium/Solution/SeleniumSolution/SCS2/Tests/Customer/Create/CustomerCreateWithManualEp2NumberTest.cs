@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         }
 
         [TestMethod]
-        public void AlmostValidEp2Number()
+        public void PartiallyValidEp2Number()
         {
             CustomerCreate.Ep2MerchantId = "TKSYR000000014";
             CustomerCreate.SaveButton.Click();
