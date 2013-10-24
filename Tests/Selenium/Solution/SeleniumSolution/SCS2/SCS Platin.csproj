@@ -160,8 +160,9 @@
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
+    <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
-    <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigTest.cs" />
+    <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

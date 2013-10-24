@@ -254,7 +254,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
