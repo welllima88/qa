@@ -9,14 +9,16 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMinimalInputTest
     {
+        private static string _firstName;
+
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
-
+            _firstName = "SYR" + TestLauncher.GenerateTestId();
             CustomerMenu.ContactCreate.Click();
 
-            ContactPersonCreate.FirstName = "Marc";
+            ContactPersonCreate.FirstName = _firstName;
             ContactPersonCreate.Name = "Siegmund SYR AUTO";
             ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
             ContactPersonCreate.Zip = "55555";
@@ -28,7 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc", ContactPersonView.FirstName);
+            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
         }
 
         [TestMethod]
@@ -112,10 +114,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void RecentElementsCheck()
         {
-            string url = TestDirector.WebDriver.Url;
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
-            Assert.AreEqual(TestDirector.WebDriver.Url, url, false);
         }
     }
 }
