@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
@@ -14,6 +13,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
         {
             get { return WebDriver.FindElement(By.CssSelector("input#save")); }
         }
+
         //TODO test this explicit! because in edit mode not available
         public IWebElement ClickAdressFromLocation
         {
@@ -40,8 +40,16 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string Country
         {
-            set { ContactPersonCreate.Country = value; }
-            get { return ContactPersonCreate.Country; }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector(
+                    PersonEditRes.Country)).Selector().SelectByValue(value);
+            }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(
+                    PersonEditRes.Country)).Selector().SelectedOption.Text;
+            }
         }
 
         public static string Language
@@ -76,8 +84,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string Web
         {
-            set { throw new NotSupportedException(); }
-            get { throw new NotSupportedException(); }
+            set { ContactPersonCreate.Web = value; }
+            get { return ContactPersonCreate.Web; }
         }
 
         public static string StreetNo
