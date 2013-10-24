@@ -9,36 +9,36 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
     [TestClass]
     public class EditContactAndCancelTest
     {
-        private readonly string _contactId;
-        private string _city;
-        private string _country;
-        private string _email;
-        private string _fax;
-        private string _firstName;
-        private string _language;
-        private string _mobile;
-        private string _name;
-        private string _po;
-        private string _region;
-        private string _salutation;
-        private string _streetNo;
-        private string _telephone;
-        private string _zip;
+        private static string ContactId;
+        private static string _city;
+        private static string _country;
+        private static string _email;
+        private static string _fax;
+        private static string _firstName;
+        private static string _language;
+        private static string _mobile;
+        private static string _name;
+        private static string _po;
+        private static string _region;
+        private static string _salutation;
+        private static string _streetNo;
+        private static string _telephone;
+        private static string _zip;
 
         public EditContactAndCancelTest()
         {
-            _contactId = "1";
+            ContactId = "1";
         }
 
         public EditContactAndCancelTest(string contactId)
         {
-            _contactId = contactId;
+            ContactId = contactId;
         }
 
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit(TestContext testContext)
         {
-            TestDirector.Navigate("Pages/Person/ContactPersonEdit.aspx?PageMode=view&PersonId=" + _contactId);
+            TestDirector.Navigate("Pages/Person/ContactPersonEdit.aspx?PageMode=view&PersonId=" + ContactId);
             
             _salutation = ContactPersonView.Salutation;
             _firstName = ContactPersonView.FirstName;
