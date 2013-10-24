@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
-            _contactId = "1";
+            _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             _dt = TestLauncher.GenerateTestId();
 
@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Salutation = "";
             ContactPersonEdit.FirstName = "Marc" + _dt;
             ContactPersonEdit.Name = "Siegmund";
-            ContactPersonEdit.Language = "Französisch [fr]";
+            ContactPersonEdit.Language = "fr";
             ContactPersonEdit.Telephone = "";
             ContactPersonEdit.Mobile = "";
             ContactPersonEdit.Fax = "";
@@ -34,10 +34,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Zip = "2351";
             ContactPersonEdit.City = "City";
             ContactPersonEdit.Region = "";
-            ContactPersonEdit.Country = "Frankreich [FR]";
+            ContactPersonEdit.Country = "FR";
             ContactPersonEdit.AdressAddition = "";
-
-            StringAssert.Matches(ContactPersonEdit.CreateDate, TestRegExpPatterns.DateTime);
 
             ContactPersonEdit.SaveButton.Click();
         }
@@ -63,7 +61,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("French", ContactPersonView.Language);
+            Assert.AreEqual("Französisch [fr]", ContactPersonView.Language);
         }
 
         [TestMethod]

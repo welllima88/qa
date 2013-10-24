@@ -38,8 +38,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Country = "FR";
             ContactPersonEdit.AdressAddition = "Addr-Add";
 
-            StringAssert.Matches(ContactPersonEdit.CreateDate, TestRegExpPatterns.DateTime);
-
             ContactPersonEdit.SaveButton.Click();
         }
 
@@ -70,7 +68,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("French", ContactPersonView.Language);
+            Assert.AreEqual("Französisch [fr]", ContactPersonView.Language);
         }
 
         [TestMethod]

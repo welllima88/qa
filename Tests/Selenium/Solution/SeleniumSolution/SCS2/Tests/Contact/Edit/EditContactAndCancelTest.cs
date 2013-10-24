@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
     [TestClass]
     public class EditContactAndCancelTest
     {
-        private static string ContactId;
+        private static string _contactId;
         private static string _city;
         private static string _country;
         private static string _email;
@@ -25,21 +25,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         private static string _telephone;
         private static string _zip;
 
-        public EditContactAndCancelTest()
-        {
-            ContactId = "1";
-        }
-
-        public EditContactAndCancelTest(string contactId)
-        {
-            ContactId = contactId;
-        }
-
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
-            TestDirector.Navigate("Person/?PERSONID=" + ContactId);
-            
+            _contactId = "31432";
+            TestDirector.Navigate("Person/?PERSONID=" + _contactId);
+
             _salutation = ContactPersonView.Salutation;
             _firstName = ContactPersonView.FirstName;
             _name = ContactPersonView.Name;
@@ -62,7 +53,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Salutation = "Herr";
             ContactPersonEdit.FirstName = "Marc";
             ContactPersonEdit.Name = "Siegmund";
-            ContactPersonEdit.Language = "Italienisch [it]";
+            ContactPersonEdit.Language = "it";
             ContactPersonEdit.Telephone = "0123456789";
             ContactPersonEdit.Mobile = "1234567890";
             ContactPersonEdit.Fax = "2345678901";
@@ -72,7 +63,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.Zip = "2351";
             ContactPersonEdit.City = "City";
             ContactPersonEdit.Region = "Reg";
-            ContactPersonEdit.Country = "Frankreich [FR]";
+            ContactPersonEdit.Country = "IT";
             ContactPersonEdit.AdressAddition = "Addr-Add";
 
             ContactPersonEdit.CancelButton.Click();

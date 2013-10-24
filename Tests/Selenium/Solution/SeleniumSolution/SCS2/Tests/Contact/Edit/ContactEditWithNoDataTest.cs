@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
-            _contactId = "1";
+            _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
 
             ContactMenu.ContactEdit.Click();

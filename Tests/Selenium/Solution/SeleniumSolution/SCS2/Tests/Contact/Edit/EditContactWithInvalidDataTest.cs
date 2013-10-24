@@ -9,16 +9,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
     [TestClass]
     public class EditContactWithInvalidDataTest
     {
-        private readonly string _contactId;
-
-        public EditContactWithInvalidDataTest(string contactId)
-        {
-            _contactId = contactId;
-        }
+        private static string _contactId;
 
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit(TestContext testContext)
         {
+            _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             ContactMenu.ContactEdit.Click();
 
