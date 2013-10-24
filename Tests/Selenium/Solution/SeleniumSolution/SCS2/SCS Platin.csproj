@@ -85,11 +85,16 @@
     <Compile Include="Tests\Administration\SoftwareExchange\SoftwareExchangeTest.cs" />
     <Compile Include="Tests\BuildTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
-    <Compile Include="Tests\Contact\Edit\ContactEditTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
+    <Compile Include="Tests\Contact\Edit\ContactEditWithNoDataTest.cs" />
+    <Compile Include="Tests\Contact\Edit\ContactEditAndSaveTest.cs" />
+    <Compile Include="Tests\Contact\Edit\ContactEditWithMinimalInputTest.cs" />
+    <Compile Include="Tests\Contact\Edit\EditContactWithMissingDataTest.cs" />
+    <Compile Include="Tests\Contact\Edit\EditContactWithInvalidDataTest.cs" />
+    <Compile Include="Tests\Contact\Edit\EditContactAndCancelTest.cs" />
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
@@ -126,7 +131,7 @@
     <Compile Include="Tests\Location\Create\LocationCreateAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
-    <Compile Include="Tests\Location\Edit\Copy of LocationEditAndSaveTest.cs" />
+    <Compile Include="Tests\Location\Edit\LocationEditWithoutReasonTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditWithMinimalInputTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditWithNoChangeTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditWithoutUserInputTest.cs" />
