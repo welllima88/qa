@@ -36,8 +36,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void WithoutFirstName()
         {
-            CustomerMenu.ContactCreate.Click();
-
             ContactPersonCreate.FirstName = "";
 
             ContactPersonCreate.SaveButton.Click();
@@ -49,8 +47,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void WithoutLastName()
         {
-            CustomerMenu.ContactCreate.Click();
-
             ContactPersonCreate.Name = "";
 
             ContactPersonCreate.SaveButton.Click();
@@ -62,8 +58,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void WithoutStreetAndNumber()
         {
-            CustomerMenu.ContactCreate.Click();
-
             ContactPersonCreate.StreetNo = "";
 
             ContactPersonCreate.SaveButton.Click();
@@ -75,8 +69,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void WithoutCityFailed()
         {
-            CustomerMenu.ContactCreate.Click();
-
             ContactPersonCreate.City = "";
 
             ContactPersonCreate.SaveButton.Click();
@@ -88,8 +80,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void WithoutZipFailed()
         {
-            CustomerMenu.ContactCreate.Click();
-
             ContactPersonCreate.Zip = "";
 
             ContactPersonCreate.SaveButton.Click();
