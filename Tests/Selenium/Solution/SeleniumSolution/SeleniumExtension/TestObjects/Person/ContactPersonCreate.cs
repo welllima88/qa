@@ -109,7 +109,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Email)).Text; }
         }
 
-        public string Web
+        public static string Web
         {
             get { throw new NotSupportedException(); }
             set { throw new NotSupportedException(); }

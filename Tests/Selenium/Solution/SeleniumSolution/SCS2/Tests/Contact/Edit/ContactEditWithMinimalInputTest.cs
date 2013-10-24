@@ -35,7 +35,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.City = "City";
             ContactPersonEdit.Region = "";
             ContactPersonEdit.Country = "FR";
-            ContactPersonEdit.AdressAddition = "";
+            ContactPersonEdit.AdressAddition = "Add";
+            ContactPersonEdit.Web = "www.six-group.com";
 
             ContactPersonEdit.SaveButton.Click();
         }
@@ -122,6 +123,18 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         public void Country()
         {
             Assert.AreEqual("Frankreich [FR]", ContactPersonView.Country);
+        }
+
+        [TestMethod]
+        public void Web()
+        {
+            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
+        }
+
+        [TestMethod]
+        public void AddressAddition()
+        {
+            Assert.AreEqual("Add", ContactPersonView.AddressAddition);
         }
 
         [TestMethod]

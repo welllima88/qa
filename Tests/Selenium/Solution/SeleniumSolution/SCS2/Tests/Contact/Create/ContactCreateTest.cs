@@ -33,6 +33,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             ContactPersonCreate.Region = "Mitte";
             ContactPersonCreate.Country = "DE";
             ContactPersonCreate.AddressAddition = "Zusatz1";
+            ContactPersonCreate.Web = "www.six-group.com";
 
             ContactPersonCreate.SaveButton.Click();
         }
@@ -119,6 +120,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         public void AddressAddition()
         {
             Assert.AreEqual("Zusatz1", ContactPersonView.AddressAddition);
+        }
+
+        [TestMethod]
+        public void Web()
+        {
+            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
         }
 
         [TestMethod]

@@ -74,7 +74,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return ContactPersonCreate.Email; }
         }
 
-        public string Web
+        public static string Web
         {
             set { throw new NotSupportedException(); }
             get { throw new NotSupportedException(); }

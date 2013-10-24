@@ -29,6 +29,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             ContactPersonCreate.City = "^City@}$°";
             ContactPersonCreate.Region = "Re^@}$°";
             ContactPersonCreate.AddressAddition = "Add^@}$°";
+            ContactPersonCreate.Web = "Add^@}$°";
 
             ContactPersonCreate.SaveButton.Click();
         }

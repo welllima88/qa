@@ -16,6 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
             _firstName = "SYR" + TestLauncher.GenerateTestId();
+
             CustomerMenu.ContactCreate.Click();
 
             ContactPersonCreate.FirstName = _firstName;
@@ -109,6 +110,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         public void AddressAddition()
         {
             Assert.AreEqual("", ContactPersonView.AddressAddition);
+        }
+
+        [TestMethod]
+        public void Web()
+        {
+            Assert.AreEqual("", ContactPersonView.Web);
         }
 
         [TestMethod]

@@ -74,7 +74,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set { throw new NotSupportedException(); }
         }
 
-        public string Web
+        public static string Web
         {
             get { throw new NotSupportedException(); }
             set { throw new NotSupportedException(); }

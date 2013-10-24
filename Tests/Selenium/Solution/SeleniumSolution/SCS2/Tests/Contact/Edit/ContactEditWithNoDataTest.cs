@@ -33,6 +33,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonEdit.City = "";
             ContactPersonEdit.Region = "";
             ContactPersonEdit.AdressAddition = "";
+            ContactPersonEdit.Web = "";
 
             ContactPersonEdit.SaveButton.Click();
         }
