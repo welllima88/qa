@@ -44,7 +44,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
             LocationEdit.Language = "Englisch [en]";
             LocationEdit.Country = "Schweiz [CH]";
-
+            LocationEdit.Reason = "CorrectionOnly";
             LocationCreate.SaveButton.Click();
 
             Assert.AreEqual(LocationView.Guid, guid);
