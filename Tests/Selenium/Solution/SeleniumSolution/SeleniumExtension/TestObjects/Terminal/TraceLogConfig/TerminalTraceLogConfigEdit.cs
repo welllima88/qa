@@ -1,58 +1,62 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
 {
     public class TerminalTraceLogConfigEdit : WebObject
     {
-        public static IWebElementAdapter ActivatedUntil
+        public static string ActivatedUntil
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#activateTill")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#activateTill")).TypeText(value); }
         }
 
-        public static IWebElementAdapter Parameter
+        public static string Parameter
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")).TypeText(value); }
         }
 
-        public static SelectElement Medium
+        public static string Medium
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationDevice")).Selector(); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationDevice"))
+                         .Selector()
+                         .SelectByValue(value);
+            }
         }
 
-        public static IWebElementAdapter DestinationAddress
+        public static string DestinationAddress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")).TypeText(value); }
         }
 
-        public static IWebElementAdapter DestinationPort
+        public static string DestinationPort
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")).TypeText(value); }
         }
 
-        public static IWebElementAdapter TelephoneIsdn
+        public static string TelephoneIsdn
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")).TypeText(value); }
         }
 
-        public static IWebElementAdapter TelephonePstn
+        public static string TelephonePstn
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")).TypeText(value); }
         }
 
-        public static IWebElementAdapter DestinationUrl
+        public static string DestinationUrl
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TypeText(value); }
         }
 
-        public static IWebElementAdapter DestinationUrlPort
+        public static string DestinationUrlPort
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TypeText(value); }
         }
 
         public static IWebElementAdapter Save
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[value='speichern']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#activate")); }
         }
 
         public IWebElementAdapter Deactivate
