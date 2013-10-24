@@ -145,8 +145,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SoftwareExcha
 
         public static IWebElement BatchCreateButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input#execute']")); }
-            set { throw new NotImplementedException(); }
+            get { return WebDriver.FindElement(By.CssSelector("input#execute")); }            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExcha
         }
 
         [TestMethod]
-        public void CreateSimCardAndSave()
+        public void CreateMassJob()
         {
         }
     }
