@@ -1,107 +1,62 @@
-using System;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
 {
     public class AgencyView : WebObject
     {
-        public static IWebElement CreateAgencyButton
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[name='create']")); }
-        }
-
         public static string SbsAgentId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencySBSAgent")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyPhoneNumber")).Text; }
         }
 
         public static string Language
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_LanguageId")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyLanguage")).Text; }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElement EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button#save")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
 
         public static string StreetNo
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyStreet")).Text; }
         }
 
         public static string Country
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_CountryId")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyCountry")).Text; }
         }
 
         public static string Zip
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_ZIP")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyPLZ")).Text; }
         }
 
         public static string City
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).Text; }
-            set { throw new NotSupportedException(); }
-        }
-
-        public string AdressAddition
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
-        }
-
-        public string Po
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
-        }
-
-        public string Region
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyCity")).Text; }
         }
 
         public static string Name
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyName")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyName")).Text; }
         }
 
         public static string DisplayName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).Text; }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("AgencyUserDefinedName")).Text; }
         }
 
         public static string Supplier
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
-                             .Selector()
-                             .SelectedOption.Text;
-            }
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
-                         .Selector()
-                         .SelectByValue(value);
-            }
+            get { return WebDriver.FindElement(By.Id("Mandant")).Text; }
         }
     }
 }

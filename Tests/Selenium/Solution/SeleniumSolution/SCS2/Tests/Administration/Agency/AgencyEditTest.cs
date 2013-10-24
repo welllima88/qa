@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         {
             _nameDyn = "SYR " + TestLauncher.GenerateTestId();
 
-            TestDirector.Navigate("/Agency/Edit?AgencyId=59ddd48b-f265-40f5-beac-9529a1d9454f");
+            TestDirector.Navigate("Agency/Edit?AgencyId=59ddd48b-f265-40f5-beac-9529a1d9454f");
 
             AgencyCreate.Name = _nameDyn;
             AgencyCreate.DisplayName = _nameDyn + "D";
@@ -63,13 +63,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual("DE", AgencyView.Country);
+            Assert.AreEqual("Deutschland", AgencyView.Country);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("DE", AgencyView.Language);
+            Assert.AreEqual("Deutsch [de]", AgencyView.Language);
         }
 
         [TestMethod]
@@ -81,7 +81,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         [TestMethod]
         public void Supplier()
         {
-            Assert.AreEqual("_foreign_supplier_all", AgencyView.Supplier);
+            Assert.AreEqual("Alle Fremdhersteller", AgencyView.Supplier);
         }
 
         [TestMethod]
