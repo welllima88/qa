@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
     {
         #region ICustomerView Members
 
-        public IWebElement EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
