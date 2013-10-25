@@ -9,17 +9,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     {
         public static IWebElementAdapter Name
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Name)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Name)); }
         }
 
         public static IWebElementAdapter Ep2Id
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Ep2Id)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Ep2Id)); }
         }
 
         public static IWebElementAdapter Adress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.LocationInfo_Adress)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Adress)); }
         }
     }
 }

@@ -9,22 +9,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     {
         public static IWebElementAdapter Name
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Name)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Name)); }
         }
 
         public static IWebElementAdapter Adress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Adress)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Adress)); }
         }
 
         public static IWebElementAdapter Info
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Info)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Info)); }
         }
 
         public static IWebElementAdapter Id
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Dashboard.CustomerInfo_Id)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Id)); }
         }
     }
 }

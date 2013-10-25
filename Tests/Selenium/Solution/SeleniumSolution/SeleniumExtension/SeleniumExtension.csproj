@@ -205,8 +205,8 @@
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\ServiceCenter.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\ContactsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.resx</DependentUpon>
+    <Compile Include="TestObjects\Terminal\Dashboard\DashboardRes.Designer.cs">
+      <DependentUpon>DashboardRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -279,9 +279,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Terminal\Dashboard\Dashboard.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Dashboard.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="TestObjects\Terminal\Dashboard\DashboardRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashboardRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
