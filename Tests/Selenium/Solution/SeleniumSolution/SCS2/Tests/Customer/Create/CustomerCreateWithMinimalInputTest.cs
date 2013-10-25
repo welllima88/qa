@@ -73,15 +73,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         }
 
         [TestMethod]
-        public void MostRecent()
-        {
-            NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
-
-            Assert.AreEqual(_custId, CustomerView.CustomerNumber);
-        }
-
-        [TestMethod]
         public void Supplier()
         {
             Assert.AreEqual(_supplier, CustomerView.Supplier);
@@ -226,6 +217,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public void Web()
         {
             Assert.AreEqual("", CustomerView.Web);
+        }
+
+        [TestMethod]
+        public void MostRecent()
+        {
+            NavigationBar.Lobby.Click();
+            RecentElements.MostRecent.Click();
+
+            Assert.AreEqual(_custId, CustomerView.CustomerNumber);
         }
     }
 }
