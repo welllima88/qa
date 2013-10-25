@@ -154,9 +154,11 @@
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
     <Compile Include="Tests\Search\SearchForCustomerByIdTest.cs" />
+    <Compile Include="Tests\Terminal\Dashboard\CustomerInfoTest.cs" />
+    <Compile Include="Tests\Terminal\Dashboard\LocationlInfoTest.cs" />
+    <Compile Include="Tests\Terminal\Dashboard\TerminalInfoTest.cs" />
     <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
-    <Compile Include="Tests\Terminal\Dashboard\FixTerminalInfoTests.cs" />
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
