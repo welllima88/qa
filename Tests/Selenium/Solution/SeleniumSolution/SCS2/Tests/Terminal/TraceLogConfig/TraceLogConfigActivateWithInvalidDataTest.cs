@@ -22,8 +22,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
             TerminalTraceLogConfigEdit.TelephonePstn = "003312345677890";
             TerminalTraceLogConfigEdit.DestinationUrl = "www.six-group.com";
             TerminalTraceLogConfigEdit.DestinationUrlPort = "22222";
-
-            TerminalTraceLogConfigEdit.Save.Click();
         }
 
         [TestMethod]
@@ -33,7 +31,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
 
             TerminalTraceLogConfigEdit.Save.Click();
 
-            Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "24.10.2020");
+            Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "24.10.1920");
         }
 
         [TestMethod]
