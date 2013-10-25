@@ -60,12 +60,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _custId = CustomerView.CustomerNumber;
         }
 
-        [TestInitialize]
-        public void TestInit()
-        {
-            TestDirector.Navigate();
-        }
-
         [TestMethod]
         public void CustomerName()
         {
