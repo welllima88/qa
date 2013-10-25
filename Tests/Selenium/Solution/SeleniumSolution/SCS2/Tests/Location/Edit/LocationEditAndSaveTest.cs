@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             string sbsDebitNumber = LocationView.SbsDebitNumber;
             string sbsAdressNumber = LocationView.SbsAdressNumber;
 
-            LocationMenu.LocationEdit.Click();
+            LocationView.EditButton.Click();
             Assert.AreEqual(LocationEdit.Guid, guid);
             Assert.AreEqual(LocationEdit.Ep2MerchantId, ep2MerchantId);
             Assert.AreEqual(LocationEdit.SbsDebitNumber, sbsDebitNumber);
