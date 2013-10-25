@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.TraceLogConfig
     [TestClass]
     public class TraceLogConfigActivateWithInvalidDataTest
     {
-        [TestInitialize]
+        [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("TracelogConfig/Edit/?TerminalId=21011402");
