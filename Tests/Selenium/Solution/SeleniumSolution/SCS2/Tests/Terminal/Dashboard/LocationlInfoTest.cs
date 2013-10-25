@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
     public class LocationlInfoTest
     {
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit(TestContext testContext)
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=30092755");
         }
