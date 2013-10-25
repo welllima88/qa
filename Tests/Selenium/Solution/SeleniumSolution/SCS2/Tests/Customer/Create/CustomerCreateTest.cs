@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 
@@ -122,15 +121,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public void CustomerName()
         {
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
-        }
-
-        [TestMethod]
-        public void MostRecent()
-        {
-            NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
-
-            Assert.AreEqual(_custId, CustomerView.CustomerNumber);
         }
 
         [TestMethod]
