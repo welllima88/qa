@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.FinancialConfig
         public void TestInit()
         {
             TestDirector.Navigate(
-                "/Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402");
+                "Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402");
         }
 
         [TestMethod]
@@ -54,12 +54,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.FinancialConfig
         {
             SetOnlineFinancialAndSave("11");
 
-            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
+            Assert.AreEqual(0, FormAlert.FormAlertList.Count);
         }
 
         private static void SetOnlineFinancialAndSave(string queueSize)
         {
             FinancialConfigEdit.AdviceQueueSize = queueSize;
+            FinancialConfigEdit.SaveButton.Click();
         }
     }
 }

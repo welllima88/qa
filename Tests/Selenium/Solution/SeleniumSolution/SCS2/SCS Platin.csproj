@@ -177,7 +177,7 @@
     <Folder Include="TestData\dev\" />
     <Folder Include="TestData\qaK\" />
     <Folder Include="TestData\qaL\" />
-    <Folder Include="Tests\Feedback\" />
+    <Folder Include="Tests\Administration\Feedback\" />
     <Folder Include="Tests\Ticketing\" />
   </ItemGroup>
   <ItemGroup>

@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.FinancialConfig
             }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
         }
