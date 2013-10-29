@@ -10,12 +10,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
         public bool PurchaseWithCashbackForced;
         public bool ReleaseChangeBlocked;
 
-        public string Article
+        public static string Article
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text; }
         }
 
-        public string DeliveryDate
+        public static string DeliveryDate
         {
             get
             {
@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string InstallType
+        public static string InstallType
         {
             set
             {
@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string InstallRemark
+        public static string InstallRemark
         {
             set
             {
@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string Contract
+        public static string Contract
         {
             set
             {
@@ -67,7 +67,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string EcrInterface
+        public static string EcrInterface
         {
             set
             {
@@ -78,7 +78,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string EcrText
+        public static string EcrText
         {
             set
             {
@@ -89,7 +89,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string SupportContract
+        public static string SupportContract
         {
             set
             {
@@ -103,7 +103,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
         /// <summary>
         ///     5 rows á 32 characters
         /// </summary>
-        public string ReceiptText
+        public static string ReceiptText
         {
             set
             {
@@ -123,7 +123,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string NewSoftwareVersion
+        public static string NewSoftwareVersion
         {
             set
             {

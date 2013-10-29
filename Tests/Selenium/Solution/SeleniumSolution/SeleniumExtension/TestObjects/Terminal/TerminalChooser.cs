@@ -1,27 +1,39 @@
-using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
 {
     public class TerminalChooser : WebObject
     {
-        //TODO: new CHOOSER
-        public string Article
+        public static string ArticleFilter
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TypeText(value); }
         }
 
-        public string ArticleLookup
+        public static List<string> FilteredArtikelList
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get
+            {
+                ReadOnlyCollection<IWebElement> articleElements =
+                    WebDriver.FindElements(By.CssSelector("tbody#allArticles tr td:not([style*='display: none'])"));
+                return WebDriver.WebElementsAsStringList(articleElements);
+            }
         }
 
-        public List<string> ArtikelList
+        public static List<string> SuggestedArtikelList
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get
+            {
+                ReadOnlyCollection<IWebElement> articleElements =
+                    WebDriver.FindElements(By.CssSelector("tbody#suggestedArticles tr td"));
+                return WebDriver.WebElementsAsStringList(articleElements);
+            }
+        }
+
+        public static string Article
+        {
+            set { WebDriver.FindAdaptedElement(By.LinkText(value)).Click(); }
         }
     }
 }

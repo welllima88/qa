@@ -6,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
     //STEP 1
     public class TerminalConfigCreate : WebObject
     {
-        public String Status
+        public static string Status
         {
             set
             {
@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String Infotext
+        public static string Infotext
         {
             set
             {
@@ -26,7 +26,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String TerminalType
+        public static string TerminalType
         {
             get
             {
@@ -36,7 +36,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String Protocol
+        public static string Protocol
         {
             get
             {
@@ -46,7 +46,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String NetType
+        public static string NetType
         {
             get
             {
@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String CreateDateTime
+        public static string CreateDateTime
         {
             get
             {
@@ -65,7 +65,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String ServiceCenter
+        public static string ServiceCenter
         {
             set
             {
@@ -75,7 +75,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public String Pms
+        public static string Pms
         {
             set
             {
@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public string SubStatus
+        public static string SubStatus
         {
             set
             {
@@ -95,12 +95,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public IWebElement ContinueButton
+        public static IWebElement ContinueButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton")); }
         }
 
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")); }
         }

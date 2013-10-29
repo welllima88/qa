@@ -5,10 +5,10 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
+namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Create
 {
     [TestClass]
-    public class BasicTerminalDashBoardTest
+    public class TerminalCreateTest
     {
         [TestInitialize]
         public void TestInit()
@@ -49,19 +49,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         {
             CustomerMenu.TerminalCreate.Click();
 
-            TerminalCreate.TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
+            TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
 
-            TerminalCreate.TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
-            TerminalCreate.TerminalConfigCreate.Status = "Aktiviert";
-            TerminalCreate.TerminalConfigCreate.SubStatus = "Aktiviert";
-            TerminalCreate.TerminalConfigCreate.ServiceCenter = "SIX Payment Services Service Center ep2";
-            TerminalCreate.TerminalConfigCreate.Pms = "SIX Payment Services PMS ep2";
+            TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
+            TerminalConfigCreate.Status = "Aktiviert";
+            TerminalConfigCreate.SubStatus = "Aktiviert";
+            TerminalConfigCreate.ServiceCenter = "SIX Payment Services Service Center ep2";
+            TerminalConfigCreate.Pms = "SIX Payment Services PMS ep2";
 
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.TerminalType, "xentissimo");
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.Protocol, "EP2");
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.NetType, "TCP/IP ep2 (DNS) (TCPIPEP2)");
+            Assert.AreEqual(TerminalConfigCreate.TerminalType, "xentissimo");
+            Assert.AreEqual(TerminalConfigCreate.Protocol, "EP2");
+            Assert.AreEqual(TerminalConfigCreate.NetType, "TCP/IP ep2 (DNS) (TCPIPEP2)");
 
-            TerminalCreate.TerminalConfigCreate.SaveButton.Click();
+            TerminalConfigCreate.SaveButton.Click();
             TerminalMenu.Terminal.Click();
 
             //var custId = TerminalView.TerminalId;
@@ -78,25 +78,25 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         {
             CustomerMenu.TerminalCreate.Click();
 
-            TerminalCreate.TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
+            TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
 
-            TerminalCreate.TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
-            TerminalCreate.TerminalConfigCreate.Status = "Aktiviert";
-            TerminalCreate.TerminalConfigCreate.SubStatus = "Aktiviert";
-            TerminalCreate.TerminalConfigCreate.ServiceCenter = "SIX Payment Services Service Center ep2";
-            TerminalCreate.TerminalConfigCreate.Pms = "SIX Payment Services PMS ep2";
+            TerminalConfigCreate.Infotext = "SYR AUTO Selenium Infotext";
+            TerminalConfigCreate.Status = "Aktiviert";
+            TerminalConfigCreate.SubStatus = "Aktiviert";
+            TerminalConfigCreate.ServiceCenter = "SIX Payment Services Service Center ep2";
+            TerminalConfigCreate.Pms = "SIX Payment Services PMS ep2";
 
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.TerminalType, "xentissimo");
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.Protocol, "EP2");
-            Assert.AreEqual(TerminalCreate.TerminalConfigCreate.NetType, "TCP/IP ep2 (DNS) (TCPIPEP2)");
+            Assert.AreEqual(TerminalConfigCreate.TerminalType, "xentissimo");
+            Assert.AreEqual(TerminalConfigCreate.Protocol, "EP2");
+            Assert.AreEqual(TerminalConfigCreate.NetType, "TCP/IP ep2 (DNS) (TCPIPEP2)");
 
-            TerminalCreate.TerminalConfigCreate.ContinueButton.Click();
+            TerminalConfigCreate.ContinueButton.Click();
 
-            Assert.AreEqual(TerminalCreate.TerminalConfigDetailsCreate.Article, "xentissimo MOBILE WLAN, TCP/IP");
-            Assert.AreEqual(TerminalCreate.TerminalConfigDetailsCreate.ReceiptText,
+            Assert.AreEqual(TerminalConfigDetailsCreate.Article, "xentissimo MOBILE WLAN, TCP/IP");
+            Assert.AreEqual(TerminalConfigDetailsCreate.ReceiptText,
                             "TKSYR for siw2\r\nTKSYR\r\nTKSYR TKSYR\r\n\r\n");
 
-            TerminalCreate.TerminalConfigDetailsCreate.ReceiptText =
+            TerminalConfigDetailsCreate.ReceiptText =
                 "SYR-AUTO Line1\r\nSYR-AUTO Line2\r\nSYR-AUTO Line3\r\nSYR-AUTO Line4\r\nSYR-AUTO Line5";
 
             TerminalCreate.TerminalConfigDetailsCreate.Functionbits.Booking.Click();
