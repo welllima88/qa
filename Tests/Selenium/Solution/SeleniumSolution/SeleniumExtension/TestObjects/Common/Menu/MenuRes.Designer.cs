@@ -151,7 +151,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Pages/Customer/CustomerEdit.aspx?PageMode=view&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/?CUSTOMERID=&apos;].
         /// </summary>
         public static string CustomerMenu_Customer {
             get {
@@ -178,7 +178,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/CustomerEdit.aspx?PageMode=edit&amp;CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Customer/Edit/?CUSTOMERID=&apos;].
         /// </summary>
         public static string CustomerMenu_CustomerEdit {
             get {
