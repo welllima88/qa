@@ -15,7 +15,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         public static string CustomerName
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CustomerName)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Guid
@@ -26,67 +25,56 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         public static string CashIntegrator
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CashIntegrator)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string CompanyName
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CompanyName)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string SapNumber
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.SapNumber)).Text; }
-            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public static string StreetNo
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.StreetName)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Zip
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Zip)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string City
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.City)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static String Agency
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Agency)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Language
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.LanguageView)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Country
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.CountryView)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Po
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Po)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string AdressAddition
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.AdressAddition)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Email
@@ -98,37 +86,31 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
                     WebDriver.FindElement(
                         By.CssSelector("[id^='ctl00_bodyContentPlaceHolder_addressControl_email']:not(label)")).Text;
             }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Telephone
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Telephone)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Mobile
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Mobile)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Fax
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Fax)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Web
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.WebView)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string Region
         {
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Region)).Text; }
-            set { throw new NotImplementedException(); }
         }
 
         public static string CategoryCode

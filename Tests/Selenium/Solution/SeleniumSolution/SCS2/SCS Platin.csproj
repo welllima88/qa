@@ -112,7 +112,7 @@
     <Compile Include="Tests\Customer\Edit\EditCustomerWithInvalidData.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditAndCancelTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditAndSaveTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
@@ -154,13 +154,15 @@
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
     <Compile Include="Tests\Search\SearchForCustomerByIdTest.cs" />
+    <Compile Include="Tests\Terminal\ArticleChooser\ArticleChooserSuggestedArticleTest.cs" />
+    <Compile Include="Tests\Terminal\Dashboard\Portlet\PortletBasicTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\CustomerInfoTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\LocationlInfoTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\TerminalInfoTest.cs" />
     <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
-    <Compile Include="Tests\Terminal\Dashboard\BasicTerminalDashBoardTest.cs" />
+    <Compile Include="Tests\Terminal\Create\TerminalCreateTest.cs" />
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
-    <Compile Include="Tests\Terminal\TerminalCreateChooseArticleTest.cs" />
+    <Compile Include="Tests\Terminal\ArticleChooser\ArticleChooserLookupTest.cs" />
     <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />

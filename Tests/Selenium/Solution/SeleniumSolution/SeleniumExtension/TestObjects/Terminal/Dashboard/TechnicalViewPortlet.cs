@@ -11,14 +11,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
             PortletId = "div#frame_TerminalTechnicalViewpointPortlet ";
         }
 
-        public IWebElement TerminalId
+        public string TerminalId
         {
             get
             {
                 return
                     WebDriver.FindElement(
                         By.CssSelector(
-                            Prefix + PortletId + "li:nth-child(1)" + Suffix));
+                            Prefix + PortletId + "li:nth-child(1)" + Suffix)).Text;
             }
         }
 
@@ -64,6 +64,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(6)" + Suffix));
             }
+        }
+
+        public static string Headline
+        {
+            get { throw new System.NotImplementedException(); }
+            set { throw new System.NotImplementedException(); }
         }
     }
 }
