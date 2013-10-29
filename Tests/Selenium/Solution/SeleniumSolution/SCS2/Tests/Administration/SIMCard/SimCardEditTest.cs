@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
         public void TestInit()
         {
             // SIMCard/EditCard?simCardId=11
-            TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
+            TestDirector.Navigate("SIMCard/Details?SIMCardId=16");
         }
 
         [TestMethod]
@@ -54,8 +54,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 
             SimCardEdit.SaveButton.Click();
 
-            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId");
-            Assert.AreEqual(5, FormAlert.FormAlertList.Count);
+            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
+            Assert.AreEqual(1, FormAlert.FormAlertList.Count);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 
             SimCardEdit.SaveButton.Click();
 
-            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
         }
 
@@ -82,7 +82,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
 
             SimCardEdit.SaveButton.Click();
 
-            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId");
+            CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
         }
     }
