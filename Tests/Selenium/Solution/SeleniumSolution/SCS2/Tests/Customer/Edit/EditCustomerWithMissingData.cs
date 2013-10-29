@@ -9,16 +9,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
     [TestClass]
     public class EditCustomerWithMissingData
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
-        }
-
         [TestInitialize]
         public void TestInit()
         {
-            CustomerMenu.CustomerEdit.Click();
+            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
 
             CustomerEdit.CustomerName = "SYR Sele Kunde A";
             CustomerEdit.CompanyName = "SYR Sele Firma A";
@@ -44,6 +38,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         {
             CustomerEdit.CompanyName = "";
 
+            CustomerEdit.SaveButton.Click();
+
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
@@ -51,8 +47,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [TestMethod]
         public void EditCustomerWithoutStreetAndNumberFailed()
         {
-            CustomerMenu.CustomerEdit.Click();
-
             CustomerEdit.StreetNo = "";
 
             CustomerEdit.SaveButton.Click();
