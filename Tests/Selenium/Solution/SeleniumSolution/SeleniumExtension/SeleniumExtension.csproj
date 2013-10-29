@@ -136,6 +136,11 @@
     <Compile Include="TestObjects\Common\QuickSearch.cs" />
     <Compile Include="TestObjects\Common\RecentElements.cs" />
     <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
+    <Compile Include="TestObjects\Customer\CustomerEditRes.Designer.cs">
+      <DependentUpon>CustomerEditRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
     <Compile Include="TestObjects\Customer\CustomerDeactivation.cs" />
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
@@ -256,6 +261,11 @@
     <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestObjects\Customer\CustomerEditRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomerEditRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">
