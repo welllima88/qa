@@ -112,7 +112,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         public void EditCustomerAndSave()
         {
             string customerNumber = CustomerView.CustomerNumber;
-            string guid = CustomerView.Guid;
             string sbsDebitNumber = CustomerView.SbsDebitNumber;
             string sbsAdressNumber = CustomerView.SbsAdressNumber;
             string sbsCurrency = CustomerView.SbsCurrency;
@@ -160,13 +159,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.SaveButton.Click();
 
             Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
-            Assert.AreEqual(guid, CustomerView.Guid);
-
+            
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
 
             Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
-            Assert.AreEqual(guid, CustomerView.Guid);
             Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
             Assert.AreEqual(supplier, CustomerView.Supplier);
             Assert.AreEqual(sbsBillingTenant, CustomerView.SbsBillingTenant);

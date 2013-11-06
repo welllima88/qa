@@ -2,7 +2,6 @@
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {
@@ -36,7 +35,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             CustomerCreate.Mobile = "0032 58 399 6237$";
             CustomerCreate.Fax = "0033 58 399 6237$";
             CustomerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
-            
+
             CustomerCreate.SaveButton.Click();
         }
 

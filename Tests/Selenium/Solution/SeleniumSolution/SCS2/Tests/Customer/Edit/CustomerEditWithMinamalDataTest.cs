@@ -13,7 +13,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         private static string _sbsAdressNumber;
         private static string _ep2MerchantId;
         private static string _segment;
-        private static string _guid;
         private static string _sbsCurrency;
         private static string _sbsBillingTenant;
         private static string _supplier;
@@ -23,7 +22,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401858");
 
-            _guid = CustomerView.Guid;
             _customerNumber = CustomerView.CustomerNumber;
             _sbsDebitNumber = CustomerView.SbsDebitNumber;
             _sbsAdressNumber = CustomerView.SbsAdressNumber;
@@ -61,12 +59,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         }
 
         [TestMethod]
-        public void Guid()
-        {
-            Assert.AreEqual(_guid, CustomerView.Guid);
-        }
-
-        [TestMethod]
         public void CustomerNumber()
         {
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
@@ -76,12 +68,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         public void CustomerNumberFormat()
         {
             StringAssert.Matches(_customerNumber, TestRegExpPatterns.CustomerNo);
-        }
-
-        [TestMethod]
-        public void GuidFormat()
-        {
-            StringAssert.Matches(_guid, TestRegExpPatterns.Guid);
         }
 
         [TestMethod]
