@@ -24,8 +24,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
             AgencyCreate.Country = "DE";
             AgencyCreate.Language = "de";
             AgencyCreate.Telephone = "+41 58 399 6237";
-            AgencyCreate.Supplier = "Alle Fremdhersteller";
-            AgencyCreate.SbsAgentId = "881144";
+            AgencyCreate.Supplier = "SIX Payment Services AG";
+            AgencyCreate.SbsAgentId = "001144";
 
             AgencyCreate.SaveButton.Click();
         }
@@ -81,13 +81,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         [TestMethod]
         public void Supplier()
         {
-            Assert.AreEqual("Alle Fremdhersteller", AgencyView.Supplier);
+            Assert.AreEqual("SIX Payment Services AG", AgencyView.Supplier);
         }
 
         [TestMethod]
         public void SbsAgentId()
         {
-            Assert.AreEqual("881144", AgencyView.SbsAgentId);
+            Assert.AreEqual("001144", AgencyView.SbsAgentId);
         }
     }
 }

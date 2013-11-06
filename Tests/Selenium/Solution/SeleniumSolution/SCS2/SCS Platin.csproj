@@ -77,6 +77,7 @@
     <Compile Include="TestLauncher.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyCreateTest.cs" />
+    <Compile Include="Tests\Administration\Agency\AgencyDeleteTest.cs" />
     <Compile Include="Tests\Administration\Article\ArticleViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Tests\Administration\SIMCard\SimCardCreateTest.cs" />

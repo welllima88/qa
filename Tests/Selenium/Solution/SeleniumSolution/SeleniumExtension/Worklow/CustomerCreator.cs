@@ -52,8 +52,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
         public string Region { get; set; }
         public string CompanyName { get; set; }
         public string Guid { get; private set; }
-        public string SbsDebitNumber { get; set; }
-        public string SbsAdressNumber { get; set; }
+        public string SbsDebitNumber { get; private set; }
+        public string SbsAdressNumber { get; private set; }
         public string Ep2MerchantId { get; set; }
         public string SapNumber { get; set; }
         public string CustomerName { get; set; }
@@ -67,33 +67,60 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
         public string SupportContract { get; set; }
         public string Segment { get; set; }
 
-        public static void CreateInvalidSixCustomer()
+        public void CreateInvalidSixCustomer()
+        {
+            Supplier = "SIX Payment Services AG";
+            SbsCurrency = "EUR";
+            SbsBillingTenant = "SIX Payment Services (Europe)";
+            CustomerName = "SYR Sele Kunde A$°";
+
+            CompanyName = "SYR Sele Firma A$°";
+            CustomerNumber = "^@}$°";
+            StreetNo = "Hardturmstr. 201$°";
+            Zip = "802$°";
+            City = "Zürich$°";
+            Po = "PFO1$°";
+            AdressAddition = "Etage 3$°";
+            Region = "Reg 3[]$°";
+            SapNumber = "444$°";
+            Ep2MerchantId = "12DDFF_3-3";
+            Agency = "Albert Brun & Partner";
+            Language = "Deutsch [de]";
+            Country = "Schweiz [CH]";
+            Email = "marc.siegmund@six-grou$°p.com";
+            Telephone = "0031 58 399 6237$";
+            Mobile = "0032 58 399 6237$";
+            Fax = "0033 58 399 6237$";
+            Web = "www.six-^°@}$.com/de-inte[]rn$°";
+        }
+
+        public void SetAndSaveCustomer()
         {
             CustomerMenu.CustomerCreate.Click();
 
-            CustomerCreate.Supplier = "SIX Payment Services AG";
-            CustomerCreate.SbsCurrency = "EUR";
-            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            CustomerCreate.CustomerName = "SYR Sele Kunde A$°";
+            CustomerCreate.Supplier = Supplier;
+            CustomerCreate.SbsCurrency = SbsCurrency;
+            CustomerCreate.SbsBillingTenant = SbsBillingTenant;
+            CustomerCreate.CustomerName = CustomerName;
 
-            CustomerCreate.CompanyName = "SYR Sele Firma A$°";
-            CustomerCreate.CustomerNumber = "^@}$°";
-            CustomerCreate.StreetNo = "Hardturmstr. 201$°";
-            CustomerCreate.Zip = "802$°";
-            CustomerCreate.City = "Zürich$°";
-            CustomerCreate.Po = "PFO1$°";
-            CustomerCreate.AdressAddition = "Etage 3$°";
-            CustomerCreate.Region = "Reg 3[]$°";
-            CustomerCreate.SapNumber = "444$°";
-            CustomerCreate.Ep2MerchantId = "12DDFF_3-3";
-            CustomerCreate.Agency = "Albert Brun & Partner";
-            CustomerCreate.Language = "Deutsch [de]";
-            CustomerCreate.Country = "Schweiz [CH]";
-            CustomerCreate.Email = "marc.siegmund@six-grou$°p.com";
-            CustomerCreate.Telephone = "0031 58 399 6237$";
-            CustomerCreate.Mobile = "0032 58 399 6237$";
-            CustomerCreate.Fax = "0033 58 399 6237$";
-            CustomerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            CustomerCreate.CompanyName = CompanyName;
+            CustomerCreate.CustomerNumber = CustomerNumber;
+            CustomerCreate.StreetNo = StreetNo;
+            CustomerCreate.Zip = Zip;
+            CustomerCreate.City = City;
+            CustomerCreate.Po = Po;
+            CustomerCreate.AdressAddition = AdressAddition;
+            CustomerCreate.Region = Region;
+            CustomerCreate.SapNumber = SapNumber;
+            CustomerCreate.Ep2MerchantId = Ep2MerchantId;
+            CustomerCreate.Agency = Agency;
+            CustomerCreate.Language = Language;
+            CustomerCreate.Country = Country;
+            CustomerCreate.Email = Email;
+            CustomerCreate.Telephone = Telephone;
+            CustomerCreate.Mobile = Mobile;
+            CustomerCreate.Fax = Fax;
+            CustomerCreate.Web = Web;
 
             CustomerCreate.SaveButton.Click();
         }
