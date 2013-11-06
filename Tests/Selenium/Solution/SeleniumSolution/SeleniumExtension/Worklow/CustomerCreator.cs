@@ -67,7 +67,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
         public string SupportContract { get; set; }
         public string Segment { get; set; }
 
-        public static void CreateSixCustomer()
+        public static void CreateInvalidSixCustomer()
         {
             CustomerMenu.CustomerCreate.Click();
 

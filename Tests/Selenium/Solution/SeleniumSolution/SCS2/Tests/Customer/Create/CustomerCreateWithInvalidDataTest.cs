@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
-            CustomerCreator.CreateSixCustomer();
+            CustomerCreator.CreateInvalidSixCustomer();
         }
 
         [TestMethod]
