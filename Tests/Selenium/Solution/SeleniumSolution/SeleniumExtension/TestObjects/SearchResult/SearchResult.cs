@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    public abstract class AbstractSearchResult : WebObject
+    public class SearchResult : WebObject
     {
         /// <summary>
         ///     It is recommended to set the prefix property to the appropiate container element
