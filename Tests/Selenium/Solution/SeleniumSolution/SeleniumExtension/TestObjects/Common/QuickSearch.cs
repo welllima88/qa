@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public static void HitEnter()
         {
-            WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).;
+            WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).SendKeys(Keys.Return);
         }
     }
 }
