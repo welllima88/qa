@@ -1,6 +1,6 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    internal class TerminalResult : AbstractSearchResult
+    internal class TerminalResult : SearchResult
     {
         public TerminalResult()
         {

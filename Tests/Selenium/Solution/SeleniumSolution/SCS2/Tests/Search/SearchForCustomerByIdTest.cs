@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Search
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
-            QuickSearch.SearchField.TypeText("85025");
+            QuickSearch.SearchField="85025";
             QuickSearch.SearchButton.Click();
         }
 

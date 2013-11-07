@@ -12,6 +12,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 {
@@ -21,24 +22,28 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
     [TestClass]
     public class QuickSearchTest
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestInitialize]
+        public void ClassInit()
         {
             TestDirector.Navigate();
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void SearchField()
+        public void ClickSearchButtonLaunchesSearch()
         {
-            Assert.IsTrue(QuickSearch.SearchField.Displayed);
+            QuickSearch.SearchField = "Click-Search";
+            QuickSearch.SearchButton.Click();
+            StringAssert.Contains(SearchResult.Headline, "Click-Search");
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void SearchButton()
+        public void HitEnterLaunchesSearch()
         {
-            Assert.IsTrue(QuickSearch.SearchButton.Displayed);
+            QuickSearch.SearchField="Hit-Enter";
+            QuickSearch.HitEnter();
+            StringAssert.Contains(SearchResult.Headline, "Hit-Enter");
         }
     }
 }
