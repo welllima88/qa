@@ -118,36 +118,49 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
+        public void CustomerNumber()
+        {
+            StringAssert.Matches(CustomerView.CustomerNumber, TestRegExpPatterns.CustomerNo);
+        }
+
+        [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void CustomerName()
         {
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Supplier()
         {
             Assert.AreEqual(_supplier, CustomerView.Supplier);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SbsBillingTenant()
         {
             Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SbsCurrency()
         {
             Assert.AreEqual(_sbsCurrency, CustomerView.SbsCurrency);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SapNumber()
         {
             Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         [Ignore] //because it is like other suggestors not reliable test
         public void CategoryCode()
         {
@@ -155,6 +168,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SupportContract()
         {
             Assert.AreEqual(_supportContract,
@@ -162,72 +176,84 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void CashIntegrator()
         {
             Assert.AreEqual(_cashIntegrator, CustomerView.CashIntegrator);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SbsDebitNumber()
         {
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void SbsAdressNumber()
         {
             StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Ep2MerchantId()
         {
             StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Po()
         {
             Assert.AreEqual(_po, CustomerView.Po);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void AdressAddition()
         {
             Assert.AreEqual(_adressAddition, CustomerView.AdressAddition);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Region()
         {
             Assert.AreEqual(_region, CustomerView.Region);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void StreetNo()
         {
             Assert.AreEqual(_streetName, CustomerView.StreetNo);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Zip()
         {
             Assert.AreEqual(_zip, CustomerView.Zip);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void City()
         {
             Assert.AreEqual(_city, CustomerView.City);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Agency()
         {
             Assert.AreEqual(_agency, CustomerView.Agency);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         [Ignore]
         public void Language()
         {
@@ -236,42 +262,49 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 
         [Ignore]
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Country()
         {
             Assert.AreEqual(_country, CustomerView.Country);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Email()
         {
             Assert.AreEqual(_email, CustomerView.Email);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Telephone()
         {
             Assert.AreEqual(_telephone, CustomerView.Telephone);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Mobile()
         {
             Assert.AreEqual(_mobile, CustomerView.Mobile);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Fax()
         {
             Assert.AreEqual(_fax, CustomerView.Fax);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Web()
         {
             Assert.AreEqual(_web, CustomerView.Web);
         }
 
         [TestMethod]
+        [TestCategory("Customer"), TestCategory("Create")]
         public void Segment()
         {
             Assert.AreEqual(_segment, CustomerView.Segment);
