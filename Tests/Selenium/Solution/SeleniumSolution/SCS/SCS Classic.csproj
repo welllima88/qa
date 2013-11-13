@@ -43,15 +43,19 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEV|AnyCPU'">
     <OutputPath>bin\DEV\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QAL|AnyCPU'">
     <OutputPath>bin\QAL\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QAK|AnyCPU'">
     <OutputPath>bin\QAK\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PROD|AnyCPU'">
     <OutputPath>bin\PROD\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -79,7 +83,8 @@
       <DependentUpon>ScsRes.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings\ScsClassiicTestEnvironment.cs" />
-    <Compile Include="Support\AddService\AddScs2ServiceToUsers.cs" />
+    <Compile Include="Support\AddService\AddServiceToUsers.cs" />
+    <Compile Include="Support\AddService\CheckExcel.cs" />
     <Compile Include="TestLauncher.cs" />
     <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
@@ -93,6 +98,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Support\AddService\UANA.xls" />
+    <None Include="Support\AddService\UANA.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\ScsRes.resx">
