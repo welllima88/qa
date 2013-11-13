@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
     {
         public static void Dev()
         {
-            BaseUrl = new Uri("https://mdzhwcweb01/scs2/");
+            BaseUrl = new Uri("https://mdzhwcweb01/mgmt/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Scs();
             Authentication = new UacAuthentication(new UacLoginPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
@@ -47,7 +47,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 
         public static void QaL()
         {
-            BaseUrl = new Uri("https://gateint.telekurs.ch/scs2c-qa-l/");
+            BaseUrl = new Uri("https://gateint.telekurs.ch/scsc-qa-l/");
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Scs();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);

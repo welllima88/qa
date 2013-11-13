@@ -98,8 +98,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Support\AddService\UANA.xls" />
-    <None Include="Support\AddService\UANA.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\ScsRes.resx">
