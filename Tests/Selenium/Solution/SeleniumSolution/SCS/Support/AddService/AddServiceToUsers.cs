@@ -53,32 +53,28 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
         }
 
         [DataSource("System.Data.Odbc",
-            @"Dsn=Excel Files;dbq='C:\Users\siegmund\Desktop\UANA.xlsx", "L$",
+            @"Dsn=Excel Files;dbq=C:\Users\siegmund\Desktop\UANA.xlsx", "L$",
             DataAccessMethod.Sequential)]
         [TestMethod]
         public void RemoveAndAddAnalyzerToRepairWesState()
         {
-            //string userId = Convert.ToString(TestContext.DataRow["Login_Id"]);
+            string login = Convert.ToString(TestContext.DataRow["Login_Id"]);
 
-            foreach (string login in CheckExcel.Logins)
+            Console.Out.WriteLine("- User {0} begin", login);
+            try
             {
-                Console.Out.WriteLine("- User {0} begin", login);
-                try
-                {
-                    RemoveService(login, "18");                    
-                }
-                catch (UserNotFoundException)
-                {
-                    Console.Error.WriteLine("no valid user found: {0}", login);
-                    continue;
-                }
-
-                AddService("Analyzer", "Service Benutzer");
-
-                CheckUser(login);
-                Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
-                Console.Out.WriteLine("+ User {0} finished", login);
+                RemoveService(login, "18");
             }
+            catch (UserNotFoundException)
+            {
+                Console.Error.WriteLine("no valid user found: {0}", login);
+            }
+
+            AddService("Analyzer", "Service Benutzer");
+
+            CheckUser(login);
+            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
+            Console.Out.WriteLine("+ User {0} finished", login);
         }
 
         public static void RemoveService(string userId, string serviceId)
