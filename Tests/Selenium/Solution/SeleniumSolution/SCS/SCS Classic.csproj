@@ -84,7 +84,6 @@
     </Compile>
     <Compile Include="Settings\ScsClassiicTestEnvironment.cs" />
     <Compile Include="Support\AddService\AddServiceToUsers.cs" />
-    <Compile Include="Support\AddService\CheckExcel.cs" />
     <Compile Include="TestLauncher.cs" />
     <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
