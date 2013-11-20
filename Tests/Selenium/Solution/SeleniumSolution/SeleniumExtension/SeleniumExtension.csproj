@@ -228,6 +228,7 @@
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Duplicate\TerminalDuplicate.cs" />
     <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="TestObjects\Terminal\FinancialConfig\FinancialConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
