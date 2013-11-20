@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.Settings;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 {
-    public class ScsClassiicTestEnvironment : TestEnvironment
+    public class ScsClassicTestEnvironment : TestEnvironment
     {
         public static void Dev()
         {
@@ -23,10 +23,10 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 
         public static void Prod()
         {
-            BaseUrl = new Uri("https://gate.telekurs.ch/scss");
+            BaseUrl = new Uri("https://gate.telekurs.ch/scss/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Scs();
-            Authentication = new SecurIdDialogBox();
+            Authentication = new SecurIdAuthentication("tksyr",@"PW","tkcpos","??");
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}

@@ -53,7 +53,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
         }
 
         [DataSource("System.Data.Odbc",
-            @"Dsn=Excel Files;dbq=C:\Users\siegmund\Desktop\UANA.xlsx", "L$",
+            @"Dsn=Excel Files;dbq=C:\Users\siegmund\Desktop\users in Prod which use analyzer.xlsx", "UsersProd$",
             DataAccessMethod.Sequential)]
         [TestMethod]
         public void RemoveAndAddAnalyzerToRepairWesState()
