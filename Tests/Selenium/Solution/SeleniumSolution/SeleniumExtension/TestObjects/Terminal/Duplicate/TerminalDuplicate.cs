@@ -1,31 +1,42 @@
-using System;
+using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
 {
-    public static class TerminalDuplicate
+    public class TerminalDuplicate : WebObject
     {
         public static bool CopyPassword
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            set { WebDriver.FindAdaptedElement(By.Id("KeepPassword")).CheckBox().Set(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("KeepPassword")).CheckBox().IsChecked(); }
         }
 
         public static bool AcquirerNotification
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            set { WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().Set(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().IsChecked(); }
         }
 
         public static string Location
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            set { WebDriver.FindAdaptedElement(By.Id("LocationId")).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationId")).Text; }
         }
 
-        public static string InstallationNotification
+        public static string InstallationMessage
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            set { WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).Text; }
+        }
+
+        public static string NumberOfTerminals
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).Text; }
+        }
+
+        public static IWebElement DulpicateButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("duplicate")); }
         }
     }
 }

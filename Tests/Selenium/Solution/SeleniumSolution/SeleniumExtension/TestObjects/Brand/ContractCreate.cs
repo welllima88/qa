@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 
         public void SetDcc(bool dccEnabeled)
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']")).SetCheckbox(dccEnabeled);
+            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']")).CheckBox().Set(dccEnabeled);
         }
 
         public void SetDccBaseCurrency(String dccBaseCurrency)

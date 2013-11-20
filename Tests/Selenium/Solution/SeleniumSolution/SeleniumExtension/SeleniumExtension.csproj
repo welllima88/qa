@@ -68,6 +68,7 @@
     <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
+    <Compile Include="CheckBoxElement.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
     <Compile Include="IWebElementAdapter.cs" />

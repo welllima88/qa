@@ -66,7 +66,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_IsActive")).
-                          SetCheckbox(value);
+                          CheckBox().Set(value);
             }
         }
 

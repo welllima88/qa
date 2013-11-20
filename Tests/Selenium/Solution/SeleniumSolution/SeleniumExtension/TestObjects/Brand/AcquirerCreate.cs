@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             //Example: By.XPath("//span/div/label[text()='American Express']/preceding-sibling::input")).
             WebDriver.FindAdaptedElement(By.XPath("//span/div/label[text()='" + acquirer + "']/preceding-sibling::input"))
-                     .SetCheckbox(messageToAcquirer);
+                     .CheckBox().Set(messageToAcquirer);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                 WebDriver.FindElements(By.CssSelector("input[id*='cbxAcquirerMessages'].check"));
             foreach (IWebElementAdapter acquirer in acquirers)
             {
-                acquirer.SetCheckbox(messageToAcquirers);
+                acquirer.CheckBox().Set(messageToAcquirers);
             }
         }
 

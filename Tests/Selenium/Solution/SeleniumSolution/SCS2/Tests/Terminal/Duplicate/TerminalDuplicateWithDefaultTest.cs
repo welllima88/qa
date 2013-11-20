@@ -5,15 +5,13 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
 {
     [TestClass]
-    public class TerminalDuplicateTest
+    public class TerminalDuplicateWithDefaultTest
     {
-        private long _dt;
-
         [TestInitialize]
         public void TestInit()
         {
             TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
-            _dt = TestLauncher.GenerateTestId();
+            TerminalDuplicate.DulpicateButton.Click();
         }
 
         [TestMethod]
@@ -25,8 +23,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
             TerminalDuplicate.Location = "";
             TerminalDuplicate.InstallationMessage =
                 "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
-
-            TerminalDuplicate.DulpicateButton.Click();
         }
 
         [TestMethod]

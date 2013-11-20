@@ -20,10 +20,9 @@ namespace SIX.SCS.QA.Selenium.Extension
             _theWebElement = webElement;
         }
 
-        #region IWebElementAdapter Members
-
         /// <summary>
-        ///     Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.) can be executed
+        /// Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.) 
+        /// can be executed
         /// </summary>
         /// <returns>SelectElement for the actual WebElement</returns>
         public SelectElement Selector()
@@ -49,21 +48,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         {
             _theWebElement.Clear();
             _theWebElement.SendKeys(userInput);
-        }
-
-        /// <summary>
-        ///     ensures and sets the the value for a checkbox if necessary
-        /// </summary>
-        /// <param name="userInput"></param>
-        public void SetCheckbox(bool userInput)
-        {
-            if (!(TagName.Equals("input") && GetAttribute("type").Equals("checkbox")))
-                throw new NotCheckableElementException(TagName, GetCssValue("type"));
-
-            if (Selected ^ userInput) //if antivalent..
-            {
-                Click(); //..make equivalent
-            }
         }
 
         public void Clear()
@@ -131,6 +115,13 @@ namespace SIX.SCS.QA.Selenium.Extension
             get { return _theWebElement.Displayed; }
         }
 
-        #endregion
+        public CheckBoxElement CheckBox()
+        {
+            if (TagName.Equals("select"))
+            {
+                return new CheckBoxElement(this);
+            }
+            throw new NotSelectableElementException(TagName);
+        }
     }
 }
