@@ -21,8 +21,8 @@ namespace SIX.SCS.QA.Selenium.Extension
         }
 
         /// <summary>
-        /// Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.) 
-        /// can be executed
+        ///     Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.)
+        ///     can be executed
         /// </summary>
         /// <returns>SelectElement for the actual WebElement</returns>
         public SelectElement Selector()
@@ -117,11 +117,7 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public CheckBoxElement CheckBox()
         {
-            if (TagName.Equals("select"))
-            {
-                return new CheckBoxElement(this);
-            }
-            throw new NotSelectableElementException(TagName);
+            return new CheckBoxElement(this);
         }
     }
 }
