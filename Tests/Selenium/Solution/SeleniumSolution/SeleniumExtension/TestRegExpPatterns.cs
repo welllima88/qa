@@ -23,5 +23,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         public static Regex DateTime = new Regex(Date + " " + Time);
         public static Regex TerminalPassword = new Regex("[0-9]{5,8}");
         public static Regex UserName = new Regex(@"\w{5}");
+        public static Regex NotEmpty = new Regex(@"\w");
     }
 }
