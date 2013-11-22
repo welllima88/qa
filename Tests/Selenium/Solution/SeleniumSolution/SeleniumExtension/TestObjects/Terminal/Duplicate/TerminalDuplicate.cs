@@ -19,19 +19,19 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
         public static string Location
         {
             set { WebDriver.FindAdaptedElement(By.Id("LocationId")).TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("LocationId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationId")).Selector().SelectedOption.Text; }
         }
 
         public static string InstallationMessage
         {
             set { WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).GetAttribute("value"); }
         }
 
         public static string NumberOfTerminals
         {
             set { WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).GetAttribute("value"); }
         }
 
         public static IWebElement DulpicateButton
