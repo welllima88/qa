@@ -34,6 +34,11 @@ namespace SIX.SCS.QA.Selenium.Extension
             throw new NotSelectableElementException(TagName);
         }
 
+        public TextBoxElement TextBox()
+        {
+            return new TextBoxElement(this);
+        }
+
         public IWebElement FindElement(By by)
         {
             return _theWebElement.FindElement(by);

@@ -69,6 +69,7 @@
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
     <Compile Include="CheckBoxElement.cs" />
+    <Compile Include="TextBoxElement.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
     <Compile Include="IWebElementAdapter.cs" />
@@ -179,7 +180,8 @@
     <Compile Include="TestObjects\Location\LocationEdit.cs" />
     <Compile Include="TestObjects\Location\LocationView.cs" />
     <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
-    <Compile Include="TestObjects\Massmuation\Massmuation.cs" />
+    <Compile Include="TestObjects\Massmuation\MassmuationFileUpload.cs" />
+    <Compile Include="TestObjects\Massmuation\TerminalMassValidation.cs" />
     <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
     <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
     <Compile Include="TestObjects\Person\ContactPersonView.cs" />

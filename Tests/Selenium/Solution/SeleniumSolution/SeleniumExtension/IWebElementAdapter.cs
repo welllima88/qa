@@ -11,5 +11,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         void TypeText(string userInput);
         CheckBoxElement CheckBox();
         SelectElement Selector();
+        TextBoxElement TextBox();
     }
 }
