@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Terminal")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Terminals erstellen", Massmuation.Title);
+            Assert.AreEqual("Mehrere Terminals erstellen", MassmuationFileUpload.Title);
         }
 
         [TestMethod]
@@ -31,21 +31,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         {
             Assert.AreEqual(
                 "Bitte geben Sie den Pfad zum Excel File mit den Terminaldaten an. Bitte stellen Sie sicher, dass sie das richtige File mit der Bezeichnung SCA verwenden. Die Bezeichnung befindet sich im Exceldatei an der Spalte B1. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
-                Massmuation.Description);
+                MassmuationFileUpload.Description);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Terminal")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", Massmuation.FileUploadButton.Text);
+            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Terminal")]
         public void FileChooser()
         {
-            Assert.AreEqual("", Massmuation.FileChooser.Text);
+            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public void DownloadTemplate()
         {
             //TODO Fails, until new deployed (old htmlid)
-            Assert.AreEqual("Excel Vorlage herunterladen", Massmuation.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
         }
     }
 }

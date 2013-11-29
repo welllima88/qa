@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("BusinessTemplate")]
         public void Title()
         {
-            Assert.AreEqual("Businesstemplates mit neuer FO-Schnittstelle aktivieren", Massmuation.Title);
+            Assert.AreEqual("Businesstemplates mit neuer FO-Schnittstelle aktivieren", MassmuationFileUpload.Title);
         }
 
         [TestMethod]
@@ -31,28 +31,28 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         {
             Assert.AreEqual(
                 "Durch Einlesen des Files im unten stehenden Link können die Businesstemplates eingestellt sowie die neue FO-Schnittstelle aktiviert werden.",
-                Massmuation.Description);
+                MassmuationFileUpload.Description);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("BusinessTemplate")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", Massmuation.FileUploadButton.Text);
+            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("BusinessTemplate")]
         public void FileChooser()
         {
-            Assert.AreEqual("", Massmuation.FileChooser.Text);
+            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("BusinessTemplate")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", Massmuation.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
         }
     }
 }
