@@ -46,7 +46,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Search.Customer
         public void ShowLocationsAndTerminals()
         {
             CustomerResult.ShowDescent(SearchField).Click();
-            Assert.IsFalse(CustomerResult.ShowDescent("").Displayed);            
+            Assert.IsFalse(CustomerResult.ShowDescent("").Displayed);
         }
     }
 }
