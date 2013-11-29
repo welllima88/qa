@@ -9,9 +9,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Search.Customer
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestClass]
-    public class SearchForCustomerByIdTest
+    public class SearchForCustomerByNameTest
     {
-        private const string SearchField = "401858";
+        private const string SearchField = "TKSYR";
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
