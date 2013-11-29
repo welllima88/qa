@@ -6,7 +6,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
 {
     [TestClass]
-    public class TerminalDuplicateGuiTest
+    public class TerminalDuplicateDefaultsGuiTest
     {
         [TestInitialize]
         public void TestInit()
