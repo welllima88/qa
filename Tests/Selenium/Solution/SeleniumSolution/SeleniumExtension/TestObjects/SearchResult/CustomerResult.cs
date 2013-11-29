@@ -5,13 +5,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
     public class CustomerResult : WebObject
     {
-        private readonly string _customerId;
-
-        public CustomerResult(string customerId)
-        {
-            _customerId = customerId;
-        }
-
         public static string CustomerId
         {
             get { return WebDriver.FindElement(By.CssSelector("tbody#customerResult span#customerId")).Text; }

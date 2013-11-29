@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Search.Customer
         [TestCategory("Search"), TestCategory("Customer")]
         public void SearchStringInHeadlineIsDisplayed()
         {
-            StringAssert.Contains(SearchResult.Headline, "401858");
+            StringAssert.Contains(SearchResults.Headline, "401858");
         }
 
         [TestMethod]

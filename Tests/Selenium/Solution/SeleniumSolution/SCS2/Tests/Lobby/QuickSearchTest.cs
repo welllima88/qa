@@ -34,16 +34,16 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         {
             QuickSearch.SearchField = "Click-Search";
             QuickSearch.SearchButton.Click();
-            StringAssert.Contains(SearchResult.Headline, "Click-Search");
+            StringAssert.Contains(SearchResults.Headline, "Click-Search");
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void HitEnterLaunchesSearch()
         {
-            QuickSearch.SearchField="Hit-Enter";
+            QuickSearch.SearchField = "Hit-Enter";
             QuickSearch.HitEnter();
-            StringAssert.Contains(SearchResult.Headline, "Hit-Enter");
+            StringAssert.Contains(SearchResults.Headline, "Hit-Enter");
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    internal class MpdResult : SearchResult
+    public class MpdResult : SearchResults
     {
         public MpdResult()
         {

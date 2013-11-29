@@ -1,6 +1,6 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    internal class SimCardResult : SearchResult
+    public class SimCardResult : SearchResults
     {
         public SimCardResult()
         {

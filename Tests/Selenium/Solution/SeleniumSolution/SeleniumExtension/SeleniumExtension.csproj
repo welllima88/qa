@@ -202,7 +202,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestObjects\SearchResult\SearchResult.cs" />
+    <Compile Include="TestObjects\SearchResult\SearchResults.cs" />
     <Compile Include="TestObjects\SearchResult\CustomerResult.cs" />
     <Compile Include="TestObjects\SearchResult\LocationResult.cs" />
     <Compile Include="TestObjects\SearchResult\MpdResult.cs" />

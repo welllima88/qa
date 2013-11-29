@@ -1,6 +1,6 @@
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    internal class UserResult : SearchResult
+    public class UserResult : SearchResults
     {
         public UserResult()
         {
