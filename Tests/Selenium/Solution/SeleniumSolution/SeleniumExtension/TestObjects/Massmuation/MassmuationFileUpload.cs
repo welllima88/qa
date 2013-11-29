@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
 {
-    public class Massmuation : WebObject
+    public class MassmuationFileUpload : WebObject
 
     {
         public static string Title
