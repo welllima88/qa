@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Extension
         public TextBoxElement(IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals("text")))
-                throw new NotCheckableElementException(webElement.TagName, webElement.GetCssValue("type"));
+                throw new NotTextBoxElementException(webElement.TagName, webElement.GetCssValue("type"));
             _webElement = webElement;
         }
 

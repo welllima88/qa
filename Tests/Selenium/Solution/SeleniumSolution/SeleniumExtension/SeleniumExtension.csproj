@@ -69,6 +69,7 @@
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
     <Compile Include="CheckBoxElement.cs" />
+    <Compile Include="NotTextBoxElementException.cs" />
     <Compile Include="TextBoxElement.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
