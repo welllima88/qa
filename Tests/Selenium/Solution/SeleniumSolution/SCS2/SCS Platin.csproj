@@ -160,8 +160,9 @@
     <Compile Include="Tests\Terminal\Dashboard\CustomerInfoTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\LocationlInfoTest.cs" />
     <Compile Include="Tests\Terminal\Dashboard\TerminalInfoTest.cs" />
-    <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateGuiTest.cs" />
-    <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateWithDefaultTest.cs" />
+    <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateWithSamePasswortTest.cs" />
+    <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateDefaultsGuiTest.cs" />
+    <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateWithDifferentPasswords.cs" />
     <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateTest.cs" />
     <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
     <Compile Include="Tests\Terminal\Create\TerminalCreateTest.cs" />
