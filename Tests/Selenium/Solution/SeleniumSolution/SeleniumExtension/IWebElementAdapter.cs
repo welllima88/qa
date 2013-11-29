@@ -11,5 +11,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         CheckBoxElement CheckBox();
         SelectElement Selector();
         TextBoxElement TextBox();
+        PasswortTextBoxElement Password();
     }
 }

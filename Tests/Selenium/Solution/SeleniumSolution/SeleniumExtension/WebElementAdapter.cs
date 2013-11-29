@@ -39,6 +39,11 @@ namespace SIX.SCS.QA.Selenium.Extension
             return new TextBoxElement(this);
         }
 
+        public PasswortTextBoxElement Password()
+        {
+            return new PasswortTextBoxElement(this);
+        }
+
         public IWebElement FindElement(By by)
         {
             return _theWebElement.FindElement(by);
