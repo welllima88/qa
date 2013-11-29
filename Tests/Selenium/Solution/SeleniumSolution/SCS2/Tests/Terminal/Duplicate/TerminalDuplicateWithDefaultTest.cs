@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
@@ -7,34 +9,37 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateWithDefaultTest
     {
-        [TestInitialize]
-        public void TestInit()
+        private const int NumberOfTerminals = 10;
+
+        [ClassInitialize]
+        public static void TestInit(TestContext testContext)
         {
-            TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
+            TestDirector.Navigate("TerminalDashboard/?TerminalId=21013049");
+            SalesContractPortlet.TerminalDuplicate.Click();
+            TerminalDuplicate.NumberOfTerminals = NumberOfTerminals;
+            TerminalDuplicate.InstallationMessage = "TerminalDuplicateWithDefaultTest";
             TerminalDuplicate.DulpicateButton.Click();
         }
 
         [TestMethod]
-        public void DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation()
+        public void PasswordsAreDifferent()
         {
-            TerminalDuplicate.NumberOfTerminals = "2";
-            TerminalDuplicate.CopyPassword = true;
-            TerminalDuplicate.AcquirerNotification = true;
-            TerminalDuplicate.Location = "";
-            TerminalDuplicate.InstallationMessage =
-                "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
+            CollectionAssert.AllItemsAreUnique(TerminalMassValidation.Passwords);
         }
 
         [TestMethod]
-        public void DuplicateTerminalWithNoCopyPasswordWithNoAcquirerNotificationToCustomerLocation()
+        public void ReferenceTerminalIdsAreEqual()
         {
-            TerminalDuplicate.NumberOfTerminals = "3";
-            TerminalDuplicate.CopyPassword = false;
-            TerminalDuplicate.AcquirerNotification = false;
-            TerminalDuplicate.Location = "";
-            TerminalDuplicate.InstallationMessage =
-                "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
-            TerminalDuplicate.DulpicateButton.Click();
+            foreach (string referenceTerminalId in TerminalMassValidation.ReferenceTerminalIds)
+            {
+                Assert.AreEqual("21013049", referenceTerminalId);
+            }
+        }
+
+        [TestMethod]
+        public void NumberOfTerminalsToDuplicate()
+        {
+            Assert.AreEqual(TerminalMassValidation.Count, NumberOfTerminals);
         }
     }
 }
