@@ -8,7 +8,6 @@ namespace SIX.SCS.QA.Selenium.Extension
     /// </summary>
     public interface IWebElementAdapter : IWebElement
     {
-        void TypeText(string userInput);
         CheckBoxElement CheckBox();
         SelectElement Selector();
         TextBoxElement TextBox();

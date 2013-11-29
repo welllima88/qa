@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='client']"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
         }
 
@@ -43,8 +43,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebuserid']"))
-                         .TypeText(
-                             value);
+                         .TextBox()
+                         .TypeText(value);
             }
         }
 
@@ -53,8 +53,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswd']"))
-                         .TypeText(
-                             value);
+                         .TextBox()
+                         .TypeText(value);
             }
         }
 
@@ -67,8 +67,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']")).
-                          TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']"))
+                         .TextBox()
+                         .TypeText(value);
             }
         }
 

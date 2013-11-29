@@ -11,16 +11,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 
         public static string Zip
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_ZIP")).TypeText(
-                    value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_ZIP")).TextBox().TypeText(value); }
         }
 
         public static string City
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_City")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_City")).TextBox().TypeText(value); }
         }
 
         public static string AdressAddition
@@ -28,57 +24,48 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_AddressAddition"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
         }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_PO")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_PO")).TextBox().TypeText(value); }
         }
 
         public static string Region
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Region")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Region")).TextBox().TypeText(value); }
         }
 
         public static string Telephone
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Telephone")).
-                          TypeText(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Telephone")).TextBox().TypeText(value); }
         }
 
         public static string Mobile
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Mobile")).
-                          TypeText(
-                              value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Mobile")).TextBox().TypeText(value); }
         }
 
         public static string Fax
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Fax")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Fax")).TextBox().TypeText(value); }
         }
 
         public static string Email
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Email")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Email")).TextBox().TypeText(value); }
         }
 
         public static string CompanyName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TextBox().TypeText(value); }
         }
 
         public static string StreetName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Street")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Street")).TextBox().TypeText(value); }
         }
 
         public static string Language
@@ -88,7 +75,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 
         public static string Web
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Web")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Web")).TextBox().TypeText(value); }
         }
 
         public static IWebElement SaveButton

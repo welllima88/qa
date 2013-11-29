@@ -31,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 
         public static IWebElement Result(string s)
         {
-            throw new NotImplementedException(" almost finished");
+            throw new NotImplementedException("almost finished");
             //return ShowDescents().FindElement(By.CssSelector(""));
         }
     }

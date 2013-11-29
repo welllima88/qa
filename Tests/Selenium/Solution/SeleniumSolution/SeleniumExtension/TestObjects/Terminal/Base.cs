@@ -30,8 +30,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText"))
-                         .
-                          TypeText(value);
+                         .TextBox()
+                         .TypeText(value);
             }
         }
 

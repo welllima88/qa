@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 
         public static string StreetName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Strasse']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Strasse']")).TextBox().TypeText(value); }
         }
 
         public static IWebElement CancelButton
@@ -54,61 +54,61 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 
         public static string Ep2MerchantId
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).TextBox().TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).GetCssValue("value"); }
         }
 
         public static string Zip
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='PLZ']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='PLZ']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string City
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Ort']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Ort']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string AdressAddition
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Zusatz']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Zusatz']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Postfach']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Postfach']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Region
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Region']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Region']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Telephone
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Mobile
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon2']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Telefon2']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Fax
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Fax']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Fax']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string Email
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Email']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='Email']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
@@ -116,19 +116,19 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 
         public static string CustomerName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string SapNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='SapNumber']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='SapNumber']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
         public static string CompanyName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("td[name='Name']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("td[name='Name']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
@@ -203,7 +203,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 
         public static string Web
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='www']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='www']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 
@@ -215,7 +215,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
 
         public static string CustomerNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TextBox().TypeText(value); }
             get { throw new NotImplementedException(); }
         }
 

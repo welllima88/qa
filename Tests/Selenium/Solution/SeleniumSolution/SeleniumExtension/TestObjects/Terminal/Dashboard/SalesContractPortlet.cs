@@ -33,5 +33,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
         {
             get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(5)" + Suffix)); }
         }
+
+        public static IWebElement TerminalDuplicate
+        {
+            get { return WebDriver.FindElement(By.CssSelector("div#frame_SalesPortlet div.portletLinks #duplicateLink")); }
+        }
     }
 }

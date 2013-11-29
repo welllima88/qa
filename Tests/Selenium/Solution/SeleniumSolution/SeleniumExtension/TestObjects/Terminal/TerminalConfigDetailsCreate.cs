@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
         }
 
@@ -52,7 +52,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_inpInstallTypeRemark"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
         }
 
@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_inpECRText"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
         }
 
@@ -110,7 +110,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                         .TypeText(value);
+                         .TextBox().TypeText(value);
             }
 
             get

@@ -6,12 +6,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
     {
         public static string ActivatedUntil
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#activateTill")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#activateTill")).TextBox().TypeText(value); }
         }
 
         public static string Parameter
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")).TextBox().TypeText(value); }
         }
 
         public static string Medium
@@ -26,32 +26,32 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
 
         public static string DestinationAddress
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")).TextBox().TypeText(value); }
         }
 
         public static string DestinationPort
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")).TextBox().TypeText(value); }
         }
 
         public static string TelephoneIsdn
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")).TextBox().TypeText(value); }
         }
 
         public static string TelephonePstn
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")).TextBox().TypeText(value); }
         }
 
         public static string DestinationUrl
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TextBox().TypeText(value); }
         }
 
         public static string DestinationUrlPort
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TextBox().TypeText(value); }
         }
 
         public static IWebElementAdapter Save

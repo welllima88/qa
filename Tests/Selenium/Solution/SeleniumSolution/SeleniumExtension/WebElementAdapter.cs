@@ -49,12 +49,6 @@ namespace SIX.SCS.QA.Selenium.Extension
             return _theWebElement.FindElements(by);
         }
 
-        public void TypeText(string userInput)
-        {
-            _theWebElement.Clear();
-            _theWebElement.SendKeys(userInput);
-        }
-
         public void Clear()
         {
             _theWebElement.Clear();

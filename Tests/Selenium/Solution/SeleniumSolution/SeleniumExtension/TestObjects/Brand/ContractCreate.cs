@@ -44,6 +44,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
+                     .TextBox()
                      .TypeText(vpNo);
         }
 
@@ -56,7 +57,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 
         public void SetDcc(bool dccEnabeled)
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']")).CheckBox().Set(dccEnabeled);
+            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
+                     .CheckBox()
+                     .Set(dccEnabeled);
         }
 
         public void SetDccBaseCurrency(String dccBaseCurrency)

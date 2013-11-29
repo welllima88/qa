@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
                     WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField))
                              .GetAttribute("value");
             }
-            set { WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).TextBox().TypeText(value); }
         }
 
         public static IWebElement SearchButton

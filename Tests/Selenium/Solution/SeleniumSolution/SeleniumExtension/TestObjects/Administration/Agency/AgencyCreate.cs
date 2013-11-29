@@ -13,13 +13,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
         public static string SbsAgentId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).TextBox().TypeText(value); }
         }
 
         public static string Telephone
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TextBox().TypeText(value); }
         }
 
         public static string Language
@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
         public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).TextBox().TypeText(value); }
         }
 
         public static string Country
@@ -55,13 +55,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
         public static string Zip
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_ZIP")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_ZIP")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_ZIP")).TextBox().TypeText(value); }
         }
 
         public static string City
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).TextBox().TypeText(value); }
         }
 
         public string AdressAddition
@@ -85,13 +85,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
         public static string Name
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyName")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyName")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyName")).TextBox().TypeText(value); }
         }
 
         public static string DisplayName
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).TextBox().TypeText(value); }
         }
 
         public static string Supplier

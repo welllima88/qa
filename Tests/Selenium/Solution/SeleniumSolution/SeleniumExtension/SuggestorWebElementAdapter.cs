@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.Selenium.Extension
 
         public void Suggestor(string innerText)
         {
-            TypeText(innerText);
+            TextBox().TypeText(innerText);
             try
             {
                 IWebElement suggestElement =
