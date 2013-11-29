@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         [TestMethod]
         public void DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation()
         {
-            TerminalDuplicate.NumberOfTerminals = "2";
+            TerminalDuplicate.NumberOfTerminals = 2;
             TerminalDuplicate.CopyPassword = true;
             TerminalDuplicate.AcquirerNotification = true;
             TerminalDuplicate.Location = "";
@@ -32,7 +32,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         [TestMethod]
         public void DuplicateTerminalWithNoCopyPasswordWithNoAcquirerNotificationToCustomerLocation()
         {
-            TerminalDuplicate.NumberOfTerminals = "3";
+            TerminalDuplicate.NumberOfTerminals = 3;
             TerminalDuplicate.CopyPassword = false;
             TerminalDuplicate.AcquirerNotification = false;
             TerminalDuplicate.Location = "";
