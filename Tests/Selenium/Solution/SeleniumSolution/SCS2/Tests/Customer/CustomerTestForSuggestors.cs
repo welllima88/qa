@@ -5,8 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
 {
-    [TestClass]
-    [Ignore]
+
     public class CustomerTestForSuggestors
     {
         private static CustomerCreate CustomerCreate;
