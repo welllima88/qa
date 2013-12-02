@@ -145,7 +145,6 @@
     <Compile Include="TestObjects\Common\QuickSearch.cs" />
     <Compile Include="TestObjects\Common\RecentElements.cs" />
     <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
-    <Compile Include="TestObjects\Common\Menu\SimCardManageMenu.cs" />
     <Compile Include="TestObjects\Customer\CustomerEditRes.Designer.cs">
       <DependentUpon>CustomerEditRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>
