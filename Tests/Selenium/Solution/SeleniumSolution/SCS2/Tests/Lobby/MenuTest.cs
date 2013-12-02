@@ -57,6 +57,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
+        public void InstallationsTickets()
+        {
+            Assert.IsTrue(TicketMenu.Installations.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationBusinessTemplateMigrate()
         {
             Assert.IsTrue(MassMutationMenu.BusinessTemplateMigrate.Displayed);
@@ -73,7 +80,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void SimCardManagement()
         {
-            Assert.IsTrue(MassMutationMenu.SimCardManage.Displayed);
+            Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
+        public void SerialNumberManagement()
+        {
+            Assert.IsTrue(LobbyMenu.SerialNumberManage.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
+        public void BillableTerminals()
+        {
+            Assert.IsTrue(LobbyMenu.BillableTerminalsMenu.Displayed);
         }
 
         [TestMethod]

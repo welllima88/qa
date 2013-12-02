@@ -33,10 +33,5 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.AcquirerChange)); }
         }
-
-        public static IWebElement SimCardManage
-        {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
-        }
     }
 }

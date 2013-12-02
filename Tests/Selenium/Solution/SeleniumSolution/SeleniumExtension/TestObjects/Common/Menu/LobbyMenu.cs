@@ -18,5 +18,20 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
         }
+
+        public static IWebElement SimCardManage
+        {
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
+        }
+
+        public static IWebElement SerialNumberManage
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href$='/SerialNumberManagement/']")); }
+        }
+
+        public static IWebElement BillableTerminalsMenu
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href$='/BillableTerminals/']")); }
+        }
     }
 }
