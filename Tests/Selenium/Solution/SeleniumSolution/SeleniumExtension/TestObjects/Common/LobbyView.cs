@@ -1,3 +1,4 @@
+using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Authentication;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -29,7 +30,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public void Logout()
         {
-            MetaNavBar.Logout.Click();
+            try
+            {
+                MetaNavBar.Logout.Click();
+            }
+            catch (NoSuchElementException)
+            {
+                Console.Error.WriteLine("Closing browser without logoff, because logout-element not found..");
+            }
         }
     }
 }
