@@ -71,6 +71,7 @@
     <Compile Include="CheckBoxElement.cs" />
     <Compile Include="NotTextBoxElementException.cs" />
     <Compile Include="PasswortTextBoxElement.cs" />
+    <Compile Include="Settings\BuildTest.cs" />
     <Compile Include="TextBoxElement.cs" />
     <Compile Include="ISuggesterWebElement.cs" />
     <Compile Include="IWebDriverAdapter.cs" />
