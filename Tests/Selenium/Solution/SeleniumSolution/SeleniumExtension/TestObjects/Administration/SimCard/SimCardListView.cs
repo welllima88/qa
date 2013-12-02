@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard

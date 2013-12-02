@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
@@ -13,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
-            
+
             LocationCreate.SaveButton.Click();
         }
 

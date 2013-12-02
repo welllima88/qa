@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
 {

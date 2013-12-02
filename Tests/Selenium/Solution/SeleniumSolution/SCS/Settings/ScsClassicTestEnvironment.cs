@@ -26,7 +26,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
             BaseUrl = new Uri("https://gate.telekurs.ch/scss/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Scs();
-            Authentication = new SecurIdAuthentication("tksyr",@"PW","tkcpos","??");
+            Authentication = new SecurIdAuthentication("tksyr", @"PW", "tkcpos", "??");
             SeleniumConfig = new SeleniumConfig
                 {
                     Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}

@@ -36,7 +36,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 
         public static IWebElement TerminalDuplicate
         {
-            get { return WebDriver.FindElement(By.CssSelector("div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']")); }
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector(
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']"));
+            }
         }
     }
 }

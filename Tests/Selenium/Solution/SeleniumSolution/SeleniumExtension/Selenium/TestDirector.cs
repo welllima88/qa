@@ -1,9 +1,10 @@
 using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
     public static class TestDirector
     {

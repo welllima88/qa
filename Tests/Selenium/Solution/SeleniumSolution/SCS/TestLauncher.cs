@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium
 {

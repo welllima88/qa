@@ -1,5 +1,6 @@
 using System;
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
 {

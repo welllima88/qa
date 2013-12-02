@@ -1,6 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
@@ -25,7 +26,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 
         public String SetRemark
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         /// <summary>

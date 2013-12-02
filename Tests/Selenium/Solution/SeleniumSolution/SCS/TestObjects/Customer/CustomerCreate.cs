@@ -1,6 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer

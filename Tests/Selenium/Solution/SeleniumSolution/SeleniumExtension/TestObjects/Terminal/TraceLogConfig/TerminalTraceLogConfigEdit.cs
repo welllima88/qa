@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
 {
@@ -26,12 +27,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
 
         public static string DestinationAddress
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         public static string DestinationPort
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         public static string TelephoneIsdn

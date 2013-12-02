@@ -10,7 +10,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby

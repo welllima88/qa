@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     public class NotCheckableElementException : Exception
     {

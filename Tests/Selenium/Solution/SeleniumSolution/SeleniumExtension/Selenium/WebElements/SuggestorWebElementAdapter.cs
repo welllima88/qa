@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
     ///     This class adds to the common extension of WebElementAdapter just for suggestors. Because they will not be used in future, they are considered as separate class and interface.

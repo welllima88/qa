@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.ArticleChooser
@@ -23,7 +23,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.ArticleChooser
         [TestMethod]
         public void SuggestedListHasConcreteEntry()
         {
-            CollectionAssert.Contains(TerminalChooser.SuggestedArtikelList, "  xentissimo MOBILE WLAN, TCP/IP TCPIPEP2  15401");
+            CollectionAssert.Contains(TerminalChooser.SuggestedArtikelList,
+                                      "  xentissimo MOBILE WLAN, TCP/IP TCPIPEP2  15401");
         }
     }
 }

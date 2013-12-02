@@ -1,5 +1,6 @@
 using System;
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
 {
@@ -91,7 +92,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
         public static string DisplayName
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         public static string Supplier

@@ -1,3 +1,4 @@
+using System;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
@@ -68,8 +69,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 
         public static string Headline
         {
-            get { throw new System.NotImplementedException(); }
-            set { throw new System.NotImplementedException(); }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
     }
 }

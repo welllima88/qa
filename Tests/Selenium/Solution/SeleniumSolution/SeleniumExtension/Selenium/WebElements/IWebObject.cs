@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
     ///     defines interface for a test object

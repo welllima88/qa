@@ -1,3 +1,5 @@
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public abstract class MenuObject : WebObject

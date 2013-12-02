@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 {
@@ -6,7 +7,12 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
     {
         public string UserName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input.loginInput[name='spUsername']")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input.loginInput[name='spUsername']"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         public string UserPasswort

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
     ///     This exception is thrown, if the Selector is not a select WebElement

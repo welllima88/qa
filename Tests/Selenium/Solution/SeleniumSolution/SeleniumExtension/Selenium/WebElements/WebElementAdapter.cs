@@ -3,7 +3,7 @@ using System.Drawing;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
     ///     This class adds selenium features which we often need in Zebra and used in common instead of selenium theWebElement. This class extends

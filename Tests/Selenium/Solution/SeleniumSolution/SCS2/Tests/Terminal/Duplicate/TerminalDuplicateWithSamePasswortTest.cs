@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
+using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;

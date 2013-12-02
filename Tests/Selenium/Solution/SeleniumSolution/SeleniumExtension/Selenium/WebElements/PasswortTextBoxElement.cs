@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     public class PasswortTextBoxElement : TextBoxElement
     {

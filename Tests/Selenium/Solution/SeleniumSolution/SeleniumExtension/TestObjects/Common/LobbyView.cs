@@ -1,6 +1,7 @@
 using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Authentication;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
