@@ -38,9 +38,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExcha
         }
 
         [TestMethod]
-        public void AllowTerminalsWithNoCurrentRelease()
+        public void SelectedNewRelease()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.AllowTerminalsWithNoCurrentRelease.Displayed);
+            Assert.IsTrue(SoftwareExchangeCreate.SelectedNewRelease.Displayed);
         }
 
         [TestMethod]
@@ -140,12 +140,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExcha
         }
 
         [TestMethod]
-        public void SelectedNewRelease()
-        {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedNewRelease.Displayed);
-        }
-
-        [TestMethod]
         public void StartDateTime()
         {
             Assert.IsTrue(SoftwareExchangeCreate.StartDateTime.Displayed);
@@ -155,6 +149,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SoftwareExcha
         public void BatchCreateButton()
         {
             Assert.IsTrue(SoftwareExchangeCreate.BatchCreateButton.Displayed);
+        }
+
+        [TestMethod]
+        public void SelectedNewTargetRelease()
+        {
+            Assert.IsTrue(SoftwareExchangeCreate.SelectedNewTargetRelease.Displayed);
         }
     }
 }

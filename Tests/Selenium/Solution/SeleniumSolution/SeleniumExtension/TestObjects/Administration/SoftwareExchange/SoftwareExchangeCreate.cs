@@ -26,13 +26,19 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SoftwareExcha
 
         public static IWebElement SelectedCurrentRelease
         {
-            get { return WebDriver.FindElement(By.CssSelector("#SelectedCurrentRelease")); }
+            get { return WebDriver.FindElement(By.CssSelector("#SelectedCurrentReleaseCriteria")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElement AllowTerminalsWithNoCurrentRelease
+        public static IWebElement SelectedNewRelease
         {
-            get { return WebDriver.FindElement(By.CssSelector("#AllowTerminalsWithNoCurrentRelease")); }
+            get { return WebDriver.FindElement(By.CssSelector("#SelectedNewReleaseCriteria")); }
+            set { throw new NotImplementedException(); }
+        }
+
+        public static IWebElement SelectedNewTargetRelease
+        {
+            get { return WebDriver.FindElement(By.CssSelector("#SelectedNewRelease")); }
             set { throw new NotImplementedException(); }
         }
 
@@ -129,12 +135,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SoftwareExcha
         public static IWebElement SelectOddEvenSwitch
         {
             get { return WebDriver.FindElement(By.CssSelector("#selectOddEvenSwitch")); }
-            set { throw new NotImplementedException(); }
-        }
-
-        public static IWebElement SelectedNewRelease
-        {
-            get { return WebDriver.FindElement(By.CssSelector("#SelectedNewRelease")); }
             set { throw new NotImplementedException(); }
         }
 
