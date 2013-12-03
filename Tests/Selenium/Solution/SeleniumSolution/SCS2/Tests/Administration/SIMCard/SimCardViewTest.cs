@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
     public class SimCardCreateTest
     {
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit(TestContext testContext)
         {
             TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
         }
