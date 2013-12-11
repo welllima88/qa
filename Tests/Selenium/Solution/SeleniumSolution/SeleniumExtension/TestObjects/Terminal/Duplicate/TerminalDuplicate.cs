@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -30,10 +29,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
             get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).GetAttribute("value"); }
         }
 
-        public static int NumberOfTerminals
+        public static string NumberOfTerminals
         {
-            set { WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TextBox().TypeText(value.ToString()); }
-            get { return Convert.ToInt32(WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).GetAttribute("value")); }
+            set { WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).GetAttribute("value"); }
         }
 
         public static IWebElement DulpicateButton
