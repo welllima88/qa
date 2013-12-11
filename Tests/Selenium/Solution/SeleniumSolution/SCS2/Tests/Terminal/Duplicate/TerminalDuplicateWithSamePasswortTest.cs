@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateWithSamePasswortTest
     {
-        private const string NumberOfTerminals = "5";
+        private const int NumberOfTerminals = 5;
         private const string TerminalId = "21013049";
 
         [ClassInitialize]
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
             SalesContractPortlet.TerminalDuplicate.Click();
-            TerminalDuplicate.NumberOfTerminals = NumberOfTerminals;
+            TerminalDuplicate.NumberOfTerminals = NumberOfTerminals.ToString();
             TerminalDuplicate.InstallationMessage = "TerminalDuplicateWithSamePasswortTest";
             TerminalDuplicate.CopyPassword = true;
             TerminalDuplicate.DulpicateButton.Click();

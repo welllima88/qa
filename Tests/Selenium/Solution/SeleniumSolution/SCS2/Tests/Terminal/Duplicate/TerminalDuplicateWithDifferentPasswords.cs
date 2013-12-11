@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateWithDifferentPasswords
     {
-        private const string NumberOfDuplications = "10";
+        private const int NumberOfDuplications = 10;
         private const string TerminalId = "21013049";
 
         [ClassInitialize]
@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
             SalesContractPortlet.TerminalDuplicate.Click();
-            TerminalDuplicate.NumberOfTerminals = NumberOfDuplications;
+            TerminalDuplicate.NumberOfTerminals = NumberOfDuplications.ToString();
             TerminalDuplicate.CopyPassword = false;
             TerminalDuplicate.DulpicateButton.Click();
         }
@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         public void PasswordsAreDifferent()
         {
             CollectionAssert.AllItemsAreUnique(TerminalMassValidation.Passwords);
-            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Passwords.Distinct().Count().ToString());
+            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Passwords.Distinct().Count());
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         [TestMethod]
         public void NumberOfTerminalsToDuplicate()
         {
-            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Count.ToString());
+            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Count);
         }
     }
 }
