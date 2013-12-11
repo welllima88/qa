@@ -27,7 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         public void PasswordsAreDifferent()
         {
             CollectionAssert.AllItemsAreUnique(TerminalMassValidation.Passwords);
-            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Passwords.Distinct().Count());
+            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Passwords.Distinct().Count().ToString());
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
         [TestMethod]
         public void NumberOfTerminalsToDuplicate()
         {
-            Assert.AreEqual(TerminalMassValidation.Count, NumberOfDuplications);
+            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Count.ToString());
         }
     }
 }
