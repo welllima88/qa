@@ -99,6 +99,9 @@
     <Compile Include="Selenium\TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
+    <Compile Include="TestData\INaviElement.cs" />
+    <Compile Include="TestData\ITestData.cs" />
+    <Compile Include="TestData\ITestDataRepository.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
