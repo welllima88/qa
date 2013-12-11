@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
             TerminalDuplicate.NumberOfTerminals = "2";
             TerminalDuplicate.CopyPassword = true;
             TerminalDuplicate.AcquirerNotification = true;
-            TerminalDuplicate.Location = "";
+            // TerminalDuplicate.Location = "";
             TerminalDuplicate.InstallationMessage =
                 "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
 
@@ -35,7 +35,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
             TerminalDuplicate.NumberOfTerminals = "3";
             TerminalDuplicate.CopyPassword = false;
             TerminalDuplicate.AcquirerNotification = false;
-            TerminalDuplicate.Location = "";
+            // TerminalDuplicate.Location = "";
             TerminalDuplicate.InstallationMessage =
                 "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
             TerminalDuplicate.DulpicateButton.Click();
