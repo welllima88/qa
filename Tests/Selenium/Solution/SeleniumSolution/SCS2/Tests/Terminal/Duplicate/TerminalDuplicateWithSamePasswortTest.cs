@@ -10,7 +10,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateWithSamePasswortTest
     {
-        private const int NumberOfTerminals = 5;
+        private const string NumberOfTerminals = "5";
         private const string TerminalId = "21013049";
 
         [ClassInitialize]
