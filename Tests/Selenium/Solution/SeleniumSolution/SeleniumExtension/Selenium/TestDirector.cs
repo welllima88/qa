@@ -3,11 +3,13 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 
 namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
     public static class TestDirector
     {
+        private const string Home = "";
         public static IWebDriverAdapter WebDriver;
 
         public static string BaseUrl { get; private set; }
@@ -66,11 +68,16 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             TestEnvironment.Application.Logout();
         }
 
-        public static void Navigate(string urlSuffix = "")
+        public static void Navigate(string urlSuffix = Home)
         {
             var suff = new Uri(urlSuffix, UriKind.Relative);
             var url = new Uri(TestEnvironment.BaseUrl, suff);
             WebDriver.Url = url.AbsoluteUri;
+        }
+
+        public static void Navigate(ITestData testData)
+        {
+            Navigate(testData.GetUrlPart());
         }
     }
 }
