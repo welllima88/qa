@@ -117,6 +117,7 @@
     <Compile Include="Tests\Customer\Edit\CustomerEditAndSaveTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
+    <Compile Include="Tests\Help\HelpTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationNewsTest.cs" />
     <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
