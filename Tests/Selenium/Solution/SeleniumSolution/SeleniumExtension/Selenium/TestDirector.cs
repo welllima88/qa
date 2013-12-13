@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         private static void CreateFirefoxWebDriverInstance(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));        
         }
 
         /// <summary>
@@ -38,7 +38,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         public static void Login()
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
-            // essential to avoid constructor actions
             TestEnvironment.Authentication.Login();
         }
 
