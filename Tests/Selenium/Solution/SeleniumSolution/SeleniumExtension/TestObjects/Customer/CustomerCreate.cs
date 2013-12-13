@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string Country
         {
-            set { WebDriver.FindSuggesterElement(By.CssSelector(CustomerRes.Country)).Suggestor(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Country)).Suggestor().TypeAndChoose(value); }
             get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Country)).GetAttribute("value"); }
         }
 
@@ -180,11 +180,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string CategoryCode
         {
-            set
-            {
-                WebDriver.FindSuggesterElement(
-                    By.CssSelector(CustomerRes.CategoryCode)).Suggestor(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CategoryCode)).Suggestor().TypeAndChoose(value); }
             get
             {
                 return WebDriver.FindElement(
@@ -231,8 +227,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindSuggesterElement(By.CssSelector(
-                    CustomerRes.Language)).Suggestor(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(
+                    CustomerRes.Language)).Suggestor().TypeAndChoose(value);
             }
             get
             {

@@ -60,12 +60,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             return WebElementsAsStringList(webElements);
         }
 
-        public ISuggesterWebElement FindSuggesterElement(By by)
-        {
-            return new SuggestorWebElementAdapter(_webDriver.FindElement(by),
-                                                  _webDriver);
-        }
-
         public void Dispose()
         {
             _webDriver.Dispose();

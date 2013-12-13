@@ -6,24 +6,23 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
     /// <summary>
     ///     This class adds to the common extension of WebElementAdapter just for suggestors. Because they will not be used in future, they are considered as separate class and interface.
     /// </summary>
-    public class SuggestorWebElementAdapter : WebElementAdapter, ISuggesterWebElement
+    public class SuggestorWebElementAdapter : WebObject
     {
-        private readonly IWebDriverAdapter _driver;
+        private readonly IWebElementAdapter _webElement;
 
-        public SuggestorWebElementAdapter(IWebElement webElement, IWebDriver webDriver) : base(webElement)
+        public SuggestorWebElementAdapter(IWebElementAdapter webElement)
         {
-            _driver = new WebDriverAdapter(webDriver);
+            _webElement = webElement;
         }
 
-        #region ISuggesterWebElement Members
-
-        public void Suggestor(string innerText)
+        public void TypeAndChoose(string innerText)
         {
-            TextBox().TypeText(innerText);
+            _webElement.TextBox().TypeText(innerText);
             try
             {
                 IWebElement suggestElement =
-                    _driver.WaitForElementPresent(By.CssSelector("div.suggestBox div.item[inttext*='" + innerText + "']"));
+                    WebDriver.WaitForElementPresent(
+                        By.CssSelector("div.suggestBox div.item[inttext*='" + innerText + "']"));
                 suggestElement.Click();
             }
             catch (NoSuchElementException ex) // hope no other exceptions occur
@@ -35,7 +34,5 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
                 Debug.WriteLine("Error: skip click - suggestor [" + innerText + "] " + ex.Message);
             }
         }
-
-        #endregion
     }
 }
