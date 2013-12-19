@@ -7,17 +7,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Help
     {
         public static IWebElement Scs
         {
-            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/SCS2']")); }
+            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help/SCS2']")); }
         }
 
         public static IWebElement Scs2
         {
-            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/SCS']")); }
+            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help/SCS']")); }
         }
 
         public static IWebElement Help
         {
-            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar a.brand[href='/']")); }
+            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar a.brand[href$='/help']")); }
         }
     }
 }
