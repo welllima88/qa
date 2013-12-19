@@ -5,6 +5,145 @@ Version|0.16|$
 Arch|x86-msvc|$
 
 [PLUGINS]
+npGoogleUpdate3.dll|$
+C:\Users\siegmund\AppData\Local\Google\Update\1.3.22.3\npGoogleUpdate3.dll|$
+1.3.22.3|$
+1386757544921|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+npGoogleUpdate3.dll|$
+C:\Program Files (x86)\Google\Update\1.3.22.3\npGoogleUpdate3.dll|$
+1.3.22.3|$
+1386757543879|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+NPSWF32_11_9_900_152.dll|$
+C:\Windows\SysWOW64\Macromed\Flash\NPSWF32_11_9_900_152.dll|$
+11.9.900.152|$
+1386067514894|0|0|$
+Shockwave Flash 11.9 r900|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+npvlc.dll|$
+C:\Program Files (x86)\VideoLAN\VLC\npvlc.dll|$
+2.1.0.0|$
+1384195716000|0|0|$
+VLC media player Web Plugin 2.1.0|$
+VLC Web Plugin|$
+44
+0|audio/mpeg|MPEG audio|mp2,mp3,mpga,mpega|$
+1|audio/x-mpeg|MPEG audio|mp2,mp3,mpga,mpega|$
+2|video/mpeg|MPEG video|mpg,mpeg,mpe|$
+3|video/x-mpeg|MPEG video|mpg,mpeg,mpe|$
+4|video/mpeg-system|MPEG video|mpg,mpeg,mpe,vob|$
+5|video/x-mpeg-system|MPEG video|mpg,mpeg,mpe,vob|$
+6|audio/mp4|MPEG-4 audio|aac,mp4,mpg4|$
+7|audio/x-m4a|MPEG-4 audio|m4a|$
+8|video/mp4|MPEG-4 video|mp4,mpg4|$
+9|application/mpeg4-iod|MPEG-4 video|mp4,mpg4|$
+10|application/mpeg4-muxcodetable|MPEG-4 video|mp4,mpg4|$
+11|video/x-m4v|MPEG-4 video|m4v|$
+12|video/x-msvideo|AVI video|avi|$
+13|application/ogg|Ogg stream|ogg|$
+14|video/ogg|Ogg video|ogv|$
+15|application/x-ogg|Ogg stream|ogg|$
+16|application/x-vlc-plugin|VLC plug-in||$
+17|video/x-ms-asf-plugin|Windows Media Video|asf,asx|$
+18|video/x-ms-asf|Windows Media Video|asf,asx|$
+19|application/x-mplayer2|Windows Media||$
+20|video/x-ms-wmv|Windows Media|wmv|$
+21|video/x-ms-wvx|Windows Media Video|wvx|$
+22|audio/x-ms-wma|Windows Media Audio|wma|$
+23|application/x-google-vlc-plugin|Google VLC plug-in||$
+24|audio/wav|WAV audio|wav|$
+25|audio/x-wav|WAV audio|wav|$
+26|audio/3gpp|3GPP audio|3gp,3gpp|$
+27|video/3gpp|3GPP video|3gp,3gpp|$
+28|audio/3gpp2|3GPP2 audio|3g2,3gpp2|$
+29|video/3gpp2|3GPP2 video|3g2,3gpp2|$
+30|video/divx|DivX video|divx|$
+31|video/flv|FLV video|flv|$
+32|video/x-flv|FLV video|flv|$
+33|application/x-matroska|Matroska video|mkv|$
+34|video/x-matroska|Matroska video|mkv|$
+35|audio/x-matroska|Matroska audio|mka|$
+36|application/xspf+xml|Playlist xspf|xspf|$
+37|audio/x-mpegurl|MPEG audio|m3u|$
+38|video/webm|WebM video|webm|$
+39|audio/webm|WebM audio|webm|$
+40|application/vnd.rn-realmedia|Real Media File|rm|$
+41|audio/x-realaudio|Real Media Audio|ra|$
+42|audio/amr|AMR audio|amr|$
+43|audio/x-flac|FLAC audio|flac|$
+npgtpo3dautoplugin.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgtpo3dautoplugin.dll|$
+0.1.44.29|$
+1383042060000|0|0|$
+Google Talk Plugin Video Accelerator version:0.1.44.29|$
+Google Talk Plugin Video Accelerator|$
+1
+0|application/vnd.gtpo3d.auto|||$
+npo1d.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npo1d.dll|$
+4.9.1.16010|$
+1383042052000|0|0|$
+Version 4.9.1.16010|$
+Google Talk Plugin Video Renderer|$
+1
+0|application/o1d|Google Talk Plugin Video Renderer|o1d|$
+npgoogletalk.dll|$
+C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgoogletalk.dll|$
+4.9.1.16010|$
+1383042050000|0|0|$
+Version 4.9.1.16010|$
+Google Talk Plugin|$
+1
+0|application/googletalk|Google voice and video chat|googletalk|$
+npctrl.dll|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20913.0\npctrl.dll|$
+5.1.20913.0|$
+1379030036000|0|0|$
+5.1.20913.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 10.0\Reader\AIR\nppdf32.dll|$
+10.1.8.24|$
+1378216438000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 10.1.8|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 10.0\Reader\browser\nppdf32.dll|$
+10.1.8.24|$
+1378216432000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 10.1.8|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
 npjp2.dll|$
 C:\Program Files (x86)\Java\jre7\bin\plugin2\npjp2.dll|$
 10.25.2.17|$
@@ -58,102 +197,6 @@ NPRuntime Script Plug-in Library for Java(TM) Deploy|$
 Java Deployment Toolkit 7.0.250.17|$
 1
 0|application/java-deployment-toolkit|||$
-nproozz.dll|$
-C:\Program Files (x86)\Roozz\nproozz.dll|$
-3.2.32.0|$
-1369130954000|0|0|$
-Run games and apps in the webpage|$
-Roozz plugin|$
-1
-0|application/roozz-plugin|Roozz plugin|applist|$
-npctrl.dll|$
-C:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrl.dll|$
-5.1.20513.0|$
-1368450876000|0|0|$
-5.1.20513.0|$
-Silverlight Plug-In|$
-2
-0|application/x-silverlight|npctrl|scr|$
-1|application/x-silverlight-2|||$
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 10.0\Reader\AIR\nppdf32.dll|$
-10.1.7.27|$
-1368172652000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 10.1.7|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 10.0\Reader\browser\nppdf32.dll|$
-10.1.7.27|$
-1368172646000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 10.1.7|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
-npgtpo3dautoplugin.dll|$
-C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgtpo3dautoplugin.dll|$
-0.1.44.24|$
-1364230608000|0|0|$
-Google Talk Plugin Video Accelerator version:0.1.44.24|$
-Google Talk Plugin Video Accelerator|$
-1
-0|application/vnd.gtpo3d.auto|||$
-npo1d.dll|$
-C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npo1d.dll|$
-3.17.0.12440|$
-1364230602000|0|0|$
-Version 3.17.0.12440|$
-Google Talk Plugin Video Renderer|$
-1
-0|application/o1d|Google Talk Plugin Video Renderer|o1d|$
-npgoogletalk.dll|$
-C:\Users\siegmund\AppData\Roaming\Mozilla\plugins\npgoogletalk.dll|$
-3.17.0.12440|$
-1364230600000|0|0|$
-Version 3.17.0.12440|$
-Google Talk Plugin|$
-1
-0|application/googletalk|Google voice and video chat|googletalk|$
-npGoogleUpdate3.dll|$
-C:\Users\siegmund\AppData\Local\Google\Update\1.3.21.135\npGoogleUpdate3.dll|$
-1.3.21.135|$
-1360316109946|0|0|$
-Google Update|$
-Google Update|$
-2
-0|application/x-vnd.google.update3webcontrol.3|||$
-1|application/x-vnd.google.oneclickctrl.9|||$
-npnv3dv.dll|$
-C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dv.dll|$
-7.17.13.1106|$
-1358493416000|0|0|$
-NVIDIA 3D Vision plugin for Mozilla browsers|$
-NVIDIA 3D Vision|$
-3
-0|image/jps|JPEG-based stereo image|jps|$
-1|image/pns|PNG-based stereo image|pns|$
-2|image/mpo|Multi-Picture Format image|mpo|$
-npnv3dvstreaming.dll|$
-C:\Program Files (x86)\NVIDIA Corporation\3D Vision\npnv3dvstreaming.dll|$
-7.17.13.1106|$
-1358493416000|0|0|$
-NVIDIA 3D Vision Streaming plugin for Mozilla browsers|$
-NVIDIA 3D VISION|$
-1
-0|application/mozilla-3DV-streaming-plugin|npnv3dvstreaming|rts|$
 npgeplugin.dll|$
 C:\Program Files (x86)\Google\Google Earth\plugin\npgeplugin.dll|$
 7.0.2.8415|$
@@ -211,18 +254,9 @@ Office Authorization plug-in for NPAPI browsers|$
 Microsoft Office 2010|$
 1
 0|application/x-msoffice14|14.0.4730.1010|*|$
-NPSWF32.dll|$
-C:\Windows\system32\Macromed\Flash\NPSWF32.dll|$
-10.0.12.36|$
-1223177042000|0|0|$
-Shockwave Flash 10.0 r12|$
-Shockwave Flash|$
-2
-0|application/x-shockwave-flash|Adobe Flash movie|swf|$
-1|application/futuresplash|FutureSplash movie|spl|$
 
 [INVALID]
-C:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrlui.dll|$
-1368450876000|$
 C:\Windows\SysWOW64\npmproxy.dll|$
 1247534171654|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20913.0\npctrlui.dll|$
+1379030036000|$
