@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Help
 
         public static IWebElement Help
         {
-            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help/ente']")); }
+            get { return WebDriver.FindElement(By.CssSelector("body#frontpage div.navbar div.navbar-inner div.container div.nav-collapse ul.nav li a[href$='/help']")); }
         }
     }
 }
