@@ -24,21 +24,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Help
         [TestCategory("LobbyCheck"), TestCategory("Help")]
         public void HelpIsAvialable()
         {
-            Assert.IsTrue(HelpNavigation.Help.Displayed);
+            Assert.AreEqual("Startseite", HelpNavigation.Help.Text);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck"), TestCategory("Help")]
         public void ScsHelpLinkIsAvailable()
         {
-            Assert.IsTrue(HelpNavigation.Scs.Displayed);
+            Assert.AreEqual("SCS", HelpNavigation.Scs.Text);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck"), TestCategory("Help")]
         public void Scs2HelpLinkIsAvailable()
         {
-            Assert.IsTrue(HelpNavigation.Scs2.Displayed);
+            Assert.AreEqual("SCS2", HelpNavigation.Scs2.Text);
         }
     }
 }
