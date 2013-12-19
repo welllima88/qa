@@ -22,6 +22,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         public static void LaunchTestDirector(TestContext testContext)
         {
             KillFirefoxProcesses();
+
             ScsPlatinTestEnvironment.LoadConfigurationDev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
@@ -32,6 +33,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         {
             TestDirector.Logout();
             TestDirector.ShutDownBrowser();
+            
+            KillFirefoxProcesses();
         }
 
         private static void KillFirefoxProcesses()
