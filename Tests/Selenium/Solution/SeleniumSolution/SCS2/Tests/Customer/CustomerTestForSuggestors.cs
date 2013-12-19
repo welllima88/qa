@@ -7,18 +7,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
 {
     public class CustomerTestForSuggestors
     {
-        private static CustomerCreate CustomerCreate;
-        private static CustomerMenu CustomerMenu;
-        private static LobbyView LobbyView;
-
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
-        {
-            CustomerCreate = new CustomerCreate();
-            CustomerMenu = new CustomerMenu();
-            LobbyView = new LobbyView();
-        }
-
         [TestMethod]
         public void CreateCustomerOnlySuggesterAndCancelToCheckSuggestor()
         {
