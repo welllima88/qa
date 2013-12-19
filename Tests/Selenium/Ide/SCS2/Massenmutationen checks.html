@@ -152,7 +152,7 @@
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>id=ctl00_bodyContentPlaceHolder_lbDownload1</td>
+	<td>id=ctl00_bodyContentPlaceHolder_lbDownload</td>
 	<td>Excel Vorlage herunterladen</td>
 </tr>
 <!---->
@@ -216,38 +216,28 @@
 <!---->
 <tr>
 	<td>clickAndWait</td>
-	<td>id=ctl00_trvNavigation_Node0_Node5LinkButton</td>
+	<td>link=Businesstemplates mit neuer FO-Schnittstelle aktivieren</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//span[@id='ctl00_bodyContentPlaceHolder_lblMainTitle']/h1</td>
+	<td>css=h1</td>
 	<td>Businesstemplates mit neuer FO-Schnittstelle aktivieren</td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>//td[@id='content']/span[2]/p</td>
+	<td>css=#ctl00_bodyContentPlaceHolder_ScsLabel1 &gt; p</td>
 	<td>Durch Einlesen des Files im unten stehenden Link können die Businesstemplates eingestellt sowie die neue FO-Schnittstelle aktiviert werden.</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=ctl00_bodyContentPlaceHolder_fileUpload</td>
-	<td></td>
+	<td>css=input#ctl00_bodyContentPlaceHolder_fileUpload</td>
+	<td>Bitte geben Sie den Pfad zum Excel File mit den Acquirerwechsel Daten an. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=ctl00_bodyContentPlaceHolder_btnUpload</td>
+	<td>css=input.button#ctl00_bodyContentPlaceHolder_btnUpload</td>
 	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//input[@id=&quot;ctl00_bodyContentPlaceHolder_btnUpload&quot;][@value=&quot;Start Migration&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=ctl00_bodyContentPlaceHolder_lbDownload</td>
-	<td>Excel Vorlage herunterladen</td>
 </tr>
 </tbody></table>
 </body>
