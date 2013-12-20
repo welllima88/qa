@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         {
             TestDirector.Logout();
             TestDirector.ShutDownBrowser();
-            
+
             KillFirefoxProcesses();
         }
 

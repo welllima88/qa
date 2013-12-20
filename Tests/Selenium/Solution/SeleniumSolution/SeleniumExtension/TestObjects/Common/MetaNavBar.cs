@@ -12,7 +12,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public static IWebElement User
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#metaNavBar a#ctl00_hplSimpleUserInfo[href*='/User/Index?UserName=']")); }
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector("td#metaNavBar a#ctl00_hplSimpleUserInfo[href*='/User/Index?UserName=']"));
+            }
         }
 
         public static IWebElement Languages

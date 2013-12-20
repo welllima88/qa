@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.TestData
     {
         public ITestData GetAny()
         {
-            return null;// new CustomerData();
+            return null; // new CustomerData();
         }
 
         public ITestData GetById(string id)
