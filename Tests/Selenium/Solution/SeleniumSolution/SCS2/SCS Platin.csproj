@@ -119,7 +119,6 @@
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Tests\Help\HelpTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
-    <Compile Include="Tests\Lobby\ApplicationNewsTest.cs" />
     <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\RecentElementsTest.cs" />

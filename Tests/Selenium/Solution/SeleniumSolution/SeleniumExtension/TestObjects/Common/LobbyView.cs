@@ -11,7 +11,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public static ApplicationInfo ApplicationInfo;
         public static Footer Footer;
-        public static LobbyNews LobbyNews;
         public static LobbyMenu Menu;
         public static MetaNavBar MetaNavBar;
         public static NavigationBar NavigationBar;

@@ -125,7 +125,6 @@
     </Compile>
     <Compile Include="TestObjects\Common\Footer.cs" />
     <Compile Include="TestObjects\Common\FormAlert.cs" />
-    <Compile Include="TestObjects\Common\LobbyNews.cs" />
     <Compile Include="TestObjects\Common\LobbyView.cs" />
     <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\CustomerMenu.cs" />
