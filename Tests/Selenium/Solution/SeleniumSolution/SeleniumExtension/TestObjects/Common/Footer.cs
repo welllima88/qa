@@ -20,11 +20,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright)); }
         }
 
-        public static IWebElement PrintPage
-        {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_PrintPage)); }
-        }
-
         public static IWebElement ScrollUp
         {
             get

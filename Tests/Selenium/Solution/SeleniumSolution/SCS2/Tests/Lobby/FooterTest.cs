@@ -50,13 +50,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void PrintPage()
-        {
-            Assert.IsTrue(Footer.PrintPage.Displayed);
-        }
-
-        [TestMethod]
-        [TestCategory("LobbyCheck")]
         public void ScrollUp()
         {
             Assert.IsTrue(Footer.ScrollUp.Displayed);
