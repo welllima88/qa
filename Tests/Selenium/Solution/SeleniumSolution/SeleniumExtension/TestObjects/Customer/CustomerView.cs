@@ -8,12 +8,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
     {
         public static IWebElement EditCustomerButton
         {
-            get { throw new NotImplementedException(); }
+            get { return WebDriver.FindElement(By.Id("CustomerEdit")); }
         }
 
         public static IWebElement EditConfigButton
         {
-            get { throw new NotImplementedException(); }
+            get { return WebDriver.FindElement(By.Id("CustomerDefaultEdit")); }
         }
 
         public static string CustomerName
@@ -128,12 +128,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string SbsBillingTenant
         {
-            get { return WebDriver.FindElement(By.Id("CustomerData_SupplierMandant")).Text; }
+            get { return WebDriver.FindElement(By.Id("SBSConfig_BillingTenant")).Text; }
         }
 
         public static string SbsCurrency
         {
-            get { return WebDriver.FindElement(By.Id("SBSConfig_BillingTenant")).Text; }
+            get { return WebDriver.FindElement(By.Id("SBSConfig_Currency")).Text; }
         }
 
         public static String CustomerNumber
