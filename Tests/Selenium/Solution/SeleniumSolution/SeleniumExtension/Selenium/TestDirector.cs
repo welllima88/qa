@@ -1,6 +1,8 @@
 using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
 using SIX.SCS.QA.Selenium.Extension.TestData;
@@ -10,14 +12,21 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string Home = "";
-        public static IWebDriverAdapter WebDriver;
+        public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
 
-        private static void CreateFirefoxWebDriverInstance(string profileName)
+        private static void CreateWebDriverInstance(string profileName)
         {
-            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            DesiredCapabilities capability = DesiredCapabilities.Firefox();
+            capability.SetCapability("platform", new Platform(PlatformType.Windows));
+            WebDriver = new RemoteWebDriver(new Uri("http://10.241.0.85:4488/wd/hub"),
+                                            capability);
+            WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+
+            // FirefoxProfile firefoxProfile = new FirefoxProfile(@"\"); new FirefoxProfileManager().GetProfile(profileName));
+            //FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
+            //WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
 
         /// <summary>
@@ -41,9 +50,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             TestEnvironment.Authentication.Login();
         }
 
-        public static IWebDriverAdapter PrepareBrowser()
+        public static IWebDriver PrepareBrowser()
         {
-            CreateFirefoxWebDriverInstance(TestEnvironment.BrowserProfileName);
+            CreateWebDriverInstance(TestEnvironment.BrowserProfileName);
             ConfigureTimeouts();
             return WebDriver;
         }
