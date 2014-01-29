@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string AddressAddition
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.AddressAddition)).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition")).TextBox().TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.AddressAddition)).Text; }
         }
 

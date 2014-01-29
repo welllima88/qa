@@ -1,11 +1,14 @@
 using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 {
     public class CustomerEdit : WebObject
     {
+        public static ChangeForm ChangeForm;
+
         public static IWebElement SaveButton
         {
             get { return CustomerCreate.SaveButton; }
@@ -20,11 +23,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         {
             set { CustomerCreate.Segment = value; }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.SegmentView)).Text; }
-        }
-
-        public string Guid
-        {
-            get { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public static string CustomerName
@@ -48,7 +46,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         public static string Supplier
         {
             get { return CustomerView.Supplier; }
-            set { throw new NotImplementedException(); }
         }
 
         public static String CustomerNumber
@@ -66,22 +63,21 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return CustomerView.SbsAdressNumber; }
         }
 
+        //todo remove
         public static String SbsCurrency
         {
             get { return CustomerView.SbsCurrency; }
-            set { throw new NotImplementedException(); }
         }
 
+        //todo remove
         public static String SbsBillingTenant
         {
             get { return CustomerView.SbsBillingTenant; }
-            set { throw new NotImplementedException(); }
         }
 
         public static String Ep2MerchantId
         {
-            get { return WebDriver.FindElement(By.CssSelector("input[id$='ep2numberTextBox']")).GetAttribute("value"); }
-            set { throw new NotSupportedException(); }
+            get { return WebDriver.FindElement(By.Id("CustomerData_Ep2MerchantId")).GetAttribute("value"); }
         }
 
         public static string CategoryCode
@@ -180,6 +176,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Web)).GetAttribute("value"); }
         }
 
+        //todo remove
         public static string CashIntegrator
         {
             set { CustomerCreate.CashIntegrator = value; }

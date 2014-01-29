@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector("#Address_AddressAddition")).Text;
+                        By.CssSelector("input#PersonData_Contact_Addition")).Text;
             }
         }
 
