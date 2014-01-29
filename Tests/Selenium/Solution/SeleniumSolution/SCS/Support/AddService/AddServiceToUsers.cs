@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
         [ClassInitialize]
         public static void Prepare(TestContext testContext)
         {
-            _driver = TestDirector.WebDriver;
+            _driver = new WebDriverAdapter(TestDirector.WebDriver);
         }
 
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
@@ -85,7 +85,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
             _driver.SwitchTo().Frame("main");
             try
             {
-                _driver.FindAdaptedElement(By.CssSelector("td a img[alt='Login Status']"));
+                _driver.FindElement(By.CssSelector("td a img[alt='Login Status']"));
             }
             catch (Exception)
             {
