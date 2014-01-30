@@ -92,30 +92,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         }
 
         [TestMethod]
-        public void SbsDebitNumber()
-        {
-            Assert.AreEqual(_sbsDebitNumber, CustomerEdit.SbsDebitNumber);
-        }
-
-        [TestMethod]
-        public void SbsAdressNumber()
-        {
-            Assert.AreEqual(_sbsAdressNumber, CustomerEdit.SbsAdressNumber);
-        }
-
-        [TestMethod]
-        public void SbsCurrency()
-        {
-            Assert.AreEqual(_sbsCurrency, CustomerEdit.SbsCurrency);
-        }
-
-        [TestMethod]
-        public void SbsBillingTenant()
-        {
-            Assert.AreEqual(_sbsBillingTenant, CustomerEdit.SbsBillingTenant);
-        }
-
-        [TestMethod]
         public void CustomerName()
         {
             Assert.AreEqual(_customerName, CustomerEdit.CustomerName);
@@ -170,24 +146,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         }
 
         [TestMethod]
-        public void CategoryCode()
-        {
-            Assert.AreEqual(_categoryCode, CustomerEdit.CategoryCode);
-        }
-
-        [TestMethod]
-        public void SupportContract()
-        {
-            Assert.AreEqual(_supportContract, CustomerEdit.SupportContract);
-        }
-
-        [TestMethod]
-        public void CashIntegrator()
-        {
-            Assert.AreEqual(_cashIntegrator, CustomerEdit.CashIntegrator);
-        }
-
-        [TestMethod]
         public void Agency()
         {
             Assert.AreEqual(_agency, CustomerEdit.Agency);
@@ -233,12 +191,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         public void Web()
         {
             Assert.AreEqual(_web, CustomerEdit.Web);
-        }
-
-        [TestMethod]
-        public void Segment()
-        {
-            Assert.AreEqual(_segment, CustomerEdit.Segment);
         }
     }
 }

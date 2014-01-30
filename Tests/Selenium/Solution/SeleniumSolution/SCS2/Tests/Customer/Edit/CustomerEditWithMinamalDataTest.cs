@@ -39,14 +39,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.StreetNo = "Hardturmstr. 201";
             CustomerEdit.Po = "";
             CustomerEdit.SapNumber = "";
-            CustomerEdit.CategoryCode = "(Keine Branche)";
             CustomerEdit.Region = "";
             CustomerEdit.AdressAddition = "";
             CustomerEdit.Zip = "8021";
             CustomerEdit.City = "Zürich";
-            CustomerEdit.SupportContract = "Kein Supportvertrag";
-            CustomerEdit.CashIntegrator = "Kein Kassenintegrator";
-
+            
             CustomerEdit.Agency = "Keine Agentur";
             CustomerEdit.Language = "Deutsch [de]";
             CustomerEdit.Country = "Schweiz [CH]";

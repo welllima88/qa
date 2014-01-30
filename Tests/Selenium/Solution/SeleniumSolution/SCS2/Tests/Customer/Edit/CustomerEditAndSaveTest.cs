@@ -129,10 +129,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             Assert.AreEqual(customerNumber, CustomerEdit.CustomerNumber);
             Assert.AreEqual(supplier, CustomerEdit.Supplier);
             Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
-            Assert.AreEqual(sbsDebitNumber, CustomerEdit.SbsDebitNumber);
-            Assert.AreEqual(sbsAdressNumber, CustomerEdit.SbsAdressNumber);
-            Assert.AreEqual(sbsCurrency, CustomerEdit.SbsCurrency);
-            Assert.AreEqual(sbsBillingTenant, CustomerEdit.SbsBillingTenant);
 
             CustomerEdit.CustomerName = "SYR Sele Kunde A";
 
@@ -144,9 +140,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.AdressAddition = "Etage 3";
             CustomerEdit.Region = "Reg 55";
             CustomerEdit.SapNumber = "5440";
-            CustomerEdit.CategoryCode = "5172: PETROLEUM/PETROL PRODUCTS";
-            CustomerEdit.SupportContract = "Hotline und Wartung kostenpflichtig";
-            CustomerEdit.CashIntegrator = "Wincor Nixdorf AG, Brüttisellen";
 
             CustomerEdit.Agency = "SIX Payment Services (Europe)";
             CustomerEdit.Language = "Deutsch [de]";
