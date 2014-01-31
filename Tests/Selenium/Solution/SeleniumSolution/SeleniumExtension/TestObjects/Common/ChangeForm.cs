@@ -6,21 +6,26 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class ChangeForm : WebObject
     {
-        public static string ChangeReason
+        public static string Reason
         {
-            set { WebDriver.FindAdaptedElement(By.Id("@??")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationReason")).TextBox().TypeText(value); }
         }
 
-        public static string ChangeRemark
+        public static string Remark
         {
-            set { WebDriver.FindAdaptedElement(By.Id("@??")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationRemarks")).TextBox().TypeText(value); }
         }
 
-        public static void ChangeTime(TimeSpan changeTime)
+        public static void DelayTime(TimeSpan changeTime)
         {
-            //TODO Actions here
-            throw new NotImplementedException();
-            //WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright));
+            if (changeTime.CompareTo(new TimeSpan()) > 0)
+            {
+                WebDriver.FindAdaptedElement(By.Id("ChangeNow")).CheckBox().Set(false);
+                // Example for setting a time value: 01.02.2014 13:30:41
+                WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationRemarks"))
+                         .TextBox()
+                         .TypeText(changeTime.ToString(""));
+            }
         }
     }
 }
