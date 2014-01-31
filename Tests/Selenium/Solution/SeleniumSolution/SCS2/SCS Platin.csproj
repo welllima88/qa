@@ -109,6 +109,7 @@
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditWithMinamalDataTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditKeepsDataTest.cs" />
+    <Compile Include="Tests\Customer\Edit\Delayed\CustomerEditAndDelayedSaveTest.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithNoData.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithMissingData.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithInvalidData.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Tests\Help\HelpTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
+    <Compile Include="Tests\Lobby\LobbyHeader.cs" />
     <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\RecentElementsTest.cs" />
