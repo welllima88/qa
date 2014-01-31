@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             {
                 WebDriver.FindAdaptedElement(By.Id("ChangeNow")).CheckBox().Set(false);
                 // Example for setting a time value: 01.02.2014 13:30:41
-                WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationRemarks"))
+                WebDriver.FindAdaptedElement(By.Id("ChangeOn"))
                          .TextBox()
                          .TypeText(changeTime.ToString(""));
             }
