@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             get { return WebDriver.FindElement(By.CssSelector("a[href$='/BillableTerminals/']")); }
         }
 
-        public static object PostDeliveryTickets
+        public static IWebElement PostDeliveryTickets
         {
             get { return WebDriver.FindElement(By.CssSelector("a[href$='/DeliveryTicketsPost//']")); }
         }
