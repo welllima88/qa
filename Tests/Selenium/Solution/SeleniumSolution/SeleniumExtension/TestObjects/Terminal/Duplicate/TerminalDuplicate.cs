@@ -26,13 +26,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
         public static string InstallationMessage
         {
             set { WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).GetAttribute("value"); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextBox().Text(); }
         }
 
         public static string NumberOfTerminals
         {
             set { WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).GetAttribute("value"); }
+            get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TextBox().Text(); }
         }
 
         public static IWebElement DulpicateButton

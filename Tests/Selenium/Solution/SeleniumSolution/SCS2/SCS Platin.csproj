@@ -91,6 +91,7 @@
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithNoDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateToLocationTest.cs" />
     <Compile Include="Tests\Contact\Edit\ContactEditWithNoDataTest.cs" />
     <Compile Include="Tests\Contact\Edit\ContactEditAndSaveTest.cs" />
     <Compile Include="Tests\Contact\Edit\ContactEditWithMinimalInputTest.cs" />
@@ -130,9 +131,10 @@
     <Compile Include="Tests\Lobby\QuickSearchTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />
     <Compile Include="Tests\Location\BillingAddressEditTest.cs" />
+    <Compile Include="Tests\Location\Create\LocationGuiTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMinimalInputAndSBSExportAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMinimalInputAndSave.cs" />
-    <Compile Include="Tests\Location\Create\LocationCreateAndSave.cs" />
+    <Compile Include="Tests\Location\Create\LocationCreateAndSaveTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithoutUserInputTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditWithoutReasonTest.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
+    <Compile Include="Tests\Regression\CustomerCreateTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByNameTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByIdTest.cs" />
     <Compile Include="Tests\Terminal\ArticleChooser\ArticleChooserSuggestedArticleTest.cs" />

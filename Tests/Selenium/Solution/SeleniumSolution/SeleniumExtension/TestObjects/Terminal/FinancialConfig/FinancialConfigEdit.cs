@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.FinancialConfig
                 return WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_tbcTerminalData_tpFinancialconfig_tpFinancialconfigPropertyMaxFinAdvQueueSize_valueText"))
-                                .GetAttribute("value");
+                                .TextBox().Text();
             }
             set
             {

@@ -28,21 +28,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set { throw new NotImplementedException(); }
         }
 
-        public string SbsDebitNumber
-        {
-            get { throw new NotSupportedException("will be generated"); }
-        }
-
-        public string SbsAdressNumber
-        {
-            get { throw new NotSupportedException("will be generated"); }
-        }
-
-        public string Guid
-        {
-            get { throw new NotSupportedException("will be generated"); }
-        }
-
         public static string Language
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(LocationRes.Language)).Selector().SelectByValue(value); }
@@ -57,7 +42,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
         public static string Zip
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(LocationRes.Zip)).TextBox().TypeText(value); }
-            get { throw new NotSupportedException(); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(LocationRes.Zip)).TextBox().Text(); }
         }
 
         public static string City

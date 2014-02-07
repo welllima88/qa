@@ -12,11 +12,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElement> passwords =
-                    WebDriver.FindElements(By.CssSelector("input[id$='inpPassword']"));
+                ReadOnlyCollection<IWebElementAdapter> passwords =
+                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpPassword']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.GetAttribute("value")));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
 
                 return passwordsAsString;
             }
@@ -26,11 +26,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElement> passwords =
-                    WebDriver.FindElements(By.CssSelector("input[id$='inpReferenceTerminalId']"));
+                ReadOnlyCollection<IWebElementAdapter> passwords =
+                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpReferenceTerminalId']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.GetAttribute("value")));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
 
                 return passwordsAsString;
             }
@@ -45,11 +45,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElement> passwords =
-                    WebDriver.FindElements(By.CssSelector("input[id$='_inpLocationId']"));
+                ReadOnlyCollection<IWebElementAdapter> passwords =
+                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='_inpLocationId']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.GetAttribute("value")));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
 
                 return passwordsAsString;
             }

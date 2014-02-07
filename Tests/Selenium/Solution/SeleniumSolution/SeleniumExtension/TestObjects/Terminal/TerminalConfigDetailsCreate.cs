@@ -21,10 +21,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                             .GetAttribute("value");
+                             .TextBox().Text();
             }
             set
             {
@@ -117,10 +117,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                             .GetAttribute("value");
+                             .TextBox().Text();
             }
         }
 
