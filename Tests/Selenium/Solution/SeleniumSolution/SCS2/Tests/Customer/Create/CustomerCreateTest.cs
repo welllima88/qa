@@ -40,8 +40,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
+            TestDirector.Navigate();
+
+            SetCustomerData();
+
+            _custId = CustomerView.CustomerNumber;
+        }
+
+        public static void SetCustomerData()
+        {
             _dt = TestLauncher.GenerateTestId();
 
+            CustomerMenu.CustomerCreate.Click();
+            
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";
             _sbsBillingTenant = "SIX Payment Services (Europe)";
@@ -66,10 +77,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _mobile = "0032 58 399 6237";
             _fax = "0033 58 399 6237";
             _web = "www.six-group.com/de-intern";
-
-            TestDirector.Navigate();
-
-            CustomerMenu.CustomerCreate.Click();
 
             CustomerCreate.Supplier = _supplier;
             CustomerCreate.SbsCurrency = _sbsCurrency;
@@ -97,8 +104,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             CustomerCreate.Web = _web;
 
             CustomerCreate.SaveButton.Click();
-
-            _custId = CustomerView.CustomerNumber;
         }
 
         [TestInitialize]
