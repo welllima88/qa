@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestInitialize]
         public void TestInit()
         {
-            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
+            TestDirector.Navigate("Customer/?CustomerId=401152");
 
             CustomerMenu.ContactCreate.Click();
 
