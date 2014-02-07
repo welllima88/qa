@@ -3,13 +3,12 @@ using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
 {
     [TestClass]
-    public class LocationCreateAndSave
+    public class LocationCreateAndSaveTest
     {
         private static string _locId;
         private static string _ep2MerchantId;
@@ -19,26 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
 
-            CustomerMenu.LocationCreate.Click();
-
-            LocationCreate.CompanyName = "SYR Standort SELE A";
-            LocationCreate.StreetNo = "Bröselstr. 201a-c";
-            LocationCreate.Zip = "55555";
-            LocationCreate.City = "München";
-            LocationCreate.Po = "PO1";
-            LocationCreate.AdressAddition = "AdressAdd1";
-            LocationCreate.Region = "Reg 55";
-            LocationCreate.SapNumber = "4444";
-
-            LocationCreate.Language = "Französisch [fr]";
-            LocationCreate.Country = "Frankreich [FR]";
-            LocationCreate.Email = "marc.siegmund@six-group.com";
-            LocationCreate.Telephone = "0031 58 399 6237";
-            LocationCreate.Mobile = "0032 58 399 6237";
-            LocationCreate.Fax = "0033 58 399 6237";
-            LocationCreate.Web = "www.six-group.com/de-intern";
-
-            LocationCreate.SaveButton.Click();
+            SetLocationData();
 
             _locId = LocationView.Guid;
             _ep2MerchantId = LocationView.Ep2MerchantId;
@@ -161,35 +141,28 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             Assert.AreEqual("www.six-group.com/de-intern", LocationView.Web);
         }
 
-        [TestMethod]
-        public void CountryOfCustomerIsUsedForAgencyOfLocation()
+        public static void SetLocationData()
         {
-            string country = CustomerView.Country;
             CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual(country, LocationCreate.Country);
-        }
 
-        [TestMethod]
-        public void LanguageOfCustomerIsUsedForAgencyOfLocation()
-        {
-            string language = CustomerView.Language;
-            CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual(language, LocationCreate.Language);
-        }
+            LocationCreate.CompanyName = "SYR Standort SELE A";
+            LocationCreate.StreetNo = "Bröselstr. 201a-c";
+            LocationCreate.Zip = "55555";
+            LocationCreate.City = "München";
+            LocationCreate.Po = "PO1";
+            LocationCreate.AdressAddition = "AdressAdd1";
+            LocationCreate.Region = "Reg 55";
+            LocationCreate.SapNumber = "4444";
 
-        [TestMethod]
-        public void CreateLocationCheckNavBar()
-        {
-            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
-            CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual("Kunde", NavigationBar.Current.Text);
-        }
+            LocationCreate.Language = "Französisch [fr]";
+            LocationCreate.Country = "Frankreich [FR]";
+            LocationCreate.Email = "marc.siegmund@six-group.com";
+            LocationCreate.Telephone = "0031 58 399 6237";
+            LocationCreate.Mobile = "0032 58 399 6237";
+            LocationCreate.Fax = "0033 58 399 6237";
+            LocationCreate.Web = "www.six-group.com/de-intern";
 
-        [TestMethod]
-        public void CreateLocationCheckHeadline()
-        {
-            CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual("Neuer Standort", LobbyView.Headline.Text);
+            LocationCreate.SaveButton.Click();
         }
     }
 }
