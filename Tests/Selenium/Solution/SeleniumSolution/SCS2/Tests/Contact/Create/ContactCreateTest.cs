@@ -14,29 +14,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401152");
+            TestDirector.Navigate("Customer/?CustomerId=401152");
             // TestDirector.Navigate(TestDataRepository.Customer.GetAny());
-            _firstName = "SYR" + TestLauncher.GenerateTestId();
+            
             CustomerMenu.ContactCreate.Click();
-
-            ContactPersonCreate.Salutation = "Herr";
-            ContactPersonCreate.FirstName = _firstName;
-            ContactPersonCreate.Name = "Siegmund SYR AUTO";
-            ContactPersonCreate.Language = "de";
-            ContactPersonCreate.Telephone = "+41 58 399 6237 - 1";
-            ContactPersonCreate.Mobile = "+41 58 399 6237 - 2";
-            ContactPersonCreate.Fax = "+41 58 399 6237 - 3";
-            ContactPersonCreate.Email = "contact@six-group.com";
-            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            ContactPersonCreate.Po = "POC";
-            ContactPersonCreate.Zip = "55555";
-            ContactPersonCreate.City = "Berlin";
-            ContactPersonCreate.Region = "Mitte";
-            ContactPersonCreate.Country = "DE";
-            ContactPersonCreate.AddressAddition = "Zusatz1";
-            ContactPersonCreate.Web = "www.six-group.com";
-
-            ContactPersonCreate.SaveButton.Click();
+            SetContactData();
+            
         }
 
         [TestMethod]
@@ -136,6 +119,30 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
             // Assert.AreEqual(url, TestDirector.WebDriver.Url);
+        }
+
+        public static void SetContactData()
+        {
+            _firstName = "SYR" + TestLauncher.GenerateTestId();
+
+            ContactPersonCreate.Salutation = "Herr";
+            ContactPersonCreate.FirstName = _firstName;
+            ContactPersonCreate.Name = "Siegmund SYR AUTO";
+            ContactPersonCreate.Language = "de";
+            ContactPersonCreate.Telephone = "+41 58 399 6237 - 1";
+            ContactPersonCreate.Mobile = "+41 58 399 6237 - 2";
+            ContactPersonCreate.Fax = "+41 58 399 6237 - 3";
+            ContactPersonCreate.Email = "contact@six-group.com";
+            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
+            ContactPersonCreate.Po = "POC";
+            ContactPersonCreate.Zip = "55555";
+            ContactPersonCreate.City = "Berlin";
+            ContactPersonCreate.Region = "Mitte";
+            ContactPersonCreate.Country = "DE";
+            ContactPersonCreate.AddressAddition = "Zusatz1";
+            ContactPersonCreate.Web = "www.six-group.com";
+            
+            ContactPersonCreate.SaveButton.Click();
         }
     }
 }
