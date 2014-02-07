@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -39,7 +38,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         public static string Country
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Country)).Suggestor().TypeAndChoose(value); }
-            get { return WebDriver.FindElement(By.CssSelector(CustomerRes.Country)).GetAttribute("value"); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Country)).TextBox().Text(); }
         }
 
         public static string SbsBillingTenant
@@ -134,12 +133,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public string Guid
-        {
-            get { throw new NotSupportedException("Not available in create mode"); }
-            set { throw new NotSupportedException("Not available in create mode"); }
-        }
-
         public static string CustomerName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerName)).TextBox().TypeText(value); }
@@ -170,12 +163,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
                 return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Supplier)).
                                  Selector().SelectedOption.Text;
             }
-        }
-
-        public string SbsAdressNumber
-        {
-            get { throw new NotSupportedException("Not available in create mode"); }
-            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public static string CategoryCode
@@ -232,8 +219,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             }
             get
             {
-                return WebDriver.FindElement(By.CssSelector(
-                    CustomerRes.Language)).GetAttribute("value");
+                return WebDriver.FindAdaptedElement(By.CssSelector(
+                    CustomerRes.Language)).TextBox().Text();
             }
         }
 
@@ -247,12 +234,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerNumber)).TextBox().TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.CustomerNumber)).Text; }
-        }
-
-        public string SbsDebitNumber
-        {
-            get { throw new NotSupportedException("Not available in create mode"); }
-            set { throw new NotSupportedException("Not available in create mode"); }
         }
 
         public static string CashIntegrator
