@@ -6,37 +6,42 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateWithInvalidDataTest
+    public class CustomerCreateWithInvalidDataTest : CustomerCreate
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
 
-            CustomerCreate.Supplier = "SIX Payment Services AG";
-            CustomerCreate.SbsCurrency = "EUR";
-            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
-            CustomerCreate.CustomerName = "SYR Sele Kunde A$°";
-            CustomerCreate.CompanyName = "SYR Sele Firma A$°";
-            CustomerCreate.CustomerNumber = "^@}$°";
-            CustomerCreate.StreetNo = "Hardturmstr. 201$°";
-            CustomerCreate.Zip = "802$°";
-            CustomerCreate.City = "Zürich$°";
-            CustomerCreate.Po = "PFO1$°";
-            CustomerCreate.AdressAddition = "Etage 3$°";
-            CustomerCreate.Region = "Reg 3[]$°";
-            CustomerCreate.SapNumber = "444$°";
-            CustomerCreate.Ep2MerchantId = "12D$F_3-3";
-            CustomerCreate.Agency = "Albert Brun & Partner";
-            CustomerCreate.Language = "Deutsch [de]";
-            CustomerCreate.Country = "Schweiz [CH]";
-            CustomerCreate.Email = "marc.siegmund@six-grou$°p.com";
-            CustomerCreate.Telephone = "0031 58 399 6237$";
-            CustomerCreate.Mobile = "0032 58 399 6237$";
-            CustomerCreate.Fax = "0033 58 399 6237$";
-            CustomerCreate.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            SetInvalidData();
+        }
 
-            CustomerCreate.SaveButton.Click();
+        private static void SetInvalidData()
+        {
+            Supplier = "SIX Payment Services AG";
+            SbsCurrency = "EUR";
+            SbsBillingTenant = "SIX Payment Services (Europe)";
+            CustomerName = "SYR Sele Kunde A$°";
+            CompanyName = "SYR Sele Firma A$°";
+            CustomerNumber = "^@}$°";
+            StreetNo = "Hardturmstr. 201$°";
+            Zip = "802$°";
+            City = "Zürich$°";
+            Po = "PFO1$°";
+            AdressAddition = "Etage 3$°";
+            Region = "Reg 3[]$°";
+            SapNumber = "444$°";
+            Ep2MerchantId = "12D$F_3-3";
+            Agency = "Albert Brun & Partner";
+            Language = "Deutsch [de]";
+            Country = "Schweiz [CH]";
+            Email = "marc.siegmund@six-grou$°p.com";
+            Telephone = "0031 58 399 6237$";
+            Mobile = "0032 58 399 6237$";
+            Fax = "0033 58 399 6237$";
+            Web = "www.six-^°@}$.com/de-inte[]rn$°";
+
+            SaveButton.Click();
         }
 
         [TestMethod]
