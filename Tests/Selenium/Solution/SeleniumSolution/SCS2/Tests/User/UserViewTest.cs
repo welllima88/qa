@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.User;
 
@@ -118,6 +119,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
         public void ReactivateButton()
         {
             Assert.IsTrue(UserView.ReactivateButton.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("SmokeTest")]
+        public void MenuTest()
+        {
+            MenusTest.UserMenuCheck();
         }
     }
 }

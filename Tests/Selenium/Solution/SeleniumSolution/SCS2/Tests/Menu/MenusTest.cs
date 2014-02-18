@@ -86,5 +86,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
             Assert.IsTrue(ContactMenu.Contact.Displayed);
             Assert.IsTrue(ContactMenu.ContactEdit.Displayed);
         }
+
+        public static void UserMenuCheck()
+        {
+            Assert.IsTrue(UserMenu.New.Displayed);
+            Assert.IsTrue(UserMenu.Edit.Displayed);
+            Assert.IsTrue(UserMenu.Feedback.Displayed);
+            Assert.IsTrue(UserMenu.Service.Displayed);
+            Assert.IsTrue(UserMenu.Roles.Displayed);
+            Assert.IsTrue(UserMenu.ResetPassword.Displayed);
+        }
     }
 }

@@ -142,6 +142,7 @@
     <Compile Include="TestObjects\Common\Menu\TerminalAnalysisMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
+    <Compile Include="TestObjects\Common\Menu\UserMenu.cs" />
     <Compile Include="TestObjects\Common\MetaNavBar.cs" />
     <Compile Include="TestObjects\Common\NavigationBar.cs" />
     <Compile Include="TestObjects\Common\ProcessTickets.cs" />
