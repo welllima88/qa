@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.User;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
@@ -13,12 +12,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
         public static void NavigateToUser(TestContext testContext)
         {
             TestDirector.Navigate("User/Index?UserName=six_scs_auto");
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            CustomerMenu.CustomerDeactivate.Click();
         }
 
         [TestMethod]
