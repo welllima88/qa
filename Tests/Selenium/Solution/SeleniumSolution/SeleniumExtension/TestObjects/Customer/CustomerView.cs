@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             get { return WebDriver.FindElement(By.Id("CustomerEdit")); }
         }
 
-        public static IWebElement EditConfigButton
+        public static IWebElement EditDefaultConfigButton
         {
             get { return WebDriver.FindElement(By.Id("CustomerDefaultEdit")); }
         }
