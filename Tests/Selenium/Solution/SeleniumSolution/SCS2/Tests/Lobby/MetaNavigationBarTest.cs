@@ -53,7 +53,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         public void LanguageGerman()
         {
             MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.Language("Deutsch").Displayed);
+            Assert.IsTrue(MetaNavBar.Language("Deutsch").Enabled);
             MetaNavBar.Languages.Click();
         }
 
@@ -62,7 +62,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         public void LanguageEnglish()
         {
             MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.Language("English").Enabled); //Enabled, if displayed is making problems
+            Assert.IsTrue(MetaNavBar.Language("English").Enabled);
             MetaNavBar.Languages.Click();
         }
     }
