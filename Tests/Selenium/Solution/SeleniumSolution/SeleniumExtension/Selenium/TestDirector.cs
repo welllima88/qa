@@ -11,7 +11,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
     public static class TestDirector
     {
-        private const string Home = "";
+        private const string HomePathUrl = "";
+        private const string SeleniumGridHubUrl = "http://10.241.0.85:4488/wd/hub";
         public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
@@ -19,14 +20,14 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         private static void CreateWebDriverInstance(string profileName)
         {
             DesiredCapabilities capability = DesiredCapabilities.Firefox();
-            capability.SetCapability("platform", new Platform(PlatformType.Windows));
-            WebDriver = new RemoteWebDriver(new Uri("http://10.241.0.85:4488/wd/hub"),
+            capability.SetCapability("platform", new Platform(PlatformType.Any));
+            WebDriver = new RemoteWebDriver(new Uri(SeleniumGridHubUrl),
                                             capability);
             WebObject.WebDriver = new WebDriverAdapter(WebDriver);
 
             // FirefoxProfile firefoxProfile = new FirefoxProfile(@"\"); new FirefoxProfileManager().GetProfile(profileName));
-            //FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            //WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            // FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
+            // WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
         }
 
         /// <summary>
@@ -76,7 +77,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             TestEnvironment.Application.Logout();
         }
 
-        public static void Navigate(string urlSuffix = Home)
+        public static void Navigate(string urlSuffix = HomePathUrl)
         {
             var suff = new Uri(urlSuffix, UriKind.Relative);
             var url = new Uri(TestEnvironment.BaseUrl, suff);

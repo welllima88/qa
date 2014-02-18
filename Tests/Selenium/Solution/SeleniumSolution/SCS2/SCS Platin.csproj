@@ -179,6 +179,7 @@
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
+    <Compile Include="Tests\User\UserViewTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
