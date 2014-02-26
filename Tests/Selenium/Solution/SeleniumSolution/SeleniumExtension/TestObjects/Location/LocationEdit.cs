@@ -19,13 +19,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
         public static string SapNumber
         {
             set { LocationCreate.SapNumber = value; }
-            get { return LocationCreate.SapNumber; }
         }
 
         public static string CompanyName
         {
             set { LocationCreate.CompanyName = value; }
-            get { return LocationCreate.CompanyName; }
         }
 
         public static String SbsDebitNumber
@@ -47,7 +45,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
         public static string StreetNo
         {
             set { LocationCreate.StreetNo = value; }
-            get { return LocationCreate.StreetNo; }
         }
 
         public static string Language
@@ -71,55 +68,46 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
         public static string City
         {
             set { LocationCreate.City = value; }
-            get { return LocationCreate.City; }
         }
 
         public static string AdressAddition
         {
             set { LocationCreate.AdressAddition = value; }
-            get { return LocationCreate.AdressAddition; }
         }
 
         public static string Po
         {
             set { LocationCreate.Po = value; }
-            get { return LocationCreate.Po; }
         }
 
         public static string Region
         {
             set { LocationCreate.Region = value; }
-            get { return LocationCreate.Region; }
         }
 
         public static string Telephone
         {
             set { LocationCreate.Telephone = value; }
-            get { return LocationCreate.Telephone; }
         }
 
         public static string Mobile
         {
             set { LocationCreate.Mobile = value; }
-            get { return LocationCreate.Mobile; }
         }
 
         public static string Fax
         {
             set { LocationCreate.Fax = value; }
-            get { return LocationCreate.Fax; }
         }
 
         public static string Email
         {
             set { LocationCreate.Email = value; }
-            get { return LocationCreate.Email; }
         }
 
         public static string Web
         {
             set { LocationCreate.Web = value; }
-            get { return LocationCreate.Web; }
         }
 
         public static string Guid
