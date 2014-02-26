@@ -107,5 +107,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("#Address_Region")).Text; }
             set { throw new NotSupportedException(); }
         }
+
+        public static IWebElement DeleteButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("button#delete")); }
+        }
+
+        public static void DeleteConfirm()
+        {
+            WebDriver.SwitchTo().Alert().Accept();
+        }
     }
 }

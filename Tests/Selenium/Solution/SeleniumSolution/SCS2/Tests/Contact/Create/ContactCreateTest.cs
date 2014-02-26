@@ -16,10 +16,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
             // TestDirector.Navigate(TestDataRepository.Customer.GetAny());
-            
+
             CustomerMenu.ContactCreate.Click();
             SetContactData();
-            
         }
 
         [TestMethod]
@@ -141,8 +140,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             ContactPersonCreate.Country = "DE";
             ContactPersonCreate.AddressAddition = "Zusatz1";
             ContactPersonCreate.Web = "www.six-group.com";
-            
+
             ContactPersonCreate.SaveButton.Click();
+        }
+
+        [ClassCleanup]
+        public static void DeleteContact()
+        {
+            ContactPersonView.DeleteButton.Click();
+            ContactPersonView.DeleteConfirm();
         }
     }
 }
