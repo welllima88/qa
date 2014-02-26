@@ -21,21 +21,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             ContactPersonView.EditButton.Click();
 
             ContactPersonEdit.Salutation = "";
-            ContactPersonEdit.FirstName = "Marc" + _dt;
-            ContactPersonEdit.Name = "Siegmund";
+            ContactPersonEdit.FirstName = "";
+            ContactPersonEdit.Name = "SYR" + _dt;
             ContactPersonEdit.Language = "fr";
             ContactPersonEdit.Telephone = "";
             ContactPersonEdit.Mobile = "";
             ContactPersonEdit.Fax = "";
             ContactPersonEdit.Email = "";
             ContactPersonEdit.Po = "";
-            ContactPersonEdit.StreetNo = "Strasse 1";
-            ContactPersonEdit.Zip = "2351";
-            ContactPersonEdit.City = "City";
+            ContactPersonEdit.StreetNo = "";
+            ContactPersonEdit.Zip = "";
+            ContactPersonEdit.City = "";
             ContactPersonEdit.Region = "";
             ContactPersonEdit.Country = "FR";
-            ContactPersonEdit.AdressAddition = "Add";
-            ContactPersonEdit.Web = "www.six-group.com";
+            ContactPersonEdit.AdressAddition = "";
+            ContactPersonEdit.Web = "";
 
             ContactPersonEdit.SaveButton.Click();
         }
@@ -49,13 +49,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc" + _dt, ContactPersonView.FirstName);
+            Assert.AreEqual("", ContactPersonView.FirstName);
         }
 
         [TestMethod]
         public void Name()
         {
-            Assert.AreEqual("Siegmund", ContactPersonView.Name);
+            Assert.AreEqual("SYR" + _dt, ContactPersonView.Name);
         }
 
         [TestMethod]
@@ -97,19 +97,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual("Strasse 1", ContactPersonView.StreetNo);
+            Assert.AreEqual("", ContactPersonView.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("2351", ContactPersonView.Zip);
+            Assert.AreEqual("", ContactPersonView.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("City", ContactPersonView.City);
+            Assert.AreEqual("", ContactPersonView.City);
         }
 
         [TestMethod]
@@ -128,13 +128,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [Ignore]
         public void Web()
         {
-            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
+            Assert.AreEqual("", ContactPersonView.Web);
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("Add", ContactPersonView.AddressAddition);
+            Assert.AreEqual("", ContactPersonView.AddressAddition);
         }
 
         [TestMethod]
