@@ -19,11 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            ContactPersonCreate.FirstName = _firstName;
             ContactPersonCreate.Name = "Siegmund SYR AUTO";
-            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            ContactPersonCreate.Zip = "55555";
-            ContactPersonCreate.City = "Berlin";
 
             ContactPersonCreate.SaveButton.Click();
         }
@@ -31,7 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
+            Assert.AreEqual("", ContactPersonView.FirstName);
         }
 
         [TestMethod]
@@ -73,7 +69,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void Street()
         {
-            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
+            Assert.AreEqual("", ContactPersonView.StreetNo);
         }
 
         [TestMethod]
@@ -85,7 +81,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("55555", ContactPersonView.Zip);
+            Assert.AreEqual("", ContactPersonView.Zip);
         }
 
         [TestMethod]
@@ -97,7 +93,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("Berlin", ContactPersonView.City);
+            Assert.AreEqual("", ContactPersonView.City);
         }
 
         [TestMethod]
