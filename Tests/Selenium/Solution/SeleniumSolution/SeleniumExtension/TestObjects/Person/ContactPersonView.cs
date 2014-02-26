@@ -6,7 +6,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
     public class ContactPersonView : WebObject
     {
-        public IWebElement EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindElement(By.CssSelector("button[name='edit']")); }
         }

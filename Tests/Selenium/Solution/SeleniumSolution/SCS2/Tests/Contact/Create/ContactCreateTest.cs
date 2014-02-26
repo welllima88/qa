@@ -145,6 +145,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         }
 
         [ClassCleanup]
+        [TestMethod]
         public static void DeleteContact()
         {
             ContactPersonView.DeleteButton.Click();

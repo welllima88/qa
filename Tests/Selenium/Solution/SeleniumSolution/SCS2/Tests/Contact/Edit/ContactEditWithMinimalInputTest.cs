@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
@@ -19,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             _dt = TestLauncher.GenerateTestId();
 
-            ContactMenu.ContactEdit.Click();
+            ContactPersonView.EditButton.Click();
 
             ContactPersonEdit.Salutation = "";
             ContactPersonEdit.FirstName = "Marc" + _dt;
