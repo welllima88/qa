@@ -5,12 +5,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
     public class ContactPersonCreate : WebObject
     {
-        #region IContactCreate Members
-
         public static string AddressAddition
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition")).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.AddressAddition)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#addition")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#addition")).TextBox().Text(); }
         }
 
         public static IWebElement SaveButton
@@ -18,12 +16,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
-        public static string CreateDate { get; private set; }
-
         public static string FirstName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.FirstName)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.FirstName)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.FirstName)).TextBox().Text(); }
         }
 
         public static string Name
@@ -42,13 +38,16 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonCreateRes.Country)).Selector().SelectByValue(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
+                         .Selector()
+                         .SelectByValue(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonCreateRes.Country)).Selector().SelectedOption.Text;
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
+                             .Selector()
+                             .SelectedOption.Text;
             }
         }
 
@@ -56,84 +55,77 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
         {
             set
             {
-                WebDriver.FindAdaptedElement(
-                    By.CssSelector(
-                        PersonCreateRes.Language)).Selector().SelectByValue(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
+                         .Selector()
+                         .SelectByValue(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(
-                    By.CssSelector(
-                        PersonCreateRes.Language)).Selector().SelectedOption.Text;
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
+                             .Selector()
+                             .SelectedOption.Text;
             }
         }
 
         public static string Telephone
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Telephone)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Telephone)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#telephone")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#telephone")).TextBox().Text(); }
         }
 
         public static string Mobile
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Mobile)).TextBox().TypeText(
-                    value);
-            }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Mobile)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#mobile")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#mobile")).TextBox().Text(); }
         }
 
         public static string Fax
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Fax)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Fax)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#fax")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#fax")).TextBox().Text(); }
         }
 
         public static string Email
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Email)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Email)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#email")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#email")).TextBox().Text(); }
         }
 
         public static string Web
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Web)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Web)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#web")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#web")).TextBox().Text(); }
         }
 
         public static string StreetNo
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Street)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Street)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#street")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#street")).TextBox().Text(); }
         }
-
-        public string AdressAddition { get; set; }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Po)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Po)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#po")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#po")).TextBox().Text(); }
         }
 
         public static string Zip
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Zip)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Zip)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#zip")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#zip")).TextBox().Text(); }
         }
 
         public static string City
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.City)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.City)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#city")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#city")).TextBox().Text(); }
         }
 
         public static string Region
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Region)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Region)).Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#region")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#region")).TextBox().Text(); }
         }
-
-        #endregion
     }
 }

@@ -13,12 +13,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string AddressAddition
         {
-            get
-            {
-                return
-                    WebDriver.FindElement(
-                        By.CssSelector("input#PersonData_Contact_Addition")).Text;
-            }
+            get { return WebDriver.FindElement(By.Id("Address_AddressAddition")).Text; }
         }
 
         public static string FirstName
