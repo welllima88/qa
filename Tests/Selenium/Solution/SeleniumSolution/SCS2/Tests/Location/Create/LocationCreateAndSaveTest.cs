@@ -16,9 +16,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
+            TestDirector.Navigate("Customer/?CustomerId=401983");
 
-            SetLocationData();
+            DoCreateLocationData();
 
             _locId = LocationView.Guid;
             _ep2MerchantId = LocationView.Ep2MerchantId;
@@ -141,8 +141,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             Assert.AreEqual("www.six-group.com/de-intern", LocationView.Web);
         }
 
-        public static void SetLocationData()
+        public static void DoCreateLocationData()
         {
+            CustomerMenu.Customer.Click();
             CustomerMenu.LocationCreate.Click();
 
             LocationCreate.CompanyName = "SYR Standort SELE A";
@@ -153,9 +154,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             LocationCreate.AdressAddition = "AdressAdd1";
             LocationCreate.Region = "Reg 55";
             LocationCreate.SapNumber = "4444";
-
-            LocationCreate.Language = "Französisch [fr]";
-            LocationCreate.Country = "Frankreich [FR]";
+            LocationCreate.Language = "fr";
+            LocationCreate.Country = "FR";
             LocationCreate.Email = "marc.siegmund@six-group.com";
             LocationCreate.Telephone = "0031 58 399 6237";
             LocationCreate.Mobile = "0032 58 399 6237";
