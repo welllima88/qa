@@ -12,13 +12,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
     {
         private static string _locId;
         private static string _ep2MerchantId;
+        private static string _companyName;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401983");
 
-            DoCreateLocationData();
+            DoCreateLocation();
 
             _locId = LocationView.Guid;
             _ep2MerchantId = LocationView.Ep2MerchantId;
@@ -27,7 +28,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         [TestMethod]
         public void CompanyName()
         {
-            Assert.AreEqual("SYR Standort SELE A", LocationView.CompanyName);
+            Assert.AreEqual(_companyName, LocationView.CompanyName);
         }
 
         [TestMethod]
@@ -141,12 +142,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             Assert.AreEqual("www.six-group.com/de-intern", LocationView.Web);
         }
 
-        public static void DoCreateLocationData()
+        public static void DoCreateLocation()
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.LocationCreate.Click();
-
-            LocationCreate.CompanyName = "SYR Standort SELE A";
+            _companyName = "SYR" + TestLauncher.GenerateTestId();
+            LocationCreate.CompanyName = _companyName;
             LocationCreate.StreetNo = "Bröselstr. 201a-c";
             LocationCreate.Zip = "55555";
             LocationCreate.City = "München";
