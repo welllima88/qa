@@ -42,12 +42,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         {
             TestDirector.Navigate();
 
-            SetCustomerData();
+            DoCreateCustomer();
 
             _custId = CustomerView.CustomerNumber;
         }
 
-        public static void SetCustomerData()
+        public static void DoCreateCustomer()
         {
             _dt = TestLauncher.GenerateTestId();
 
