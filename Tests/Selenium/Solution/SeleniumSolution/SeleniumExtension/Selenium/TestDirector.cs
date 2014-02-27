@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
@@ -12,22 +13,29 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        private const string SeleniumGridHubUrl = "http://10.241.0.85:4488/wd/hub";
+        private static readonly Uri SeleniumGridHubUrl = new Uri("http://10.241.0.85:4488/wd/hub");
         public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
 
         private static void CreateWebDriverInstance(string profileName)
         {
-            DesiredCapabilities capability = DesiredCapabilities.Firefox();
-            capability.SetCapability("platform", new Platform(PlatformType.Any));
-            WebDriver = new RemoteWebDriver(new Uri(SeleniumGridHubUrl),
-                                            capability);
-            WebObject.WebDriver = new WebDriverAdapter(WebDriver);
-
-            // FirefoxProfile firefoxProfile = new FirefoxProfile(@"\"); new FirefoxProfileManager().GetProfile(profileName));
-            // FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            // WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+            try //via grid
+            {
+                DesiredCapabilities capability = DesiredCapabilities.Firefox();
+                capability.SetCapability("platform", new Platform(PlatformType.Any));
+                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
+                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+                Debug.Write("using Selenium Grid");
+            }
+            catch (Exception e)
+            {
+                //var firefoxProfile = new FirefoxProfile(@"\");
+                new FirefoxProfileManager().GetProfile(profileName);
+                FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
+                WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+                Debug.Write("using Selenium on local" + e);
+            }
         }
 
         /// <summary>
