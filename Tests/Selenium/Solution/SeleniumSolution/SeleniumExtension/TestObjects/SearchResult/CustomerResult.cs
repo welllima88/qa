@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -25,8 +24,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 
         public static IWebElement Result(string s)
         {
-            throw new NotImplementedException("almost finished");
-            //return ShowDescents().FindElement(By.CssSelector(""));
+            return ShowDescents().FindElement(By.CssSelector("a#customerLink[href*='" + s + "']"));
+        }
+
+        public static IWebElement Result()
+        {
+            return ShowDescents().FindElement(By.CssSelector("a#customerLink"));
         }
     }
 }
