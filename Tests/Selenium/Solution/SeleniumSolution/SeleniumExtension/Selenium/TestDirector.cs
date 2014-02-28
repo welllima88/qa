@@ -13,7 +13,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        private const int HubTimeout = 8;
         private static readonly Uri SeleniumGridHubUrl = new Uri("http://10.241.0.85:4488/wd/hub");
         public static IWebDriver WebDriver;
 
@@ -29,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
                 capability.SetCapability("platform", new Platform(PlatformType.Any));
                 capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
 
-                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability, TimeSpan.FromSeconds(HubTimeout));
+                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.Write("using Selenium Grid");
             }
