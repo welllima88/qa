@@ -20,10 +20,14 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 
         private static void CreateWebDriverInstance(string profileName)
         {
+            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
             try //via grid
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
                 capability.SetCapability("platform", new Platform(PlatformType.Any));
+
+                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+
                 WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.Write("using Selenium Grid");
@@ -31,8 +35,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             catch (Exception e)
             {
                 //var firefoxProfile = new FirefoxProfile(@"\");
-                new FirefoxProfileManager().GetProfile(profileName);
-                FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
+
                 WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
                 Debug.Write("using Selenium on local" + e);
             }
