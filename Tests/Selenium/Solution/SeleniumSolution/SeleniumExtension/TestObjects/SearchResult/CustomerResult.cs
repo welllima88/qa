@@ -5,31 +5,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
     public class CustomerResult : WebObject
     {
-        public static string CustomerId
+        public static IWebElementAdapter Result()
         {
-            get { return WebDriver.FindElement(By.CssSelector("tbody#customerResult span#customerId")).Text; }
-        }
-
-        public static IWebElement ShowDescent(string customerId)
-        {
-            return ShowDescents().FindElement(By.CssSelector("img[node_searchhint='" + customerId +
-                                                             "'][alt='child_expanderIcon']"));
-        }
-
-        public static IWebElement ShowDescents()
-        {
-            return
-                WebDriver.FindElement(By.CssSelector("tbody#customerResult"));
-        }
-
-        public static IWebElement Result(string s)
-        {
-            return ShowDescents().FindElement(By.CssSelector("a#customerLink[href*='" + s + "']"));
-        }
-
-        public static IWebElement Result()
-        {
-            return ShowDescents().FindElement(By.CssSelector("a#customerLink"));
+            IWebElementAdapter element =
+                WebDriver.FindAdaptedElement(
+                    By.CssSelector(
+                        "div#customerDiv tbody#customerResult tr td a#customerLink[href*='/Customer/?CustomerId=']"));
+            return element;
         }
     }
 }

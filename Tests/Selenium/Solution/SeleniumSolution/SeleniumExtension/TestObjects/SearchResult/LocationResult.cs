@@ -1,17 +1,15 @@
 using OpenQA.Selenium;
+using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
 {
-    public class LocationResult : SearchResults
+    public class LocationResult : WebObject
     {
-        public LocationResult()
-        {
-            Prefix = "div#locationDiv.container ";
-        }
-
         public static IWebElement Result()
         {
-            return WebDriver.FindAdaptedElement(By.CssSelector("tbody#locationResult a#locationLink"));
+            return
+                WebDriver.FindElement(
+                    By.CssSelector("div#locationDiv tbody#locationResult tr td a#locationLink[href*='/Location/']"));
         }
     }
 }
