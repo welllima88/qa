@@ -13,6 +13,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string HomePathUrl = "";
+        private const int HubTimeout = 8;
         private static readonly Uri SeleniumGridHubUrl = new Uri("http://10.241.0.85:4488/wd/hub");
         public static IWebDriver WebDriver;
 
@@ -21,21 +22,19 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         private static void CreateWebDriverInstance(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            try //via grid
+            try // via grid first
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
-                capability.SetCapability("platform", new Platform(PlatformType.Any));
 
+                capability.SetCapability("platform", new Platform(PlatformType.Any));
                 capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
 
-                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
+                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability, TimeSpan.FromSeconds(HubTimeout));
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.Write("using Selenium Grid");
             }
-            catch (Exception e)
+            catch (Exception e) // then locally
             {
-                //var firefoxProfile = new FirefoxProfile(@"\");
-
                 WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
                 Debug.Write("using Selenium on local" + e);
             }

@@ -86,7 +86,6 @@
     <Compile Include="Settings\ScsClassicTestEnvironment.cs" />
     <Compile Include="Support\AddService\AddServiceToUsers.cs" />
     <Compile Include="TestLauncher.cs" />
-    <Compile Include="TestObjects\Administration\TerminalFunctions.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
