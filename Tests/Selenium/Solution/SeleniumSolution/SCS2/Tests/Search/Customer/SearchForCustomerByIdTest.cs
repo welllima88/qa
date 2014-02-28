@@ -38,15 +38,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Search.Customer
         [TestCategory("Search"), TestCategory("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(CustomerResult.Result(SearchField).Text, SearchField);
+            StringAssert.Contains(CustomerResult.Result().Text, SearchField);
         }
 
         [TestMethod]
         [TestCategory("Search"), TestCategory("Customer")]
         public void ShowLocationsAndTerminals()
         {
-            CustomerResult.ShowDescent(SearchField).Click();
-            Assert.IsFalse(CustomerResult.ShowDescent("").Displayed);
+            CustomerResult.Result().Click();
+            Assert.IsFalse(CustomerResult.Result().Displayed);
         }
     }
 }
