@@ -6,6 +6,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
@@ -15,8 +16,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
     {
         private static string _customerNumber;
         private static string _locationGuid;
-        private static string _locationSbsDebitNumber;
+        private static string _locationName;
         private static string _customerName;
+        private static string _contactCustomerName;
+        private static string _contactLocationName;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -28,24 +31,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CustomerMenu.ContactCreate.Click();
             ContactCreateTest.SetContactData();
+            _contactCustomerName = ContactPersonView.FirstName;
 
             LocationCreateAndSaveTest.DoCreateLocation();
             _locationGuid = LocationView.Guid;
-            _locationSbsDebitNumber = LocationView.SbsDebitNumber;
+            _locationName = LocationView.CompanyName;
 
             LocationMenu.ContactCreate.Click();
             ContactCreateTest.SetContactData();
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            CustomerMenu.CustomerDeactivate.Click();
+            _contactLocationName = ContactPersonView.FirstName;
         }
 
         [TestMethod]
@@ -53,7 +47,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             QuickSearch.SearchField = _customerNumber;
             QuickSearch.HitEnter();
-            
+
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
@@ -65,8 +59,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             QuickSearch.SearchField = _customerName;
             QuickSearch.HitEnter();
-            
-            CustomerResult.Result(_customerNumber).Click();
+
+            CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
@@ -75,23 +69,35 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestMethod]
         public void LocationCanBeFoundByLocationName()
         {
+            QuickSearch.SearchField = _locationName;
+            QuickSearch.SearchButton.Click();
 
             LocationResult.Result().Click();
 
             Assert.AreEqual(_locationGuid, LocationView.Guid);
-            Assert.AreEqual(_locationSbsDebitNumber, LocationView.SbsDebitNumber);
+            Assert.AreEqual(_locationName, LocationView.CompanyName);
         }
 
         [TestMethod]
         public void ContactToCustomerIsCreated()
         {
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
+            CustomerCanBeFoundByCustomerId();
+
+            CustomerMenu.Contacts.Click();
+
+            Assert.AreEqual(_contactLocationName, ContactPersonView.Name);
+            Assert.AreEqual(_locationName, LocationView.CompanyName);
         }
 
         [TestMethod]
         public void ContactToLocationIsCreated()
         {
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
+            LocationCanBeFoundByLocationName();
+
+            LocationMenu.Contacts.Click();
+
+            Assert.AreEqual(_contactCustomerName, ContactPersonView.Name);
+            Assert.AreEqual(_locationName, LocationView.CompanyName);
         }
     }
 }
