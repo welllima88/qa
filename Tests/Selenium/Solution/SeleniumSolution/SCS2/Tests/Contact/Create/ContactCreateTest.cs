@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             // TestDirector.Navigate(TestDataRepository.Customer.GetAny());
 
             CustomerMenu.ContactCreate.Click();
-            SetContactData();
+            DoCreateContact();
         }
 
         [TestMethod]
@@ -120,7 +120,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             // Assert.AreEqual(url, TestDirector.WebDriver.Url);
         }
 
-        public static void SetContactData()
+        public static void DoCreateContact()
         {
             _firstName = "SYR" + TestLauncher.GenerateTestId();
 

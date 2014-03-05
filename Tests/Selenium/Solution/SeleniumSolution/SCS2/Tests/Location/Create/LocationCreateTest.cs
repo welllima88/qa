@@ -8,7 +8,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
 {
     [TestClass]
-    public class LocationCreateAndSaveTest
+    public class LocationCreateTest
     {
         private static string _locId;
         private static string _ep2MerchantId;

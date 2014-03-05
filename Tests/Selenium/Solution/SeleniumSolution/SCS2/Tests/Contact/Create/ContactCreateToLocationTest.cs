@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             _firstName = "SYR" + TestLauncher.GenerateTestId();
 
             LocationMenu.ContactCreate.Click();
-            ContactCreateTest.SetContactData();
+            ContactCreateTest.DoCreateContact();
         }
 
         [TestMethod]

@@ -30,15 +30,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             _customerName = CustomerView.CustomerName;
 
             CustomerMenu.ContactCreate.Click();
-            ContactCreateTest.SetContactData();
+            ContactCreateTest.DoCreateContact();
             _contactCustomerName = ContactPersonView.FirstName;
 
-            LocationCreateAndSaveTest.DoCreateLocation();
+            LocationCreateTest.DoCreateLocation();
             _locationGuid = LocationView.Guid;
             _locationName = LocationView.CompanyName;
 
             LocationMenu.ContactCreate.Click();
-            ContactCreateTest.SetContactData();
+            ContactCreateTest.DoCreateContact();
             _contactLocationName = ContactPersonView.FirstName;
         }
 
@@ -85,8 +85,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CustomerMenu.Contacts.Click();
 
-            Assert.AreEqual(_contactLocationName, ContactPersonView.Name);
-            Assert.AreEqual(_locationName, LocationView.CompanyName);
+            Assert.AreEqual(_contactCustomerName, ContactPersonView.FirstName);
         }
 
         [TestMethod]
@@ -96,8 +95,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             LocationMenu.Contacts.Click();
 
-            Assert.AreEqual(_contactCustomerName, ContactPersonView.Name);
-            Assert.AreEqual(_locationName, LocationView.CompanyName);
+            Assert.AreEqual(_contactLocationName, ContactPersonView.FirstName);
         }
     }
 }
