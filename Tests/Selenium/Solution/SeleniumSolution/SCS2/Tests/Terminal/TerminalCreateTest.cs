@@ -95,7 +95,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
 
             TerminalCreate.TerminalConfigDetailsCreate.Functionbits.Booking.Click();
 
-            TerminalCreate.TerminalConfigDetailsCreate.SaveButton.Click();
+            TerminalConfigDetailsCreate.SaveButton.Click();
 
             TerminalMenu.Terminal.Click();
 
