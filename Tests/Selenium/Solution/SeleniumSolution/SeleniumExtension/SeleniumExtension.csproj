@@ -191,6 +191,7 @@
     <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
     <Compile Include="TestObjects\Massmuation\MassmuationFileUpload.cs" />
     <Compile Include="TestObjects\Massmuation\TerminalMassValidation.cs" />
+    <Compile Include="TestObjects\Person\ContactList.cs" />
     <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
     <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
     <Compile Include="TestObjects\Person\ContactPersonView.cs" />
@@ -269,6 +270,7 @@
     <EmbeddedResource Include="Properties\ScsRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Common\CommonRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>

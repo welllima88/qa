@@ -6,7 +6,6 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-using SIX.SCS.QA.Selenium.Extension.TestData;
 
 namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
@@ -24,9 +23,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             try // via grid first
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
-
-                capability.SetCapability("platform", new Platform(PlatformType.Any));
                 capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+                capability.SetCapability("platform", new Platform(PlatformType.Any));
+                capability.SetCapability("verions", "23.0.1");
 
                 WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
@@ -91,11 +90,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             var suff = new Uri(urlSuffix, UriKind.Relative);
             var url = new Uri(TestEnvironment.BaseUrl, suff);
             WebDriver.Url = url.AbsoluteUri;
-        }
-
-        public static void Navigate(ITestData testData)
-        {
-            Navigate(testData.GetUrlPart());
         }
     }
 }
