@@ -250,6 +250,7 @@
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalList.cs" />
     <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
