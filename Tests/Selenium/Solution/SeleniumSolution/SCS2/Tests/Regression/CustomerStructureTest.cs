@@ -84,6 +84,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerCanBeFoundByCustomerId();
 
             CustomerMenu.Contacts.Click();
+            
+            ContactList.First().Click();
 
             Assert.AreEqual(_contactCustomerName, ContactPersonView.FirstName);
         }
@@ -95,6 +97,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             LocationMenu.Contacts.Click();
 
+            ContactList.First().Click();
             Assert.AreEqual(_contactLocationName, ContactPersonView.FirstName);
         }
     }
