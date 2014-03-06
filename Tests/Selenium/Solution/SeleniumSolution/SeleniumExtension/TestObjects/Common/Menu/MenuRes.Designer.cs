@@ -277,7 +277,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Person/PersonList.aspx?CUSTOMERID=&apos;][href*=&apos;&amp;LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Person/LocationPersonList&apos;][href*=&apos;&amp;LOCATIONID=&apos;].
         /// </summary>
         public static string LocationMenu_Contacts {
             get {

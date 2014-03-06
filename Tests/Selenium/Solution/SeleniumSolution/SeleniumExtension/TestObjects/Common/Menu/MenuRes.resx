@@ -199,7 +199,7 @@
     <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Contacts" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='Person/PersonList.aspx?CUSTOMERID='][href*='&amp;LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='/Person/LocationPersonList'][href*='&amp;LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Infotexts" xml:space="preserve">
     <value>td#leftHandMenu a[href*='InfoText/LocationInfoTextList.aspx?LOCATIONID=']</value>
