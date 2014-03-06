@@ -133,7 +133,7 @@
     <value>td#leftHandMenu a[href*='/Location/New?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_TerminalCreate" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Terminal/TerminalNew.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalArticleSelector/CustomerTerminalNew/?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_UserCreate" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/LoginNew.asp?CUSTOMERID=']</value>
@@ -184,7 +184,7 @@
     <value>td#leftHandMenu a[href*='/Location/?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_TerminalCreate" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='Terminal/TerminalNew.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalArticleSelector/LocationTerminalNew/?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_ContactCreate" xml:space="preserve">
     <value>td#leftHandMenu a[href*='Person/New?LOCATIONID=']</value>

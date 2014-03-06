@@ -214,7 +214,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalNew.aspx?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalArticleSelector/CustomerTerminalNew/?CUSTOMERID=&apos;].
         /// </summary>
         public static string CustomerMenu_TerminalCreate {
             get {
@@ -331,7 +331,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;Terminal/TerminalNew.aspx?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalArticleSelector/LocationTerminalNew/?LOCATIONID=&apos;].
         /// </summary>
         public static string LocationMenu_TerminalCreate {
             get {
