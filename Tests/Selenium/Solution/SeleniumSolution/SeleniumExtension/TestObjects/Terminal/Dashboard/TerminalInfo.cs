@@ -8,24 +8,24 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     /// </summary>
     public class TerminalInfo : WebObject
     {
-        public static IWebElementAdapter TerminalId
+        public static string TerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_TerminalId)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_TerminalId)).Text; }
         }
 
-        public static IWebElementAdapter ExternTerminalId
+        public static string ExternTerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_ExternTerminalId)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_ExternTerminalId)).Text; }
         }
 
-        public static IWebElementAdapter Article
+        public static string Article
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Article)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Article)).Text; }
         }
 
-        public static IWebElementAdapter Status
+        public static string Status
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Status)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Status)).Text; }
         }
     }
 }

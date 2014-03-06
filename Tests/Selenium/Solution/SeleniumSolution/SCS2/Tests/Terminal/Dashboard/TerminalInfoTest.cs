@@ -17,19 +17,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void ArticleName()
         {
-            StringAssert.Matches(TerminalInfo.Article.Text, new Regex(@"\w+"));
+            StringAssert.Matches(TerminalInfo.Article, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void TerminalId()
         {
-            StringAssert.Matches(TerminalInfo.TerminalId.Text, new Regex(@"\d+"));
+            StringAssert.Matches(TerminalInfo.TerminalId, new Regex(@"\d+"));
         }
 
         [TestMethod]
         public void ExternTerminalId()
         {
-            StringAssert.Matches(TerminalInfo.ExternTerminalId.Text, new Regex(@"\w+"));
+            StringAssert.Matches(TerminalInfo.ExternTerminalId, new Regex(@"\w+"));
         }
     }
 }
