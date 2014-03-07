@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 
         public TextAreaElement(IWebElement webElement)
         {
-            if (!(webElement.TagName.Equals("textarea") && webElement.GetAttribute("type").Equals(Type())))
+            if (!(webElement.TagName.Equals("textarea")))
                 throw new NotTextAreaElementException(webElement.TagName);
             _webElement = webElement;
         }
