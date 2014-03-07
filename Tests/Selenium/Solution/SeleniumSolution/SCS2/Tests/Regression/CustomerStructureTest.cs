@@ -52,11 +52,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void EditLocation()
         {
             LocationEditAndSaveTest.DoEditLocation();
+            _locationName = LocationView.CompanyName;
         }
 
         private static void EditCustomer()
         {
             CustomerEditAndSaveTest.DoEditCustomer();
+            _customerName = CustomerView.CustomerName;
         }
 
         private static void CreateContactOnLocation()
@@ -76,7 +78,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + TestLauncher.GenerateTestId();
             TerminalConfigDetailsCreate.SaveButton.Click();
-            
+
             TerminalMenu.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
         }
@@ -95,7 +97,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
             TerminalConfigCreate.SaveButton.Click();
-            
+
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
         }
@@ -120,7 +122,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
         }
 
         private static void Find(string searchString)
