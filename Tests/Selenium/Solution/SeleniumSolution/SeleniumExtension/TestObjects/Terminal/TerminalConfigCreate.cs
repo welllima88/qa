@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_inpTerminalInfoText"))
-                         .TextBox().TypeText(value);
+                         .TextArea().TypeText(value);
             }
         }
 
