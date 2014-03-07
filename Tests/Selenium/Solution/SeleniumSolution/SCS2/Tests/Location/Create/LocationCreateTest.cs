@@ -146,7 +146,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.LocationCreate.Click();
-            _companyName = "SYR" + TestLauncher.GenerateTestId();
+            _companyName = "SYR Standort" + TestLauncher.GenerateTestId();
             LocationCreate.CompanyName = _companyName;
             LocationCreate.StreetNo = "Bröselstr. 201a-c";
             LocationCreate.Zip = "55555";

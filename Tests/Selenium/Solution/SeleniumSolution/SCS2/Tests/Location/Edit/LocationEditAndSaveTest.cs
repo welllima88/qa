@@ -62,7 +62,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         {
             LocationView.EditButton.Click();
 
-            LocationEdit.CompanyName = "SYR Standort SELE B";
+            LocationEdit.CompanyName = "SYR Standort" + TestLauncher.GenerateTestId();
             LocationEdit.StreetNo = "Am Bärenplatz 2";
             LocationEdit.Zip = "8001";
             LocationEdit.City = "Kreuzlingen";

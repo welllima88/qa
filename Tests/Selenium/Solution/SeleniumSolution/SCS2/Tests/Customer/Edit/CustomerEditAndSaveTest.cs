@@ -195,7 +195,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         {
             CustomerMenu.CustomerEdit.Click();
 
-            CustomerEdit.CustomerName = "SYR Sele Kunde A";
+            CustomerEdit.CustomerName = "SYR Kunde" + TestLauncher.GenerateTestId();
 
             CustomerEdit.CompanyName = "SYR Sele Firma A";
             CustomerEdit.StreetNo = "Hardturmstr. 201";
