@@ -8,12 +8,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public static string Reason
         {
-            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationReason")).Selector().SelectByValue(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']")).Selector().SelectByValue(value); }
         }
 
         public static string Remark
         {
-            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationRemarks")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']")).TextBox().TypeText(value); }
         }
 
         public static void DelayTime(TimeSpan changeTime)
