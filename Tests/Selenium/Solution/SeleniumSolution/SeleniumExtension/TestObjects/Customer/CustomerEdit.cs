@@ -63,13 +63,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string Language
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId")).Selector().SelectByValue(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId")).Selector().SelectedOption.Text; }
         }
 
         public static string Country
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId")).Selector().SelectByValue(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId")).Selector().SelectedOption.Text; }
         }
 
