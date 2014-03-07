@@ -51,8 +51,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string Agency
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_AgencyId")).Selector().SelectByText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_AgencyId")).Selector().SelectedOption.Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_AgencyId")).Selector().SelectByText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_AgencyId")).Selector().SelectedOption.Text; }
         }
 
         public static string StreetNo
@@ -63,14 +63,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
 
         public static string Language
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_LanguageId")).Selector().SelectByText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_LanguageId")).Selector().SelectedOption.Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId")).Selector().SelectByText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId")).Selector().SelectedOption.Text; }
         }
 
         public static string Country
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_CountryId")).Selector().SelectByText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_CountryId")).Selector().SelectedOption.Text; }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId")).Selector().SelectByText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId")).Selector().SelectedOption.Text; }
         }
 
         public static string Zip
