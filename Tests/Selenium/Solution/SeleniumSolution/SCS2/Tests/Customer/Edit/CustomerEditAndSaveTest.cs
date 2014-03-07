@@ -215,6 +215,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.Fax = "0033 58 399 6237";
             CustomerEdit.Web = "www.six-group.com/de-intern";
 
+            ChangeForm.Reason = "MerchantAddressChange";
+            ChangeForm.Remark = "SYR " + TestLauncher.GenerateTestId() + " customer change remark";
+
             CustomerEdit.SaveButton.Click();
         }
 

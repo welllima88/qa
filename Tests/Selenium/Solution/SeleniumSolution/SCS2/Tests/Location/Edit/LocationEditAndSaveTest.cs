@@ -78,6 +78,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             LocationEdit.Language = "Englisch [en]";
             LocationEdit.Country = "Schweiz [CH]";
             LocationEdit.Reason = "CorrectionOnly";
+
+            ChangeForm.Reason = "MerchantAddressChange";
+            ChangeForm.Remark = "SYR " + TestLauncher.GenerateTestId() + " location change remark";
+
             LocationCreate.SaveButton.Click();
         }
     }
