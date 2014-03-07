@@ -182,8 +182,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             Assert.AreEqual("8021", CustomerView.Zip);
             Assert.AreEqual("Zürich", CustomerView.City);
             Assert.AreEqual("SIX Payment Services (Europe)", CustomerView.Agency);
-            Assert.AreEqual("Deutsch [de]", CustomerView.Language);
-            Assert.AreEqual("Schweiz [CH]", CustomerView.Country);
+            StringAssert.Contains(CustomerView.Language, "[de]");
+            StringAssert.Contains(CustomerView.Country, "[CH]");
             Assert.AreEqual("marc.siegmund@six-group.com", CustomerView.Email);
             Assert.AreEqual("0031 58 399 6237", CustomerView.Telephone);
             Assert.AreEqual("0032 58 399 6237", CustomerView.Mobile);
@@ -207,8 +207,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.SapNumber = "5440";
 
             CustomerEdit.Agency = "SIX Payment Services (Europe)";
-            CustomerEdit.Language = "Deutsch [de]";
-            CustomerEdit.Country = "Schweiz [CH]";
+            CustomerEdit.Language = "de";
+            CustomerEdit.Country = "CH";
             CustomerEdit.Email = "marc.siegmund@six-group.com";
             CustomerEdit.Telephone = "0031 58 399 6237";
             CustomerEdit.Mobile = "0032 58 399 6237";

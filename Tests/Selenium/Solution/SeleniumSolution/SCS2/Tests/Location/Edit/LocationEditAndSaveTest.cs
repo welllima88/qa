@@ -49,8 +49,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             Assert.AreEqual("PO2-A", LocationView.Po);
             Assert.AreEqual("Level2", LocationView.AdressAddition);
             Assert.AreEqual("Kreuzlingen", LocationView.City);
-            Assert.AreEqual("Englisch [en]", LocationView.Language);
-            Assert.AreEqual("Schweiz [CH]", LocationView.Country);
+            StringAssert.Contains(LocationView.Language, "[en]");
+            StringAssert.Contains(LocationView.Country, "[CH]");
             Assert.AreEqual("marc.siegmund@six-group.com", LocationView.Email);
             Assert.AreEqual("+41 58 399 6237", LocationView.Telephone);
             Assert.AreEqual("+42 58 399 6237", LocationView.Mobile);
@@ -75,8 +75,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             LocationEdit.Fax = "+43 58 399 6237";
             LocationEdit.Web = "www.six-group.com";
 
-            LocationEdit.Language = "Englisch [en]";
-            LocationEdit.Country = "Schweiz [CH]";
+            LocationEdit.Language = "en";
+            LocationEdit.Country = "CH";
             LocationEdit.Reason = "CorrectionOnly";
 
             ChangeForm.Reason = "MerchantAddressChange";
