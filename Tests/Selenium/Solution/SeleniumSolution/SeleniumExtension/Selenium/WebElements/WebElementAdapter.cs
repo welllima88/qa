@@ -39,6 +39,11 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
             return new SuggestorWebElementAdapter(this);
         }
 
+        public TextAreaElement TextArea()
+        {
+            return new TextAreaElement(this);
+        }
+
         public TextBoxElement TextBox()
         {
             return new TextBoxElement(this);
