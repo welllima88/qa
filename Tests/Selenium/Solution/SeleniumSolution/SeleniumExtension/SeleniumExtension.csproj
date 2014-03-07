@@ -69,6 +69,8 @@
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
     <Compile Include="Selenium\WebElements\CheckBoxElement.cs" />
+    <Compile Include="Selenium\WebElements\NotTextAreaElementException.cs" />
+    <Compile Include="Selenium\WebElements\TextAreaElement.cs" />
     <Compile Include="Selenium\WebElements\NotTextBoxElementException.cs" />
     <Compile Include="Selenium\WebElements\PasswortTextBoxElement.cs" />
     <Compile Include="Settings\BuildTest.cs" />

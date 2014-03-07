@@ -28,69 +28,104 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            CustomerCreateTest.DoCreateCustomer();
+            CreateCustomer();
 
-            _customerNumber = CustomerView.CustomerNumber;
-            _customerName = CustomerView.CustomerName;
+            CreateContactOnCustomer();
 
-            CustomerMenu.ContactCreate.Click();
-            ContactCreateTest.DoCreateContact();
-            _contactCustomerName = ContactPersonView.FirstName;
+            CustomerCanBeFoundByCustomerId();
+            CreateTerminalOnCustomer();
 
-            CustomerMenu.TerminalCreate.Click();
-            TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
-            TerminalConfigCreate.SaveButton.Click();
-            _terminalIdCustomer = TerminalInfo.TerminalId;
+            CustomerCanBeFoundByCustomerName();
+            CreateLocationOnCustomer();
 
-            LocationCreateTest.DoCreateLocation();
-            _locationGuid = LocationView.Guid;
-            _locationName = LocationView.CompanyName;
+            CreateTerminalOnLocation();
 
-            LocationMenu.TerminalCreate.Click();
-            TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
-            TerminalConfigCreate.ContinueButton.Click();
+            LocationCanBeFoundByLocationName();
+            CreateContactOnLocation();
+        }
 
-            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + TestLauncher.GenerateTestId();
-            TerminalConfigDetailsCreate.SaveButton.Click();
-            _terminalIdLocation = TerminalInfo.TerminalId;
-            
+        private static void CreateContactOnLocation()
+        {
             LocationMenu.ContactCreate.Click();
             ContactCreateTest.DoCreateContact();
             _contactLocationName = ContactPersonView.FirstName;
         }
 
-        [TestMethod]
-        public void CustomerCanBeFoundByCustomerId()
+        private static void CreateTerminalOnLocation()
         {
-            QuickSearch.SearchField = _customerNumber;
-            QuickSearch.HitEnter();
+            LocationMenu.TerminalCreate.Click();
+            TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
+            TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
+            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
+            TerminalConfigCreate.ContinueButton.Click();
 
+            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + TestLauncher.GenerateTestId();
+            TerminalConfigDetailsCreate.SaveButton.Click();
+            
+            TerminalMenu.Terminal.Click();
+            _terminalIdLocation = TerminalInfo.TerminalId;
+        }
+
+        private static void CreateLocationOnCustomer()
+        {
+            LocationCreateTest.DoCreateLocation();
+            _locationGuid = LocationView.Guid;
+            _locationName = LocationView.CompanyName;
+        }
+
+        private static void CreateTerminalOnCustomer()
+        {
+            CustomerMenu.Customer.Click();
+            CustomerMenu.TerminalCreate.Click();
+            TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
+            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
+            TerminalConfigCreate.SaveButton.Click();
+            
+            TerminalMenu.Terminal.Click();
+            _terminalIdCustomer = TerminalInfo.TerminalId;
+        }
+
+        private static void CreateCustomer()
+        {
+            CustomerCreateTest.DoCreateCustomer();
+            _customerNumber = CustomerView.CustomerNumber;
+            _customerName = CustomerView.CustomerName;
+        }
+
+        private static void CreateContactOnCustomer()
+        {
+            CustomerMenu.ContactCreate.Click();
+            ContactCreateTest.DoCreateContact();
+            _contactCustomerName = ContactPersonView.FirstName;
+        }
+
+        public static void CustomerCanBeFoundByCustomerId()
+        {
+            Find(_customerNumber);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
         }
 
-        [TestMethod]
-        public void CustomerCanBeFoundByCustomerName()
+        private static void Find(string searchString)
         {
-            QuickSearch.SearchField = _customerName;
+            QuickSearch.SearchField = searchString;
             QuickSearch.HitEnter();
+        }
 
+        public static void CustomerCanBeFoundByCustomerName()
+        {
+            Find(_customerName);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
         }
 
-        [TestMethod]
-        public void LocationCanBeFoundByLocationName()
+        public static void LocationCanBeFoundByLocationName()
         {
-            QuickSearch.SearchField = _locationName;
-            QuickSearch.SearchButton.Click();
-
+            Find(_locationName);
             LocationResult.Result().Click();
 
             Assert.AreEqual(_locationGuid, LocationView.Guid);
@@ -123,12 +158,20 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestMethod]
         public void TerminalToLocationIsCreated()
         {
-            LocationCanBeFoundByLocationName();
+            TerminalCanBeFoundById();
 
             LocationMenu.Terminals.Click();
 
             TerminalList.First().Click();
             Assert.AreEqual(_terminalIdLocation, TerminFixInfo.Terminal);
+        }
+
+        private static void TerminalCanBeFoundById()
+        {
+            Find(_terminalIdLocation);
+            TerminalResult.First().Click();
+
+            Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
         }
 
         [TestMethod]
