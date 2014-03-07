@@ -8,7 +8,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public static string Reason
         {
-            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationReason")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_NotificationReason")).Selector().SelectByValue(value); }
         }
 
         public static string Remark
