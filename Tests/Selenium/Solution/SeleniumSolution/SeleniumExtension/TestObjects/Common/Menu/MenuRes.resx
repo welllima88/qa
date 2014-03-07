@@ -154,7 +154,7 @@
     <value>td#leftHandMenu a[href*='/Mpd/list?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_AllTerminals" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Customer/TerminalListAll?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Tickets" xml:space="preserve">
     <value>td#leftHandMenu a[href*='TicketList.asp?ListType=customer&amp;CUSTOMERID=']</value>
@@ -196,7 +196,7 @@
     <value>td#leftHandMenu a[href*='Location.asp?mode=Cancel&amp;LocationFunction=']</value>
   </data>
   <data name="LocationMenu_Terminals" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='/Location/TerminalList?LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Contacts" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Person/LocationPersonList'][href*='&amp;LOCATIONID=']</value>
