@@ -13,7 +13,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 
         public static string Remark
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationRemarks']")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input[id$='_NotificationRemarks']")).TextBox().TypeText(value); }
         }
 
         public static void DelayTime(TimeSpan changeTime)
