@@ -244,7 +244,7 @@
     <value>td#leftHandMenu a[href*='/Admin/MessageTransport/Overview.aspx?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_Terminal" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=']</value>
+    <value>td#leftHandMenu a[href*='/TerminalDashboard/?TERMINALID=']</value>
   </data>
   <data name="TerminalMenu_ContractCreate" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Contract/ContractNew.aspx?TERMINALID=']</value>

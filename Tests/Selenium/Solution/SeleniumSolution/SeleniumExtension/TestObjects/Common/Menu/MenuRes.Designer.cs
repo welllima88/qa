@@ -574,7 +574,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Terminal/TerminalView.aspx?PageMode=view&amp;TERMINALID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalDashboard/?TERMINALID=&apos;].
         /// </summary>
         public static string TerminalMenu_Terminal {
             get {
