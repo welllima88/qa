@@ -124,35 +124,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            CustomerMenu.CustomerEdit.Click();
-
-            Assert.AreEqual(customerNumber, CustomerEdit.CustomerNumber);
-            Assert.AreEqual(supplier, CustomerEdit.Supplier);
-            Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
-
-            CustomerEdit.CustomerName = "SYR Sele Kunde A";
-
-            CustomerEdit.CompanyName = "SYR Sele Firma A";
-            CustomerEdit.StreetNo = "Hardturmstr. 201";
-            CustomerEdit.Zip = "8021";
-            CustomerEdit.City = "Zürich";
-            CustomerEdit.Po = "PFO1";
-            CustomerEdit.AdressAddition = "Etage 3";
-            CustomerEdit.Region = "Reg 55";
-            CustomerEdit.SapNumber = "5440";
-
-            CustomerEdit.Agency = "SIX Payment Services (Europe)";
-            CustomerEdit.Language = "Deutsch [de]";
-            CustomerEdit.Country = "Schweiz [CH]";
-            CustomerEdit.Email = "marc.siegmund@six-group.com";
-            CustomerEdit.Telephone = "0031 58 399 6237";
-            CustomerEdit.Mobile = "0032 58 399 6237";
-            CustomerEdit.Fax = "0033 58 399 6237";
-            CustomerEdit.Web = "www.six-group.com/de-intern";
-
-            CustomerEdit.SaveButton.Click();
+            DoEditCustomer();
 
             Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual(customerNumber, CustomerEdit.CustomerNumber);
+            Assert.AreEqual(supplier, CustomerEdit.Supplier);
+
+            Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
 
             NavigationBar.Lobby.Click();
             RecentElements.MostRecent.Click();
@@ -211,6 +189,33 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             Assert.AreEqual("0032 58 399 6237", CustomerView.Mobile);
             Assert.AreEqual("0033 58 399 6237", CustomerView.Fax);
             Assert.AreEqual("www.six-group.com/de-intern", CustomerView.Web);
+        }
+
+        public static void DoEditCustomer()
+        {
+            CustomerMenu.CustomerEdit.Click();
+
+            CustomerEdit.CustomerName = "SYR Sele Kunde A";
+
+            CustomerEdit.CompanyName = "SYR Sele Firma A";
+            CustomerEdit.StreetNo = "Hardturmstr. 201";
+            CustomerEdit.Zip = "8021";
+            CustomerEdit.City = "Zürich";
+            CustomerEdit.Po = "PFO1";
+            CustomerEdit.AdressAddition = "Etage 3";
+            CustomerEdit.Region = "Reg 55";
+            CustomerEdit.SapNumber = "5440";
+
+            CustomerEdit.Agency = "SIX Payment Services (Europe)";
+            CustomerEdit.Language = "Deutsch [de]";
+            CustomerEdit.Country = "Schweiz [CH]";
+            CustomerEdit.Email = "marc.siegmund@six-group.com";
+            CustomerEdit.Telephone = "0031 58 399 6237";
+            CustomerEdit.Mobile = "0032 58 399 6237";
+            CustomerEdit.Fax = "0033 58 399 6237";
+            CustomerEdit.Web = "www.six-group.com/de-intern";
+
+            CustomerEdit.SaveButton.Click();
         }
 
         [TestMethod]
