@@ -1,7 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -36,12 +38,25 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CreateTerminalOnCustomer();
 
             CustomerCanBeFoundByCustomerName();
+            EditCustomer();
+
             CreateLocationOnCustomer();
 
             CreateTerminalOnLocation();
 
             LocationCanBeFoundByLocationName();
+            EditLocation();
             CreateContactOnLocation();
+        }
+
+        private static void EditLocation()
+        {
+            LocationEditAndSaveTest.DoEditLocation();
+        }
+
+        private static void EditCustomer()
+        {
+            CustomerEditAndSaveTest.DoEditCustomer();
         }
 
         private static void CreateContactOnLocation()
