@@ -160,10 +160,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             TerminalCanBeFoundById();
 
-            LocationMenu.Terminals.Click();
-
-            TerminalList.First().Click();
-            Assert.AreEqual(_terminalIdLocation, TerminFixInfo.Terminal);
+            Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
         }
 
         private static void TerminalCanBeFoundById()
@@ -180,9 +177,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerCanBeFoundByCustomerId();
 
             CustomerMenu.AllTerminals.Click();
-
             TerminalList.First().Click();
-            Assert.AreEqual(_terminalIdCustomer, TerminFixInfo.Terminal);
+            // TerminalList.Result(_terminalIdCustomer).Click();
+
+            Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
         }
     }
 }
