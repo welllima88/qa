@@ -63,10 +63,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                       SelectByText(businessTemplate);
         }
 
-        public void SetDcc(bool dccEnabeled)
+        public void Dcc(bool dccEnabeled)
         {
-            var a = new ContractCreate();
-            a.SetDcc(dccEnabeled);
+            ContractCreate.Dcc(dccEnabeled);
         }
 
         public void SaveAndCreateBrand()

@@ -40,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                      .Selector().SelectByText(mcc);
         }
 
-        public void SetVpNo(String vpNo)
+        public static void SetVpNo(String vpNo)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
@@ -49,18 +49,18 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                      .TypeText(vpNo);
         }
 
-        public void SelectBusinessTemplate(String businessTemplate)
+        public static void SelectBusinessTemplate(String businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                      SelectByText(businessTemplate);
+                      SelectByValue(businessTemplate);
         }
 
-        public void SetDcc(bool dccEnabeled)
+        public static void Dcc(bool dccEnabled)
         {
             WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
                      .CheckBox()
-                     .Set(dccEnabeled);
+                     .Set(dccEnabled);
         }
 
         public void SetDccBaseCurrency(String dccBaseCurrency)

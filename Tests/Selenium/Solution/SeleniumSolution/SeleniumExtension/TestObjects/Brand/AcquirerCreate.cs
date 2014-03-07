@@ -7,7 +7,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
     public class AcquirerCreate : WebObject
     {
-        public String SetActivationDate
+        public static String SetActivationDate
         {
             get
             {
@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             //    Assert.IsTrue(Regex.IsMatch(WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
         }
 
-        public String SetRemark
+        public static String Remark
         {
             set
             {
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         /// </summary>
         /// <param name="acquirer">The name for acquirer e.g. "SIX Payment Services" or "American Express"</param>
         /// <param name="messageToAcquirer">set message should be created and send or not</param>
-        public void SetMessageToAcquirer(String acquirer, bool messageToAcquirer)
+        public static void SetMessageToAcquirer(String acquirer, bool messageToAcquirer)
         {
             //Example: By.XPath("//span/div/label[text()='American Express']/preceding-sibling::input")).
             WebDriver.FindAdaptedElement(By.XPath("//span/div/label[text()='" + acquirer + "']/preceding-sibling::input"))
@@ -50,7 +50,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         ///     Sets for all acquirer, if the message (ticket, COI etc.) should be created or not
         /// </summary>
         /// <param name="messageToAcquirers">set message should be created and send or not</param>
-        public void SetMessageToAllAcquirers(bool messageToAcquirers)
+        public static void SetMessageToAllAcquirers(bool messageToAcquirers)
         {
             ReadOnlyCollection<IWebElement> acquirers =
                 WebDriver.FindElements(By.CssSelector("input[id*='cbxAcquirerMessages'].check"));
@@ -60,12 +60,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             }
         }
 
-        public void ConfirmAcquirerData()
+        public static void ConfirmAcquirerData()
         {
             WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsNextButton")).Click();
         }
 
-        public void SaveAndCreate()
+        public static void SaveAndCreate()
         {
             new ContractCreate().SaveAndCreate();
         }

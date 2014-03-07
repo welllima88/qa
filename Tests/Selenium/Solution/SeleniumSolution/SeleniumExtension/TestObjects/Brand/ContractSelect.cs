@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -6,15 +5,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
     public class ContractSelect : WebObject
     {
-        public void SelectContract(String acq, String brand)
+        public static IWebElement ConfirmButton()
         {
-            WebDriver.FindElement(By.XPath("//td[text()=\"" + acq + "\"]")).Click();
-            WebDriver.FindElement(By.XPath("//td[text()=\" " + brand + "\"]")).Click();
+            return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
         }
 
-        public void ConfirmContractSelection()
+        public static void Select(string brandId)
         {
-            WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails")).Click();
+            WebDriver.FindElement(
+                By.CssSelector(
+                    string.Format("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td:contains('[{0}]')",
+                                  brandId))).Click();
+        }
+
+        public static void DeSelect(string brandId)
+        {
+            WebDriver.FindElement(
+                By.CssSelector(
+                    string.Format("span#ctl00_bodyContentPlaceHolder_lblSelected div a tr td:contains('[{0}]')",
+                                  brandId))).Click();
         }
     }
 }
