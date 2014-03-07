@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult
             IWebElement element =
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
-                        "div#terminalDiv.tbody#terminalResult tr td a#terminalLink[href*='/TerminalDashboard/?terminalId=']"));
+                        "div#terminalDiv tbody#terminalResult tr td a#terminalLink[href*='/TerminalDashboard/?terminalId=']"));
             return element;
         }
     }
