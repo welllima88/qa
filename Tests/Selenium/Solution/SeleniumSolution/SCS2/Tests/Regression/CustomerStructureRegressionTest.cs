@@ -4,6 +4,7 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -12,11 +13,12 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 {
     [TestClass]
-    public class CustomerStructureTest
+    public class CustomerStructureRegressionTest
     {
         private static string _customerNumber;
         private static string _locationGuid;
@@ -28,7 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static string _terminalIdCustomer;
 
         [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        public static void CreateCustomerStructure(TestContext testContext)
         {
             CreateCustomer();
 
@@ -43,10 +45,49 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CreateLocationOnCustomer();
 
             CreateTerminalOnLocation();
+            // CreateContractsOnTerminal();
 
             LocationCanBeFoundByLocationName();
             EditLocation();
             CreateContactOnLocation();
+        }
+
+        /* [ClassCleanup]
+        public static void CleanupCustomerStructure()
+        {
+            DeleteCustomer();
+
+            DeleteLocation();
+            
+            DeleteContact();
+            DeleteContact();
+
+            DeleteTerminal();
+            DeleteTerminal();
+        }*/
+
+        private static void CreateContractsOnTerminal()
+        {
+            BrandPortlet.NewBrandButton.Click();
+
+            ChooseBrands();
+
+            AcquirerCreate.Remark = "SYR Contracts" + TestLauncher.GenerateTestId();
+            AcquirerCreate.SaveAndCreate();
+            // TODO: more special settings for brands
+            // ContractCreate.
+        }
+
+        private static void ChooseBrands()
+        {
+            ContractSelect.Select("1161");
+            ContractSelect.Select("283");
+            ContractSelect.Select("332");
+            ContractSelect.Select("361");
+            ContractSelect.Select("363");
+            ContractSelect.Select("811");
+            ContractSelect.DeSelect("1161");
+            ContractSelect.ConfirmButton().Click();
         }
 
         private static void EditLocation()
@@ -177,6 +218,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             TerminalCanBeFoundById();
 
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
+        }
+
+        [TestMethod]
+        [Ignore]
+        public void ContractsOnTerminalAreCreated()
+        {
+            TerminalCanBeFoundById();
+
+            StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
+            StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
+            StringAssert.Contains(BrandPortlet.Brand("361").Text, "[361]");
+            StringAssert.Contains(BrandPortlet.Brand("363").Text, "[363]");
+            StringAssert.Contains(BrandPortlet.Brand("811").Text, "[811]");
         }
 
         private static void TerminalCanBeFoundById()
