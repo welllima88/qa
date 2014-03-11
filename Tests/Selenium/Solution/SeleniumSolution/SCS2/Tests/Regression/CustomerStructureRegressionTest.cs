@@ -190,6 +190,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
             CustomerCanBeFoundByCustomerId();
@@ -202,6 +203,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [TestCategory("RegressionA")]
         public void ContactToLocationIsCreated()
         {
             LocationCanBeFoundByLocationName();
@@ -213,6 +215,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [TestCategory("RegressionA")]
         public void TerminalToLocationIsCreated()
         {
             TerminalCanBeFoundById();
@@ -221,6 +224,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [TestCategory("RegressionA")]
         [Ignore]
         public void ContractsOnTerminalAreCreated()
         {
@@ -242,6 +246,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
             CustomerCanBeFoundByCustomerId();
