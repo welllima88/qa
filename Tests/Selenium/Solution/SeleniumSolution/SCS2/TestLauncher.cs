@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
@@ -13,6 +14,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
     [TestClass]
     public static class TestLauncher
     {
+        private static string SetLanguage
+        {
+            set
+            {
+                MetaNavBar.Languages.Click();
+                MetaNavBar.Language(value).Click();
+            }
+        }
+
         public static long GenerateTestId()
         {
             return DateTime.Now.Ticks;
@@ -24,7 +34,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             ScsPlatinTestEnvironment.LoadConfigurationDev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
-            TestDirector.SetLanguage = "Deutsch";
+            SetLanguage = "Deutsch";
         }
 
         [AssemblyCleanup]

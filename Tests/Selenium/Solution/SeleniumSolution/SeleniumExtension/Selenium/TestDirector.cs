@@ -18,14 +18,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 
         public static string BaseUrl { get; private set; }
 
-        public static string SetLanguage
-        {
-            set
-            {
-                MetaNavBar.Languages.Click();
-                MetaNavBar.Language(value).Click();
-            }
-        }
 
         private static void CreateWebDriverInstance(string profileName)
         {
