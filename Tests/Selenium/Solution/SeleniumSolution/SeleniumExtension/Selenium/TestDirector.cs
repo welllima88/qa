@@ -22,8 +22,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         private static void CreateWebDriverInstance(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            // force german language:
-            firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
+            // force german language, but doesn't work on grid:
+            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
 
             try // via grid first
             {
