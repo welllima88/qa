@@ -70,16 +70,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             BrandPortlet.NewBrandButton.Click();
 
-            ChooseBrands();
-
-            AcquirerCreate.Remark = "SYR Contracts" + TestLauncher.GenerateTestId();
-            AcquirerCreate.SaveAndCreate();
-            // TODO: more special settings for brands
-            // ContractCreate.
-        }
-
-        private static void ChooseBrands()
-        {
             ContractSelect.Select("1161");
             ContractSelect.Select("283");
             ContractSelect.Select("332");
@@ -87,7 +77,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             ContractSelect.Select("363");
             ContractSelect.Select("811");
             ContractSelect.DeSelect("1161");
+
             ContractSelect.ConfirmButton().Click();
+
+            AcquirerCreate.Remark = "SYR Contracts" + TestLauncher.GenerateTestId();
+            AcquirerCreate.SaveAndCreate();
+            // TODO: more special settings for brands
+            // ContractCreate.
         }
 
         private static void EditLocation()
@@ -159,21 +155,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         public static void CustomerCanBeFoundByCustomerId()
         {
-            Find(_customerNumber);
+            QuickSearch.Find(_customerNumber);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
         }
 
-        private static void Find(string searchString)
-        {
-            QuickSearch.SearchField = searchString;
-            QuickSearch.HitEnter();
-        }
-
         public static void CustomerCanBeFoundByCustomerName()
         {
-            Find(_customerName);
+            QuickSearch.Find(_customerName);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
@@ -182,7 +172,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         public static void LocationCanBeFoundByLocationName()
         {
-            Find(_locationName);
+            QuickSearch.Find(_locationName);
             LocationResult.Result().Click();
 
             Assert.AreEqual(_locationGuid, LocationView.Guid);
@@ -239,7 +229,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void TerminalCanBeFoundById()
         {
-            Find(_terminalIdLocation);
+            QuickSearch.Find(_terminalIdLocation);
             TerminalResult.First().Click();
 
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);

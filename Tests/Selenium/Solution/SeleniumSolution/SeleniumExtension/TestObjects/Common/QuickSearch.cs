@@ -25,5 +25,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
         {
             WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).SendKeys(Keys.Return);
         }
+
+        public static void Find(string searchString)
+        {
+            SearchField = searchString;
+            HitEnter();
+        }
     }
 }
