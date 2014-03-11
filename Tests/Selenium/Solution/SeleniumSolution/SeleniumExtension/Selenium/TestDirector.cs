@@ -6,6 +6,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
@@ -17,21 +18,32 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 
         public static string BaseUrl { get; private set; }
 
+        public static string SetLanguage
+        {
+            set
+            {
+                MetaNavBar.Languages.Click();
+                MetaNavBar.Language(value).Click();
+            }
+        }
+
         private static void CreateWebDriverInstance(string profileName)
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
+            // force german language:
+            firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
+
             try // via grid first
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
                 capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
-                capability.SetCapability("platform", new Platform(PlatformType.Any));
-                capability.SetCapability("verions", "23.0.1");
-
+                capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
+                capability.SetCapability(CapabilityType.Version, "23.0.1");
                 WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.Write("using Selenium Grid");
             }
-            catch (Exception e) // then locally
+            catch (Exception e) // then run locally
             {
                 WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
                 Debug.Write("using Selenium on local" + e);

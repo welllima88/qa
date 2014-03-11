@@ -24,6 +24,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             ScsPlatinTestEnvironment.LoadConfigurationDev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
+            TestDirector.SetLanguage = "Deutsch";
         }
 
         [AssemblyCleanup]
