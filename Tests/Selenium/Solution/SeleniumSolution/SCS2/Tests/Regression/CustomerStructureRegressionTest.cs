@@ -5,6 +5,7 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
@@ -31,6 +32,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         public static void CreateCustomerStructure(TestContext testContext)
         {
             CreateCustomer();
+            RecentElements.Latest.Click();
+            // CustomerCheck();
 
             CreateContactOnCustomer();
 
