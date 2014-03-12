@@ -111,7 +111,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         }
 
         [TestMethod]
-        [Ignore] //todo uncomment assignment in class init
         public void WebInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Ungültige Zeichen gefunden!");
