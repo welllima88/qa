@@ -1,4 +1,3 @@
-using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -6,14 +5,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
     public class RecentElements : WebObject
     {
-        public static ReadOnlyCollection<IWebElement> Elements
-        {
-            get { return WebDriver.FindElements(By.CssSelector(CommonRes.RecentElements_Elements)); }
-        }
-
         public static IWebElement Latest
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent));
+            }
         }
     }
 }
