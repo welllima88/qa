@@ -133,7 +133,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
 
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);

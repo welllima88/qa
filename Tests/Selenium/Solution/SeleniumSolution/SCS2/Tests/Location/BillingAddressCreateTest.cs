@@ -202,7 +202,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
 
             Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             //Assert.AreEqual(locId, BillingAddressView.Guid);
             Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
@@ -244,7 +244,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
             //var locId = _driver.PageSource.;
             Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             //Assert.AreEqual(locId, BillingAddressView.Guid);
             Assert.AreEqual("SYR ReAd SELE A", BillingAddressView.CompanyName);

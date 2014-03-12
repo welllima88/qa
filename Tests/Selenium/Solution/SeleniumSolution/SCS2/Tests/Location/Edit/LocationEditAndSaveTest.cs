@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
 
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
             Assert.AreEqual(LocationEdit.Guid, guid);

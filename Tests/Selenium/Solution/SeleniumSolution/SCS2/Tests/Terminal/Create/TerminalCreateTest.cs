@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Create
             //Assert.AreEqual("SYR Sele Kunde A", TerminalView.TerminalId;
             //check/read TerminalId
 
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             //Assert.AreEqual(custId, TerminalView.CustomerNumber);
         }
@@ -124,7 +124,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Create
             //Assert.AreEqual("SYR Sele Kunde A", TerminalView.TerminalId;
             //check/read TerminalId
 
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             //Assert.AreEqual(custId, TerminalView.CustomerNumber);
         }

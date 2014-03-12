@@ -52,7 +52,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         public void RecentElementsCheck()
         {
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
             Assert.AreEqual(_locId, LocationView.Guid);
         }
 

@@ -149,7 +149,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         public void MostRecentElement()
         {
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
         }
     }
 }

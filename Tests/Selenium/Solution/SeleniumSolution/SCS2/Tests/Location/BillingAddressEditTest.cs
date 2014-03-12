@@ -260,7 +260,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
 
             Assert.AreEqual("SYR Standort SELE B", BillingAddressView.CompanyName);
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual("SYR Standort SELE B", BillingAddressView.CompanyName);
             Assert.AreEqual("Am Bärenplatz 2", BillingAddressView.StreetName);

@@ -117,7 +117,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             // string url = TestDirector.WebDriver.Url;
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
             // Assert.AreEqual(url, TestDirector.WebDriver.Url);
         }
     }

@@ -218,7 +218,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public void MostRecent()
         {
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual(_custId, CustomerView.CustomerNumber);
         }

@@ -92,7 +92,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer
 
             Assert.AreEqual("Selenium Test IE", CustomerView.CustomerName);
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual("Selenium Test IE", CustomerView.CustomerName);
             Assert.AreEqual("SIX Payment Services AG", CustomerView.Supplier);

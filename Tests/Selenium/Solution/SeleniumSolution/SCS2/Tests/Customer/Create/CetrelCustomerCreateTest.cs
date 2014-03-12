@@ -71,7 +71,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             string custId = CustomerView.CustomerNumber;
 
             NavigationBar.Lobby.Click();
-            RecentElements.MostRecent.Click();
+            RecentElements.Latest.Click();
 
             Assert.AreEqual(custId, CustomerView.CustomerNumber);
             Assert.AreEqual(customerName, CustomerView.CustomerName);
