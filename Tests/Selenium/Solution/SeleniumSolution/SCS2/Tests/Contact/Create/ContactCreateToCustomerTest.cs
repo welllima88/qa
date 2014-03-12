@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 {
     [TestClass]
-    public class ContactCreateTest
+    public class ContactCreateToCustomerTest
     {
         private static string _firstName;
 
