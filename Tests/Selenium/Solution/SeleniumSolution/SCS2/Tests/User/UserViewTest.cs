@@ -82,8 +82,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
         [TestCategory("SmokeTest")]
         public void LastLogin()
         {
-            new NotImplementedException("to bed done because of date");
-            // TODO : Assert.AreEqual(DateTime.Parse(UserView.LastLogin));
+            Assert.IsTrue(DateTime.Now.CompareTo(DateTime.Parse(UserView.LastLogin)) > 0);
+            Assert.IsTrue(DateTime.Now.AddDays(-1).CompareTo(DateTime.Parse(UserView.LastLogin)) < 0);
         }
 
         [TestMethod]
