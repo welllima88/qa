@@ -263,6 +263,7 @@
     <Compile Include="Selenium\WebDriverAdapter.cs" />
     <Compile Include="Selenium\WebElements\WebElementAdapter.cs" />
     <Compile Include="Worklow\CustomerCreator.cs" />
+    <Compile Include="Worklow\Search.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
