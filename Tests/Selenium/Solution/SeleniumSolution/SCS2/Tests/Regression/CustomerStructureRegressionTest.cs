@@ -5,12 +5,10 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.SearchResult;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
@@ -36,10 +34,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CreateContactOnCustomer();
 
-            CustomerCanBeFoundByCustomerId();
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
             CreateTerminalOnCustomer();
 
-            CustomerCanBeFoundByCustomerName();
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerName(_customerName);
+            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             EditCustomer();
 
             CreateLocationOnCustomer();
@@ -47,7 +46,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CreateTerminalOnLocation();
             // CreateContractsOnTerminal();
 
-            LocationCanBeFoundByLocationName();
+            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+            Assert.AreEqual(_locationGuid, LocationView.Guid);
+
             EditLocation();
             CreateContactOnLocation();
         }
@@ -101,7 +102,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateContactOnLocation()
         {
             LocationMenu.ContactCreate.Click();
-            ContactCreateTest.DoCreateContact();
+            ContactCreateToCustomerTest.DoCreateContact();
             _contactLocationName = ContactPersonView.FirstName;
         }
 
@@ -149,41 +150,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateContactOnCustomer()
         {
             CustomerMenu.ContactCreate.Click();
-            ContactCreateTest.DoCreateContact();
+            ContactCreateToCustomerTest.DoCreateContact();
             _contactCustomerName = ContactPersonView.FirstName;
-        }
-
-        public static void CustomerCanBeFoundByCustomerId()
-        {
-            QuickSearch.Find(_customerNumber);
-            CustomerResult.Result().Click();
-
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
-        }
-
-        public static void CustomerCanBeFoundByCustomerName()
-        {
-            QuickSearch.Find(_customerName);
-            CustomerResult.Result().Click();
-
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
-        }
-
-        public static void LocationCanBeFoundByLocationName()
-        {
-            QuickSearch.Find(_locationName);
-            LocationResult.Result().Click();
-
-            Assert.AreEqual(_locationGuid, LocationView.Guid);
-            Assert.AreEqual(_locationName, LocationView.CompanyName);
         }
 
         [TestMethod]
         [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
-            CustomerCanBeFoundByCustomerId();
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
 
             CustomerMenu.Contacts.Click();
 
@@ -196,7 +171,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void ContactToLocationIsCreated()
         {
-            LocationCanBeFoundByLocationName();
+            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
 
             LocationMenu.Contacts.Click();
 
@@ -208,7 +183,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void TerminalToLocationIsCreated()
         {
-            TerminalCanBeFoundById();
+            QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
 
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
         }
@@ -218,7 +193,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [Ignore]
         public void ContractsOnTerminalAreCreated()
         {
-            TerminalCanBeFoundById();
+            QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
 
             StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
             StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
@@ -227,19 +202,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             StringAssert.Contains(BrandPortlet.Brand("811").Text, "[811]");
         }
 
-        private static void TerminalCanBeFoundById()
-        {
-            QuickSearch.Find(_terminalIdLocation);
-            TerminalResult.First().Click();
-
-            Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
-        }
-
         [TestMethod]
         [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
-            CustomerCanBeFoundByCustomerId();
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
 
             CustomerMenu.AllTerminals.Click();
             TerminalList.First().Click();

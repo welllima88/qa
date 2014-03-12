@@ -87,7 +87,7 @@
     <Compile Include="Tests\Administration\SIMCard\SimCardEditTest.cs" />
     <Compile Include="Tests\Administration\SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="Tests\Administration\SoftwareExchange\SoftwareExchangeTest.cs" />
-    <Compile Include="Tests\Contact\Create\ContactCreateTest.cs" />
+    <Compile Include="Tests\Contact\Create\ContactCreateToCustomerTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateWithNoDataTest.cs" />
@@ -160,7 +160,6 @@
     <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
-    <Compile Include="Tests\Regression\TryTest.cs" />
     <Compile Include="Tests\Regression\CustomerStructureRegressionTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByNameTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByIdTest.cs" />
