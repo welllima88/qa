@@ -27,40 +27,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static string _contactLocationName;
         private static string _terminalIdLocation;
         private static string _terminalIdCustomer;
-
-        [ClassInitialize]
-        public static void CreateCustomerStructure(TestContext testContext)
-        {
-            CreateCustomer();
-            
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
-            // CustomerCheck();
-
-            CreateContactOnCustomer();
-
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
-            CreateTerminalOnCustomer();
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
-            
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerName(_customerName);
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
-            EditCustomer();
-
-            CreateLocationOnCustomer();
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
-            
-            CreateTerminalOnLocation();
-            // CreateContractsOnTerminal();
-
-            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
-            Assert.AreEqual(_locationGuid, LocationView.Guid);
-
-            EditLocation();
-            CreateContactOnLocation();
-        }
+        public TestContext TestContext { get; set; }
 
         /* [ClassCleanup]
         public static void CleanupCustomerStructure()
@@ -164,7 +131,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        [TestCategory("RegressionA")]
+        // [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
@@ -177,7 +144,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        [TestCategory("RegressionA")]
+        // [TestCategory("RegressionA")]
         public void ContactToLocationIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
@@ -189,7 +156,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        [TestCategory("RegressionA")]
+        // [TestCategory("RegressionA")]
         public void TerminalToLocationIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
@@ -198,12 +165,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        [TestCategory("RegressionA")]
-        [Ignore]
+        // [TestCategory("RegressionA")]
         public void ContractsOnTerminalAreCreated()
         {
             QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
-
+            CreateContractsOnTerminal();
             StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
             StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
             StringAssert.Contains(BrandPortlet.Brand("361").Text, "[361]");
@@ -212,7 +178,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        [TestCategory("RegressionA")]
+        // [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
@@ -222,6 +188,48 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             // TerminalList.Result(_terminalIdCustomer).Click();
 
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
+        }
+
+        [ClassInitialize]
+        public static void ExecuteRegressiontest(TestContext testContext)
+        {
+            CreateCustomer();
+            OpenLatestElement();
+            // CustomerCheck();
+
+            CreateContactOnCustomer();
+
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+            CreateTerminalOnCustomer();
+            OpenLatestElement();
+
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerName(_customerName);
+            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
+            EditCustomer();
+            OpenLatestElement();
+
+            CreateLocationOnCustomer();
+            OpenLatestElement();
+
+            CreateTerminalOnLocation();
+            OpenLatestElement();
+
+            CreateContractsOnTerminal();
+
+            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+            Assert.AreEqual(_locationGuid, LocationView.Guid);
+
+            EditLocation();
+            OpenLatestElement();
+
+            CreateContactOnLocation();
+            OpenLatestElement();
+        }
+
+        private static void OpenLatestElement()
+        {
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
         }
     }
 }
