@@ -32,6 +32,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         public static void CreateCustomerStructure(TestContext testContext)
         {
             CreateCustomer();
+            
+            NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
             // CustomerCheck();
 
@@ -39,13 +41,17 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
             CreateTerminalOnCustomer();
-
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
+            
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerName(_customerName);
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             EditCustomer();
 
             CreateLocationOnCustomer();
-
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
+            
             CreateTerminalOnLocation();
             // CreateContractsOnTerminal();
 
