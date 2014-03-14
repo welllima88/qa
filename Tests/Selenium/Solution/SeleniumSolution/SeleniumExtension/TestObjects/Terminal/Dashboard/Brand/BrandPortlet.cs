@@ -1,21 +1,9 @@
-using System.Collections.Generic;
 using OpenQA.Selenium;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
-        public List<Acquirer> Acquirers;
-        public Pms Pms;
-        public ServiceCenter ServiceCenter;
-
-        public BrandPortlet()
-        {
-            ServiceCenter = new ServiceCenter();
-            Pms = new Pms();
-            Acquirers = new List<Acquirer>(5);
-        }
-
         public static IWebElement NewBrandButton
         {
             get

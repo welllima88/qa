@@ -12,10 +12,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 
         public static void Select(string brandId)
         {
+            // title[textContent~='']
             WebDriver.FindElement(
                 By.CssSelector(
-                    string.Format("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td:contains('[{0}]')",
-                                  brandId))).Click();
+                    "span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td"))
+                     .FindElement(By.XPath(string.Format("./*[text()='[{0}]']", brandId)))
+                     .Click();
         }
 
         public static void DeSelect(string brandId)
