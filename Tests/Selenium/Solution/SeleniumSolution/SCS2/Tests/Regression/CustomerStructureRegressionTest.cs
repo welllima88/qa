@@ -2,6 +2,7 @@
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
@@ -43,7 +44,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             DeleteTerminal();
         }*/
 
-        private static void CreateContractsOnTerminal()
+        private static void CreateBrandsOnTerminal()
         {
             BrandPortlet.NewBrandButton.Click();
 
@@ -131,7 +132,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        // [TestCategory("RegressionA")]
+        [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
@@ -144,7 +145,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        // [TestCategory("RegressionA")]
+        [TestCategory("RegressionA")]
         public void ContactToLocationIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
@@ -156,7 +157,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        // [TestCategory("RegressionA")]
+        [TestCategory("RegressionA")]
         public void TerminalToLocationIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
@@ -169,7 +170,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         public void ContractsOnTerminalAreCreated()
         {
             QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
-            CreateContractsOnTerminal();
+            CreateBrandsOnTerminal();
             StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
             StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
             StringAssert.Contains(BrandPortlet.Brand("361").Text, "[361]");
@@ -178,7 +179,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
-        // [TestCategory("RegressionA")]
+        [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
@@ -207,29 +208,56 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             EditCustomer();
             OpenLatestElement();
+            // CreateInfotextOnCustomer();
 
             CreateLocationOnCustomer();
             OpenLatestElement();
 
             CreateTerminalOnLocation();
             OpenLatestElement();
+            // CreateInfotextOnTerminal();
 
-            CreateContractsOnTerminal();
+            CreateBrandsOnTerminal();
 
             QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
             Assert.AreEqual(_locationGuid, LocationView.Guid);
 
             EditLocation();
             OpenLatestElement();
+            // CreateInfotextOnLocation();
 
             CreateContactOnLocation();
             OpenLatestElement();
+        }
+
+        private static void CreateInfotextOnLocation()
+        {
+            LocationMenu.Infotexts.Click();
+            InfotextCreateTest.DoCreateInfotext("Location");
+        }
+
+        private static void CreateInfotextOnCustomer()
+        {
+            CustomerMenu.Infotexts.Click();
+            InfotextCreateTest.DoCreateInfotext("Customer");
+        }
+
+        private static void CreateInfotextOnTerminal()
+        {
+            CustomerMenu.Infotexts.Click();
+            InfotextCreateTest.DoCreateInfotext("Terminal");
         }
 
         private static void OpenLatestElement()
         {
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
+        }
+
+        [TestMethod]
+        public void BrandCheck()
+        {
+            CreateBrandsOnTerminal();
         }
     }
 }

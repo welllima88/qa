@@ -121,6 +121,7 @@
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Tests\Help\HelpTest.cs" />
+    <Compile Include="Tests\Infotext\InfotextCreateTest.cs" />
     <Compile Include="Tests\Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Tests\Lobby\LobbyHeader.cs" />
     <Compile Include="Tests\Lobby\ProcessTicketsTest.cs" />
