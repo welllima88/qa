@@ -1,10 +1,18 @@
+using OpenQA.Selenium;
+
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 {
     public class TerminalTextsPortlet : PortletViewBase
     {
-        public TerminalTextsPortlet()
+        public static IWebElement CreateInfotext
         {
-            PortletId = "div#frame_TerminalInfotextPortlet";
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/Create?&TerminalId=']"));
+            }
         }
     }
 }
