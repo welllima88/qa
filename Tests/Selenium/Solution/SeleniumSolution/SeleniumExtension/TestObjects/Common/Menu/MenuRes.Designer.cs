@@ -196,6 +196,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/ListCustomer?&amp;CUSTOMERID=&apos;].
+        /// </summary>
+        public static string CustomerMenu_Infotexts {
+            get {
+                return ResourceManager.GetString("CustomerMenu_Infotexts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Location/New?CUSTOMERID=&apos;].
         /// </summary>
         public static string CustomerMenu_LocationCreate {

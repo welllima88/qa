@@ -148,5 +148,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_BillingAddressEdit)); }
         }
+
+        public static IWebElement Infotexts
+        {
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Infotexts)); }
+        }
     }
 }

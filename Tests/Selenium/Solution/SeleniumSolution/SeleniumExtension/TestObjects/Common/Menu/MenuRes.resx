@@ -306,4 +306,7 @@
   <data name="Prefix" xml:space="preserve">
     <value>td#leftHandMenu</value>
   </data>
+  <data name="CustomerMenu_Infotexts" xml:space="preserve">
+    <value>td#leftHandMenu a[href*='/InfoText/ListCustomer?&amp;CUSTOMERID=']</value>
+  </data>
 </root>
