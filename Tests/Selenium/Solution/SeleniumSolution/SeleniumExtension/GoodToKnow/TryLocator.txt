@@ -1,6 +1,6 @@
         private void TryOut()
         {
-            //css is horr for text stuff -> consequence will be I use fance xpath!!!
+            //css is horr for text stuff -> consequence will be I use fancy xpath!!!
             //http://sqa.stackexchange.com/questions/362/a-way-to-match-on-text-using-css-locators
             //http://sauceio.com/index.php/2010/03/selenium-tips-finding-elements-by-their-inner-text-using-contains-a-css-pseudo-class/
             //http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
@@ -22,4 +22,8 @@
 
             driver.FindElement(By.XPath("//td[text()=' Kunde']"));
             e.Click();
+			// works may be:
+			// title[textContent~='']
+			 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
+                      Click();
         }
