@@ -153,5 +153,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Infotexts)); }
         }
+
+        public static IWebElement CreateInfotext
+        {
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_InfotextCreate)); }
+        }
     }
 }
