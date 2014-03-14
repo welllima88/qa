@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_TerminalCreate)); }
         }
 
-        public static IWebElement InfotextCreate
+        public static IWebElement CreateInfotext
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_InfotextCreate)); }
         }
