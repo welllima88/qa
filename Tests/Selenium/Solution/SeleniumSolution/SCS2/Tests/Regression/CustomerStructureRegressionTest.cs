@@ -28,7 +28,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static string _contactLocationName;
         private static string _terminalIdLocation;
         private static string _terminalIdCustomer;
-        public TestContext TestContext { get; set; }
 
         /* [ClassCleanup]
         public static void CleanupCustomerStructure()
@@ -191,12 +190,29 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
         }
 
+        [TestMethod]
+        [TestCategory("RegressionA")]
+        public void CustomerIsCreated()
+        {
+            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+
+            // CustomerCheck();
+        }
+
+        [TestMethod]
+        [TestCategory("RegressionA")]
+        public void LocationIsCreated()
+        {
+            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+
+            // LocationCheck();
+        }
+
         [ClassInitialize]
         public static void ExecuteRegressiontest(TestContext testContext)
         {
             CreateCustomer();
             OpenLatestElement();
-            // CustomerCheck();
 
             CreateContactOnCustomer();
 
@@ -215,7 +231,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CreateTerminalOnLocation();
             OpenLatestElement();
-            // CreateInfotextOnTerminal();
+            CreateInfotextOnTerminal();
 
             CreateBrandsOnTerminal();
 
