@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.Selenium
@@ -18,13 +19,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         public WebDriverAdapter(IWebDriver webDriver)
         {
             _webDriver = webDriver;
-        }
-
-        #region IWebDriverAdapter Members
-
-        public IWebElement FindElement(By by)
-        {
-            return _webDriver.FindElement(by);
         }
 
         /// <summary>
@@ -126,7 +120,18 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             return WaitForElementPresent(locator, 2);
         }
 
-        #endregion
+        public IWebElement FindElement(By by)
+        {
+            try
+            {
+                return _webDriver.FindElement(by);
+            }
+            catch (NoSuchElementException e)
+            {
+                Console.Error.WriteLine("{0}: FindElement(By:{1}) -> {2}", DateTime.Now, @by, e.Message);
+                throw;
+            }
+        }
 
         /// <summary>
         ///     Wait for an element found by locator is displayed within the given timeout
