@@ -5,9 +5,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext
 {
     public class InfoTextListView : WebObject
     {
-        public static IWebElement CreateInfotextButton
+        public static IWebElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button[name='create'][href*='/InfoText/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#create[href*='InfoText']")); }
         }
     }
 }
