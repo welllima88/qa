@@ -12,16 +12,17 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
         [TestMethod]
         public void CreateInfotextToCustomer()
         {
-            TestDirector.Navigate("Customer/?CUSTOMERID=99150");
-            CustomerMenu.CreateInfotext.Click();
-
+            TestDirector.Navigate("Customer/?CUSTOMERID=401152");
+            // TODO: CustomerMenu.CreateInfotext.Click();
+            CustomerMenu.Infotexts.Click();
+            InfoTextListView.CreateButton.Click();
             DoCreateInfotext("Customer");
         }
 
         [TestMethod]
         public void CreateInfotextToLocation()
         {
-            TestDirector.Navigate("Customer/?CUSTOMERID=99150");
+            TestDirector.Navigate("Location?LocationId=d94bf6cc-38ca-42c4-82d5-1d7c0414ab94");
 
             LocationMenu.CreateInfotext.Click();
             DoCreateInfotext("Location");
@@ -30,15 +31,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
         [TestMethod]
         public void CreateInfotextToTerminal()
         {
+            TestDirector.Navigate("TerminalDashboard?TerminalId=24290006");
+
             TerminalTextsPortlet.CreateInfotext.Click();
 
-            DoCreateInfotext("Terminal");
+            InfoTextListView.List.Contains(DoCreateInfotext("Terminal"));
         }
 
-        public static void DoCreateInfotext(string infotext)
+        public static string DoCreateInfotext(string infotext)
         {
-            InfoTextCreate.Text = string.Format("SYR {0} Infotext {1}", infotext, TestLauncher.GenerateTestId());
+            infotext =
+                InfoTextCreate.Text = string.Format("SYR {0} Infotext {1}", infotext, TestLauncher.GenerateTestId());
             InfoTextCreate.SaveButton.Click();
+            return infotext;
         }
     }
 }
