@@ -3,6 +3,7 @@ using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {
@@ -52,7 +53,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             _dt = TestLauncher.GenerateTestId();
 
             CustomerMenu.CustomerCreate.Click();
-            
+
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";
             _sbsBillingTenant = "SIX Payment Services (Europe)";
@@ -104,23 +105,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             CustomerCreate.Web = _web;
 
             CustomerCreate.SaveButton.Click();
-        }
-
-        [TestInitialize]
-        public void TestInit()
-        {
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-        }
-
-        [ClassCleanup]
-        public static void ClassCleanup()
-        {
-            CustomerMenu.CustomerDeactivate.Click();
-            //CustomerView.            
         }
 
         [TestMethod]
@@ -313,6 +297,38 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void Segment()
         {
+            Assert.AreEqual(_segment, CustomerView.Segment);
+        }
+
+        public static void Check()
+        {
+            // TODO:includes checks when suggester are removed
+            StringAssert.Matches(CustomerView.CustomerNumber, TestRegExpPatterns.CustomerNo);
+            Assert.AreEqual(_customerName, CustomerView.CustomerName);
+            Assert.AreEqual(_supplier, CustomerView.Supplier);
+            Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
+            StringAssert.Contains(CustomerView.SbsCurrency.ToUpper(), _sbsCurrency);
+            Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
+            // Assert.AreEqual(_categoryCode, CustomerView.CategoryCode);
+            Assert.AreEqual(_supportContract,CustomerView.SupportContract);
+            Assert.AreEqual(_cashIntegrator, CustomerView.CashIntegrator);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            Assert.AreEqual(_po, CustomerView.Po);
+            Assert.AreEqual(_adressAddition, CustomerView.AdressAddition);
+            Assert.AreEqual(_region, CustomerView.Region);
+            Assert.AreEqual(_streetName, CustomerView.StreetNo);
+            Assert.AreEqual(_zip, CustomerView.Zip);
+            Assert.AreEqual(_city, CustomerView.City);
+            Assert.AreEqual(_agency, CustomerView.Agency);
+            // Assert.AreEqual(_language, CustomerView.Language);
+            // Assert.AreEqual(_country, CustomerView.Country);
+            Assert.AreEqual(_email, CustomerView.Email);
+            Assert.AreEqual(_telephone, CustomerView.Telephone);
+            Assert.AreEqual(_mobile, CustomerView.Mobile);
+            Assert.AreEqual(_fax, CustomerView.Fax);
+            Assert.AreEqual(_web, CustomerView.Web);
             Assert.AreEqual(_segment, CustomerView.Segment);
         }
     }
