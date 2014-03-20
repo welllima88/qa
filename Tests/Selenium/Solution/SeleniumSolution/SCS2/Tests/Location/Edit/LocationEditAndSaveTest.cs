@@ -15,25 +15,16 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         private static string _sbsDebitNumber;
         private static string _locationName;
 
-        [TestInitialize]
+        [ClassInitialize]
         public static void Init(TestContext testContext)
         {
             TestDirector.Navigate("Location/?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
-
-            _guid = LocationView.Guid;
-            _ep2MerchantId = LocationView.Ep2MerchantId;
-            _sbsDebitNumber = LocationView.SbsDebitNumber;
-            _sbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
         [TestMethod]
         public void EditLocationAndSave()
         {
             Edit();
-
-            Assert.AreEqual(LocationView.Guid, _guid);
-            Assert.AreEqual(LocationView.Ep2MerchantId, _ep2MerchantId);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
 
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
@@ -43,6 +34,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
         public static void Edit()
         {
+            _guid = LocationView.Guid;
+            _ep2MerchantId = LocationView.Ep2MerchantId;
+            _sbsDebitNumber = LocationView.SbsDebitNumber;
+            _sbsAdressNumber = LocationView.SbsAdressNumber;
+
             LocationView.EditButton.Click();
 
             _locationName = LocationEdit.CompanyName = "SYR Standort" + TestLauncher.GenerateTestId();
@@ -71,10 +67,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         public static void Check()
         {
             Assert.AreEqual(_locationName, LocationView.CompanyName);
-            Assert.AreEqual(LocationEdit.Guid, _guid);
-            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId);
-            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber);
-            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber);
+            Assert.AreEqual(LocationEdit.Guid, _guid);//
+            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId);//
+            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber);//
+            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber);//
 
             StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
@@ -82,7 +78,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
             Assert.AreEqual("Am Bärenplatz 2", LocationView.StreetNo);
             Assert.AreEqual("1331", LocationView.SapNumber);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
             Assert.AreEqual("8001", LocationView.Zip);
             Assert.AreEqual("PO2-A", LocationView.Po);
             Assert.AreEqual("Level2", LocationView.AdressAddition);
