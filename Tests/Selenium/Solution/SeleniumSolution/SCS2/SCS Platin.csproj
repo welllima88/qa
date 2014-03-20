@@ -117,7 +117,7 @@
     <Compile Include="Tests\Customer\Edit\EditCustomerWithInvalidData.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditAndCancelTest.cs" />
     <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
-    <Compile Include="Tests\Customer\Edit\CustomerEditAndSaveTest.cs" />
+    <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Tests\Help\HelpTest.cs" />
