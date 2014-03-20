@@ -109,6 +109,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.TerminalCreate.Click();
+            TerminalChooser.ArticleFilter = "1550";
             TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
             TerminalConfigCreate.SaveButton.Click();
@@ -249,7 +250,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateInfotextOnLocation()
         {
-            LocationMenu.Infotexts.Click();
+            LocationMenu.CreateInfotext.Click();
             InfotextCreateTest.DoCreateInfotext("Location");
         }
 
