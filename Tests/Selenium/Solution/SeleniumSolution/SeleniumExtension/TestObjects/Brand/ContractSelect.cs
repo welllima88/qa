@@ -1,3 +1,4 @@
+using System.Linq;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
@@ -9,14 +10,16 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
         }
-
-        public static void Select(string brandId)
+        /// <summary>
+        /// Selects Brands which are to create on a terminal
+        /// </summary>
+        /// <param name="brand">can be any part of the string e.g. BrandId or/and Name</param>
+        public static void Select(string brand)
         {
             // title[textContent~='']
-            WebDriver.FindElement(
-                By.CssSelector(
-                    "span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td"))
-                     .FindElement(By.XPath(string.Format("./*[text()='[{0}]']", brandId)))
+
+            WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"))
+                     .First(d => d.Text.Contains(brand))
                      .Click();
         }
 
