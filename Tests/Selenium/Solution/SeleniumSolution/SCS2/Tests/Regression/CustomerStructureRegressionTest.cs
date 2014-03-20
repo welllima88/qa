@@ -260,7 +260,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateInfotextOnTerminal()
         {
-            CustomerMenu.Infotexts.Click();
+            TerminalTextsPortlet.CreateInfotext.Click();
             InfotextCreateTest.DoCreateInfotext("Terminal");
         }
 
