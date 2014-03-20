@@ -66,14 +66,16 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void EditLocation()
         {
-            LocationEditAndSaveTest.DoEditLocation();
+            LocationEditAndSaveTest.Edit();
             _locationName = LocationView.CompanyName;
+            LocationEditAndSaveTest.Check();
         }
 
         private static void EditCustomer()
         {
-            CustomerEditAndSaveTest.DoEditCustomer();
+            CustomerEditTest.Edit();
             _customerName = CustomerView.CustomerName;
+            CustomerEditTest.Check();
         }
 
         private static void CreateContactOnLocation()
@@ -120,9 +122,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateCustomer()
         {
-            CustomerCreateTest.DoCreateCustomer();
+            CustomerCreateTest.Create();
             _customerNumber = CustomerView.CustomerNumber;
             _customerName = CustomerView.CustomerName;
+            CustomerCreateTest.Check();
         }
 
         private static void CreateContactOnCustomer()
