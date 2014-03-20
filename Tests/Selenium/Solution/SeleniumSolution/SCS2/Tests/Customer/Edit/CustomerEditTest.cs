@@ -18,6 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         private static string _sbsCurrency;
         private static string _sbsDebitNumber;
         private static string _sbsAdressNumber;
+        private static string _customerName;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -59,7 +60,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             _supplier = CustomerView.Supplier;
             CustomerMenu.CustomerEdit.Click();
 
-            CustomerEdit.CustomerName = "SYR Kunde" + TestLauncher.GenerateTestId();
+            _customerName = CustomerEdit.CustomerName = "SYR Kunde" + TestLauncher.GenerateTestId();
 
             CustomerEdit.CompanyName = "SYR Sele Firma A";
             CustomerEdit.StreetNo = "Hardturmstr. 201";
@@ -113,26 +114,20 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         public static void Check()
         {
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
-            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
+            Assert.AreEqual(_customerName, CustomerView.CustomerName);
             Assert.AreEqual(_supplier, CustomerView.Supplier);
             Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
             Assert.AreEqual(_sbsCurrency, CustomerView.SbsCurrency);
             Assert.AreEqual(_sbsDebitNumber, CustomerView.SbsDebitNumber);
             Assert.AreEqual(_sbsAdressNumber, CustomerView.SbsAdressNumber);
-            Assert.AreEqual("5172: PETROLEUM/PETROL PRODUCTS", CustomerView.CategoryCode);
-            Assert.AreEqual("Hotline und Wartung kostenpflichtig", CustomerView.SupportContract);
-            Assert.AreEqual("Wincor Nixdorf AG, Brüttisellen", CustomerView.CashIntegrator);
             Assert.AreEqual("5440", CustomerView.SapNumber);
-            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
-            Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
             Assert.AreEqual("SIX Payment Services AG", CustomerView.Supplier);
             Assert.AreEqual("SIX Payment Services (Europe)", CustomerView.SbsBillingTenant);
-            Assert.AreEqual("EUR", CustomerView.SbsCurrency);
-            Assert.AreEqual("5440", CustomerView.SapNumber);
+            StringAssert.Contains(CustomerView.SbsCurrency.ToUpper(), "EUR");
 
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
 
-            int retry = 5;
+            int retry = 2;
             do
             {
                 try
@@ -157,7 +152,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             Assert.AreEqual("Hardturmstr. 201", CustomerView.StreetNo);
             Assert.AreEqual("8021", CustomerView.Zip);
             Assert.AreEqual("Zürich", CustomerView.City);
-            Assert.AreEqual("SIX Payment Services (Europe)", CustomerView.Agency);
+            StringAssert.Contains(CustomerView.Agency, "SIX Payment Services (Europe)");
             StringAssert.Contains(CustomerView.Language, "[de]");
             StringAssert.Contains(CustomerView.Country, "[CH]");
             Assert.AreEqual("marc.siegmund@six-group.com", CustomerView.Email);
