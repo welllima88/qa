@@ -128,7 +128,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             }
             catch (NoSuchElementException e)
             {
-                Console.Error.WriteLine("{0}: FindElement(By:{1}) -> {2}", DateTime.Now, @by, e.Message);
+                Console.Error.WriteLine("{0}: FindElement({1}) -> {2}", DateTime.Now, @by, e.Message);
                 throw;
             }
         }
