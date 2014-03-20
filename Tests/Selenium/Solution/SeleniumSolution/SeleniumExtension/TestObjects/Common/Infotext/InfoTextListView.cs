@@ -14,7 +14,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext
 
         private static ReadOnlyCollection<IWebElement> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector("table.dataTable tbody tr")); }
+            get { return WebDriver.FindElements(By.CssSelector("table.dataTable tbody tr td#infotext")); }
         }
 
         public static List<string> List

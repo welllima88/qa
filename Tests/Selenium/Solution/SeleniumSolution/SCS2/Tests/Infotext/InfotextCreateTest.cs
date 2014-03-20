@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
             // TODO: CustomerMenu.CreateInfotext.Click();
             CustomerMenu.Infotexts.Click();
             InfoTextListView.CreateButton.Click();
-            InfoTextListView.List.Contains(DoCreateInfotext("Customer"));
+            DoCreateInfotext("Customer");
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
             TestDirector.Navigate("Location?LocationId=d94bf6cc-38ca-42c4-82d5-1d7c0414ab94");
 
             LocationMenu.CreateInfotext.Click();
-            InfoTextListView.List.Contains(DoCreateInfotext("Location"));
+            DoCreateInfotext("Location");
         }
 
         [TestMethod]
@@ -35,15 +35,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
 
             TerminalTextsPortlet.CreateInfotext.Click();
 
-            InfoTextListView.List.Contains(DoCreateInfotext("Terminal"));
+            DoCreateInfotext("Terminal");
         }
 
-        public static string DoCreateInfotext(string infotext)
+        public static void DoCreateInfotext(string infotext)
         {
             infotext =
                 InfoTextCreate.Text = string.Format("SYR {0} Infotext {1}", infotext, TestLauncher.GenerateTestId());
             InfoTextCreate.SaveButton.Click();
-            return infotext;
+            Assert.IsTrue(InfoTextListView.List.Contains(infotext));
         }
     }
 }
