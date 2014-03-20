@@ -9,21 +9,26 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
     [TestClass]
     public class LocationEditAndSaveTest
     {
+        private static string ep2MerchantId;
+        private static string guid;
+        private static string sbsAdressNumber;
+        private static string sbsDebitNumber;
+
         [TestInitialize]
-        public void TestInit()
+        public static void Init(TestContext testContext)
         {
             TestDirector.Navigate("Location/?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
+
+            guid = LocationView.Guid;
+            ep2MerchantId = LocationView.Ep2MerchantId;
+            sbsDebitNumber = LocationView.SbsDebitNumber;
+            sbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
         [TestMethod]
         public void EditLocationAndSave()
         {
-            string guid = LocationView.Guid;
-            string ep2MerchantId = LocationView.Ep2MerchantId;
-            string sbsDebitNumber = LocationView.SbsDebitNumber;
-            string sbsAdressNumber = LocationView.SbsAdressNumber;
-
-            DoEditLocation();
+            Edit();
 
             Assert.AreEqual(LocationView.Guid, guid);
             Assert.AreEqual(LocationView.Ep2MerchantId, ep2MerchantId);
@@ -32,33 +37,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
-            Assert.AreEqual(LocationEdit.Guid, guid);
-            Assert.AreEqual(LocationEdit.Ep2MerchantId, ep2MerchantId);
-            Assert.AreEqual(LocationEdit.SbsDebitNumber, sbsDebitNumber);
-            Assert.AreEqual(LocationEdit.SbsAdressNumber, sbsAdressNumber);
-
-            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
-
-            Assert.AreEqual("Am Bärenplatz 2", LocationView.StreetNo);
-            Assert.AreEqual("1331", LocationView.SapNumber);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
-            Assert.AreEqual("8001", LocationView.Zip);
-            Assert.AreEqual("PO2-A", LocationView.Po);
-            Assert.AreEqual("Level2", LocationView.AdressAddition);
-            Assert.AreEqual("Kreuzlingen", LocationView.City);
-            StringAssert.Contains(LocationView.Language, "[en]");
-            StringAssert.Contains(LocationView.Country, "[CH]");
-            Assert.AreEqual("marc.siegmund@six-group.com", LocationView.Email);
-            Assert.AreEqual("+41 58 399 6237", LocationView.Telephone);
-            Assert.AreEqual("+42 58 399 6237", LocationView.Mobile);
-            Assert.AreEqual("+43 58 399 6237", LocationView.Fax);
-            Assert.AreEqual("www.six-group.com", LocationView.Web);
+            Check();
         }
 
-        public static void DoEditLocation()
+        public static void Edit()
         {
             LocationView.EditButton.Click();
 
@@ -83,6 +65,34 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             ChangeForm.Remark = "SYR " + TestLauncher.GenerateTestId() + " location change remark";
 
             LocationCreate.SaveButton.Click();
+        }
+
+        public static void Check()
+        {
+            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
+            Assert.AreEqual(LocationEdit.Guid, guid);
+            Assert.AreEqual(LocationEdit.Ep2MerchantId, ep2MerchantId);
+            Assert.AreEqual(LocationEdit.SbsDebitNumber, sbsDebitNumber);
+            Assert.AreEqual(LocationEdit.SbsAdressNumber, sbsAdressNumber);
+
+            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+
+            Assert.AreEqual("Am Bärenplatz 2", LocationView.StreetNo);
+            Assert.AreEqual("1331", LocationView.SapNumber);
+            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
+            Assert.AreEqual("8001", LocationView.Zip);
+            Assert.AreEqual("PO2-A", LocationView.Po);
+            Assert.AreEqual("Level2", LocationView.AdressAddition);
+            Assert.AreEqual("Kreuzlingen", LocationView.City);
+            StringAssert.Contains(LocationView.Language, "[en]");
+            StringAssert.Contains(LocationView.Country, "[CH]");
+            Assert.AreEqual("marc.siegmund@six-group.com", LocationView.Email);
+            Assert.AreEqual("+41 58 399 6237", LocationView.Telephone);
+            Assert.AreEqual("+42 58 399 6237", LocationView.Mobile);
+            Assert.AreEqual("+43 58 399 6237", LocationView.Fax);
+            Assert.AreEqual("www.six-group.com", LocationView.Web);
         }
     }
 }
