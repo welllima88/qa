@@ -17,7 +17,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         private static string _city;
         private static string _companyName;
         private static string _country;
-        private static string _custId;
         private static string _customerName;
         private static string _segment;
 
@@ -43,12 +42,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         {
             TestDirector.Navigate();
 
-            DoCreateCustomer();
-
-            _custId = CustomerView.CustomerNumber;
+            Create();
         }
 
-        public static void DoCreateCustomer()
+        public static void Create()
         {
             _dt = TestLauncher.GenerateTestId();
 
