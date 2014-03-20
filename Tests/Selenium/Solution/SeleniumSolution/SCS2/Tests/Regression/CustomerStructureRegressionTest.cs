@@ -7,6 +7,7 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
@@ -165,6 +166,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         }
 
         [TestMethod]
+        [Ignore]
         // [TestCategory("RegressionA")]
         public void BrandsOnTerminalAreCreated()
         {
@@ -207,7 +209,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             // LocationCheck();
         }
 
-
         [ClassInitialize]
         public static void ExecuteRegressiontest(TestContext testContext)
         {
@@ -233,7 +234,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             OpenLatestElement();
             CreateInfotextOnTerminal();
 
-            CreateBrandsOnTerminal();
+            // TODO: CreateBrandsOnTerminal();
 
             QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
             Assert.AreEqual(_locationGuid, LocationView.Guid);
@@ -254,9 +255,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateInfotextOnCustomer()
         {
+            // TODO: CustomerMenu.Infotexts.Click();
             CustomerMenu.Infotexts.Click();
+            InfoTextListView.CreateButton.Click();
+
             InfotextCreateTest.DoCreateInfotext("Customer");
-            
         }
 
         private static void CreateInfotextOnTerminal()
