@@ -202,7 +202,7 @@
     <value>td#leftHandMenu a[href*='/Person/LocationPersonList'][href*='&amp;LOCATIONID=']</value>
   </data>
   <data name="LocationMenu_Infotexts" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='InfoText/LocationInfoTextList.aspx?LOCATIONID=']</value>
+    <value>td#leftHandMenu a[href*='/InfoText/ListLocation']</value>
   </data>
   <data name="MassMutationMenu_CustomerCreate" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/MassMutation/CustomersFileUpload.aspx']</value>

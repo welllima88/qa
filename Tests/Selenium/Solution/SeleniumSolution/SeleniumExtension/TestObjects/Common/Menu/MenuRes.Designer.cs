@@ -304,7 +304,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;InfoText/LocationInfoTextList.aspx?LOCATIONID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/InfoText/ListLocation&apos;].
         /// </summary>
         public static string LocationMenu_Infotexts {
             get {
