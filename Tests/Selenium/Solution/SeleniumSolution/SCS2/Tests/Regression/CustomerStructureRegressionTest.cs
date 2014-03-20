@@ -166,10 +166,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         [TestMethod]
         // [TestCategory("RegressionA")]
-        public void ContractsOnTerminalAreCreated()
+        public void BrandsOnTerminalAreCreated()
         {
             QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
-            CreateBrandsOnTerminal();
             StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
             StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
             StringAssert.Contains(BrandPortlet.Brand("361").Text, "[361]");
@@ -208,6 +207,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             // LocationCheck();
         }
 
+
         [ClassInitialize]
         public static void ExecuteRegressiontest(TestContext testContext)
         {
@@ -224,7 +224,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             EditCustomer();
             OpenLatestElement();
-            // CreateInfotextOnCustomer();
+            CreateInfotextOnCustomer();
 
             CreateLocationOnCustomer();
             OpenLatestElement();
@@ -240,7 +240,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             EditLocation();
             OpenLatestElement();
-            // CreateInfotextOnLocation();
+            CreateInfotextOnLocation();
 
             CreateContactOnLocation();
             OpenLatestElement();
@@ -256,6 +256,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             CustomerMenu.Infotexts.Click();
             InfotextCreateTest.DoCreateInfotext("Customer");
+            
         }
 
         private static void CreateInfotextOnTerminal()
@@ -268,12 +269,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
-        }
-
-        [TestMethod]
-        public void BrandCheck()
-        {
-            CreateBrandsOnTerminal();
         }
     }
 }
