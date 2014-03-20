@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
             // TODO: CustomerMenu.CreateInfotext.Click();
             CustomerMenu.Infotexts.Click();
             InfoTextListView.CreateButton.Click();
-            DoCreateInfotext("Customer");
+            InfoTextListView.List.Contains(DoCreateInfotext("Customer"));
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
             TestDirector.Navigate("Location?LocationId=d94bf6cc-38ca-42c4-82d5-1d7c0414ab94");
 
             LocationMenu.CreateInfotext.Click();
-            DoCreateInfotext("Location");
+            InfoTextListView.List.Contains(DoCreateInfotext("Location"));
         }
 
         [TestMethod]
