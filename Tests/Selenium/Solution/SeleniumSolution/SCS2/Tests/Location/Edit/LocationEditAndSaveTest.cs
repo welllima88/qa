@@ -9,20 +9,21 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
     [TestClass]
     public class LocationEditAndSaveTest
     {
-        private static string ep2MerchantId;
-        private static string guid;
-        private static string sbsAdressNumber;
-        private static string sbsDebitNumber;
+        private static string _ep2MerchantId;
+        private static string _guid;
+        private static string _sbsAdressNumber;
+        private static string _sbsDebitNumber;
+        private static string _locationName;
 
         [TestInitialize]
         public static void Init(TestContext testContext)
         {
             TestDirector.Navigate("Location/?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
 
-            guid = LocationView.Guid;
-            ep2MerchantId = LocationView.Ep2MerchantId;
-            sbsDebitNumber = LocationView.SbsDebitNumber;
-            sbsAdressNumber = LocationView.SbsAdressNumber;
+            _guid = LocationView.Guid;
+            _ep2MerchantId = LocationView.Ep2MerchantId;
+            _sbsDebitNumber = LocationView.SbsDebitNumber;
+            _sbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
         [TestMethod]
@@ -30,8 +31,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         {
             Edit();
 
-            Assert.AreEqual(LocationView.Guid, guid);
-            Assert.AreEqual(LocationView.Ep2MerchantId, ep2MerchantId);
+            Assert.AreEqual(LocationView.Guid, _guid);
+            Assert.AreEqual(LocationView.Ep2MerchantId, _ep2MerchantId);
             Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
 
             NavigationBar.Lobby.Click();
@@ -44,7 +45,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         {
             LocationView.EditButton.Click();
 
-            LocationEdit.CompanyName = "SYR Standort" + TestLauncher.GenerateTestId();
+            _locationName = LocationEdit.CompanyName = "SYR Standort" + TestLauncher.GenerateTestId();
             LocationEdit.StreetNo = "Am Bärenplatz 2";
             LocationEdit.Zip = "8001";
             LocationEdit.City = "Kreuzlingen";
@@ -69,11 +70,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
         public static void Check()
         {
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
-            Assert.AreEqual(LocationEdit.Guid, guid);
-            Assert.AreEqual(LocationEdit.Ep2MerchantId, ep2MerchantId);
-            Assert.AreEqual(LocationEdit.SbsDebitNumber, sbsDebitNumber);
-            Assert.AreEqual(LocationEdit.SbsAdressNumber, sbsAdressNumber);
+            Assert.AreEqual(_locationName, LocationView.CompanyName);
+            Assert.AreEqual(LocationEdit.Guid, _guid);
+            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId);
+            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber);
+            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber);
 
             StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
