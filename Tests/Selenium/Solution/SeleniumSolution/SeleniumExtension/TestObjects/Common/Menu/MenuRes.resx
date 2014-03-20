@@ -298,7 +298,7 @@
     <value>td#leftHandMenu a[href*='/CustomerInfoText/Create?&amp;CUSTOMERID=']</value>
   </data>
   <data name="LocationMenu_InfotextCreate" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Pages/InfoText/LocationInfoTextNew.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/InfoText/NewLocationInfoText']</value>
   </data>
   <data name="AcquirerChange" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/MassAcqExchange']</value>
