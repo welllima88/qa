@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext
     {
         public static IWebElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#create[href*='InfoText']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")); }
         }
 
         private static ReadOnlyCollection<IWebElement> Elements
