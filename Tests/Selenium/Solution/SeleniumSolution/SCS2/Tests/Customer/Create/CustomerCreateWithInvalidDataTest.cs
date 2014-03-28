@@ -23,7 +23,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             SbsBillingTenant = "SIX Payment Services (Europe)";
             CustomerName = "SYR Sele Kunde A$°";
             CompanyName = "SYR Sele Firma A$°";
-            CustomerNumber = "^@}$°";
             StreetNo = "Hardturmstr. 201$°";
             Zip = "802$°";
             City = "Zürich$°";
