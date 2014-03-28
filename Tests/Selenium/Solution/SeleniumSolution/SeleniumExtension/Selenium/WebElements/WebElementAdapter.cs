@@ -34,11 +34,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
             throw new NotSelectableElementException(TagName);
         }
 
-        public SuggestorWebElementAdapter Suggestor()
-        {
-            return new SuggestorWebElementAdapter(this);
-        }
-
         public TextAreaElement TextArea()
         {
             return new TextAreaElement(this);

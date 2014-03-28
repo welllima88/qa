@@ -12,7 +12,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
         SelectElement Selector();
         TextBoxElement TextBox();
         PasswortTextBoxElement Password();
-        SuggestorWebElementAdapter Suggestor();
         TextAreaElement TextArea();
     }
 }
