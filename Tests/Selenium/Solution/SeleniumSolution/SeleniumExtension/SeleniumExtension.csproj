@@ -97,7 +97,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings\SeleniumConfig.cs" />
-    <Compile Include="Selenium\WebElements\SuggestorWebElementAdapter.cs" />
     <Compile Include="Selenium\TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
