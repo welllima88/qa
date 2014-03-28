@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
         //TODO test this explicit! because in edit mode not available
         public IWebElement ClickAdressFromLocation
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnFromLocation")); }
+            get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
         }
 
         public static string FirstName
