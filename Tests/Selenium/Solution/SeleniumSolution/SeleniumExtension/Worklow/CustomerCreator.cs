@@ -104,7 +104,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             CustomerCreate.CustomerName = CustomerName;
 
             CustomerCreate.CompanyName = CompanyName;
-            CustomerCreate.CustomerNumber = CustomerNumber;
             CustomerCreate.StreetNo = StreetNo;
             CustomerCreate.Zip = Zip;
             CustomerCreate.City = City;
