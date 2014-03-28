@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext;
@@ -81,7 +82,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateContactOnLocation()
         {
             LocationMenu.ContactCreate.Click();
-            ContactCreateToCustomerTest.DoCreateContact();
+            ContactCreateToCustomerTest.Create();
             _contactLocationName = ContactPersonView.FirstName;
         }
 
@@ -102,9 +103,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateLocationOnCustomer()
         {
-            LocationCreateTest.DoCreateLocation();
+            LocationCreateTest.Create();
             _locationGuid = LocationView.Guid;
             _locationName = LocationView.CompanyName;
+            LocationCreateTest.Check();
         }
 
         private static void CreateTerminalOnCustomer()
@@ -131,7 +133,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateContactOnCustomer()
         {
             CustomerMenu.ContactCreate.Click();
-            ContactCreateToCustomerTest.DoCreateContact();
+            ContactCreateToCustomerTest.Create();
+            ContactCreateToCustomerTest.Check();
             _contactCustomerName = ContactPersonView.FirstName;
         }
 
@@ -249,6 +252,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CreateContactOnLocation();
             OpenLatestElement();
+            EditContactOnLocation();
+        }
+
+        private static void EditContactOnLocation()
+        {
+            ContactMenu.ContactEdit.Click();
+            ContactEditTest.Edit();
+            ContactEditTest.Check();
+            _contactLocationName = ContactPersonView.FirstName;
         }
 
         private static void CreateInfotextOnLocation()
