@@ -19,7 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         {
             TestDirector.Navigate("Customer/?CustomerId=401983");
 
-            DoCreateLocation();
+            Create();
 
             _locId = LocationView.Guid;
             _ep2MerchantId = LocationView.Ep2MerchantId;
@@ -142,7 +142,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             Assert.AreEqual("www.six-group.com/de-intern", LocationView.Web);
         }
 
-        public static void DoCreateLocation()
+        public static void Create()
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.LocationCreate.Click();
@@ -164,6 +164,43 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             LocationCreate.Web = "www.six-group.com/de-intern";
 
             LocationCreate.SaveButton.Click();
+        }
+
+        public static void Check()
+        {
+            Assert.AreEqual(_companyName, LocationView.CompanyName);
+
+            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+
+            StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+
+            StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+
+            Assert.AreEqual("Bröselstr. 201a-c", LocationView.StreetNo);
+
+            Assert.AreEqual("PO1", LocationView.Po);
+
+            Assert.AreEqual("55555", LocationView.Zip);
+
+            Assert.AreEqual("München", LocationView.City);
+
+            Assert.AreEqual("Reg 55", LocationView.Region);
+
+            Assert.AreEqual("AdressAdd1", LocationView.AdressAddition);
+
+            Assert.AreEqual("Französisch [fr]", LocationView.Language);
+
+            Assert.AreEqual("Frankreich [FR]", LocationView.Country);
+
+            Assert.AreEqual("marc.siegmund@six-group.com", LocationView.Email);
+
+            Assert.AreEqual("0031 58 399 6237", LocationView.Telephone);
+
+            Assert.AreEqual("0032 58 399 6237", LocationView.Mobile);
+
+            Assert.AreEqual("0033 58 399 6237", LocationView.Fax);
+
+            Assert.AreEqual("www.six-group.com/de-intern", LocationView.Web);
         }
     }
 }
