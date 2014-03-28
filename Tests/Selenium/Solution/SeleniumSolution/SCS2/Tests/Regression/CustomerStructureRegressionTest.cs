@@ -266,7 +266,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateInfotextOnLocation()
         {
             LocationMenu.CreateInfotext.Click();
-            InfotextCreateTest.DoCreateInfotext("Location");
+            InfotextCreateTest.Create("Location");
         }
 
         private static void CreateInfotextOnCustomer()
@@ -275,13 +275,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerMenu.Infotexts.Click();
             InfoTextListView.CreateButton.Click();
 
-            InfotextCreateTest.DoCreateInfotext("Customer");
+            InfotextCreateTest.Create("Customer");
         }
 
         private static void CreateInfotextOnTerminal()
         {
             TerminalTextsPortlet.CreateInfotext.Click();
-            InfotextCreateTest.DoCreateInfotext("Terminal");
+            InfotextCreateTest.Create("Terminal");
         }
 
         private static void OpenLatestElement()
