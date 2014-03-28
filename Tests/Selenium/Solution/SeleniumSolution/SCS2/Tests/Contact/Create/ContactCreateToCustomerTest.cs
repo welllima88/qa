@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             // TestDirector.Navigate(TestDataRepository.Customer.GetAny());
 
             CustomerMenu.ContactCreate.Click();
-            DoCreateContact();
+            Create();
         }
 
         [TestMethod]
@@ -120,7 +120,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             // Assert.AreEqual(url, TestDirector.WebDriver.Url);
         }
 
-        public static void DoCreateContact()
+        public static void Create()
         {
             _firstName = "SYR" + TestLauncher.GenerateTestId();
 
@@ -150,6 +150,25 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             ContactPersonView.DeleteButton.Click();
             ContactPersonView.DeleteConfirm();
+        }
+
+        public static void Check()
+        {
+            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
+            Assert.AreEqual("Siegmund SYR AUTO", ContactPersonView.Name);
+            StringAssert.Contains(ContactPersonView.Language, "[de]");
+            Assert.AreEqual("+41 58 399 6237 - 1", ContactPersonView.Telephone);
+            Assert.AreEqual("+41 58 399 6237 - 2", ContactPersonView.Mobile);
+            Assert.AreEqual("+41 58 399 6237 - 3", ContactPersonView.Fax);
+            Assert.AreEqual("contact@six-group.com", ContactPersonView.Email);
+            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
+            Assert.AreEqual("POC", ContactPersonView.Po);
+            Assert.AreEqual("55555", ContactPersonView.Zip);
+            Assert.AreEqual("Mitte", ContactPersonView.Region);
+            Assert.AreEqual("Berlin", ContactPersonView.City);
+            StringAssert.Contains(ContactPersonView.Country, "[DE]");
+            Assert.AreEqual("Zusatz1", ContactPersonView.AddressAddition);
+            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
         }
     }
 }

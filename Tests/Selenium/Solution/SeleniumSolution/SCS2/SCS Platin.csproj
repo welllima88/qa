@@ -94,7 +94,7 @@
     <Compile Include="Tests\Contact\Create\ContactCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Contact\Create\ContactCreateToLocationTest.cs" />
     <Compile Include="Tests\Contact\Edit\ContactEditWithNoDataTest.cs" />
-    <Compile Include="Tests\Contact\Edit\ContactEditAndSaveTest.cs" />
+    <Compile Include="Tests\Contact\Edit\ContactEditTest.cs" />
     <Compile Include="Tests\Contact\Edit\ContactEditWithMinimalInputTest.cs" />
     <Compile Include="Tests\Contact\Edit\EditContactWithMissingDataTest.cs" />
     <Compile Include="Tests\Contact\Edit\EditContactWithInvalidDataTest.cs" />
@@ -102,7 +102,6 @@
     <Compile Include="Tests\Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
-    <Compile Include="Tests\Customer\Create\CustomerCreateWithManualCustomerNumberTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateGuiTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithSBSExportTest.cs" />
