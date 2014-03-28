@@ -16,6 +16,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
         }
 
+        public IWebElement ClickAdressFromLocation
+        {
+            get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
+        }
+
         public static string FirstName
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.FirstName)).TextBox().TypeText(value); }
