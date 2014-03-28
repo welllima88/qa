@@ -8,22 +8,26 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
 {
     [TestClass]
-    public class ContactEditAndSaveTest
+    public class ContactEditTest
     {
         private static string _contactId;
-        private static double _dt;
+        private static string _firstName;
 
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
-            _dt = TestLauncher.GenerateTestId();
 
+            Edit();
+        }
+
+        public static void Edit()
+        {
             ContactMenu.ContactEdit.Click();
-
+            _firstName = "Marc" + TestLauncher.GenerateTestId();
             ContactPersonEdit.Salutation = "Herr";
-            ContactPersonEdit.FirstName = "Marc" + _dt;
+            ContactPersonEdit.FirstName = _firstName;
             ContactPersonEdit.Name = "Siegmund";
             ContactPersonEdit.Language = "fr";
             ContactPersonEdit.Telephone = "0123456789";
@@ -57,7 +61,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("Marc" + _dt, ContactPersonView.FirstName);
+            Assert.AreEqual("Marc" + _firstName, ContactPersonView.FirstName);
         }
 
         [TestMethod]
@@ -133,7 +137,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         }
 
         [TestMethod]
-        [Ignore]
         public void Web()
         {
             Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
@@ -150,6 +153,26 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
         {
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
+        }
+
+        public static void Check()
+        {
+            Assert.AreEqual("Herr", ContactPersonView.Salutation);
+            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
+            Assert.AreEqual("Siegmund", ContactPersonView.Name);
+            Assert.AreEqual("Französisch [fr]", ContactPersonView.Language);
+            Assert.AreEqual("0123456789", ContactPersonView.Telephone);
+            Assert.AreEqual("1234567890", ContactPersonView.Mobile);
+            Assert.AreEqual("2345678901", ContactPersonView.Fax);
+            Assert.AreEqual("tksyr_contact@six-group.com", ContactPersonView.Email);
+            Assert.AreEqual("Pof", ContactPersonView.Po);
+            Assert.AreEqual("Strasse 1", ContactPersonView.StreetNo);
+            Assert.AreEqual("2351", ContactPersonView.Zip);
+            Assert.AreEqual("City", ContactPersonView.City);
+            Assert.AreEqual("Reg", ContactPersonView.Region);
+            Assert.AreEqual("Frankreich [FR]", ContactPersonView.Country);
+            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
+            Assert.AreEqual("Add", ContactPersonView.AddressAddition);
         }
     }
 }
