@@ -134,7 +134,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void  PostDeliveryTickets()
+        public void PostDeliveryTickets()
         {
             Assert.IsTrue(LobbyMenu.PostDeliveryTickets.Displayed);
         }

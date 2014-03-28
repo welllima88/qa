@@ -3,7 +3,6 @@ using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 {
@@ -305,7 +304,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
             StringAssert.Contains(CustomerView.SbsCurrency.ToUpper(), _sbsCurrency);
             Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
-            Assert.AreEqual(_supportContract,CustomerView.SupportContract);
+            Assert.AreEqual(_supportContract, CustomerView.SupportContract);
             Assert.AreEqual(_cashIntegrator, CustomerView.CashIntegrator);
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);

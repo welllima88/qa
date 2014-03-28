@@ -1,10 +1,9 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
-    public class ContactList:WebObject
+    public class ContactList : WebObject
     {
         public static IWebElement First()
         {

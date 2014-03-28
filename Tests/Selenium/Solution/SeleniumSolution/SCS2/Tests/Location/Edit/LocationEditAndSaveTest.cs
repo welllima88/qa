@@ -67,10 +67,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         public static void Check()
         {
             Assert.AreEqual(_locationName, LocationView.CompanyName);
-            Assert.AreEqual(LocationEdit.Guid, _guid);//
-            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId);//
-            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber);//
-            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber);//
+            Assert.AreEqual(LocationEdit.Guid, _guid); //
+            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId); //
+            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber); //
+            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber); //
 
             StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);

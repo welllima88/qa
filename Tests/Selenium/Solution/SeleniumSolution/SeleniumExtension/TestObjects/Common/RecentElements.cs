@@ -7,10 +7,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public static IWebElement Latest
         {
-            get
-            {
-                return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent));
-            }
+            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
         }
     }
 }

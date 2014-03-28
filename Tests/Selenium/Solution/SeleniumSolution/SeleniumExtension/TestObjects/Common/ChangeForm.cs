@@ -8,12 +8,22 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
     {
         public static string Reason
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']")).Selector().SelectByValue(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']"))
+                         .Selector()
+                         .SelectByValue(value);
+            }
         }
 
         public static string Remark
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[id$='_NotificationRemarks']")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input[id$='_NotificationRemarks']"))
+                         .TextBox()
+                         .TypeText(value);
+            }
         }
 
         public static void DelayTime(TimeSpan changeTime)

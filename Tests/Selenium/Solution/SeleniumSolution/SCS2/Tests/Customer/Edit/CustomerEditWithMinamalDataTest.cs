@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             CustomerEdit.AdressAddition = "";
             CustomerEdit.Zip = "8021";
             CustomerEdit.City = "Zürich";
-            
+
             CustomerEdit.Agency = "Keine Agentur";
             CustomerEdit.Language = "Deutsch [de]";
             CustomerEdit.Country = "Schweiz [CH]";

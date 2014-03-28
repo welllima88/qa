@@ -10,8 +10,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
         }
+
         /// <summary>
-        /// Selects Brands which are to create on a terminal
+        ///     Selects Brands which are to create on a terminal
         /// </summary>
         /// <param name="brand">can be any part of the string e.g. BrandId or/and Name</param>
         public static void Select(string brand)

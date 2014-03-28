@@ -6,7 +6,6 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.QA.Selenium.Extension.Settings;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 
 namespace SIX.SCS.QA.Selenium.Extension.Selenium
 {
@@ -17,7 +16,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
-
 
         private static void CreateWebDriverInstance(string profileName)
         {
