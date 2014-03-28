@@ -299,14 +299,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
 
         public static void Check()
         {
-            // TODO:includes checks when suggester are removed
             StringAssert.Matches(CustomerView.CustomerNumber, TestRegExpPatterns.CustomerNo);
             Assert.AreEqual(_customerName, CustomerView.CustomerName);
             Assert.AreEqual(_supplier, CustomerView.Supplier);
             Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
             StringAssert.Contains(CustomerView.SbsCurrency.ToUpper(), _sbsCurrency);
             Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
-            // Assert.AreEqual(_categoryCode, CustomerView.CategoryCode);
             Assert.AreEqual(_supportContract,CustomerView.SupportContract);
             Assert.AreEqual(_cashIntegrator, CustomerView.CashIntegrator);
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
@@ -319,8 +317,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             Assert.AreEqual(_zip, CustomerView.Zip);
             Assert.AreEqual(_city, CustomerView.City);
             Assert.AreEqual(_agency, CustomerView.Agency);
-            // Assert.AreEqual(_language, CustomerView.Language);
-            // Assert.AreEqual(_country, CustomerView.Country);
+            Assert.AreEqual(_language, CustomerView.Language);
+            Assert.AreEqual(_country, CustomerView.Country);
             Assert.AreEqual(_email, CustomerView.Email);
             Assert.AreEqual(_telephone, CustomerView.Telephone);
             Assert.AreEqual(_mobile, CustomerView.Mobile);
