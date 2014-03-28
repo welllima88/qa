@@ -126,22 +126,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             StringAssert.Contains(CustomerView.SbsCurrency.ToUpper(), "EUR");
 
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-
-            int retry = 2;
-            do
-            {
-                try
-                {
-                    StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
-                    retry = 0; //no retry necessary anymore
-                }
-                catch (AssertFailedException)
-                {
-                    CustomerMenu.Customer.Click();
-                    retry--;
-                }
-            } while (retry > 0);
-
             StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
             StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
