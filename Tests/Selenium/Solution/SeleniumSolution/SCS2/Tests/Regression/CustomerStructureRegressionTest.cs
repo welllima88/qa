@@ -6,12 +6,14 @@ using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
+using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Mpd;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Mpd;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
@@ -221,7 +223,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             CreateCustomer();
             OpenLatestElement();
-
             CreateContactOnCustomer();
 
             QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
@@ -233,6 +234,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             EditCustomer();
             OpenLatestElement();
             CreateInfotextOnCustomer();
+            // CreateMpdOnCustomer();
 
             CreateLocationOnCustomer();
             OpenLatestElement();
@@ -241,7 +243,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             OpenLatestElement();
             CreateInfotextOnTerminal();
 
-            // TODO: CreateBrandsOnTerminal();
+            // TODO:
+            // CreateBrandsOnTerminal();
 
             QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
             Assert.AreEqual(_locationGuid, LocationView.Guid);
@@ -255,6 +258,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             EditContactOnLocation();
         }
 
+        private static void CreateMpdOnCustomer()
+        {
+            CustomerMenu.AllMpds.Click();
+
+            MpdListView.CreateButton.Click();
+            MpdCreateTest.Create();
+            MpdCreateTest.Check();
+        }
+
         private static void EditContactOnLocation()
         {
             ContactMenu.ContactEdit.Click();
@@ -265,7 +277,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void CreateInfotextOnLocation()
         {
-            LocationMenu.CreateInfotext.Click();
+            LocationMenu.Infotexts.Click();
+            InfoTextListView.CreateButton.Click();
+
             InfotextCreateTest.Create("Location");
         }
 
