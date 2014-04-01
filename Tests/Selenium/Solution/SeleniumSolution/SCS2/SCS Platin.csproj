@@ -115,7 +115,6 @@
     <Compile Include="Tests\Customer\Edit\EditCustomerWithMissingData.cs" />
     <Compile Include="Tests\Customer\Edit\EditCustomerWithInvalidData.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditAndCancelTest.cs" />
-    <Compile Include="Tests\Customer\MultipleCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Edit\CustomerEditTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Tests\Customer\Quit\CustomerDeactivateTest.cs" />
@@ -147,8 +146,6 @@
     <Compile Include="Tests\Location\Edit\LocationEditAndCancelTest.cs" />
     <Compile Include="Tests\Location\Edit\LocationEditAndSaveTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMissingDataTest.cs" />
-    <Compile Include="Tests\Customer\CustomerTestForSuggestors.cs" />
-    <Compile Include="Tests\Customer\CustomerTestInInternetExplorer.cs" />
     <Compile Include="Tests\Lobby\RecentMassJobsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateTest.cs" />
