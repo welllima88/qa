@@ -194,6 +194,10 @@
     <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
     <Compile Include="TestObjects\Massmuation\MassmuationFileUpload.cs" />
     <Compile Include="TestObjects\Massmuation\TerminalMassValidation.cs" />
+    <Compile Include="TestObjects\Mpd\MpdEdit.cs" />
+    <Compile Include="TestObjects\Mpd\MpdListView.cs" />
+    <Compile Include="TestObjects\Mpd\MpdView.cs" />
+    <Compile Include="TestObjects\Mpd\MpdCreate.cs" />
     <Compile Include="TestObjects\Person\ContactList.cs" />
     <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
     <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
