@@ -103,7 +103,6 @@
     <Compile Include="Tests\Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
-    <Compile Include="Tests\Customer\Create\CustomerCreateGuiTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithSBSExportTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Customer\Create\CustomerCreateWithNoDataTest.cs" />

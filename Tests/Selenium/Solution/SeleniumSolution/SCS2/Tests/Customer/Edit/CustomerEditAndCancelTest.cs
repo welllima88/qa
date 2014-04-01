@@ -38,7 +38,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=405125");
+            TestDirector.Navigate("Customer/edit?customerId=405125");
 
             _custId = CustomerView.CustomerNumber;
             _customerName = CustomerView.CustomerName;
