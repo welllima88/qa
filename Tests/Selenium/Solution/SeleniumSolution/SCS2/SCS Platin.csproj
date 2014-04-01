@@ -156,6 +156,7 @@
     <Compile Include="Tests\Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Tests\Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Tests\Menu\MenusTest.cs" />
+    <Compile Include="Tests\Mpd\MpdCreateTest.cs" />
     <Compile Include="Tests\Regression\CustomerStructureRegressionTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByNameTest.cs" />
     <Compile Include="Tests\Search\Customer\SearchForCustomerByIdTest.cs" />
