@@ -15,7 +15,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("input#save")); }
         }
 
-        //TODO test this explicit! because in edit mode not available
         public IWebElement ClickAdressFromLocation
         {
             get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
