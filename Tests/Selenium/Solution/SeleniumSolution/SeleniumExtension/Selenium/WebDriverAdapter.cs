@@ -121,15 +121,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 
         public IWebElement FindElement(By by)
         {
-            try
-            {
-                return _webDriver.FindElement(by);
-            }
-            catch (NoSuchElementException e)
-            {
-                Console.Error.WriteLine("{0}: FindElement({1}) -> {2}", DateTime.Now, @by, e.Message);
-                throw;
-            }
+            return _webDriver.FindElement(by);
         }
 
         /// <summary>
