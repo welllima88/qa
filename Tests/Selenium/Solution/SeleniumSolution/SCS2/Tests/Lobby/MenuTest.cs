@@ -138,5 +138,12 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         {
             Assert.IsTrue(LobbyMenu.PostDeliveryTickets.Displayed);
         }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
+        public void AccessoireOrders()
+        {
+            Assert.IsTrue(LobbyMenu.AccessoireOrders.Displayed);
+        }
     }
 }

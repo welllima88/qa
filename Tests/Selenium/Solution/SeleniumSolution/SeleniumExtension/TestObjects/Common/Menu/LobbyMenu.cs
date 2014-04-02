@@ -38,5 +38,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector("a[href$='/DeliveryTicketsPost/']")); }
         }
+
+        public static IWebElement AccessoireOrders
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+        }
     }
 }
