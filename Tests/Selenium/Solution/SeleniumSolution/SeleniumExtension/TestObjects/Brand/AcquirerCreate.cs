@@ -67,7 +67,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 
         public static void SaveAndCreate()
         {
-            new ContractCreate().SaveAndCreate();
+            BrandCreate.SaveAndCreate();
         }
     }
 }

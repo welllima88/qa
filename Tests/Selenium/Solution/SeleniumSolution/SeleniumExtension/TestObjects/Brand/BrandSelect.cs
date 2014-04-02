@@ -4,7 +4,7 @@ using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
-    public class ContractSelect : WebObject
+    public class BrandSelect : WebObject
     {
         public static IWebElement ConfirmButton()
         {

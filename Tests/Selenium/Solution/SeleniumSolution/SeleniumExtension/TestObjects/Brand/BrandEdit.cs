@@ -4,35 +4,38 @@ using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
-    public class ContractCreate : WebObject
-//TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
+    public class BrandEdit : WebObject
     {
-        private ContractSelect _contractSelect;
-
-        public ContractCreate()
-        {
-            _contractSelect = new ContractSelect();
-            //throw new NotImplementedException();
-        }
-
-        public void ClickBrandContractEdit(String brand)
+        /// <summary>
+        ///     Clicks edit on the desired brand
+        /// </summary>
+        /// <param name="brand">brand name e.g. "American Express [635]"</param>
+        public static void ClickBrandContractEdit(String brand)
         {
             ClickEditContract(brand, "contract");
         }
 
-        public void ClickAcquirerContractEdit(String acquirer)
+        /// <summary>
+        ///     /// Clicks edit on the desired acquirer
+        /// </summary>
+        /// <param name="acquirer">"Protokoll EP2 [281]" for SIX Payment Services (Multipay)</param>
+        public static void ClickAcquirerContractEdit(String acquirer)
         {
             ClickEditContract(acquirer, "brand");
         }
 
-        private void ClickEditContract(String brand, String brandType)
+        private static void ClickEditContract(String brand, String brandType)
         {
             WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
                       Click();
         }
 
-        public void SelectMcc(String mcc)
+        /// <summary>
+        ///     Sets the MCC (merchant category code)
+        /// </summary>
+        /// <param name="mcc">e.g. "5111: STATIONERY/OFF-SUPP/PRINTING"</param>
+        public static void SelectMcc(String mcc)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
@@ -49,30 +52,25 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                      .TypeText(vpNo);
         }
 
+        /// <summary>
+        ///     Sets the desired Business Template for apply the appropiate settings for limits, functions etc. in Frontoffice
+        /// </summary>
+        /// <param name="businessTemplate">default: "( Keine )"</param>
         public static void SelectBusinessTemplate(String businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                      SelectByValue(businessTemplate);
+                      SelectByText(businessTemplate);
         }
 
-        public static void Dcc(bool dccEnabled)
+        public static void Dcc(bool dccEnabeled)
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
-                     .CheckBox()
-                     .Set(dccEnabled);
+            BrandCreate.Dcc(dccEnabeled);
         }
 
-        public void SetDccBaseCurrency(String dccBaseCurrency)
+        public static void SaveAndCreate()
         {
-            WebDriver.FindElement(
-                By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
-                     .Click();
-        }
-
-        public void SaveAndCreate()
-        {
-            WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
+            BrandCreate.SaveAndCreate();
         }
     }
 }

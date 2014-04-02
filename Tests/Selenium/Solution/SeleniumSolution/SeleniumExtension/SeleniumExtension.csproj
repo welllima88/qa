@@ -114,10 +114,10 @@
     <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />
     <Compile Include="TestObjects\Administration\SoftwareExchange\SoftwareExchangeCreate.cs" />
     <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
-    <Compile Include="TestObjects\Brand\ContractCreate.cs" />
-    <Compile Include="TestObjects\Brand\ContractEdit.cs" />
-    <Compile Include="TestObjects\Brand\ContractSelect.cs" />
-    <Compile Include="TestObjects\Brand\ContractView.cs" />
+    <Compile Include="TestObjects\Brand\BrandCreate.cs" />
+    <Compile Include="TestObjects\Brand\BrandEdit.cs" />
+    <Compile Include="TestObjects\Brand\BrandSelect.cs" />
+    <Compile Include="TestObjects\Brand\BrandView.cs" />
     <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
     <Compile Include="TestObjects\Common\CommonRes.Designer.cs">
       <DependentUpon>CommonRes.resx</DependentUpon>
