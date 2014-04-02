@@ -122,6 +122,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
+
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
+            Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
+            Assert.AreEqual("weiss", BusinessViewpointPortlet.Color);
+            Assert.AreEqual("Deutsch [de]", BusinessViewpointPortlet.TerminalLanguage);
         }
 
         private static void CreateCustomer()
