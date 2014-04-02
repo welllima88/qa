@@ -51,20 +51,20 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             BrandPortlet.NewBrandButton.Click();
 
-            ContractSelect.Select("1161");
-            ContractSelect.Select("283");
-            ContractSelect.Select("332");
-            ContractSelect.Select("361");
-            ContractSelect.Select("363");
-            ContractSelect.Select("811");
-            ContractSelect.DeSelect("1161");
+            BrandSelect.Select("1161");
+            BrandSelect.Select("283");
+            BrandSelect.Select("332");
+            BrandSelect.Select("361");
+            BrandSelect.Select("363");
+            BrandSelect.Select("811");
+            BrandSelect.DeSelect("1161");
 
-            ContractSelect.ConfirmButton().Click();
+            BrandSelect.ConfirmButton().Click();
 
             AcquirerCreate.Remark = "SYR Contracts" + TestLauncher.GenerateTestId();
             AcquirerCreate.SaveAndCreate();
             // TODO: more special settings for brands
-            // ContractCreate.
+            // BrandCreate.
         }
 
         private static void EditLocation()

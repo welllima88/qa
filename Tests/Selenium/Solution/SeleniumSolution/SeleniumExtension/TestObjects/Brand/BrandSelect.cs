@@ -19,7 +19,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             // title[textContent~='']
 
-            WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"))
+            // WebDriver.FindElement(By.XPath("//td[text()=\"" + acq + "\"]")).Click();
+            WebDriver.FindElements(By.XPath("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"))
                      .First(d => d.Text.Contains(brand))
                      .Click();
         }
