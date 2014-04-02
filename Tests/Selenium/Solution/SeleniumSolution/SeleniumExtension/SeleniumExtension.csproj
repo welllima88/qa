@@ -233,6 +233,7 @@
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\Pms.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\ServiceCenter.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\ContactsPortlet.cs" />
+    <Compile Include="TestObjects\Terminal\Dashboard\BusinessViewpointPortlet.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\DashboardRes.Designer.cs">
       <DependentUpon>DashboardRes.resx</DependentUpon>
