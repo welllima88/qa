@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
@@ -18,11 +19,12 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         public static void Select(string brand)
         {
             // title[textContent~='']
+            // By.XPath("//td[text()='" + brand + "']");
 
-            // WebDriver.FindElement(By.XPath("//td[text()=\"" + acq + "\"]")).Click();
-            WebDriver.FindElements(By.XPath("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"))
-                     .First(d => d.Text.Contains(brand))
-                     .Click();
+            ReadOnlyCollection<IWebElement> ccss = WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
+            var firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
+            if (firstOrDefault != null)
+                firstOrDefault.Click();
         }
 
         public static void DeSelect(string brandId)
