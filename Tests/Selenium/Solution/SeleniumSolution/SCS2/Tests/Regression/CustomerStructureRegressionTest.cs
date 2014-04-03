@@ -91,6 +91,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         private static void CreateTerminalOnLocation()
         {
             LocationMenu.TerminalCreate.Click();
+
             TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
             TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
@@ -101,6 +102,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             TerminalMenu.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
+
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
+            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
+            Assert.AreEqual("grau", BusinessViewpointPortlet.Color);
+            Assert.AreEqual("Englisch [en]", BusinessViewpointPortlet.TerminalLanguage);
         }
 
         private static void CreateLocationOnCustomer()
