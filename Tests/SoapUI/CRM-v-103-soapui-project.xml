@@ -3764,47 +3764,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://six-group.com';
 declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
 declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
-//*:TerminalId</path><content>*</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://six-group.com/DefaultPort/ReplaceTerminal"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="ReplaceTerminal - complete Miete Post"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_DefaultPort</con:interface><con:operation>ReplaceTerminal</con:operation><con:request name="ReplaceTerminal - complete Miete Post" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mqzhwcwebl01.domain05.telekurs.com/scs2-svc103/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:six="http://six-group.com">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <six:ReplaceTerminal>
-         <!--Optional:-->
-         <six:replaceTerminalRequest>
-            <six:TerminalReplace>
-               <!--Optional:-->
-               <!--type: int-->
-               <six:ContactlessInd>0</six:ContactlessInd>
-               <!--Optional:-->
-               <!--type: string-->
-               <six:ContractTypeId>M</six:ContractTypeId>
-               <!--Optional:-->
-               <!--type: string-->
-               <six:InfoText>SYR - Infotext CRM Replace - complete</six:InfoText>
-               <!--Optional:-->
-               <!--type: int-->
-               <six:InstallTypeId>2</six:InstallTypeId>
-               <!--Optional:-->
-               <!--type: int-->
-               <six:SAPTemplateId>10773</six:SAPTemplateId>
-               <!--Optional:-->
-               <!--type: int-->
-               <six:SupportContractId>28</six:SupportContractId>
-               <!--Optional:-->
-               <!--type: int-->
-               <six:TerminalOldId>30381589</six:TerminalOldId>
-            </six:TerminalReplace>
-            <!--type: string-->
-            <six:UserId>tksyr</six:UserId>
-            <!--type: string-->
-            <six:RequestId>ReplTrm_30381589_M_Post</six:RequestId>
-            <!--type: dateTime-->
-            <six:Date>2012-01-01T01:11:11+01:00</six:Date>
-            <!--type: int-->
-            <six:IntfVersion>100</six:IntfVersion>
-         </six:replaceTerminalRequest>
-      </six:ReplaceTerminal>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace a='http://schemas.datacontract.org/2004/07/SIX.SCS.WebServices.Messages';
+//*:TerminalId</path><content>*</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://six-group.com/DefaultPort/ReplaceTerminal"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="ReplaceTerminal - complete Miete Post"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_DefaultPort</con:interface><con:operation>ReplaceTerminal</con:operation><con:request name="ReplaceTerminal - complete Miete Post" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mqzhwcwebl01.domain05.telekurs.com/scs2-svc103/ServiceFacade.svc</con:endpoint><con:request/><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="XPath Match" name="XPath Match"><con:configuration><path>declare namespace a='http://schemas.datacontract.org/2004/07/SIX.SCS.WebServices.Messages';
 declare namespace ns1='http://six-group.com';
 declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
 declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
@@ -5908,7 +5868,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://six-group.com';
 declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
 declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
-//*:LocationNumber</path><content>*</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://six-group.com/DefaultPort/CreateCustomer"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="set custormer data for terminal and location request"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" ignoreEmpty="false" transferToAll="false" useXQuery="false" transferChildNodes="false"><con:name>LocationForTerminal</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal to Customer - complete Miete Post DCC</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false" entitize="false"><con:name>CustomerIdForLocation</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:CustomerNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateLocation - without Contact</con:targetStep><con:targetPath>//*:CustomerId</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>CustomerIdForLocationInvalidUser</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:CustomerNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateLocation - with unkown user failed</con:targetStep><con:targetPath>//*:CustomerId</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>LocationForTerminalUnknownUser</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal to Customer - with unknown user failed</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>LocationForTerminalWittDccNotSupported</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal - with DCC but not supported by software denied</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers></con:config></con:testStep><con:testStep type="request" name="CreateLocation - without Contact"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_DefaultPort</con:interface><con:operation>CreateLocation</con:operation><con:request name="CreateLocation - without Contact" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mqzhwcwebl01.domain05.telekurs.com/scs2-svc103/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:six="http://six-group.com">
+//*:LocationNumber</path><content/><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://six-group.com/DefaultPort/CreateCustomer"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="set custormer data for terminal and location request"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" ignoreEmpty="false" transferToAll="false" useXQuery="false" transferChildNodes="false"><con:name>LocationForTerminal</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal to Customer - complete Miete Post DCC</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false" entitize="false"><con:name>CustomerIdForLocation</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:CustomerNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateLocation - without Contact</con:targetStep><con:targetPath>//*:CustomerId</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>CustomerIdForLocationInvalidUser</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:CustomerNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateLocation - with unkown user failed</con:targetStep><con:targetPath>//*:CustomerId</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>LocationForTerminalUnknownUser</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal to Customer - with unknown user failed</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>LocationForTerminalWittDccNotSupported</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateCustomer - with Contact</con:sourceStep><con:sourcePath>//*:LocationNumber</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>CreateTerminal - with DCC but not supported by software denied</con:targetStep><con:targetPath>//*:LocationNumber</con:targetPath></con:transfers></con:config></con:testStep><con:testStep type="request" name="CreateLocation - without Contact"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_DefaultPort</con:interface><con:operation>CreateLocation</con:operation><con:request name="CreateLocation - without Contact" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mqzhwcwebl01.domain05.telekurs.com/scs2-svc103/ServiceFacade.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:six="http://six-group.com">
    <soapenv:Header/>
    <soapenv:Body>
       <six:CreateLocation>
@@ -5948,7 +5908,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
                   <!--Optional:-->
                   <six:ZIP>12345</six:ZIP>
                </six:ContactData>
-               <six:CustomerId>405661</six:CustomerId>
+               <six:CustomerId>405915</six:CustomerId>
                <six:LocationName>SYR Location with Contact</six:LocationName>
             </six:Location>
          </six:locationRequest>
@@ -6002,7 +5962,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
                   <!--Optional:-->
                   <six:ZIP>12345</six:ZIP>
                </six:ContactData>
-               <six:CustomerId>405661</six:CustomerId>
+               <six:CustomerId>405915</six:CustomerId>
                <six:LocationName>SYR Location with Contact</six:LocationName>
             </six:Location>
          </six:locationRequest>
@@ -6024,7 +5984,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
          <six:createTerminalRequest>
             <six:Terminal>
                <!--type: int-->
-               <six:LocationNumber>121484</six:LocationNumber>
+               <six:LocationNumber>0</six:LocationNumber>
                <!--type: string-->
                <six:ContractTypeId>M</six:ContractTypeId>
                <!--type: int-->
@@ -6067,7 +6027,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
          <six:createTerminalRequest>
             <six:Terminal>
                <!--type: int-->
-               <six:LocationNumber>121484</six:LocationNumber>
+               <six:LocationNumber>0</six:LocationNumber>
                <!--type: string-->
                <six:ContractTypeId>M</six:ContractTypeId>
                <!--type: int-->
@@ -6124,7 +6084,7 @@ F8B58DEE-7CB9-48AD-A6AC-4AB9803B03C7	KUT	xenta COMPACT, ISDNB	1	15451
 declare namespace ns1='http://six-group.com';
 declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
 declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
-//*:TerminalId</path><content>*</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" name="successful"><con:configuration><path>declare namespace a='http://schemas.datacontract.org/2004/07/SIX.SCS.WebServices.Messages';
+//*:TerminalId</path><content>*</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" name="No false successful"><con:configuration><path>declare namespace a='http://schemas.datacontract.org/2004/07/SIX.SCS.WebServices.Messages';
 declare namespace ns1='http://six-group.com';
 declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
 declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
@@ -6140,7 +6100,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
          <six:createTerminalRequest>
             <six:Terminal>
                <!--type: int-->
-               <six:LocationNumber>121485</six:LocationNumber>
+               <six:LocationNumber>121876</six:LocationNumber>
                <!--type: string-->
                <six:ContractTypeId>M</six:ContractTypeId>
                <!--type: int-->
@@ -6179,7 +6139,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
          <six:createTerminalRequest>
             <six:Terminal>
                <!--type: int-->
-               <six:LocationNumber>121485</six:LocationNumber>
+               <six:LocationNumber>121876</six:LocationNumber>
                <!--type: string-->
                <six:ContractTypeId>K</six:ContractTypeId>
                <!--type: int-->
@@ -6222,7 +6182,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
          <six:createTerminalRequest>
             <six:Terminal>
                <!--type: int-->
-               <six:LocationNumber>121484</six:LocationNumber>
+               <six:LocationNumber>0</six:LocationNumber>
                <!--type: string-->
                <six:ContractTypeId>M</six:ContractTypeId>
                <!--type: int-->
@@ -6302,7 +6262,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>30381627</six:TerminalId>
+               <six:TerminalId/>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3681</six:MctCc>
@@ -6353,7 +6313,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>30381627</six:TerminalId>
+               <six:TerminalId/>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3681</six:MctCc>
@@ -6420,7 +6380,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>30381627</six:TerminalId>
+               <six:TerminalId/>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3681</six:MctCc>
@@ -6474,7 +6434,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>30381627</six:TerminalId>
+               <six:TerminalId/>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3681</six:MctCc>
@@ -6537,7 +6497,7 @@ declare namespace ns2='http://six-group.com';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013055</six:TerminalId>
+               <six:TerminalId>21013212</six:TerminalId>
                <six:AcqInstitutionId>100002</six:AcqInstitutionId>
                <six:ContractNumber/>
                <six:MctCc>3015</six:MctCc>               
@@ -6597,7 +6557,7 @@ declare namespace ns2='http://six-group.com';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>30381627</six:TerminalId>
+               <six:TerminalId/>
                <six:AcqInstitutionId>100002</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>
@@ -6647,7 +6607,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
                <six:SupportContractId>28</six:SupportContractId>
                <!--Optional:-->
                <!--type: int-->
-               <six:TerminalOldId>21013055</six:TerminalOldId>
+               <six:TerminalOldId>21013212</six:TerminalOldId>
             </six:TerminalReplace>
             <!--type: string-->
             <six:UserId>>t_k__syr</six:UserId>
@@ -6691,7 +6651,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
                <six:SupportContractId>28</six:SupportContractId>
                <!--Optional:-->
                <!--type: int-->
-               <six:TerminalOldId>30381627</six:TerminalOldId>
+               <six:TerminalOldId/>
             </six:TerminalReplace>
             <!--type: string-->
             <six:UserId>tksyr</six:UserId>
@@ -6739,7 +6699,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
                <six:SupportContractId>28</six:SupportContractId>
                <!--Optional:-->
                <!--type: int-->
-               <six:TerminalOldId>21013055</six:TerminalOldId>
+               <six:TerminalOldId>21013212</six:TerminalOldId>
             </six:TerminalReplace>
             <!--type: string-->
             <six:UserId>tksyr</six:UserId>
@@ -6770,7 +6730,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013057</six:TerminalId>
+               <six:TerminalId>21013213</six:TerminalId>
                <six:AcqInstitutionId>100002</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>               
@@ -6836,7 +6796,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013057</six:TerminalId>
+               <six:TerminalId>21013213</six:TerminalId>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>
@@ -6893,7 +6853,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013057</six:TerminalId>
+               <six:TerminalId>21013213</six:TerminalId>
                <six:AcqInstitutionId>100022</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>
@@ -6932,7 +6892,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013057</six:TerminalId>
+               <six:TerminalId>21013213</six:TerminalId>
                <six:AcqInstitutionId>100002</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>
@@ -6962,7 +6922,7 @@ declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
             <six:Date>2000-01-01T11:11:11</six:Date>
             <six:IntfVersion>100</six:IntfVersion>
             <six:Contracts>
-               <six:TerminalId>21013055</six:TerminalId>
+               <six:TerminalId>21013212</six:TerminalId>
                <six:AcqInstitutionId>100002</six:AcqInstitutionId>
                <six:ContractNumber>168144143</six:ContractNumber>
                <six:MctCc>3015</six:MctCc>
