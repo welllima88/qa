@@ -83,7 +83,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
@@ -100,7 +100,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
