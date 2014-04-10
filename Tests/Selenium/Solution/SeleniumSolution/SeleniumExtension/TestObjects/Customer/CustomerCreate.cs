@@ -31,7 +31,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_CurrencyCode")).Selector
-                    ().SelectByValue(value);
+                    ().SelectByText(value);
             }
             get
             {
@@ -193,7 +193,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_StructureId")).
+                WebDriver.FindAdaptedElement(By.CssSelector("select#StructureId")).
                           Selector().SelectByText(value);
                 SaveButton.Click();
             }
