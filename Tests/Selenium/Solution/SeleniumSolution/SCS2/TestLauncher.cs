@@ -20,11 +20,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             }
         }
 
-        public static long GenerateTestId()
-        {
-            return DateTime.Now.Ticks;
-        }
-
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
