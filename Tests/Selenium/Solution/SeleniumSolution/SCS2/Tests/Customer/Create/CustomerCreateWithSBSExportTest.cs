@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
 
@@ -12,14 +13,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     {
         private const int WaitMilliseconds = 1000;
 
-        private static long _dt;
+        private static string _dt;
         private static string _custId;
         private int _numberOfRetries;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _dt = TestLauncher.GenerateTestId();
+            _dt = Factory.GenerateTestId();
 
             TestDirector.Navigate();
 

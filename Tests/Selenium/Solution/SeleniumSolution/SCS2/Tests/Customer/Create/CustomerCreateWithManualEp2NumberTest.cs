@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -19,7 +20,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         private static string _customerName;
         private static string _segment;
 
-        private static long _dt;
         private static string _email;
         private static string _fax;
         private static string _language;
@@ -39,12 +39,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _dt = TestLauncher.GenerateTestId();
-
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";
             _sbsBillingTenant = "SIX Payment Services (Europe)";
-            _customerName = "SYR Kunde" + _dt;
+            _customerName = "SYR Kunde" + Factory.GenerateTestId();
             _categoryCode = "3364: AGENCY RENT-A-CAR";
             _supportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h";
             _cashIntegrator = "Wincor Nixdorf AG, Brüttisellen";
