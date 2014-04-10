@@ -100,6 +100,8 @@
     <Compile Include="Selenium\TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
+    <Compile Include="TestData\CustomerFactory.cs" />
+    <Compile Include="TestData\Factory.cs" />
     <Compile Include="TestData\INaviElement.cs" />
     <Compile Include="TestData\ITestData.cs" />
     <Compile Include="TestData\ITestDataRepository.cs" />
@@ -172,7 +174,8 @@
     <Compile Include="TestObjects\Definitions\IArticle.cs" />
     <Compile Include="TestObjects\Definitions\IContact.cs" />
     <Compile Include="TestObjects\Definitions\IContactPerson.cs" />
-    <Compile Include="TestObjects\Definitions\ICustomer.cs" />
+    <Compile Include="TestObjects\Definitions\CustomerData.cs" />
+    <Compile Include="TestObjects\Definitions\IEntity.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
     <Compile Include="TestObjects\Definitions\ILocation.cs" />
     <Compile Include="TestObjects\Definitions\INetType.cs" />
@@ -268,8 +271,8 @@
     <Compile Include="TestRegExpPatterns.cs" />
     <Compile Include="Selenium\WebDriverAdapter.cs" />
     <Compile Include="Selenium\WebElements\WebElementAdapter.cs" />
-    <Compile Include="Worklow\CustomerCreator.cs" />
-    <Compile Include="Worklow\Search.cs" />
+    <Compile Include="Worklow\CustomerService.cs" />
+    <Compile Include="Worklow\SearchService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
