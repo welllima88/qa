@@ -1,23 +1,24 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Mpd;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Mpd;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 {
@@ -61,7 +62,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             BrandSelect.ConfirmButton().Click();
 
-            AcquirerCreate.Remark = "SYR Contracts" + TestLauncher.GenerateTestId();
+            AcquirerCreate.Remark = "SYR Contracts" + Factory.GenerateTestId();
             AcquirerCreate.SaveAndCreate();
             // TODO: more special settings for brands
             // BrandCreate.
@@ -76,9 +77,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         private static void EditCustomer()
         {
-            CustomerEditTest.Edit();
+            CustomerData c = Factory.Customer.SixCustomerEdit();
+            CustomerService.Edit(c);
             _customerName = CustomerView.CustomerName;
-            CustomerEditTest.Check();
+            CustomerService.Check(c);
         }
 
         private static void CreateContactOnLocation()
@@ -94,10 +96,10 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
             TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
+            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
             TerminalConfigCreate.ContinueButton.Click();
 
-            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + TestLauncher.GenerateTestId();
+            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
             TerminalConfigDetailsCreate.SaveButton.Click();
 
             TerminalMenu.Terminal.Click();
@@ -123,7 +125,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerMenu.TerminalCreate.Click();
             TerminalChooser.ArticleFilter = "1550";
             TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + TestLauncher.GenerateTestId();
+            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
             TerminalConfigCreate.SaveButton.Click();
 
             TerminalMenu.Terminal.Click();
@@ -133,14 +135,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
             Assert.AreEqual("weiss", BusinessViewpointPortlet.Color);
             Assert.AreEqual("Deutsch [de]", BusinessViewpointPortlet.TerminalLanguage);
-        }
-
-        private static void CreateCustomer()
-        {
-            CustomerCreateTest.Create();
-            _customerNumber = CustomerView.CustomerNumber;
-            _customerName = CustomerView.CustomerName;
-            CustomerCreateTest.Check();
         }
 
         private static void CreateContactOnCustomer()
@@ -155,7 +149,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
 
             CustomerMenu.Contacts.Click();
 
@@ -168,7 +162,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void ContactToLocationIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+            SearchService.LocationCanBeFoundByLocationName(_locationName);
 
             LocationMenu.Contacts.Click();
 
@@ -180,7 +174,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void TerminalToLocationIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
+            SearchService.TerminalCanBeFoundById(_terminalIdLocation);
 
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
         }
@@ -190,7 +184,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         // [TestCategory("RegressionA")]
         public void BrandsOnTerminalAreCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.TerminalCanBeFoundById(_terminalIdLocation);
+            SearchService.TerminalCanBeFoundById(_terminalIdLocation);
             StringAssert.Contains(BrandPortlet.Brand("283").Text, "[283]");
             StringAssert.Contains(BrandPortlet.Brand("332").Text, "[332]");
             StringAssert.Contains(BrandPortlet.Brand("361").Text, "[361]");
@@ -202,7 +196,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
 
             CustomerMenu.AllTerminals.Click();
             TerminalList.First().Click();
@@ -215,7 +209,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void CustomerIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
 
             // CustomerCheck();
         }
@@ -224,7 +218,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void LocationIsCreated()
         {
-            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+            SearchService.LocationCanBeFoundByLocationName(_locationName);
 
             // LocationCheck();
         }
@@ -232,15 +226,18 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [ClassInitialize]
         public static void ExecuteRegressiontest(TestContext testContext)
         {
-            CreateCustomer();
+            var c = Factory.Customer.SixCustomerNew();
+            CustomerService.Create(c);
+            _customerNumber = CustomerView.CustomerNumber;
             OpenLatestElement();
+            CustomerService.Check(c);
             CreateContactOnCustomer();
 
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
             CreateTerminalOnCustomer();
             OpenLatestElement();
 
-            QA.Selenium.Extension.Worklow.Search.CustomerCanBeFoundByCustomerName(_customerName);
+            SearchService.CustomerCanBeFoundByCustomerName(_customerName);
             Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             EditCustomer();
             OpenLatestElement();
@@ -257,7 +254,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             // TODO:
             // CreateBrandsOnTerminal();
 
-            QA.Selenium.Extension.Worklow.Search.LocationCanBeFoundByLocationName(_locationName);
+            SearchService.LocationCanBeFoundByLocationName(_locationName);
             Assert.AreEqual(_locationGuid, LocationView.Guid);
 
             EditLocation();
