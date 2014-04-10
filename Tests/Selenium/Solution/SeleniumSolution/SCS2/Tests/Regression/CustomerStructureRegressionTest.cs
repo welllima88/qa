@@ -25,14 +25,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
     [TestClass]
     public class CustomerStructureRegressionTest
     {
-        private static string _customerNumber;
         private static string _locationGuid;
         private static string _locationName;
-        private static string _customerName;
         private static string _contactCustomerName;
         private static string _contactLocationName;
         private static string _terminalIdLocation;
         private static string _terminalIdCustomer;
+        private static CustomerData _c;
 
         /* [ClassCleanup]
         public static void CleanupCustomerStructure()
@@ -79,7 +78,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             CustomerData c = Factory.Customer.SixCustomerEdit();
             CustomerService.Edit(c);
-            _customerName = CustomerView.CustomerName;
             CustomerService.Check(c);
         }
 
@@ -149,7 +147,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void ContactToCustomerIsCreated()
         {
-            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_c.CustomerNumber);
 
             CustomerMenu.Contacts.Click();
 
@@ -196,7 +194,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void TerminalToCustomerIsCreated()
         {
-            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_c.CustomerNumber);
 
             CustomerMenu.AllTerminals.Click();
             TerminalList.First().Click();
@@ -209,7 +207,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [TestCategory("RegressionA")]
         public void CustomerIsCreated()
         {
-            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_c.CustomerNumber);
 
             // CustomerCheck();
         }
@@ -226,19 +224,18 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         [ClassInitialize]
         public static void ExecuteRegressiontest(TestContext testContext)
         {
-            var c = Factory.Customer.SixCustomerNew();
-            CustomerService.Create(c);
-            _customerNumber = CustomerView.CustomerNumber;
+            _c = Factory.Customer.SixCustomerNew();
+            CustomerService.Create(_c);
             OpenLatestElement();
-            CustomerService.Check(c);
+            CustomerService.Check(_c);
             CreateContactOnCustomer();
 
-            SearchService.CustomerCanBeFoundByCustomerId(_customerNumber);
+            SearchService.CustomerCanBeFoundByCustomerId(_c.CustomerNumber);
             CreateTerminalOnCustomer();
             OpenLatestElement();
 
-            SearchService.CustomerCanBeFoundByCustomerName(_customerName);
-            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
+            SearchService.CustomerCanBeFoundByCustomerName(_c.CustomerName);
+            Assert.AreEqual(_c.CustomerNumber, CustomerView.CustomerNumber);
             EditCustomer();
             OpenLatestElement();
             CreateInfotextOnCustomer();

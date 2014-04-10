@@ -105,8 +105,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             Assert.AreEqual(c.Zip, CustomerView.Zip);
             Assert.AreEqual(c.City, CustomerView.City);
             StringAssert.Contains(CustomerView.Agency, c.Agency);
-            StringAssert.Contains(CustomerView.Language, "[" + c.Language + "]");
-            StringAssert.Contains(CustomerView.Country, "[" + c.Country + "]");
+            Assert.AreEqual(c.Language, CustomerView.Language);
+            Assert.AreEqual(c.Country, CustomerView.Country);
             Assert.AreEqual(c.Email, CustomerView.Email);
             Assert.AreEqual(c.Telephone, CustomerView.Telephone);
             Assert.AreEqual(c.Mobile, CustomerView.Mobile);
