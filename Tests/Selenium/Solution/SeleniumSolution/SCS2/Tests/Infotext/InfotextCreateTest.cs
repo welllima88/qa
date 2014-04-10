@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
@@ -41,7 +42,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
         public static void Create(string infotext)
         {
             infotext =
-                InfoTextCreate.Text = string.Format("SYR {0} Infotext {1}", infotext, TestLauncher.GenerateTestId());
+                InfoTextCreate.Text = string.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
             InfoTextCreate.SaveButton.Click();
             Assert.IsTrue(InfoTextListView.List.Contains(infotext));
         }

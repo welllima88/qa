@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
@@ -10,13 +11,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location
     [TestClass]
     public class BillingAddressCreateTest
     {
-        private double _dt;
+        private string _dt;
 
         [TestInitialize]
         public void TestInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
-            _dt = TestLauncher.GenerateTestId();
+            _dt = Factory.GenerateTestId();
         }
 
         [TestMethod]

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
@@ -10,13 +11,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal
     [TestClass]
     public class TerminalCreateTest
     {
-        private long _dt;
+        private string _dt;
 
         [TestInitialize]
         public void TestInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CUSTOMERID=85036");
-            _dt = TestLauncher.GenerateTestId();
+            _dt = Factory.GenerateTestId();
         }
 
         [TestMethod]

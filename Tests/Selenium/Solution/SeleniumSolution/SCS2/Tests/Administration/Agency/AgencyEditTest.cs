@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
@@ -12,7 +13,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
-            _nameDyn = "SYR " + TestLauncher.GenerateTestId();
+            _nameDyn = "SYR " + Factory.GenerateTestId();
 
             TestDirector.Navigate("Agency/Edit?AgencyId=59ddd48b-f265-40f5-beac-9529a1d9454f");
 

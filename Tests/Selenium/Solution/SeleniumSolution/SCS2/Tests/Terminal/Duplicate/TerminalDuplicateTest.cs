@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
@@ -7,13 +8,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateTest
     {
-        private long _dt;
+        private string _dt;
 
         [TestInitialize]
         public void TestInit()
         {
             TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
-            _dt = TestLauncher.GenerateTestId();
+            _dt = Factory.GenerateTestId();
         }
 
         [TestMethod]

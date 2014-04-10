@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 
@@ -41,7 +42,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
             LocationView.EditButton.Click();
 
-            _locationName = LocationEdit.CompanyName = "SYR Standort" + TestLauncher.GenerateTestId();
+            _locationName = LocationEdit.CompanyName = "SYR Standort" + Factory.GenerateTestId();
             LocationEdit.StreetNo = "Am Bärenplatz 2";
             LocationEdit.Zip = "8001";
             LocationEdit.City = "Kreuzlingen";
@@ -59,7 +60,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
             LocationEdit.Reason = "CorrectionOnly";
 
             ChangeForm.Reason = "MerchantAddressChange";
-            ChangeForm.Remark = "SYR " + TestLauncher.GenerateTestId() + " location change remark";
+            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
 
             LocationCreate.SaveButton.Click();
         }

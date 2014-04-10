@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 
@@ -9,14 +10,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Edit
     public class ContactEditWithMinimalInputTest
     {
         private static string _contactId;
-        private static double _dt;
+        private static string _dt;
 
         [ClassInitialize]
         public static void TestInit(TestContext testContext)
         {
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
-            _dt = TestLauncher.GenerateTestId();
+            _dt = Factory.GenerateTestId();
 
             ContactPersonView.EditButton.Click();
 

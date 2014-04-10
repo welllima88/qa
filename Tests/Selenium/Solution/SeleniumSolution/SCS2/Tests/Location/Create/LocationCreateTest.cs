@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
@@ -146,7 +147,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.LocationCreate.Click();
-            _companyName = "SYR Standort" + TestLauncher.GenerateTestId();
+            _companyName = "SYR Standort" + Factory.GenerateTestId();
             LocationCreate.CompanyName = _companyName;
             LocationCreate.StreetNo = "Bröselstr. 201a-c";
             LocationCreate.Zip = "55555";
