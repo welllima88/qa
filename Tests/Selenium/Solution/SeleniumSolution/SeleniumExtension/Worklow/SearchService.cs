@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class Search
+    public static class SearchService
     {
         public static void CustomerCanBeFoundByCustomerId(string customerId)
         {
