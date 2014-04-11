@@ -55,7 +55,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             CustomerMenu.CustomerEdit.Click();
 
             CustomerEdit.CustomerName = c.CustomerName;
-            CustomerEdit.CompanyName = c.CompanyName;
+            // CustomerEdit.CompanyName = c.CompanyName;
             CustomerEdit.StreetNo = c.StreetNo;
             CustomerEdit.Zip = c.Zip;
             CustomerEdit.City = c.City;
