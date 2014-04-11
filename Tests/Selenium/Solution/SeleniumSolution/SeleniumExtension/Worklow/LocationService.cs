@@ -41,7 +41,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
             StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
-            Assert.AreEqual(l.Adress, LocationView.StreetNo);
+            Assert.AreEqual(l.Adress.StreetNo, LocationView.StreetNo);
             Assert.AreEqual(l.Adress.Po, LocationView.Po);
             Assert.AreEqual(l.Adress.Zip, LocationView.Zip);
             Assert.AreEqual(l.Adress.City, LocationView.City);
