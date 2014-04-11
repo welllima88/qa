@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SIX.SCS.QA.Selenium.Extension.TestData;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
@@ -34,6 +36,39 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             l.Guid = LocationView.Guid;
             l.Ep2MerchantId = LocationView.Ep2MerchantId;
         }
+
+        public static void Edit(LocationData l)
+        {
+            l.Guid = LocationView.Guid;
+            l.Ep2MerchantId= LocationView.Ep2MerchantId;
+            l.SbsDebitNumber = LocationView.SbsDebitNumber;
+            l.SbsAdressNumber = LocationView.SbsAdressNumber;
+
+            LocationView.EditButton.Click();
+
+            LocationEdit.CompanyName = l.CompanyName;
+            LocationEdit.StreetNo = l.Adress.StreetNo;
+            LocationEdit.Zip = l.Adress.Zip;
+            LocationEdit.City = l.Adress.City;
+            LocationEdit.Po = l.Adress.Po;
+            LocationEdit.AdressAddition = l.Adress.AdressAddition;
+            LocationEdit.SapNumber = l.SapNumber;
+            LocationEdit.Email = l.Contact.Email;
+            LocationEdit.Telephone = l.Contact.Telephone;
+            LocationEdit.Mobile = l.Contact.Mobile;
+            LocationEdit.Fax = l.Contact.Fax;
+            LocationEdit.Web = l.Contact.Web;
+
+            LocationEdit.Language = l.Contact.Language;
+            LocationEdit.Country = l.Adress.Country;
+            
+            LocationEdit.Reason = "CorrectionOnly";
+            ChangeForm.Reason = "MerchantAddressChange";
+            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
+
+            LocationCreate.SaveButton.Click();
+        }
+
 
         public static void Check(LocationData l)
         {
