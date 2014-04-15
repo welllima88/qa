@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 Segment = "01_CH",
                 Agency = "B05 Leiser Peter",
-                Location = Factory.Location.LocationCreate(),
+                Location = Factory.Location.Create(),
             };
         }
 
@@ -26,7 +26,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
             return new CustomerData
             {
                 CustomerName = "SYR Kunde" + Factory.GenerateTestId(),
-                Location = Factory.Location.LocationEdit(),
+                Location = Factory.Location.Edit(),
                 Agency = "SIX Payment Services (Europe)",
             };
         }
