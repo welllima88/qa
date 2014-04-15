@@ -33,7 +33,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Create
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual(_l.Guid, LocationView.Guid);
+            LocationService.Check(_l);
         }
     }
 }
