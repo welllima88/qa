@@ -35,12 +35,18 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
 
             l.Guid = LocationView.Guid;
             l.Ep2MerchantId = LocationView.Ep2MerchantId;
+            l.SbsDebitNumber = LocationView.SbsDebitNumber;
+            l.SbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
+        /// <summary>
+        ///     Edits location
+        /// </summary>
+        /// <param name="l">given location data</param>
         public static void Edit(LocationData l)
         {
             l.Guid = LocationView.Guid;
-            l.Ep2MerchantId= LocationView.Ep2MerchantId;
+            l.Ep2MerchantId = LocationView.Ep2MerchantId;
             l.SbsDebitNumber = LocationView.SbsDebitNumber;
             l.SbsAdressNumber = LocationView.SbsAdressNumber;
 
@@ -62,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
 
             LocationEdit.Language = l.Contact.Language;
             LocationEdit.Country = l.Adress.Country;
-            
+
             LocationEdit.Reason = "CorrectionOnly";
             ChangeForm.Reason = "MerchantAddressChange";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
@@ -70,7 +76,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             LocationCreate.SaveButton.Click();
         }
 
-
+        /// <summary>
+        ///     Verifies the location
+        /// </summary>
+        /// <param name="l">given location data</param>
         public static void Check(LocationData l)
         {
             Assert.AreEqual(l.CompanyName, LocationView.CompanyName);
