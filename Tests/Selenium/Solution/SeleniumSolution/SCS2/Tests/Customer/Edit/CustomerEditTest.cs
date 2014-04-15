@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
             StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
             StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 
-            CustomerData c = Factory.Customer.SixCustomerEdit();
+            CustomerData c = Factory.Customer.Edit();
             CustomerService.Edit(c);
             CustomerService.Check(c);
 
