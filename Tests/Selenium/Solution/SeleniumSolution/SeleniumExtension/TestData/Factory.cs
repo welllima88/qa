@@ -24,6 +24,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
             get { return new AdressFactory(); }
         }
 
+        public static ContactPersonFactory ContactPerson
+        {
+            get { return new ContactPersonFactory(); }
+        }
+
         public static string GenerateTestId()
         {
             return DateTime.Now.Ticks.ToString();
