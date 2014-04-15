@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_CountryId"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_LanguageId"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
