@@ -120,8 +120,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 
         public static string AdressAddition
         {
-            set { ContactPersonCreate.AddressAddition = value; }
-            get { return ContactPersonCreate.AddressAddition; }
+            set { ContactPersonCreate.AdressAddition = value; }
+            get { return ContactPersonCreate.AdressAddition; }
         }
     }
 }

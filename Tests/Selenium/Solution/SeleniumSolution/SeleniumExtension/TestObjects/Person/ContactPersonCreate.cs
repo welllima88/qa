@@ -5,7 +5,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
 {
     public class ContactPersonCreate : WebObject
     {
-        public static string AddressAddition
+        public static string AdressAddition
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#addition")).TextBox().TypeText(value); }
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#addition")).TextBox().Text(); }
