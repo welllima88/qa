@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonEditRes.Country)).Selector().SelectByValue(value);
+                    PersonEditRes.Country)).Selector().SelectByText(value);
             }
             get
             {

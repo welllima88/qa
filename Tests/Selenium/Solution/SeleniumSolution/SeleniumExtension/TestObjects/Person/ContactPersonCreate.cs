@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
@@ -62,7 +62,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
                          .Selector()
-                         .SelectByValue(value);
+                         .SelectByText(value);
             }
             get
             {
