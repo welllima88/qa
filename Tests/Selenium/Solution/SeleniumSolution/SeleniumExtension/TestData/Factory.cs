@@ -19,17 +19,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
             get { return new ContactFactory(); }
         }
 
+        public static AdressFactory Adress
+        {
+            get { return new AdressFactory(); }
+        }
+
         public static string GenerateTestId()
         {
             return DateTime.Now.Ticks.ToString();
         }
-    }
-
-    public class ContactFactory
-    {
-    }
-
-    public class LocationFactory
-    {
     }
 }
