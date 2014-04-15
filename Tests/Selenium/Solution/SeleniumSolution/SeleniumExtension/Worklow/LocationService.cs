@@ -51,6 +51,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             LocationEdit.Zip = l.Adress.Zip;
             LocationEdit.City = l.Adress.City;
             LocationEdit.Po = l.Adress.Po;
+            LocationEdit.Region = l.Adress.Region;
             LocationEdit.AdressAddition = l.Adress.AdressAddition;
             LocationEdit.SapNumber = l.SapNumber;
             LocationEdit.Email = l.Contact.Email;
