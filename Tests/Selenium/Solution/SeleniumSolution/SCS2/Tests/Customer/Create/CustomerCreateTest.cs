@@ -59,7 +59,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void SapNumber()
         {
-            Assert.AreEqual(_c.SapNumber, CustomerView.SapNumber);
+            Assert.AreEqual(_c.Location.SapNumber, CustomerView.SapNumber);
         }
 
         [TestMethod]
