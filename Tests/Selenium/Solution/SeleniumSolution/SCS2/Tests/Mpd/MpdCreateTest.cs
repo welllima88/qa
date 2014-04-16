@@ -1,60 +1,28 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Mpd;
+using SIX.SCS.QA.Selenium.Extension.TestData;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
+using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Mpd
 {
     [TestClass]
     public class MpdCreateTest
     {
+        private MpdData _mpd;
+
         [TestMethod]
         public void CreateMpdToCustomer()
         {
             TestDirector.Navigate("Mpd/ListByCustomer/?CUSTOMERID=402200");
-
-            CustomerMenu.AllMpds.Click();
-            MpdListView.CreateButton.Click();
-            Create();
+            _mpd = Factory.Mpd.Create();
+            MpdService.Create(_mpd);
         }
 
         [TestMethod]
-        public void MpdId()
+        public void Mpd()
         {
-            // MpdView.Id;
-        }
-
-        [TestMethod]
-        public void Description()
-        {
-            Assert.AreEqual("SYR Auto Description", MpdView.Description);
-        }
-
-        [TestMethod]
-        public void Adress()
-        {
-            Assert.AreEqual("Adress", MpdView.Adress);
-        }
-
-        [TestMethod]
-        public void Port()
-        {
-            Assert.AreEqual("Port", MpdView.Port);
-        }
-
-        public static void Create()
-        {
-            MpdCreate.Description = "SYR Auto Description";
-            MpdCreate.Adress = "Adress";
-            MpdCreate.Port = "Port";
-            MpdCreate.SaveButton.Click();
-        }
-
-        public static void Check()
-        {
-            Assert.AreEqual("SYR Auto Description", MpdView.Description);
-            Assert.AreEqual("Adress", MpdView.Adress);
-            Assert.AreEqual("Port", MpdView.Port);
+            MpdService.Check(_mpd);
         }
     }
 }
