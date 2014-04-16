@@ -15,7 +15,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 
         public static string ExternTerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_ExternTerminalId)).Text; }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_ExternTerminalId)).Text;
+            }
         }
 
         public static string Article

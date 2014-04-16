@@ -21,7 +21,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 
         public static IWebElement Installations
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/TicketIntegration/DeliveryTicketsInstall/']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("a[href*='/TicketIntegration/DeliveryTicketsInstall/']"));
+            }
         }
     }
 }

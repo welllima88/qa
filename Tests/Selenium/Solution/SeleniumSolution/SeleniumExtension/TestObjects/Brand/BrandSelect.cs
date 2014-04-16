@@ -21,8 +21,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             // title[textContent~='']
             // By.XPath("//td[text()='" + brand + "']");
 
-            ReadOnlyCollection<IWebElement> ccss = WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
-            var firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
+            ReadOnlyCollection<IWebElement> ccss =
+                WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
+            IWebElement firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
             if (firstOrDefault != null)
                 firstOrDefault.Click();
         }
@@ -32,7 +33,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindElement(
                 By.CssSelector(
                     string.Format("span#ctl00_bodyContentPlaceHolder_lblSelected div a tr td:contains('[{0}]')",
-                                  brandId))).Click();
+                        brandId))).Click();
         }
     }
 }

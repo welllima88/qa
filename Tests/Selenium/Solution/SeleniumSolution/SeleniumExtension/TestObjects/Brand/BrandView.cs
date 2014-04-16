@@ -34,7 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
-                      Click();
+                Click();
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyCategoryCode_sugCategoryCode"))
-                     .Selector().SelectByText(mcc);
+                .Selector().SelectByText(mcc);
         }
 
         public static void SetVpNo(String vpNo)
@@ -53,8 +53,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                     .TextBox()
-                     .TypeText(vpNo);
+                .TextBox()
+                .TypeText(vpNo);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                      SelectByText(businessTemplate);
+                SelectByText(businessTemplate);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_NetworkProviderId")).
-                          Selector().SelectByText(value);
+                    Selector().SelectByText(value);
             }
         }
 
@@ -30,7 +30,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
         public static string MobileNumber
         {
             get { throw new NotImplementedException(); }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_MobileNumber")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_MobileNumber")).TextBox().TypeText(value);
+            }
         }
 
         public static string Pin
@@ -51,7 +54,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_IsActive")).
-                          CheckBox().Set(value);
+                    CheckBox().Set(value);
             }
         }
 
@@ -67,7 +70,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_LocationId")).
-                          Selector().SelectByText(value);
+                    Selector().SelectByText(value);
             }
         }
 
@@ -77,7 +80,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_UsageId")).
-                          Selector().SelectByText(value);
+                    Selector().SelectByText(value);
             }
         }
     }

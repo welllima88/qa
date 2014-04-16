@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_ddTerminalStatus")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
         }
 
@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_inpTerminalInfoText"))
-                         .TextArea().TypeText(value);
+                    .TextArea().TypeText(value);
             }
         }
 
@@ -71,7 +71,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_ddNewServiceCenter")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
         }
 
@@ -80,8 +80,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_ddNewPMS"))
-                         .
-                          Selector().SelectByText(value);
+                    .
+                    Selector().SelectByText(value);
             }
         }
 
@@ -91,18 +91,24 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_ddTerminalSubStatus")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
         }
 
         public static IWebElement ContinueButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
+            }
         }
 
         public static IWebElement SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
+            }
         }
     }
 }

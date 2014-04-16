@@ -42,7 +42,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
 
         /// <summary>
         ///     Important note:
-        ///     but this is delegated to virtual method, and IE-webtesting is not supported for special test case, this will cause to derive a new class from test-director, which startups IE web driver, because it is rarely used, this solution is perfect at the momemt
+        ///     but this is delegated to virtual method, and IE-webtesting is not supported for special test case, this will cause
+        ///     to derive a new class from test-director, which startups IE web driver, because it is rarely used, this solution is
+        ///     perfect at the momemt
         /// </summary>
         /// <param name="driverPath"></param>
         /// <returns></returns>
@@ -71,10 +73,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         private static void ConfigureTimeouts()
         {
             WebDriver.Manage()
-                     .Timeouts()
-                     .SetPageLoadTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetPageLoadTimeout))
-                     .SetScriptTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout))
-                     .ImplicitlyWait(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.ImplicitlyWait));
+                .Timeouts()
+                .SetPageLoadTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetPageLoadTimeout))
+                .SetScriptTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout))
+                .ImplicitlyWait(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.ImplicitlyWait));
         }
 
         public static void ShutDownBrowser()

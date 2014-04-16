@@ -18,7 +18,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate"))
-                         .TextBox().TypeText(value);
+                    .TextBox().TypeText(value);
             }
             //Check date format at this point? -> NOOO! In test method is right place
             //    Assert.IsTrue(Regex.IsMatch(WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
@@ -29,8 +29,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -43,7 +43,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             //Example: By.XPath("//span/div/label[text()='American Express']/preceding-sibling::input")).
             WebDriver.FindAdaptedElement(By.XPath("//span/div/label[text()='" + acquirer + "']/preceding-sibling::input"))
-                     .CheckBox().Set(messageToAcquirer);
+                .CheckBox().Set(messageToAcquirer);
         }
 
         /// <summary>

@@ -16,7 +16,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#LocationData_Street"))
-                             .Text;
+                        .Text;
             }
         }
 

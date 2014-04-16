@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
         {
             WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
-                      Click();
+                Click();
         }
 
         public void SelectMcc(String mcc)
@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyCategoryCode_sugCategoryCode"))
-                     .Selector().SelectByText(mcc);
+                .Selector().SelectByText(mcc);
         }
 
         public static void SetVpNo(String vpNo)
@@ -45,29 +45,29 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                     .TextBox()
-                     .TypeText(vpNo);
+                .TextBox()
+                .TypeText(vpNo);
         }
 
         public static void SelectBusinessTemplate(String businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                      SelectByValue(businessTemplate);
+                SelectByValue(businessTemplate);
         }
 
         public static void Dcc(bool dccEnabled)
         {
             WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
-                     .CheckBox()
-                     .Set(dccEnabled);
+                .CheckBox()
+                .Set(dccEnabled);
         }
 
         public void SetDccBaseCurrency(String dccBaseCurrency)
         {
             WebDriver.FindElement(
                 By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
-                     .Click();
+                .Click();
         }
 
         public static void SaveAndCreate()

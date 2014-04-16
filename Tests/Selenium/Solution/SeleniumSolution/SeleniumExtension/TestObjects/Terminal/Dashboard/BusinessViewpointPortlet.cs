@@ -42,7 +42,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
                 return
                     WebDriver.FindElement(
                         By.CssSelector(
-                            "div#frame_TerminalBusinessViewpointPortlet div#BVP_TerminalColor div.treeGridValueCol span")).Text;
+                            "div#frame_TerminalBusinessViewpointPortlet div#BVP_TerminalColor div.treeGridValueCol span"))
+                        .Text;
             }
         }
 
@@ -54,7 +55,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
                     WebDriver.FindElement(
                         By.CssSelector(
                             "div#frame_TerminalBusinessViewpointPortlet div#BVP_TerminalAppearance_LanguageProperty div.treeGridValueCol span"))
-                             .Text;
+                        .Text;
             }
         }
     }

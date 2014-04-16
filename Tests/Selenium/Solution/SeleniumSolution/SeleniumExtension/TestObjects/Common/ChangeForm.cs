@@ -11,8 +11,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']"))
-                         .Selector()
-                         .SelectByValue(value);
+                    .Selector()
+                    .SelectByValue(value);
             }
         }
 
@@ -21,8 +21,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input[id$='_NotificationRemarks']"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -33,8 +33,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
                 WebDriver.FindAdaptedElement(By.Id("ChangeNow")).CheckBox().Set(false);
                 // Example for setting a time value: 01.02.2014 13:30:41
                 WebDriver.FindAdaptedElement(By.Id("ChangeOn"))
-                         .TextBox()
-                         .TypeText(changeTime.ToString(""));
+                    .TextBox()
+                    .TypeText(changeTime.ToString(""));
             }
         }
     }

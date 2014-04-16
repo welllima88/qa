@@ -16,7 +16,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
         public static string NetProvider
         {
             get { throw new NotSupportedException(); }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_NetworkProviderId")).Selector().SelectByText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_NetworkProviderId")).Selector().SelectByText(value);
+            }
         }
 
         public static string SimCardNumber

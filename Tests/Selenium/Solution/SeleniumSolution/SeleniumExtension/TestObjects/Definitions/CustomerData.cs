@@ -12,6 +12,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions
         public string CategoryCode { get; set; }
         public string Agency { get; set; }
         public string SupportContract { get; set; }
-        public string Segment { get; set; }        
+        public string Segment { get; set; }
     }
 }

@@ -100,11 +100,15 @@
     <Compile Include="Selenium\TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
+    <Compile Include="TestData\AdressFactory.cs" />
+    <Compile Include="TestData\ContactFactory.cs" />
+    <Compile Include="TestData\ContactPersonFactory.cs" />
     <Compile Include="TestData\CustomerFactory.cs" />
     <Compile Include="TestData\Factory.cs" />
     <Compile Include="TestData\INaviElement.cs" />
     <Compile Include="TestData\ITestData.cs" />
     <Compile Include="TestData\ITestDataRepository.cs" />
+    <Compile Include="TestData\LocationFactory.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
@@ -169,15 +173,15 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
-    <Compile Include="TestObjects\Definitions\IAdress.cs" />
-    <Compile Include="TestObjects\Definitions\IAgency.cs" />
+    <Compile Include="TestObjects\Definitions\AdressData.cs" />
+    <Compile Include="TestObjects\Definitions\AgencyData.cs" />
     <Compile Include="TestObjects\Definitions\IArticle.cs" />
-    <Compile Include="TestObjects\Definitions\IContact.cs" />
-    <Compile Include="TestObjects\Definitions\IContactPerson.cs" />
+    <Compile Include="TestObjects\Definitions\ContactData.cs" />
+    <Compile Include="TestObjects\Definitions\ContactPersonData.cs" />
     <Compile Include="TestObjects\Definitions\CustomerData.cs" />
     <Compile Include="TestObjects\Definitions\IEntity.cs" />
     <Compile Include="TestObjects\Definitions\IFunctionbits.cs" />
-    <Compile Include="TestObjects\Definitions\ILocation.cs" />
+    <Compile Include="TestObjects\Definitions\LocationData.cs" />
     <Compile Include="TestObjects\Definitions\INetType.cs" />
     <Compile Include="TestObjects\Definitions\ISimCardElement.cs" />
     <Compile Include="TestObjects\Definitions\ISupplier.cs" />
@@ -271,7 +275,9 @@
     <Compile Include="TestRegExpPatterns.cs" />
     <Compile Include="Selenium\WebDriverAdapter.cs" />
     <Compile Include="Selenium\WebElements\WebElementAdapter.cs" />
+    <Compile Include="Worklow\ContactService.cs" />
     <Compile Include="Worklow\CustomerService.cs" />
+    <Compile Include="Worklow\LocationService.cs" />
     <Compile Include="Worklow\SearchService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -25,14 +25,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_hplTerminalInfoText")).
-                              Text;
+                        Text;
             }
             set
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_inpTerminalInfoText"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -44,7 +44,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.XPath(
                             "//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblStatusViewValue']/span"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblArticleDisplayName > span"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblTerminalTypeValue > span"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -80,7 +80,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblRefSystemValue > span"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -92,7 +92,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.XPath(
                             "//span[@id='ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_lblNetTypeValue']/span"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -103,7 +103,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                 return
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_dtpCreateDate"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -115,7 +115,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptServiceCenter_ctl00_hplName"))
-                             .Text;
+                        .Text;
             }
         }
 
@@ -127,7 +127,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_tbcTerminalData_TerminalAttribute_rptPMS_ctl00_hplName")).
-                              Text;
+                        Text;
             }
         }
 

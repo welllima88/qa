@@ -121,10 +121,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             {
                 return
                     WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
-            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByValue(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByValue(value);
+            }
         }
 
         public static string ReasonRemark

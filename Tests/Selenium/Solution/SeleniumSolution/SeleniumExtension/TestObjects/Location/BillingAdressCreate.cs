@@ -7,7 +7,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
     {
         public static string Country
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_CountryId")).Selector().SelectByText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_CountryId")).Selector().SelectByText(value);
+            }
         }
 
         public static string Zip
@@ -25,7 +28,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_AddressAddition"))
-                         .TextBox().TypeText(value);
+                    .TextBox().TypeText(value);
             }
         }
 
@@ -61,7 +64,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 
         public static string CompanyName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TextBox().TypeText(value);
+            }
         }
 
         public static string StreetName
@@ -71,7 +77,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
 
         public static string Language
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LanguageId")).Selector().SelectByText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LanguageId")).Selector().SelectByText(value);
+            }
         }
 
         public static string Web

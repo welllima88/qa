@@ -29,10 +29,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId")).Selector().SelectByValue(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId")).Selector().SelectByValue(value);
+            }
         }
 
         public static string StreetNo
@@ -47,10 +50,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId")).Selector().SelectByValue(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId")).Selector().SelectByValue(value);
+            }
         }
 
         public static string Zip
@@ -95,8 +101,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_AgencyUserDefinedName"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -106,14 +112,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
-                         .Selector()
-                         .SelectByText(value);
+                    .Selector()
+                    .SelectByText(value);
             }
         }
     }

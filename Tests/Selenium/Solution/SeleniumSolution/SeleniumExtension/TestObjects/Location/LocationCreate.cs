@@ -15,14 +15,14 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_CountryId"))
-                         .Selector()
-                         .SelectByText(value);
+                    .Selector()
+                    .SelectByText(value);
             }
             get
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_CountryId")).Selector().
-                              SelectedOption.Text;
+                        SelectedOption.Text;
             }
         }
 
@@ -31,10 +31,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Ep2MerchantId"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Ep2MerchantId")).TextBox().Text(); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Ep2MerchantId")).TextBox().Text();
+            }
         }
 
         public static string Language
@@ -42,26 +45,35 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_LanguageId"))
-                         .Selector()
-                         .SelectByText(value);
+                    .Selector()
+                    .SelectByText(value);
             }
             get
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_LanguageId")).Selector().
-                              SelectedOption.Text;
+                        SelectedOption.Text;
             }
         }
 
         public static string Zip
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP")).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP")).TextBox().Text(); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP")).TextBox().TypeText(value);
+            }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP")).TextBox().Text();
+            }
         }
 
         public static string City
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_City")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_City")).TextBox().TypeText(value);
+            }
         }
 
         public static string AdressAddition
@@ -69,14 +81,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Addition"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_PO")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_PO")).TextBox().TypeText(value);
+            }
         }
 
         public static string Region
@@ -84,8 +99,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Region"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -94,8 +109,8 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Telephone"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -104,14 +119,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Mobile"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
         public static string Fax
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Fax")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Fax")).TextBox().TypeText(value);
+            }
         }
 
         public static string Email
@@ -119,14 +137,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Email"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
         public static string SapNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_SapNumber")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_SapNumber")).TextBox().TypeText(value);
+            }
         }
 
         public static string CompanyName
@@ -139,14 +160,17 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Location
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Street"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
         public static string Web
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Web")).TextBox().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Web")).TextBox().TypeText(value);
+            }
         }
     }
 }
