@@ -79,7 +79,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
             Assert.AreEqual(sapNumber, CustomerView.SapNumber);
             Assert.AreEqual(categoryCode, CustomerView.CategoryCode);
             Assert.AreEqual(supportContract,
-                            CustomerView.SupportContract);
+                CustomerView.SupportContract);
 
             StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
 

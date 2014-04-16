@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.FinancialConfig
             SetOnlineFinancialAndSave("-1");
 
             CollectionAssert.Contains(FormAlert.FormAlertList,
-                                      "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
+                "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]
@@ -46,7 +46,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.FinancialConfig
             SetOnlineFinancialAndSave("0");
 
             CollectionAssert.Contains(FormAlert.FormAlertList,
-                                      "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
+                "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
         }
 
         [TestMethod]

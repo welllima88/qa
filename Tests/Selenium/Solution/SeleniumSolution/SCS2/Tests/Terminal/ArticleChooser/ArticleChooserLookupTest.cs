@@ -47,7 +47,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.ArticleChooser
             TerminalChooser.ArticleFilter = "10773";
 
             CollectionAssert.Contains(TerminalChooser.FilteredArtikelList,
-                                      "  davinci2 AUTONOM, TCP/IP (Internet) TCPIPEP2  10773");
+                "  davinci2 AUTONOM, TCP/IP (Internet) TCPIPEP2  10773");
             Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count == 1);
         }
 

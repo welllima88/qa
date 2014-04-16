@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         public void FormAlertCheck()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList,
-                                      "Änderungsgrund - In diesem Feld wird eine Eingabe benötigt!");
+                "Änderungsgrund - In diesem Feld wird eine Eingabe benötigt!");
         }
 
         [TestMethod]

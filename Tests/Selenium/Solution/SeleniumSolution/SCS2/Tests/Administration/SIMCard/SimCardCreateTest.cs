@@ -49,8 +49,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.SIMCard
             Assert.IsTrue(SimCardHistory.HistoryList.Count == 1);
             // "13.12.2012 15:49:27 tksyr SIM-Karte erfasst"
             StringAssert.Matches(SimCardHistory.HistoryList[0],
-                                 new Regex(TestRegExpPatterns.DateTime + " " + TestRegExpPatterns.UserName +
-                                           " SIM Karte erfasst"));
+                new Regex(TestRegExpPatterns.DateTime + " " + TestRegExpPatterns.UserName +
+                          " SIM Karte erfasst"));
         }
     }
 }

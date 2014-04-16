@@ -3,6 +3,7 @@ using SIX.SCS.QA.Selenium.Extension;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
@@ -10,7 +11,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
     [TestClass]
     public class CustomerCreateTest
     {
-        private static QA.Selenium.Extension.TestObjects.Definitions.CustomerData _c;
+        private static CustomerData _c;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -75,7 +76,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public void SupportContract()
         {
             Assert.AreEqual(_c.SupportContract,
-                            CustomerView.SupportContract);
+                CustomerView.SupportContract);
         }
 
         [TestMethod]

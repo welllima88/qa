@@ -16,9 +16,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             Application = new LobbyView();
             Authentication = new UacAuthentication(new UacLoginPage(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void LoadConfigurationLocal()
@@ -28,9 +28,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             Application = new LobbyView();
             Authentication = new UacAuthentication(new UacLoginPage(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 15, SetPageLoadTimeout = 40}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 15, SetPageLoadTimeout = 40}
+            };
         }
 
         public static void LoadConfigurationProd()
@@ -40,9 +40,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             Application = new LobbyView();
             Authentication = new SecurIdAuthentication("user", "pass", ScsRes.mandant_prod, "securId");
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void LoadConfigurationQaK()
@@ -52,9 +52,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             Application = new LobbyView();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void LoadConfigurationQaL()
@@ -64,9 +64,9 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
             Application = new LobbyView();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
     }
 }

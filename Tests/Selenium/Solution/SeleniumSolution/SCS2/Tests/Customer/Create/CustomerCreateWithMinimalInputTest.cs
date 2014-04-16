@@ -101,7 +101,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
         public void SupportContract()
         {
             Assert.AreEqual("Kein Supportvertrag",
-                            CustomerView.SupportContract);
+                CustomerView.SupportContract);
         }
 
         [TestMethod]

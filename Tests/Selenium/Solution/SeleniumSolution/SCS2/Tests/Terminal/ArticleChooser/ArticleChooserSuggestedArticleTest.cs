@@ -24,7 +24,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.ArticleChooser
         public void SuggestedListHasConcreteEntry()
         {
             CollectionAssert.Contains(TerminalChooser.SuggestedArtikelList,
-                                      "  xentissimo MOBILE WLAN, TCP/IP TCPIPEP2  15401");
+                "  xentissimo MOBILE WLAN, TCP/IP TCPIPEP2  15401");
         }
     }
 }

@@ -112,7 +112,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Edit
         public void WebAddressError()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Dies ist keine gültige Web Adresse!",
-                                      "web adress not validated");
+                "web adress not validated");
         }
 
         [TestMethod]

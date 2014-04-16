@@ -2,6 +2,7 @@
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
@@ -18,7 +19,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
         [TestMethod]
         public void EditLocationAndSave()
         {
-            var l = Factory.Location.Edit();
+            LocationData l = Factory.Location.Edit();
             LocationService.Edit(l);
 
             NavigationBar.Lobby.Click();

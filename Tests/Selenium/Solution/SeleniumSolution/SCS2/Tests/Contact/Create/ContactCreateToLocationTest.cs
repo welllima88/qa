@@ -17,7 +17,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
-            
+
             _p = Factory.ContactPerson.Create();
             LocationMenu.ContactCreate.Click();
             ContactService.Create(_p);

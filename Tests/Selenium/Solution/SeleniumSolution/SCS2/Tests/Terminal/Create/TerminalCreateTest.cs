@@ -94,7 +94,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Create
 
             Assert.AreEqual(TerminalConfigDetailsCreate.Article, "xentissimo MOBILE WLAN, TCP/IP");
             Assert.AreEqual(TerminalConfigDetailsCreate.ReceiptText,
-                            "TKSYR for siw2\r\nTKSYR\r\nTKSYR TKSYR\r\n\r\n");
+                "TKSYR for siw2\r\nTKSYR\r\nTKSYR TKSYR\r\n\r\n");
 
             TerminalConfigDetailsCreate.ReceiptText =
                 "SYR-AUTO Line1\r\nSYR-AUTO Line2\r\nSYR-AUTO Line3\r\nSYR-AUTO Line4\r\nSYR-AUTO Line5";

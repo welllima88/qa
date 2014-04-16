@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Location.Edit
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count, "Wrong number of form alerts");
             Assert.IsTrue(FormAlert.FormAlertList.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"),
-                          "Wrong text in form alerts");
+                "Wrong text in form alerts");
             LocationEdit.CancelButton.Click();
         }
 
