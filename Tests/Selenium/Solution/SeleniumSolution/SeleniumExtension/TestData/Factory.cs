@@ -29,6 +29,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
             get { return new ContactPersonFactory(); }
         }
 
+        public static MpdFactory Mpd
+        {
+            get { return new MpdFactory(); }
+        }
+
         public static string GenerateTestId()
         {
             return DateTime.Now.Ticks.ToString();
