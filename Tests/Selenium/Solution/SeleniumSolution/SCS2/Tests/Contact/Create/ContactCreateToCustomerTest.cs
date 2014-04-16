@@ -3,146 +3,41 @@ using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
+using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
 {
     [TestClass]
     public class ContactCreateToCustomerTest
     {
-        private static string _firstName;
+        private static ContactPersonData _p;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
-            // TestDirector.Navigate(TestDataRepository.Customer.GetAny());
-
+            
             CustomerMenu.ContactCreate.Click();
-            Create();
+
+            _p = Factory.ContactPerson.Create();
+            ContactService.Create(_p);
         }
 
         [TestMethod]
-        public void FirstName()
+        public void Contact()
         {
-            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
-        }
-
-        [TestMethod]
-        public void LastName()
-        {
-            Assert.AreEqual("Siegmund SYR AUTO", ContactPersonView.Name);
-        }
-
-        [TestMethod]
-        public void Language()
-        {
-            StringAssert.Contains(ContactPersonView.Language, "[de]");
-        }
-
-        [TestMethod]
-        public void Telephone()
-        {
-            Assert.AreEqual("+41 58 399 6237 - 1", ContactPersonView.Telephone);
-        }
-
-        [TestMethod]
-        public void Mobile()
-        {
-            Assert.AreEqual("+41 58 399 6237 - 2", ContactPersonView.Mobile);
-        }
-
-        [TestMethod]
-        public void Fax()
-        {
-            Assert.AreEqual("+41 58 399 6237 - 3", ContactPersonView.Fax);
-        }
-
-        [TestMethod]
-        public void Email()
-        {
-            Assert.AreEqual("contact@six-group.com", ContactPersonView.Email);
-        }
-
-        [TestMethod]
-        public void Street()
-        {
-            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
-        }
-
-        [TestMethod]
-        public void Po()
-        {
-            Assert.AreEqual("POC", ContactPersonView.Po);
-        }
-
-        [TestMethod]
-        public void Zip()
-        {
-            Assert.AreEqual("55555", ContactPersonView.Zip);
-        }
-
-        [TestMethod]
-        public void RegionCreateContactAndSave()
-        {
-            Assert.AreEqual("Mitte", ContactPersonView.Region);
-        }
-
-        [TestMethod]
-        public void City()
-        {
-            Assert.AreEqual("Berlin", ContactPersonView.City);
-        }
-
-        [TestMethod]
-        public void Country()
-        {
-            StringAssert.Contains(ContactPersonView.Country, "[DE]");
-        }
-
-        [TestMethod]
-        public void AddressAddition()
-        {
-            Assert.AreEqual("Zusatz1", ContactPersonView.AddressAddition);
-        }
-
-        [TestMethod]
-        public void Web()
-        {
-            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
+            ContactService.Check(_p);
         }
 
         [TestMethod]
         public void RecentElementsCheck()
         {
-            // string url = TestDirector.WebDriver.Url;
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
-            // Assert.AreEqual(url, TestDirector.WebDriver.Url);
-        }
-
-        public static void Create()
-        {
-            _firstName = "SYR" + Factory.GenerateTestId();
-
-            ContactPersonCreate.Salutation = "Herr";
-            ContactPersonCreate.FirstName = _firstName;
-            ContactPersonCreate.Name = "Siegmund SYR AUTO";
-            ContactPersonCreate.Language = "de";
-            ContactPersonCreate.Telephone = "+41 58 399 6237 - 1";
-            ContactPersonCreate.Mobile = "+41 58 399 6237 - 2";
-            ContactPersonCreate.Fax = "+41 58 399 6237 - 3";
-            ContactPersonCreate.Email = "contact@six-group.com";
-            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            ContactPersonCreate.Po = "POC";
-            ContactPersonCreate.Zip = "55555";
-            ContactPersonCreate.City = "Berlin";
-            ContactPersonCreate.Region = "Mitte";
-            ContactPersonCreate.Country = "DE";
-            ContactPersonCreate.AddressAddition = "Zusatz1";
-            ContactPersonCreate.Web = "www.six-group.com";
-
-            ContactPersonCreate.SaveButton.Click();
+            
+            ContactService.Check(_p);
         }
 
         [ClassCleanup]
@@ -151,25 +46,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
         {
             ContactPersonView.DeleteButton.Click();
             ContactPersonView.DeleteConfirm();
-        }
-
-        public static void Check()
-        {
-            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
-            Assert.AreEqual("Siegmund SYR AUTO", ContactPersonView.Name);
-            StringAssert.Contains(ContactPersonView.Language, "[de]");
-            Assert.AreEqual("+41 58 399 6237 - 1", ContactPersonView.Telephone);
-            Assert.AreEqual("+41 58 399 6237 - 2", ContactPersonView.Mobile);
-            Assert.AreEqual("+41 58 399 6237 - 3", ContactPersonView.Fax);
-            Assert.AreEqual("contact@six-group.com", ContactPersonView.Email);
-            Assert.AreEqual("Kontakt-Weg 1", ContactPersonView.StreetNo);
-            Assert.AreEqual("POC", ContactPersonView.Po);
-            Assert.AreEqual("55555", ContactPersonView.Zip);
-            Assert.AreEqual("Mitte", ContactPersonView.Region);
-            Assert.AreEqual("Berlin", ContactPersonView.City);
-            StringAssert.Contains(ContactPersonView.Country, "[DE]");
-            Assert.AreEqual("Zusatz1", ContactPersonView.AddressAddition);
-            Assert.AreEqual("www.six-group.com", ContactPersonView.Web);
         }
     }
 }
