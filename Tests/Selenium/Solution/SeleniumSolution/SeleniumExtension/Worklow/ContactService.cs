@@ -9,8 +9,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
     {
         public static void Create(ContactPersonData c)
         {
-            ContactMenu.ContactEdit.Click();
-
             ContactPersonCreate.Salutation = c.Salutation;
             ContactPersonCreate.FirstName = c.FirstName;
             ContactPersonCreate.Name = c.Name;
