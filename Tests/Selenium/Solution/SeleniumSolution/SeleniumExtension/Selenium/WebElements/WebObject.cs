@@ -31,7 +31,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
         //}
 
         /// <summary>
-        ///     overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by the constructor)
+        ///     overrides the acessor for this public WebDriver reference, so that the constructor can set (internally usually by
+        ///     the constructor)
         /// </summary>
         public static IWebDriverAdapter WebDriver { get; set; }
     }

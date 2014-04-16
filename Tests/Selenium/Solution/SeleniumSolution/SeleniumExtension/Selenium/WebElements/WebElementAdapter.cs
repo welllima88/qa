@@ -6,7 +6,8 @@ using OpenQA.Selenium.Support.UI;
 namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
-    ///     This class adds selenium features which we often need in Zebra and used in common instead of selenium theWebElement. This class extends
+    ///     This class adds selenium features which we often need in Zebra and used in common instead of selenium
+    ///     theWebElement. This class extends
     /// </summary>
     public class WebElementAdapter : IWebElementAdapter
     {
@@ -21,7 +22,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
         }
 
         /// <summary>
-        ///     Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by value, name etc.)
+        ///     Adds method for drop down lists it returns a new reference of a 'SelectElement' on which different selects (by
+        ///     value, name etc.)
         ///     can be executed
         /// </summary>
         /// <returns>SelectElement for the actual WebElement</returns>
