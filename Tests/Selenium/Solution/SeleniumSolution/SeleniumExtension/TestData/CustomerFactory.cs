@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "Euro",
                 SbsBillingTenant = "SIX Payment Services (Europe)",
-                CustomerName = "SYR Kunde" + Factory.GenerateTestId(),
+                CustomerName = "SYR Customer Create" + Factory.GenerateTestId(),
                 CategoryCode = "3364: AGENCY RENT-A-CAR",
                 SupportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h",
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
@@ -25,9 +25,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
         {
             return new CustomerData
             {
-                CustomerName = "SYR Kunde" + Factory.GenerateTestId(),
+                CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
                 Location = Factory.Location.Edit(),
-                Agency = "SIX Payment Services (Europe)",
+                Agency = "SIX Payment Services (Europe)",                
             };
         }
 
