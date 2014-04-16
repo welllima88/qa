@@ -10,8 +10,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -21,7 +21,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             {
                 // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxPassword"))
-                         .Password().TypeText(value);
+                    .Password().TypeText(value);
             }
         }
 

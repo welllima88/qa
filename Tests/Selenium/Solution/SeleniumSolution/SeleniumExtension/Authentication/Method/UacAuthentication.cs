@@ -16,8 +16,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
             _uacLoginPage = loginPage;
         }
 
-        #region IAuthentication Members
-
         /// <summary>
         ///     uses UAC authentication for the test user "six_scs_auto"
         /// </summary>
@@ -27,7 +25,5 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
             _uacLoginPage.UserPasswort = _password;
             _uacLoginPage.LoginButton.Click();
         }
-
-        #endregion
     }
 }

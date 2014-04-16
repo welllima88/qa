@@ -15,7 +15,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.Method
         private WesSecurIdLoginPage _wes;
 
         /// <summary>
-        ///     The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved due to security, so after test run the data will not be available anymore. But there is no further protection like encryption or forced data destruction.
+        ///     The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved
+        ///     due to security, so after test run the data will not be available anymore. But there is no further protection like
+        ///     encryption or forced data destruction.
         /// </summary>
         /// <param name="userName">username e.g. "tksyr"</param>
         /// <param name="password">password for userName</param>

@@ -10,8 +10,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input.loginInput[name='spUsername']"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -20,7 +20,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input.loginInput[name='spPassword']"))
-                         .TextBox().TypeText(value);
+                    .TextBox().TypeText(value);
             }
         }
 

@@ -7,7 +7,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
     {
         public IWebElement LoginButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']"));
+            }
         }
 
         public IWebElement HeadLine
@@ -17,7 +20,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 
         public IWebElement Continue
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']"));
+            }
         }
 
         public IWebElement MessageInfo
@@ -35,7 +41,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='client']"))
-                         .TextBox().TypeText(value);
+                    .TextBox().TypeText(value);
             }
         }
 
@@ -44,8 +50,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebuserid']"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
@@ -54,14 +60,17 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswd']"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 
         public IWebElement ConfirmButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Senden']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Senden']"));
+            }
         }
 
         public string SecurId
@@ -69,8 +78,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']"))
-                         .TextBox()
-                         .TypeText(value);
+                    .TextBox()
+                    .TypeText(value);
             }
         }
 

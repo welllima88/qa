@@ -7,7 +7,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
     {
         public IWebElement LoginButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']"));
+            }
         }
 
         public IWebElement HeadLine
@@ -17,7 +20,10 @@ namespace SIX.SCS.QA.Selenium.Extension.Authentication.WebPages
 
         public IWebElement Continue
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']")); }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']"));
+            }
         }
 
         public IWebElement MessageInfo
