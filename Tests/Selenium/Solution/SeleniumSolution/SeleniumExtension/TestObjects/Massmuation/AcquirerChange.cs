@@ -28,7 +28,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Massmuation
 
         public static string DownloadTemplate
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text;
+            }
         }
     }
 }

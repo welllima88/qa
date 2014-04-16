@@ -44,15 +44,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
-                         .Selector()
-                         .SelectByText(value);
+                    .Selector()
+                    .SelectByText(value);
             }
             get
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
         }
 
@@ -61,15 +61,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Person
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
-                         .Selector()
-                         .SelectByText(value);
+                    .Selector()
+                    .SelectByText(value);
             }
             get
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
-                             .Selector()
-                             .SelectedOption.Text;
+                        .Selector()
+                        .SelectedOption.Text;
             }
         }
 
