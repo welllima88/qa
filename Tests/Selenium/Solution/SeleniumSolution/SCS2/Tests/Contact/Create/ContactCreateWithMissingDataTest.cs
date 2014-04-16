@@ -30,7 +30,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             ContactPersonCreate.City = "Berlin";
             ContactPersonCreate.Region = "Mitte";
             ContactPersonCreate.Country = "DE";
-            ContactPersonCreate.AddressAddition = "Zusatz1";
+            ContactPersonCreate.AdressAddition = "Zusatz1";
         }
 
         [TestMethod]

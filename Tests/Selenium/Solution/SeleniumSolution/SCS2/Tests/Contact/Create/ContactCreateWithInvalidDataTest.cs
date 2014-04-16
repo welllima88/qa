@@ -28,7 +28,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Contact.Create
             ContactPersonCreate.Zip = "^@}$°";
             ContactPersonCreate.City = "^City@}$°";
             ContactPersonCreate.Region = "Re^@}$°";
-            ContactPersonCreate.AddressAddition = "Add^@}$°";
+            ContactPersonCreate.AdressAddition = "Add^@}$°";
             ContactPersonCreate.Web = "Add^@}$°";
 
             ContactPersonCreate.SaveButton.Click();
