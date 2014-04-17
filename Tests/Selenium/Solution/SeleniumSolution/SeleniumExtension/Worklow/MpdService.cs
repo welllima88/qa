@@ -17,6 +17,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             MpdCreate.Port = m.Port;
 
             MpdCreate.SaveButton.Click();
+
+            m.Id = MpdView.Id;
         }
 
         public static void Check(MpdData m)
