@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
     public static class SearchService
     {
-        public static void CustomerCanBeFoundByCustomerId(string customerId)
+        public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
             QuickSearch.Find(customerId);
             CustomerResult.Result().Click();
