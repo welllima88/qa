@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void CustomerId()
         {
-            StringAssert.Matches(CustomerInfo.Id.Text, new Regex(@"\d+"));
+            StringAssert.Matches(CustomerInfo.Number.Text, new Regex(@"\d+"));
         }
 
         [TestMethod]
