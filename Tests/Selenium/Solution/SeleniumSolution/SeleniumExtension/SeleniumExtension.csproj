@@ -109,6 +109,8 @@
     <Compile Include="TestData\ITestData.cs" />
     <Compile Include="TestData\ITestDataRepository.cs" />
     <Compile Include="TestData\LocationFactory.cs" />
+    <Compile Include="TestObjects\Definitions\MpdData.cs" />
+    <Compile Include="TestData\MpdFactory.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
@@ -277,7 +279,9 @@
     <Compile Include="Selenium\WebElements\WebElementAdapter.cs" />
     <Compile Include="Worklow\ContactService.cs" />
     <Compile Include="Worklow\CustomerService.cs" />
+    <Compile Include="Worklow\InfoTextService.cs" />
     <Compile Include="Worklow\LocationService.cs" />
+    <Compile Include="Worklow\MpdService.cs" />
     <Compile Include="Worklow\SearchService.cs" />
   </ItemGroup>
   <ItemGroup>
