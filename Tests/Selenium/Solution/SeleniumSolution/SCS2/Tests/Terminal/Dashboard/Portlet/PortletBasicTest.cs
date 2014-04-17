@@ -15,21 +15,15 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard.Portlet
         }
 
         [TestMethod]
-        public void TechnicalViewpointPresent()
-        {
-            //StringAssert.Matches(TechnicalViewPortlet.Headline.Text, new Regex(@"\w+"));
-        }
-
-        [TestMethod]
         public void LocationEp2Id()
         {
-            StringAssert.Matches(LocationInfo.Ep2Id.Text, new Regex(@"\w{8}\d{7}"));
+            StringAssert.Matches(LocationInfo.Ep2Id, new Regex(@"\w{8}\d{7}"));
         }
 
         [TestMethod]
         public void LocationName()
         {
-            StringAssert.Matches(LocationInfo.CompanyName.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.CompanyName, new Regex(@"\w+"));
         }
     }
 }

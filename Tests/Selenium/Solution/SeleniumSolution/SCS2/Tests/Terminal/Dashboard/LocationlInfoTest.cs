@@ -17,19 +17,19 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void LocationAdress()
         {
-            StringAssert.Matches(LocationInfo.Adress.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.Adress, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void LocationEp2Id()
         {
-            StringAssert.Matches(LocationInfo.Ep2Id.Text, new Regex(@"\w{8}\d{7}"));
+            StringAssert.Matches(LocationInfo.Ep2Id, new Regex(@"\w{8}\d{7}"));
         }
 
         [TestMethod]
         public void LocationName()
         {
-            StringAssert.Matches(LocationInfo.CompanyName.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.CompanyName, new Regex(@"\w+"));
         }
     }
 }

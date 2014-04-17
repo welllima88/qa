@@ -17,25 +17,25 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void Adress()
         {
-            StringAssert.Matches(CustomerInfo.Adress.Text, new Regex(@"\w+"));
+            StringAssert.Matches(CustomerInfo.Adress, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void CustomerId()
         {
-            StringAssert.Matches(CustomerInfo.Number.Text, new Regex(@"\d+"));
+            StringAssert.Matches(CustomerInfo.Number, new Regex(@"\d+"));
         }
 
         [TestMethod]
         public void CustomerName()
         {
-            StringAssert.Matches(CustomerInfo.Name.Text, new Regex(@"\w+"));
+            StringAssert.Matches(CustomerInfo.Name, new Regex(@"\w+"));
         }
 
         [TestMethod]
         public void CustomerMarks()
         {
-            Assert.IsTrue(CustomerInfo.Info.Displayed);
+            Assert.IsNotNull(CustomerInfo.Info); // TODO unsafe check
         }
     }
 }
