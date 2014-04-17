@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Mpd/list?CUSTOMERID=&apos;].
+        ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/Mpd/ListByCustomer/?CUSTOMERID=&apos;].
         /// </summary>
         public static string CustomerMenu_AllMpds {
             get {

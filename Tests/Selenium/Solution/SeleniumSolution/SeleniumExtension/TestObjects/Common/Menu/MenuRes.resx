@@ -151,7 +151,7 @@
     <value>td#leftHandMenu a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']</value>
   </data>
   <data name="CustomerMenu_AllMpds" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='/Mpd/list?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/Mpd/ListByCustomer/?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_AllTerminals" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Customer/TerminalListAll?CUSTOMERID=']</value>
