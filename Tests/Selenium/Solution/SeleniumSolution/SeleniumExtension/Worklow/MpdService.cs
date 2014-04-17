@@ -23,6 +23,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
 
         public static void Check(MpdData m)
         {
+            Assert.AreEqual(m.Id, MpdView.Id);
             Assert.AreEqual(m.Description, MpdView.Description);
             Assert.AreEqual(m.Adress, MpdView.Adress);
             Assert.AreEqual(m.Port, MpdView.Port);
