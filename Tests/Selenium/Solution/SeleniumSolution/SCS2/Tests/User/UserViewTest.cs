@@ -47,7 +47,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
         [TestCategory("SmokeTest")]
         public void LastName()
         {
-            Assert.AreEqual("SCS", UserView.LastName);
+            Assert.AreEqual("SCS", UserView.Name);
         }
 
         [TestMethod]
@@ -68,7 +68,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
         [TestCategory("SmokeTest")]
         public void SecureId()
         {
-            Assert.AreEqual("tksyr", UserView.SecureId);
+            Assert.AreEqual("tksyr", UserView.SecurId);
         }
 
         [TestMethod]
