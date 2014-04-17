@@ -34,6 +34,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
             get { return new MpdFactory(); }
         }
 
+        public static UserFactory User
+        {
+            get { return new UserFactory(); }
+        }
+
         public static string GenerateTestId()
         {
             return DateTime.Now.Ticks.ToString();
