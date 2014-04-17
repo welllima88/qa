@@ -58,8 +58,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
             Assert.IsTrue(CustomerMenu.ContactCreate.Displayed);
 
             Assert.IsTrue(CustomerMenu.Users.Displayed);
-            Assert.IsTrue(CustomerMenu.UserCreate.Displayed);
-
+            
             Assert.IsTrue(CustomerMenu.TerminalCreate.Displayed);
             Assert.IsTrue(CustomerMenu.TerminalsOfCustomerLocation.Displayed);
             Assert.IsTrue(CustomerMenu.TerminalsOfCustomerLocation.Displayed);

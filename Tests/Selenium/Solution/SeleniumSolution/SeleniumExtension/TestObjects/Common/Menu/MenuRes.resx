@@ -160,7 +160,7 @@
     <value>td#leftHandMenu a[href*='TicketList.asp?ListType=customer&amp;CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Users" xml:space="preserve">
-    <value>td#leftHandMenu a[href*='User/UserList.aspx?CUSTOMERID=']</value>
+    <value>td#leftHandMenu a[href*='/User/List/?CUSTOMERID=']</value>
   </data>
   <data name="CustomerMenu_Contacts" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/Person/CustomerPersonList?CUSTOMERID=']</value>

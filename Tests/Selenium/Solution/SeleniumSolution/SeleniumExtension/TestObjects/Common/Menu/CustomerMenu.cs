@@ -24,11 +24,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_TerminalCreate)); }
         }
 
-        public static IWebElement UserCreate
-        {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_UserCreate)); }
-        }
-
         public static IWebElement CustomerEdit
         {
             get
