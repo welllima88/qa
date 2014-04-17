@@ -49,5 +49,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.User
         {
             set { WebDriver.FindAdaptedElement(By.Id("User_Comment")).TextBox().TypeText(value); }
         }
+        public static IWebElement SaveButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+        }
     }
 }
