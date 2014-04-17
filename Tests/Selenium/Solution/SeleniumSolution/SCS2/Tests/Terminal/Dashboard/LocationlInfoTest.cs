@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.Dashboard
         [TestMethod]
         public void LocationName()
         {
-            StringAssert.Matches(LocationInfo.Name.Text, new Regex(@"\w+"));
+            StringAssert.Matches(LocationInfo.CompanyName.Text, new Regex(@"\w+"));
         }
     }
 }
