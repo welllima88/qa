@@ -8,19 +8,19 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
     /// </summary>
     public class LocationInfo : WebObject
     {
-        public static IWebElementAdapter CompanyName
+        public static string CompanyName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Name)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Name)).Text; }
         }
 
-        public static IWebElementAdapter Ep2Id
+        public static string Ep2Id
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Ep2Id)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Ep2Id)).Text; }
         }
 
-        public static IWebElementAdapter Adress
+        public static string Adress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Adress)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.LocationInfo_Adress)).Text; }
         }
     }
 }
