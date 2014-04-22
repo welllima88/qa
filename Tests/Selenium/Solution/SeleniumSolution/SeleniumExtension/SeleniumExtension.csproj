@@ -283,6 +283,11 @@
     <Compile Include="Worklow\LocationService.cs" />
     <Compile Include="Worklow\MpdService.cs" />
     <Compile Include="Worklow\SearchService.cs" />
+    <Compile Include="TestData\UserFactory.cs" />
+    <Compile Include="TestObjects\User\UserCreate.cs" />
+    <Compile Include="TestObjects\Definitions\UserData.cs" />
+    <Compile Include="TestObjects\User\UserList.cs" />
+    <Compile Include="Worklow\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
