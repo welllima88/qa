@@ -23,6 +23,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             UserCreate.WesMandant = u.WesMandant;
 
             UserCreate.SaveButton.Click();
+            u.Password = UserView.Password;
         }
 
         public static void Check(UserData u)
@@ -37,8 +38,6 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             Assert.AreEqual(u.SecurId, UserView.SecurId);
             Assert.AreEqual(u.Comment, UserView.Comment);
             Assert.AreEqual(u.WesMandant, UserView.WesMandant);
-
-            UserCreate.SaveButton.Click();
         }
     }
 }
