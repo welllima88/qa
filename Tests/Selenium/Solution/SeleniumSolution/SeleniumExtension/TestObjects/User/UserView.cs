@@ -25,7 +25,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.User
             get { return WebDriver.FindElement(By.Id("User_FirstName")).Text; }
         }
 
-        public static string LastName
+        public static string Name
         {
             get { return WebDriver.FindElement(By.Id("User_LastName")).Text; }
         }
@@ -40,7 +40,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.User
             get { return WebDriver.FindElement(By.Id("User_Language")).Text; }
         }
 
-        public static string SecureId
+        public static string SecurId
         {
             get { return WebDriver.FindElement(By.Id("User_SecureId")).Text; }
         }
