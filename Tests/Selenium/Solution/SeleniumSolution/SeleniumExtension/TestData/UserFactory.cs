@@ -8,13 +8,13 @@ namespace SIX.SCS.QA.Selenium.Extension.TestData
         {
             return new UserData
             {
-                UserName = "",
+                UserName = "s" + Factory.GenerateTestId(),
                 Salutation = "Herr",
                 FirstName = "SYR User" + Factory.GenerateTestId(),
                 Name = "SYR User",
-                Language = "Deutsch [DE]",
+                Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-group.com",
-                SecurId = "",
+                SecurId = "tksyr",
                 Comment = "User created by automated test",
                 WesMandant = "TKCPOS",
             };
