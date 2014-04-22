@@ -24,6 +24,6 @@ namespace SIX.SCS.QA.Selenium.Extension
         public static Regex TerminalPassword = new Regex("[0-9]{5,8}");
         public static Regex UserName = new Regex(@"\w{5}");
         public static Regex NotEmpty = new Regex(@"\w");
-        public static Regex UserPassword = new Regex(@"[\w]{4,10}");
+        public static Regex UserPassword = new Regex(@"[\w]{4,10}|");
     }
 }
