@@ -64,16 +64,23 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
+        public void MassMutation()
+        {
+            Assert.IsTrue(MassMutationMenu.MassMutation.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationBusinessTemplateMigrate()
         {
-            Assert.IsTrue(MassMutationMenu.BusinessTemplateMigrate.Displayed);
+            Assert.IsTrue(MassMutationMenu.BusinessTemplateMigrate.Enabled);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationAcquirerChange()
         {
-            Assert.IsTrue(MassMutationMenu.AcquirerChange.Displayed);
+            Assert.IsTrue(MassMutationMenu.AcquirerChange.Enabled);
         }
 
         [TestMethod]
@@ -81,6 +88,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         public void SimCardManagement()
         {
             Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
+        public void HardwareManagement()
+        {
+            Assert.IsTrue(LobbyMenu.HardwareManage.Displayed);
         }
 
         [TestMethod]
@@ -99,30 +113,37 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
+        public void AcccessoiresOrders()
+        {
+            Assert.IsTrue(LobbyMenu.AcccessoiresOrders.Displayed);
+        }
+
+        [TestMethod]
+        [TestCategory("LobbyCheck")]
         public void MassMutationContractCreate()
         {
-            Assert.IsTrue(MassMutationMenu.ContractCreate.Displayed);
+            Assert.IsTrue(MassMutationMenu.ContractCreate.Enabled);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationTerminalCreate()
         {
-            Assert.IsTrue(MassMutationMenu.TerminalCreate.Displayed);
+            Assert.IsTrue(MassMutationMenu.TerminalCreate.Enabled);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationLocationCreate()
         {
-            Assert.IsTrue(MassMutationMenu.LocationCreate.Displayed);
+            Assert.IsTrue(MassMutationMenu.LocationCreate.Enabled);
         }
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
         public void MassMutationCustomerCreate()
         {
-            Assert.IsTrue(MassMutationMenu.CustomerCreate.Displayed);
+            Assert.IsTrue(MassMutationMenu.CustomerCreate.Enabled);
         }
 
         [TestMethod]
