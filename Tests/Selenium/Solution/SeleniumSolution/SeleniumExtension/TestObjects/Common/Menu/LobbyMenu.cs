@@ -43,5 +43,15 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
         }
+
+        public static IWebElement HardwareManage
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href$='/HWManagement']")); }
+        }
+
+        public static IWebElement AcccessoiresOrders
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+        }
     }
 }
