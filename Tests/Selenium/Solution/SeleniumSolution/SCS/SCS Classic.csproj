@@ -91,7 +91,6 @@
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
     <Compile Include="TestObjects\Menu\HeadMenu.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
-    <Compile Include="Tests\BasicTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
