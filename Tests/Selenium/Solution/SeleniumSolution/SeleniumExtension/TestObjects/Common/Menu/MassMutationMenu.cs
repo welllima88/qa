@@ -33,5 +33,10 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
         {
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.AcquirerChange)); }
         }
+
+        public static IWebElement MassMutation
+        {
+            get { return WebDriver.FindElement(By.XPath("//td[@id='leftHandMenu']//td[text()=' Massenmutation']")); }
+        }
     }
 }
