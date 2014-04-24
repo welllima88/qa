@@ -2,7 +2,7 @@
 
 namespace Common
 {
-    public class ServiceCenter: IServiceCenter
+    public class ConfigDataRequest : IConfigDataRequest
 
     {
         public string ComponentSecret = "504237B4252ACAE353DF963151DE3054"; // SIX (Acq-Key?? -SCS?
@@ -20,7 +20,7 @@ namespace Common
         public string Version = "0520";
     }
 
-    public interface IServiceCenter
+    public interface IConfigDataRequest
     {
     }
 }
