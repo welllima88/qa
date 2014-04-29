@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
 using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
 
 namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
 {
@@ -34,6 +35,21 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Brand
                 By.CssSelector(
                     string.Format("span#ctl00_bodyContentPlaceHolder_lblSelected div a tr td:contains('[{0}]')",
                         brandId))).Click();
+        }
+
+        public static void Acquirer(string acquirerName)
+        {
+            IWebElement acquirer = WebDriver.FindElement(By.XPath("//span"));
+        }
+
+        public static void AcquirerList(string acquirerName)
+        {
+            var acquirers = new Collection<Acquirer>();
+        }
+
+        public static IWebElement BrandTree()
+        {
+            return WebDriver.FindElement(By.CssSelector("div#createContractTree"));
         }
     }
 }

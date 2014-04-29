@@ -11,7 +11,7 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            "div#frame_BrandPortlet div.portletLinks a[href*=\'/Contract/ContractNew.aspx?TerminalId=\']"));
+                            "div#frame_BrandPortlet div.portletLinks a[href*='/CreateContract/ListByTerminal?TerminalId=']"));
             }
         }
 
