@@ -22,7 +22,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            ScsPlatinTestEnvironment.LoadConfigurationDev();
+            ScsPlatinTestEnvironment.Dev();
             TestDirector.PrepareBrowser();
             TestDirector.Login();
             SetLanguage = "Deutsch";

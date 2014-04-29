@@ -45,7 +45,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             BrandPortlet.NewBrandButton.Click();
 
-            BrandSelect.Select("1161");
+            // BrandSelect.Acquirer("SIX Payment Services").Brand("1161").Brand("877").Brand("1076").Select();
             BrandSelect.Select("283");
             BrandSelect.Select("332");
             BrandSelect.Select("361");
@@ -136,7 +136,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
             TerminalConfigCreate.SaveButton.Click();
 
-            Assert.IsTrue(BrandSelect.ConfirmButton().Displayed);
+            Assert.IsTrue(BrandSelect.BrandTree().Displayed);
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
 
@@ -253,6 +253,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CreateCustomer();
             CreateContactOnCustomer();
             CreateTerminalOnCustomer();
+            // TODO:
+            // CreateBrandsOnTerminal();
 
             OpenCustomer();
             EditCustomer();
@@ -264,9 +266,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             CreateTerminalOnLocation();
             CreateInfotextOnTerminal();
-
-            // TODO:
-            CreateBrandsOnTerminal();
 
             OpenLocation();
             EditLocation();
