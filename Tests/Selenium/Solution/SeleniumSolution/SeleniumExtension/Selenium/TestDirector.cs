@@ -12,7 +12,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        private static readonly Uri SeleniumGridHubUrl = new Uri("http://10.241.0.85:4488/wd/hub");
+        private static readonly Uri SeleniumGridHubUrl = new Uri("http://wkbuild03:4488/wd/hub");
         public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
