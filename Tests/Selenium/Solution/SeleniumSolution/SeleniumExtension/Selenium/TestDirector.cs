@@ -29,6 +29,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
                 capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
                 capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
                 capability.SetCapability(CapabilityType.Version, "23.0.1");
+                // capability.SetCapability("six.machine", "syr"); // only for local purpose
                 WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.Write("using Selenium Grid");
@@ -61,12 +62,12 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             TestEnvironment.Authentication.Login();
+            ConfigureTimeouts();
         }
 
         public static IWebDriver PrepareBrowser()
         {
             CreateWebDriverInstance(TestEnvironment.BrowserProfileName);
-            ConfigureTimeouts();
             return WebDriver;
         }
 
