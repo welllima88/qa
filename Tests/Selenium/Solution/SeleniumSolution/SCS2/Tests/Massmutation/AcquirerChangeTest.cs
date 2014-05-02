@@ -15,6 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
+            MassMutationMenu.Expand(true);
             MassMutationMenu.AcquirerChange.Click();
         }
 

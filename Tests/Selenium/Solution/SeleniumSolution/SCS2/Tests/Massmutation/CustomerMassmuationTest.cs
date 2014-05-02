@@ -15,6 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
+            MassMutationMenu.Expand(true);
             MassMutationMenu.CustomerCreate.Click();
         }
 
@@ -22,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Customer")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Kunden erstellen", MassmuationFileUpload.Title);
+            Assert.AreEqual("Kunden", MassmuationFileUpload.Title);
         }
 
         [TestMethod]

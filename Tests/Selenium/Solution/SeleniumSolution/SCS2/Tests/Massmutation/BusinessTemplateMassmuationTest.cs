@@ -15,6 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
+            MassMutationMenu.Expand(true);
             MassMutationMenu.BusinessTemplateMigrate.Click();
         }
 
@@ -22,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("BusinessTemplate")]
         public void Title()
         {
-            Assert.AreEqual("Businesstemplates mit neuer FO-Schnittstelle aktivieren", MassmuationFileUpload.Title);
+            Assert.AreEqual("Businesstemplates", MassmuationFileUpload.Title);
         }
 
         [TestMethod]

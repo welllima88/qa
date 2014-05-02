@@ -15,6 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
+            MassMutationMenu.Expand(true);
             MassMutationMenu.LocationCreate.Click();
         }
 
@@ -22,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Location")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Standorte erstellen", MassmuationFileUpload.Title);
+            Assert.AreEqual("Standorte", MassmuationFileUpload.Title);
         }
 
         [TestMethod]

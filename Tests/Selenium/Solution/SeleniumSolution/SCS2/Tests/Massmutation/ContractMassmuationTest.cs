@@ -15,6 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
+            MassMutationMenu.Expand(true);
             MassMutationMenu.ContractCreate.Click();
         }
 
@@ -22,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Contract")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Verträge erstellen", MassmuationFileUpload.Title);
+            Assert.AreEqual("Verträge", MassmuationFileUpload.Title);
         }
 
         [TestMethod]
