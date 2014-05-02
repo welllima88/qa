@@ -44,9 +44,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         ///     If the adress is set, the Selenum Hub specified is used. If the address is null or empty the execution is done
         ///     locally
         /// </summary>
-        /// <param name="gridHub">address to selenium hub</param>
+        /// <param name="gridHub">optional address to selenium hub</param>
         /// <returns></returns>
-        public static void PrepareBrowser(string gridHub)
+        public static void PrepareBrowser(string gridHub = "")
         {
             FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(TestEnvironment.BrowserProfileName);
             // force german language, but doesn't work on grid:
