@@ -23,8 +23,8 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
         public void CreateInfotextToLocation()
         {
             TestDirector.Navigate("Location?LocationId=d94bf6cc-38ca-42c4-82d5-1d7c0414ab94");
-
-            LocationMenu.CreateInfotext.Click();
+            LocationMenu.Infotexts.Click();
+            InfoTextListView.CreateButton.Click();
             InfoTextService.Create("Location");
         }
 
