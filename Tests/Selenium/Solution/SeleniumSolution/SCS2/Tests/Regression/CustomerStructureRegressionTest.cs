@@ -276,7 +276,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             EditContactOnLocation();
 
             OpenCustomer();
-            CreateUser();
+            // TODO: CreateUser();
         }
 
         private static void OpenLocation()
