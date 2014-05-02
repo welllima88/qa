@@ -109,6 +109,7 @@
     <Compile Include="TestData\ITestData.cs" />
     <Compile Include="TestData\ITestDataRepository.cs" />
     <Compile Include="TestData\LocationFactory.cs" />
+    <Compile Include="TestObjects\Common\Languages.cs" />
     <Compile Include="TestObjects\Definitions\MpdData.cs" />
     <Compile Include="TestData\MpdFactory.cs" />
     <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
