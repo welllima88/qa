@@ -12,34 +12,9 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        private static readonly Uri SeleniumGridHubUrl = new Uri("http://wkbuild03:4488/wd/hub");
         public static IWebDriver WebDriver;
 
         public static string BaseUrl { get; private set; }
-
-        private static void CreateWebDriverInstance(string profileName)
-        {
-            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(profileName);
-            // force german language, but doesn't work on grid:
-            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
-
-            try // via grid first
-            {
-                DesiredCapabilities capability = DesiredCapabilities.Firefox();
-                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
-                capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
-                capability.SetCapability(CapabilityType.Version, "23.0.1");
-                // capability.SetCapability("six.machine", "syr"); // only for local purpose
-                WebDriver = new RemoteWebDriver(SeleniumGridHubUrl, capability);
-                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
-                Debug.Write("using Selenium Grid");
-            }
-            catch (Exception e) // then run locally
-            {
-                WebDriver = WebObject.WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
-                Debug.Write("using Selenium on local" + e);
-            }
-        }
 
         /// <summary>
         ///     Important note:
@@ -65,10 +40,37 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             ConfigureTimeouts();
         }
 
-        public static IWebDriver PrepareBrowser()
+        /// <summary>
+        ///     If the adress is set, the Selenum Hub specified is used. If the address is null or empty the execution is done
+        ///     locally
+        /// </summary>
+        /// <param name="gridHub">address to selenium hub</param>
+        /// <returns></returns>
+        public static void PrepareBrowser(string gridHub)
         {
-            CreateWebDriverInstance(TestEnvironment.BrowserProfileName);
-            return WebDriver;
+            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(TestEnvironment.BrowserProfileName);
+            // force german language, but doesn't work on grid:
+            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
+
+            if (string.IsNullOrEmpty(gridHub))
+            {
+                WebDriver = new FirefoxDriver(firefoxProfile);
+                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+                Debug.Write("using Selenium on local");
+            }
+            else
+            {
+                DesiredCapabilities capability = DesiredCapabilities.Firefox();
+                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+                capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
+                capability.SetCapability(CapabilityType.Version, "23.0.1");
+                // capability.SetCapability("six.machine", "syr"); // only for local purpose
+
+                WebDriver = new RemoteWebDriver(new Uri(gridHub), capability);
+                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+
+                Debug.Write("using Selenium Grid");
+            }
         }
 
         private static void ConfigureTimeouts()

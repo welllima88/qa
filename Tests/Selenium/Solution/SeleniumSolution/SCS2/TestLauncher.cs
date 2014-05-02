@@ -23,7 +23,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         public static void LaunchTestDirector(TestContext testContext)
         {
             ScsPlatinTestEnvironment.Dev();
-            TestDirector.PrepareBrowser();
+            TestDirector.PrepareBrowser("http://wkbuild03:4488/wd/hub");
             TestDirector.Login();
             SetLanguage = "Deutsch";
         }
