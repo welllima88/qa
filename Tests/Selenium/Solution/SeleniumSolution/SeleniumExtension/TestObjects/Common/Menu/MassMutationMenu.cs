@@ -39,5 +39,18 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
             // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
             get { return WebDriver.FindElement(By.XPath("//td[@id='leftHandMenu']//td[text()=' Massenmutation']")); }
         }
+
+        public static void Expand(bool doExpand)
+        {
+            // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
+
+            const string menuName = "Massenmutation";
+            IWebElement massMenu = WebDriver.FindElement(By.CssSelector("td#leftHandMenu a.level2 td")).
+                FindElement(By.XPath("//td[text()=' " + menuName + "']"));
+            if (massMenu.GetCssValue("class").Contains("expanderOpen") ^ doExpand)
+            {
+                massMenu.Click();
+            }
+        }
     }
 }
