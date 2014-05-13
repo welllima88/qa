@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class ContactService
+    public static class ContactService
     {
         public static void Create(ContactPersonData c)
         {

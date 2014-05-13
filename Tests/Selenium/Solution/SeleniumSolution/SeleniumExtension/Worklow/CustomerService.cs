@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class CustomerService
+    public static class CustomerService
     {
         public static void Create(CustomerData c)
         {

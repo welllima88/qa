@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Mpd;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class MpdService
+    public static class MpdService
     {
         public static void Create(MpdData m)
         {

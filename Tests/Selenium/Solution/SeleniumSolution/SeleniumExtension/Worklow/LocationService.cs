@@ -7,7 +7,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class LocationService
+    public static class LocationService
     {
         public static void Create(LocationData l)
         {

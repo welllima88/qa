@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class InfoTextService
+    public static class InfoTextService
     {
         /// <summary>
         /// This implies, that the create infotext button is displayed
