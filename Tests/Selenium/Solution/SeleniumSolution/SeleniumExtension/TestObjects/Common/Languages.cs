@@ -1,6 +1,6 @@
 ﻿namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
 {
-    public class Languages
+    public static class Languages
     {
         public static string German
         {
