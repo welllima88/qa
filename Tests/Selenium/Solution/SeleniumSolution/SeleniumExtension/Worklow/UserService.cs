@@ -5,7 +5,7 @@ using SIX.SCS.QA.Selenium.Extension.TestObjects.User;
 
 namespace SIX.SCS.QA.Selenium.Extension.Worklow
 {
-    public class UserService
+    public static class UserService
     {
         public static void Create(UserData u)
         {
@@ -34,6 +34,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             Assert.AreEqual(u.FirstName, UserView.FirstName);
             Assert.AreEqual(u.Name, UserView.Name);
             // Removed check due to inconsistent user interface ("de" vs "Deutsch [de]")
+            // TODO: may be refresh and check values
             // Assert.AreEqual(u.Language, UserView.Language); 
             Assert.AreEqual(u.Email, UserView.Email);
             Assert.AreEqual(u.SecurId, UserView.SecurId);
