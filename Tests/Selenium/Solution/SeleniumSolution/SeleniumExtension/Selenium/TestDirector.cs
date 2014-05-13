@@ -36,15 +36,15 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         public static void Login()
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
-            TestEnvironment.Authentication.Login();
             ConfigureTimeouts();
+            TestEnvironment.Authentication.Login();            
         }
 
         /// <summary>
         ///     If the adress is set, the Selenum Hub specified is used. If the address is null or empty the execution is done
         ///     locally
         /// </summary>
-        /// <param name="gridHub">optional address to selenium hub</param>
+        /// <param name="gridHub">optional address to selenium hub e.g. "http://wkbuild03:4488/wd/hub"</param>
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
@@ -56,7 +56,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             {
                 WebDriver = new FirefoxDriver(firefoxProfile);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
-                Debug.Write("using Selenium on local");
+                Debug.WriteLine("using Selenium on local");
             }
             else
             {
@@ -69,7 +69,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
                 WebDriver = new RemoteWebDriver(new Uri(gridHub), capability);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
 
-                Debug.Write("using Selenium Grid");
+                Debug.WriteLine("using Selenium Grid");
             }
         }
 
