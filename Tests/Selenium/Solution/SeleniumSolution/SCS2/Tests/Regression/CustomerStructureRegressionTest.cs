@@ -232,7 +232,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
         [TestMethod]
         [TestCategory("RegressionA")]
-        [Ignore]
         public void UserIsCreated()
         {
             SearchService.UserCanBeFoundByCustomerName(_user.UserName);
