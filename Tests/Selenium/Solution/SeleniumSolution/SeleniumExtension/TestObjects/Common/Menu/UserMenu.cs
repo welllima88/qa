@@ -5,6 +5,11 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class UserMenu : WebObject
     {
+        public static IWebElement User
+        {
+            get { return WebDriver.FindElement(By.CssSelector("a[href*='/scs2/User/Index?USERNAME=']")); }
+        }
+
         public static IWebElement New
         {
             get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/New/?CUSTOMERID=']")); }
