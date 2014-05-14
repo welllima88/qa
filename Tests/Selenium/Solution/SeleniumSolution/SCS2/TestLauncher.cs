@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.Selenium;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.QA.Selenium.Extension.Worklow;
 
 namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
 {
@@ -10,22 +11,13 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
     [TestClass]
     public static class TestLauncher
     {
-        private static string SetLanguage
-        {
-            set
-            {
-                MetaNavBar.Languages.Click();
-                MetaNavBar.Language(value).Click();
-            }
-        }
-
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            ScsPlatinTestEnvironment.Dev();
-            TestDirector.PrepareBrowser("http://wkbuild03:4488/wd/hub");
+            TestEnvironment.Dev();
+            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.Login();
-            SetLanguage = Languages.German;
+            LobbyService.Language(Languages.German);
         }
 
         [AssemblyCleanup]

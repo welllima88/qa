@@ -73,7 +73,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ScsPlatinTestEnvironment.cs" />
+    <Compile Include="TestEnvironment.cs" />
+    <Compile Include="SeleniumGridServer.cs" />
     <Compile Include="TestData\CustomerData.cs" />
     <Compile Include="TestData\TestDataRepository.cs" />
     <Compile Include="TestLauncher.cs" />
@@ -129,7 +130,6 @@
     <Compile Include="Tests\Lobby\QuickSearchTest.cs" />
     <Compile Include="Tests\Location\BillingAddressCreateTest.cs" />
     <Compile Include="Tests\Location\BillingAddressEditTest.cs" />
-    <Compile Include="Tests\Location\Create\LocationGuiTest.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMinimalInputAndSBSExportAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateWithMinimalInputAndSave.cs" />
     <Compile Include="Tests\Location\Create\LocationCreateTest.cs" />
