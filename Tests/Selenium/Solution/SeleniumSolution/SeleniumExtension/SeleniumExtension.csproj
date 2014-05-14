@@ -281,6 +281,7 @@
     <Compile Include="Worklow\ContactService.cs" />
     <Compile Include="Worklow\CustomerService.cs" />
     <Compile Include="Worklow\InfoTextService.cs" />
+    <Compile Include="Worklow\LobbyService.cs" />
     <Compile Include="Worklow\LocationService.cs" />
     <Compile Include="Worklow\MpdService.cs" />
     <Compile Include="Worklow\SearchService.cs" />
