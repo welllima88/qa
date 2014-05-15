@@ -9,5 +9,11 @@ namespace SIX.SCS.QA.Selenium.Extension.Worklow
             MetaNavBar.Languages.Click();
             MetaNavBar.Language(language).Click();
         }
+
+        public static void OpenLatestElement()
+        {
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
+        }
     }
 }

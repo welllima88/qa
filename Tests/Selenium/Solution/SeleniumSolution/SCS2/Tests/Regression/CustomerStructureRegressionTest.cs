@@ -67,7 +67,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             LocationService.Edit(_location);
             LocationService.Check(_location);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             LocationService.Check(_location);
         }
 
@@ -77,7 +77,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             CustomerService.Edit(_customer);
             CustomerService.Check(_customer);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             CustomerService.Check(_customer);
         }
 
@@ -88,7 +88,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             ContactService.Create(_personOnLocation);
             ContactService.Check(_personOnLocation);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             ContactService.Check(_personOnLocation);
         }
 
@@ -107,7 +107,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             TerminalMenu.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
             Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
@@ -123,7 +123,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             LocationService.Create(_location);
             LocationService.Check(_location);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             LocationService.Check(_location);
         }
 
@@ -140,7 +140,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
             Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
@@ -158,7 +158,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             _personOnCustomer = Factory.ContactPerson.Create();
             ContactService.Create(_personOnCustomer);
             ContactService.Check(_personOnCustomer);
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             ContactService.Check(_personOnCustomer);
         }
 
@@ -291,7 +291,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             UserService.Create(_user);
 
             UserService.Check(_user);
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             UserService.Check(_user);
         }
 
@@ -306,7 +306,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             _customer = Factory.Customer.Create();
             CustomerService.Create(_customer);
             CustomerService.Check(_customer);
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             CustomerService.Check(_customer);
         }
 
@@ -316,7 +316,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             MpdService.Create(_mpd);
             MpdService.Check(_mpd);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             MpdService.Check(_mpd);
         }
 
@@ -327,7 +327,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
             ContactService.Edit(_personOnLocation);
             ContactService.Check(_personOnLocation);
 
-            OpenLatestElement();
+            LobbyService.OpenLatestElement();
             ContactService.Check(_personOnLocation);
         }
 
@@ -351,12 +351,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         {
             TerminalTextsPortlet.CreateInfotext.Click();
             InfoTextService.Create("Terminal");
-        }
-
-        private static void OpenLatestElement()
-        {
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
         }
     }
 }
