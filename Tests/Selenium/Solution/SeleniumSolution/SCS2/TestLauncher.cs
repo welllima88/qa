@@ -15,7 +15,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium
         public static void LaunchTestDirector(TestContext testContext)
         {
             TestEnvironment.Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
+            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
             TestDirector.Login();
             LobbyService.Language(Languages.German);
         }
