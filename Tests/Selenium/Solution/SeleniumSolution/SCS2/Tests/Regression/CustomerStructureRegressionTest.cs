@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.Selenium.Extension.TestData;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
 using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
@@ -31,14 +30,11 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
         public static void CleanupCustomerStructure()
         {
             DeleteCustomer();
-
             DeleteLocation();
-            
-            DeleteContact();
-            DeleteContact();
-
-            DeleteTerminal();
-            DeleteTerminal();
+            DeletePersons();
+            DeleteTerminals();            
+            DeleteMpd();            
+            DeleteUser();            
         }*/
 
         private static void CreateBrandsOnTerminal()
@@ -277,6 +273,14 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
 
             OpenCustomer();
             CreateUser();
+
+            OpenTerminalOnLocation();
+            TerminalService.Duplicate();
+        }
+
+        private static void OpenTerminalOnLocation()
+        {
+            SearchService.TerminalCanBeFoundById(_terminalIdLocation);
         }
 
         private static void OpenLocation()
