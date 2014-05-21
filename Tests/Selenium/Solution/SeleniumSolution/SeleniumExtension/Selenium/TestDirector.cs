@@ -37,7 +37,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts();
-            TestEnvironment.Authentication.Login();            
+            TestEnvironment.Authentication.Login();
         }
 
         /// <summary>
@@ -48,10 +48,8 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            FirefoxProfile firefoxProfile = new FirefoxProfileManager().GetProfile(TestEnvironment.BrowserProfileName);
-            // force german language, but doesn't work on grid:
-            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
-
+            var firefoxProfile = new FirefoxProfile(@"./FireFoxProfiles/WithCertificate");
+            
             if (string.IsNullOrEmpty(gridHub))
             {
                 WebDriver = new FirefoxDriver(firefoxProfile);
@@ -61,12 +59,16 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             else
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
-                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+                // capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+                // force german language, but doesn't work on grid:
+                // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
                 capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
+                // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
+                // capability.SetCapability("network.proxy.type", 0);
                 capability.SetCapability(CapabilityType.Version, "23.0.1");
-                // capability.SetCapability("six.machine", "syr"); // only for local purpose
+                // capability.SetCapability("six.machine", "syr"); // only for using grid on local
 
-                WebDriver = new RemoteWebDriver(new Uri(gridHub), capability);
+                WebDriver = new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20));
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
 
                 Debug.WriteLine("using Selenium Grid");
