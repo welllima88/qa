@@ -39,9 +39,9 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("div.menuMore>a.first"));
-                //return WebDriver.FindElement(By.CssSelector("div.menuMore a[text=\"Hilfe\"]")); 
-                //return WebDriver.FindElement(By.XPath("//div[@class='menuMore']/a[text()='Hilfe']"));
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/scs2/help']"));
             }
         }
 
