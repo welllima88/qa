@@ -45,11 +45,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public static IWebElement SystemInfo
-        {
-            get { return WebDriver.FindElement(By.CssSelector("div.menuMore>a.last")); }
-        }
-
         public static IWebElement Current
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.NavigationBar_Current)); }

@@ -56,14 +56,5 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
             Assert.IsTrue(NavigationBar.Help.Enabled);
             // LobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
         }
-
-        [TestMethod]
-        [TestCategory("LobbyCheck")]
-        public void SystemInfo()
-        {
-            // LobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(NavigationBar.SystemInfo.Enabled); // workaround: enabled instead of displayed
-            // LobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
-        }
     }
 }
