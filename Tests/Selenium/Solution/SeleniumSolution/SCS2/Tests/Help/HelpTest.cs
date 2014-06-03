@@ -16,7 +16,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Help
         {
             TestDirector.Navigate();
 
-            NavigationBar.MoreMenu.Click();
             NavigationBar.Help.Click();
         }
 

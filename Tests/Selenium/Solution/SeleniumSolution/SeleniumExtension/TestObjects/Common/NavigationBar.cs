@@ -35,16 +35,6 @@ namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common
             }
         }
 
-        public static IWebElement MoreMenu
-        {
-            get
-            {
-                return
-                    WebDriver.FindElement(
-                        By.CssSelector(CommonRes.NavigationBar_MoreMenu));
-            }
-        }
-
         public static IWebElement Help
         {
             get

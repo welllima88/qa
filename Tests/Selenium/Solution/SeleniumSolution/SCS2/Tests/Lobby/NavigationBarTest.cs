@@ -50,13 +50,6 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void MoreMenu()
-        {
-            Assert.IsTrue(NavigationBar.MoreMenu.Displayed);
-        }
-
-        [TestMethod]
-        [TestCategory("LobbyCheck")]
         public void Help()
         {
             // LobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
