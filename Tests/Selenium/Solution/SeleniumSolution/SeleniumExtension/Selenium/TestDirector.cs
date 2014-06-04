@@ -58,7 +58,7 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             }
             else
             {
-                // DesiredCapabilities capability = DesiredCapabilities.Firefox();
+                DesiredCapabilities capability = DesiredCapabilities.Firefox();
                 // capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
                 // force german language, but doesn't work on grid:
                 // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
