@@ -58,14 +58,14 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
             }
             else
             {
-                DesiredCapabilities capability = DesiredCapabilities.Firefox();
+                // DesiredCapabilities capability = DesiredCapabilities.Firefox();
                 // capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
                 // force german language, but doesn't work on grid:
                 // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
-                capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
+                // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
                 // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
                 // capability.SetCapability("network.proxy.type", 0);
-                capability.SetCapability(CapabilityType.Version, "23.0.1");
+                // capability.SetCapability(CapabilityType.Version, "23.0.1");
                 // capability.SetCapability("six.machine", "syr"); // only for using grid on local
 
                 WebDriver = new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20));
