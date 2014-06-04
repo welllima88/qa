@@ -52,9 +52,7 @@ namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Lobby
         [TestCategory("LobbyCheck")]
         public void Help()
         {
-            // LobbyView.NavigationBar.MoreMenu.Click(); //open more Menu
-            Assert.IsTrue(NavigationBar.Help.Enabled);
-            // LobbyView.NavigationBar.MoreMenu.Click(); //close more Menu (also necessary for correct logoff)
+            Assert.IsTrue(NavigationBar.Help.Displayed);            
         }
     }
 }
