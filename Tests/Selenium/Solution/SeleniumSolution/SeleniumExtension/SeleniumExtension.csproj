@@ -234,9 +234,6 @@
     <Compile Include="TestObjects\SearchResult\SimCardResult.cs" />
     <Compile Include="TestObjects\SearchResult\TerminalResult.cs" />
     <Compile Include="TestObjects\SearchResult\UserResult.cs" />
-    <Compile Include="TestObjects\Terminal\Article.cs" />
-    <Compile Include="TestObjects\Terminal\Base.cs" />
-    <Compile Include="TestObjects\Terminal\Brands.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\Acquirer.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandContract.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandPortlet.cs" />
@@ -263,13 +260,11 @@
     <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="TestObjects\Terminal\FinancialConfig\FinancialConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\Functionbits.cs" />
-    <Compile Include="TestObjects\Terminal\Parameter.cs" />
     <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />
     <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
     <Compile Include="TestObjects\Terminal\TerminalList.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalView.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="Selenium\WebElements\WebObject.cs" />
