@@ -170,10 +170,8 @@
     <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateWithDifferentPasswords.cs" />
     <Compile Include="Tests\Terminal\Duplicate\TerminalDuplicateTest.cs" />
     <Compile Include="Tests\Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
-    <Compile Include="Tests\Terminal\Create\TerminalCreateTest.cs" />
     <Compile Include="Tests\Terminal\EventLog\EventLogGuiTest.cs" />
     <Compile Include="Tests\Terminal\ArticleChooser\ArticleChooserLookupTest.cs" />
-    <Compile Include="Tests\Terminal\TerminalCreateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
