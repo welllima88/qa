@@ -48,11 +48,12 @@ namespace SIX.SCS.QA.Selenium.Extension.Selenium
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            var firefoxProfile = new FirefoxProfile(@".\FireFoxProfiles\WithCertificate");
+            var firefoxProfile = new FirefoxProfile(@"~\FireFox\Profiles\WithCertificate");
+            var firefoxBinary = new FirefoxBinary(@"~\Firefox\firefox.exe");
 
             if (string.IsNullOrEmpty(gridHub))
             {
-                WebDriver = new FirefoxDriver(new FirefoxBinary(@".\Firefox"), firefoxProfile);
+                WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.WriteLine("using Selenium on local");
             }
