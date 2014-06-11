@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         ToolsVersion="4.0"
+         DefaultTargets="Compile">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <BuildArtifacts Include=".\buildartifacts"/>
+    <SolutionFile Include=".\SeleniumTests.sln"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <NUnit Include=".\thirdparty\tools\NUnit\nunit-console.exe"/>
+    <TestAssembly Include=".\buildartifacts\SCS2WebTests.dll"/>
+    <TestResult Include=".\buildartifacts\TestResult.xml"/>
+  </ItemGroup>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="@(BuildArtifacts)"/>
+  </Target>
+
+  <Target Name="Init" DependsOnTargets="Clean">
+    <MakeDir Directories="@(BuildArtifacts)"/>
+  </Target>
+
+  <Target Name="Compile">
+    <MSBuild Projects="@(SolutionFile)" Targets="Rebuild" Properties="OutDir=%(BuildArtifacts.FullPath);Configuration=$(Configuration)"></MSBuild>
+  </Target>
+
+  <Target Name="Test" DependsOnTargets="Compile">
+    <Exec Command="@(NUnit) @(TestAssembly) /xml:@(TestResults)"/>
+  </Target>
+</Project>

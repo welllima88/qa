@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1700B98D-44B7-439C-A001-6C7A56EDB6D9}"
+	ProjectSection(SolutionItems) = preProject
+		Selenium.build = Selenium.build
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExtension", "SeleniumExtension\SeleniumExtension.csproj", "{D82EFC2F-3E2D-4892-9D5D-327139693BB4}"
 EndProject
