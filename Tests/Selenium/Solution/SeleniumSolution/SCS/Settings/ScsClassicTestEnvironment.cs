@@ -1,11 +1,11 @@
 ﻿using System;
-using SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Common;
 using SIX.SCS.Tests.Selenium.Extension.Authentication.Method;
 using SIX.SCS.Tests.Selenium.Extension.Authentication.WebPages;
 using SIX.SCS.Tests.Selenium.Extension.Properties;
 using SIX.SCS.Tests.Selenium.Extension.Settings;
+using SIX.SCS.Tests.Selenium.TestObjects.Common;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
+namespace SIX.SCS.Tests.Selenium.Settings
 {
     public class ScsClassicTestEnvironment : TestEnvironment
     {

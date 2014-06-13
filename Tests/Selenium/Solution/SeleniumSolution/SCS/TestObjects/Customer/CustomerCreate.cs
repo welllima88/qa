@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
+namespace SIX.SCS.Tests.Selenium.TestObjects.Customer
 {
     public class CustomerCreate : WebObject
     {

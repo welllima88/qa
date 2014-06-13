@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Customer
+namespace SIX.SCS.Tests.Selenium.TestObjects.Customer
 {
     public class CustomerView : WebObject
     {

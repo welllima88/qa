@@ -15,7 +15,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using SIX.SCS.Tests.Selenium.Extension.Selenium;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
+namespace SIX.SCS.Tests.Selenium.Support.AddService
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

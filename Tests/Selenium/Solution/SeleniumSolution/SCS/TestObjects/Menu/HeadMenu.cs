@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Menu
+namespace SIX.SCS.Tests.Selenium.TestObjects.Menu
 {
     public class HeadMenu : WebObject
     {

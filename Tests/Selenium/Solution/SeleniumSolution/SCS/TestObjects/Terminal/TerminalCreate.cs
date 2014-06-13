@@ -1,7 +1,7 @@
 ﻿using SIX.SCS.Tests.Selenium.Extension.Selenium;
 using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Terminal
+namespace SIX.SCS.Tests.Selenium.TestObjects.Terminal
 {
     public class TerminalCreate : WebObject
     {
