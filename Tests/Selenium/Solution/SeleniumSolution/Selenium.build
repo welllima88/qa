@@ -31,5 +31,11 @@
 
   <Target Name="Test" DependsOnTargets="Compile">
     <Exec Command="@(NUnit) @(TestAssembly) /xml:@(TestResults)"/>
+  </Target>  
+  <Target Name="Package" DependsOnTargets="Test">
+    <Exec Command="@(NUnit) @(TestAssembly) /xml:@(TestResults)"/>
+  </Target>
+  <Target Name="Deploy" DependsOnTargets="Package">
+    <Exec Command="@(NUnit) @(TestAssembly) /xml:@(TestResults)"/>
   </Target>
 </Project>
