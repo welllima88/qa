@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu
+namespace SIX.SCS.Tests.Selenium.Tests.Menu
 {
     [TestClass]
     public class MenusTest

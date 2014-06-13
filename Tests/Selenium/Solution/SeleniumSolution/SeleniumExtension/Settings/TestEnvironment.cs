@@ -1,7 +1,7 @@
 using System;
-using SIX.SCS.QA.Selenium.Extension.Authentication;
+using SIX.SCS.Tests.Selenium.Extension.Authentication;
 
-namespace SIX.SCS.QA.Selenium.Extension.Settings
+namespace SIX.SCS.Tests.Selenium.Extension.Settings
 {
     public class TestEnvironment
     {

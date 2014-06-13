@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Properties {
+namespace SIX.SCS.Tests.Selenium.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.QA.SCSClassics.Tests.Selenium.Properties.ScsRes", typeof(ScsRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.Tests.Selenium.Properties.ScsRes", typeof(ScsRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

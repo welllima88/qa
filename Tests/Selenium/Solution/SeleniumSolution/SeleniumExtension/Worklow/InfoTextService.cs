@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestData;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
+using SIX.SCS.Tests.Selenium.Extension.TestData;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Infotext;
 
-namespace SIX.SCS.QA.Selenium.Extension.Worklow
+namespace SIX.SCS.Tests.Selenium.Extension.Worklow
 {
     public static class InfoTextService
     {

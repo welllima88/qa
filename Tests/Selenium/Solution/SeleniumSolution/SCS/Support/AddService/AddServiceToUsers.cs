@@ -13,7 +13,7 @@ using System;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Support.AddService
 {

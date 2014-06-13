@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard
 {
     public class TroubleTicketsPortlet : PortletViewBase
     {

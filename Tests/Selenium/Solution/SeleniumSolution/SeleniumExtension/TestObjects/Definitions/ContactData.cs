@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions
 {
     /// <summary>
     ///     defines the ways and media how to contact

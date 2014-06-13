@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestData;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.Agency;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestData;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Administration.Agency;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Administration.Agency
+namespace SIX.SCS.Tests.Selenium.Tests.Administration.Agency
 {
     [TestClass]
     public class AgencyCreateTest

@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestData;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
-using SIX.SCS.QA.Selenium.Extension.Worklow;
+using SIX.SCS.Tests.Selenium.Extension;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestData;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
+using SIX.SCS.Tests.Selenium.Extension.Worklow;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Customer.Create
+namespace SIX.SCS.Tests.Selenium.Tests.Customer.Create
 {
     [TestClass]
     public class CustomerCreateTest

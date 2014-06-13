@@ -1,9 +1,9 @@
 ﻿using System;
 using SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Extension.Authentication.Method;
-using SIX.SCS.QA.Selenium.Extension.Authentication.WebPages;
-using SIX.SCS.QA.Selenium.Extension.Properties;
-using SIX.SCS.QA.Selenium.Extension.Settings;
+using SIX.SCS.Tests.Selenium.Extension.Authentication.Method;
+using SIX.SCS.Tests.Selenium.Extension.Authentication.WebPages;
+using SIX.SCS.Tests.Selenium.Extension.Properties;
+using SIX.SCS.Tests.Selenium.Extension.Settings;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
 {
@@ -16,9 +16,9 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
             Application = new Scs();
             Authentication = new UacAuthentication(new UacLoginPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void Prod()
@@ -28,9 +28,9 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
             Application = new Scs();
             Authentication = new SecurIdAuthentication("tksyr", @"PW", "tkcpos", "??");
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void QaK()
@@ -40,9 +40,9 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
             Application = new Scs();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
 
         public static void QaL()
@@ -52,9 +52,9 @@ namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings
             Application = new Scs();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
-                {
-                    Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
-                };
+            {
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+            };
         }
     }
 }

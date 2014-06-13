@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu
 {
     public class CustomerMenu : MenuObject
     {

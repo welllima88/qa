@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Administration.SimCard
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 {
     public class SimCardView : WebObject
     {

@@ -9,7 +9,7 @@
     <ProjectGuid>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.QA.Selenium.Extension</RootNamespace>
+    <RootNamespace>SIX.SCS.Tests.Selenium.Extension</RootNamespace>
     <AssemblyName>SeleniumExtension</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

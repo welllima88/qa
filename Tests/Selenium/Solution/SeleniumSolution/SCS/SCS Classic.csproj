@@ -9,7 +9,7 @@
     <ProjectGuid>{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.QA.SCSClassics.Tests.Selenium</RootNamespace>
+    <RootNamespace>SIX.SCS.Tests.Selenium</RootNamespace>
     <AssemblyName>SCSWebTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

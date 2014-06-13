@@ -1,5 +1,5 @@
 using SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Menu;
-using SIX.SCS.QA.Selenium.Extension.Authentication;
+using SIX.SCS.Tests.Selenium.Extension.Authentication;
 
 namespace SIX.SCS.QA.SCSClassics.Tests.Selenium.TestObjects.Common
 {

@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
 {
     public class BrandPortlet : PortletViewBase
     {

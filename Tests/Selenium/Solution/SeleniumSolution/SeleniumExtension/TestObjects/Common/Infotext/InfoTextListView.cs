@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Infotext
 {
     public class InfoTextListView : WebObject
     {

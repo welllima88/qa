@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions
 {
     /// <summary>
     ///     the contact person has adress and contact fields

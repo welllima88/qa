@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Help;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Help;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Help
+namespace SIX.SCS.Tests.Selenium.Tests.Help
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

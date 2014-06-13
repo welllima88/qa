@@ -1,11 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestData;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
+using SIX.SCS.Tests.Selenium.Extension.TestData;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
 
-namespace SIX.SCS.QA.Selenium.Extension.Worklow
+namespace SIX.SCS.Tests.Selenium.Extension.Worklow
 {
     public static class CustomerService
     {

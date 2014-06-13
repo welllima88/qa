@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SIX.SCS.QA.Selenium.Extension.Selenium.WebElements;
+using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
 
-namespace SIX.SCS.QA.Selenium.Extension.TestObjects.Help
+namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Help
 {
     public class HelpNavigation : WebObject
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SIX.SCS.QA.Selenium.Extension.Settings
+namespace SIX.SCS.Tests.Selenium.Extension.Settings
 {
     [TestClass]
     [Ignore]

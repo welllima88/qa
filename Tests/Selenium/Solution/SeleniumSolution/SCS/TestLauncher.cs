@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SIX.SCS.QA.SCSClassics.Tests.Selenium.Settings;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
 
-namespace SIX.SCS.QA.SCSClassics.Tests.Selenium
+namespace SIX.SCS.Tests.Selenium
 {
     [TestClass]
     public static class TestLauncher

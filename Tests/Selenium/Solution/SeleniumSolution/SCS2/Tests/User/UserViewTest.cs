@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Menu;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.User;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.User;
+using SIX.SCS.Tests.Selenium.Tests.Menu;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.User
+namespace SIX.SCS.Tests.Selenium.Tests.User
 {
     [TestClass]
     public class UserViewTest

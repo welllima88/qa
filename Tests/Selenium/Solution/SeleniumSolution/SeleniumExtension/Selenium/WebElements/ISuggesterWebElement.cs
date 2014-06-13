@@ -1,4 +1,4 @@
-﻿namespace SIX.SCS.QA.Selenium.Extension.Selenium.WebElements
+﻿namespace SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements
 {
     /// <summary>
     ///     Defines the method that is necessary for a suggestor

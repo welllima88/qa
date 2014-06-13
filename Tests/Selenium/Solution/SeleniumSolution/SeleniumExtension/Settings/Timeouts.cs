@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Selenium.Extension.Settings
+namespace SIX.SCS.Tests.Selenium.Extension.Settings
 {
     public class Timeouts
     {

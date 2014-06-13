@@ -1,18 +1,18 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestData;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Brand;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Customer;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Location;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Person;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
-using SIX.SCS.QA.Selenium.Extension.Worklow;
+using SIX.SCS.Tests.Selenium.Extension.TestData;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Brand;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Infotext;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Location;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Person;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using SIX.SCS.Tests.Selenium.Extension.Worklow;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Regression
+namespace SIX.SCS.Tests.Selenium.Tests.Regression
 {
     [TestClass]
     public class CustomerStructureRegressionTest

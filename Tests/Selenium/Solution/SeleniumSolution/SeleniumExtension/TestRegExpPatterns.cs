@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace SIX.SCS.QA.Selenium.Extension
+namespace SIX.SCS.Tests.Selenium.Extension
 {
     /// <summary>
     ///     add @ to double escape the patterns for regular expressions

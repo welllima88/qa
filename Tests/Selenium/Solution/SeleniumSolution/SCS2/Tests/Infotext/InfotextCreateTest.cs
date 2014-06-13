@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Infotext;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using SIX.SCS.QA.Selenium.Extension.Worklow;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Infotext;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using SIX.SCS.Tests.Selenium.Extension.Worklow;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Infotext
+namespace SIX.SCS.Tests.Selenium.Tests.Infotext
 {
     [TestClass]
     public class InfotextCreateTest

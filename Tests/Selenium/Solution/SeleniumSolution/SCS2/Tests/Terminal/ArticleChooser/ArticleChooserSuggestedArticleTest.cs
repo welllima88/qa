@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.Selenium;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Terminal;
+using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal;
 
-namespace SIX.SCS.QA.SCSPlatin.Tests.Selenium.Tests.Terminal.ArticleChooser
+namespace SIX.SCS.Tests.Selenium.Tests.Terminal.ArticleChooser
 {
     [TestClass]
     public class ArticleChooserSuggestedArticleTest

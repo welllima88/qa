@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.Definitions;
-using SIX.SCS.QA.Selenium.Extension.TestObjects.User;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
+using SIX.SCS.Tests.Selenium.Extension.TestObjects.User;
 
-namespace SIX.SCS.QA.Selenium.Extension.Worklow
+namespace SIX.SCS.Tests.Selenium.Extension.Worklow
 {
     public static class UserService
     {
