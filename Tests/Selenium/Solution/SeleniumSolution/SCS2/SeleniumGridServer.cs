@@ -16,5 +16,10 @@
         {
             get { return "http://localhost:4488/wd/hub"; }
         }
+
+        public static string NoGrid
+        {
+            get { return string.Empty; }
+        }
     }
 }
