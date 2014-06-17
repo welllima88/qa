@@ -12,7 +12,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Mpd
 
         public static string Description
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#Description")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#mpdDescription")).Text; }
         }
 
         public static string Adress
