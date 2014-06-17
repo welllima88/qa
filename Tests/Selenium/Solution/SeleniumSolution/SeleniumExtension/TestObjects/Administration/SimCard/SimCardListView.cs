@@ -5,7 +5,7 @@ using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 {
-    internal class SimCardListView : WebObject
+    public class SimCardListView : WebObject
     {
         public static Collection<ISimCardElement> SimCardList
         {
