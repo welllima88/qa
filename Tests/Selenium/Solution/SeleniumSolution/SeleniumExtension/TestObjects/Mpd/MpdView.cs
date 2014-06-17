@@ -7,22 +7,22 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Mpd
     {
         public static string Id
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#MpdId")).Text; }
+            get {return WebDriver.FindAdaptedElement(By.CssSelector("p#mpdId")).Text; }
         }
 
         public static string Description
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#Description")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#Description")).Text; }
         }
 
         public static string Adress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#InetAddr")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#InetAddr")).Text; }
         }
 
         public static string Port
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#InetPort")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#InetPort")).Text; }
         }
     }
 }
