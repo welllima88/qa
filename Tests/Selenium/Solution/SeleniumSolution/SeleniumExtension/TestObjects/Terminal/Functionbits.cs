@@ -5,12 +5,10 @@ using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
 {
-    public class Functionbits : WebObject, IWebGuiElement, IFunctionbits
+    public class Functionbits : WebObject, IFunctionbits
     {
         private const string Pre =
             "span#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyFunctions_rowFunctions span";
-
-        #region IFunctionbits Members
 
         public IWebElement Booking
         {
@@ -102,7 +100,5 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
                             Pre + " input"));
             }
         }
-
-        #endregion
     }
 }
