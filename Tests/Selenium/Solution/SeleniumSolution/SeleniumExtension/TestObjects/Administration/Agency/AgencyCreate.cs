@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
@@ -69,24 +68,6 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.Agency
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).Text; }
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_City")).TextBox().TypeText(value); }
-        }
-
-        public string AdressAddition
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
-        }
-
-        public string Po
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
-        }
-
-        public string Region
-        {
-            get { throw new NotSupportedException(); }
-            set { throw new NotSupportedException(); }
         }
 
         public static string Name
