@@ -6,12 +6,6 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
 
     public class TerminalConfigDetailsCreate : WebObject
     {
-        public bool Dcc;
-        public Functionbits Functionbits;
-        public bool Instalment;
-        public bool PurchaseWithCashbackForced;
-        public bool ReleaseChangeBlocked;
-
         public static string Article
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text; }

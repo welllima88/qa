@@ -76,8 +76,6 @@
   <ItemGroup>
     <Compile Include="TestEnvironment.cs" />
     <Compile Include="SeleniumGridServer.cs" />
-    <Compile Include="TestData\CustomerData.cs" />
-    <Compile Include="TestData\TestDataRepository.cs" />
     <Compile Include="TestLauncher.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyCreateTest.cs" />
