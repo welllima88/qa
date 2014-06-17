@@ -7,7 +7,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu
     {
         public static IWebElement User
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/scs2/User/Index?USERNAME=']")); }
+            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/Index?USERNAME=']")); }
         }
 
         public static IWebElement New
