@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
@@ -13,7 +12,6 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string NetProvider
         {
-            get { throw new NotImplementedException(); }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_NetworkProviderId")).
@@ -23,13 +21,11 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string SimCardNumber
         {
-            get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_CardNumber")).TextBox().TypeText(value); }
         }
 
         public static string MobileNumber
         {
-            get { throw new NotImplementedException(); }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_MobileNumber")).TextBox().TypeText(value);
@@ -38,19 +34,16 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string Pin
         {
-            get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PIN")).TextBox().TypeText(value); }
         }
 
         public static string Puk
         {
-            get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PUK")).TextBox().TypeText(value); }
         }
 
         public static bool Status
         {
-            get { throw new NotImplementedException(); }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_IsActive")).
@@ -60,13 +53,11 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string TerminalId
         {
-            get { throw new NotImplementedException(); }
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#TerminalId")).TextBox().TypeText(value); }
         }
 
         public static string Region
         {
-            get { throw new NotImplementedException(); }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_LocationId")).
@@ -76,7 +67,6 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string Usage
         {
-            get { throw new NotImplementedException(); }
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#SIMCard_UsageId")).
