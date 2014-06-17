@@ -1,11 +1,10 @@
 ﻿using System;
-using SIX.SCS.Tests.Selenium.Extension.Authentication.Method;
-using SIX.SCS.Tests.Selenium.Extension.Authentication.WebPages;
-using SIX.SCS.Tests.Selenium.Extension.Properties;
-using SIX.SCS.Tests.Selenium.Extension.Settings;
-using SIX.SCS.Tests.Selenium.TestObjects.Common;
+using Six.Scs.Tests.Selenium.Extension.Authentication.Method;
+using Six.Scs.Tests.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.Tests.Selenium.Extension.Properties;
+using Six.Scs.Tests.Selenium.Extension.Settings;
 
-namespace SIX.SCS.Tests.Selenium.Settings
+namespace Six.Scs.Tests.Selenium.Settings
 {
     public class ScsClassicTestEnvironment : TestEnvironment
     {
@@ -13,7 +12,7 @@ namespace SIX.SCS.Tests.Selenium.Settings
         {
             BaseUrl = new Uri("https://mdzhwcweb01/mgmt/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
-            Application = new Scs();
+            Application = new TestObjects.Common.Scs();
             Authentication = new UacAuthentication(new UacLoginPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
             {
@@ -25,7 +24,7 @@ namespace SIX.SCS.Tests.Selenium.Settings
         {
             BaseUrl = new Uri("https://gate.telekurs.ch/scss/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
-            Application = new Scs();
+            Application = new TestObjects.Common.Scs();
             Authentication = new SecurIdAuthentication("tksyr", @"PW", "tkcpos", "??");
             SeleniumConfig = new SeleniumConfig
             {
@@ -37,7 +36,7 @@ namespace SIX.SCS.Tests.Selenium.Settings
         {
             BaseUrl = new Uri("https://gateint.telekurs.ch/scsc-qa-k/");
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
-            Application = new Scs();
+            Application = new TestObjects.Common.Scs();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
             {
@@ -49,7 +48,7 @@ namespace SIX.SCS.Tests.Selenium.Settings
         {
             BaseUrl = new Uri("https://gateint.telekurs.ch/scsc-qa-l/");
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
-            Application = new Scs();
+            Application = new TestObjects.Common.Scs();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
             {

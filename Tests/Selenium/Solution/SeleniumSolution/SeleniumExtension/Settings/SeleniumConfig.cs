@@ -1,4 +1,4 @@
-namespace SIX.SCS.Tests.Selenium.Extension.Settings
+namespace Six.Scs.Tests.Selenium.Extension.Settings
 {
     public class SeleniumConfig
     {

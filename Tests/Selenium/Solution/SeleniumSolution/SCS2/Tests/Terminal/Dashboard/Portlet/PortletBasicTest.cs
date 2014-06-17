@@ -1,9 +1,9 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Terminal.Dashboard.Portlet
+namespace Six.Scs.Tests.Selenium.Tests.Terminal.Dashboard.Portlet
 {
     [TestClass]
     public class PortletBasicTest

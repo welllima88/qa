@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
+using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
-namespace SIX.SCS.Tests.Selenium.Extension.Selenium
+namespace Six.Scs.Tests.Selenium.Extension.WebDriver
 {
     public interface IWebDriverAdapter : IWebDriver
     {

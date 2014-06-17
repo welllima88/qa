@@ -1,4 +1,4 @@
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.SearchResult
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.SearchResult
 {
     public class SimCardResult : SearchResults
     {

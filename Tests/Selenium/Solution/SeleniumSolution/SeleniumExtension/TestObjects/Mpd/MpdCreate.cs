@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
+using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Mpd
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Mpd
 {
     public class MpdCreate : WebObject
     {

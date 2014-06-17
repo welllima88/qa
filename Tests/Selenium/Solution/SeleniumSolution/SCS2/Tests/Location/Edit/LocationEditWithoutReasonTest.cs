@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestData;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Location;
+using Six.Scs.Tests.Selenium.Extension.TestData;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Location;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Location.Edit
+namespace Six.Scs.Tests.Selenium.Tests.Location.Edit
 {
     [TestClass]
     public class LocationEditWithoutReasonTest

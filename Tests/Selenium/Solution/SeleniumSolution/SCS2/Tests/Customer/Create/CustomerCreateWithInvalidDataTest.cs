@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Customer.Create
+namespace Six.Scs.Tests.Selenium.Tests.Customer.Create
 {
     [TestClass]
     public class CustomerCreateWithInvalidDataTest : CustomerCreate

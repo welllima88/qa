@@ -1,7 +1,7 @@
 ﻿using System;
-using SIX.SCS.Tests.Selenium.Extension.TestData;
+using Six.Scs.Tests.Selenium.Extension.TestData;
 
-namespace SIX.SCS.Tests.Selenium.TestData
+namespace Six.Scs.Tests.Selenium.TestData
 {
     public class CustomerData : ITestData
     {

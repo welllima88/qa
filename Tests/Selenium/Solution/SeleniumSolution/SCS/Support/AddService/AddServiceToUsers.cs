@@ -13,9 +13,9 @@ using System;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Support.AddService
+namespace Six.Scs.Tests.Selenium.Support.AddService
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

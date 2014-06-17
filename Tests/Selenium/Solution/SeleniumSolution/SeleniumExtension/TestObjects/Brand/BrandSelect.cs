@@ -1,10 +1,10 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Brand
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Brand
 {
     public class BrandSelect : WebObject
     {

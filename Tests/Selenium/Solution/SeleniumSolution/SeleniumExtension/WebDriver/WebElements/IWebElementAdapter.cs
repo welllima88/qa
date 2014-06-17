@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements
+namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
 {
     /// <summary>
     ///     Defines the additional methods that are necessary for a common WebElement

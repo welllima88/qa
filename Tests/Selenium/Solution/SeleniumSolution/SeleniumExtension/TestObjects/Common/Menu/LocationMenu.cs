@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu
 {
     public class LocationMenu : MenuObject
     {

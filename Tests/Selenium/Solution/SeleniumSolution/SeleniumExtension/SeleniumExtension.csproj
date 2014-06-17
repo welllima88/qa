@@ -9,7 +9,7 @@
     <ProjectGuid>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.Tests.Selenium.Extension</RootNamespace>
+    <RootNamespace>Six.Scs.Tests.Selenium.Extension</RootNamespace>
     <AssemblyName>SeleniumExtension</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,17 +68,17 @@
     <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="Authentication\WebPages\IUacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\UacLoginPageOld.cs" />
-    <Compile Include="Selenium\WebElements\CheckBoxElement.cs" />
-    <Compile Include="Selenium\WebElements\NotTextAreaElementException.cs" />
-    <Compile Include="Selenium\WebElements\TextAreaElement.cs" />
-    <Compile Include="Selenium\WebElements\NotTextBoxElementException.cs" />
-    <Compile Include="Selenium\WebElements\PasswortTextBoxElement.cs" />
+    <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
+    <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
+    <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
+    <Compile Include="WebDriver\WebElements\NotTextBoxElementException.cs" />
+    <Compile Include="WebDriver\WebElements\PasswortTextBoxElement.cs" />
     <Compile Include="Settings\BuildTest.cs" />
-    <Compile Include="Selenium\WebElements\TextBoxElement.cs" />
-    <Compile Include="Selenium\WebElements\ISuggesterWebElement.cs" />
-    <Compile Include="Selenium\IWebDriverAdapter.cs" />
-    <Compile Include="Selenium\WebElements\IWebElementAdapter.cs" />
-    <Compile Include="Selenium\WebElements\IWebGuiElement.cs" />
+    <Compile Include="WebDriver\WebElements\TextBoxElement.cs" />
+    <Compile Include="WebDriver\WebElements\ISuggesterWebElement.cs" />
+    <Compile Include="WebDriver\IWebDriverAdapter.cs" />
+    <Compile Include="WebDriver\WebElements\IWebElementAdapter.cs" />
+    <Compile Include="WebDriver\WebElements\IWebGuiElement.cs" />
     <Compile Include="Authentication\IAuthentication.cs" />
     <Compile Include="Authentication\IApplication.cs" />
     <Compile Include="Authentication\Method\CertificateAuthentication.cs" />
@@ -88,8 +88,8 @@
     <Compile Include="Authentication\WebPages\UacLoginPage.cs" />
     <Compile Include="Authentication\WebPages\WesCertificateLoginPage.cs" />
     <Compile Include="Authentication\WebPages\WesSecurIdLoginPage.cs" />
-    <Compile Include="Selenium\WebElements\NotCheckableElementException.cs" />
-    <Compile Include="Selenium\WebElements\NotSelectableElementException.cs" />
+    <Compile Include="WebDriver\WebElements\NotCheckableElementException.cs" />
+    <Compile Include="WebDriver\WebElements\NotSelectableElementException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\ScsRes.Designer.cs">
       <DependentUpon>ScsRes.resx</DependentUpon>
@@ -97,7 +97,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings\SeleniumConfig.cs" />
-    <Compile Include="Selenium\TestDirector.cs" />
+    <Compile Include="WebDriver\TestDirector.cs" />
     <Compile Include="Settings\TestEnvironment.cs" />
     <Compile Include="Settings\Timeouts.cs" />
     <Compile Include="TestData\AdressFactory.cs" />
@@ -267,12 +267,12 @@
     <Compile Include="TestObjects\Terminal\TerminalList.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="Selenium\WebElements\WebObject.cs" />
-    <Compile Include="Selenium\WebElements\IWebObject.cs" />
+    <Compile Include="WebDriver\WebElements\WebObject.cs" />
+    <Compile Include="WebDriver\WebElements\IWebObject.cs" />
     <Compile Include="TestObjects\User\UserView.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
-    <Compile Include="Selenium\WebDriverAdapter.cs" />
-    <Compile Include="Selenium\WebElements\WebElementAdapter.cs" />
+    <Compile Include="WebDriver\WebDriverAdapter.cs" />
+    <Compile Include="WebDriver\WebElements\WebElementAdapter.cs" />
     <Compile Include="Worklow\ContactService.cs" />
     <Compile Include="Worklow\CustomerService.cs" />
     <Compile Include="Worklow\InfoTextService.cs" />

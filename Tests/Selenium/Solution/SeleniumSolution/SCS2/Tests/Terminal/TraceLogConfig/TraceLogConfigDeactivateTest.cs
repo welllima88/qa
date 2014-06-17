@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Terminal.TraceLogConfig
+namespace Six.Scs.Tests.Selenium.Tests.Terminal.TraceLogConfig
 {
     [TestClass]
     public class TraceLogConfigDeactivateTest

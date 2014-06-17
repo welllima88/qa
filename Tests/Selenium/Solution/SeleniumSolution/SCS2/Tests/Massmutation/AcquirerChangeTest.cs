@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Massmuation;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Massmuation;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Massmutation
+namespace Six.Scs.Tests.Selenium.Tests.Massmutation
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

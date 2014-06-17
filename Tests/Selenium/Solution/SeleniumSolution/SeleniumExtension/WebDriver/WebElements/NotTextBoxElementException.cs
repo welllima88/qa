@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements
+namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
 {
-    public class NotCheckableElementException : Exception
+    public class NotTextBoxElementException : Exception
     {
         private readonly string _getCssValue;
         private readonly string _tagName;
 
-        public NotCheckableElementException(string tagName, string getCssValue)
+        public NotTextBoxElementException(string tagName, string getCssValue)
         {
             _tagName = tagName;
             _getCssValue = getCssValue;

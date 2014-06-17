@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Person;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Person;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Contact.Create
+namespace Six.Scs.Tests.Selenium.Tests.Contact.Create
 {
     [TestClass]
     public class ContactCreateWithNoDataTest

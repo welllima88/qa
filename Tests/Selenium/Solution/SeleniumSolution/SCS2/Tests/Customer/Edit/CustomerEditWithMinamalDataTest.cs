@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.Tests.Selenium.Extension;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Customer.Edit
+namespace Six.Scs.Tests.Selenium.Tests.Customer.Edit
 {
     [TestClass]
     public class CustomerEditWithMinamalDataTest

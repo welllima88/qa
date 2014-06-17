@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements
+namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
 {
     public class NotTextAreaElementException : Exception
     {

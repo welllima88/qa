@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements;
+using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
 {
     //STEP 1
     public class TerminalConfigCreate : WebObject

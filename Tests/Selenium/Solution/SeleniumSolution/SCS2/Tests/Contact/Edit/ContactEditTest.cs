@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestData;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Common;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
-using SIX.SCS.Tests.Selenium.Extension.Worklow;
-using SIX.SCS.Tests.Selenium.Tests.Menu;
+using Six.Scs.Tests.Selenium.Extension.TestData;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.Tests.Selenium.Extension.Worklow;
+using Six.Scs.Tests.Selenium.Tests.Menu;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Contact.Edit
+namespace Six.Scs.Tests.Selenium.Tests.Contact.Edit
 {
     [TestClass]
     public class ContactEditTest

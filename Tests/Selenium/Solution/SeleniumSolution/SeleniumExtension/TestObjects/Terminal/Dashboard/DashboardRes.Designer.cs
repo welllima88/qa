@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard {
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIX.SCS.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.DashboardRes", typeof(DashboardRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.DashboardRes", typeof(DashboardRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

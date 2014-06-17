@@ -1,6 +1,6 @@
-﻿using SIX.SCS.Tests.Selenium.Extension.TestObjects.Definitions;
+﻿using Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestData
+namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class CustomerFactory
     {

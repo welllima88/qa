@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SIX.SCS.Tests.Selenium.Extension.TestData
+namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public static class Factory
     {

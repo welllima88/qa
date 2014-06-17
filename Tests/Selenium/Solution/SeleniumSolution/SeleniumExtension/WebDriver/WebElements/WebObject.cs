@@ -1,4 +1,4 @@
-namespace SIX.SCS.Tests.Selenium.Extension.Selenium.WebElements
+namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
 {
     /// <summary>
     ///     This abstract WebObject bundles features for all test objects, like WebDriver Reference and locator information

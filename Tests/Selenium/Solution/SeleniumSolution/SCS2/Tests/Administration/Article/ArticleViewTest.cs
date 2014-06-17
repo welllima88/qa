@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SIX.SCS.Tests.Selenium.Extension.Selenium;
-using SIX.SCS.Tests.Selenium.Extension.TestObjects.Administration.Article;
+using Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.Article;
+using Six.Scs.Tests.Selenium.Extension.WebDriver;
 
-namespace SIX.SCS.Tests.Selenium.Tests.Administration.Article
+namespace Six.Scs.Tests.Selenium.Tests.Administration.Article
 {
     [TestClass]
     public class ArticleViewTest
