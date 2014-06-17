@@ -480,9 +480,7 @@
     <Content Include="Firefox\d3dx9_43.dll" />
     <Content Include="Firefox\defaults\pref\channel-prefs.js" />
     <Content Include="Firefox\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}\icon.png" />
-    <Content Include="Firefox\firefox.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Firefox\firefox.exe" />
     <Content Include="Firefox\freebl3.dll" />
     <Content Include="Firefox\gkmedias.dll" />
     <Content Include="Firefox\libEGL.dll" />
