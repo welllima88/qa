@@ -4,27 +4,27 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class ContactPersonFactory
     {
-        public ContactPersonData Create()
+        public static ContactPersonData Create()
         {
             return new ContactPersonData
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Create",
                 Salutation = "Herr",
-                Adress = Factory.Adress.Create(),
-                Contact = Factory.Contact.Create(),
+                Adress = AdressFactory.Create(),
+                Contact = ContactFactory.Create(),
             };
         }
 
-        public ContactPersonData Edit()
+        public static ContactPersonData Edit()
         {
             return new ContactPersonData
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Edit",
                 Salutation = "Frau",
-                Adress = Factory.Adress.Edit(),
-                Contact = Factory.Contact.Edit(),
+                Adress = AdressFactory.Edit(),
+                Contact = ContactFactory.Edit(),
             };
         }
     }

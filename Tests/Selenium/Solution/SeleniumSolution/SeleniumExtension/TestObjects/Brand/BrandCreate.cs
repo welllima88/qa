@@ -15,24 +15,24 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Brand
             //throw new NotImplementedException();
         }
 
-        public void ClickBrandContractEdit(String brand)
+        public static void ClickBrandContractEdit(String brand)
         {
             ClickEditContract(brand, "contract");
         }
 
-        public void ClickAcquirerContractEdit(String acquirer)
+        public static void ClickAcquirerContractEdit(String acquirer)
         {
             ClickEditContract(acquirer, "brand");
         }
 
-        private void ClickEditContract(String brand, String brandType)
+        private static void ClickEditContract(String brand, String brandType)
         {
             WebDriver.FindElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
                 Click();
         }
 
-        public void SelectMcc(String mcc)
+        public static void SelectMcc(String mcc)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector(

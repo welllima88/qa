@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class AdressFactory
     {
-        public AdressData Create()
+        public static AdressData Create()
         {
             return new AdressData
             {
@@ -18,7 +18,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
             };
         }
 
-        public AdressData Edit()
+        public static AdressData Edit()
         {
             return new AdressData
             {
@@ -32,7 +32,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
             };
         }
 
-        public AdressData Invalid()
+        public static AdressData Invalid()
         {
             return new AdressData
             {

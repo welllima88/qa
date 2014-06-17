@@ -4,35 +4,35 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class LocationFactory
     {
-        public LocationData Create()
+        public static LocationData Create()
         {
             return new LocationData
             {
-                Adress = Factory.Adress.Create(),
-                Contact = Factory.Contact.Create(),
+                Adress = AdressFactory.Create(),
+                Contact = ContactFactory.Create(),
                 CompanyName = "SYR Location Create" + Factory.GenerateTestId(),
                 SapNumber = "4444",
                 Ep2MerchantId = "",
             };
         }
 
-        public LocationData Edit()
+        public static LocationData Edit()
         {
             return new LocationData
             {
-                Adress = Factory.Adress.Edit(),
-                Contact = Factory.Contact.Edit(),
+                Adress = AdressFactory.Edit(),
+                Contact = ContactFactory.Edit(),
                 CompanyName = "SYR Location Edit" + Factory.GenerateTestId(),
                 SapNumber = "1234",
             };
         }
 
-        public LocationData Invalid()
+        public static LocationData Invalid()
         {
             return new LocationData
             {
-                Adress = Factory.Adress.Invalid(),
-                Contact = Factory.Contact.Invalid(),
+                Adress = AdressFactory.Invalid(),
+                Contact = ContactFactory.Invalid(),
                 SapNumber = "444$°",
                 CompanyName = "444$°?",
                 Ep2MerchantId = "12D%FF_3-3",

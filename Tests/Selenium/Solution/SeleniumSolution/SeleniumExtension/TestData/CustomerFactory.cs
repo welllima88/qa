@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class CustomerFactory
     {
-        public CustomerData Create()
+        public static CustomerData Create()
         {
             return new CustomerData
             {
@@ -17,21 +17,21 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 Segment = "01_CH",
                 Agency = "B05 Leiser Peter",
-                Location = Factory.Location.Create(),
+                Location = LocationFactory.Create(),
             };
         }
 
-        public CustomerData Edit()
+        public static CustomerData Edit()
         {
             return new CustomerData
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
-                Location = Factory.Location.Edit(),
+                Location = LocationFactory.Edit(),
                 Agency = "SIX Payment Services (Europe)",                
             };
         }
 
-        public CustomerData Invalid()
+        public static CustomerData Invalid()
         {
             return new CustomerData
             {
@@ -41,7 +41,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
                 CustomerName = "SYR Sele Kunde A$°",
                 CustomerNumber = "^@}$°",
                 Agency = "Albert Brun & Partner",
-                Location = Factory.Location.Invalid(),
+                Location = LocationFactory.Invalid(),
             };
         }
     }

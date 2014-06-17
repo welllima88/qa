@@ -15,7 +15,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("input#save")); }
         }
 
-        public IWebElement ClickAdressFromLocation
+        public static IWebElement ClickAdressFromLocation
         {
             get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
         }

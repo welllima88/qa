@@ -59,7 +59,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void EditLocation()
         {
-            _location = Factory.Location.Edit();
+            _location = LocationFactory.Edit();
             LocationService.Edit(_location);
             LocationService.Check(_location);
 
@@ -69,7 +69,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void EditCustomer()
         {
-            _customer = Factory.Customer.Edit();
+            _customer = CustomerFactory.Edit();
             CustomerService.Edit(_customer);
             CustomerService.Check(_customer);
 
@@ -80,7 +80,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
         private static void CreateContactOnLocation()
         {
             LocationMenu.ContactCreate.Click();
-            _personOnLocation = Factory.ContactPerson.Create();
+            _personOnLocation = ContactPersonFactory.Create();
             ContactService.Create(_personOnLocation);
             ContactService.Check(_personOnLocation);
 
@@ -115,7 +115,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void CreateLocationOnCustomer()
         {
-            _location = Factory.Location.Create();
+            _location = LocationFactory.Create();
             LocationService.Create(_location);
             LocationService.Check(_location);
 
@@ -151,7 +151,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
         private static void CreateContactOnCustomer()
         {
             CustomerMenu.ContactCreate.Click();
-            _personOnCustomer = Factory.ContactPerson.Create();
+            _personOnCustomer = ContactPersonFactory.Create();
             ContactService.Create(_personOnCustomer);
             ContactService.Check(_personOnCustomer);
             LobbyService.OpenLatestElement();
@@ -307,7 +307,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void CreateCustomer()
         {
-            _customer = Factory.Customer.Create();
+            _customer = CustomerFactory.Create();
             CustomerService.Create(_customer);
             CustomerService.Check(_customer);
             LobbyService.OpenLatestElement();
@@ -327,7 +327,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
         private static void EditContactOnLocation()
         {
             ContactMenu.ContactEdit.Click();
-            _personOnLocation = Factory.ContactPerson.Edit();
+            _personOnLocation = ContactPersonFactory.Edit();
             ContactService.Edit(_personOnLocation);
             ContactService.Check(_personOnLocation);
 

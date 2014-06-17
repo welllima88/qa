@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class ContactFactory
     {
-        public ContactData Create()
+        public static ContactData Create()
         {
             return new ContactData
             {
@@ -17,7 +17,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
             };
         }
 
-        public ContactData Edit()
+        public static ContactData Edit()
         {
             return new ContactData
             {
@@ -30,7 +30,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
             };
         }
 
-        public ContactData Invalid()
+        public static ContactData Invalid()
         {
             return new ContactData
             {

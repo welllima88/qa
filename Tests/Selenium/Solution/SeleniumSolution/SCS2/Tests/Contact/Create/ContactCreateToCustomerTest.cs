@@ -21,7 +21,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            _p = Factory.ContactPerson.Create();
+            _p = ContactPersonFactory.Create();
             ContactService.Create(_p);
         }
 

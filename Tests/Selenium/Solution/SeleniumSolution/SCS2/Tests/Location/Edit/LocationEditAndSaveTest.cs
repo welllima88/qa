@@ -19,7 +19,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Location.Edit
         [TestMethod]
         public void EditLocationAndSave()
         {
-            LocationData l = Factory.Location.Edit();
+            LocationData l = LocationFactory.Edit();
             LocationService.Edit(l);
 
             NavigationBar.Lobby.Click();

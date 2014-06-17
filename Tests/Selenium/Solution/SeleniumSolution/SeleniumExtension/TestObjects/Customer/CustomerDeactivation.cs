@@ -14,7 +14,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public IWebElementAdapter Message
+        public static IWebElementAdapter Message
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Customer
             }
         }
 
-        public IWebElementAdapter DeactivateConfirm
+        public static IWebElementAdapter DeactivateConfirm
         {
             get
             {

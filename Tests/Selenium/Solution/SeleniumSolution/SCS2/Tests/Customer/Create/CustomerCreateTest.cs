@@ -17,7 +17,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Customer.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
-            _c = Factory.Customer.Create();
+            _c = CustomerFactory.Create();
             CustomerService.Create(_c);
         }
 

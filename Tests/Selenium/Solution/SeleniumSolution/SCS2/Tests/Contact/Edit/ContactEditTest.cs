@@ -20,7 +20,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Contact.Edit
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
 
-            _p = Factory.ContactPerson.Edit();
+            _p = ContactPersonFactory.Edit();
             ContactService.Edit(_p);
         }
 

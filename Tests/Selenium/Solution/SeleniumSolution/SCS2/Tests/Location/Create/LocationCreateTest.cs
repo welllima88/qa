@@ -16,7 +16,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Location.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401983");
-            _l = Factory.Location.Create();
+            _l = LocationFactory.Create();
             LocationService.Create(_l);
         }
 

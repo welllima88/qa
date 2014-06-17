@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard
 {
     public class BusinessViewpointPortlet : PortletViewBase
     {
-        public IWebElement ReceiptHeader
+        public static IWebElement ReceiptHeader
         {
             get
             {

@@ -6,12 +6,10 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.Article
 {
     public class ArticleView : WebObject
     {
-        public IWebElement SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
-
-        #region IArticle Members
 
         public static string Name
         {
@@ -82,7 +80,5 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.Article
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#RecallInterval")).Text; }
         }
-
-        #endregion
     }
 }
