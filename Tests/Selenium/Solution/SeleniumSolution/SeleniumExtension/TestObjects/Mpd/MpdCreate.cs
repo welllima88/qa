@@ -22,7 +22,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Mpd
 
         public static IWebElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#save")); }
         }
     }
 }
