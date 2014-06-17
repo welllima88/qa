@@ -33,18 +33,19 @@ namespace Six.Scs.Tests.Selenium.Extension.WebDriver
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            var firefoxProfile = new FirefoxProfile(@"~\FireFox\Profiles\WithCertificate");
-            var firefoxBinary = new FirefoxBinary(@"~\Firefox\firefox.exe");
 
             if (string.IsNullOrEmpty(gridHub))
             {
+                var firefoxProfile = new FirefoxProfile(@"~\FireFox\Profiles\WithCertificate");
+                var firefoxBinary = new FirefoxBinary(@"~\Firefox\firefox.exe");
+
                 WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.WriteLine("using Selenium on local");
             }
             else
             {
-                DesiredCapabilities capability = DesiredCapabilities.Firefox();
+                DesiredCapabilities capability = DesiredCapabilities.Chrome();
                 // capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
                 // force german language, but doesn't work on grid:
                 // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
