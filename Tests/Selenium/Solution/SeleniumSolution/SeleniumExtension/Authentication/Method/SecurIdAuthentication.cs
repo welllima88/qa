@@ -12,7 +12,6 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.Method
         private readonly string _password;
         private readonly string _securId;
         private readonly string _userName;
-        private WesSecurIdLoginPage _wes;
 
         /// <summary>
         ///     The only constructor requires all values for a (sucessful) authentication with securId. These data are not saved
@@ -33,7 +32,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.Method
 
         public void Login()
         {
-            _wes = new WesSecurIdLoginPage();
+            new WesSecurIdLoginPage();
             StringAssert.Matches(WesSecurIdLoginPage.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
             Assert.AreEqual("WES SecurID-Login", WesSecurIdLoginPage.InputLabel.Text);
 
