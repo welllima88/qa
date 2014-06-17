@@ -7,7 +7,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
 {
     internal class SimCardListView : WebObject
     {
-        public Collection<ISimCardElement> SimCardList
+        public static Collection<ISimCardElement> SimCardList
         {
             get
             {
@@ -16,7 +16,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
             }
         }
 
-        public IWebElement CreateButton
+        public static IWebElement CreateButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
         }

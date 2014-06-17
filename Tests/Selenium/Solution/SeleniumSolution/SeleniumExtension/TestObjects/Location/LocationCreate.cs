@@ -26,7 +26,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Location
             }
         }
 
-        public string Ep2MerchantId
+        public static string Ep2MerchantId
         {
             set
             {

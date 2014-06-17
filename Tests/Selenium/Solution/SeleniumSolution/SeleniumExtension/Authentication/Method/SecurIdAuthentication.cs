@@ -34,17 +34,17 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.Method
         public void Login()
         {
             _wes = new WesSecurIdLoginPage();
-            StringAssert.Matches(_wes.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
-            Assert.AreEqual("WES SecurID-Login", _wes.InputLabel.Text);
+            StringAssert.Matches(WesSecurIdLoginPage.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
+            Assert.AreEqual("WES SecurID-Login", WesSecurIdLoginPage.InputLabel.Text);
 
-            _wes.Mandant = _mandant;
-            _wes.User = _userName;
-            _wes.Password = _password;
-            _wes.ConfirmButton.Click();
+            WesSecurIdLoginPage.Mandant = _mandant;
+            WesSecurIdLoginPage.User = _userName;
+            WesSecurIdLoginPage.Password = _password;
+            WesSecurIdLoginPage.ConfirmButton.Click();
 
-            Assert.AreEqual(_wes.InputLabel.Text, "Login");
-            _wes.SecurId = _securId;
-            _wes.LoginButton.Click();
+            Assert.AreEqual(WesSecurIdLoginPage.InputLabel.Text, "Login");
+            WesSecurIdLoginPage.SecurId = _securId;
+            WesSecurIdLoginPage.LoginButton.Click();
         }
     }
 }

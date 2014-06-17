@@ -5,7 +5,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
 {
     public class WesSecurIdLoginPage : WebObject
     {
-        public IWebElement LoginButton
+        public static IWebElement LoginButton
         {
             get
             {
@@ -13,12 +13,12 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement HeadLine
+        public static IWebElement HeadLine
         {
             get { return WebDriver.FindElement(By.CssSelector("div.divmainheadlineinner")); }
         }
 
-        public IWebElement Continue
+        public static IWebElement Continue
         {
             get
             {
@@ -26,17 +26,17 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement MessageInfo
+        public static  IWebElement MessageInfo
         {
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divmsginfo")); }
         }
 
-        public IWebElement InputLabel
+        public static IWebElement InputLabel
         {
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divinputlabel")); }
         }
 
-        public string Mandant
+        public static string Mandant
         {
             set
             {
@@ -45,7 +45,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public string User
+        public static string User
         {
             set
             {
@@ -55,7 +55,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public string Password
+        public static string Password
         {
             set
             {
@@ -65,7 +65,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement ConfirmButton
+        public static IWebElement ConfirmButton
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public string SecurId
+        public static string SecurId
         {
             set
             {
@@ -83,17 +83,17 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement LogoutLabel
+        public static IWebElement LogoutLabel
         {
             get { return WebDriver.FindElement(By.CssSelector("#divinputlabel")); }
         }
 
-        public IWebElement LogoutMessage
+        public static IWebElement LogoutMessage
         {
             get { return WebDriver.FindElement(By.CssSelector("#divmsginfo")); }
         }
 
-        public IWebElement LogoutHeader
+        public static IWebElement LogoutHeader
         {
             get { return WebDriver.FindElement(By.CssSelector("div.divmainheadlineinner")); }
         }

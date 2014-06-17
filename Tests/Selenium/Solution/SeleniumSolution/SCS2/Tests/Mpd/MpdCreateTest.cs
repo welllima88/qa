@@ -15,7 +15,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Mpd
         public void CreateMpdToCustomer()
         {
             TestDirector.Navigate("Mpd/ListByCustomer/?CUSTOMERID=402200");
-            _mpd = Factory.Mpd.Create();
+            _mpd = MpdFactory.Create();
             MpdService.Create(_mpd);
         }
 

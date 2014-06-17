@@ -91,7 +91,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Location
             get { return WebDriver.FindElement(By.CssSelector("#LocationData_Fax")).Text; }
         }
 
-        public IWebElement EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }

@@ -136,7 +136,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
             }
         }
 
-        public IWebElement BackButton
+        public static IWebElement BackButton
         {
             get
             {

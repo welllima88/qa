@@ -5,12 +5,12 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
 {
     public class ServiceCenter : WebObject
     {
-        public IWebElementAdapter ExternId
+        public static IWebElementAdapter ExternId
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ExternId")); }
         }
 
-        public IWebElementAdapter NetAdress
+        public static IWebElementAdapter NetAdress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SCNetAddress")); }
         }

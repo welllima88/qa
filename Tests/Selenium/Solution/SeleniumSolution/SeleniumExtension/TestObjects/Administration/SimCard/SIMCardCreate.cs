@@ -46,13 +46,13 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TextBox().TypeText(value); }
         }
 
-        public bool Status
+        public static bool Status
         {
             get { throw new NotSupportedException(); }
             set { throw new NotSupportedException(); }
         }
 
-        public string TerminalId
+        public static string TerminalId
         {
             get { throw new NotSupportedException(); }
             set { throw new NotSupportedException(); }

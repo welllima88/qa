@@ -5,7 +5,7 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
 {
     public class WesCertificateLoginPage : WebObject
     {
-        public IWebElement LoginButton
+        public static IWebElement LoginButton
         {
             get
             {
@@ -13,12 +13,12 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement HeadLine
+        public static IWebElement HeadLine
         {
             get { return WebDriver.FindElement(By.CssSelector("div.divmainheadlineinner")); }
         }
 
-        public IWebElement Continue
+        public static IWebElement Continue
         {
             get
             {
@@ -26,17 +26,17 @@ namespace Six.Scs.Tests.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public IWebElement MessageInfo
+        public static IWebElement MessageInfo
         {
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divmsginfo")); }
         }
 
-        public IWebElement InputLabel
+        public static IWebElement InputLabel
         {
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divinputlabel")); }
         }
 
-        public IWebElement Mandant(string mandant)
+        public static IWebElement Mandant(string mandant)
         {
             return
                 WebDriver.FindElement(

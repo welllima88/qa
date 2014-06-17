@@ -63,7 +63,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Brand
                 .Set(dccEnabled);
         }
 
-        public void SetDccBaseCurrency(String dccBaseCurrency)
+        public static void SetDccBaseCurrency(String dccBaseCurrency)
         {
             WebDriver.FindElement(
                 By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))

@@ -50,7 +50,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).Text; }
         }
 
-        public IWebElementAdapter Edit
+        public static IWebElementAdapter Edit
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='deactivate']")); }
         }

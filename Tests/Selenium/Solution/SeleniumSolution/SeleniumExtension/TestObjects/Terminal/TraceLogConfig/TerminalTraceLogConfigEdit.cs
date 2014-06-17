@@ -82,7 +82,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#activate")); }
         }
 
-        public IWebElementAdapter Deactivate
+        public static IWebElementAdapter Deactivate
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='deactivate']")); }
         }

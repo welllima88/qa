@@ -5,7 +5,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand
 {
     public class Pms : WebObject
     {
-        public IWebElementAdapter NetAdress
+        public static IWebElementAdapter NetAdress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#PMSNetAddress")); }
         }

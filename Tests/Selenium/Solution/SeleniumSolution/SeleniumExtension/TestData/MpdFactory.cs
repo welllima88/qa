@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class MpdFactory
     {
-        public MpdData Create()
+        public static MpdData Create()
         {
             return new MpdData
             {

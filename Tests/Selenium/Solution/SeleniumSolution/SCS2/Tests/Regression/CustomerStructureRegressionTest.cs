@@ -291,7 +291,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void CreateUser()
         {
-            _user = Factory.User.Create();
+            _user = UserFactory.Create();
             UserService.Create(_user);
 
             UserService.Check(_user);
@@ -316,7 +316,7 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
 
         private static void CreateMpdOnCustomer()
         {
-            _mpd = Factory.Mpd.Create();
+            _mpd = MpdFactory.Create();
             MpdService.Create(_mpd);
             MpdService.Check(_mpd);
 

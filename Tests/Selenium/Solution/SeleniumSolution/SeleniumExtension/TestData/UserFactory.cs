@@ -4,7 +4,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestData
 {
     public class UserFactory
     {
-        public UserData Create()
+        public static UserData Create()
         {
             return new UserData
             {
