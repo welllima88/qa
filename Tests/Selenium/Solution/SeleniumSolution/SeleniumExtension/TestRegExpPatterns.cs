@@ -10,20 +10,20 @@ namespace Six.Scs.Tests.Selenium.Extension
     /// </summary>
     public static class TestRegExpPatterns
     {
-        public static Regex WesHeadLine = new Regex(@"^SIX [\s\S]* - WES.*");
+        public static readonly Regex WesHeadLine = new Regex(@"^SIX [\s\S]* - WES.*");
 
-        public static Regex CustomerNo = new Regex("[0-9]{1,7}");
-        public static Regex SbsAdressNo = new Regex("[0-9]{1,7}");
-        public static Regex SbsAdressNoOpt = new Regex("[0-9]{1,7}|");
-        public static Regex SbsDebitorNo = new Regex("[0-9]{1,7}");
-        public static Regex Ep2MerchantId = new Regex("[a-zA-Z0-9]{0,7}[0-9]{0,8}");
-        public static Regex Guid = new Regex(@"[\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12}");
-        public static Regex Date = new Regex("[0-9]{2}.[0-9]{2}.[0-9]{4}");
-        public static Regex Time = new Regex("[0-9]{2}:[0-9]{2}:[0-9]{2}");
-        public static Regex DateTime = new Regex(Date + " " + Time);
-        public static Regex TerminalPassword = new Regex("[0-9]{5,8}");
-        public static Regex UserName = new Regex(@"\w{5}");
-        public static Regex NotEmpty = new Regex(@"\w");
-        public static Regex UserPassword = new Regex(@"[\w]{4,10}|");
+        public static readonly Regex CustomerNo = new Regex("[0-9]{1,7}");
+        public static readonly Regex SbsAdressNo = new Regex("[0-9]{1,7}");
+        public static readonly Regex SbsAdressNoOpt = new Regex("[0-9]{1,7}|");
+        public static readonly Regex SbsDebitorNo = new Regex("[0-9]{1,7}");
+        public static readonly Regex Ep2MerchantId = new Regex("[a-zA-Z0-9]{0,7}[0-9]{0,8}");
+        public static readonly Regex Guid = new Regex(@"[\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12}");
+        public static readonly Regex Date = new Regex("[0-9]{2}.[0-9]{2}.[0-9]{4}");
+        public static readonly Regex Time = new Regex("[0-9]{2}:[0-9]{2}:[0-9]{2}");
+        public static readonly Regex DateTime = new Regex(Date + " " + Time);
+        public static readonly Regex TerminalPassword = new Regex("[0-9]{5,8}");
+        public static readonly Regex UserName = new Regex(@"\w{5}");
+        public static readonly Regex NotEmpty = new Regex(@"\w");
+        public static readonly Regex UserPassword = new Regex(@"[\w]{4,10}|");
     }
 }
