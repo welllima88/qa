@@ -130,6 +130,8 @@ namespace Six.Scs.Tests.Selenium.Tests.Regression
             TerminalChooser.ArticleFilter = "1550";
             TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            
+            TerminalConfigCreate.ContinueButton.Click();
             TerminalConfigCreate.SaveButton.Click();
 
             Assert.IsTrue(BrandSelect.BrandTree().Displayed);
