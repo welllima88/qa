@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.TestObjects.Common
             _headMenu = new HeadMenu();
         }
 
-        public void Logout()
+        public void LogOff()
         {
             _headMenu.Logout.Click();
         }

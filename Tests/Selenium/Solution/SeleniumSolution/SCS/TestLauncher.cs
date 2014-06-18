@@ -12,14 +12,14 @@ namespace Six.Scs.QA.Selenium
         {
             ScsClassicTestEnvironment.Dev();
             TestDirector.PrepareBrowser();
-            TestDirector.Login();
+            TestDirector.LogOn();
         }
 
         [AssemblyCleanup]
         public static void StopTestDirector()
         {
-            TestDirector.Logout();
-            TestDirector.ShutDownBrowser();
+            TestDirector.LogOff();
+            TestDirector.ShutdownBrowser();
         }
     }
 }

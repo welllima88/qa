@@ -1,6 +1,6 @@
 ﻿using System;
 using Six.Scs.QA.Selenium.Extension.Authentication.Method;
-using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
 using Six.Scs.QA.Selenium.Extension.Properties;
 using Six.Scs.QA.Selenium.Extension.Settings;
 
@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Settings
             BaseUrl = new Uri("https://mdzhwcweb01/mgmt/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new TestObjects.Common.Scs();
-            Authentication = new UacAuthentication(new UacLoginPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
+            Authentication = new UacAuthentication(new UacLogOnPageOld(), ScsRes.uac_username, ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
             {
                 Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
