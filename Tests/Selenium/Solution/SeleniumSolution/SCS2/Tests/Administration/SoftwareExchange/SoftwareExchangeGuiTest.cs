@@ -29,9 +29,9 @@ namespace Six.Scs.QA.Selenium.Tests.Administration.SoftwareExchange
 
         [TestMethod]
         [TestCategory("SoftwareExchange")]
-        public void IncludeCancelled()
+        public void IncludeCanceled()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.IncludeCancelled.Displayed);
+            Assert.IsTrue(SoftwareExchangeCreate.IncludeCanceled.Displayed);
         }
 
         [TestMethod]
