@@ -9,11 +9,7 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
     {
         private static string _customerName;
         private static string _supplier;
-        private static string _sbsBillingTenant;
-        private static string _sbsCurrency;
         private static string _sapNumber;
-        private static string _sbsDebitNumber;
-        private static string _sbsAdressNumber;
         private static string _ep2MerchantId;
         private static string _companyName;
         private static string _po;
@@ -29,12 +25,8 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
         private static string _mobile;
         private static string _fax;
         private static string _web;
-        private static string _segment;
         private static string _customerNumber;
         private static string _region;
-        private static string _cashIntegrator;
-        private static string _categoryCode;
-        private static string _supportContract;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
@@ -45,15 +37,7 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
             _customerName = CustomerView.CustomerName;
             _supplier = CustomerView.Supplier;
             _region = CustomerView.Region;
-            _cashIntegrator = CustomerView.CashIntegrator;
-            _categoryCode = CustomerView.CategoryCode;
-            _supportContract = CustomerView.SupportContract;
-            _sbsBillingTenant = CustomerView.SbsBillingTenant;
-            _sbsCurrency = CustomerView.SbsCurrency;
             _sapNumber = CustomerView.SapNumber;
-            _sbsDebitNumber = CustomerView.SbsDebitNumber;
-            _sbsAdressNumber = CustomerView.SbsAdressNumber;
-            _segment = CustomerView.Segment;
             _ep2MerchantId = CustomerView.Ep2MerchantId;
             _companyName = CustomerView.CompanyName;
             _po = CustomerView.Po;
