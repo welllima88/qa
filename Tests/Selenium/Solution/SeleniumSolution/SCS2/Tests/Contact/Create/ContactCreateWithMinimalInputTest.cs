@@ -10,13 +10,11 @@ namespace Six.Scs.QA.Selenium.Tests.Contact.Create
     [TestClass]
     public class ContactCreateWithMinimalInputTest
     {
-        private static string _firstName;
-
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
-            _firstName = "SYR" + Factory.GenerateTestId();
+            "SYR" + Factory.GenerateTestId();
 
             CustomerMenu.ContactCreate.Click();
 
