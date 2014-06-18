@@ -13,7 +13,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Infotext
 
         private static IEnumerable<IWebElement> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector("table#infotextList tbody tr td#infotext")); }
+            get { return WebDriver.FindElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
         }
 
         public static List<string> List
