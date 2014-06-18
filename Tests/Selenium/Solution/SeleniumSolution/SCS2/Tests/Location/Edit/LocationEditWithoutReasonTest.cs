@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Tests.Location.Edit
     public class LocationEditWithoutReasonTest
     {
         [ClassInitialize]
-        public void TestInit()
+        public static void TestInit()
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
 
