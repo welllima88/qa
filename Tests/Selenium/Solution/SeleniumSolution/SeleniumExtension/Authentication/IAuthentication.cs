@@ -2,6 +2,6 @@
 {
     public interface IAuthentication
     {
-        void Login();
+        void LogOn();
     }
 }
