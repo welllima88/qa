@@ -13,37 +13,13 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
     [TestClass]
     public class CustomerEditAndDelayedSaveTest
     {
-        private static string _custId;
-        private static string _customerName;
-        private static string _supplier;
-        private static string _sbsBillingTenant;
-        private static string _sbsCurrency;
-        private static string _sapNumber;
+        private static string _customerNumber;
         private static string _sbsDebitNumber;
         private static string _sbsAdressNumber;
+        private static string _sbsCurrency;
+        private static string _sbsBillingTenant;
+        private static string _supplier;
         private static string _ep2MerchantId;
-        private static string _companyName;
-        private static string _po;
-        private static string _adressAddition;
-        private static string _streetName;
-        private static string _zip;
-        private static string _city;
-        private static string _agency;
-        private static string _language;
-        private static string _country;
-        private static string _email;
-        private static string _telephone;
-        private static string _mobile;
-        private static string _fax;
-        private static string _web;
-        private static string _segment;
-        private static string customerNumber;
-        private static string sbsDebitNumber;
-        private static string sbsAdressNumber;
-        private static string sbsCurrency;
-        private static string sbsBillingTenant;
-        private static string supplier;
-        private static string ep2MerchantId;
 
         [TestInitialize]
         public void TestInit()
@@ -58,8 +34,8 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
 
             CustomerMenu.CustomerEdit.Click();
 
-            Assert.AreEqual(customerNumber, CustomerEdit.CustomerNumber);
-            Assert.AreEqual(ep2MerchantId, CustomerEdit.Ep2MerchantId);
+            Assert.AreEqual(_customerNumber, CustomerEdit.CustomerNumber);
+            Assert.AreEqual(_ep2MerchantId, CustomerEdit.Ep2MerchantId);
 
             EditCustomer();
 
@@ -100,53 +76,25 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
 
         private static void ReadPreState()
         {
-            _custId = CustomerView.CustomerNumber;
-            _customerName = CustomerView.CustomerName;
-            _supplier = CustomerView.Supplier;
-
-            _sbsBillingTenant = CustomerView.SbsBillingTenant;
-            _sbsCurrency = CustomerView.SbsCurrency;
-            _sapNumber = CustomerView.SapNumber;
+            _customerNumber = CustomerView.CustomerNumber;
             _sbsDebitNumber = CustomerView.SbsDebitNumber;
             _sbsAdressNumber = CustomerView.SbsAdressNumber;
-            _segment = CustomerView.Segment;
-
+            _sbsCurrency = CustomerView.SbsCurrency;
+            _sbsBillingTenant = CustomerView.SbsBillingTenant;
+            _supplier = CustomerView.Supplier;
             _ep2MerchantId = CustomerView.Ep2MerchantId;
-
-            _companyName = CustomerView.CompanyName;
-            _po = CustomerView.Po;
-            _adressAddition = CustomerView.AdressAddition;
-            _streetName = CustomerView.StreetNo;
-            _zip = CustomerView.Zip;
-            _city = CustomerView.City;
-            _agency = CustomerView.Agency;
-            _language = CustomerView.Language;
-            _country = CustomerView.Country;
-            _email = CustomerView.Email;
-            _telephone = CustomerView.Telephone;
-            _mobile = CustomerView.Mobile;
-            _fax = CustomerView.Fax;
-            _web = CustomerView.Web;
-
-            customerNumber = CustomerView.CustomerNumber;
-            sbsDebitNumber = CustomerView.SbsDebitNumber;
-            sbsAdressNumber = CustomerView.SbsAdressNumber;
-            sbsCurrency = CustomerView.SbsCurrency;
-            sbsBillingTenant = CustomerView.SbsBillingTenant;
-            supplier = CustomerView.Supplier;
-            ep2MerchantId = CustomerView.Ep2MerchantId;
         }
 
         [TestMethod]
         public void EditCustomerAndSave()
         {
-            Assert.AreEqual(customerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual(_customerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual("SYR Sele Kunde A", CustomerView.CustomerName);
-            Assert.AreEqual(supplier, CustomerView.Supplier);
-            Assert.AreEqual(sbsBillingTenant, CustomerView.SbsBillingTenant);
-            Assert.AreEqual(sbsCurrency, CustomerView.SbsCurrency);
-            Assert.AreEqual(sbsDebitNumber, CustomerView.SbsDebitNumber);
-            Assert.AreEqual(sbsAdressNumber, CustomerView.SbsAdressNumber);
+            Assert.AreEqual(_supplier, CustomerView.Supplier);
+            Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
+            Assert.AreEqual(_sbsCurrency, CustomerView.SbsCurrency);
+            Assert.AreEqual(_sbsDebitNumber, CustomerView.SbsDebitNumber);
+            Assert.AreEqual(_sbsAdressNumber, CustomerView.SbsAdressNumber);
             Assert.AreEqual("5172: PETROLEUM/PETROL PRODUCTS", CustomerView.CategoryCode);
             Assert.AreEqual("Hotline und Wartung kostenpflichtig", CustomerView.SupportContract);
             Assert.AreEqual("Wincor Nixdorf AG, Brüttisellen", CustomerView.CashIntegrator);
