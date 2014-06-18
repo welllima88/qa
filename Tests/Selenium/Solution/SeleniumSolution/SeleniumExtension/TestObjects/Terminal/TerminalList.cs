@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
+namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal
 {
     public class TerminalList : WebObject
     {
@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
-                        "td#content table tbody tr td a[href*='/TerminalDashboard?TerminalId=']"));
+                        "tbody tr td#content table.dataTable tbody tr td a[href*='/TerminalDashboard?TerminalId=']"));
         }
     }
 }
