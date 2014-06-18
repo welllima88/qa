@@ -7,14 +7,6 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Brand
     public class BrandCreate : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
     {
-        private BrandSelect _brandSelect;
-
-        public BrandCreate()
-        {
-            _brandSelect = new BrandSelect();
-            //throw new NotImplementedException();
-        }
-
         public static void ClickBrandContractEdit(String brand)
         {
             ClickEditContract(brand, "contract");
