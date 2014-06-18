@@ -39,7 +39,6 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Location
         public static String Ep2MerchantId
         {
             get { return LocationView.Ep2MerchantId; }
-            set { throw new NotSupportedException(); }
         }
 
         public static string StreetNo
