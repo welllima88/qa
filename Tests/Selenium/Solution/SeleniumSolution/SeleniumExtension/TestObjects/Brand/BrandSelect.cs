@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Brand
                 firstOrDefault.Click();
         }
 
-        public static void DeSelect(string brandId)
+        public static void Deselect(string brandId)
         {
             WebDriver.FindElement(
                 By.CssSelector(
