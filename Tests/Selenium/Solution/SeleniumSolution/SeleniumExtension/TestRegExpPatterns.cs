@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Extension
     /// </summary>
     public static class TestRegExpPatterns
     {
-        public static readonly Regex WesHeadLine = new Regex(@"^SIX [\s\S]* - WES.*");
+        public static readonly Regex WesHeadline = new Regex(@"^SIX [\s\S]* - WES.*");
 
         public static readonly Regex CustomerNo = new Regex("[0-9]{1,7}");
         public static readonly Regex SbsAdressNo = new Regex("[0-9]{1,7}");
