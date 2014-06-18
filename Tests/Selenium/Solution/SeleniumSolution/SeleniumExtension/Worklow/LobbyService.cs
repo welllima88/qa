@@ -4,7 +4,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public static class LobbyService
     {
-        public static void Language(string language)
+        public static void ChooseLanguage(string language)
         {
             MetaNavBar.Languages.Click();
             MetaNavBar.Language(language).Click();
