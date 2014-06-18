@@ -18,11 +18,11 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// <summary>
         ///     Execute the required authentication procedure to fulfill the basic precondition of testing.
         /// </summary>
-        public static void Login()
+        public static void LogOn()
         {
             BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts();
-            TestEnvironment.Authentication.Login();
+            TestEnvironment.Authentication.LogOn();
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
                 .ImplicitlyWait(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.ImplicitlyWait));
         }
 
-        public static void ShutDownBrowser()
+        public static void ShutdownBrowser()
         {
             WebDriver.Quit();
         }
 
-        public static void Logout()
+        public static void LogOff()
         {
-            TestEnvironment.Application.Logout();
+            TestEnvironment.Application.LogOff();
         }
 
         public static void Navigate(string urlSuffix = HomePathUrl)

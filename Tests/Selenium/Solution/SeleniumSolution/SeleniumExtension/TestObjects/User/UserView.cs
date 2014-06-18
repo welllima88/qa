@@ -60,7 +60,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
             get { return WebDriver.FindElement(By.Id("User_Created")).Text; }
         }
 
-        public static string LastLogin
+        public static string LastLogOn
         {
             get { return WebDriver.FindElement(By.Id("User_LastLogin")).Text; }
         }
