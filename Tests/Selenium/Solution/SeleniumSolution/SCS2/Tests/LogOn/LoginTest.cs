@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium.Tests.Login
+namespace Six.Scs.QA.Selenium.Tests.LogOn
 {
     /// <summary>
     ///     Some checks which validate a successful login
