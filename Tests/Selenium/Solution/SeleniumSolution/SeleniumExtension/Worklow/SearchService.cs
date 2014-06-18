@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
     {
         public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
-            QuickSearch.Find(customerId);
+            Find(customerId);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(customerId, CustomerView.CustomerNumber);
@@ -20,7 +20,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
 
         public static void LocationCanBeFoundByLocationName(string locationName)
         {
-            QuickSearch.Find(locationName);
+            Find(locationName);
             LocationResult.Result().Click();
 
             Assert.AreEqual(locationName, LocationView.CompanyName);
@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
 
         public static void CustomerCanBeFoundByCustomerName(string customerName)
         {
-            QuickSearch.Find(customerName);
+            Find(customerName);
             CustomerResult.Result().Click();
 
             Assert.AreEqual(customerName, CustomerView.CustomerName);
@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
 
         public static void TerminalCanBeFoundById(string terminalId)
         {
-            QuickSearch.Find(terminalId);
+            Find(terminalId);
             TerminalResult.First().Click();
 
             Assert.AreEqual(terminalId, TerminalInfo.TerminalId);
@@ -44,10 +44,16 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
 
         public static void UserCanBeFoundByCustomerName(string userName)
         {
-            QuickSearch.Find(userName);
+            Find(userName);
             UserResult.First().Click();
 
             Assert.AreEqual(userName, UserView.UserName);
+        }
+
+        public static void Find(string searchString)
+        {
+            QuickSearch.SearchField = searchString;
+            QuickSearch.HitEnter();
         }
     }
 }
