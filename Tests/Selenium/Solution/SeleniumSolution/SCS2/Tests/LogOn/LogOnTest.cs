@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Tests.LogOn
     ///     Some checks which validate a successful login
     /// </summary>
     [TestClass]
-    public class LoginTest
+    public class LogOnTest
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

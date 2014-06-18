@@ -16,15 +16,15 @@ namespace Six.Scs.QA.Selenium
         {
             TestEnvironment.Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
-            TestDirector.Login();
-            LobbyService.Language(Languages.German);
+            TestDirector.LogOn();
+            LobbyService.ChooseLanguage(Languages.German);
         }
 
         [AssemblyCleanup]
         public static void StopTestDirector()
         {
-            TestDirector.Logout();
-            TestDirector.ShutDownBrowser();
+            TestDirector.LogOff();
+            TestDirector.ShutdownBrowser();
         }
     }
 }

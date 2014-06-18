@@ -80,10 +80,10 @@ namespace Six.Scs.QA.Selenium.Tests.User
 
         [TestMethod]
         [TestCategory("SmokeTest")]
-        public void LastLogin()
+        public void LastLogOn()
         {
-            Assert.IsTrue(DateTime.Now.CompareTo(DateTime.Parse(UserView.LastLogin)) > 0);
-            Assert.IsTrue(DateTime.Now.AddDays(-1).CompareTo(DateTime.Parse(UserView.LastLogin)) < 0);
+            Assert.IsTrue(DateTime.Now.CompareTo(DateTime.Parse(UserView.LastLogOn)) > 0);
+            Assert.IsTrue(DateTime.Now.AddDays(-1).CompareTo(DateTime.Parse(UserView.LastLogOn)) < 0);
         }
 
         [TestMethod]

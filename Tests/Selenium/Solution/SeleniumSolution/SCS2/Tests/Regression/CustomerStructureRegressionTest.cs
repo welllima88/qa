@@ -47,7 +47,7 @@ namespace Six.Scs.QA.Selenium.Tests.Regression
             BrandSelect.Select("361");
             BrandSelect.Select("363");
             BrandSelect.Select("811");
-            BrandSelect.DeSelect("1161");
+            BrandSelect.Deselect("1161");
 
             BrandSelect.ConfirmButton().Click();
 

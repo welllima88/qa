@@ -36,9 +36,9 @@ namespace Six.Scs.QA.Selenium.Tests.Lobby
 
         [TestMethod]
         [TestCategory("LobbyCheck")]
-        public void Logout()
+        public void LogOff()
         {
-            Assert.IsTrue(MetaNavBar.Logout.Displayed);
+            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace Six.Scs.QA.Selenium.Tests.Lobby
         public void LanguageGerman()
         {
             MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.Language("Deutsch").Enabled);
+            Assert.IsTrue(MetaNavBar.LanguageItem("Deutsch").Enabled);
             MetaNavBar.Languages.Click();
         }
 
@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Selenium.Tests.Lobby
         public void LanguageEnglish()
         {
             MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.Language("English").Enabled);
+            Assert.IsTrue(MetaNavBar.LanguageItem("English").Enabled);
             MetaNavBar.Languages.Click();
         }
     }

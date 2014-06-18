@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Selenium.Tests.Terminal.FinancialConfig
         }
 
         [TestMethod]
-        public void AlphaNumericNotAllowed()
+        public void AlphanumericNotAllowed()
         {
             SetOnlineFinancialAndSave("9*");
             CollectionAssert.Contains(FormAlert.FormAlertList, "Financial Advice Queue Size: Ihre Eingabe ist ungültig!");
