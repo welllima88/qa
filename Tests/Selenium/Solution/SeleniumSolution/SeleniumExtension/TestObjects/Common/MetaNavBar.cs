@@ -5,7 +5,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
 {
     public class MetaNavBar : WebObject
     {
-        public static IWebElement Logout
+        public static IWebElement LogOff
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
         }
@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
         }
 
-        public static IWebElement Language(string language)
+        public static IWebElement LanguageItem(string language)
         {
             return WebDriver.FindElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
         }
