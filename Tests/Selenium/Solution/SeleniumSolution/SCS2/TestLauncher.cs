@@ -1,10 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium;
 using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
 using Six.Scs.Tests.Selenium.Extension.WebDriver;
 using Six.Scs.Tests.Selenium.Extension.Worklow;
 
-namespace SIX.SCS.Tests.Selenium
+namespace Six.Scs.Tests.Selenium
 {
     /// <summary>
     ///     The TestLauncher prepares Browser with TestDirector and keeps this
