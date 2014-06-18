@@ -1,4 +1,4 @@
-using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
+using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method

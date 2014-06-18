@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
         public static void ChooseLanguage(string language)
         {
             MetaNavBar.Languages.Click();
-            MetaNavBar.Language(language).Click();
+            MetaNavBar.LanguageItem(language).Click();
         }
 
         public static void OpenLatestElement()
