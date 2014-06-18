@@ -19,9 +19,9 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu
             get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_GklpBlock)); }
         }
 
-        public static IWebElement SetFastInitFlag
+        public static IWebElement SetFastInit
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_SetFastInitFlag)); }
+            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TerminalAnalysisMenu_SetFastInit)); }
         }
 
         public static IWebElement ResetComAdresses

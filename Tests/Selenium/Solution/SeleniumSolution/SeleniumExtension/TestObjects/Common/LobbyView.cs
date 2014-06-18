@@ -18,12 +18,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Lobby_Headline)); }
         }
 
-        public void Logout()
+        public void LogOff()
         {
             try
             {
                 TestDirector.Navigate();
-                MetaNavBar.Logout.Click();
+                MetaNavBar.LogOff.Click();
             }
             catch (NoSuchElementException)
             {

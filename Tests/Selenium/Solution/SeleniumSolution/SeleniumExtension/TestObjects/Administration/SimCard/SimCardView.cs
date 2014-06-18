@@ -77,10 +77,10 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SimCard
             get
             {
                 // take alle History Elements/ Wrap each in a SimHistory Element/ return a List of SimHistoryElements
-                IEnumerable<IWebElement> d = WebDriver.FindElements(By.CssSelector("#SIMCard_History"));
-                //d.;
-                //IEnumerable<SimHistoryElement> simHistory;
-                //return simHistory;
+                // IEnumerable<IWebElement> d = WebDriver.FindElements(By.CssSelector("#SIMCard_History"));
+                // d.;
+                // IEnumerable<SimHistoryElement> simHistory;
+                // return simHistory;
                 throw new NotImplementedException();
             }
         }

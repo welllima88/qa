@@ -477,9 +477,9 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu {
         /// <summary>
         ///   Looks up a localized string similar to td#leftHandMenu a[href*=&apos;/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=&apos;].
         /// </summary>
-        public static string TerminalAnalysisMenu_SetFastInitFlag {
+        public static string TerminalAnalysisMenu_SetFastInit {
             get {
-                return ResourceManager.GetString("TerminalAnalysisMenu_SetFastInitFlag", resourceCulture);
+                return ResourceManager.GetString("TerminalAnalysisMenu_SetFastInit", resourceCulture);
             }
         }
         

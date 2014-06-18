@@ -222,7 +222,7 @@
   <data name="TerminalAnalysisMenu_GklpBlock" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/GKLP/GKLPBlock.aspx?TERMINALID=']</value>
   </data>
-  <data name="TerminalAnalysisMenu_SetFastInitFlag" xml:space="preserve">
+  <data name="TerminalAnalysisMenu_SetFastInit" xml:space="preserve">
     <value>td#leftHandMenu a[href*='/TerminalFastInitFlag.asp?mode=TerminalFastInitFlagCommit&amp;TERMINALID=']</value>
   </data>
   <data name="TerminalAnalysisMenu_ResetComAdresses" xml:space="preserve">
