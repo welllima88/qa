@@ -8,13 +8,11 @@ namespace Six.Scs.QA.Selenium.Tests.Terminal.Duplicate
     [TestClass]
     public class TerminalDuplicateTest
     {
-        private string _dt;
-
         [TestInitialize]
         public void TestInit()
         {
             TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
-            _dt = Factory.GenerateTestId();
+            Factory.GenerateTestId();
         }
 
         [TestMethod]
