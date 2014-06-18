@@ -1,10 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Administration.SimCard;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SimCard;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Administration.SIMCard
+namespace Six.Scs.QA.Selenium.Tests.Administration.SIMCard
 {
     [TestClass]
     public class SimCardViewTest

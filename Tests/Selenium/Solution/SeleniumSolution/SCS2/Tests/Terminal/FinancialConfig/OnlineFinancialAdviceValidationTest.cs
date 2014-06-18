@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.FinancialConfig;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.FinancialConfig;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Terminal.FinancialConfig
+namespace Six.Scs.QA.Selenium.Tests.Terminal.FinancialConfig
 {
     [TestClass]
     public class OnlineFinancialAdviceValidationTest

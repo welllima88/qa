@@ -1,7 +1,7 @@
-﻿using Six.Scs.Tests.Selenium.Extension.WebDriver;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+﻿using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.TestObjects.Terminal
+namespace Six.Scs.QA.Selenium.TestObjects.Terminal
 {
     public class TerminalCreate : WebObject
     {

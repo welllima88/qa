@@ -1,9 +1,9 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.Authentication.WebPages;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.Authentication.Method
+namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
     public class SecurIdAuthentication : WebObject, IAuthentication
 

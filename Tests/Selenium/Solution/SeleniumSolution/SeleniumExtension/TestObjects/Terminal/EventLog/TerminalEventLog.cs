@@ -1,9 +1,9 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.EventLog
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.EventLog
 {
     public class TerminalEventLog : WebObject
     {

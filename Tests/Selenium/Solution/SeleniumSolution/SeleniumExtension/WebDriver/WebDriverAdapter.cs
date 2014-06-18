@@ -4,9 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using OpenQA.Selenium;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.WebDriver
+namespace Six.Scs.QA.Selenium.Extension.WebDriver
 {
     /// <summary>
     ///     This WebDriver adapter adds one method to make use of adapted web elements

@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Tests.Selenium
+﻿namespace Six.Scs.QA.Selenium
 {
     public static class SeleniumGridServer
     {

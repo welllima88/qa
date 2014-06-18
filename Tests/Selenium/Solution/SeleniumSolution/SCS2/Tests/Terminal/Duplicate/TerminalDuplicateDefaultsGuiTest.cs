@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Duplicate;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Terminal.Duplicate
+namespace Six.Scs.QA.Selenium.Tests.Terminal.Duplicate
 {
     [TestClass]
     public class TerminalDuplicateDefaultsGuiTest

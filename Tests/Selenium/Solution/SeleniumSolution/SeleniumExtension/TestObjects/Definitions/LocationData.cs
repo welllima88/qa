@@ -1,6 +1,6 @@
 using System;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Definitions
 {
     public class LocationData
     {

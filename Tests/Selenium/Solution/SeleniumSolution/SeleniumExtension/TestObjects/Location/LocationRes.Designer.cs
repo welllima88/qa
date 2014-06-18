@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Location {
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Location {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Location {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.Tests.Selenium.Extension.TestObjects.Location.LocationRes", typeof(LocationRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.QA.Selenium.Extension.TestObjects.Location.LocationRes", typeof(LocationRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

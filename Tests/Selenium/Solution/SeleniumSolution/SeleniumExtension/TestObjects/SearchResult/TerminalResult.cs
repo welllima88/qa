@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.SearchResult
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.SearchResult
 {
     public class TerminalResult : SearchResults
     {

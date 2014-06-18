@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Location
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Location
 {
     public class BillingAddressView : WebObject
     {

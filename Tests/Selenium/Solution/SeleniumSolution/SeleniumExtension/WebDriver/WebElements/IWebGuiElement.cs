@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
+﻿namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
     /// <summary>
     ///     Interface to mark, that the class is WebGUIElement

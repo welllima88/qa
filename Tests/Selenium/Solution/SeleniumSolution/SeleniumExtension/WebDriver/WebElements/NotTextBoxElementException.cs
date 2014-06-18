@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements
+namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
     public class NotTextBoxElementException : Exception
     {

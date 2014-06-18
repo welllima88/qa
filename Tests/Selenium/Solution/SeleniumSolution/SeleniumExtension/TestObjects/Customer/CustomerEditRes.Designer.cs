@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Customer {
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Customer {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.Tests.Selenium.Extension.TestObjects.Customer.CustomerEditRes", typeof(CustomerEditRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.QA.Selenium.Extension.TestObjects.Customer.CustomerEditRes", typeof(CustomerEditRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

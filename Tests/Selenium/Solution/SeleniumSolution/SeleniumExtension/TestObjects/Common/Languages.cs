@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common
+﻿namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
 {
     public static class Languages
     {

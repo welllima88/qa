@@ -1,7 +1,7 @@
-using Six.Scs.Tests.Selenium.Extension.Authentication;
-using Six.Scs.Tests.Selenium.TestObjects.Menu;
+using Six.Scs.QA.Selenium.Extension.Authentication;
+using Six.Scs.QA.Selenium.TestObjects.Menu;
 
-namespace Six.Scs.Tests.Selenium.TestObjects.Common
+namespace Six.Scs.QA.Selenium.TestObjects.Common
 {
     public class Scs : IApplication
     {

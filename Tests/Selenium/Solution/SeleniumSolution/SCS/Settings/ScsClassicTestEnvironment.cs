@@ -1,10 +1,10 @@
 ﻿using System;
-using Six.Scs.Tests.Selenium.Extension.Authentication.Method;
-using Six.Scs.Tests.Selenium.Extension.Authentication.WebPages;
-using Six.Scs.Tests.Selenium.Extension.Properties;
-using Six.Scs.Tests.Selenium.Extension.Settings;
+using Six.Scs.QA.Selenium.Extension.Authentication.Method;
+using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.Properties;
+using Six.Scs.QA.Selenium.Extension.Settings;
 
-namespace Six.Scs.Tests.Selenium.Settings
+namespace Six.Scs.QA.Selenium.Settings
 {
     public class ScsClassicTestEnvironment : TestEnvironment
     {

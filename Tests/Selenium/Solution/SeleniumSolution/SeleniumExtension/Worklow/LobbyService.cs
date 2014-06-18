@@ -1,6 +1,6 @@
-﻿using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+﻿using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 
-namespace Six.Scs.Tests.Selenium.Extension.Worklow
+namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public static class LobbyService
     {

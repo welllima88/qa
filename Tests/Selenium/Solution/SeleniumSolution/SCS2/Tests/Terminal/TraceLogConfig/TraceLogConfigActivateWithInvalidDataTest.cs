@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Terminal.TraceLogConfig
+namespace Six.Scs.QA.Selenium.Tests.Terminal.TraceLogConfig
 {
     [TestClass]
     public class TraceLogConfigActivateWithInvalidDataTest

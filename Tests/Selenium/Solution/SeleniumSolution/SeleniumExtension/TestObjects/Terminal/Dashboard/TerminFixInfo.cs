@@ -1,6 +1,6 @@
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
 {
     /// <summary>
     ///     This object bundles the fix view elements of the "Terminal Dashboard"

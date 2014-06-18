@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu {
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu.MenuRes", typeof(MenuRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu.MenuRes", typeof(MenuRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

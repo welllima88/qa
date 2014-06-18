@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Location;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.SearchResult;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.User;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Location;
+using Six.Scs.QA.Selenium.Extension.TestObjects.SearchResult;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Extension.TestObjects.User;
 
-namespace Six.Scs.Tests.Selenium.Extension.Worklow
+namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public static class SearchService
     {

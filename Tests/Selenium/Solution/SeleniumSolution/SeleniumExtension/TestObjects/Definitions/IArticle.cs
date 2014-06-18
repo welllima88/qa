@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Definitions
 {
     public interface IArticle
     {

@@ -1,4 +1,4 @@
-namespace Six.Scs.Tests.Selenium.Extension.Worklow
+namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public class TerminalService
     {

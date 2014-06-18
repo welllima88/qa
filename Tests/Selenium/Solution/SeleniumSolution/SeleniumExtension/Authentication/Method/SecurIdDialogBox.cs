@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Six.Scs.Tests.Selenium.Extension.Authentication.Method
+namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
     public class SecurIdDialogBox : IAuthentication
     {

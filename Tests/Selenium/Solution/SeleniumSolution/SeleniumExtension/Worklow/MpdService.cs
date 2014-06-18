@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Mpd;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Definitions;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Mpd;
 
-namespace Six.Scs.Tests.Selenium.Extension.Worklow
+namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public static class MpdService
     {

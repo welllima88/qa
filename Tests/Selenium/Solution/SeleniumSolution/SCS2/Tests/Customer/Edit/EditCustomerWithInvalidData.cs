@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Customer.Edit
+namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
 {
     [TestClass]
     public class EditCustomerWithInvalidData

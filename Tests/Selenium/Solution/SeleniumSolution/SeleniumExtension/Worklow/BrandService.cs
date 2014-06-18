@@ -1,6 +1,6 @@
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
 
-namespace Six.Scs.Tests.Selenium.Extension.Worklow
+namespace Six.Scs.QA.Selenium.Extension.Worklow
 {
     public class BrandService
     {

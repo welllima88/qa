@@ -1,9 +1,9 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Tests.Terminal.Dashboard
 {
     [TestClass]
     public class TerminalInfoTest

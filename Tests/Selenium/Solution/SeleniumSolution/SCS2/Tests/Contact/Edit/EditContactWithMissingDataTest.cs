@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Person;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Contact.Edit
+namespace Six.Scs.QA.Selenium.Tests.Contact.Edit
 {
     [TestClass]
     public class EditContactWithMissingDataTest

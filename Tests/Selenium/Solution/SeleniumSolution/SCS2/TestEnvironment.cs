@@ -1,13 +1,13 @@
 ﻿using System;
-using Six.Scs.Tests.Selenium.Extension.Authentication.Method;
-using Six.Scs.Tests.Selenium.Extension.Authentication.WebPages;
-using Six.Scs.Tests.Selenium.Extension.Properties;
-using Six.Scs.Tests.Selenium.Extension.Settings;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.Authentication.Method;
+using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.Properties;
+using Six.Scs.QA.Selenium.Extension.Settings;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 
-namespace Six.Scs.Tests.Selenium
+namespace Six.Scs.QA.Selenium
 {
-    public class TestEnvironment : Six.Scs.Tests.Selenium.Extension.Settings.TestEnvironment
+    public class TestEnvironment : Extension.Settings.TestEnvironment
     {
         public static void Dev()
         {

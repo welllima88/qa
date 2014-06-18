@@ -3,10 +3,10 @@ using System.Diagnostics;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using Six.Scs.Tests.Selenium.Extension.Settings;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.Settings;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.Extension.WebDriver
+namespace Six.Scs.QA.Selenium.Extension.WebDriver
 {
     public static class TestDirector
     {

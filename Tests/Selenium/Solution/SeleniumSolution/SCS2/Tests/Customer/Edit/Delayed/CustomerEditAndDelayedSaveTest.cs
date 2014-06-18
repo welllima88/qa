@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
-using Six.Scs.Tests.Selenium.Tests.Menu;
+using Six.Scs.QA.Selenium.Extension;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Tests.Menu;
 
-namespace Six.Scs.Tests.Selenium.Tests.Customer.Edit.Delayed
+namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
 {
     [TestClass]
     public class CustomerEditAndDelayedSaveTest

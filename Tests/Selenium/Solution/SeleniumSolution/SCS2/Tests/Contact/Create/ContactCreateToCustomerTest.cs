@@ -1,13 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestData;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Person;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
-using Six.Scs.Tests.Selenium.Extension.Worklow;
+using Six.Scs.QA.Selenium.Extension.TestData;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Definitions;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.Worklow;
 
-namespace Six.Scs.Tests.Selenium.Tests.Contact.Create
+namespace Six.Scs.QA.Selenium.Tests.Contact.Create
 {
     [TestClass]
     public class ContactCreateToCustomerTest

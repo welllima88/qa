@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Massmuation;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Terminal.Duplicate;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.Tests.Selenium.Tests.Terminal.Duplicate
+namespace Six.Scs.QA.Selenium.Tests.Terminal.Duplicate
 {
     [TestClass]
     public class TerminalDuplicateWithDifferentPasswords

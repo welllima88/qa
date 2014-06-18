@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Tests.Selenium.Extension.TestData
+﻿namespace Six.Scs.QA.Selenium.Extension.TestData
 {
     public interface INaviElement
     {

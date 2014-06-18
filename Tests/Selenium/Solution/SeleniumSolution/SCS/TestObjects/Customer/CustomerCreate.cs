@@ -1,9 +1,9 @@
 ﻿using System;
 using OpenQA.Selenium;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Customer;
-using Six.Scs.Tests.Selenium.Extension.WebDriver.WebElements;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.Tests.Selenium.TestObjects.Customer
+namespace Six.Scs.QA.Selenium.TestObjects.Customer
 {
     public class CustomerCreate : WebObject
     {

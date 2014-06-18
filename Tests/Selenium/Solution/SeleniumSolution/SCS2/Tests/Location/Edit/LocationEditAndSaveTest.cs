@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.Tests.Selenium.Extension.TestData;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Common;
-using Six.Scs.Tests.Selenium.Extension.TestObjects.Definitions;
-using Six.Scs.Tests.Selenium.Extension.WebDriver;
-using Six.Scs.Tests.Selenium.Extension.Worklow;
+using Six.Scs.QA.Selenium.Extension.TestData;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Definitions;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.Worklow;
 
-namespace Six.Scs.Tests.Selenium.Tests.Location.Edit
+namespace Six.Scs.QA.Selenium.Tests.Location.Edit
 {
     [TestClass]
     public class LocationEditAndSaveTest

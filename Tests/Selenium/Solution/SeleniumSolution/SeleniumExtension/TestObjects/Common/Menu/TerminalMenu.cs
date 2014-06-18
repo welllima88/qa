@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Six.Scs.Tests.Selenium.Extension.TestObjects.Common.Menu
+namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     public class TerminalMenu : MenuObject
     {
