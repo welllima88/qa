@@ -1,4 +1,4 @@
-using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
@@ -12,11 +12,11 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
             _mandant = mandant;            
         }
 
-        public void Login()
+        public void LogOn()
         {
             // choose tenant and authentication/submit:
-            WesCertificateLoginPage.Mandant(_mandant).Click();
-            WesCertificateLoginPage.LoginButton.Click();
+            WesCertificateLogOnPage.Mandant(_mandant).Click();
+            WesCertificateLogOnPage.LoginButton.Click();
         }
     }
 }

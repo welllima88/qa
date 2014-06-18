@@ -1,6 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
+using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
@@ -30,20 +30,20 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
             _mandant = mandant;
         }
 
-        public void Login()
+        public void LogOn()
         {
-            new WesSecurIdLoginPage();
-            StringAssert.Matches(WesSecurIdLoginPage.HeadLine.Text, TestRegExpPatterns.WesHeadLine);
-            Assert.AreEqual("WES SecurID-Login", WesSecurIdLoginPage.InputLabel.Text);
+            new WesSecurIdLogOnPage();
+            StringAssert.Matches(WesSecurIdLogOnPage.HeadLine.Text, TestRegExpPatterns.WesHeadline);
+            Assert.AreEqual("WES SecurID-Login", WesSecurIdLogOnPage.InputLabel.Text);
 
-            WesSecurIdLoginPage.Mandant = _mandant;
-            WesSecurIdLoginPage.User = _userName;
-            WesSecurIdLoginPage.Password = _password;
-            WesSecurIdLoginPage.ConfirmButton.Click();
+            WesSecurIdLogOnPage.Mandant = _mandant;
+            WesSecurIdLogOnPage.User = _userName;
+            WesSecurIdLogOnPage.Password = _password;
+            WesSecurIdLogOnPage.ConfirmButton.Click();
 
-            Assert.AreEqual(WesSecurIdLoginPage.InputLabel.Text, "Login");
-            WesSecurIdLoginPage.SecurId = _securId;
-            WesSecurIdLoginPage.LoginButton.Click();
+            Assert.AreEqual(WesSecurIdLogOnPage.InputLabel.Text, "Login");
+            WesSecurIdLogOnPage.SecurId = _securId;
+            WesSecurIdLogOnPage.LoginButton.Click();
         }
     }
 }
