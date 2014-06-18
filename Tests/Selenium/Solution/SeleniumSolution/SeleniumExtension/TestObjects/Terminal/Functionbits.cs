@@ -60,7 +60,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
             get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingMailOrder']")); }
         }
 
-        public IWebElement Cancelation
+        public IWebElement Cancellation
         {
             get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Cancelation']")); }
         }
@@ -85,7 +85,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
             get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Recurring']")); }
         }
 
-        public IWebElement PurchaseWithCashBack
+        public IWebElement PurchaseWithCashback
         {
             get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_PurchaseWithCashBack']")); }
         }
