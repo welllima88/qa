@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Extension.Authentication.WebPages
+namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
 {
-    public class UacLoginPage : WebObject, IUacLoginPage
+    public class UacLogOnPage : WebObject, IUacLogOnPage
     {
         public string UserName
         {

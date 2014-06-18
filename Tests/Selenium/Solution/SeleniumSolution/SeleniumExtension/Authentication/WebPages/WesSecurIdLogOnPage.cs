@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Extension.Authentication.WebPages
+namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
 {
-    public class WesSecurIdLoginPage : WebObject
+    public class WesSecurIdLogOnPage : WebObject
     {
         public static IWebElement LoginButton
         {
