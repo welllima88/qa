@@ -15,12 +15,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Definitions
         IWebElement BookingPhoneOrder { get; }
         IWebElement BookingAuth { get; }
         IWebElement BookingMailOrder { get; }
-        IWebElement Cancelation { get; }
+        IWebElement Cancellation { get; }
         IWebElement Reservation { get; }
         IWebElement ReservationsAdjustment { get; }
         IWebElement ConfirmPhoneAut { get; }
         IWebElement Recurring { get; }
-        IWebElement PurchaseWithCashBack { get; }
+        IWebElement PurchaseWithCashback { get; }
         ReadOnlyCollection<IWebElement> FunctionBits { get; }
     }
 }
