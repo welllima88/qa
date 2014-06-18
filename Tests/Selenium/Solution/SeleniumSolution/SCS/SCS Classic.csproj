@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
-    <Folder Include="Tests\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
