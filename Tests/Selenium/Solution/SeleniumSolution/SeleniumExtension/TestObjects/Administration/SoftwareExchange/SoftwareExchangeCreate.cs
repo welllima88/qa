@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SoftwareExcha
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElement IncludeCancelled
+        public static IWebElement IncludeCanceled
         {
             get { return WebDriver.FindElement(By.CssSelector("#IncludeCancelled")); }
             set { throw new NotImplementedException(); }
