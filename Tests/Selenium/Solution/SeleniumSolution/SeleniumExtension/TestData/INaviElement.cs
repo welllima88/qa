@@ -2,6 +2,6 @@
 {
     public interface INaviElement
     {
-        string GetUrl();
+        string GetUrl { get; set; }
     }
 }
