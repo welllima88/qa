@@ -47,12 +47,5 @@ namespace Six.Scs.QA.Selenium.Tests.Lobby
         {
             Assert.IsTrue(Footer.Feedback.Displayed);
         }
-
-        [TestMethod]
-        [TestCategory("LobbyCheck")]
-        public void ScrollUp()
-        {
-            Assert.IsTrue(Footer.ScrollUp.Displayed);
-        }
     }
 }

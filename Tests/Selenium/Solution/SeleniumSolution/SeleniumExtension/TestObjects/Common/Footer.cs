@@ -19,14 +19,5 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
         {
             get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright)); }
         }
-
-        public static IWebElement ScrollUp
-        {
-            get
-            {
-                return
-                    WebDriver.FindElement(By.CssSelector(CommonRes.Footer_ScrollUp));
-            }
-        }
     }
 }
