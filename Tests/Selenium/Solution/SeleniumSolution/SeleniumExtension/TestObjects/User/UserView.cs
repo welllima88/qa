@@ -75,11 +75,6 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
             get { return WebDriver.FindElement(By.Id("edit")); }
         }
 
-        public static IWebElement ListUsersButton
-        {
-            get { return WebDriver.FindElement(By.Id("userList")); }
-        }
-
         public static IWebElement ReactivateButton
         {
             get { return WebDriver.FindElement(By.Id("reactivate")); }

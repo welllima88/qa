@@ -109,13 +109,6 @@ namespace Six.Scs.QA.Selenium.Tests.User
 
         [TestMethod]
         [TestCategory("SmokeTest")]
-        public void ListUsersButton()
-        {
-            Assert.IsTrue(UserView.ListUsersButton.Displayed);
-        }
-
-        [TestMethod]
-        [TestCategory("SmokeTest")]
         public void ReactivateButton()
         {
             Assert.IsTrue(UserView.ReactivateButton.Displayed);
