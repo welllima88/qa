@@ -68,6 +68,7 @@
     <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\UacLogOnPageOld.cs" />
+    <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
     <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
