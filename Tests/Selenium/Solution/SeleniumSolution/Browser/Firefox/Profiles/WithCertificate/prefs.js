@@ -120,7 +120,7 @@ user_pref("network.proxy.socks", "localhost");
 user_pref("network.proxy.socks_port", 3128);
 user_pref("network.proxy.ssl", "localhost");
 user_pref("network.proxy.ssl_port", 3128);
-user_pref("network.proxy.type", 1);
+user_pref("network.proxy.type", 0);
 user_pref("pdfjs.migrationVersion", 1);
 user_pref("pdfjs.previousHandler.alwaysAskBeforeHandling", true);
 user_pref("pdfjs.previousHandler.preferredAction", 4);
