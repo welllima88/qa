@@ -33,35 +33,38 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            var firefoxProfile = FirefoxProfile();
+            FirefoxProfile firefoxProfile = FirefoxProfile();
 
             if (string.IsNullOrEmpty(gridHub))
             {
                 // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
-
-                WebDriver = new FirefoxDriver(firefoxProfile);
                 // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
+                WebDriver = new FirefoxDriver(firefoxProfile);
 
-                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.WriteLine("using Selenium on local");
             }
             else
             {
-                DesiredCapabilities capability = DesiredCapabilities.Firefox();
-                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
-                // force german language, but doesn't work on grid:
-                // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
-                // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
-                // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
-                // capability.SetCapability("network.proxy.type", 0);
-                capability.SetCapability(CapabilityType.Version, "30.0.1");
-                // capability.SetCapability("six.machine", "syr"); // only for using grid on local
-
+                DesiredCapabilities capability = DesiredCapabilities(firefoxProfile);
                 WebDriver = new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20));
-                WebObject.WebDriver = new WebDriverAdapter(WebDriver);
 
                 Debug.WriteLine("using Selenium Grid");
             }
+            WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+        }
+
+        private static DesiredCapabilities DesiredCapabilities(FirefoxProfile firefoxProfile)
+        {
+            DesiredCapabilities capability = OpenQA.Selenium.Remote.DesiredCapabilities.Firefox();
+            capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
+            // force german language, but doesn't work on grid:
+            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
+            // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
+            // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
+            // capability.SetCapability("network.proxy.type", 0);
+            capability.SetCapability(CapabilityType.Version, "30.0.1");
+            // capability.SetCapability("six.machine", "syr"); // only for using grid on local
+            return capability;
         }
 
         private static FirefoxProfile FirefoxProfile()
