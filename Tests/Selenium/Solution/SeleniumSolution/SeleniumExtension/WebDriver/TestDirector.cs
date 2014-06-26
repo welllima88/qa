@@ -33,26 +33,28 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
+            var firefoxProfile = FirefoxProfile();
 
             if (string.IsNullOrEmpty(gridHub))
             {
-                var firefoxProfile = new FirefoxProfile(@"~\FireFox\Profiles\WithCertificate");
-                var firefoxBinary = new FirefoxBinary(@"~\Firefox\firefox.exe");
+                // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
 
-                WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
+                WebDriver = new FirefoxDriver(firefoxProfile);
+                // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
+
                 WebObject.WebDriver = new WebDriverAdapter(WebDriver);
                 Debug.WriteLine("using Selenium on local");
             }
             else
             {
                 DesiredCapabilities capability = DesiredCapabilities.Firefox();
-                // capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile);
+                capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
                 // force german language, but doesn't work on grid:
                 // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
                 // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
                 // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
                 // capability.SetCapability("network.proxy.type", 0);
-                // capability.SetCapability(CapabilityType.Version, "23.0.1");
+                capability.SetCapability(CapabilityType.Version, "30.0.1");
                 // capability.SetCapability("six.machine", "syr"); // only for using grid on local
 
                 WebDriver = new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20));
@@ -60,6 +62,13 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
 
                 Debug.WriteLine("using Selenium Grid");
             }
+        }
+
+        private static FirefoxProfile FirefoxProfile()
+        {
+            var firefoxProfile = new FirefoxProfile();
+            firefoxProfile.SetPreference("network.proxy.type", 0);
+            return firefoxProfile;
         }
 
         private static void ConfigureTimeouts()
