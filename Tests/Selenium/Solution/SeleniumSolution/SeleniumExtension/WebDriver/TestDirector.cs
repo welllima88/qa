@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
             // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
             // capability.SetCapability("network.proxy.type", 0);
-            capability.SetCapability(CapabilityType.Version, "30.0.1");
+            // capability.SetCapability(CapabilityType.Version, "30.0.1");
             // capability.SetCapability("six.machine", "syr"); // only for using grid on local
             return capability;
         }
