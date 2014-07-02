@@ -91,7 +91,6 @@
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
     <Compile Include="TestObjects\Menu\HeadMenu.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -106,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
+    <Folder Include="TestObjects\Terminal\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
