@@ -36,19 +36,19 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             throw new NotSelectableElementException(TagName);
         }
 
-        public TextAreaElement TextArea()
+        public TextArea TextArea()
         {
-            return new TextAreaElement(this);
+            return new TextArea(this);
         }
 
-        public TextBoxElement TextBox()
+        public TextField TextBox()
         {
-            return new TextBoxElement(this);
+            return new TextField(this);
         }
 
-        public PasswortTextBoxElement Password()
+        public PasswortTextField Password()
         {
-            return new PasswortTextBoxElement(this);
+            return new PasswortTextField(this);
         }
 
         public IWebElement FindElement(By by)

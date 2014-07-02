@@ -2,14 +2,14 @@
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
-    public class TextBoxElement
+    public class TextArea
     {
         private readonly IWebElement _webElement;
 
-        public TextBoxElement(IWebElement webElement)
+        public TextArea(IWebElement webElement)
         {
-            if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
-                throw new NotTextBoxElementException(webElement.TagName, webElement.GetCssValue("type"));
+            if (!(webElement.TagName.Equals("textarea")))
+                throw new NotTextAreaElementException(webElement.TagName);
             _webElement = webElement;
         }
 

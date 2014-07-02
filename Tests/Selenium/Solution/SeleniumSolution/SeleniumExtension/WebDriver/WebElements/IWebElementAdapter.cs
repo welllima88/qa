@@ -10,8 +10,8 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
     {
         CheckBoxElement CheckBox();
         SelectElement Selector();
-        TextBoxElement TextBox();
-        PasswortTextBoxElement Password();
-        TextAreaElement TextArea();
+        TextField TextBox();
+        PasswortTextField Password();
+        TextArea TextArea();
     }
 }
