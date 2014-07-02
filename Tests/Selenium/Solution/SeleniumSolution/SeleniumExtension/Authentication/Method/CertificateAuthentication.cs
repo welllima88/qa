@@ -14,7 +14,6 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 
         public void LogOn()
         {
-            // choose tenant and authentication/submit:
             WesCertificateLogOnPage.Mandant(_mandant).Click();
             WesCertificateLogOnPage.LoginButton.Click();
         }

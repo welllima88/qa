@@ -32,16 +32,11 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 
         public void LogOn()
         {
-            new WesSecurIdLogOnPage();
-            StringAssert.Matches(WesSecurIdLogOnPage.HeadLine.Text, TestRegExpPatterns.WesHeadline);
-            Assert.AreEqual("WES SecurID-Login", WesSecurIdLogOnPage.InputLabel.Text);
-
             WesSecurIdLogOnPage.Mandant = _mandant;
             WesSecurIdLogOnPage.User = _userName;
             WesSecurIdLogOnPage.Password = _password;
             WesSecurIdLogOnPage.ConfirmButton.Click();
 
-            Assert.AreEqual(WesSecurIdLogOnPage.InputLabel.Text, "Login");
             WesSecurIdLogOnPage.SecurId = _securId;
             WesSecurIdLogOnPage.LoginButton.Click();
         }
