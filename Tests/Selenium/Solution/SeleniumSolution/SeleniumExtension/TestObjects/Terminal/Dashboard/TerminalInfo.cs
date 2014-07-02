@@ -30,5 +30,10 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Status)).Text; }
         }
+
+        public static IWebElement Terminal
+        {
+            get { return WebDriver.FindElement(By.CssSelector()); }
+        }
     }
 }
