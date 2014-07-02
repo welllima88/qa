@@ -7,12 +7,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
     {
         public static string ActivatedUntil
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#activateTill")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#activateTill")).TextField().TypeText(value); }
         }
 
         public static string Parameter
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_Parameter")).TextField().TypeText(value); }
         }
 
         public static string Medium
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressIp"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
         }
@@ -40,7 +40,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_DestinationAddressPort"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
         }
@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberIsdn")).TextField().TypeText(value);
             }
         }
 
@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_PhoneNumberPstn")).TextField().TypeText(value);
             }
         }
 
@@ -65,7 +65,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TextField().TypeText(value);
             }
         }
 
@@ -73,7 +73,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TextField().TypeText(value);
             }
         }
 

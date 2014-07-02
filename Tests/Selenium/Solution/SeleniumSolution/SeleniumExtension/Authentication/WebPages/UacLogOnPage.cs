@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.WebPages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
         }

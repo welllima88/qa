@@ -132,7 +132,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Location
         public static string ReasonRemark
         {
             get { return WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).Text; }
-            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).TextField().TypeText(value); }
         }
     }
 }

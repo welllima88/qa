@@ -36,19 +36,19 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             throw new NotSelectableElementException(TagName);
         }
 
-        public TextArea TextArea()
+        public TextAreaElement TextArea()
         {
-            return new TextArea(this);
+            return new TextAreaElement(this);
         }
 
-        public TextField TextBox()
+        public TextFieldElement TextField()
         {
-            return new TextField(this);
+            return new TextFieldElement(this);
         }
 
-        public PasswortTextField Password()
+        public PasswortTextFieldElement Password()
         {
-            return new PasswortTextField(this);
+            return new PasswortTextFieldElement(this);
         }
 
         public IWebElement FindElement(By by)
@@ -131,9 +131,9 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             return new CheckBoxElement(this);
         }
 
-        public Button Button()
+        public ButtonElement Button()
         {
-            return new Button(this);
+            return new ButtonElement(this);
         }
     }
 }

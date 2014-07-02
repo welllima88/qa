@@ -21,22 +21,22 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string SimCardNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_CardNumber")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_CardNumber")).TextField().TypeText(value); }
         }
 
         public static string MobileNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_MobileNumber")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_MobileNumber")).TextField().TypeText(value); }
         }
 
         public static string Pin
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PIN")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PIN")).TextField().TypeText(value); }
         }
 
         public static string Puk
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TextField().TypeText(value); }
         }
 
         public static bool Status

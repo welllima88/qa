@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input[id$='_NotificationRemarks']"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
         }
@@ -33,7 +33,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
                 WebDriver.FindAdaptedElement(By.Id("ChangeNow")).CheckBox().Set(false);
                 // Example for setting a time value: 01.02.2014 13:30:41
                 WebDriver.FindAdaptedElement(By.Id("ChangeOn"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(changeTime.ToString(""));
             }
         }

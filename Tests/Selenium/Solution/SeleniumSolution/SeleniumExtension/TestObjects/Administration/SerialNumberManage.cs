@@ -16,14 +16,14 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration
 
         public static string StartField
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#StartIndex")).TextBox().Text(); }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#StartIndex")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#StartIndex")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#StartIndex")).TextField().TypeText(value); }
         }
 
         public static string LengthField
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextBox().Text(); }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextField().TypeText(value); }
         }
 
         public static string SerialNumbersField

@@ -11,11 +11,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField))
-                        .TextBox().Text();
+                        .TextField().Text();
             }
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).TextField().TypeText(value);
             }
         }
 

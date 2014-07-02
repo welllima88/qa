@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
     {
         public static string UserName
         {
-            set { WebDriver.FindAdaptedElement(By.Id("UserData_Username")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("UserData_Username")).TextField().TypeText(value); }
         }
 
         public static string Salutation
@@ -17,17 +17,17 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
 
         public static string FirstName
         {
-            set { WebDriver.FindAdaptedElement(By.Id("UserData_Firstname")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("UserData_Firstname")).TextField().TypeText(value); }
         }
 
         public static string Name
         {
-            set { WebDriver.FindAdaptedElement(By.Id("UserData_Name")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("UserData_Name")).TextField().TypeText(value); }
         }
 
         public static string Email
         {
-            set { WebDriver.FindAdaptedElement(By.Id("email")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("email")).TextField().TypeText(value); }
         }
 
         public static string Language
@@ -37,7 +37,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
 
         public static string SecurId
         {
-            set { WebDriver.FindAdaptedElement(By.Id("UserData_SecureId")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("UserData_SecureId")).TextField().TypeText(value); }
         }
 
         public static string WesMandant
@@ -47,7 +47,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.User
 
         public static string Comment
         {
-            set { WebDriver.FindAdaptedElement(By.Id("description")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("description")).TextField().TypeText(value); }
         }
         public static IWebElement SaveButton
         {

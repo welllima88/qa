@@ -71,12 +71,12 @@
     <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
-    <Compile Include="WebDriver\WebElements\TextArea.cs" />
+    <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextBoxElementException.cs" />
-    <Compile Include="WebDriver\WebElements\PasswortTextField.cs" />
+    <Compile Include="WebDriver\WebElements\PasswortTextFieldElement.cs" />
     <Compile Include="Settings\BuildTest.cs" />
-    <Compile Include="WebDriver\WebElements\Button.cs" />
-    <Compile Include="WebDriver\WebElements\TextField.cs" />
+    <Compile Include="WebDriver\WebElements\ButtonElement.cs" />
+    <Compile Include="WebDriver\WebElements\TextFieldElement.cs" />
     <Compile Include="WebDriver\WebElements\ISuggesterWebElement.cs" />
     <Compile Include="WebDriver\IWebDriverAdapter.cs" />
     <Compile Include="WebDriver\WebElements\IWebElementAdapter.cs" />

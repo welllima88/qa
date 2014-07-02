@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpPassword']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
 
                 return passwordsAsString;
             }
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpReferenceTerminalId']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
 
                 return passwordsAsString;
             }
@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='_inpLocationId']"));
                 var passwordsAsString = new List<string>(5);
 
-                passwordsAsString.AddRange(passwords.Select(password => password.TextBox().Text()));
+                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
 
                 return passwordsAsString;
             }

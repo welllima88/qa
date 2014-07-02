@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
     {
         public static string ArticleFilter
         {
-            set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TextField().TypeText(value); }
         }
 
         public static List<string> FilteredArtikelList

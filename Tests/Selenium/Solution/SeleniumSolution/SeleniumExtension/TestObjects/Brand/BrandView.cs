@@ -53,7 +53,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Brand
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     "#ctl00_bodyContentPlaceHolder_acquirerUserControl_acquirerUserControlPropertyContractNumber_valueText"))
-                .TextBox()
+                .TextField()
                 .TypeText(vpNo);
         }
 

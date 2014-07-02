@@ -19,14 +19,14 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                        .TextBox().Text();
+                        .TextField().Text();
             }
             set
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDeliveryDate_dtpDeliveryDate"))
-                    .TextBox().TypeText(value);
+                    .TextField().TypeText(value);
             }
         }
 
@@ -48,7 +48,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyInstallType_inpInstallTypeRemark"))
-                    .TextBox().TypeText(value);
+                    .TextField().TypeText(value);
             }
         }
 
@@ -81,7 +81,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyPosInterface_inpECRText"))
-                    .TextBox().TypeText(value);
+                    .TextField().TypeText(value);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                    .TextBox().TypeText(value);
+                    .TextField().TypeText(value);
             }
 
             get
@@ -115,7 +115,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyLine1_inpReceiptHeader"))
-                        .TextBox().Text();
+                        .TextField().Text();
             }
         }
 

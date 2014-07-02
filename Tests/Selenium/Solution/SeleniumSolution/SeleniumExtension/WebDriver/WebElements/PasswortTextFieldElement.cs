@@ -2,9 +2,9 @@
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
-    public class PasswortTextField : TextField
+    public class PasswortTextFieldElement : TextFieldElement
     {
-        public PasswortTextField(IWebElement webElement) : base(webElement)
+        public PasswortTextFieldElement(IWebElement webElement) : base(webElement)
         {
         }
 

@@ -18,19 +18,19 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
 
         public static string CustomerName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Name")).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Name")).TextBox().Text(); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Name")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Name")).TextField().Text(); }
         }
 
         public static string SapNumber
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_SapNumber")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_SapNumber")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_SapNumber")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_SapNumber")).TextField().Text();
             }
         }
 
@@ -38,11 +38,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_CompanyName")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_CompanyName")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_CompanyName")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_CompanyName")).TextField().Text();
             }
         }
 
@@ -60,7 +60,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Ep2MerchantId")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Ep2MerchantId")).TextField().Text();
             }
         }
 
@@ -86,12 +86,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Street"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Street")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Street")).TextField().Text();
             }
         }
 
@@ -133,11 +133,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_ZIP")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_ZIP")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_ZIP")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_ZIP")).TextField().Text();
             }
         }
 
@@ -145,11 +145,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_City")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_City")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_City")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_City")).TextField().Text();
             }
         }
 
@@ -158,13 +158,13 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Addition"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Addition")).TextBox().Text();
+                    WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Addition")).TextField().Text();
             }
         }
 
@@ -172,11 +172,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_PO")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_PO")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_PO")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_PO")).TextField().Text();
             }
         }
 
@@ -185,12 +185,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Region"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Region")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Region")).TextField().Text();
             }
         }
 
@@ -199,14 +199,14 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Telephone"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Telephone"))
-                        .TextBox()
+                        .TextField()
                         .Text();
             }
         }
@@ -216,12 +216,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Mobile"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Mobile")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Mobile")).TextField().Text();
             }
         }
 
@@ -229,11 +229,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Fax")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Fax")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Fax")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Fax")).TextField().Text();
             }
         }
 
@@ -242,12 +242,12 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Email"))
-                    .TextBox()
+                    .TextField()
                     .TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Email")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Email")).TextField().Text();
             }
         }
 
@@ -255,11 +255,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Customer
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Web")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Web")).TextField().TypeText(value);
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Web")).TextBox().Text();
+                return WebDriver.FindAdaptedElement(By.CssSelector("input#CustomerData_Address_Web")).TextField().Text();
             }
         }
     }

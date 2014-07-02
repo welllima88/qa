@@ -21,25 +21,25 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string SimCardNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_CardNumber")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_CardNumber")).TextField().TypeText(value); }
         }
 
         public static string MobileNumber
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_MobileNumber")).TextBox().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_MobileNumber")).TextField().TypeText(value);
             }
         }
 
         public static string Pin
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PIN")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PIN")).TextField().TypeText(value); }
         }
 
         public static string Puk
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PUK")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_PUK")).TextField().TypeText(value); }
         }
 
         public static bool Status
@@ -53,7 +53,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SimCard
 
         public static string TerminalId
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#TerminalId")).TextBox().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#TerminalId")).TextField().TypeText(value); }
         }
 
         public static string Region
