@@ -69,6 +69,7 @@
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\UacLogOnPageOld.cs" />
     <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
+    <Compile Include="TestObjects\Terminal\TerminalFixInfo.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
     <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
@@ -233,7 +234,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestObjects\Terminal\Dashboard\TerminFixInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="TestObjects\Terminal\Dashboard\SalesContractPortlet.cs" />
