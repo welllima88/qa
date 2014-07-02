@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -109,43 +108,9 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             get { return _webDriver.WindowHandles; }
         }
 
-        /// <summary>
-        ///     Wait for an element found by locator is displayed within the default timeout
-        /// </summary>
-        /// <param name="locator">locator for element for which it should be wait</param>
-        /// <returns>the found element (otherwise exception)</returns>
-        public IWebElement WaitForElementPresent(By locator)
-        {
-            return WaitForElementPresent(locator, 2);
-        }
-
         public IWebElement FindElement(By by)
         {
             return _webDriver.FindElement(by);
-        }
-
-        /// <summary>
-        ///     Wait for an element found by locator is displayed within the given timeout
-        /// </summary>
-        /// <param name="locator">locator for element for which it should be wait</param>
-        /// <param name="timeout">timeout [s] after how many seconds the wait shoul be canceled</param>
-        /// <returns>the found element (otherwise exception)</returns>
-        public IWebElement WaitForElementPresent(By locator, int timeout)
-        {
-            const int interval = 100;
-            int retry = timeout*1000/interval; //[s]->[ms]
-
-            do
-            {
-                Thread.Sleep(interval);
-                IWebElement e = FindElement(locator);
-                if (e.Displayed)
-                {
-                    return e;
-                }
-                retry--;
-            } while (retry > 0);
-            throw new NoSuchElementException(locator.ToString());
         }
 
         /// <summary>
