@@ -46,7 +46,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             return new TextFieldElement(this);
         }
 
-        public PasswortTextFieldElement Password()
+        public PasswortTextFieldElement PasswordTextField()
         {
             return new PasswortTextFieldElement(this);
         }
