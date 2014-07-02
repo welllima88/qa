@@ -54,8 +54,8 @@ namespace Six.Scs.QA.Selenium.TestObjects.Customer
 
         public static string Ep2MerchantId
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).TextBox().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CustomerRes.Ep2MerchantId)).GetCssValue("value"); }
+            set { WebDriver.FindAdaptedElement(By.Id("CustomerData_Ep2MerchantId")).TextBox().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Ep2MerchantId")).GetCssValue("value"); }
         }
 
         public static string Zip

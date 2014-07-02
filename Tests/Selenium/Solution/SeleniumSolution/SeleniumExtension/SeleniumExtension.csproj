@@ -160,19 +160,9 @@
     <Compile Include="TestObjects\Common\RecentElements.cs" />
     <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
     <Compile Include="TestObjects\Common\SiteContent.cs" />
-    <Compile Include="TestObjects\Customer\CustomerEditRes.Designer.cs">
-      <DependentUpon>CustomerEditRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
     <Compile Include="TestObjects\Customer\CustomerDeactivation.cs" />
     <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
-    <Compile Include="TestObjects\Customer\CustomerRes.Designer.cs">
-      <DependentUpon>CustomerRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="TestObjects\Customer\CustomerView.cs" />
     <Compile Include="TestObjects\Definitions\AdressData.cs" />
     <Compile Include="TestObjects\Definitions\AgencyData.cs" />
@@ -303,16 +293,6 @@
     <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Customer\CustomerEditRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>CustomerEditRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Customer\CustomerRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>CustomerRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TestObjects\Location\LocationRes.resx">
