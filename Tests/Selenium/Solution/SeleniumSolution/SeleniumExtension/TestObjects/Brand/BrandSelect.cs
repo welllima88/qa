@@ -44,6 +44,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Brand
 
         public static void AcquirerList(string acquirerName)
         {
+            // css=a[title='Acquirer-Id: SIX Payment Services'] ins
             var acquirers = new Collection<Acquirer>();
         }
 
