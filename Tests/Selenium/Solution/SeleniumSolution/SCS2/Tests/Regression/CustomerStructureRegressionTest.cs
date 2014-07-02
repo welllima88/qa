@@ -100,7 +100,7 @@ namespace Six.Scs.QA.Selenium.Tests.Regression
             TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
             TerminalConfigDetailsCreate.SaveButton.Click();
 
-            TerminalMenu.Terminal.Click();
+            TerminalInfo.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
 
             LobbyService.OpenLatestElement();
@@ -135,7 +135,7 @@ namespace Six.Scs.QA.Selenium.Tests.Regression
             TerminalConfigCreate.SaveButton.Click();
 
             Assert.IsTrue(BrandSelect.BrandTree().Displayed);
-            TerminalMenu.Terminal.Click();
+            TerminalInfo.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
 
             LobbyService.OpenLatestElement();
