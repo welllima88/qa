@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
     public class UacAuthentication : WebObject, IAuthentication
     {
-        private readonly string _password = "six_scs_auto";
+        private readonly string _password;
         private readonly IUacLogOnPage _uacLogOnPage;
-        private readonly string _userName = "six_scs_auto_PW";
+        private readonly string _userName;
 
         public UacAuthentication(IUacLogOnPage logOnPage, string userName, string password)
         {
