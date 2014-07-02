@@ -75,6 +75,7 @@
     <Compile Include="WebDriver\WebElements\NotTextBoxElementException.cs" />
     <Compile Include="WebDriver\WebElements\PasswortTextField.cs" />
     <Compile Include="Settings\BuildTest.cs" />
+    <Compile Include="WebDriver\WebElements\Button.cs" />
     <Compile Include="WebDriver\WebElements\TextField.cs" />
     <Compile Include="WebDriver\WebElements\ISuggesterWebElement.cs" />
     <Compile Include="WebDriver\IWebDriverAdapter.cs" />
