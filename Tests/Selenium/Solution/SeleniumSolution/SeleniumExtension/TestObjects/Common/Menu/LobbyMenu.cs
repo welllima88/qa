@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu
 {
     /// <summary>
     ///     css Locator have problems with menu so use xpath until resolved the reason...
     /// </summary>
-    public class LobbyMenu : MenuObject
+    public class LobbyMenu : WebObject
     {        
         public static IWebElement Lobby
         {

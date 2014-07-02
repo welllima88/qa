@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public By Locator { get; set; }
 
         /// <summary>
-        ///     provides a public WebDriver reference for global use
+        ///     provides a public WebDriver reference for global use (should be set initially and externally)
         /// </summary>
         public static IWebDriverAdapter WebDriver { get; set; }
     }

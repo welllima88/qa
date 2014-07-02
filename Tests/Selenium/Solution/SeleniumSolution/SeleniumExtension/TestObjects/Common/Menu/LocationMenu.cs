@@ -1,8 +1,9 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu
 {
-    public class LocationMenu : MenuObject
+    public class LocationMenu : WebObject
     {
         public static IWebElement Location
         {

@@ -147,7 +147,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TestObjects\Common\Menu\MenuObject.cs" />
     <Compile Include="TestObjects\Common\Menu\SimCardMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TerminalAnalysisMenu.cs" />
     <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
