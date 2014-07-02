@@ -98,17 +98,17 @@ namespace Six.Scs.QA.Selenium.Support.AddService
         private static bool CheckServiceIsSet(string serviceName, string templateName)
         {
             bool cond1 = Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text,
-                                       "^[\\s\\S]*" + serviceName + "[\\s\\S]*$");
+                "^[\\s\\S]*" + serviceName + "[\\s\\S]*$");
             bool cond2 =
                 Regex.IsMatch(_driver.FindElement(By.CssSelector("BODY")).Text,
-                              "^[\\s\\S]*" + templateName + "[\\s\\S]*$");
+                    "^[\\s\\S]*" + templateName + "[\\s\\S]*$");
             return cond1 || cond2;
         }
 
         private static void CheckMandant(string mandant)
         {
             Assert.IsTrue(Regex.IsMatch(_driver.FindElement(By.XPath("//tr[9]/td[2]/font/b")).Text, mandant),
-                          "Mandant is not TKCPOS");
+                "Mandant is not TKCPOS");
         }
 
         private static void CheckUser(string userId)

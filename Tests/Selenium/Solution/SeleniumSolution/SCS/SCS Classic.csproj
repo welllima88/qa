@@ -103,14 +103,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="TestObjects\Terminal\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
