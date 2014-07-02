@@ -6,8 +6,7 @@ using OpenQA.Selenium.Support.UI;
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
     /// <summary>
-    ///     This class adds selenium features which we often need in Zebra and used in common instead of selenium
-    ///     theWebElement. This class extends
+    ///     This class wraps WebElements from selenium and adds features which are commonly needed.
     /// </summary>
     public class WebElementAdapter : IWebElementAdapter
     {
