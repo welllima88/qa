@@ -130,5 +130,10 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         {
             return new CheckBoxElement(this);
         }
+
+        public Button Button()
+        {
+            return new Button(this);
+        }
     }
 }
