@@ -68,6 +68,9 @@
     <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\UacLogOnPageOld.cs" />
+    <Compile Include="Environment\ScsClassicEnvironment.cs" />
+    <Compile Include="Environment\SeleniumGridServer.cs" />
+    <Compile Include="Environment\ScsEnvironment.cs" />
     <Compile Include="TestData\Factory\ContractFactory.cs" />
     <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
     <Compile Include="TestObjects\Terminal\TerminalFixInfo.cs" />
@@ -98,10 +101,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Settings\SeleniumConfig.cs" />
+    <Compile Include="Environment\SeleniumConfig.cs" />
     <Compile Include="WebDriver\TestDirector.cs" />
-    <Compile Include="Settings\TestEnvironment.cs" />
-    <Compile Include="Settings\Timeouts.cs" />
+    <Compile Include="Environment\TestEnvironment.cs" />
+    <Compile Include="Environment\Timeouts.cs" />
     <Compile Include="TestData\Factory\AdressFactory.cs" />
     <Compile Include="TestData\Factory\ContactFactory.cs" />
     <Compile Include="TestData\Factory\ContactPersonFactory.cs" />
@@ -276,7 +279,9 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Settings\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\ScsRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
