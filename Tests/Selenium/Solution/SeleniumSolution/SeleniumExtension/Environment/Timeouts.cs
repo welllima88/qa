@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Extension.Settings
+namespace Six.Scs.QA.Selenium.Extension.Environment
 {
     public class Timeouts
     {
