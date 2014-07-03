@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Selenium.Extension.TestObjects.Definitions
+namespace Six.Scs.QA.Selenium.Extension.TestData.ValueObjects
 {
     public interface IFunctionbits
     {

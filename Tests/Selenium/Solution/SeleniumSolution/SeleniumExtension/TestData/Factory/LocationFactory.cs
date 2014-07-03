@@ -1,6 +1,6 @@
-﻿using Six.Scs.QA.Selenium.Extension.TestObjects.Definitions;
+﻿using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 
-namespace Six.Scs.QA.Selenium.Extension.TestData
+namespace Six.Scs.QA.Selenium.Extension.TestData.Factory
 {
     public class LocationFactory
     {
