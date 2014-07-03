@@ -11,7 +11,7 @@
 
 using System;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
@@ -20,62 +20,17 @@ namespace Six.Scs.QA.Selenium.Support.AddService
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class AddServiceToUsers
     {
-        private static IWebDriverAdapter _driver;
-        public TestContext TestContext { get; set; }
-
-        [ClassInitialize]
+        [SetUp]
         public static void Prepare(TestContext testContext)
         {
             _driver = new WebDriverAdapter(TestDirector.WebDriver);
         }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-            @"C:\Users\siegmund\Desktop\ProdSystemUsers.csv",
-            "ProdSystemUsers#csv", DataAccessMethod.Sequential)]
-        [TestMethod]
-        public void AddScs2ServiceToUsers()
-        {
-            string userId = Convert.ToString(TestContext.DataRow[0]);
-
-            OpenUserPage(userId);
-
-            CheckUser(userId);
-            CheckMandant("TKCPOS");
-            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
-
-            AddService("SCS2.0", "SCS2 Dummy");
-
-            CheckUser(userId);
-            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
-        }
-
-        [DataSource("System.Data.Odbc",
-            @"Dsn=Excel Files;dbq=C:\Users\siegmund\Desktop\users in Prod which use analyzer.xlsx", "UsersProd$",
-            DataAccessMethod.Sequential)]
-        [TestMethod]
-        public void RemoveAndAddAnalyzerToRepairWesState()
-        {
-            string login = Convert.ToString(TestContext.DataRow["Login_Id"]);
-
-            Console.Out.WriteLine("- User {0} begin", login);
-            try
-            {
-                RemoveService(login, "18");
-            }
-            catch (UserNotFoundException)
-            {
-                Console.Error.WriteLine("no valid user found: {0}", login);
-            }
-
-            AddService("Analyzer", "Service Benutzer");
-
-            CheckUser(login);
-            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
-            Console.Out.WriteLine("+ User {0} finished", login);
-        }
+        private static IWebDriverAdapter _driver;
+        public TestContext TestContext { get; set; }
 
         public static void RemoveService(string userId, string serviceId)
         {
@@ -140,12 +95,9 @@ namespace Six.Scs.QA.Selenium.Support.AddService
             }
         }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-            "C:\\Users\\siegmund\\Desktop\\ProdSystemUsers.csv",
-            "ProdSystemUsers#csv", DataAccessMethod.Sequential), TestMethod]
         public void CheckScs2ServiceToUsers()
         {
-            string userId = Convert.ToString(TestContext.DataRow[0]);
+            string userId = ""; // FOR ALL 
             OpenUserPage(userId);
 
             CheckUser(userId);
@@ -158,6 +110,45 @@ namespace Six.Scs.QA.Selenium.Support.AddService
             _driver.Navigate().GoToUrl(TestDirector.BaseUrl +
                                        "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
             _driver.SwitchTo().Frame("main");
+        }
+
+        [Test]
+        public void AddScs2ServiceToUsers()
+        {
+            string userId = ""; //FOR ALL?
+
+            OpenUserPage(userId);
+
+            CheckUser(userId);
+            CheckMandant("TKCPOS");
+            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
+
+            AddService("SCS2.0", "SCS2 Dummy");
+
+            CheckUser(userId);
+            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
+        }
+
+        [Test]
+        public void RemoveAndAddAnalyzerToRepairWesState()
+        {
+            string login = ""; // FOR ALL
+
+            Console.Out.WriteLine("- User {0} begin", login);
+            try
+            {
+                RemoveService(login, "18");
+            }
+            catch (UserNotFoundException)
+            {
+                Console.Error.WriteLine("no valid user found: {0}", login);
+            }
+
+            AddService("Analyzer", "Service Benutzer");
+
+            CheckUser(login);
+            Assert.IsTrue(CheckServiceIsSet("Analyzer", "Service Benutzer"));
+            Console.Out.WriteLine("+ User {0} finished", login);
         }
     }
 

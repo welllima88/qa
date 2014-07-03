@@ -1,21 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Settings;
 
 namespace Six.Scs.QA.Selenium
 {
-    [TestClass]
+    [SetUpFixture]
     public static class TestLauncher
     {
-        [AssemblyInitialize]
+        [SetUp]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            ScsClassicTestEnvironment.Dev();
+            ScsClassicEnvironment.Dev();
             TestDirector.PrepareBrowser();
             TestDirector.LogOn();
         }
 
-        [AssemblyCleanup]
+        [TearDown]
         public static void StopTestDirector()
         {
             TestDirector.LogOff();
