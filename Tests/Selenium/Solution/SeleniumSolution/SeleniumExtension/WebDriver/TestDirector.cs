@@ -3,7 +3,7 @@ using System.Diagnostics;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using Six.Scs.QA.Selenium.Extension.Settings;
+using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver
