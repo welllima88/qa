@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Extension.Worklow;
@@ -14,8 +15,8 @@ namespace Six.Scs.QA.Selenium
         [AssemblyInitialize]
         public static void LaunchTestDirector(TestContext testContext)
         {
-            TestEnvironment.Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
+            ScsEnvironment.Dev();
+            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.LogOn();
             LobbyService.ChooseLanguage(Languages.German);
         }
