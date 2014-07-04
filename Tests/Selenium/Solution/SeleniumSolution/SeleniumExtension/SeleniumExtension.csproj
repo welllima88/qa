@@ -75,6 +75,7 @@
     <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
     <Compile Include="TestObjects\Common\HeadMenu.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
+    <Compile Include="TestObjects\Massmuation\MassmutationProgress.cs" />
     <Compile Include="TestObjects\Terminal\TerminalFixInfo.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
