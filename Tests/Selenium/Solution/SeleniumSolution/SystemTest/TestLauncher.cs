@@ -10,10 +10,10 @@ namespace Six.Scs.QA.Selenium
     ///     The TestLauncher prepares Browser with TestDirector and keeps this
     /// </summary>
     [SetUpFixture]
-    public static class TestLauncher
+    public class TestLauncher
     {
         [SetUp]
-        public static void LaunchTestDirector(TestContext testContext)
+        public void LaunchTestDirector()
         {
             ScsEnvironment.Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Local);
@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [TearDown]
-        public static void StopTestDirector()
+        public void StopTestDirector()
         {
             TestDirector.LogOff();
             TestDirector.ShutdownBrowser();

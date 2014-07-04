@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Selenium
     public static class TestLauncher
     {
         [SetUp]
-        public static void LaunchTestDirector(TestContext testContext)
+        public static void LaunchTestDirector()
         {
             ScsClassicEnvironment.Dev();
             TestDirector.PrepareBrowser();
