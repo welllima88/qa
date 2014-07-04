@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestData;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Brand;
@@ -7,10 +6,12 @@ using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Infotext;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Location;
+using Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Extension.Worklow;
 
 namespace Six.Scs.QA.Selenium.Tests.Regression
@@ -131,7 +132,7 @@ namespace Six.Scs.QA.Selenium.Tests.Regression
             TerminalChooser.ArticleFilter = "1550";
             TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
             TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
-            
+
             TerminalConfigCreate.ContinueButton.Click();
             TerminalConfigCreate.SaveButton.Click();
 
@@ -278,7 +279,34 @@ namespace Six.Scs.QA.Selenium.Tests.Regression
             CreateUser();
 
             OpenTerminalOnLocation();
+            DuplicateTerminal();
+        }
+
+        private static void DuplicateTerminal()
+        {
             TerminalService.Duplicate();
+
+            TerminalMassValidation.ExecuteButton.Click();
+
+            while (!MassmutationProgress.HasFinished())
+            {
+                TestDirector.WebDriver.Navigate().Refresh();
+            }
+            Assert.AreEqual("0", MassmutationProgress.Failed);
+
+            // MassmutationProgress.DateTime;
+            Assert.AreEqual("CreateTerminals", MassmutationProgress.Type);
+
+            Assert.AreEqual(2, MassmutationProgress.TerminalList.Count);
+            /*
+            Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
+            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
+            Assert.AreEqual("grau", BusinessViewpointPortlet.Color);
+            Assert.AreEqual(_location.Contact.Language, BusinessViewpointPortlet.TerminalLanguage);
+
+            Assert.AreEqual(_location.CompanyName, LocationInfo.CompanyName);
+             */
         }
 
         private static void OpenTerminalOnLocation()
