@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium
         private static MpdData _mpd;
         private static UserData _user;
 
-        /* [ClassCleanup]
+        /* [TestFixtureTearDown]
         public static void CleanupCustomerStructure()
         {
             DeleteCustomer();
