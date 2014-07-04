@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -65,19 +66,19 @@ namespace Six.Scs.QA.Selenium.Tests.Location.Create
         [TestMethod]
         public void SbsDebitNumber()
         {
-            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(LocationView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         public void SbsAdressNumber()
         {
-            StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(LocationView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
         [TestMethod]
         public void Ep2MerchantIdFormat()
         {
-            StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(LocationView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
         [TestMethod]

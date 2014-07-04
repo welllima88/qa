@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
@@ -81,7 +82,7 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Create
             Assert.AreEqual(supportContract,
                 CustomerView.SupportContract);
 
-            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
             Assert.AreEqual(companyName, CustomerView.CompanyName);
             Assert.AreEqual(po, CustomerView.Po);

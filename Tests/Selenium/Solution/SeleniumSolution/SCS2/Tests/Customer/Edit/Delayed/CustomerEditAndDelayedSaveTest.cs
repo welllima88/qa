@@ -28,9 +28,9 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
 
             ReadPreState();
 
-            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
             CustomerMenu.CustomerEdit.Click();
 
@@ -106,9 +106,9 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit.Delayed
             Assert.AreEqual("Euro", CustomerView.SbsCurrency);
             Assert.AreEqual("5440", CustomerView.SapNumber);
 
-            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
             Assert.AreEqual("SYR Sele Firma A", CustomerView.CompanyName);
             Assert.AreEqual("PFO1", CustomerView.Po);

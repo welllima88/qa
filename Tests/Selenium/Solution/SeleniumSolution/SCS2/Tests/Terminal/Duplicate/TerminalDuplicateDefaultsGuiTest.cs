@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -35,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Tests.Terminal.Duplicate
         [TestMethod]
         public void Location()
         {
-            StringAssert.Matches(TerminalDuplicate.Location, TestRegExpPatterns.NotEmpty);
+            StringAssert.Matches(TerminalDuplicate.Location, new Regex(TestRegExpPatterns.NotEmpty));
         }
 
         [TestMethod]

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
@@ -65,7 +66,7 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
         [TestMethod]
         public void CustomerNumberFormat()
         {
-            StringAssert.Matches(_customerNumber, TestRegExpPatterns.CustomerNo);
+            StringAssert.Matches(_customerNumber, new Regex(TestRegExpPatterns.CustomerNo));
         }
 
         [TestMethod]
@@ -143,19 +144,19 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Edit
         [TestMethod]
         public void SbsDebitorNo()
         {
-            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         public void SbsAdressNoOpt()
         {
-            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
         [TestMethod]
         public void Ep2MerchantIdFormat()
         {
-            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
         [TestMethod]

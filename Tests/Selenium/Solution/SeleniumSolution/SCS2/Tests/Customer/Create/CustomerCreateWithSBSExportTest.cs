@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Text.RegularExpressions;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.TestData;
@@ -64,7 +65,7 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Create
             {
                 try
                 {
-                    StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
+                    StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
@@ -82,14 +83,14 @@ namespace Six.Scs.QA.Selenium.Tests.Customer.Create
         [TestCategory("SBS"), TestCategory("Customer")]
         public void SbsDebitorNumberCorrectFormat()
         {
-            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         [TestCategory("SBS"), TestCategory("Customer")]
         public void SbsAdressNumberCorrectFormat()
         {
-            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
+            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
     }
 }

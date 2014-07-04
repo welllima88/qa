@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension;
@@ -35,13 +36,13 @@ namespace Six.Scs.QA.Selenium.Tests.Location.Create
 
             Assert.AreEqual("SYR SBS Standort A", LocationView.CompanyName);
 
-            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
+            StringAssert.Matches(LocationView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
             int retry = 10;
             do
             {
                 try
                 {
-                    StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNo);
+                    StringAssert.Matches(LocationView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
