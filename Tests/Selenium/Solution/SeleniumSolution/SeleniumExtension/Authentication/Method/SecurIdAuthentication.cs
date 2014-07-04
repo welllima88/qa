@@ -1,5 +1,4 @@
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension.Authentication.WebPages;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
