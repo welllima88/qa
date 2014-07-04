@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
-                        "tbody tr td#content table.dataTable tbody tr td a[href*='/TerminalDashboard?TerminalId=']"));
+                        "tbody tr td#content table tbody tr td a[href*='/TerminalDashboard?TerminalId=']"));
         }
     }
 }
