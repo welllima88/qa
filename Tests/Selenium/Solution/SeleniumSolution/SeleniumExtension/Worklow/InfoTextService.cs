@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestData;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Infotext;
 
@@ -9,7 +8,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
     public static class InfoTextService
     {
         /// <summary>
-        /// This implies, that the create infotext button is displayed
+        ///     This implies, that the create infotext button is displayed
         /// </summary>
         /// <param name="infotext">Substring to create an Infotext</param>
         public static void Create(string infotext)
