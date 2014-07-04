@@ -54,5 +54,10 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
                 return passwordsAsString;
             }
         }
+
+        public static IWebElement ExecuteButton
+        {
+            get { return WebDriver.FindElement(By.CssSelector("tbody input#ctl00_bodyContentPlaceHolder_btnProceed")); }
+        }
     }
 }
