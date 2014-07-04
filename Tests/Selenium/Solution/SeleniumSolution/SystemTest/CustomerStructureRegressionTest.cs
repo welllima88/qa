@@ -161,7 +161,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void ContactToCustomerIsCreated()
         {
             SearchService.CustomerCanBeFoundByCustomerNumber(_customer.CustomerNumber);
@@ -174,7 +174,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void ContactToLocationIsCreated()
         {
             SearchService.LocationCanBeFoundByLocationName(_location.CompanyName);
@@ -186,7 +186,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void TerminalToLocationIsCreated()
         {
             SearchService.TerminalCanBeFoundById(_terminalIdLocation);
@@ -196,7 +196,7 @@ namespace Six.Scs.QA.Selenium
 
         [Test]
         [Ignore]
-        // [Category("RegressionA")]
+        // [Category("Regression")]
         public void BrandsOnTerminalAreCreated()
         {
             SearchService.TerminalCanBeFoundById(_terminalIdLocation);
@@ -208,7 +208,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void TerminalToCustomerIsCreated()
         {
             SearchService.CustomerCanBeFoundByCustomerNumber(_customer.CustomerNumber);
@@ -221,7 +221,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void CustomerIsCreated()
         {
             SearchService.CustomerCanBeFoundByCustomerName(_customer.CustomerName);
@@ -229,7 +229,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void UserIsCreated()
         {
             SearchService.UserCanBeFoundByCustomerName(_user.UserName);
@@ -237,7 +237,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [Test]
-        [Category("RegressionA")]
+        [Category("Regression")]
         public void LocationIsCreated()
         {
             SearchService.LocationCanBeFoundByLocationName(_location.CompanyName);
@@ -246,7 +246,7 @@ namespace Six.Scs.QA.Selenium
         }
 
         [TestFixtureSetUp]
-        public static void ExecuteRegressiontest(TestContext testContext)
+        public static void ExecuteRegressiontest()
         {
             CreateCustomer();
             CreateContactOnCustomer();
