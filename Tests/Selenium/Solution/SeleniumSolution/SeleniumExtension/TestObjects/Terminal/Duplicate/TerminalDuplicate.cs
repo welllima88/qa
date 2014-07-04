@@ -39,5 +39,29 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
         {
             get { return WebDriver.FindAdaptedElement(By.Id("duplicate")); }
         }
+
+        public static string DeliveryDate
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("deliveryDate")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("deliveryDate")).TextField().Text(); }
+        }
+
+        public static string InstallationType
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("InstallTypeId")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallTypeId")).TextField().Text(); }
+        }
+
+        public static string InformationText
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("InfoText")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InfoText")).TextField().Text(); }
+        }
+
+        public static bool MessageForAcquirers
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().Set(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().IsChecked(); }
+        }
     }
 }
