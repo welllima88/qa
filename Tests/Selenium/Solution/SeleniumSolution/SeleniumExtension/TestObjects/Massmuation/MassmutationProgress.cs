@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -23,6 +24,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
         public static string Total
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_All")).Text; }
+        }
+
+        public static ReadOnlyCollection<IWebElementAdapter> TerminalList
+        {
+            get { return WebDriver.FindAdaptedElements(By.Id("Massmutation_All")); }
         }
 
         public static bool HasFinished()
