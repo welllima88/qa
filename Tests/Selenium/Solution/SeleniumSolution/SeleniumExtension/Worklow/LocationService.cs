@@ -1,5 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestData;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
@@ -84,9 +83,9 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
         public static void Check(LocationData l)
         {
             Assert.AreEqual(l.CompanyName, LocationView.CompanyName);
-            StringAssert.Matches(LocationView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(LocationView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(LocationView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, LocationView.SbsDebitNumber);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, LocationView.SbsAdressNumber);
+            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, LocationView.Ep2MerchantId);
             Assert.AreEqual(l.Adress.StreetNo, LocationView.StreetNo);
             Assert.AreEqual(l.Adress.Po, LocationView.Po);
             Assert.AreEqual(l.Adress.Zip, LocationView.Zip);

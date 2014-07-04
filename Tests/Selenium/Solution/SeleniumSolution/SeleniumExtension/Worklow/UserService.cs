@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.TestObjects.User;
@@ -31,11 +31,11 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
         public static void Check(UserData u)
         {
             Assert.AreEqual(u.UserName, UserView.UserName);
-            StringAssert.Matches(UserView.Password, TestRegExpPatterns.UserPassword);
+            StringAssert.IsMatch(TestRegExpPatterns.UserPassword, UserView.Password);
             Assert.AreEqual(u.Salutation, UserView.Salutation);
             Assert.AreEqual(u.FirstName, UserView.FirstName);
             Assert.AreEqual(u.Name, UserView.Name);
-            Assert.AreEqual(u.Language, UserView.Language); 
+            Assert.AreEqual(u.Language, UserView.Language);
             Assert.AreEqual(u.Email, UserView.Email);
             Assert.AreEqual(u.SecurId, UserView.SecurId);
             Assert.AreEqual(u.Comment, UserView.Comment);

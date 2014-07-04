@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Infotext;
 

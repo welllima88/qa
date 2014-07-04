@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Location;

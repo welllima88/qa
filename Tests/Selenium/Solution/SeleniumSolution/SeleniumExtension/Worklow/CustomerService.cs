@@ -1,5 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestData;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
@@ -94,9 +93,9 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             Assert.AreEqual(c.SbsBillingTenant, CustomerView.SbsBillingTenant);
             StringAssert.Contains(CustomerView.SbsCurrency, c.SbsCurrency);
 
-            StringAssert.Matches(CustomerView.SbsDebitNumber, TestRegExpPatterns.SbsDebitorNo);
-            StringAssert.Matches(CustomerView.SbsAdressNumber, TestRegExpPatterns.SbsAdressNoOpt);
-            StringAssert.Matches(CustomerView.Ep2MerchantId, TestRegExpPatterns.Ep2MerchantId);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, CustomerView.SbsDebitNumber);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, CustomerView.SbsAdressNumber);
+            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, CustomerView.Ep2MerchantId);
 
             Assert.AreEqual(c.Location.Adress.Po, CustomerView.Po);
             Assert.AreEqual(c.Location.Adress.AdressAddition, CustomerView.AdressAddition);

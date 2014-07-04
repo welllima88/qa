@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
