@@ -25,8 +25,8 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
 
         public static string InstallationMessage
         {
-            set { WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextField().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextArea().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallMessage")).TextArea().Text(); }
         }
 
         public static string NumberOfTerminals
@@ -54,8 +54,8 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate
 
         public static string InformationText
         {
-            set { WebDriver.FindAdaptedElement(By.Id("InfoText")).TextField().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("InfoText")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.Id("InfoText")).TextArea().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InfoText")).TextArea().Text(); }
         }
 
         public static bool MessageForAcquirers
