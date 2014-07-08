@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
 
         public static ReadOnlyCollection<IWebElementAdapter> TerminalList
         {
-            get { return WebDriver.FindAdaptedElements(By.Id("Massmutation_All")); }
+            get { return WebDriver.FindAdaptedElements(By.Id("TerminalList")); }
         }
 
         public static bool HasFinished()

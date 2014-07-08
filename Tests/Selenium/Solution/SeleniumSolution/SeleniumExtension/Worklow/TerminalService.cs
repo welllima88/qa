@@ -23,8 +23,8 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             TerminalDuplicate.NumberOfTerminals = "2";
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            TerminalDuplicate.InstallationMessage = "SYR Install Message" + Factory.GenerateTestId();
-            TerminalDuplicate.InformationText = "SYR Infotext" + Factory.GenerateTestId();
+            TerminalDuplicate.InstallationMessage = "SYR Install Message " + Factory.GenerateTestId();
+            TerminalDuplicate.InformationText = "SYR Infotext " + Factory.GenerateTestId();
             TerminalDuplicate.CopyPassword = true;
             TerminalDuplicate.MessageForAcquirers = true;
             
