@@ -1,4 +1,5 @@
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
+using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 
@@ -15,28 +16,25 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             // DB Check Terminal and Contracts?
         }
 
-        public static void Duplicate()
+        public static void Duplicate(TerminalDuplicateData duplicateData)
         {
             SalesContractPortlet.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
-            TerminalDuplicate.NumberOfTerminals = "2";
+            TerminalDuplicate.NumberOfTerminals = duplicateData.NumberOfTerminals;
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            TerminalDuplicate.InstallationMessage = "SYR Install Message " + Factory.GenerateTestId();
-            TerminalDuplicate.InformationText = "SYR Infotext " + Factory.GenerateTestId();
-            TerminalDuplicate.CopyPassword = true;
-            TerminalDuplicate.MessageForAcquirers = true;
+            TerminalDuplicate.InstallationMessage = duplicateData.InstallMessage;
+            TerminalDuplicate.InformationText = duplicateData.InformationText;
+            TerminalDuplicate.CopyPassword = duplicateData.CopyPassword;
+            TerminalDuplicate.MessageForAcquirers = duplicateData.MessageForAcquirers;
             
             TerminalDuplicate.DulpicateButton.Click();
         }
     }
 
-    public class TerminalFactory
-    {
-    }
-
     public class TerminalData
     {
+        public string Id { get; set; }
     }
 }
