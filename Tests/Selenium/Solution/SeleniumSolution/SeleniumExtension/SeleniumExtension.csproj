@@ -72,6 +72,7 @@
     <Compile Include="Environment\ScsEnvironment.cs" />
     <Compile Include="Environment\SeleniumGridServer.cs" />
     <Compile Include="TestData\Factory\ContractFactory.cs" />
+    <Compile Include="TestData\Factory\TerminalDuplicateDataFactory.cs" />
     <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
     <Compile Include="TestObjects\Common\HeadMenu.cs" />
     <Compile Include="TestObjects\Common\Scs.cs" />
@@ -275,6 +276,7 @@
     <Compile Include="TestData\ValueObjects\UserData.cs" />
     <Compile Include="TestObjects\User\UserList.cs" />
     <Compile Include="Worklow\BrandService.cs" />
+    <Compile Include="TestData\ValueObjects\TerminalDuplicateData.cs" />
     <Compile Include="Worklow\TerminalService.cs" />
     <Compile Include="Worklow\UserService.cs" />
   </ItemGroup>
