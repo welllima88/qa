@@ -32,9 +32,4 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             TerminalDuplicate.DulpicateButton.Click();
         }
     }
-
-    public class TerminalData
-    {
-        public string Id { get; set; }
-    }
 }

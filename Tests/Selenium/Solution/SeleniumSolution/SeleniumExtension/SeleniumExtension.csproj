@@ -277,6 +277,7 @@
     <Compile Include="TestObjects\User\UserList.cs" />
     <Compile Include="Worklow\BrandService.cs" />
     <Compile Include="TestData\ValueObjects\TerminalDuplicateData.cs" />
+    <Compile Include="TestData\ValueObjects\TerminalData.cs" />
     <Compile Include="Worklow\TerminalService.cs" />
     <Compile Include="Worklow\UserService.cs" />
   </ItemGroup>
