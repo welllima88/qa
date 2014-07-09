@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -26,9 +26,9 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation
             get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_All")).Text; }
         }
 
-        public static ReadOnlyCollection<IWebElementAdapter> TerminalList
+        public static List<string> TerminalList
         {
-            get { return WebDriver.FindAdaptedElements(By.Id("TerminalList")); }
+            get { return WebDriver.WebElementsAsStringList(WebDriver.FindAdaptedElements(By.Id("TerminalList"))); }
         }
 
         public static bool HasFinished()
