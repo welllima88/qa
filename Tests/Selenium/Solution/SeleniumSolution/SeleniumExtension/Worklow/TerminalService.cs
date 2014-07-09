@@ -1,4 +1,3 @@
-using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
@@ -28,7 +27,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             TerminalDuplicate.InformationText = duplicateData.InformationText;
             TerminalDuplicate.CopyPassword = duplicateData.CopyPassword;
             TerminalDuplicate.MessageForAcquirers = duplicateData.MessageForAcquirers;
-            
+
             TerminalDuplicate.DulpicateButton.Click();
         }
     }
