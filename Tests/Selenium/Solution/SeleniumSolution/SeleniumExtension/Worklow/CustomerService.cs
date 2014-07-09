@@ -103,7 +103,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             Assert.AreEqual(c.Location.Adress.StreetNo, CustomerView.StreetNo);
             Assert.AreEqual(c.Location.Adress.Zip, CustomerView.Zip);
             Assert.AreEqual(c.Location.Adress.City, CustomerView.City);
-            StringAssert.Contains(CustomerView.Agency, c.Agency);
+            StringAssert.Contains(c.Agency, CustomerView.Agency);
             Assert.AreEqual(c.Location.Contact.Language, CustomerView.Language);
             Assert.AreEqual(c.Location.Adress.Country, CustomerView.Country);
             Assert.AreEqual(c.Location.Contact.Email, CustomerView.Email);
