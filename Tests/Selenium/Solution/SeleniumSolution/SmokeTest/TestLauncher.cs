@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Extension.Worklow;
 
-namespace Six.Scs.QA.Selenium
+namespace Six.Scs.QA.Selenium.SmokeTest
 {
     /// <summary>
     ///     The TestLauncher prepares Browser with TestDirector and keeps this

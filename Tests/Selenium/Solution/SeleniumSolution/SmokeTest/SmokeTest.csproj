@@ -6,7 +6,7 @@
     <ProjectGuid>{30D92BBD-3D78-4448-AC5D-EAD720E16B66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmokeTest</RootNamespace>
+    <RootNamespace>Six.Scs.QA.Selenium.SmokeTest</RootNamespace>
     <AssemblyName>SmokeTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -68,10 +68,23 @@
     <Compile Include="Lobby\QuickSearchTest.cs" />
     <Compile Include="Lobby\RecentElementsTest.cs" />
     <Compile Include="Lobby\RecentMassJobsTest.cs" />
+    <Compile Include="Massmutation\AcquirerChangeTest.cs" />
+    <Compile Include="Massmutation\BusinessTemplateMassmuationTest.cs" />
+    <Compile Include="Massmutation\ContractMassmuationTest.cs" />
+    <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
+    <Compile Include="Massmutation\LocationMassmuationTest.cs" />
+    <Compile Include="Massmutation\TerminalMassmuationTest.cs" />
     <Compile Include="Menu\MenusTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByIdTest.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />
+    <Compile Include="SerialNumberImport\SerialNumberImportTest.cs" />
+    <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
+    <Compile Include="SIMCard\SimCardCreateTest.cs" />
+    <Compile Include="SIMCard\SimCardEditTest.cs" />
+    <Compile Include="SIMCard\SimCardViewTest.cs" />
+    <Compile Include="SoftwareExchange\SoftwareExchangeGuiTest.cs" />
+    <Compile Include="SoftwareExchange\SoftwareExchangeTest.cs" />
     <Compile Include="TestLauncher.cs" />
   </ItemGroup>
   <ItemGroup>
