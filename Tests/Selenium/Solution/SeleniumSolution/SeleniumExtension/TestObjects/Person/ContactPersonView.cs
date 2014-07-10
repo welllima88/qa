@@ -97,6 +97,11 @@ namespace Six.Scs.QA.Selenium.Extension.TestObjects.Person
             get { return WebDriver.FindElement(By.CssSelector("button#delete")); }
         }
 
+        public static string Id
+        {
+            get { return WebDriver.FindElement(By.CssSelector("td#content div.ContactPerson")).GetCssValue("id"); }
+        }
+
         public static void DeleteConfirm()
         {
             WebDriver.SwitchTo().Alert().Accept();

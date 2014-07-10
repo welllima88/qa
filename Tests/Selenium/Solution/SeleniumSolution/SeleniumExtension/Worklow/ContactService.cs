@@ -27,6 +27,8 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             ContactPersonCreate.Web = c.Contact.Web;
 
             ContactPersonEdit.SaveButton.Click();
+
+            c.Id = ContactPersonView.Id;
         }
 
         public static void Edit(ContactPersonData c)
