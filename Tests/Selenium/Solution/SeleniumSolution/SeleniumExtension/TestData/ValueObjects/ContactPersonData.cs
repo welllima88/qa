@@ -10,5 +10,6 @@ namespace Six.Scs.QA.Selenium.Extension.TestData.ValueObjects
         public string FirstName { set; get; }
         public string Name { set; get; }
         public string Salutation { set; get; }
+        public string Id { get; set; }
     }
 }
