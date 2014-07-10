@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace TestData.Factory
+namespace Six.Scs.QA.TestData.Factory
 {
     public class ContractFactory
     {

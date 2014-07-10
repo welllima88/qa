@@ -1,4 +1,4 @@
-namespace TestData.ValueObjects
+namespace Six.Scs.QA.TestData.ValueObjects
 {
     /// <summary>
     ///     the contact person has adress and contact fields

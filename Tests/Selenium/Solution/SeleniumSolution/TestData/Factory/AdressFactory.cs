@@ -1,6 +1,6 @@
-﻿using TestData.ValueObjects;
+﻿using Six.Scs.QA.TestData.ValueObjects;
 
-namespace TestData.Factory
+namespace Six.Scs.QA.TestData.Factory
 {
     public class AdressFactory
     {

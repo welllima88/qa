@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestData.Factory
+namespace Six.Scs.QA.TestData.Factory
 {
     public static class Factory
     {

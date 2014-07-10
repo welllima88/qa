@@ -1,4 +1,4 @@
-namespace TestData.ValueObjects
+namespace Six.Scs.QA.TestData.ValueObjects
 {
     /// <summary>
     ///     defines the ways and media how to contact

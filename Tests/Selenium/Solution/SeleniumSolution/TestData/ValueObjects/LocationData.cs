@@ -1,6 +1,6 @@
 using System;
 
-namespace TestData.ValueObjects
+namespace Six.Scs.QA.TestData.ValueObjects
 {
     public class LocationData
     {
