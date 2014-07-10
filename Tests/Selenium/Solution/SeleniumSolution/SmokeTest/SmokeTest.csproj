@@ -74,7 +74,6 @@
     <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Massmutation\LocationMassmuationTest.cs" />
     <Compile Include="Massmutation\TerminalMassmuationTest.cs" />
-    <Compile Include="Menu\MenusTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByIdTest.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />

@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Administration.SoftwareExchange;
+using Six.Scs.QA.Selenium.Administration.SoftwareExchange;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange

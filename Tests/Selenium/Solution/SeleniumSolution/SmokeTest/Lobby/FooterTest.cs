@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
+using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
