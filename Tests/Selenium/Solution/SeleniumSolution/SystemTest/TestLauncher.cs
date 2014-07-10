@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium
         public void LaunchTestDirector()
         {
             ScsEnvironment.Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
+            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
             TestDirector.LogOn();
             LobbyService.ChooseLanguage(Languages.German);
         }
