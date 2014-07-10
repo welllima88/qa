@@ -81,7 +81,6 @@
     <Compile Include="Administration\SimCard\SIMCardCreate.cs" />
     <Compile Include="Administration\SimCard\SIMCardEdit.cs" />
     <Compile Include="Administration\SimCard\SimCardHistory.cs" />
-    <Compile Include="Administration\SimCard\SimCardListView.cs" />
     <Compile Include="Administration\SimCard\SimCardView.cs" />
     <Compile Include="Administration\SoftwareExchange\SoftwareExchangeCreate.cs" />
     <Compile Include="Brand\AcquirerCreate.cs" />
@@ -168,6 +167,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ScsEnvironment.cs" />
     <Compile Include="SearchResult\CustomerResult.cs" />
     <Compile Include="SearchResult\LocationResult.cs" />
     <Compile Include="SearchResult\MpdResult.cs" />

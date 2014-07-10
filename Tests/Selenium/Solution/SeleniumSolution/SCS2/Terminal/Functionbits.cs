@@ -1,11 +1,10 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal
 {
-    public class Functionbits : WebObject, IFunctionbits
+    public class Functionbits : WebObject
     {
         private const string Pre =
             "span#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyFunctions_rowFunctions span";
