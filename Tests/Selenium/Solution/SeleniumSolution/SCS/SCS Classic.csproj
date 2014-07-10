@@ -98,9 +98,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TestObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
   </ItemGroup>
