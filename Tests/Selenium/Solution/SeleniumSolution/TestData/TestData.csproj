@@ -59,6 +59,7 @@
     <Compile Include="Factory\LocationFactory.cs" />
     <Compile Include="Factory\MpdFactory.cs" />
     <Compile Include="Factory\TerminalDuplicateDataFactory.cs" />
+    <Compile Include="Factory\TerminalFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\AdressData.cs" />
