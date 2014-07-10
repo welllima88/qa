@@ -97,7 +97,6 @@
     </Compile>
     <Compile Include="Common\Footer.cs" />
     <Compile Include="Common\FormAlert.cs" />
-    <Compile Include="Common\HeadMenu.cs" />
     <Compile Include="Common\Infotext\InfoTextCreate.cs" />
     <Compile Include="Common\Infotext\InfoTextListView.cs" />
     <Compile Include="Common\Languages.cs" />
@@ -122,7 +121,6 @@
     <Compile Include="Common\QuickSearch.cs" />
     <Compile Include="Common\RecentElements.cs" />
     <Compile Include="Common\RecentMassmutations.cs" />
-    <Compile Include="Common\Scs.cs" />
     <Compile Include="Common\SiteContent.cs" />
     <Compile Include="Customer\CustomerCreate.cs" />
     <Compile Include="Customer\CustomerDeactivation.cs" />
