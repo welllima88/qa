@@ -2,7 +2,7 @@
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Extension.Worklow;
+using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Selenium.SmokeTest
 {

@@ -68,16 +68,7 @@
     <Compile Include="Authentication\Method\SecurIdDialogBox.cs" />
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\UacLogOnPageOld.cs" />
-    <Compile Include="Environment\ScsClassicEnvironment.cs" />
-    <Compile Include="Environment\ScsEnvironment.cs" />
     <Compile Include="Environment\SeleniumGridServer.cs" />
-    <Compile Include="TestData\Factory\ContractFactory.cs" />
-    <Compile Include="TestData\Factory\TerminalDuplicateDataFactory.cs" />
-    <Compile Include="TestObjects\Administration\SerialNumberManage.cs" />
-    <Compile Include="TestObjects\Common\HeadMenu.cs" />
-    <Compile Include="TestObjects\Common\Scs.cs" />
-    <Compile Include="TestObjects\Massmuation\MassmutationProgress.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalFixInfo.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
     <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
@@ -109,226 +100,25 @@
     <Compile Include="WebDriver\TestDirector.cs" />
     <Compile Include="Environment\TestEnvironment.cs" />
     <Compile Include="Environment\Timeouts.cs" />
-    <Compile Include="TestData\Factory\AdressFactory.cs" />
-    <Compile Include="TestData\Factory\ContactFactory.cs" />
-    <Compile Include="TestData\Factory\ContactPersonFactory.cs" />
-    <Compile Include="TestData\Factory\CustomerFactory.cs" />
-    <Compile Include="TestData\Factory\Factory.cs" />
-    <Compile Include="TestData\Factory\LocationFactory.cs" />
-    <Compile Include="TestObjects\Common\Languages.cs" />
-    <Compile Include="TestData\ValueObjects\MpdData.cs" />
-    <Compile Include="TestData\Factory\MpdFactory.cs" />
-    <Compile Include="TestObjects\Administration\Agency\AgencyCreate.cs" />
-    <Compile Include="TestObjects\Administration\Agency\AgencyEdit.cs" />
-    <Compile Include="TestObjects\Administration\Agency\AgencyView.cs" />
-    <Compile Include="TestObjects\Administration\Article\ArticleView.cs" />
-    <Compile Include="TestObjects\Administration\SimCard\SIMCardCreate.cs" />
-    <Compile Include="TestObjects\Administration\SimCard\SIMCardEdit.cs" />
-    <Compile Include="TestObjects\Administration\SimCard\SimCardHistory.cs" />
-    <Compile Include="TestObjects\Administration\SimCard\SimCardListView.cs" />
-    <Compile Include="TestObjects\Administration\SimCard\SimCardView.cs" />
-    <Compile Include="TestObjects\Administration\SoftwareExchange\SoftwareExchangeCreate.cs" />
-    <Compile Include="TestObjects\Brand\AcquirerCreate.cs" />
-    <Compile Include="TestObjects\Brand\BrandCreate.cs" />
-    <Compile Include="TestObjects\Brand\BrandEdit.cs" />
-    <Compile Include="TestObjects\Brand\BrandSelect.cs" />
-    <Compile Include="TestObjects\Brand\BrandView.cs" />
-    <Compile Include="TestObjects\Common\ApplicationInfo.cs" />
-    <Compile Include="TestObjects\Common\CommonRes.Designer.cs">
-      <DependentUpon>CommonRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Common\ChangeForm.cs" />
-    <Compile Include="TestObjects\Common\Footer.cs" />
-    <Compile Include="TestObjects\Common\FormAlert.cs" />
-    <Compile Include="TestObjects\Common\Infotext\InfoTextCreate.cs" />
-    <Compile Include="TestObjects\Common\Infotext\InfoTextListView.cs" />
-    <Compile Include="TestObjects\Common\LobbyView.cs" />
-    <Compile Include="TestObjects\Common\Menu\ContactMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\CustomerMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\LobbyMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\LocationMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\MassMutationMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\MenuRes.Designer.cs">
-      <DependentUpon>MenuRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Common\Menu\SimCardMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\TerminalMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\TicketMenu.cs" />
-    <Compile Include="TestObjects\Common\Menu\UserMenu.cs" />
-    <Compile Include="TestObjects\Common\MetaNavBar.cs" />
-    <Compile Include="TestObjects\Common\NavigationBar.cs" />
-    <Compile Include="TestObjects\Common\ProcessTickets.cs" />
-    <Compile Include="TestObjects\Common\QuickSearch.cs" />
-    <Compile Include="TestObjects\Common\RecentElements.cs" />
-    <Compile Include="TestObjects\Common\RecentMassmutations.cs" />
-    <Compile Include="TestObjects\Common\SiteContent.cs" />
-    <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
-    <Compile Include="TestObjects\Customer\CustomerDeactivation.cs" />
-    <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
-    <Compile Include="TestObjects\Customer\CustomerView.cs" />
-    <Compile Include="TestData\ValueObjects\AdressData.cs" />
-    <Compile Include="TestData\ValueObjects\AgencyData.cs" />
-    <Compile Include="TestData\ValueObjects\IArticle.cs" />
-    <Compile Include="TestData\ValueObjects\ContactData.cs" />
-    <Compile Include="TestData\ValueObjects\ContactPersonData.cs" />
-    <Compile Include="TestData\ValueObjects\CustomerData.cs" />
-    <Compile Include="TestData\ValueObjects\IEntity.cs" />
-    <Compile Include="TestData\ValueObjects\IFunctionbits.cs" />
-    <Compile Include="TestData\ValueObjects\LocationData.cs" />
-    <Compile Include="TestData\ValueObjects\INetType.cs" />
-    <Compile Include="TestData\ValueObjects\ISimCardElement.cs" />
-    <Compile Include="TestData\ValueObjects\ISupplier.cs" />
-    <Compile Include="TestData\ValueObjects\ITerminalType.cs" />
-    <Compile Include="TestObjects\Help\HelpNavigation.cs" />
-    <Compile Include="TestObjects\Location\BillingAdressCreate.cs" />
-    <Compile Include="TestObjects\Location\BillingAdressEdit.cs" />
-    <Compile Include="TestObjects\Location\BillingAdressView.cs" />
-    <Compile Include="TestObjects\Location\LocationRes.Designer.cs">
-      <DependentUpon>LocationRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Location\LocationCreate.cs" />
-    <Compile Include="TestObjects\Location\LocationEdit.cs" />
-    <Compile Include="TestObjects\Location\LocationView.cs" />
-    <Compile Include="TestObjects\Massmuation\AcquirerChange.cs" />
-    <Compile Include="TestObjects\Massmuation\MassmuationFileUpload.cs" />
-    <Compile Include="TestObjects\Massmuation\TerminalMassValidation.cs" />
-    <Compile Include="TestObjects\Mpd\MpdEdit.cs" />
-    <Compile Include="TestObjects\Mpd\MpdListView.cs" />
-    <Compile Include="TestObjects\Mpd\MpdView.cs" />
-    <Compile Include="TestObjects\Mpd\MpdCreate.cs" />
-    <Compile Include="TestObjects\Person\ContactList.cs" />
-    <Compile Include="TestObjects\Person\ContactPersonCreate.cs" />
-    <Compile Include="TestObjects\Person\ContactPersonEdit.cs" />
-    <Compile Include="TestObjects\Person\ContactPersonView.cs" />
-    <Compile Include="TestObjects\Person\PersonCreateRes.Designer.cs">
-      <DependentUpon>PersonCreateRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Person\PersonEditRes.Designer.cs">
-      <DependentUpon>PersonEditRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Person\PersonViewRes.Designer.cs">
-      <DependentUpon>PersonViewRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\SearchResult\SearchResults.cs" />
-    <Compile Include="TestObjects\SearchResult\CustomerResult.cs" />
-    <Compile Include="TestObjects\SearchResult\LocationResult.cs" />
-    <Compile Include="TestObjects\SearchResult\MpdResult.cs" />
-    <Compile Include="TestObjects\SearchResult\SimCardResult.cs" />
-    <Compile Include="TestObjects\SearchResult\TerminalResult.cs" />
-    <Compile Include="TestObjects\SearchResult\UserResult.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Acquirer.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandContract.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Brand\BrandPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Brand\Pms.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\Brand\ServiceCenter.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\ContactsPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\BusinessViewpointPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\CustomerInfo.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\DashboardRes.Designer.cs">
-      <DependentUpon>DashboardRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="TestObjects\Terminal\Dashboard\LocationInfo.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\PortletViewBase.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\SalesContractPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\TechnicalViewPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\TerminalInfo.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\TerminalTextsPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Dashboard\TroubleTicketsPortlet.cs" />
-    <Compile Include="TestObjects\Terminal\Duplicate\TerminalDuplicate.cs" />
-    <Compile Include="TestObjects\Terminal\EventLog\TerminalEventLog.cs" />
-    <Compile Include="TestObjects\Terminal\FinancialConfig\FinancialConfigEdit.cs" />
-    <Compile Include="TestObjects\Terminal\Functionbits.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalChooser.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalConfigCreate.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalConfigDetailsCreate.cs" />
-    <Compile Include="TestObjects\Terminal\TerminalList.cs" />
-    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
-    <Compile Include="TestObjects\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="WebDriver\WebElements\WebObject.cs" />
     <Compile Include="WebDriver\WebElements\IWebObject.cs" />
-    <Compile Include="TestObjects\User\UserView.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
     <Compile Include="WebDriver\WebDriverAdapter.cs" />
     <Compile Include="WebDriver\WebElements\WebElementAdapter.cs" />
-    <Compile Include="Worklow\ContactService.cs" />
-    <Compile Include="Worklow\CustomerService.cs" />
-    <Compile Include="Worklow\InfoTextService.cs" />
-    <Compile Include="Worklow\LobbyService.cs" />
-    <Compile Include="Worklow\LocationService.cs" />
-    <Compile Include="Worklow\MpdService.cs" />
-    <Compile Include="Worklow\SearchService.cs" />
-    <Compile Include="TestData\Factory\UserFactory.cs" />
-    <Compile Include="TestObjects\User\UserCreate.cs" />
-    <Compile Include="TestData\ValueObjects\UserData.cs" />
-    <Compile Include="TestObjects\User\UserList.cs" />
-    <Compile Include="Worklow\BrandService.cs" />
-    <Compile Include="TestData\ValueObjects\TerminalDuplicateData.cs" />
-    <Compile Include="TestData\ValueObjects\TerminalData.cs" />
-    <Compile Include="Worklow\TerminalService.cs" />
-    <Compile Include="Worklow\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\ScsRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Common\CommonRes.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CommonRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Common\Menu\MenuRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Location\LocationRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>LocationRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Person\PersonCreateRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonCreateRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Person\PersonEditRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Person\PersonViewRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestObjects\Terminal\Dashboard\DashboardRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>DashboardRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
