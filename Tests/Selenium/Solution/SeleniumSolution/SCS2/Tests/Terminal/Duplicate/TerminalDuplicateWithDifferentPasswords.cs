@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Duplicate;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Massmuation;
+using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Duplicate;
 
 namespace Six.Scs.QA.Selenium.Tests.Terminal.Duplicate
 {

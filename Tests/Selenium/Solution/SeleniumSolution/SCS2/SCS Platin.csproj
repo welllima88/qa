@@ -56,7 +56,6 @@
     <OutputPath>bin\PROD\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="WebDriver, Version=2.42.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -74,7 +73,139 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestLauncher.cs" />
+    <Compile Include="Administration\Agency\AgencyCreate.cs" />
+    <Compile Include="Administration\Agency\AgencyEdit.cs" />
+    <Compile Include="Administration\Agency\AgencyView.cs" />
+    <Compile Include="Administration\Article\ArticleView.cs" />
+    <Compile Include="Administration\SerialNumberManage.cs" />
+    <Compile Include="Administration\SimCard\SIMCardCreate.cs" />
+    <Compile Include="Administration\SimCard\SIMCardEdit.cs" />
+    <Compile Include="Administration\SimCard\SimCardHistory.cs" />
+    <Compile Include="Administration\SimCard\SimCardListView.cs" />
+    <Compile Include="Administration\SimCard\SimCardView.cs" />
+    <Compile Include="Administration\SoftwareExchange\SoftwareExchangeCreate.cs" />
+    <Compile Include="Brand\AcquirerCreate.cs" />
+    <Compile Include="Brand\BrandCreate.cs" />
+    <Compile Include="Brand\BrandEdit.cs" />
+    <Compile Include="Brand\BrandSelect.cs" />
+    <Compile Include="Brand\BrandView.cs" />
+    <Compile Include="Common\ApplicationInfo.cs" />
+    <Compile Include="Common\ChangeForm.cs" />
+    <Compile Include="Common\CommonRes.Designer.cs">
+      <DependentUpon>CommonRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\Footer.cs" />
+    <Compile Include="Common\FormAlert.cs" />
+    <Compile Include="Common\HeadMenu.cs" />
+    <Compile Include="Common\Infotext\InfoTextCreate.cs" />
+    <Compile Include="Common\Infotext\InfoTextListView.cs" />
+    <Compile Include="Common\Languages.cs" />
+    <Compile Include="Common\LobbyView.cs" />
+    <Compile Include="Common\Menu\ContactMenu.cs" />
+    <Compile Include="Common\Menu\CustomerMenu.cs" />
+    <Compile Include="Common\Menu\LobbyMenu.cs" />
+    <Compile Include="Common\Menu\LocationMenu.cs" />
+    <Compile Include="Common\Menu\MassMutationMenu.cs" />
+    <Compile Include="Common\Menu\MenuRes.Designer.cs">
+      <DependentUpon>MenuRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\Menu\SimCardMenu.cs" />
+    <Compile Include="Common\Menu\TerminalMenu.cs" />
+    <Compile Include="Common\Menu\TicketMenu.cs" />
+    <Compile Include="Common\Menu\UserMenu.cs" />
+    <Compile Include="Common\MetaNavBar.cs" />
+    <Compile Include="Common\NavigationBar.cs" />
+    <Compile Include="Common\ProcessTickets.cs" />
+    <Compile Include="Common\QuickSearch.cs" />
+    <Compile Include="Common\RecentElements.cs" />
+    <Compile Include="Common\RecentMassmutations.cs" />
+    <Compile Include="Common\Scs.cs" />
+    <Compile Include="Common\SiteContent.cs" />
+    <Compile Include="Customer\CustomerCreate.cs" />
+    <Compile Include="Customer\CustomerDeactivation.cs" />
+    <Compile Include="Customer\CustomerEdit.cs" />
+    <Compile Include="Customer\CustomerView.cs" />
+    <Compile Include="Help\HelpNavigation.cs" />
+    <Compile Include="Location\BillingAdressCreate.cs" />
+    <Compile Include="Location\BillingAdressEdit.cs" />
+    <Compile Include="Location\BillingAdressView.cs" />
+    <Compile Include="Location\LocationCreate.cs" />
+    <Compile Include="Location\LocationEdit.cs" />
+    <Compile Include="Location\LocationRes.Designer.cs">
+      <DependentUpon>LocationRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Location\LocationView.cs" />
+    <Compile Include="Massmuation\AcquirerChange.cs" />
+    <Compile Include="Massmuation\MassmuationFileUpload.cs" />
+    <Compile Include="Massmuation\MassmutationProgress.cs" />
+    <Compile Include="Massmuation\TerminalMassValidation.cs" />
+    <Compile Include="Mpd\MpdCreate.cs" />
+    <Compile Include="Mpd\MpdEdit.cs" />
+    <Compile Include="Mpd\MpdListView.cs" />
+    <Compile Include="Mpd\MpdView.cs" />
+    <Compile Include="Person\ContactList.cs" />
+    <Compile Include="Person\ContactPersonCreate.cs" />
+    <Compile Include="Person\ContactPersonEdit.cs" />
+    <Compile Include="Person\ContactPersonView.cs" />
+    <Compile Include="Person\PersonCreateRes.Designer.cs">
+      <DependentUpon>PersonCreateRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Person\PersonEditRes.Designer.cs">
+      <DependentUpon>PersonEditRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Person\PersonViewRes.Designer.cs">
+      <DependentUpon>PersonViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SearchResult\CustomerResult.cs" />
+    <Compile Include="SearchResult\LocationResult.cs" />
+    <Compile Include="SearchResult\MpdResult.cs" />
+    <Compile Include="SearchResult\SearchResults.cs" />
+    <Compile Include="SearchResult\SimCardResult.cs" />
+    <Compile Include="SearchResult\TerminalResult.cs" />
+    <Compile Include="SearchResult\UserResult.cs" />
+    <Compile Include="Terminal\Dashboard\Brand\Acquirer.cs" />
+    <Compile Include="Terminal\Dashboard\Brand\BrandContract.cs" />
+    <Compile Include="Terminal\Dashboard\Brand\BrandPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\Brand\Pms.cs" />
+    <Compile Include="Terminal\Dashboard\Brand\ServiceCenter.cs" />
+    <Compile Include="Terminal\Dashboard\BusinessViewpointPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\ContactsPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\CustomerInfo.cs" />
+    <Compile Include="Terminal\Dashboard\DashboardRes.Designer.cs">
+      <DependentUpon>DashboardRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
+    <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
+    <Compile Include="Terminal\Dashboard\SalesContractPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\TechnicalViewPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\TerminalInfo.cs" />
+    <Compile Include="Terminal\Dashboard\TerminalTextsPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\TroubleTicketsPortlet.cs" />
+    <Compile Include="Terminal\Duplicate\TerminalDuplicate.cs" />
+    <Compile Include="Terminal\EventLog\TerminalEventLog.cs" />
+    <Compile Include="Terminal\FinancialConfig\FinancialConfigEdit.cs" />
+    <Compile Include="Terminal\Functionbits.cs" />
+    <Compile Include="Terminal\TerminalChooser.cs" />
+    <Compile Include="Terminal\TerminalConfigCreate.cs" />
+    <Compile Include="Terminal\TerminalConfigDetailsCreate.cs" />
+    <Compile Include="Terminal\TerminalFixInfo.cs" />
+    <Compile Include="Terminal\TerminalList.cs" />
+    <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
+    <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyCreateTest.cs" />
     <Compile Include="Tests\Administration\Agency\AgencyDeleteTest.cs" />
@@ -174,6 +305,9 @@
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
     <Compile Include="Tests\Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
     <Compile Include="Tests\User\UserViewTest.cs" />
+    <Compile Include="User\UserCreate.cs" />
+    <Compile Include="User\UserList.cs" />
+    <Compile Include="User\UserView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -191,6 +325,38 @@
       <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
       <Name>SeleniumExtension</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\CommonRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Menu\MenuRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocationRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\PersonCreateRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonCreateRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\PersonEditRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\PersonViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal\Dashboard\DashboardRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashboardRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

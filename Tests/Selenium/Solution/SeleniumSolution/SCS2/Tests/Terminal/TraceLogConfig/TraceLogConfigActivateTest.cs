@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.TraceLogConfig;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Terminal.TraceLogConfig;
 
 namespace Six.Scs.QA.Selenium.Tests.Terminal.TraceLogConfig
 {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Infotext;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Common.Infotext;
+using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Extension.Worklow;
+using Six.Scs.QA.Selenium.Terminal.Dashboard;
 
 namespace Six.Scs.QA.Selenium.Tests.Infotext
 {

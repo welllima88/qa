@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal;
+using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Terminal;
 
 namespace Six.Scs.QA.Selenium.Tests.Terminal.ArticleChooser
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Administration;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
+using Six.Scs.QA.Selenium.Administration;
+using Six.Scs.QA.Selenium.Common.Menu;
 
 namespace Six.Scs.QA.Selenium.Tests.Administration.SerialNumberImport
 {

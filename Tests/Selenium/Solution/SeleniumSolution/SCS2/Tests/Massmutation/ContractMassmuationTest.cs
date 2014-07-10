@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Massmuation;
+using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Massmuation;
 
 namespace Six.Scs.QA.Selenium.Tests.Massmutation
 {

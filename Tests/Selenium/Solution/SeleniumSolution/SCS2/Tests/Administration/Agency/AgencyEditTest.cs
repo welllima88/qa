@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Six.Scs.QA.Selenium.Administration.Agency;
 using Six.Scs.QA.Selenium.Extension.TestData;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Administration.Agency;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.Tests.Administration.Agency

@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
+using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Person;
 
 namespace Six.Scs.QA.Selenium.Tests.Contact.Edit
 {

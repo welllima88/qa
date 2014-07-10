@@ -1,16 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Six.Scs.QA.Selenium.Brand;
+using Six.Scs.QA.Selenium.Common.Infotext;
+using Six.Scs.QA.Selenium.Common.Menu;
+using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
 using Six.Scs.QA.Selenium.Extension.TestData.ValueObjects;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Brand;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Infotext;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Location;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Person;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.Dashboard.Brand;
 using Six.Scs.QA.Selenium.Extension.Worklow;
+using Six.Scs.QA.Selenium.Location;
+using Six.Scs.QA.Selenium.Person;
+using Six.Scs.QA.Selenium.Terminal;
+using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
 
 namespace Six.Scs.QA.Selenium.Tests.Regression
 {

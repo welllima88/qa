@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Customer;
+using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.Common.Menu;
+using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.Tests.Customer.Create

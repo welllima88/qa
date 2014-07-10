@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Terminal.EventLog;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Terminal.EventLog;
 
 namespace Six.Scs.QA.Selenium.Tests.Terminal.EventLog
 {

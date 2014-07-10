@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.TestData;
 using Six.Scs.QA.Selenium.Extension.TestData.Factory;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Location;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Tests.Menu;
 
 namespace Six.Scs.QA.Selenium.Tests.Location

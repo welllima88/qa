@@ -10,9 +10,9 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.Common;
-using Six.Scs.QA.Selenium.Extension.TestObjects.SearchResult;
+using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.SearchResult;
 
 namespace Six.Scs.QA.Selenium.Tests.Lobby
 {

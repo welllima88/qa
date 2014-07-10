@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Six.Scs.QA.Selenium.Extension.TestObjects.User;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Tests.Menu;
+using Six.Scs.QA.Selenium.User;
 
 namespace Six.Scs.QA.Selenium.Tests.User
 {
