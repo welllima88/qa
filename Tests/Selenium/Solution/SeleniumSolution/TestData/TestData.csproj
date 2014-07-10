@@ -66,13 +66,6 @@
     <Compile Include="ValueObjects\ContactData.cs" />
     <Compile Include="ValueObjects\ContactPersonData.cs" />
     <Compile Include="ValueObjects\CustomerData.cs" />
-    <Compile Include="ValueObjects\IArticle.cs" />
-    <Compile Include="ValueObjects\IEntity.cs" />
-    <Compile Include="ValueObjects\IFunctionbits.cs" />
-    <Compile Include="ValueObjects\INetType.cs" />
-    <Compile Include="ValueObjects\ISimCardElement.cs" />
-    <Compile Include="ValueObjects\ISupplier.cs" />
-    <Compile Include="ValueObjects\ITerminalType.cs" />
     <Compile Include="ValueObjects\LocationData.cs" />
     <Compile Include="ValueObjects\MpdData.cs" />
     <Compile Include="ValueObjects\TerminalData.cs" />

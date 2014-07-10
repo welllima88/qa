@@ -1,6 +1,6 @@
 namespace TestData.ValueObjects
 {
-    public class CustomerData : IEntity
+    public class CustomerData
     {
         public LocationData Location { get; set; }
         public string CustomerName { get; set; }
