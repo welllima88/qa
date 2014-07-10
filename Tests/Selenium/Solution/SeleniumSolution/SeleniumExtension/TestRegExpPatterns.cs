@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.Extension
         public const string Date = "[0-9]{2}.[0-9]{2}.[0-9]{4}";
         public const string Time = "[0-9]{2}:[0-9]{2}:[0-9]{2}";
         public const string DateTime = Date + " " + Time;
-        public static readonly string TerminalPassword = "[0-9]{5,8}";
+        public const string TerminalPassword = "[0-9]{5,8}";
         public const string UserName = @"\w{5}";
         public const string NotEmpty = @"\w";
         public const string UserPassword = @"[\w]{4,10}|";
