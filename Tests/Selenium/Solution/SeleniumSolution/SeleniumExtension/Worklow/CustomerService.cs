@@ -91,7 +91,7 @@ namespace Six.Scs.QA.Selenium.Extension.Worklow
             Assert.AreEqual(c.Location.SapNumber, CustomerView.SapNumber);
             Assert.AreEqual(c.Supplier, CustomerView.Supplier);
             Assert.AreEqual(c.SbsBillingTenant, CustomerView.SbsBillingTenant);
-            StringAssert.Contains(CustomerView.SbsCurrency, c.SbsCurrency);
+            StringAssert.Contains(c.SbsCurrency, CustomerView.SbsCurrency);
 
             StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, CustomerView.SbsDebitNumber);
             StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, CustomerView.SbsAdressNumber);
