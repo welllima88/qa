@@ -83,9 +83,9 @@
     </Compile>
     <Compile Include="Support\AddService\AddServiceToUsers.cs" />
     <Compile Include="TestLauncher.cs" />
-    <Compile Include="TestObjects\Customer\CustomerCreate.cs" />
-    <Compile Include="TestObjects\Customer\CustomerEdit.cs" />
-    <Compile Include="TestObjects\Customer\CustomerView.cs" />
+    <Compile Include="Customer\CustomerCreate.cs" />
+    <Compile Include="Customer\CustomerEdit.cs" />
+    <Compile Include="Customer\CustomerView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -99,8 +99,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TestObjects\Common\" />
-    <Folder Include="TestObjects\Menu\" />
+    <Folder Include="TestObjects\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
