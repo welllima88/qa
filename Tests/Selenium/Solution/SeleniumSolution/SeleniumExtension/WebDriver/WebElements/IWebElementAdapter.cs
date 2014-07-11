@@ -17,6 +17,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         string Text { get; }
         bool Selected { get; }
         bool Displayed { get; }
-        void Click();
+        bool Enabled { get; }
+        void Click();        
     }
 }
