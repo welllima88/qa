@@ -35,9 +35,9 @@ namespace Six.Scs.QA.Selenium.Terminal.Duplicate
             get { return WebDriver.FindAdaptedElement(By.Id("NumberOfTerminals")).TextField().Text(); }
         }
 
-        public static IWebElement DulpicateButton
+        public static ButtonElement DulpicateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("duplicate")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("duplicate")).Button(); }
         }
 
         public static string DeliveryDate

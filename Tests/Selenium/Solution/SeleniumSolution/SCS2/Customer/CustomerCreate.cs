@@ -5,14 +5,14 @@ namespace Six.Scs.QA.Selenium.Customer
 {
     public class CustomerCreate : WebObject
     {
-        public static IWebElement CancelButton
+        public static IWebElementAdapter CancelButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("ipnut#cancel")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("ipnut#cancel")); }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")); }
         }
 
         public static string Ep2MerchantId
@@ -232,7 +232,7 @@ namespace Six.Scs.QA.Selenium.Customer
             }
             get
             {
-                return WebDriver.FindElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector("select#Preferences_CategoryCodeId")).Text;
             }
         }

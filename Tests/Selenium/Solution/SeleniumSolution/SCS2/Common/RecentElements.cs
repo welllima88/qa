@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class RecentElements : WebObject
     {
-        public static IWebElement Latest
+        public static IWebElementAdapter Latest
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
         }
     }
 }

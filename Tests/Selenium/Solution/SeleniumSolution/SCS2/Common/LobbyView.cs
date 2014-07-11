@@ -8,14 +8,14 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class LobbyView : WebObject, IApplication
     {
-        public static IWebElement CompanyLogo
+        public static IWebElementAdapter CompanyLogo
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Lobby_CompanyLogo)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Lobby_CompanyLogo)); }
         }
 
-        public static IWebElement Headline
+        public static IWebElementAdapter Headline
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Lobby_Headline)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Lobby_Headline)); }
         }
 
         public void LogOff()

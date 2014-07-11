@@ -7,77 +7,77 @@ namespace Six.Scs.QA.Selenium.User
     {
         public static string UserName
         {
-            get { return WebDriver.FindElement(By.Id("User_Username")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Username")).Text; }
         }
 
         public static string Password
         {
-            get { return WebDriver.FindElement(By.Id("User_Password")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Password")).Text; }
         }
 
         public static string Salutation
         {
-            get { return WebDriver.FindElement(By.Id("User_Salutation")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Salutation")).Text; }
         }
 
         public static string FirstName
         {
-            get { return WebDriver.FindElement(By.Id("User_FirstName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_FirstName")).Text; }
         }
 
         public static string Name
         {
-            get { return WebDriver.FindElement(By.Id("User_LastName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_LastName")).Text; }
         }
 
         public static string Email
         {
-            get { return WebDriver.FindElement(By.Id("User_Email")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Email")).Text; }
         }
 
         public static string Language
         {
-            get { return WebDriver.FindElement(By.Id("User_Language")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Language")).Text; }
         }
 
         public static string SecurId
         {
-            get { return WebDriver.FindElement(By.Id("User_SecureId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_SecureId")).Text; }
         }
 
         public static string WesMandant
         {
-            get { return WebDriver.FindElement(By.Id("User_WesMandant")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_WesMandant")).Text; }
         }
 
         public static string State
         {
-            get { return WebDriver.FindElement(By.Id("User_State")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_State")).Text; }
         }
 
         public static string Created
         {
-            get { return WebDriver.FindElement(By.Id("User_Created")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Created")).Text; }
         }
 
         public static string LastLogOn
         {
-            get { return WebDriver.FindElement(By.Id("User_LastLogin")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_LastLogin")).Text; }
         }
 
         public static string Comment
         {
-            get { return WebDriver.FindElement(By.Id("User_Comment")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("User_Comment")).Text; }
         }
 
-        public static IWebElement EditButton
+        public static IWebElementAdapter EditButton
         {
-            get { return WebDriver.FindElement(By.Id("edit")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
 
-        public static IWebElement ReactivateButton
+        public static IWebElementAdapter ReactivateButton
         {
-            get { return WebDriver.FindElement(By.Id("reactivate")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("reactivate")); }
         }
     }
 }

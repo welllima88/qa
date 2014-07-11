@@ -5,49 +5,49 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class NavigationBar : WebObject
     {
-        public static IWebElement Lobby
+        public static IWebElementAdapter Lobby
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(CommonRes.NavigationBar_Lobby));
             }
         }
 
-        public static IWebElement Administration
+        public static IWebElementAdapter Administration
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(CommonRes.NavigationBar_Administration));
             }
         }
 
-        public static IWebElement Reporting
+        public static IWebElementAdapter Reporting
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(CommonRes.NavigationBar_Reporting));
             }
         }
 
-        public static IWebElement Help
+        public static IWebElementAdapter Help
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/scs2/help']"));
             }
         }
 
-        public static IWebElement Current
+        public static IWebElementAdapter Current
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.NavigationBar_Current)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Current)); }
         }
     }
 }

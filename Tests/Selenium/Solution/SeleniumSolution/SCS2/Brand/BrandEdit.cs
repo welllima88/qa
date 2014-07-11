@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         private static void ClickEditContract(String brand, String brandType)
         {
-            WebDriver.FindElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
                 Click();
         }

@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static string Header
         {
-            get { return WebDriver.FindElement(By.CssSelector("tbody td#content h1")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("tbody td#content h1")).Text; }
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Selenium.Terminal.EventLog
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#SelectedEventTypes")).Selector(); }
         }
 
-        public static IWebElement EventTable
+        public static IWebElementAdapter EventTable
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("tbody tr#rowContent td#content table")); }
         }
@@ -35,9 +35,9 @@ namespace Six.Scs.QA.Selenium.Terminal.EventLog
             get { return WebDriver.FindAdaptedElements(By.CssSelector("td#content table tbody tr.Summary")); }
         }
 
-        public static IWebElement Export
+        public static IWebElementAdapter Export
         {
-            get { return WebDriver.FindElement(By.CssSelector("input[value='Export']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input[value='Export']")); }
         }
     }
 }

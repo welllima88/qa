@@ -5,19 +5,19 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class ProcessTickets : WebObject
     {
-        public static IWebElement Oldest
+        public static IWebElementAdapter Oldest
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Oldest)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ProcessTickets_Oldest)); }
         }
 
-        public static IWebElement Newest
+        public static IWebElementAdapter Newest
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Newest)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ProcessTickets_Newest)); }
         }
 
-        public static IWebElement Container
+        public static IWebElementAdapter Container
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ProcessTickets_Container)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ProcessTickets_Container)); }
         }
     }
 }

@@ -75,14 +75,14 @@ namespace Six.Scs.QA.Selenium.Location
             set { BillingAddressCreate.Web = value; }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
             get { return BillingAddressCreate.SaveButton; }
         }
 
-        public static IWebElement CancelButton
+        public static IWebElementAdapter CancelButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='cancel']")); }
         }
     }
 }

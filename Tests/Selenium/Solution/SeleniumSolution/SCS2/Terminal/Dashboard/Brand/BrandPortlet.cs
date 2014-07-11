@@ -1,10 +1,11 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
-        public static IWebElement NewBrandButton
+        public static IWebElementAdapter NewBrandButton
         {
             get
             {
@@ -15,7 +16,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Brand
             }
         }
 
-        public static IWebElement Brand(string brandId)
+        public static IWebElementAdapter Brand(string brandId)
         {
             return
                 WebDriver.FindAdaptedElement(

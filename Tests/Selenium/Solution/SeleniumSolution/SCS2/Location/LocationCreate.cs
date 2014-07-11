@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Location
 {
     public class LocationCreate : WebObject
     {
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Button(); }
         }
 
         public static string Country

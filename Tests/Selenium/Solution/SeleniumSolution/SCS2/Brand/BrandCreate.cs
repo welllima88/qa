@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         private static void ClickEditContract(String brand, String brandType)
         {
-            WebDriver.FindElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
                 Click();
         }
@@ -57,14 +57,14 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void SetDccBaseCurrency(String dccBaseCurrency)
         {
-            WebDriver.FindElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
                 .Click();
         }
 
         public static void SaveAndCreate()
         {
-            WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
+            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
         }
     }
 }

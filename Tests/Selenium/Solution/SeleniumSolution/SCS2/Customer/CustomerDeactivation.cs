@@ -5,12 +5,12 @@ namespace Six.Scs.QA.Selenium.Customer
 {
     public class CustomerDeactivation : WebObject
     {
-        public static IWebElementAdapter Cancel
+        public static ButtonElement Cancel
         {
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblCustomerDeleteInfo"));
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblCustomerDeleteInfo")).Button();
             }
         }
 

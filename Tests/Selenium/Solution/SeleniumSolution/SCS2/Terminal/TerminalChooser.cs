@@ -16,8 +16,8 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                ReadOnlyCollection<IWebElement> articleElements =
-                    WebDriver.FindElements(By.CssSelector("tbody#allArticles tr td:not([style*='display: none'])"));
+                ReadOnlyCollection<IWebElementAdapter> articleElements =
+                    WebDriver.FindAdaptedElements(By.CssSelector("tbody#allArticles tr td:not([style*='display: none'])"));
                 return WebDriver.WebElementsAsStringList(articleElements);
             }
         }
@@ -26,15 +26,15 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                ReadOnlyCollection<IWebElement> articleElements =
-                    WebDriver.FindElements(By.CssSelector("tbody#suggestedArticles tr td"));
+                ReadOnlyCollection<IWebElementAdapter> articleElements =
+                    WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td"));
                 return WebDriver.WebElementsAsStringList(articleElements);
             }
         }
 
         public static string Article
         {
-            set { WebDriver.FindAdaptedElement(By.LinkText(value)).Click(); }
+            set { WebDriver.FindAdaptedElement(By.LinkText(value)).Button().Click(); }
         }
     }
 }

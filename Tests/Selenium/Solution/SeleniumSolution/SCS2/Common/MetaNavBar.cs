@@ -5,29 +5,29 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class MetaNavBar : WebObject
     {
-        public static IWebElement LogOff
+        public static IWebElementAdapter LogOff
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
         }
 
-        public static IWebElement User
+        public static IWebElementAdapter User
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector("td#metaNavBar a#ctl00_hplSimpleUserInfo[href*='/User/Index?UserName=']"));
             }
         }
 
-        public static IWebElement Languages
+        public static IWebElementAdapter Languages
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
         }
 
-        public static IWebElement LanguageItem(string language)
+        public static IWebElementAdapter LanguageItem(string language)
         {
-            return WebDriver.FindElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
+            return WebDriver.FindAdaptedElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
         }
     }
 }

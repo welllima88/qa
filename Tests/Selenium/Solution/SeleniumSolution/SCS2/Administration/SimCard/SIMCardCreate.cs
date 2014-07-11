@@ -6,9 +6,9 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 {
     public class SimCardCreate : WebObject
     {
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Button(); }
         }
 
         public static string NetProvider

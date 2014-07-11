@@ -5,39 +5,39 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class UserMenu : WebObject
     {
-        public static IWebElement User
+        public static IWebElementAdapter User
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/Index?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Index?USERNAME=']")); }
         }
 
-        public static IWebElement New
+        public static IWebElementAdapter New
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/New/?CUSTOMERID=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/New/?CUSTOMERID=']")); }
         }
 
-        public static IWebElement Edit
+        public static IWebElementAdapter Edit
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/Edit?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Edit?USERNAME=']")); }
         }
 
-        public static IWebElement Feedback
+        public static IWebElementAdapter Feedback
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/Feedback/List?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Feedback/List?USERNAME=']")); }
         }
 
-        public static IWebElement Service
+        public static IWebElementAdapter Service
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/SetupLoginService/?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService/?USERNAME=']")); }
         }
 
-        public static IWebElement Roles
+        public static IWebElementAdapter Roles
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/UserRoleEdit?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/UserRoleEdit?USERNAME=']")); }
         }
 
-        public static IWebElement ResetPassword
+        public static IWebElementAdapter ResetPassword
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href*='/User/ResetPassword/?USERNAME=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/ResetPassword/?USERNAME=']")); }
         }
     }
 }

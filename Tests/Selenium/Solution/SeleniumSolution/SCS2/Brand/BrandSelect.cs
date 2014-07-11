@@ -8,9 +8,9 @@ namespace Six.Scs.QA.Selenium.Brand
 {
     public class BrandSelect : WebObject
     {
-        public static IWebElement ConfirmButton()
+        public static IWebElementAdapter ConfirmButton()
         {
-            return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
+            return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
         }
 
         /// <summary>
@@ -22,16 +22,16 @@ namespace Six.Scs.QA.Selenium.Brand
             // title[textContent~='']
             // By.XPath("//td[text()='" + brand + "']");
 
-            ReadOnlyCollection<IWebElement> ccss =
-                WebDriver.FindElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
-            IWebElement firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
+            ReadOnlyCollection<IWebElementAdapter> ccss =
+                WebDriver.FindAdaptedElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
+            IWebElementAdapter firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
             if (firstOrDefault != null)
                 firstOrDefault.Click();
         }
 
         public static void Deselect(string brandId)
         {
-            WebDriver.FindElement(
+            WebDriver.FindAdaptedElement(
                 By.CssSelector(
                     string.Format("span#ctl00_bodyContentPlaceHolder_lblSelected div a tr td:contains('[{0}]')",
                         brandId))).Click();
@@ -39,7 +39,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void Acquirer(string acquirerName)
         {
-            IWebElement acquirer = WebDriver.FindElement(By.XPath("//span"));
+            IWebElementAdapter acquirer = WebDriver.FindAdaptedElement(By.XPath("//span"));
         }
 
         public static void AcquirerList(string acquirerName)
@@ -48,9 +48,9 @@ namespace Six.Scs.QA.Selenium.Brand
             var acquirers = new Collection<Acquirer>();
         }
 
-        public static IWebElement BrandTree()
+        public static IWebElementAdapter BrandTree()
         {
-            return WebDriver.FindElement(By.CssSelector("div#createContractTree"));
+            return WebDriver.FindAdaptedElement(By.CssSelector("div#createContractTree"));
         }
     }
 }

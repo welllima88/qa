@@ -6,9 +6,9 @@ namespace Six.Scs.QA.Selenium.Administration.Article
 {
     public class ArticleView : WebObject
     {
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Button(); }
         }
 
         public static string Name
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Selenium.Administration.Article
             {
                 return
                     WebDriver.WebElementsAsStringList(
-                        WebDriver.FindElements(By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
+                        WebDriver.FindAdaptedElements(By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -6,14 +7,14 @@ namespace Six.Scs.QA.Selenium.Common.Infotext
 {
     public class InfoTextListView : WebObject
     {
-        public static IWebElement CreateButton
+        public static ButtonElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")).Button(); }
         }
 
-        private static IEnumerable<IWebElement> Elements
+        private static ReadOnlyCollection<IWebElementAdapter> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
         }
 
         public static List<string> List

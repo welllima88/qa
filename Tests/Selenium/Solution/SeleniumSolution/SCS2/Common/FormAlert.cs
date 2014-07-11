@@ -12,9 +12,9 @@ namespace Six.Scs.QA.Selenium.Common
             get { return WebDriver.WebElementsAsStringList(FormAlertElements); }
         }
 
-        public static ReadOnlyCollection<IWebElement> FormAlertElements
+        public static ReadOnlyCollection<IWebElementAdapter> FormAlertElements
         {
-            get { return WebDriver.FindElements(By.CssSelector(CommonRes.FormAlert_FormAlertElements)); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("")); } //TODO:
         }
     }
 }

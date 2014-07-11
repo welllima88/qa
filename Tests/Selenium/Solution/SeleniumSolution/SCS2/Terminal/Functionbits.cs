@@ -9,95 +9,89 @@ namespace Six.Scs.QA.Selenium.Terminal
         private const string Pre =
             "span#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyFunctions_rowFunctions span";
 
-        public IWebElement Booking
+        public IWebElementAdapter Booking
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Booking']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Booking']")); }
         }
 
-        public IWebElement BookingReservation
+        public IWebElementAdapter BookingReservation
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingReservation']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingReservation']")); }
         }
 
-        public IWebElement BookingTip
+        public IWebElementAdapter BookingTip
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingTIP']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingTIP']")); }
         }
 
-        public IWebElement BookingCashAdvance
+        public IWebElementAdapter BookingCashAdvance
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingCashAdvance']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingCashAdvance']")); }
         }
 
-        public IWebElement Credit
+        public IWebElementAdapter Credit
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Credit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Credit']")); }
         }
 
-        public IWebElement BookingPhoneAuth
+        public IWebElementAdapter BookingPhoneAuth
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingPhoneAuth']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingPhoneAuth']")); }
         }
 
-        public IWebElement OwnRiskTransaktion
+        public IWebElementAdapter OwnRiskTransaktion
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_OwnRiskTransaktion']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_OwnRiskTransaktion']")); }
         }
 
-        public IWebElement BookingPhoneOrder
+        public IWebElementAdapter BookingPhoneOrder
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingPhoneOrder']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingPhoneOrder']")); }
         }
 
-        public IWebElement BookingAuth
+        public IWebElementAdapter BookingAuth
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingAuth']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingAuth']")); }
         }
 
-        public IWebElement BookingMailOrder
+        public IWebElementAdapter BookingMailOrder
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_BookingMailOrder']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingMailOrder']")); }
         }
 
-        public IWebElement Cancellation
+        public IWebElementAdapter Cancellation
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Cancelation']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Cancelation']")); }
         }
 
-        public IWebElement Reservation
+        public IWebElementAdapter Reservation
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Reservation']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Reservation']")); }
         }
 
-        public IWebElement ReservationsAdjustment
+        public IWebElementAdapter ReservationsAdjustment
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_ReservationsAdjustment']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_ReservationsAdjustment']")); }
         }
 
-        public IWebElement ConfirmPhoneAut
+        public IWebElementAdapter ConfirmPhoneAut
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_ConfirmPhoneAut']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_ConfirmPhoneAut']")); }
         }
 
-        public IWebElement Recurring
+        public IWebElementAdapter Recurring
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_Recurring']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Recurring']")); }
         }
 
-        public IWebElement PurchaseWithCashback
+        public IWebElementAdapter PurchaseWithCashback
         {
-            get { return WebDriver.FindElement(By.CssSelector(Pre + "[id$='_PurchaseWithCashBack']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_PurchaseWithCashBack']")); }
         }
 
-        public ReadOnlyCollection<IWebElement> FunctionBits
+        public ReadOnlyCollection<IWebElementAdapter> FunctionBits
         {
-            get
-            {
-                return
-                    WebDriver.FindElements(
-                        By.CssSelector(
-                            Pre + " input"));
-            }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector(Pre + " input")); }
         }
     }
 }

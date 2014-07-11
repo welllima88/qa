@@ -5,7 +5,7 @@ namespace Six.Scs.QA.Selenium.Person
 {
     public class ContactList : WebObject
     {
-        public static IWebElement First()
+        public static IWebElementAdapter First()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector("tbody tr td a[href*='/Person?PersonId=']"));
         }

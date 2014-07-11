@@ -6,14 +6,14 @@ namespace Six.Scs.QA.Selenium.Customer
 {
     public class CustomerEdit : WebObject
     {
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
         }
 
-        public static IWebElement CancelButton
+        public static ButtonElement CancelButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#cancel")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#cancel")).Button(); }
         }
 
         public static string CustomerName

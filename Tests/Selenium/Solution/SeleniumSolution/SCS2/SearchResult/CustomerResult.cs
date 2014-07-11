@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.SearchResult
 {
     public class CustomerResult : WebObject
     {
-        public static IWebElement Result()
+        public static IWebElementAdapter Result()
         {
-            IWebElement element =
+            IWebElementAdapter element =
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "div#customerDiv tbody#customerResult tr td a#customerLink[href*='/Customer/?CustomerId=']"));

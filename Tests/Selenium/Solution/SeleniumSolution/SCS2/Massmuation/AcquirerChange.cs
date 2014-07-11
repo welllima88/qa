@@ -8,12 +8,12 @@ namespace Six.Scs.QA.Selenium.Massmuation
     {
         public static string Title
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content>h1")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content>h1")).Text; }
         }
 
         public static string Description
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content div>p")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div>p")).Text; }
         }
 
         public static IWebElementAdapter FileChooser
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text;
             }
         }
     }

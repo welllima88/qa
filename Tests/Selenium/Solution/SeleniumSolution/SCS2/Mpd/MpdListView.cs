@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Mpd
 {
     public class MpdListView : WebObject
     {
-        public static IWebElement CreateButton
+        public static ButtonElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#create")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#create")).Button(); }
         }
     }
 }

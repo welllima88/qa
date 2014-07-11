@@ -6,14 +6,14 @@ namespace Six.Scs.QA.Selenium.Location
 {
     public class LocationEdit : WebObject
     {
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
             get { return LocationCreate.SaveButton; }
         }
 
-        public static IWebElement CancelButton
+        public static IWebElementAdapter CancelButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("button[name='cancel']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='cancel']")); }
         }
 
         public static string SapNumber
@@ -111,7 +111,7 @@ namespace Six.Scs.QA.Selenium.Location
 
         public static string Guid
         {
-            get { return WebDriver.FindElement(By.CssSelector(LocationRes.GUID)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(LocationRes.GUID)).Text; }
         }
 
         public static string Reason

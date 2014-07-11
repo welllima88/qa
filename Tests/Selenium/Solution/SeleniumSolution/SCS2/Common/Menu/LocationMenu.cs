@@ -5,49 +5,49 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class LocationMenu : WebObject
     {
-        public static IWebElement Location
+        public static IWebElementAdapter Location
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Location)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_Location)); }
         }
 
-        public static IWebElement TerminalCreate
+        public static IWebElementAdapter TerminalCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_TerminalCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_TerminalCreate)); }
         }
 
-        public static IWebElement CreateInfotext
+        public static IWebElementAdapter CreateInfotext
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_InfotextCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_InfotextCreate)); }
         }
 
-        public static IWebElement ContactCreate
+        public static IWebElementAdapter ContactCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_ContactCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_ContactCreate)); }
         }
 
-        public static IWebElement LocationEdit
+        public static IWebElementAdapter LocationEdit
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_LocationEdit)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_LocationEdit)); }
         }
 
-        public static IWebElement LocationQuit
+        public static IWebElementAdapter LocationQuit
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_LocationQuit)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_LocationQuit)); }
         }
 
-        public static IWebElement Terminals
+        public static IWebElementAdapter Terminals
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Terminals)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_Terminals)); }
         }
 
-        public static IWebElement Contacts
+        public static IWebElementAdapter Contacts
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Contacts)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_Contacts)); }
         }
 
-        public static IWebElement Infotexts
+        public static IWebElementAdapter Infotexts
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LocationMenu_Infotexts)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LocationMenu_Infotexts)); }
         }
     }
 }

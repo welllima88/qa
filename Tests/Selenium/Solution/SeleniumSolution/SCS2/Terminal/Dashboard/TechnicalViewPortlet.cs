@@ -1,5 +1,6 @@
 using System;
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 {
@@ -17,51 +18,51 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(1)" + Suffix)).Text;
             }
         }
 
-        public IWebElement SerialNo
+        public IWebElementAdapter SerialNo
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(3)" + Suffix));
             }
         }
 
-        public IWebElement Password
+        public IWebElementAdapter Password
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(4)" + Suffix));
             }
         }
 
-        public IWebElement TerminalType
+        public IWebElementAdapter TerminalType
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(5)" + Suffix));
             }
         }
 
-        public IWebElement NetType
+        public IWebElementAdapter NetType
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(6)" + Suffix));
             }

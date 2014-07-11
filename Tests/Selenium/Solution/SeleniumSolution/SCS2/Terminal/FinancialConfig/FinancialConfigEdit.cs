@@ -23,9 +23,9 @@ namespace Six.Scs.QA.Selenium.Terminal.FinancialConfig
             }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnSave")); }
         }
     }
 }

@@ -5,154 +5,154 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class CustomerMenu : WebObject
     {
-        public static IWebElement Customer
+        public static IWebElementAdapter Customer
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Customer)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Customer)); }
         }
 
-        public static IWebElement CustomerCreate
+        public static IWebElementAdapter CustomerCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_CustomerCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_CustomerCreate)); }
         }
 
-        public static IWebElement LocationCreate
+        public static IWebElementAdapter LocationCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_LocationCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_LocationCreate)); }
         }
 
-        public static IWebElement TerminalCreate
+        public static IWebElementAdapter TerminalCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_TerminalCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_TerminalCreate)); }
         }
 
-        public static IWebElement CustomerEdit
+        public static IWebElementAdapter CustomerEdit
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_CustomerEdit));
             }
         }
 
-        public static IWebElement CustomerDeactivate
+        public static IWebElementAdapter CustomerDeactivate
         {
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_CustomerDeactivate));
+                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_CustomerDeactivate));
             }
         }
 
-        public static IWebElement LocationsOfCustomer
+        public static IWebElementAdapter LocationsOfCustomer
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_LocationsOfCustomer));
             }
         }
 
-        public static IWebElement TerminalsOfCustomerLocation
+        public static IWebElementAdapter TerminalsOfCustomerLocation
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_TerminalsOfCustomerLocation));
             }
         }
 
-        public static IWebElement AllMpds
+        public static IWebElementAdapter AllMpds
         {
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_AllMpds));
+                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_AllMpds));
             }
         }
 
-        public static IWebElement AllTerminals
+        public static IWebElementAdapter AllTerminals
         {
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_AllTerminals));
+                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_AllTerminals));
             }
         }
 
-        public static IWebElement Tickets
+        public static IWebElementAdapter Tickets
         {
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Tickets));
+                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Tickets));
             }
         }
 
-        public static IWebElement Users
+        public static IWebElementAdapter Users
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_Users));
             }
         }
 
-        public static IWebElement Contacts
+        public static IWebElementAdapter Contacts
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_Contacts));
             }
         }
 
-        public static IWebElement ContactCreate
+        public static IWebElementAdapter ContactCreate
         {
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_ContactCreate));
+                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_ContactCreate));
             }
         }
 
-        public static IWebElement BillingAdresses
+        public static IWebElementAdapter BillingAdresses
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_BillingAdresses));
             }
         }
 
-        public static IWebElement BillingAdressCreate
+        public static IWebElementAdapter BillingAdressCreate
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(MenuRes.CustomerMenu_BillingAdressCreate));
             }
         }
 
-        public static IWebElement BillingAddressEdit
+        public static IWebElementAdapter BillingAddressEdit
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_BillingAddressEdit)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_BillingAddressEdit)); }
         }
 
-        public static IWebElement Infotexts
+        public static IWebElementAdapter Infotexts
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_Infotexts)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Infotexts)); }
         }
 
-        public static IWebElement CreateInfotext
+        public static IWebElementAdapter CreateInfotext
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.CustomerMenu_InfotextCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_InfotextCreate)); }
         }
     }
 }

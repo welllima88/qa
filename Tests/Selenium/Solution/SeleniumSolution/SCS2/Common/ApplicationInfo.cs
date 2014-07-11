@@ -5,14 +5,14 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class ApplicationInfo : WebObject
     {
-        public static IWebElement ApplicationName
+        public static IWebElementAdapter ApplicationName
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ApplicationInfo_ApplicationName)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ApplicationInfo_ApplicationName)); }
         }
 
-        public static IWebElement Environment
+        public static IWebElementAdapter Environment
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.ApplicationInfo_Environment)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ApplicationInfo_Environment)); }
         }
     }
 }

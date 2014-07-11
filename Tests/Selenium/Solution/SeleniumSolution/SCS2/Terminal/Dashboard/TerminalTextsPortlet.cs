@@ -1,10 +1,11 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 {
     public class TerminalTextsPortlet : PortletViewBase
     {
-        public static IWebElement CreateInfotext
+        public static IWebElementAdapter CreateInfotext
         {
             get
             {

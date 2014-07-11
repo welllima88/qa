@@ -5,23 +5,23 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class ContactMenu : WebObject
     {
-        public static IWebElement Contact
+        public static ButtonElement Contact
         {
             get
             {
                 return
-                    WebDriver.FindElement(
-                        By.CssSelector(MenuRes.ContactMenu_Contact));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(MenuRes.ContactMenu_Contact)).Button();
             }
         }
 
-        public static IWebElement ContactEdit
+        public static ButtonElement ContactEdit
         {
             get
             {
                 return
-                    WebDriver.FindElement(
-                        By.CssSelector(MenuRes.ContactMenu_ContactEdit));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(MenuRes.ContactMenu_ContactEdit)).Button();
             }
         }
     }

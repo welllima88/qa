@@ -5,19 +5,19 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class Footer : WebObject
     {
-        public static IWebElement Feedback
+        public static IWebElementAdapter Feedback
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Feedback)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Feedback)); }
         }
 
-        public static IWebElement Disclaimer
+        public static IWebElementAdapter Disclaimer
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
         }
 
-        public static IWebElement Copyright
+        public static IWebElementAdapter Copyright
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.Footer_Copyright)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Copyright)); }
         }
     }
 }

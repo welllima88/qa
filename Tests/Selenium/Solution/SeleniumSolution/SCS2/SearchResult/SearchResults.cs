@@ -10,17 +10,17 @@ namespace Six.Scs.QA.Selenium.SearchResult
         /// </summary>
         public static string Headline
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content h1")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content h1")).Text; }
         }
 
-        public static IWebElement LoadMoreLink
+        public static IWebElementAdapter LoadMoreLink
         {
-            get { return WebDriver.FindElement(By.CssSelector("span input[id^='loadMore']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("span input[id^='loadMore']")); }
         }
 
-        public static IWebElement FilterTextField
+        public static IWebElementAdapter FilterTextField
         {
-            get { return WebDriver.FindElement(By.CssSelector("span input[id$='Filter']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")); }
         }
 
         public static CustomerResult Customers()

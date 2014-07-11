@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class TerminalMenu : WebObject
     {
-        public static IWebElement Terminal
+        public static IWebElementAdapter Terminal
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#leftHandMenu a[href*='/TerminalDashboard/?TERMINALID=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/TerminalDashboard/?TERMINALID=']")); }
         }
     }
 }

@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.SearchResult
 {
@@ -9,9 +10,9 @@ namespace Six.Scs.QA.Selenium.SearchResult
             Prefix = "div#terminalDiv.container ";
         }
 
-        public static IWebElement First()
+        public static IWebElementAdapter First()
         {
-            IWebElement element =
+            IWebElementAdapter element =
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "div#terminalDiv tbody#terminalResult tr td a#terminalLink[href*='/TerminalDashboard/?terminalId=']"));

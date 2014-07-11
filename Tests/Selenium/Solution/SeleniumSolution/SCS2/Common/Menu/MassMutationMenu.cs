@@ -5,40 +5,46 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class MassMutationMenu : WebObject
     {
-        public static IWebElement CustomerCreate
+        public static IWebElementAdapter CustomerCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_CustomerCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_CustomerCreate)); }
         }
 
-        public static IWebElement LocationCreate
+        public static IWebElementAdapter LocationCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_LocationCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_LocationCreate)); }
         }
 
-        public static IWebElement TerminalCreate
+        public static IWebElementAdapter TerminalCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_TerminalCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_TerminalCreate)); }
         }
 
-        public static IWebElement ContractCreate
+        public static IWebElementAdapter ContractCreate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_ContractCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_ContractCreate)); }
         }
 
-        public static IWebElement BusinessTemplateMigrate
+        public static IWebElementAdapter BusinessTemplateMigrate
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.MassMutationMenu_BusinessTemplateMigrate)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_BusinessTemplateMigrate));
+            }
         }
 
-        public static IWebElement AcquirerChange
+        public static IWebElementAdapter AcquirerChange
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.AcquirerChange)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.AcquirerChange)); }
         }
 
-        public static IWebElement MassMutation
+        public static IWebElementAdapter MassMutation
         {
             // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
-            get { return WebDriver.FindElement(By.XPath("//td[@id='leftHandMenu']//td[text()=' Massenmutation']")); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.XPath("//td[@id='leftHandMenu']//td[text()=' Massenmutation']"));
+            }
         }
 
         public static void Expand(bool doExpand)
@@ -46,8 +52,9 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
 
             const string menuName = "Massenmutation";
-            IWebElement massMenu = WebDriver.FindElement(By.CssSelector("td#leftHandMenu a.level2 td")).
-                FindElement(By.XPath("//td[text()=' " + menuName + "']"));
+            IWebElement massMenu =
+                WebDriver.FindElement(By.CssSelector("td#leftHandMenu a.level2 td"))
+                    .FindElement(By.XPath("//td[text()=' " + menuName + "']"));
             if (massMenu.GetCssValue("class").Contains("expanderOpen") ^ doExpand)
             {
                 massMenu.Click();

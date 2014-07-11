@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 {
@@ -9,37 +10,37 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
             PortletId = "div#frame_SalesPortlet "; // div#SetupDataTree ul
         }
 
-        public IWebElement ContractType
+        public IWebElementAdapter ContractType
         {
-            get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(1)" + Suffix)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(1)" + Suffix)); }
         }
 
-        public IWebElement InstallType
+        public IWebElementAdapter InstallType
         {
-            get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(2)" + Suffix)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(2)" + Suffix)); }
         }
 
-        public IWebElement DeliverDate
+        public IWebElementAdapter DeliverDate
         {
-            get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(3)" + Suffix)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(3)" + Suffix)); }
         }
 
-        public IWebElement SupportContract
+        public IWebElementAdapter SupportContract
         {
-            get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(4)" + Suffix)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(4)" + Suffix)); }
         }
 
-        public IWebElement CashIntegrator
+        public IWebElementAdapter CashIntegrator
         {
-            get { return WebDriver.FindElement(By.CssSelector(Prefix + PortletId + "li:nth-child(5)" + Suffix)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(5)" + Suffix)); }
         }
 
-        public static IWebElement TerminalDuplicate
+        public static IWebElementAdapter TerminalDuplicate
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']"));
             }

@@ -7,24 +7,24 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 {
     public class SimCardView : WebObject
     {
-        public static IWebElement LockButton
+        public static ButtonElement LockButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='lock']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='lock']")).Button(); }
         }
 
-        public static IWebElement UnlinkButton
+        public static ButtonElement UnlinkButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='unlink']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='unlink']")).Button(); }
         }
 
-        public static IWebElement EditButton
+        public static ButtonElement EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")).Button(); }
         }
 
-        public static IWebElement CreateButton
+        public static ButtonElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")).Button(); }
         }
 
         public static string NetProvider
@@ -77,7 +77,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
             get
             {
                 // take alle History Elements/ Wrap each in a SimHistory Element/ return a List of SimHistoryElements
-                // IEnumerable<IWebElement> d = WebDriver.FindElements(By.CssSelector("#SIMCard_History"));
+                // IEnumerable<IWebElementAdapter> d = WebDriver.FindElements(By.CssSelector("#SIMCard_History"));
                 // d.;
                 // IEnumerable<SimHistoryElement> simHistory;
                 // return simHistory;
@@ -88,7 +88,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
     public class SimHistoryElement : WebObject
     {
-        public SimHistoryElement(IWebElement webElement)
+        public SimHistoryElement(IWebElementAdapter webElement)
         {
         }
 

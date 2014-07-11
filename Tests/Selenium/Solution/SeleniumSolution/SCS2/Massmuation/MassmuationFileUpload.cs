@@ -10,13 +10,13 @@ namespace Six.Scs.QA.Selenium.Massmuation
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblMainTitle>h1")).Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblMainTitle>h1")).Text;
             }
         }
 
         public static string Description
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content>span>p")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content>span>p")).Text; }
         }
 
         public static IWebElementAdapter FileChooser
@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static string DownloadTemplate
         {
-            get { return WebDriver.FindElement(By.Id("ctl00_bodyContentPlaceHolder_lbDownload")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("ctl00_bodyContentPlaceHolder_lbDownload")).Text; }
         }
     }
 }

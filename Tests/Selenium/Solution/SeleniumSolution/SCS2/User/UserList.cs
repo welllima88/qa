@@ -5,7 +5,7 @@ namespace Six.Scs.QA.Selenium.User
 {
     public class UserList : WebObject
     {
-        public static IWebElement UserCreate
+        public static IWebElementAdapter UserCreate
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content button[name='create']")); }
         }

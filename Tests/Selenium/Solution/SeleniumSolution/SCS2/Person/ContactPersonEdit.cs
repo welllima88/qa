@@ -5,19 +5,19 @@ namespace Six.Scs.QA.Selenium.Person
 {
     public class ContactPersonEdit : WebObject
     {
-        public static IWebElement CancelButton
+        public static IWebElementAdapter CancelButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("button#cancel")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#cancel")); }
         }
 
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
         }
 
-        public static IWebElement ClickAdressFromLocation
+        public static IWebElementAdapter ClickAdressFromLocation
         {
-            get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#defaultAdress")); }
         }
 
         public static string FirstName

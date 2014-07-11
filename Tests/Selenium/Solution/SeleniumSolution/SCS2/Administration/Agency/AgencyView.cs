@@ -20,9 +20,9 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             get { return WebDriver.FindAdaptedElement(By.Id("AgencyLanguage")).Text; }
         }
 
-        public static IWebElement EditButton
+        public static ButtonElement EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")).Button(); }
         }
 
         public static string StreetNo
@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
 
         public static string Supplier
         {
-            get { return WebDriver.FindElement(By.Id("Mandant")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Mandant")).Text; }
         }
     }
 }

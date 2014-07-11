@@ -5,9 +5,9 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class SimCardMenu : WebObject
     {
-        public static IWebElement SimCardManagement
+        public static IWebElementAdapter SimCardManagement
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.SimCardManagement)); }
         }
     }
 }

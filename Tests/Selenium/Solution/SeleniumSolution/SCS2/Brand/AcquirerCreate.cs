@@ -12,8 +12,7 @@ namespace Six.Scs.QA.Selenium.Brand
             get
             {
                 return
-                    WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).GetAttribute(
-                        "value");
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextField().Text();
             }
             set
             {
@@ -21,7 +20,7 @@ namespace Six.Scs.QA.Selenium.Brand
                     .TextField().TypeText(value);
             }
             //Check date format at this point? -> NOOO! In test method is right place
-            //    Assert.IsTrue(Regex.IsMatch(WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
+            //    Assert.IsTrue(Regex.IsMatch(WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
         }
 
         public static String Remark
@@ -52,8 +51,8 @@ namespace Six.Scs.QA.Selenium.Brand
         /// <param name="messageToAcquirers">set message should be created and send or not</param>
         public static void SetMessageToAllAcquirers(bool messageToAcquirers)
         {
-            ReadOnlyCollection<IWebElement> acquirers =
-                WebDriver.FindElements(By.CssSelector("input[id*='cbxAcquirerMessages'].check"));
+            ReadOnlyCollection<IWebElementAdapter> acquirers =
+                WebDriver.FindAdaptedElements(By.CssSelector("input[id*='cbxAcquirerMessages'].check"));
             foreach (IWebElementAdapter acquirer in acquirers)
             {
                 acquirer.CheckBox().Set(messageToAcquirers);
@@ -62,7 +61,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void ConfirmAcquirerData()
         {
-            WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsNextButton")).Click();
+            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsNextButton")).Click();
         }
 
         public static void SaveAndCreate()

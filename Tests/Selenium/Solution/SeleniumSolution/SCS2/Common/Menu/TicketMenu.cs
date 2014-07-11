@@ -5,26 +5,26 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 {
     public class TicketMenu : WebObject
     {
-        public static IWebElement NotAssigned
+        public static IWebElementAdapter NotAssigned
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_NotAssigned)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.TicketMenu_NotAssigned)); }
         }
 
-        public static IWebElement MyGroup
+        public static IWebElementAdapter MyGroup
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_MyGroup)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.TicketMenu_MyGroup)); }
         }
 
-        public static IWebElement My
+        public static IWebElementAdapter My
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.TicketMenu_My)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.TicketMenu_My)); }
         }
 
-        public static IWebElement Installations
+        public static IWebElementAdapter Installations
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("a[href*='/TicketIntegration/DeliveryTicketsInstall/']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/TicketIntegration/DeliveryTicketsInstall/']"));
             }
         }
     }

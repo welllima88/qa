@@ -5,10 +5,10 @@ namespace Six.Scs.QA.Selenium.SearchResult
 {
     public class LocationResult : WebObject
     {
-        public static IWebElement Result()
+        public static IWebElementAdapter Result()
         {
             return
-                WebDriver.FindElement(
+                WebDriver.FindAdaptedElement(
                     By.CssSelector("div#locationDiv tbody#locationResult tr td a#locationLink[href*='/Location/']"));
         }
     }

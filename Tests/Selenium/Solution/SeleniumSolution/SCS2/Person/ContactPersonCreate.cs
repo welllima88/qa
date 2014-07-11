@@ -11,14 +11,14 @@ namespace Six.Scs.QA.Selenium.Person
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#addition")).TextField().Text(); }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
         }
 
-        public static IWebElement ClickAdressFromLocation
+        public static ButtonElement ClickAdressFromLocation
         {
-            get { return WebDriver.FindElement(By.CssSelector("button#defaultAdress")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#defaultAdress")).Button(); }
         }
 
         public static string FirstName
@@ -35,7 +35,10 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string Salutation
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Salutation)).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Salutation)).TextField().TypeText(value);
+            }
             get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonCreateRes.Salutation)).Text; }
         }
 

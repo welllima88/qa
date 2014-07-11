@@ -88,9 +88,9 @@ namespace Six.Scs.QA.Selenium.Location
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Web")).TextField().TypeText(value); }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("input[value=\"Speichern\"]")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input[value=\"Speichern\"]")); }
         }
     }
 }

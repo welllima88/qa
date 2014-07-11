@@ -77,9 +77,9 @@ namespace Six.Scs.QA.Selenium.Terminal.TraceLogConfig
             }
         }
 
-        public static IWebElementAdapter Save
+        public static ButtonElement Save
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#activate")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#activate")).Button(); }
         }
 
         public static IWebElementAdapter Deactivate

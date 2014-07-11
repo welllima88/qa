@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Common {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CommonRes {
+    public class CommonRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Common {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Six.Scs.QA.Selenium.Common.CommonRes", typeof(CommonRes).Assembly);
@@ -51,7 +51,7 @@ namespace Six.Scs.QA.Selenium.Common {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div#applicationBar div#applicationInformation span#ctl00_lblApplicationName.
         /// </summary>
-        internal static string ApplicationInfo_ApplicationName {
+        public static string ApplicationInfo_ApplicationName {
             get {
                 return ResourceManager.GetString("ApplicationInfo_ApplicationName", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div#applicationBar div#applicationInformation span#ctl00_lblEnvironmentText.
         /// </summary>
-        internal static string ApplicationInfo_Environment {
+        public static string ApplicationInfo_Environment {
             get {
                 return ResourceManager.GetString("ApplicationInfo_Environment", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#footerNavigationBar&gt;div#copyright.
         /// </summary>
-        internal static string Footer_Copyright {
+        public static string Footer_Copyright {
             get {
                 return ResourceManager.GetString("Footer_Copyright", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#footerNavigationBar&gt;a[href*=&apos;/disclaimer.aspx&apos;].
         /// </summary>
-        internal static string Footer_Disclaimer {
+        public static string Footer_Disclaimer {
             get {
                 return ResourceManager.GetString("Footer_Disclaimer", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#footerNavigationBar&gt;a#ctl00_hplFeedback.
         /// </summary>
-        internal static string Footer_Feedback {
+        public static string Footer_Feedback {
             get {
                 return ResourceManager.GetString("Footer_Feedback", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#footerFunctionBar&gt;a[href*=&apos;JavaScript:Page.Print()&apos;].
         /// </summary>
-        internal static string Footer_PrintPage {
+        public static string Footer_PrintPage {
             get {
                 return ResourceManager.GetString("Footer_PrintPage", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#footerFunctionBar&gt;a[href*=&apos;JavaScript:window.scroll(0,0)&apos;].
         /// </summary>
-        internal static string Footer_ScrollUp {
+        public static string Footer_ScrollUp {
             get {
                 return ResourceManager.GetString("Footer_ScrollUp", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.formAlert ul li.
         /// </summary>
-        internal static string FormAlert_FormAlertElements {
+        public static string FormAlert_FormAlertElements {
             get {
                 return ResourceManager.GetString("FormAlert_FormAlertElements", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to html&gt;body&gt;img.companyLogo.
         /// </summary>
-        internal static string Lobby_CompanyLogo {
+        public static string Lobby_CompanyLogo {
             get {
                 return ResourceManager.GetString("Lobby_CompanyLogo", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#content h1.
         /// </summary>
-        internal static string Lobby_Headline {
+        public static string Lobby_Headline {
             get {
                 return ResourceManager.GetString("Lobby_Headline", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container ul.
         /// </summary>
-        internal static string LobbyNews_NewsElements {
+        public static string LobbyNews_NewsElements {
             get {
                 return ResourceManager.GetString("LobbyNews_NewsElements", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container span#ctl00_bodyContentPlaceHolder_lblNewsTitle h2.
         /// </summary>
-        internal static string LobbyNews_NewsTitle {
+        public static string LobbyNews_NewsTitle {
             get {
                 return ResourceManager.GetString("LobbyNews_NewsTitle", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#metaNavBar a#ctl00_hplLanguages.menu.
         /// </summary>
-        internal static string MetaNavBar_Languages {
+        public static string MetaNavBar_Languages {
             get {
                 return ResourceManager.GetString("MetaNavBar_Languages", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#metaNavBar a#ctl00_hplLogout[href*=&apos;/Logout.aspx&apos;].
         /// </summary>
-        internal static string MetaNavBar_Logout {
+        public static string MetaNavBar_Logout {
             get {
                 return ResourceManager.GetString("MetaNavBar_Logout", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#metaNavBar a#ctl00_hplSimpleUserInfo[href*=&apos;/User/UserEdit.aspx?PageMode=view&amp;UserName=&apos;].
         /// </summary>
-        internal static string MetaNavBar_User {
+        public static string MetaNavBar_User {
             get {
                 return ResourceManager.GetString("MetaNavBar_User", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*=&apos;AdminOverview&apos;].
         /// </summary>
-        internal static string NavigationBar_Administration {
+        public static string NavigationBar_Administration {
             get {
                 return ResourceManager.GetString("NavigationBar_Administration", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to a#ctl00_hplMenuMenuCurrent.
         /// </summary>
-        internal static string NavigationBar_Current {
+        public static string NavigationBar_Current {
             get {
                 return ResourceManager.GetString("NavigationBar_Current", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*=&apos;/Lobby/&apos;].
         /// </summary>
-        internal static string NavigationBar_Lobby {
+        public static string NavigationBar_Lobby {
             get {
                 return ResourceManager.GetString("NavigationBar_Lobby", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a#ctl00_hplMenuMore.moreLink.
         /// </summary>
-        internal static string NavigationBar_MoreMenu {
+        public static string NavigationBar_MoreMenu {
             get {
                 return ResourceManager.GetString("NavigationBar_MoreMenu", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#tabNavBar .
         /// </summary>
-        internal static string NavigationBar_Prefix {
+        public static string NavigationBar_Prefix {
             get {
                 return ResourceManager.GetString("NavigationBar_Prefix", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*=&apos;AnalysisOverview&apos;].
         /// </summary>
-        internal static string NavigationBar_Reporting {
+        public static string NavigationBar_Reporting {
             get {
                 return ResourceManager.GetString("NavigationBar_Reporting", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to ul#TicketList.
         /// </summary>
-        internal static string ProcessTickets_Container {
+        public static string ProcessTickets_Container {
             get {
                 return ResourceManager.GetString("ProcessTickets_Container", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to ul#BatchHistoryList.
         /// </summary>
-        internal static string ProcessTickets_Newest {
+        public static string ProcessTickets_Newest {
             get {
                 return ResourceManager.GetString("ProcessTickets_Newest", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to ul#ElementHistoryList.
         /// </summary>
-        internal static string ProcessTickets_Oldest {
+        public static string ProcessTickets_Oldest {
             get {
                 return ResourceManager.GetString("ProcessTickets_Oldest", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div#searchBar&gt;p#searchSubmit.
         /// </summary>
-        internal static string QuickSearch_SearchButton {
+        public static string QuickSearch_SearchButton {
             get {
                 return ResourceManager.GetString("QuickSearch_SearchButton", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div#searchBar&gt;input#searchText.
         /// </summary>
-        internal static string QuickSearch_SearchField {
+        public static string QuickSearch_SearchField {
             get {
                 return ResourceManager.GetString("QuickSearch_SearchField", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container&gt;ul#ElementHistoryList&gt;li&gt;a.
         /// </summary>
-        internal static string RecentElements_Elements {
+        public static string RecentElements_Elements {
             get {
                 return ResourceManager.GetString("RecentElements_Elements", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container&gt;ul#ElementHistoryList&gt;li:first-child&gt;a.
         /// </summary>
-        internal static string RecentElements_MostRecent {
+        public static string RecentElements_MostRecent {
             get {
                 return ResourceManager.GetString("RecentElements_MostRecent", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to a#ctl00_bodyContentPlaceHolder_rptElementHistory_ctl.
         /// </summary>
-        internal static string RecentElements_RecentElement_Prefix {
+        public static string RecentElements_RecentElement_Prefix {
             get {
                 return ResourceManager.GetString("RecentElements_RecentElement_Prefix", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to _hplElementHistory.
         /// </summary>
-        internal static string RecentElements_RecentElement_Suffix {
+        public static string RecentElements_RecentElement_Suffix {
             get {
                 return ResourceManager.GetString("RecentElements_RecentElement_Suffix", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container&gt;ul#BatchHistoryList&gt;li&gt;a.
         /// </summary>
-        internal static string RecentMassmutations_Elements {
+        public static string RecentMassmutations_Elements {
             get {
                 return ResourceManager.GetString("RecentMassmutations_Elements", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to #ctl00_bodyContentPlaceHolder_lblBatchTitle.
         /// </summary>
-        internal static string RecentMassmutations_Header {
+        public static string RecentMassmutations_Header {
             get {
                 return ResourceManager.GetString("RecentMassmutations_Header", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to div.container a#ctl00_bodyContentPlaceHolder_rptBatchHistory_ctl.
         /// </summary>
-        internal static string RecentMassmutations_RecentElement_Prefix {
+        public static string RecentMassmutations_RecentElement_Prefix {
             get {
                 return ResourceManager.GetString("RecentMassmutations_RecentElement_Prefix", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace Six.Scs.QA.Selenium.Common {
         /// <summary>
         ///   Looks up a localized string similar to _hplBatchHistory.
         /// </summary>
-        internal static string RecentMassmutations_RecentElement_Suffix {
+        public static string RecentMassmutations_RecentElement_Suffix {
             get {
                 return ResourceManager.GetString("RecentMassmutations_RecentElement_Suffix", resourceCulture);
             }

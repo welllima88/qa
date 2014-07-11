@@ -8,44 +8,44 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     /// </summary>
     public class LobbyMenu : WebObject
     {        
-        public static IWebElement Lobby
+        public static IWebElementAdapter Lobby
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
         }
 
-        public static IWebElement SimCardManage
+        public static IWebElementAdapter SimCardManage
         {
-            get { return WebDriver.FindElement(By.CssSelector(MenuRes.SimCardManagement)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.SimCardManagement)); }
         }
 
-        public static IWebElement SerialNumberManage
+        public static IWebElementAdapter SerialNumberManage
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/SerialNumberManagement/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SerialNumberManagement/']")); }
         }
 
-        public static IWebElement BillableTerminalsMenu
+        public static IWebElementAdapter BillableTerminalsMenu
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/BillableTerminals/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/BillableTerminals/']")); }
         }
 
-        public static IWebElement PostDeliveryTickets
+        public static IWebElementAdapter PostDeliveryTickets
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/DeliveryTicketsPost/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/DeliveryTicketsPost/']")); }
         }
 
-        public static IWebElement AccessoireOrders
+        public static IWebElementAdapter AccessoireOrders
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
         }
 
-        public static IWebElement HardwareManage
+        public static IWebElementAdapter HardwareManage
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/HWManagement']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/HWManagement']")); }
         }
 
-        public static IWebElement AcccessoiresOrders
+        public static IWebElementAdapter AcccessoiresOrders
         {
-            get { return WebDriver.FindElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
         }
     }
 }

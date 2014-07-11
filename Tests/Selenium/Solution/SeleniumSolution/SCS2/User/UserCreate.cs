@@ -49,9 +49,9 @@ namespace Six.Scs.QA.Selenium.User
         {
             set { WebDriver.FindAdaptedElement(By.Id("description")).TextField().TypeText(value); }
         }
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
     }
 }

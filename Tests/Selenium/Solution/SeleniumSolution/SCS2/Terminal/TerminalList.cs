@@ -5,7 +5,7 @@ namespace Six.Scs.QA.Selenium.Terminal
 {
     public class TerminalList : WebObject
     {
-        public static IWebElement First()
+        public static IWebElementAdapter First()
         {
             return
                 WebDriver.FindAdaptedElement(

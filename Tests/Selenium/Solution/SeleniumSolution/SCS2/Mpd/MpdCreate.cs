@@ -20,9 +20,9 @@ namespace Six.Scs.QA.Selenium.Mpd
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#InetPort")).TextField().TypeText(value); }
         }
 
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#save")).Button(); }
         }
     }
 }

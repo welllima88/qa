@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.SearchResult
 {
@@ -9,9 +10,9 @@ namespace Six.Scs.QA.Selenium.SearchResult
             Prefix = "div#userDiv ";
         }
 
-        public static IWebElement First()
+        public static IWebElementAdapter First()
         {
-            IWebElement element =
+            IWebElementAdapter element =
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "div#userDiv tbody#userResult tr td a#userLink[href*='/User/Index?UserName=']"));

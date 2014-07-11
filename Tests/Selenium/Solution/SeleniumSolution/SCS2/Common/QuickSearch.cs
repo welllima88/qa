@@ -15,13 +15,15 @@ namespace Six.Scs.QA.Selenium.Common
             }
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField))
+                    .TextField()
+                    .TypeText(value);
             }
         }
 
-        public static IWebElement SearchButton
+        public static IWebElementAdapter SearchButton
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchButton)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchButton)); }
         }
 
         public static void HitEnter()

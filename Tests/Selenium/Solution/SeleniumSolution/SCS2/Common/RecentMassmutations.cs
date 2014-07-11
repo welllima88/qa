@@ -9,15 +9,15 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static String Header
         {
-            get { return WebDriver.FindElement(By.CssSelector(CommonRes.RecentMassmutations_Header)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.RecentMassmutations_Header)).Text; }
         }
 
-        public static ReadOnlyCollection<IWebElement> Elements
+        public static ReadOnlyCollection<IWebElementAdapter> Elements
         {
-            get { return WebDriver.FindElements(By.CssSelector(CommonRes.RecentMassmutations_Elements)); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector(CommonRes.RecentMassmutations_Elements)); }
         }
 
-        public static IWebElement MostRecent
+        public static IWebElementAdapter MostRecent
         {
             get { return Elements[0]; }
         }

@@ -13,32 +13,32 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 
         protected string PortletId { get; set; }
 
-        public IWebElement PortletTitle
+        public IWebElementAdapter PortletTitle
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(Prefix + PortletId + "h1.portlet-header"));
             }
         }
 
-        public IWebElement Refresh
+        public IWebElementAdapter Refresh
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(Prefix + PortletId + "h1 span[title='refresh']"));
             }
         }
 
-        public IWebElement Minimize
+        public IWebElementAdapter Minimize
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(Prefix + PortletId + "h1 span[title='minimize']"));
             }
         }

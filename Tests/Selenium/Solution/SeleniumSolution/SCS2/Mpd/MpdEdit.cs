@@ -20,9 +20,9 @@ namespace Six.Scs.QA.Selenium.Mpd
             set { MpdCreate.Port = value; }
         }
 
-        public static IWebElement SaveButton
+        public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "span#ctl00_bodyContentPlaceHolder_terminalAttribute_lblTerminalTypeValue>span")).Text;
             }
@@ -40,7 +40,7 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "span#ctl00_bodyContentPlaceHolder_terminalAttribute_lblRefSystemValue>span")).Text;
             }
@@ -50,7 +50,7 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector(
                         "span#ctl00_bodyContentPlaceHolder_terminalAttribute_lblNetTypeValue>span")).Text;
             }
@@ -60,7 +60,7 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindElement(
+                return WebDriver.FindAdaptedElement(
                     By.CssSelector("#ctl00_bodyContentPlaceHolder_terminalAttribute_dtpCreateDate")).Text;
             }
         }
@@ -95,19 +95,19 @@ namespace Six.Scs.QA.Selenium.Terminal
             }
         }
 
-        public static IWebElement ContinueButton
+        public static IWebElementAdapter ContinueButton
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
             }
         }
 
-        public static IWebElement SaveButton
+        public static IWebElementAdapter SaveButton
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
             }
         }
     }
