@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         /// <summary>
         ///     provide the public member
         /// </summary>
-        private readonly IWebElement _theWebElement;
+        protected readonly IWebElement _theWebElement;
 
         public WebElementAdapter(IWebElement webElement)
         {
@@ -30,24 +30,24 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         {
             if (TagName.Equals("select"))
             {
-                return new SelectElement(this);
+                return new SelectElement(_theWebElement);
             }
             throw new NotSelectableElementException(TagName);
         }
 
         public TextAreaElement TextArea()
         {
-            return new TextAreaElement(this);
+            return new TextAreaElement(_theWebElement);
         }
 
         public TextFieldElement TextField()
         {
-            return new TextFieldElement(this);
+            return new TextFieldElement(_theWebElement);
         }
 
         public PasswortTextFieldElement PasswordTextField()
         {
-            return new PasswortTextFieldElement(this);
+            return new PasswortTextFieldElement(_theWebElement);
         }
 
         public IWebElement FindElement(By by)
@@ -127,12 +127,12 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 
         public CheckBoxElement CheckBox()
         {
-            return new CheckBoxElement(this);
+            return new CheckBoxElement(_theWebElement);
         }
 
         public ButtonElement Button()
         {
-            return new ButtonElement(this);
+            return new ButtonElement(_theWebElement);
         }
     }
 }

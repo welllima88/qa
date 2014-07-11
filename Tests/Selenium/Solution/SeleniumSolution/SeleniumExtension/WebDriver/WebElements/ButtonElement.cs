@@ -2,20 +2,13 @@
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
-    public class ButtonElement
+    public class ButtonElement : WebElementAdapter
     {
-        private readonly IWebElement _webElement;
-
-        public ButtonElement(IWebElement webElement)
+        public ButtonElement(IWebElement webElement) : base(webElement)
         {
             //if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
             //    throw new NotButtonElementException(webElement.TagName, webElement.GetCssValue("type"));
-            _webElement = webElement;
         }
-
-        public void Click()
-        {
-            _webElement.Click();
-        }
+        
     }
 }

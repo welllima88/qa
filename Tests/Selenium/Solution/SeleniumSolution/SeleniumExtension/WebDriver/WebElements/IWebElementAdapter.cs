@@ -6,7 +6,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
     /// <summary>
     ///     Defines the additional methods that are necessary for a common WebElement
     /// </summary>
-    public interface IWebElementAdapter : IWebElement
+    public interface IWebElementAdapter 
     {
         CheckBoxElement CheckBox();
         SelectElement Selector();
@@ -14,5 +14,9 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         PasswortTextFieldElement PasswordTextField();
         TextAreaElement TextArea();
         ButtonElement Button();
+        string Text { get; }
+        bool Selected { get; }
+        bool Displayed { get; }
+        void Click();
     }
 }
