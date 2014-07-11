@@ -38,9 +38,9 @@ namespace Six.Scs.QA.Selenium.Administration
             }
         }
 
-        public static IWebElement ImportButton
+        public static ButtonElement ImportButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#import")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#import")).Button(); }
         }
 
         public static string Preview
