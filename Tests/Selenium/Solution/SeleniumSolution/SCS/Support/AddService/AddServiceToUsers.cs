@@ -1,15 +1,4 @@
-﻿/* RegExp
- * http://openbook.galileocomputing.de/csharp/kap17.htm
- * 
- * Strings als Parameter:
- * http://openbook.galileocomputing.de/csharp/kap19.htm
- * "Kundenname" statt k.Name Feld-Bezeichnung ist viel flexibler für zukünftige Struktur
- *  
- * http://openbook.galileocomputing.de/csharp/kap31.htm#t25
- * 
- */
-
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -24,13 +13,13 @@ namespace Six.Scs.QA.Selenium.Support.AddService
     public class AddServiceToUsers
     {
         [SetUp]
-        public static void Prepare(TestContext testContext)
+        public static void Prepare()
         {
-            _driver = new WebDriverAdapter(TestDirector.WebDriver);
+            TestDirector.PrepareBrowser();
+            _driver = TestDirector.WebDriver;
         }
 
         private static IWebDriverAdapter _driver;
-        public TestContext TestContext { get; set; }
 
         public static void RemoveService(string userId, string serviceId)
         {
