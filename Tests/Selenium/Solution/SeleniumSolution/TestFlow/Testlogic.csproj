@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{427078EA-B71A-4CA8-BF74-155AFDFD5C5B}</ProjectGuid>
+    <ProjectGuid>{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Selenium.SystemTest</RootNamespace>
-    <AssemblyName>SystemTest</AssemblyName>
+    <RootNamespace>Six.Scs.QA.Testlogic</RootNamespace>
+    <AssemblyName>TestFlow</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,12 +53,16 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="RegressionTest.cs" />
+    <Compile Include="Brands.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Infotext.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Mpd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestLauncher.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SCS2\SCS Platin.csproj">
@@ -73,14 +77,13 @@
       <Project>{2f418ef9-c1c1-4e32-8954-5ea1b5257f20}</Project>
       <Name>TestData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFlow\Testlogic.csproj">
-      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
-      <Name>Testlogic</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Workflow\Workflow.csproj">
       <Project>{6d99c089-eca8-42da-b74b-eaf28e457d83}</Project>
       <Name>Workflow</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

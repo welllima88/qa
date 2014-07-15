@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
-namespace Six.Scs.QA.Testflow
+namespace Six.Scs.QA.Testlogic
 {
     public class Infotext
     {

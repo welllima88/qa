@@ -2,7 +2,7 @@
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
 using Six.Scs.QA.TestData.ValueObjects;
 
-namespace Six.Scs.QA.Testflow
+namespace Six.Scs.QA.Testlogic
 {
     public class Brands
     {
