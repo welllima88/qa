@@ -99,5 +99,10 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             var url = new Uri(TestEnvironment.BaseUrl, suff);
             WebDriver.Url = url.AbsoluteUri;
         }
+
+        public static void Refresh()
+        {
+            WebDriver.Navigate().Refresh();
+        }
     }
 }
