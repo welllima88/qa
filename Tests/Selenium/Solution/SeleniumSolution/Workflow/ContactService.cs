@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.TestData.ValueObjects;
@@ -53,26 +52,6 @@ namespace Six.Scs.QA.Workflow
             ContactPersonEdit.Web = c.Contact.Web;
 
             ContactPersonEdit.SaveButton.Click();
-        }
-
-        public static void Check(ContactPersonData c)
-        {
-            Assert.AreEqual(c.Salutation, ContactPersonView.Salutation);
-            Assert.AreEqual(c.FirstName, ContactPersonView.FirstName);
-            Assert.AreEqual(c.Name, ContactPersonView.Name);
-            Assert.AreEqual(c.Contact.Language, ContactPersonView.Language);
-            Assert.AreEqual(c.Contact.Telephone, ContactPersonView.Telephone);
-            Assert.AreEqual(c.Contact.Mobile, ContactPersonView.Mobile);
-            Assert.AreEqual(c.Contact.Fax, ContactPersonView.Fax);
-            Assert.AreEqual(c.Contact.Email, ContactPersonView.Email);
-            Assert.AreEqual(c.Adress.Po, ContactPersonView.Po);
-            Assert.AreEqual(c.Adress.StreetNo, ContactPersonView.StreetNo);
-            Assert.AreEqual(c.Adress.Zip, ContactPersonView.Zip);
-            Assert.AreEqual(c.Adress.City, ContactPersonView.City);
-            Assert.AreEqual(c.Adress.Region, ContactPersonView.Region);
-            Assert.AreEqual(c.Adress.Country, ContactPersonView.Country);
-            Assert.AreEqual(c.Contact.Web, ContactPersonView.Web);
-            Assert.AreEqual(c.Adress.AdressAddition, ContactPersonView.AddressAddition);
         }
     }
 }
