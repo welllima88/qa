@@ -6,7 +6,7 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
-    public static class CustomerService
+    public static class Customer
     {
         public static void Create(CustomerData c)
         {

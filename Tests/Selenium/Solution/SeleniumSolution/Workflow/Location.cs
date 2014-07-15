@@ -6,7 +6,7 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
-    public static class LocationService
+    public static class Location
     {
         public static void Create(LocationData l)
         {

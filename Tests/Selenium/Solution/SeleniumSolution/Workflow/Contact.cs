@@ -4,7 +4,7 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
-    public static class ContactService
+    public static class Contact
     {
         public static void Create(ContactPersonData c)
         {

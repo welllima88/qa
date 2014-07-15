@@ -13,10 +13,10 @@ namespace Six.Scs.QA.TestFlow
         {
             Open(customer);
             CustomerData _customer = CustomerFactory.Edit();
-            CustomerService.Edit(_customer);
+            Workflow.Customer.Edit(_customer);
             Check(_customer);
 
-            LobbyService.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(_customer);
             return _customer;
         }
@@ -24,9 +24,9 @@ namespace Six.Scs.QA.TestFlow
         public static CustomerData Create()
         {
             CustomerData customer = CustomerFactory.Create();
-            CustomerService.Create(customer);
+            Workflow.Customer.Create(customer);
             Check(customer);
-            LobbyService.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(customer);
             return customer;
         }
