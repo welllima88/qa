@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.TestFlow;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
@@ -49,30 +50,30 @@ namespace Six.Scs.QA.Selenium.SystemTest
         [Test]
         public static void ExecuteRegressiontest()
         {
-            _customer = Customer.Create();
-            _location = Location.Create(_customer);
+            _customer = TestFlow.Customer.Create();
+            _location = TestFlow.Location.Create(_customer);
             _personOnCustomer = Contact.Create(_customer);
-            _terminalCustomer = Terminal.Create(_customer);
+            _terminalCustomer = TestFlow.Terminal.Create(_customer);
 
-            _customer = Customer.Edit(_customer);
+            _customer = TestFlow.Customer.Edit(_customer);
             Infotext.Create(_customer);
-            Mpd.Create(_customer);
+            TestFlow.Mpd.Create(_customer);
 
             Brands.Create(_terminalCustomer);
 
-            _terminalLocation = Terminal.Create(_location);
+            _terminalLocation = TestFlow.Terminal.Create(_location);
             Infotext.Create(_location);
 
-            _location = Location.Edit(_location);
+            _location = TestFlow.Location.Edit(_location);
             Infotext.Create(_terminalLocation);
 
             _personOnLocation = Contact.Create(_location);
             _personOnLocation = Contact.Edit(_personOnLocation);
 
-            _user = User.Create(_customer);
-            _user = User.Edit(_user);
+            _user = TestFlow.User.Create(_customer);
+            _user = TestFlow.User.Edit(_user);
 
-            _duplicatedTerminals = Terminal.Duplicate(_terminalLocation);
+            _duplicatedTerminals = TestFlow.Terminal.Duplicate(_terminalLocation);
 
             Brands.Create(_duplicatedTerminals[1]);
         }
