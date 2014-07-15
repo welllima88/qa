@@ -1,7 +1,5 @@
-using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
@@ -75,31 +73,6 @@ namespace Six.Scs.QA.Workflow
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
 
             LocationCreate.SaveButton.Click();
-        }
-
-        /// <summary>
-        ///     Verifies the location
-        /// </summary>
-        /// <param name="l">given location data</param>
-        public static void Check(LocationData l)
-        {
-            Assert.AreEqual(l.CompanyName, LocationView.CompanyName);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, LocationView.SbsDebitNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, LocationView.SbsAdressNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, LocationView.Ep2MerchantId);
-            Assert.AreEqual(l.Adress.StreetNo, LocationView.StreetNo);
-            Assert.AreEqual(l.Adress.Po, LocationView.Po);
-            Assert.AreEqual(l.Adress.Zip, LocationView.Zip);
-            Assert.AreEqual(l.Adress.City, LocationView.City);
-            Assert.AreEqual(l.Adress.Region, LocationView.Region);
-            Assert.AreEqual(l.Adress.AdressAddition, LocationView.AdressAddition);
-            Assert.AreEqual(l.Contact.Language, LocationView.Language);
-            Assert.AreEqual(l.Adress.Country, LocationView.Country);
-            Assert.AreEqual(l.Contact.Email, LocationView.Email);
-            Assert.AreEqual(l.Contact.Telephone, LocationView.Telephone);
-            Assert.AreEqual(l.Contact.Mobile, LocationView.Mobile);
-            Assert.AreEqual(l.Contact.Fax, LocationView.Fax);
-            Assert.AreEqual(l.Contact.Web, LocationView.Web);
         }
     }
 }
