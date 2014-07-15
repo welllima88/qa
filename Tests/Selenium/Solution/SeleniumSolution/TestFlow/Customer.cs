@@ -33,7 +33,7 @@ namespace Six.Scs.QA.TestFlow
 
         public static void Open(CustomerData customer)
         {
-            SearchService.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
+            Search.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
         }
 
         public static void Check(CustomerData c)
