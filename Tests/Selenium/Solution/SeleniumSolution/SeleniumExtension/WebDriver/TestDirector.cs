@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        public static IWebDriver WebDriver { get; private set; }
+        public static IWebDriverAdapter WebDriver { get; private set; }
 
         public static string BaseUrl { get; private set; }
 
@@ -39,14 +39,14 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             {
                 // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
                 // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
-                WebDriver = new FirefoxDriver(firefoxProfile);
+                WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
 
                 Debug.WriteLine("using Selenium on local");
             }
             else
             {
                 DesiredCapabilities capability = DesiredCapabilities(firefoxProfile);
-                WebDriver = new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20));
+                WebDriver = new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20)));
 
                 Debug.WriteLine("using Selenium Grid");
             }
