@@ -73,9 +73,9 @@
       <Project>{2f418ef9-c1c1-4e32-8954-5ea1b5257f20}</Project>
       <Name>TestData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFlow\TestFlow.csproj">
+    <ProjectReference Include="..\TestFlow\Testflow.csproj">
       <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
-      <Name>TestFlow</Name>
+      <Name>Testflow</Name>
     </ProjectReference>
     <ProjectReference Include="..\Workflow\Workflow.csproj">
       <Project>{6d99c089-eca8-42da-b74b-eaf28e457d83}</Project>

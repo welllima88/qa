@@ -5,7 +5,7 @@ using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
-namespace Six.Scs.QA.TestFlow
+namespace Six.Scs.QA.Testflow
 {
     public class Customer
     {

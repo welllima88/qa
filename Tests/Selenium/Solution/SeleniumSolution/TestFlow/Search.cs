@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.SearchResult;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.User;
 
-namespace Six.Scs.QA.TestFlow
+namespace Six.Scs.QA.Testflow
 {
     public class Search
     {
