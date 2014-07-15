@@ -6,7 +6,7 @@
     <ProjectGuid>{427078EA-B71A-4CA8-BF74-155AFDFD5C5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Selenium</RootNamespace>
+    <RootNamespace>Six.Scs.QA.Selenium.SystemTest</RootNamespace>
     <AssemblyName>SystemTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,9 +43,6 @@
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.2.42.0\lib\net40\WebDriver.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -56,7 +53,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="CustomerStructureRegressionTest.cs" />
+    <Compile Include="RegressionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestLauncher.cs" />
   </ItemGroup>
@@ -64,9 +61,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SCS2\SCS Platin.csproj">
+      <Project>{4e9cd23d-6dac-46b5-a8b2-9966647cb131}</Project>
+      <Name>SCS Platin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>
       <Name>SeleniumExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestData\TestData.csproj">
+      <Project>{2f418ef9-c1c1-4e32-8954-5ea1b5257f20}</Project>
+      <Name>TestData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestFlow\TestFlow.csproj">
+      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
+      <Name>TestFlow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow\Workflow.csproj">
+      <Project>{6d99c089-eca8-42da-b74b-eaf28e457d83}</Project>
+      <Name>Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
