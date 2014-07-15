@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        public static IWebDriver WebDriver;
+        public static IWebDriver WebDriver { get; private set; }
 
         public static string BaseUrl { get; private set; }
 
