@@ -20,7 +20,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Duplicate
         public static string Location
         {
             set { WebDriver.FindAdaptedElement(By.Id("LocationId")).Selector().SelectByText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("LocationId")).Selector().SelectedOption.Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationId")).Selector().SelectedOption; }
         }
 
         public static string InstallationMessage

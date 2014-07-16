@@ -55,7 +55,7 @@ namespace Six.Scs.QA.Selenium.Person
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#ccc"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Selenium.Person
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#PersonData_Contact_LanguageId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 

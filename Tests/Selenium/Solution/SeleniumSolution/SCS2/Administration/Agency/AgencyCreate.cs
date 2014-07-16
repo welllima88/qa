@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
             set
             {
@@ -50,7 +50,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
             set
             {
@@ -94,7 +94,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_SupplierMandantId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
             set
             {

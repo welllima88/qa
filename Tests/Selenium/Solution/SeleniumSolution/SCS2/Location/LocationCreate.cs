@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Location
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_CountryId")).Selector().
-                        SelectedOption.Text;
+                        SelectedOption;
             }
         }
 
@@ -52,7 +52,7 @@ namespace Six.Scs.QA.Selenium.Location
             {
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_Address_LanguageId")).Selector().
-                        SelectedOption.Text;
+                        SelectedOption;
             }
         }
 

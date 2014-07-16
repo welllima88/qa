@@ -77,7 +77,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_AgencyId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 
@@ -108,7 +108,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_LanguageId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 
@@ -125,7 +125,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_Address_CountryId"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 

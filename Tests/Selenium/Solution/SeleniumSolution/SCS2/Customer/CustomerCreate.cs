@@ -38,7 +38,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_CurrencyCode"))
                         .Selector()
-                        .SelectedOption.Text;
+                        .SelectedOption;
             }
         }
 
@@ -69,7 +69,7 @@ namespace Six.Scs.QA.Selenium.Customer
             get
             {
                 return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_BillingTenantId")).
-                    Selector().SelectedOption.Text;
+                    Selector().SelectedOption;
             }
         }
 
@@ -218,7 +218,7 @@ namespace Six.Scs.QA.Selenium.Customer
             get
             {
                 return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_StructureId")).
-                    Selector().SelectedOption.Text;
+                    Selector().SelectedOption;
             }
         }
 
@@ -247,7 +247,7 @@ namespace Six.Scs.QA.Selenium.Customer
             get
             {
                 return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_AgencyId")).Selector
-                    ().SelectedOption.Text;
+                    ().SelectedOption;
             }
         }
 
@@ -262,7 +262,7 @@ namespace Six.Scs.QA.Selenium.Customer
             get
             {
                 return WebDriver.FindAdaptedElement(
-                    By.CssSelector("select#Preferences_SupportContractId")).Selector().SelectedOption.Text;
+                    By.CssSelector("select#Preferences_SupportContractId")).Selector().SelectedOption;
             }
         }
 
@@ -312,7 +312,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return WebDriver.FindAdaptedElement(
                     By.CssSelector("select#Preferences_CashIntegratorId")).Selector()
-                    .SelectedOption.Text;
+                    .SelectedOption;
             }
         }
 

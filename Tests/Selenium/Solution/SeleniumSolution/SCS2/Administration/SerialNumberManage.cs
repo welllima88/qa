@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Administration
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("#ManufacturerId")).Selector().SelectedOption.Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector("#ManufacturerId")).Selector().SelectedOption;
             }
             set { WebDriver.FindAdaptedElement(By.CssSelector("#ManufacturerId")).Selector().SelectByText(value); }
         }

@@ -48,7 +48,7 @@ namespace Six.Scs.QA.Selenium.Person
             get
             {
                 return WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonEditRes.Country)).Selector().SelectedOption.Text;
+                    PersonEditRes.Country)).Selector().SelectedOption;
             }
         }
 
