@@ -71,6 +71,7 @@
     <Compile Include="Environment\SeleniumGridServer.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
+    <Compile Include="WebDriver\WebElements\SelectElement.cs" />
     <Compile Include="WebDriver\WebElements\TextAreaElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextBoxElementException.cs" />
     <Compile Include="WebDriver\WebElements\PasswortTextFieldElement.cs" />
