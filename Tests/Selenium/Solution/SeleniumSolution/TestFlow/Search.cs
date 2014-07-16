@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Location;
+using Six.Scs.QA.Selenium.Mpd;
 using Six.Scs.QA.Selenium.SearchResult;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.User;
@@ -47,6 +48,14 @@ namespace Six.Scs.QA.Testlogic
             UserResult.First().Click();
 
             Assert.AreEqual(userName, UserView.UserName);
+        }
+
+        public static void MpdCanBeFoundById(string id)
+        {
+            Workflow.Search.Find(id);
+            MpdResult.First().Click();
+
+            Assert.AreEqual(id, MpdView.Id);
         }
     }
 }
