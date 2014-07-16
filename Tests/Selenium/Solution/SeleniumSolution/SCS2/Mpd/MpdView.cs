@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Mpd
     {
         public static string Id
         {
-            get {return WebDriver.FindAdaptedElement(By.CssSelector("p#mpdId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("p#mpdId")).Text; }
         }
 
         public static string Description
@@ -23,6 +23,11 @@ namespace Six.Scs.QA.Selenium.Mpd
         public static string Port
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("p#InetPort")).Text; }
+        }
+
+        public static ButtonElement EditButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#edit")).Button(); }
         }
     }
 }
