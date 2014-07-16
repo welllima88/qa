@@ -38,13 +38,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestActions", "TestActions"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B1F12968-8683-4315-936C-3CA886A18E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsoleteTests", "UnitTestProject1\ObsoleteTests.csproj", "{B313EF8D-4519-426A-B8CF-EC19CB03811E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestData", "TestData\TestData.csproj", "{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflow", "Workflow\Workflow.csproj", "{6D99C089-ECA8-42DA-B74B-EAF28E457D83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testlogic.csproj", "{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsoleteTests", "ObsoleteTests\ObsoleteTests.csproj", "{B313EF8D-4519-426A-B8CF-EC19CB03811E}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -80,14 +80,14 @@ Global
 		SccProjectTopLevelParentUniqueName7 = SeleniumTests.sln
 		SccProjectName7 = Workflow
 		SccLocalPath7 = Workflow
-		SccProjectUniqueName8 = UnitTestProject1\\ObsoleteTests.csproj
+		SccProjectUniqueName8 = TestFlow\\Testlogic.csproj
 		SccProjectTopLevelParentUniqueName8 = SeleniumTests.sln
-		SccProjectName8 = UnitTestProject1
-		SccLocalPath8 = UnitTestProject1
-		SccProjectUniqueName9 = TestFlow\\Testlogic.csproj
+		SccProjectName8 = TestFlow
+		SccLocalPath8 = TestFlow
+		SccProjectUniqueName9 = ObsoleteTests\\ObsoleteTests.csproj
 		SccProjectTopLevelParentUniqueName9 = SeleniumTests.sln
-		SccProjectName9 = TestFlow
-		SccLocalPath9 = TestFlow
+		SccProjectName9 = ObsoleteTests
+		SccLocalPath9 = ObsoleteTests
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,18 +156,6 @@ Global
 		{30D92BBD-3D78-4448-AC5D-EAD720E16B66}.QAL|Any CPU.Build.0 = Release|Any CPU
 		{30D92BBD-3D78-4448-AC5D-EAD720E16B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30D92BBD-3D78-4448-AC5D-EAD720E16B66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.DEV|Any CPU.Build.0 = Debug|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.PROD|Any CPU.ActiveCfg = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.PROD|Any CPU.Build.0 = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAK|Any CPU.ActiveCfg = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAK|Any CPU.Build.0 = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAL|Any CPU.ActiveCfg = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAL|Any CPU.Build.0 = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
@@ -204,6 +192,18 @@ Global
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.QAL|Any CPU.Build.0 = Release|Any CPU
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.PROD|Any CPU.ActiveCfg = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.PROD|Any CPU.Build.0 = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAK|Any CPU.ActiveCfg = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAK|Any CPU.Build.0 = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAL|Any CPU.ActiveCfg = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAL|Any CPU.Build.0 = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,9 +214,9 @@ Global
 		{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{427078EA-B71A-4CA8-BF74-155AFDFD5C5B} = {15F781AC-F400-4633-8DAF-D4193C83738B}
 		{30D92BBD-3D78-4448-AC5D-EAD720E16B66} = {15F781AC-F400-4633-8DAF-D4193C83738B}
-		{B313EF8D-4519-426A-B8CF-EC19CB03811E} = {15F781AC-F400-4633-8DAF-D4193C83738B}
 		{2F418EF9-C1C1-4E32-8954-5EA1B5257F20} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{6D99C089-ECA8-42DA-B74B-EAF28E457D83} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
+		{B313EF8D-4519-426A-B8CF-EC19CB03811E} = {15F781AC-F400-4633-8DAF-D4193C83738B}
 	EndGlobalSection
 EndGlobal
