@@ -16,6 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static ContactPersonData _personOnLocation;
         private static UserData _user;
         private static List<string> _duplicatedTerminals;
+        private static MpdData _mpd;
 
         /* [TestFixtureTearDown]
         public static void CleanRegressionTest()
@@ -57,7 +58,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _customer = Testlogic.Customer.Edit(_customer);
             Infotext.Create(_customer);
-            Testlogic.Mpd.Create(_customer);
+            _mpd = Testlogic.Mpd.Create(_customer);
 
             Brands.Create(_terminalCustomer);
 
@@ -69,6 +70,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _personOnLocation = Contact.Create(_location);
             _personOnLocation = Contact.Edit(_personOnLocation);
+
+            Testlogic.Mpd.Edit(_mpd);
 
             _user = Testlogic.User.Create(_customer);
             _user = Testlogic.User.Edit(_user);
