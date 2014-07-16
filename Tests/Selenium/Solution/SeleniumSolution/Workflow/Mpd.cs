@@ -29,8 +29,6 @@ namespace Six.Scs.QA.Workflow
             MpdCreate.Port = m.Port;
 
             MpdCreate.SaveButton.Click();
-
-            m.Id = MpdView.Id;
         }
     }
 }
