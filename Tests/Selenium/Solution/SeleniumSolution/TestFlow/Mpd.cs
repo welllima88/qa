@@ -21,6 +21,25 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
+        public static MpdData Edit(MpdData _mpd)
+        {
+            Open(_mpd);
+            MpdData mpd = MpdFactory.Create();
+            mpd.Id = _mpd.Id; // keep Id
+
+            Workflow.Mpd.Edit(mpd);
+            Check(mpd);
+
+            Lobby.OpenLatestElement();
+            Check(mpd);
+            return mpd;
+        }
+
+        private static void Open(MpdData mpd)
+        {
+            Search.MpdCanBeFoundById(mpd.Id);
+        }
+
         public static void Check(MpdData m)
         {
             Assert.AreEqual(m.Id, MpdView.Id);
