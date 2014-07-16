@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B313EF8D-4519-426A-B8CF-EC19CB03811E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Six.Scs.QA.Selenium.ObsoleteTests</RootNamespace>
+    <AssemblyName>ObsoleteTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Administration\Agency\AgencyCreateTest.cs" />
+    <Compile Include="Administration\Agency\AgencyDeleteTest.cs" />
+    <Compile Include="Administration\Agency\AgencyEditTest.cs" />
+    <Compile Include="Administration\Article\ArticleViewTest.cs" />
+    <Compile Include="Administration\SerialNumberImport\SerialNumberImportTest.cs" />
+    <Compile Include="Administration\SerialNumberImport\SerialNumberPreviewTest.cs" />
+    <Compile Include="Administration\SIMCard\SimCardCreateTest.cs" />
+    <Compile Include="Administration\SIMCard\SimCardEditTest.cs" />
+    <Compile Include="Administration\SIMCard\SimCardViewTest.cs" />
+    <Compile Include="Administration\SoftwareExchange\SoftwareExchangeGuiTest.cs" />
+    <Compile Include="Administration\SoftwareExchange\SoftwareExchangeTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateToCustomerTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateToLocationTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateWithInvalidDataTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateWithMinimalInputTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateWithMissingDataTest.cs" />
+    <Compile Include="Contact\Create\ContactCreateWithNoDataTest.cs" />
+    <Compile Include="Contact\Edit\ContactEditTest.cs" />
+    <Compile Include="Contact\Edit\ContactEditWithMinimalInputTest.cs" />
+    <Compile Include="Contact\Edit\ContactEditWithNoDataTest.cs" />
+    <Compile Include="Contact\Edit\EditContactAndCancelTest.cs" />
+    <Compile Include="Contact\Edit\EditContactWithInvalidDataTest.cs" />
+    <Compile Include="Contact\Edit\EditContactWithMissingDataTest.cs" />
+    <Compile Include="Customer\Create\CetrelCustomerCreateTest.cs" />
+    <Compile Include="Customer\Create\CoopCustomerCreateTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithMissingDataTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithNoDataTest.cs" />
+    <Compile Include="Customer\Create\CustomerCreateWithSBSExportTest.cs" />
+    <Compile Include="Customer\Edit\CustomerEditAndCancelTest.cs" />
+    <Compile Include="Customer\Edit\CustomerEditKeepsDataTest.cs" />
+    <Compile Include="Customer\Edit\CustomerEditTest.cs" />
+    <Compile Include="Customer\Edit\CustomerEditWithMinamalDataTest.cs" />
+    <Compile Include="Customer\Edit\Delayed\CustomerEditAndDelayedSaveTest.cs" />
+    <Compile Include="Customer\Edit\EditCustomerWithInvalidData.cs" />
+    <Compile Include="Customer\Edit\EditCustomerWithMissingData.cs" />
+    <Compile Include="Customer\Edit\EditCustomerWithNoData.cs" />
+    <Compile Include="Customer\Quit\CustomerDeactivateTest.cs" />
+    <Compile Include="Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
+    <Compile Include="Help\HelpTest.cs" />
+    <Compile Include="Infotext\InfotextCreateTest.cs" />
+    <Compile Include="Lobby\ApplicationInfoTest.cs" />
+    <Compile Include="Lobby\FooterTest.cs" />
+    <Compile Include="Lobby\LobbyHeader.cs" />
+    <Compile Include="Lobby\MenuTest.cs" />
+    <Compile Include="Lobby\MetaNavigationBarTest.cs" />
+    <Compile Include="Lobby\NavigationBarTest.cs" />
+    <Compile Include="Lobby\ProcessTicketsTest.cs" />
+    <Compile Include="Lobby\QuickSearchTest.cs" />
+    <Compile Include="Lobby\RecentElementsTest.cs" />
+    <Compile Include="Lobby\RecentMassJobsTest.cs" />
+    <Compile Include="Location\BillingAddressCreateTest.cs" />
+    <Compile Include="Location\BillingAddressEditTest.cs" />
+    <Compile Include="Location\Create\LocationCreateTest.cs" />
+    <Compile Include="Location\Create\LocationCreateWithInvalidDataTest.cs" />
+    <Compile Include="Location\Create\LocationCreateWithMinimalInputAndSave.cs" />
+    <Compile Include="Location\Create\LocationCreateWithMinimalInputAndSBSExportAndSave.cs" />
+    <Compile Include="Location\Create\LocationCreateWithMissingDataTest.cs" />
+    <Compile Include="Location\Create\LocationCreateWithoutUserInputTest.cs" />
+    <Compile Include="Location\Edit\LocationEditAndCancelTest.cs" />
+    <Compile Include="Location\Edit\LocationEditAndSaveTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithInvalidDataTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithMinimalInputTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithMissingDataTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithNoChangeTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithoutReasonTest.cs" />
+    <Compile Include="Location\Edit\LocationEditWithoutUserInputTest.cs" />
+    <Compile Include="LogOn\LogOnTest.cs" />
+    <Compile Include="Massmutation\AcquirerChangeTest.cs" />
+    <Compile Include="Massmutation\BusinessTemplateMassmuationTest.cs" />
+    <Compile Include="Massmutation\ContractMassmuationTest.cs" />
+    <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
+    <Compile Include="Massmutation\LocationMassmuationTest.cs" />
+    <Compile Include="Massmutation\TerminalMassmuationTest.cs" />
+    <Compile Include="Menu\MenusTest.cs" />
+    <Compile Include="Mpd\MpdCreateTest.cs" />
+    <Compile Include="Regression\CustomerStructureRegressionTest.cs" />
+    <Compile Include="Search\Customer\SearchForCustomerByIdTest.cs" />
+    <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />
+    <Compile Include="Terminal\ArticleChooser\ArticleChooserLookupTest.cs" />
+    <Compile Include="Terminal\ArticleChooser\ArticleChooserSuggestedArticleTest.cs" />
+    <Compile Include="Terminal\Dashboard\CustomerInfoTest.cs" />
+    <Compile Include="Terminal\Dashboard\LocationlInfoTest.cs" />
+    <Compile Include="Terminal\Dashboard\Portlet\PortletBasicTest.cs" />
+    <Compile Include="Terminal\Dashboard\TerminalInfoTest.cs" />
+    <Compile Include="Terminal\Duplicate\TerminalDuplicateDefaultsGuiTest.cs" />
+    <Compile Include="Terminal\Duplicate\TerminalDuplicateTest.cs" />
+    <Compile Include="Terminal\Duplicate\TerminalDuplicateWithDifferentPasswords.cs" />
+    <Compile Include="Terminal\Duplicate\TerminalDuplicateWithSamePasswortTest.cs" />
+    <Compile Include="Terminal\EventLog\EventLogGuiTest.cs" />
+    <Compile Include="Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
+    <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
+    <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
+    <Compile Include="Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
+    <Compile Include="User\UserViewTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestData\TestDataExcel.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administration\Feedback\" />
+    <Folder Include="Tests\" />
+    <Folder Include="Ticketing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCS2\SCS Platin.csproj">
+      <Project>{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}</Project>
+      <Name>SCS Platin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
+      <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
+      <Name>SeleniumExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestData\TestData.csproj">
+      <Project>{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}</Project>
+      <Name>TestData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestFlow\Testlogic.csproj">
+      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
+      <Name>Testlogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow\Workflow.csproj">
+      <Project>{6D99C089-ECA8-42DA-B74B-EAF28E457D83}</Project>
+      <Name>Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

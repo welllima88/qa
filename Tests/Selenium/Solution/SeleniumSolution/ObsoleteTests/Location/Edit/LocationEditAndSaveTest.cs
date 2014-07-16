@@ -1,0 +1,30 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.TestData.Factory;
+using Six.Scs.QA.TestData.ValueObjects;
+
+namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
+{
+    [TestClass]
+    public class LocationEditAndSaveTest
+    {
+        [ClassInitialize]
+        public static void Init(TestContext testContext)
+        {
+            TestDirector.Navigate("Location/?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
+        }
+
+        [TestMethod]
+        public void EditLocationAndSave()
+        {
+            LocationData l = LocationFactory.Edit();
+            Workflow.Location.Edit(l);
+
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
+
+            Testlogic.Location.Check(l);
+        }
+    }
+}
