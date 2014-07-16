@@ -23,7 +23,7 @@ namespace Six.Scs.QA.Workflow
         public static void Edit(MpdData m)
         {
             MpdView.EditButton.Click();
-            
+
             MpdCreate.Description = m.Description;
             MpdCreate.Adress = m.Adress;
             MpdCreate.Port = m.Port;
