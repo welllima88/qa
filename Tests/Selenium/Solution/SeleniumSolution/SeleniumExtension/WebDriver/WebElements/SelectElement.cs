@@ -1,26 +1,36 @@
-﻿using OpenQA.Selenium;
+﻿using System.Collections.Generic;
+using System.Linq;
+using OpenQA.Selenium;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
     public class SelectElement
     {
-        private readonly IWebElement _webElement;
+        private readonly OpenQA.Selenium.Support.UI.SelectElement _webElement;
 
         public SelectElement(IWebElement webElement)
         {
-            _webElement = webElement;
+            _webElement = new OpenQA.Selenium.Support.UI.SelectElement(webElement);
         }
 
-        public string SelectedOption { get; private set; }
+        public string SelectedOption
+        {
+            get { return _webElement.SelectedOption.Text; }
+        }
+
+        public IEnumerable<string> Options
+        {
+            get { return _webElement.Options.Select(s => s.Text); }
+        }
 
         public void SelectByValue(string value)
         {
-            throw new System.NotImplementedException();
+            _webElement.SelectByValue(value);
         }
 
         public void SelectByText(string text)
         {
-            throw new System.NotImplementedException();
+            _webElement.SelectByText(text);
         }
     }
 }
