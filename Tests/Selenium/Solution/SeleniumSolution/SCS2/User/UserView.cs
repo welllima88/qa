@@ -79,5 +79,10 @@ namespace Six.Scs.QA.Selenium.User
         {
             get { return WebDriver.FindAdaptedElement(By.Id("reactivate")); }
         }
+
+        public static ButtonElement ResetPasswordConfirm
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#reset")).Button(); }
+        }
     }
 }
