@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
     [TestFixture]
     public class SearchForCustomerByIdTest
     {
-        private const string SearchField = "401858";
+        private const string SearchField = "1";
 
         [TestFixtureSetUp]
         public static void ClassInit()
@@ -25,13 +25,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchField, CustomerResult.Result().Text);
-        }
-
-        [Test]
-        [Category("Search"), Category("Customer")]
-        public void CustomerResultNotEmpty()
-        {
+            StringAssert.Contains("SIX Payment Services AG", CustomerResult.Result().Text);
         }
 
         [Test]
@@ -39,14 +33,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         public void SearchStringInHeadlineIsDisplayed()
         {
             StringAssert.Contains(SearchField, SearchResults.Headline);
-        }
-
-        [Test]
-        [Category("Search"), Category("Customer")]
-        public void ShowLocationsAndTerminals()
-        {
-            CustomerResult.Result().Click();
-            Assert.IsFalse(CustomerResult.Result().Displayed);
         }
     }
 }
