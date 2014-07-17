@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
     [TestFixture]
     public class SearchForCustomerByNameTest
     {
-        private const string SearchField = "TKSYR";
+        private const string SearchField = "SYR Kunde6";
 
         [TestFixtureSetUp]
         public static void ClassInit()
@@ -30,23 +30,9 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
 
         [Test]
         [Category("Search"), Category("Customer")]
-        public void CustomerResultNotEmpty()
-        {
-        }
-
-        [Test]
-        [Category("Search"), Category("Customer")]
         public void SearchStringInHeadlineIsDisplayed()
         {
             StringAssert.Contains(SearchField, SearchResults.Headline);
-        }
-
-        [Test]
-        [Category("Search"), Category("Customer")]
-        public void ShowLocationsAndTerminals()
-        {
-            CustomerResult.Result().Click();
-            Assert.IsFalse(CustomerResult.Result().Displayed);
         }
     }
 }
