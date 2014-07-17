@@ -5,11 +5,11 @@ namespace Six.Scs.QA.Selenium.Help
 {
     public class HelpNavigation : WebObject
     {
-        public static IWebElementAdapter Scs
+        public static IWebElementAdapter ReleaseNotes
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help/SCS']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/Releasenotes']"));
             }
         }
 
@@ -17,15 +17,15 @@ namespace Six.Scs.QA.Selenium.Help
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help/SCS2']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/SCS2']"));
             }
         }
 
-        public static IWebElementAdapter Help
+        public static IWebElementAdapter ScsHelp
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body#frontpage div.navbar ul.nav li a[href$='/help']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/SCS2']"));
             }
         }
     }
