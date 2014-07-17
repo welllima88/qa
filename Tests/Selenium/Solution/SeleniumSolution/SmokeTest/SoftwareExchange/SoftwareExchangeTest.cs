@@ -16,10 +16,5 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
         {
             TestDirector.Navigate("MasterSoftwareExchange/");
         }
-
-        [Test]
-        public void CreateMassJob()
-        {
-        }
     }
 }
