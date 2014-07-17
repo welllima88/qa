@@ -61,11 +61,6 @@
     <Compile Include="Administration\Agency\AgencyDeleteTest.cs" />
     <Compile Include="Administration\Agency\AgencyEditTest.cs" />
     <Compile Include="Administration\Article\ArticleViewTest.cs" />
-    <Compile Include="Administration\SerialNumberImport\SerialNumberImportTest.cs" />
-    <Compile Include="Administration\SerialNumberImport\SerialNumberPreviewTest.cs" />
-    <Compile Include="Administration\SIMCard\SimCardCreateTest.cs" />
-    <Compile Include="Administration\SIMCard\SimCardEditTest.cs" />
-    <Compile Include="Administration\SIMCard\SimCardViewTest.cs" />
     <Compile Include="Administration\SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="Administration\SoftwareExchange\SoftwareExchangeTest.cs" />
     <Compile Include="Contact\Create\ContactCreateToCustomerTest.cs" />
@@ -101,16 +96,6 @@
     <Compile Include="Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
     <Compile Include="Help\HelpTest.cs" />
     <Compile Include="Infotext\InfotextCreateTest.cs" />
-    <Compile Include="Lobby\ApplicationInfoTest.cs" />
-    <Compile Include="Lobby\FooterTest.cs" />
-    <Compile Include="Lobby\LobbyHeader.cs" />
-    <Compile Include="Lobby\MenuTest.cs" />
-    <Compile Include="Lobby\MetaNavigationBarTest.cs" />
-    <Compile Include="Lobby\NavigationBarTest.cs" />
-    <Compile Include="Lobby\ProcessTicketsTest.cs" />
-    <Compile Include="Lobby\QuickSearchTest.cs" />
-    <Compile Include="Lobby\RecentElementsTest.cs" />
-    <Compile Include="Lobby\RecentMassJobsTest.cs" />
     <Compile Include="Location\BillingAddressCreateTest.cs" />
     <Compile Include="Location\BillingAddressEditTest.cs" />
     <Compile Include="Location\Create\LocationCreateTest.cs" />
@@ -162,7 +147,6 @@
     <None Include="TestData\TestDataExcel.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administration\Feedback\" />
     <Folder Include="Tests\" />
     <Folder Include="Ticketing\" />
   </ItemGroup>
