@@ -6,7 +6,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {
     [TestFixture]
-    public class SimCardCreateTest
+    public class SimCardViewCTest
     {
         [TestFixtureSetUp]
         public static void TestInit()
