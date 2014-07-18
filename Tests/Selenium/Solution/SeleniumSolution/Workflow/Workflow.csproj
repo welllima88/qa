@@ -58,6 +58,7 @@
     <Compile Include="Location.cs" />
     <Compile Include="Mpd.cs" />
     <Compile Include="Search.cs" />
+    <Compile Include="SimCard.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TerminalBuilder.cs" />
