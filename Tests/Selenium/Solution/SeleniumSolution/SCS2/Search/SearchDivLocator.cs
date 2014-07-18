@@ -1,8 +1,9 @@
-namespace Six.Scs.QA.Selenium.SearchResult
+namespace Six.Scs.QA.Selenium.Search
 {
     public abstract class SearchDivLocator
     {
         public abstract string ResultId { get; }
         public abstract string LinkPart { get; }
+        public abstract string Section { get; }
     }
 }
