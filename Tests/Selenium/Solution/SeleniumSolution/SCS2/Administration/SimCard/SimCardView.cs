@@ -88,10 +88,6 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
     public class SimHistoryElement : WebObject
     {
-        public SimHistoryElement(IWebElementAdapter webElement)
-        {
-        }
-
         //public string Date { get; }
         //public string User { get; }
         //public string Description { get; }
