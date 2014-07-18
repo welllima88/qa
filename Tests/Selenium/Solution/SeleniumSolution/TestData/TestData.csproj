@@ -69,6 +69,7 @@
     <Compile Include="ValueObjects\CustomerData.cs" />
     <Compile Include="ValueObjects\LocationData.cs" />
     <Compile Include="ValueObjects\MpdData.cs" />
+    <Compile Include="ValueObjects\SimCardData.cs" />
     <Compile Include="ValueObjects\TerminalData.cs" />
     <Compile Include="ValueObjects\TerminalDuplicateData.cs" />
     <Compile Include="ValueObjects\UserData.cs" />
