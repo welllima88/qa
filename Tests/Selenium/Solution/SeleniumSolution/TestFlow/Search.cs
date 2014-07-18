@@ -2,7 +2,7 @@
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Mpd;
-using Six.Scs.QA.Selenium.SearchResult;
+using Six.Scs.QA.Selenium.Search;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.User;
 
@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Testlogic
         public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
             Workflow.Search.Find(customerId);
-            CustomerResult.Result().Click();
+            SearchResult.First(new CustomerResult()).Click();
 
             Assert.AreEqual(customerId, CustomerView.CustomerNumber);
         }
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
         public static void LocationCanBeFoundByLocationName(string locationName)
         {
             Workflow.Search.Find(locationName);
-            LocationResult.Result().Click();
+            SearchResult.First(new LocationResult()).Click();
 
             Assert.AreEqual(locationName, LocationView.CompanyName);
         }
@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Testlogic
         public static void CustomerCanBeFoundByCustomerName(string customerName)
         {
             Workflow.Search.Find(customerName);
-            CustomerResult.Result().Click();
+            SearchResult.First(new CustomerResult()).Click();
 
             Assert.AreEqual(customerName, CustomerView.CustomerName);
         }
@@ -37,7 +37,7 @@ namespace Six.Scs.QA.Testlogic
         public static void TerminalCanBeFoundById(string terminalId)
         {
             Workflow.Search.Find(terminalId);
-            TerminalResult.First().Click();
+            SearchResult.First(new TerminalResult()).Click();
 
             Assert.AreEqual(terminalId, TerminalInfo.TerminalId);
         }
@@ -45,7 +45,7 @@ namespace Six.Scs.QA.Testlogic
         public static void UserCanBeFoundByCustomerName(string userName)
         {
             Workflow.Search.Find(userName);
-            UserResult.First().Click();
+            SearchResult.First(new UserResult()).Click();
 
             Assert.AreEqual(userName, UserView.UserName);
         }
@@ -53,9 +53,17 @@ namespace Six.Scs.QA.Testlogic
         public static void MpdCanBeFoundById(string id)
         {
             Workflow.Search.Find(id);
-            MpdResult.First().Click();
+            SearchResult.First(new MpdResult()).Click();
 
             Assert.AreEqual(id, MpdView.Id);
+        }
+
+        public static void SimcardBySimCardNumber(string simCardNumber)
+        {
+            Workflow.Search.Find(simCardNumber);
+            SearchResult.First(new Selenium.Search.SimCard()).Click();
+
+            Assert.AreEqual(simCardNumber, MpdView.Id);
         }
     }
 }
