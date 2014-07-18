@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -18,39 +19,26 @@ namespace Six.Scs.QA.Selenium.SearchResult
             get { return WebDriver.FindAdaptedElement(By.CssSelector("span input[id^='loadMore']")); }
         }
 
-        public static IWebElementAdapter FilterTextField
+        public static TextFieldElement FilterTextField
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")).TextField(); }
         }
 
-        public static CustomerResult Customers()
+        public static IWebElementAdapter First(SearchDivLocator searchDivLocator)
         {
-            return new CustomerResult();
+            IWebElementAdapter element =
+                WebDriver.FindAdaptedElement(
+                    By.CssSelector("tbody#" + searchDivLocator.ResultId +
+                                   " tr td a[href*='" + searchDivLocator.LinkPart + "']"));
+            return element;
         }
 
-        public static LocationResult Locations()
+        public static ReadOnlyCollection<IWebElementAdapter> Result(SearchDivLocator searchDivLocator)
         {
-            return new LocationResult();
-        }
-
-        public static TerminalResult Terminals()
-        {
-            return new TerminalResult();
-        }
-
-        public static UserResult Users()
-        {
-            return new UserResult();
-        }
-
-        public static SimCardResult Simcards()
-        {
-            return new SimCardResult();
-        }
-
-        public static MpdResult Mpds()
-        {
-            return new MpdResult();
+            return
+                WebDriver.FindAdaptedElements(
+                    By.CssSelector("tbody#" + searchDivLocator.ResultId + " tr td a[href*='" + searchDivLocator.LinkPart +
+                                   "']"));
         }
     }
 }
