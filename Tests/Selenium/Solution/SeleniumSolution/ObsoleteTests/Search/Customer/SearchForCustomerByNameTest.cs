@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.SearchResult;
+using Six.Scs.QA.Selenium.Search;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Search.Customer
 {
@@ -31,22 +31,22 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Search.Customer
         [TestCategory("Search"), TestCategory("Customer")]
         public void SearchStringInHeadlineIsDisplayed()
         {
-            StringAssert.Contains(SearchResults.Headline, SearchField);
+            StringAssert.Contains(SearchResult.Headline, SearchField);
         }
 
         [TestMethod]
         [TestCategory("Search"), TestCategory("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(CustomerResult.Result().Text, SearchField);
+            StringAssert.Contains(SearchResult.First(new CustomerResult()).Text, SearchField);
         }
 
         [TestMethod]
         [TestCategory("Search"), TestCategory("Customer")]
         public void ShowLocationsAndTerminals()
         {
-            CustomerResult.Result().Click();
-            Assert.IsFalse(CustomerResult.Result().Displayed);
+            SearchResult.First(new CustomerResult()).Click();
+            Assert.IsFalse(SearchResult.First(new CustomerResult()).Displayed);
         }
     }
 }
