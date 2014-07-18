@@ -2,6 +2,9 @@
 using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.TestData.Factory;
+using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Testlogic;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {
@@ -12,33 +15,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         public void TestInit()
         {
             // SIMCard/EditCard?simCardId=11
-            TestDirector.Navigate("SIMCard/Details?SIMCardId=16");
+            TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
         }
 
         [Test]
         public void EditSimcardAndSave()
         {
-            SimCardView.EditButton.Click();
-
-            SimCardEdit.NetProvider = "Sunrise";
-            SimCardEdit.SimCardNumber = "0123456789012345678";
-            SimCardEdit.MobileNumber = "1234567890";
-            SimCardEdit.Pin = "4321";
-            SimCardEdit.Puk = "22446688";
-            SimCardEdit.Status = true;
-            SimCardEdit.TerminalId = "21012730";
-            SimCardEdit.Region = "International";
-            SimCardEdit.Usage = "Miete";
-
-            SimCardEdit.SaveButton.Click();
-
-            Assert.AreEqual(SimCardView.NetProvider, "SIX via Swisscom");
-            Assert.AreEqual(SimCardView.SimCardNumber, "0123456789012345678");
-            Assert.AreEqual(SimCardView.MobileNumber, "1234567890");
-            Assert.AreEqual(SimCardView.Pin, "4321");
-            Assert.AreEqual(SimCardView.Puk, "22446688");
-            Assert.AreEqual(SimCardView.Status, true);
-            Assert.AreEqual(SimCardView.TerminalId, "21012730");
+            SimCardData simCard = SimCard.Edit(Factory.Simcard.Edit());
+            SimCard.Check(simCard);
         }
 
         [Test]
