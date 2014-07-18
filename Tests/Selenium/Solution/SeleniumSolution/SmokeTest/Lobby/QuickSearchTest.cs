@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.SearchResult;
+using Six.Scs.QA.Selenium.Search;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 {
@@ -23,7 +23,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         {
             QuickSearch.SearchField = "Click-Search";
             QuickSearch.SearchButton.Click();
-            StringAssert.Contains("Click-Search", SearchResults.Headline);
+            StringAssert.Contains("Click-Search", SearchResult.Headline);
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         {
             QuickSearch.SearchField = "Hit-Enter";
             QuickSearch.HitEnter();
-            StringAssert.Contains("Hit-Enter", SearchResults.Headline);
+            StringAssert.Contains("Hit-Enter", SearchResult.Headline);
         }
     }
 }
