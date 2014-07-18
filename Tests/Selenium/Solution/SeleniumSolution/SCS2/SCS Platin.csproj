@@ -161,13 +161,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ScsEnvironment.cs" />
-    <Compile Include="SearchResult\CustomerResult.cs" />
-    <Compile Include="SearchResult\LocationResult.cs" />
-    <Compile Include="SearchResult\MpdResult.cs" />
-    <Compile Include="SearchResult\SearchResults.cs" />
-    <Compile Include="SearchResult\SimCardResult.cs" />
-    <Compile Include="SearchResult\TerminalResult.cs" />
-    <Compile Include="SearchResult\UserResult.cs" />
+    <Compile Include="Search\CustomerResult.cs" />
+    <Compile Include="Search\LocationResult.cs" />
+    <Compile Include="Search\MpdResult.cs" />
+    <Compile Include="Search\SearchDivLocator.cs" />
+    <Compile Include="Search\SearchResult.cs" />
+    <Compile Include="Search\SimCard.cs" />
+    <Compile Include="Search\TerminalResult.cs" />
+    <Compile Include="Search\UserResult.cs" />
     <Compile Include="Terminal\Dashboard\Brand\Acquirer.cs" />
     <Compile Include="Terminal\Dashboard\Brand\BrandContract.cs" />
     <Compile Include="Terminal\Dashboard\Brand\BrandPortlet.cs" />
