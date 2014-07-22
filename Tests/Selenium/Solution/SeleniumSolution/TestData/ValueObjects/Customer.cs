@@ -2,7 +2,7 @@ namespace Six.Scs.QA.TestData.ValueObjects
 {
     public class Customer
     {
-        public LocationData Location { get; set; }
+        public Location Location { get; set; }
         public string CustomerName { get; set; }
         public string Supplier { get; set; }
         public string CustomerNumber { get; set; }

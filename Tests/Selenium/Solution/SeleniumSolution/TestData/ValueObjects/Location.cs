@@ -2,7 +2,7 @@ using System;
 
 namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class LocationData
+    public class Location
     {
         public Contact Contact { get; set; }
         public Adress Adress { get; set; }

@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class LocationFactory
     {
-        public static LocationData Create()
+        public static Location Create()
         {
-            return new LocationData
+            return new Location
             {
                 Adress = AdressFactory.Create(),
                 Contact = ContactFactory.Create(),
@@ -16,9 +16,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static LocationData Edit()
+        public static Location Edit()
         {
-            return new LocationData
+            return new Location
             {
                 Adress = AdressFactory.Edit(),
                 Contact = ContactFactory.Edit(),
@@ -27,9 +27,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static LocationData Invalid()
+        public static Location Invalid()
         {
-            return new LocationData
+            return new Location
             {
                 Adress = AdressFactory.Invalid(),
                 Contact = ContactFactory.Invalid(),

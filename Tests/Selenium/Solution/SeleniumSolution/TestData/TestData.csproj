@@ -65,9 +65,9 @@
     <Compile Include="ValueObjects\Adress.cs" />
     <Compile Include="ValueObjects\Agency.cs" />
     <Compile Include="ValueObjects\Contact.cs" />
-    <Compile Include="ValueObjects\ContactPersonData.cs" />
+    <Compile Include="ValueObjects\Person.cs" />
     <Compile Include="ValueObjects\Customer.cs" />
-    <Compile Include="ValueObjects\LocationData.cs" />
+    <Compile Include="ValueObjects\Location.cs" />
     <Compile Include="ValueObjects\Mpd.cs" />
     <Compile Include="ValueObjects\SimCard.cs" />
     <Compile Include="ValueObjects\Terminal.cs" />

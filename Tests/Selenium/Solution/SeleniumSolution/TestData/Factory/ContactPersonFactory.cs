@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class ContactPersonFactory
     {
-        public static ContactPersonData Create()
+        public static Person Create()
         {
-            return new ContactPersonData
+            return new Person
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Create",
@@ -16,9 +16,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static ContactPersonData Edit()
+        public static Person Edit()
         {
-            return new ContactPersonData
+            return new Person
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Edit",
