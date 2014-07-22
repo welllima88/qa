@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest
         public void LaunchTestDirector()
         {
             ScsEnvironment.Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
+            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.LogOn();
             Workflow.Lobby.ChooseLanguage(Languages.German);
         }
