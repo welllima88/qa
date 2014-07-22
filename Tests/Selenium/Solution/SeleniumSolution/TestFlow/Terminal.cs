@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Terminal
     {
-        public static TestData.ValueObjects.Terminal Create(LocationData location)
+        public static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Location location)
         {
             TestData.ValueObjects.Terminal terminal = TerminalFactory.Xentissimo();
             Location.Open(location);

@@ -9,10 +9,10 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Location
     {
-        public static LocationData Edit(LocationData location)
+        public static TestData.ValueObjects.Location Edit(TestData.ValueObjects.Location location)
         {
             Open(location);
-            LocationData _location = LocationFactory.Edit();
+            TestData.ValueObjects.Location _location = LocationFactory.Edit();
             Workflow.Location.Edit(_location);
             Check(_location);
 
@@ -21,9 +21,9 @@ namespace Six.Scs.QA.Testlogic
             return _location;
         }
 
-        public static LocationData Create(TestData.ValueObjects.Customer customer)
+        public static TestData.ValueObjects.Location Create(TestData.ValueObjects.Customer customer)
         {
-            LocationData location = LocationFactory.Create();
+            TestData.ValueObjects.Location location = LocationFactory.Create();
             Workflow.Location.Create(location);
             Check(location);
 
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Testlogic
             return location;
         }
 
-        public static void Open(LocationData location)
+        public static void Open(TestData.ValueObjects.Location location)
         {
             Search.LocationCanBeFoundByLocationName(location.CompanyName);
             // Assert.AreEqual(location.Guid, LocationView.Guid);
@@ -41,7 +41,7 @@ namespace Six.Scs.QA.Testlogic
         ///     Verifies the location
         /// </summary>
         /// <param name="l">given location data</param>
-        public static void Check(LocationData l)
+        public static void Check(TestData.ValueObjects.Location l)
         {
             Assert.AreEqual(l.CompanyName, LocationView.CompanyName);
             StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, LocationView.SbsDebitNumber);

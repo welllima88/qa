@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Testlogic
             CreateAndSaveInfotext("Customer");
         }
 
-        public static void Create(LocationData location)
+        public static void Create(TestData.ValueObjects.Location location)
         {
             Location.Open(location);
             CreateAndSaveInfotext("Location");

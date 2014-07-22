@@ -10,16 +10,16 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Contact
     {
-        public static ContactPersonData Create(TestData.ValueObjects.Customer customer)
+        public static Person Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();
             return CreateAndSave();
         }
 
-        private static ContactPersonData CreateAndSave()
+        private static Person CreateAndSave()
         {
-            ContactPersonData person = ContactPersonFactory.Create();
+            Person person = ContactPersonFactory.Create();
             Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
@@ -27,35 +27,35 @@ namespace Six.Scs.QA.Testlogic
             return person;
         }
 
-        public static ContactPersonData Create(LocationData location)
+        public static Person Create(TestData.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.ContactCreate.Click();
             return CreateAndSave();
         }
 
-        public static ContactPersonData Edit(ContactPersonData person)
+        public static Person Edit(Person _person)
         {
-            Open(person);
+            Open(_person);
             ContactMenu.ContactEdit.Click();
-            ContactPersonData contactPersonData = ContactPersonFactory.Edit();
+            Person person = ContactPersonFactory.Edit();
 
-            Workflow.Contact.Edit(contactPersonData);
-            Check(contactPersonData);
+            Workflow.Contact.Edit(person);
+            Check(person);
 
             Lobby.OpenLatestElement();
-            Check(contactPersonData);
-            return contactPersonData;
+            Check(person);
+            return person;
         }
 
-        private static void Open(ContactPersonData person)
+        private static void Open(Person person)
         {
             // cannot directly open a contact by search, 
             // so it might fail the following step:
             TestDirector.Navigate("/Person?PersonId=" + person.Id);
         }
 
-        public static void Check(ContactPersonData c)
+        public static void Check(Person c)
         {
             Assert.AreEqual(c.Salutation, ContactPersonView.Salutation);
             Assert.AreEqual(c.FirstName, ContactPersonView.FirstName);
