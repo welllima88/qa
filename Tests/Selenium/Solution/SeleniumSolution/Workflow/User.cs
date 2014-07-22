@@ -1,12 +1,11 @@
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.User;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
     public static class User
     {
-        public static void Create(UserData u)
+        public static void Create(TestData.ValueObjects.User u)
         {
             CustomerMenu.Users.Click();
             UserList.UserCreate.Click();
@@ -27,7 +26,7 @@ namespace Six.Scs.QA.Workflow
             UserMenu.User.Click();
         }
 
-        public static void Edit(UserData u)
+        public static void Edit(TestData.ValueObjects.User u)
         {
             UserView.EditButton.Click();
 

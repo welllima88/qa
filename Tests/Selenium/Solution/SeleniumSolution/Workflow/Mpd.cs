@@ -1,12 +1,11 @@
 ﻿using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Mpd;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
     public static class Mpd
     {
-        public static void Create(MpdData m)
+        public static void Create(TestData.ValueObjects.Mpd m)
         {
             CustomerMenu.AllMpds.Click();
             MpdListView.CreateButton.Click();
@@ -20,7 +19,7 @@ namespace Six.Scs.QA.Workflow
             m.Id = MpdView.Id;
         }
 
-        public static void Edit(MpdData m)
+        public static void Edit(TestData.ValueObjects.Mpd m)
         {
             MpdView.EditButton.Click();
 

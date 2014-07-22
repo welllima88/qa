@@ -1,5 +1,4 @@
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
@@ -18,20 +17,20 @@ namespace Six.Scs.QA.Workflow
             terminalBuilder.SetDetails();
         }
 
-        public static void Duplicate(TerminalDuplicateData duplicateData)
+        public static void Duplicate(TerminalDuplicate duplicate)
         {
             SalesContractPortlet.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
-            TerminalDuplicate.NumberOfTerminals = duplicateData.NumberOfTerminals;
+            Selenium.Terminal.Duplicate.TerminalDuplicate.NumberOfTerminals = duplicate.NumberOfTerminals;
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            TerminalDuplicate.InstallationMessage = duplicateData.InstallMessage;
-            TerminalDuplicate.InformationText = duplicateData.InformationText;
-            TerminalDuplicate.CopyPassword = duplicateData.CopyPassword;
-            TerminalDuplicate.MessageForAcquirers = duplicateData.MessageForAcquirers;
+            Selenium.Terminal.Duplicate.TerminalDuplicate.InstallationMessage = duplicate.InstallMessage;
+            Selenium.Terminal.Duplicate.TerminalDuplicate.InformationText = duplicate.InformationText;
+            Selenium.Terminal.Duplicate.TerminalDuplicate.CopyPassword = duplicate.CopyPassword;
+            Selenium.Terminal.Duplicate.TerminalDuplicate.MessageForAcquirers = duplicate.MessageForAcquirers;
 
-            TerminalDuplicate.DulpicateButton.Click();
+            Selenium.Terminal.Duplicate.TerminalDuplicate.DulpicateButton.Click();
         }
     }
 }

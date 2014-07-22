@@ -2,13 +2,12 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
     public static class Customer
     {
-        public static void Create(CustomerData c)
+        public static void Create(TestData.ValueObjects.Customer c)
         {
             CustomerMenu.CustomerCreate.Click();
 
@@ -42,7 +41,7 @@ namespace Six.Scs.QA.Workflow
             c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
         }
 
-        public static void Edit(CustomerData c)
+        public static void Edit(TestData.ValueObjects.Customer c)
         {
             c.CustomerNumber = CustomerView.CustomerNumber;
             c.Location.SbsDebitNumber = CustomerView.SbsDebitNumber;
