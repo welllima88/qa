@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
     public class ContactEditTest
     {
         private static string _contactId;
-        private static ContactPersonData _p;
+        private static TestData.ValueObjects.Person _p;
 
         [ClassInitialize]
         public static void TestInit(TestContext testContext)

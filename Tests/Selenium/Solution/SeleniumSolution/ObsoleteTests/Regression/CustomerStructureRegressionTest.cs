@@ -20,9 +20,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static string _terminalIdLocation;
         private static string _terminalIdCustomer;
         private static TestData.ValueObjects.Customer _customer;
-        private static LocationData _location;
-        private static ContactPersonData _personOnCustomer;
-        private static ContactPersonData _personOnLocation;
+        private static TestData.ValueObjects.Location _location;
+        private static TestData.ValueObjects.Person _personOnCustomer;
+        private static TestData.ValueObjects.Person _personOnLocation;
         private static TestData.ValueObjects.Mpd _mpd;
         private static TestData.ValueObjects.User _user;
 

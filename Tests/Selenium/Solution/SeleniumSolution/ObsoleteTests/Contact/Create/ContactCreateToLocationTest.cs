@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
     [TestClass]
     public class ContactCreateToLocationTest
     {
-        private static ContactPersonData _p;
+        private static TestData.ValueObjects.Person _p;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

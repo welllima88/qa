@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
     [TestClass]
     public class LocationCreateTest
     {
-        private static LocationData _l;
+        private static TestData.ValueObjects.Location _l;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)
