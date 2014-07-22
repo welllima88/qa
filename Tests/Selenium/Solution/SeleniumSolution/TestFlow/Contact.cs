@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Contact
     {
-        public static ContactPersonData Create(CustomerData customer)
+        public static ContactPersonData Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();

@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Infotext
     {
-        public static void Create(CustomerData customer)
+        public static void Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
             CreateAndSaveInfotext("Location");
         }
 
-        public static void Create(TerminalData terminal)
+        public static void Create(TestData.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
             CreateAndSaveInfotext("Terminal");

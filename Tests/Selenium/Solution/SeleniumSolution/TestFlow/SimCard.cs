@@ -7,38 +7,38 @@ namespace Six.Scs.QA.Testlogic
 {
     public class SimCard
     {
-        public static SimCardData Create()
+        public static TestData.ValueObjects.SimCard Create()
         {
-            SimCardData simCardData = Factory.Simcard.Create();
+            TestData.ValueObjects.SimCard simCard = Factory.Simcard.Create();
 
-            Workflow.SimCard.Create(simCardData);
-            Check(simCardData);
-            return simCardData;
+            Workflow.SimCard.Create(simCard);
+            Check(simCard);
+            return simCard;
         }
 
-        public static SimCardData Edit(SimCardData simCard)
+        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard)
         {
-            Open(simCard);
-            SimCardData simCardData = Factory.Simcard.Edit();
-            Workflow.SimCard.Edit(simCardData);
-            Check(simCardData);
-            return simCardData;
+            Open(_simCard);
+            TestData.ValueObjects.SimCard simCard = Factory.Simcard.Edit();
+            Workflow.SimCard.Edit(simCard);
+            Check(simCard);
+            return simCard;
         }
 
-        private static void Open(SimCardData simCard)
+        private static void Open(TestData.ValueObjects.SimCard simCard)
         {
             Search.SimcardBySimCardNumber(simCard.SimCardNumber);
         }
 
-        public static void Check(SimCardData simCardData)
+        public static void Check(TestData.ValueObjects.SimCard simCard)
         {
-            Assert.AreEqual(simCardData.NetProvider, SimCardView.NetProvider);
-            Assert.AreEqual(simCardData.SimCardNumber, SimCardView.SimCardNumber);
-            Assert.AreEqual(simCardData.MobileNumber, SimCardView.MobileNumber);
-            Assert.AreEqual(simCardData.Pin, SimCardView.Pin);
-            Assert.AreEqual(simCardData.Puk, SimCardView.Puk);
-            Assert.AreEqual(simCardData.Status, SimCardView.Status);
-            Assert.AreEqual(simCardData.TerminalId, SimCardView.TerminalId);
+            Assert.AreEqual(simCard.NetProvider, SimCardView.NetProvider);
+            Assert.AreEqual(simCard.SimCardNumber, SimCardView.SimCardNumber);
+            Assert.AreEqual(simCard.MobileNumber, SimCardView.MobileNumber);
+            Assert.AreEqual(simCard.Pin, SimCardView.Pin);
+            Assert.AreEqual(simCard.Puk, SimCardView.Puk);
+            Assert.AreEqual(simCard.Status, SimCardView.Status);
+            Assert.AreEqual(simCard.TerminalId, SimCardView.TerminalId);
         }
     }
 }

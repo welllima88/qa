@@ -8,11 +8,11 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Mpd
     {
-        public static MpdData Create(CustomerData customer)
+        public static TestData.ValueObjects.Mpd Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
-            MpdData mpd = MpdFactory.Create();
+            TestData.ValueObjects.Mpd mpd = MpdFactory.Create();
             Workflow.Mpd.Create(mpd);
             Check(mpd);
 
@@ -21,10 +21,10 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static MpdData Edit(MpdData _mpd)
+        public static TestData.ValueObjects.Mpd Edit(TestData.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            MpdData mpd = MpdFactory.Create();
+            TestData.ValueObjects.Mpd mpd = MpdFactory.Create();
             mpd.Id = _mpd.Id; // keep Id
 
             Workflow.Mpd.Edit(mpd);
@@ -35,12 +35,12 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        private static void Open(MpdData mpd)
+        private static void Open(TestData.ValueObjects.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
 
-        public static void Check(MpdData m)
+        public static void Check(TestData.ValueObjects.Mpd m)
         {
             Assert.AreEqual(m.Id, MpdView.Id);
             Assert.AreEqual(m.Description, MpdView.Description);

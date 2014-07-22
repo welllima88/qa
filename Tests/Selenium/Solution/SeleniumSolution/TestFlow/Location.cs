@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
             return _location;
         }
 
-        public static LocationData Create(CustomerData customer)
+        public static LocationData Create(TestData.ValueObjects.Customer customer)
         {
             LocationData location = LocationFactory.Create();
             Workflow.Location.Create(location);

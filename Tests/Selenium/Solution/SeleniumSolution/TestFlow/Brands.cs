@@ -1,6 +1,5 @@
 ﻿using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -8,7 +7,7 @@ namespace Six.Scs.QA.Testlogic
     {
         public static void Create(string terminalId)
         {
-            Terminal.Open(new TerminalData {Id = terminalId});
+            Terminal.Open(new TestData.ValueObjects.Terminal {Id = terminalId});
 
             CreateAndSaveBrands();
         }
@@ -32,7 +31,7 @@ namespace Six.Scs.QA.Testlogic
             // BrandCreate.
         }
 
-        public static void Create(TerminalData terminal)
+        public static void Create(TestData.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
             CreateAndSaveBrands();

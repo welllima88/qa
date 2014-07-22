@@ -14,9 +14,9 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Terminal
     {
-        public static TerminalData Create(LocationData location)
+        public static TestData.ValueObjects.Terminal Create(LocationData location)
         {
-            TerminalData terminal = TerminalFactory.Xentissimo();
+            TestData.ValueObjects.Terminal terminal = TerminalFactory.Xentissimo();
             Location.Open(location);
             LocationMenu.TerminalCreate.Click();
 
@@ -43,9 +43,9 @@ namespace Six.Scs.QA.Testlogic
             return terminal;
         }
 
-        public static TerminalData Create(CustomerData customer)
+        public static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Customer customer)
         {
-            TerminalData terminal = TerminalFactory.Yomani();
+            TestData.ValueObjects.Terminal terminal = TerminalFactory.Yomani();
             Customer.Open(customer);
             CustomerMenu.TerminalCreate.Click();
 
@@ -74,11 +74,11 @@ namespace Six.Scs.QA.Testlogic
             return terminal;
         }
 
-        public static List<string> Duplicate(TerminalData terminal)
+        public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TerminalDuplicateData terminalDuplicateData = TerminalDuplicateDataFactory.Create();
-            Workflow.Terminal.Duplicate(terminalDuplicateData);
+            TerminalDuplicate terminalDuplicate = TerminalDuplicateDataFactory.Create();
+            Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalMassValidation.ExecuteButton.Click();
 
@@ -90,7 +90,7 @@ namespace Six.Scs.QA.Testlogic
 
             // MassmutationProgress.DateTime;
             Assert.AreEqual("CreateTerminals", MassmutationProgress.Type);
-            Assert.AreEqual(terminalDuplicateData.NumberOfTerminals, MassmutationProgress.TerminalList.Count);
+            Assert.AreEqual(terminalDuplicate.NumberOfTerminals, MassmutationProgress.TerminalList.Count);
             /*
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
@@ -103,12 +103,12 @@ namespace Six.Scs.QA.Testlogic
             return MassmutationProgress.TerminalList;
         }
 
-        public static void Open(TerminalData terminal)
+        public static void Open(TestData.ValueObjects.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
         }
 
-        public static void Check(TerminalData terminalData)
+        public static void Check(TestData.ValueObjects.Terminal terminal)
         {
             // DB Check Terminal and Contracts?
         }

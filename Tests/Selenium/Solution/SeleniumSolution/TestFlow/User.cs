@@ -10,10 +10,10 @@ namespace Six.Scs.QA.Testlogic
 {
     public class User
     {
-        public static UserData Create(CustomerData customer)
+        public static TestData.ValueObjects.User Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            UserData user = UserFactory.Create();
+            TestData.ValueObjects.User user = UserFactory.Create();
             Workflow.User.Create(user);
 
             Check(user);
@@ -22,16 +22,16 @@ namespace Six.Scs.QA.Testlogic
             return user;
         }
 
-        public static UserData Edit(UserData user)
+        public static TestData.ValueObjects.User Edit(TestData.ValueObjects.User user)
         {
             throw new NotImplementedException();
         }
 
-        public static void Open(UserData user)
+        public static void Open(TestData.ValueObjects.User user)
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
-        public static void Check(UserData u)
+        public static void Check(TestData.ValueObjects.User u)
         {
             Assert.AreEqual(u.UserName, UserView.UserName);
             StringAssert.IsMatch(TestRegExpPatterns.UserPassword, UserView.Password);

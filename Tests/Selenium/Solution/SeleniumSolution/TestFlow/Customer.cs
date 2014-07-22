@@ -9,10 +9,10 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Customer
     {
-        public static CustomerData Edit(CustomerData customer)
+        public static TestData.ValueObjects.Customer Edit(TestData.ValueObjects.Customer customer)
         {
             Open(customer);
-            CustomerData _customer = CustomerFactory.Edit();
+            TestData.ValueObjects.Customer _customer = CustomerFactory.Edit();
             Workflow.Customer.Edit(_customer);
             Check(_customer);
 
@@ -21,9 +21,9 @@ namespace Six.Scs.QA.Testlogic
             return _customer;
         }
 
-        public static CustomerData Create()
+        public static TestData.ValueObjects.Customer Create()
         {
-            CustomerData customer = CustomerFactory.Create();
+            TestData.ValueObjects.Customer customer = CustomerFactory.Create();
             Workflow.Customer.Create(customer);
             Check(customer);
             Lobby.OpenLatestElement();
@@ -31,12 +31,12 @@ namespace Six.Scs.QA.Testlogic
             return customer;
         }
 
-        public static void Open(CustomerData customer)
+        public static void Open(TestData.ValueObjects.Customer customer)
         {
             Search.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
         }
 
-        public static void Check(CustomerData c)
+        public static void Check(TestData.ValueObjects.Customer c)
         {
             Assert.AreEqual(c.CustomerNumber, CustomerView.CustomerNumber);
             Assert.AreEqual(c.CustomerName, CustomerView.CustomerName);
