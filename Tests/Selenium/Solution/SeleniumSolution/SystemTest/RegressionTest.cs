@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Testlogic;
-using Contact = Six.Scs.QA.Testlogic.Contact;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
@@ -12,9 +10,9 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Terminal _terminalLocation;
         private static TestData.ValueObjects.Terminal _terminalCustomer;
         private static TestData.ValueObjects.Customer _customer;
-        private static LocationData _location;
-        private static ContactPersonData _personOnCustomer;
-        private static ContactPersonData _personOnLocation;
+        private static TestData.ValueObjects.Location _location;
+        private static TestData.ValueObjects.Person _personOnCustomer;
+        private static TestData.ValueObjects.Person _personOnLocation;
         private static TestData.ValueObjects.User _user;
         private static List<string> _duplicatedTerminals;
         private static TestData.ValueObjects.Mpd _mpd;
