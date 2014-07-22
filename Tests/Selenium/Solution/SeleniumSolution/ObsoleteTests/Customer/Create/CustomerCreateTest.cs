@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
     [TestClass]
     public class CustomerCreateTest
     {
-        private static CustomerData _c;
+        private static TestData.ValueObjects.Customer _c;
 
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

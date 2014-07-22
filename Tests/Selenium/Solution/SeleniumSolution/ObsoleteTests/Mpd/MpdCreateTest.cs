@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Mpd
     [TestClass]
     public class MpdCreateTest
     {
-        private MpdData _mpd;
+        private TestData.ValueObjects.Mpd _mpd;
 
         [TestMethod]
         public void CreateMpdToCustomer()

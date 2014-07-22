@@ -19,12 +19,12 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
     {
         private static string _terminalIdLocation;
         private static string _terminalIdCustomer;
-        private static CustomerData _customer;
+        private static TestData.ValueObjects.Customer _customer;
         private static LocationData _location;
         private static ContactPersonData _personOnCustomer;
         private static ContactPersonData _personOnLocation;
-        private static MpdData _mpd;
-        private static UserData _user;
+        private static TestData.ValueObjects.Mpd _mpd;
+        private static TestData.ValueObjects.User _user;
 
         /* [ClassCleanup]
         public static void CleanupCustomerStructure()
