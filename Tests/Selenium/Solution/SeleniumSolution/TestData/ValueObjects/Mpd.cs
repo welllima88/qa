@@ -1,6 +1,6 @@
 ﻿namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class MpdData
+    public class Mpd
     {
         public string Adress { get; set; }
         public string Port { get; set; }

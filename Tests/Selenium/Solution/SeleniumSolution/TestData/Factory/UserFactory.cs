@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class UserFactory
     {
-        public static UserData Create()
+        public static User Create()
         {
-            return new UserData
+            return new User
             {
                 UserName = "s" + Factory.GenerateTestId(),
                 Salutation = "Herr",

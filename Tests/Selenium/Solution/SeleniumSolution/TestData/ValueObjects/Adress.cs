@@ -1,6 +1,6 @@
 namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class AdressData
+    public class Adress
     {
         public string StreetNo { set; get; }
         public string Country { set; get; }

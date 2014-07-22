@@ -1,6 +1,6 @@
 namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class TerminalDuplicateData
+    public class TerminalDuplicate
     {
         public string NumberOfTerminals { get; set; }
         public string InstallMessage { get; set; }

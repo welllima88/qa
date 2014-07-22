@@ -1,6 +1,6 @@
 namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class TerminalData
+    public class Terminal
     {
         public string Id { get; set; }
     }

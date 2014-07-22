@@ -62,17 +62,17 @@
     <Compile Include="Factory\TerminalFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueObjects\AdressData.cs" />
-    <Compile Include="ValueObjects\AgencyData.cs" />
-    <Compile Include="ValueObjects\ContactData.cs" />
+    <Compile Include="ValueObjects\Adress.cs" />
+    <Compile Include="ValueObjects\Agency.cs" />
+    <Compile Include="ValueObjects\Contact.cs" />
     <Compile Include="ValueObjects\ContactPersonData.cs" />
-    <Compile Include="ValueObjects\CustomerData.cs" />
+    <Compile Include="ValueObjects\Customer.cs" />
     <Compile Include="ValueObjects\LocationData.cs" />
-    <Compile Include="ValueObjects\MpdData.cs" />
-    <Compile Include="ValueObjects\SimCardData.cs" />
-    <Compile Include="ValueObjects\TerminalData.cs" />
-    <Compile Include="ValueObjects\TerminalDuplicateData.cs" />
-    <Compile Include="ValueObjects\UserData.cs" />
+    <Compile Include="ValueObjects\Mpd.cs" />
+    <Compile Include="ValueObjects\SimCard.cs" />
+    <Compile Include="ValueObjects\Terminal.cs" />
+    <Compile Include="ValueObjects\TerminalDuplicate.cs" />
+    <Compile Include="ValueObjects\User.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

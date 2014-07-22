@@ -1,6 +1,6 @@
 ﻿namespace Six.Scs.QA.TestData.ValueObjects
 {
-    public class SimCardData
+    public class SimCard
     {
         public string MobileNumber;
         public string NetProvider;

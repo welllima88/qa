@@ -3,7 +3,7 @@ namespace Six.Scs.QA.TestData.ValueObjects
     /// <summary>
     ///     defines the ways and media how to contact
     /// </summary>
-    public class ContactData
+    public class Contact
     {
         public string Language { set; get; }
         public string Telephone { set; get; }

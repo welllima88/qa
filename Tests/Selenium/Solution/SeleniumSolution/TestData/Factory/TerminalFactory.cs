@@ -4,14 +4,14 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class TerminalFactory
     {
-        public static TerminalData Xentissimo()
+        public static Terminal Xentissimo()
         {
-            return new TerminalData();
+            return new Terminal();
         }
 
-        public static TerminalData Yomani()
+        public static Terminal Yomani()
         {
-            return new TerminalData();
+            return new Terminal();
         }
     }
 }

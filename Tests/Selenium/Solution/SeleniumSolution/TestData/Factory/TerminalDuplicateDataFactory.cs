@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class TerminalDuplicateDataFactory
     {
-        public static TerminalDuplicateData Create()
+        public static TerminalDuplicate Create()
         {
-            return new TerminalDuplicateData
+            return new TerminalDuplicate
             {
                 NumberOfTerminals = "2",
                 InstallMessage = "SYR Install Message " + Factory.GenerateTestId(),

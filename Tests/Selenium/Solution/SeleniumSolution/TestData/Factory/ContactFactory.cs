@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class ContactFactory
     {
-        public static ContactData Create()
+        public static Contact Create()
         {
-            return new ContactData
+            return new Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-group.de",
@@ -17,9 +17,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static ContactData Edit()
+        public static Contact Edit()
         {
-            return new ContactData
+            return new Contact
             {
                 Language = "Englisch [en]",
                 Email = "marc.siegmund@six-group.uk",
@@ -30,9 +30,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static ContactData Invalid()
+        public static Contact Invalid()
         {
-            return new ContactData
+            return new Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-grou$°p.com",

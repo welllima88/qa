@@ -12,9 +12,9 @@ namespace Six.Scs.QA.TestData.Factory
 
         public static class Simcard
         {
-            public static SimCardData Create()
+            public static SimCard Create()
             {
-                return new SimCardData
+                return new SimCard
                 {
                     NetProvider = "SIX via Swisscom",
                     SimCardNumber = "0123456789012345678",
@@ -26,9 +26,9 @@ namespace Six.Scs.QA.TestData.Factory
                 };
             }
 
-            public static SimCardData Edit()
+            public static SimCard Edit()
             {
-                return new SimCardData
+                return new SimCard
                 {
                     MobileNumber = "0123456789",
                     NetProvider = "SIX via Swisscom",

@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class AdressFactory
     {
-        public static AdressData Create()
+        public static Adress Create()
         {
-            return new AdressData
+            return new Adress
             {
                 StreetNo = "Hardturmstr. 201",
                 Zip = "8021",
@@ -18,9 +18,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static AdressData Edit()
+        public static Adress Edit()
         {
-            return new AdressData
+            return new Adress
             {
                 StreetNo = "Theater Platz 1a-3c",
                 AdressAddition = "SYR/Stage 3",
@@ -32,9 +32,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static AdressData Invalid()
+        public static Adress Invalid()
         {
-            return new AdressData
+            return new Adress
             {
                 StreetNo = "Hardturmstr. 201$°",
                 Zip = "802$°",

@@ -5,8 +5,8 @@ namespace Six.Scs.QA.TestData.ValueObjects
     /// </summary>
     public class ContactPersonData
     {
-        public AdressData Adress { get; set; }
-        public ContactData Contact { get; set; }
+        public Adress Adress { get; set; }
+        public Contact Contact { get; set; }
         public string FirstName { set; get; }
         public string Name { set; get; }
         public string Salutation { set; get; }

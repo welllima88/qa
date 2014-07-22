@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class MpdFactory
     {
-        public static MpdData Create()
+        public static Mpd Create()
         {
-            return new MpdData
+            return new Mpd
             {
                 Adress = "Adress",
                 Port = "Port",

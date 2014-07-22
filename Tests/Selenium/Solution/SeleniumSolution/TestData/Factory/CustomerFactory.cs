@@ -4,9 +4,9 @@ namespace Six.Scs.QA.TestData.Factory
 {
     public class CustomerFactory
     {
-        public static CustomerData Create()
+        public static Customer Create()
         {
-            return new CustomerData
+            return new Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "Euro",
@@ -21,9 +21,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static CustomerData Edit()
+        public static Customer Edit()
         {
-            return new CustomerData
+            return new Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
                 Location = LocationFactory.Edit(),
@@ -31,9 +31,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static CustomerData Invalid()
+        public static Customer Invalid()
         {
-            return new CustomerData
+            return new Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "EUR",
