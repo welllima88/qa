@@ -7,7 +7,7 @@ using Six.Scs.QA.Selenium.Extension.Properties;
 
 namespace Six.Scs.QA.Selenium
 {
-    public class ScsEnvironment
+    public static class ScsEnvironment
     {
         public static void Dev()
         {
