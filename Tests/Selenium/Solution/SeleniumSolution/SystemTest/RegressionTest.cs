@@ -2,51 +2,22 @@
 using NUnit.Framework;
 using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Testlogic;
+using Contact = Six.Scs.QA.Testlogic.Contact;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
     [TestFixture]
     public class RegressionTest
     {
-        private static TerminalData _terminalLocation;
-        private static TerminalData _terminalCustomer;
-        private static CustomerData _customer;
+        private static TestData.ValueObjects.Terminal _terminalLocation;
+        private static TestData.ValueObjects.Terminal _terminalCustomer;
+        private static TestData.ValueObjects.Customer _customer;
         private static LocationData _location;
         private static ContactPersonData _personOnCustomer;
         private static ContactPersonData _personOnLocation;
-        private static UserData _user;
+        private static TestData.ValueObjects.User _user;
         private static List<string> _duplicatedTerminals;
-        private static MpdData _mpd;
-
-        /* [TestFixtureTearDown]
-        public static void CleanRegressionTest()
-        {
-            DeleteCustomer();
-            DeleteLocation();
-            DeletePersons();
-            DeleteTerminals();            
-            DeleteMpd();            
-            DeleteUser();            
-        }
-
-        [TestFixtureSetUp]
-        public static void PrepareRegressionTest()
-        {            
-        }
-         
-        [Test]
-        [Ignore]
-        [Category("Regression")]
-        public void BrandsOnTerminalAreCreated()
-        {
-            Terminal.Open(_terminalLocation);
-            StringAssert.Contains("[283]", BrandPortlet.Brand("283").Text);
-            StringAssert.Contains("[332]", BrandPortlet.Brand("332").Text);
-            StringAssert.Contains("[361]", BrandPortlet.Brand("361").Text);
-            StringAssert.Contains("[363]", BrandPortlet.Brand("363").Text);
-            StringAssert.Contains("[811]", BrandPortlet.Brand("811").Text);
-        }
-        */
+        private static TestData.ValueObjects.Mpd _mpd;
 
         [Test]
         public static void ExecuteRegressiontest()
