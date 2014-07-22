@@ -6,7 +6,7 @@ namespace Six.Scs.QA.Workflow
 {
     public static class Contact
     {
-        public static void Create(ContactPersonData c)
+        public static void Create(Person c)
         {
             ContactPersonCreate.Salutation = c.Salutation;
             ContactPersonCreate.FirstName = c.FirstName;
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Workflow
             // c.Id = ContactPersonView.Id;
         }
 
-        public static void Edit(ContactPersonData c)
+        public static void Edit(Person c)
         {
             ContactMenu.ContactEdit.Click();
 

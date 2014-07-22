@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Workflow
 {
     public static class Location
     {
-        public static void Create(LocationData l)
+        public static void Create(TestData.ValueObjects.Location l)
         {
             CustomerMenu.Customer.Click();
 
@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Workflow
         ///     Edits location
         /// </summary>
         /// <param name="l">given location data</param>
-        public static void Edit(LocationData l)
+        public static void Edit(TestData.ValueObjects.Location l)
         {
             l.Guid = LocationView.Guid;
             l.Ep2MerchantId = LocationView.Ep2MerchantId;
