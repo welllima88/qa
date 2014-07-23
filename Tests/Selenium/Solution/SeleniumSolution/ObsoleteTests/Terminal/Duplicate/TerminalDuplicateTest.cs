@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
 using TerminalDuplicate = Six.Scs.QA.Selenium.Terminal.Duplicate.TerminalDuplicate;
 

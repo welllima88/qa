@@ -3,8 +3,6 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Person;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 {

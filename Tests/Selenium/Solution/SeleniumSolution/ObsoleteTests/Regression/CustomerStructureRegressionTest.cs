@@ -9,7 +9,6 @@ using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
@@ -63,7 +62,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Location.Edit(_location);
             Testlogic.Location.Check(_location);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Location.Check(_location);
         }
 
@@ -73,7 +72,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Customer.Edit(_customer);
             Testlogic.Customer.Check(_customer);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Customer.Check(_customer);
         }
 
@@ -84,7 +83,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Contact.Create(_personOnLocation);
             Testlogic.Contact.Check(_personOnLocation);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Contact.Check(_personOnLocation);
         }
 
@@ -103,7 +102,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             TerminalMenu.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
             Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
@@ -119,7 +118,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Location.Create(_location);
             Testlogic.Location.Check(_location);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Location.Check(_location);
         }
 
@@ -138,7 +137,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
             Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
@@ -156,7 +155,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             _personOnCustomer = TestData.Factory.Person.Create();
             Workflow.Contact.Create(_personOnCustomer);
             Testlogic.Contact.Check(_personOnCustomer);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Contact.Check(_personOnCustomer);
         }
 
@@ -296,7 +295,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.User.Create(_user);
 
             Testlogic.User.Check(_user);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.User.Check(_user);
         }
 
@@ -311,7 +310,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             _customer = TestData.Factory.Customer.Create();
             Workflow.Customer.Create(_customer);
             Testlogic.Customer.Check(_customer);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Customer.Check(_customer);
         }
 
@@ -321,7 +320,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Mpd.Create(_mpd);
             Testlogic.Mpd.Check(_mpd);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Mpd.Check(_mpd);
         }
 
@@ -332,7 +331,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Workflow.Contact.Edit(_personOnLocation);
             Testlogic.Contact.Check(_personOnLocation);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Testlogic.Contact.Check(_personOnLocation);
         }
 
