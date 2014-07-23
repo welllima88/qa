@@ -121,6 +121,10 @@
     <Compile Include="Customer\CustomerDeactivation.cs" />
     <Compile Include="Customer\CustomerEdit.cs" />
     <Compile Include="Customer\CustomerView.cs" />
+    <Compile Include="Environments\Local.cs" />
+    <Compile Include="Environments\Prod.cs" />
+    <Compile Include="Environments\QaK.cs" />
+    <Compile Include="Environments\QaL.cs" />
     <Compile Include="Help\HelpNavigation.cs" />
     <Compile Include="Location\BillingAdressCreate.cs" />
     <Compile Include="Location\BillingAdressEdit.cs" />
@@ -160,7 +164,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ScsEnvironment.cs" />
+    <Compile Include="Environments\Dev.cs" />
     <Compile Include="Search\CustomerResult.cs" />
     <Compile Include="Search\LocationResult.cs" />
     <Compile Include="Search\MpdResult.cs" />

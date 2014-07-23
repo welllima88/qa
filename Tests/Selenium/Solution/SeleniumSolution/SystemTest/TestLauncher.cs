@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.Environments;
 using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Workflow;
@@ -15,7 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         [SetUp]
         public void LaunchTestDirector()
         {
-            ScsEnvironment.Dev();
+            TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
             TestDirector.LogOn();
             Lobby.ChooseLanguage(Languages.German);
@@ -24,8 +25,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         [TearDown]
         public void StopTestDirector()
         {
-            TestDirector.LogOff();
-            TestDirector.ShutdownBrowser();
+            TestDirector.Stop();
         }
     }
 }

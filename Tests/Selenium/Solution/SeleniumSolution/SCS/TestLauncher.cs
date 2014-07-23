@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium
@@ -10,7 +9,7 @@ namespace Six.Scs.QA.Selenium
         [SetUp]
         public static void LaunchTestDirector()
         {
-            ScsClassicEnvironment.Dev();
+            TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser();
             TestDirector.LogOn();
         }
