@@ -59,7 +59,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void EditLocation()
         {
-            _location = LocationFactory.Edit();
+            _location = TestData.Factory.Location.Edit();
             Workflow.Location.Edit(_location);
             Testlogic.Location.Check(_location);
 
@@ -69,7 +69,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void EditCustomer()
         {
-            _customer = CustomerFactory.Edit();
+            _customer = TestData.Factory.Customer.Edit();
             Workflow.Customer.Edit(_customer);
             Testlogic.Customer.Check(_customer);
 
@@ -80,7 +80,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateContactOnLocation()
         {
             LocationMenu.ContactCreate.Click();
-            _personOnLocation = ContactPersonFactory.Create();
+            _personOnLocation = TestData.Factory.Person.Create();
             Workflow.Contact.Create(_personOnLocation);
             Testlogic.Contact.Check(_personOnLocation);
 
@@ -115,7 +115,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void CreateLocationOnCustomer()
         {
-            _location = LocationFactory.Create();
+            _location = TestData.Factory.Location.Create();
             Workflow.Location.Create(_location);
             Testlogic.Location.Check(_location);
 
@@ -153,7 +153,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateContactOnCustomer()
         {
             CustomerMenu.ContactCreate.Click();
-            _personOnCustomer = ContactPersonFactory.Create();
+            _personOnCustomer = TestData.Factory.Person.Create();
             Workflow.Contact.Create(_personOnCustomer);
             Testlogic.Contact.Check(_personOnCustomer);
             Workflow.Lobby.OpenLatestElement();
@@ -292,7 +292,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void CreateUser()
         {
-            _user = UserFactory.Create();
+            _user = TestData.Factory.User.Create();
             Workflow.User.Create(_user);
 
             Testlogic.User.Check(_user);
@@ -308,7 +308,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void CreateCustomer()
         {
-            _customer = CustomerFactory.Create();
+            _customer = TestData.Factory.Customer.Create();
             Workflow.Customer.Create(_customer);
             Testlogic.Customer.Check(_customer);
             Workflow.Lobby.OpenLatestElement();
@@ -317,7 +317,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void CreateMpdOnCustomer()
         {
-            _mpd = MpdFactory.Create();
+            _mpd = TestData.Factory.Mpd.Create();
             Workflow.Mpd.Create(_mpd);
             Testlogic.Mpd.Check(_mpd);
 
@@ -328,7 +328,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void EditContactOnLocation()
         {
             ContactMenu.ContactEdit.Click();
-            _personOnLocation = ContactPersonFactory.Edit();
+            _personOnLocation = TestData.Factory.Person.Edit();
             Workflow.Contact.Edit(_personOnLocation);
             Testlogic.Contact.Check(_personOnLocation);
 

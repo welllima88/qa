@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
 
-            _p = ContactPersonFactory.Create();
+            _p = TestData.Factory.Person.Create();
             LocationMenu.ContactCreate.Click();
             Workflow.Contact.Create(_p);
         }

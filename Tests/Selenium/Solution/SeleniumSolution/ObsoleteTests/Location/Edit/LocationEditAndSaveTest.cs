@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         [TestMethod]
         public void EditLocationAndSave()
         {
-            TestData.ValueObjects.Location l = LocationFactory.Edit();
+            TestData.ValueObjects.Location l = TestData.Factory.Location.Edit();
             Workflow.Location.Edit(l);
 
             NavigationBar.Lobby.Click();

@@ -27,7 +27,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
             StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            TestData.ValueObjects.Customer c = CustomerFactory.Edit();
+            TestData.ValueObjects.Customer c = TestData.Factory.Customer.Edit();
             Workflow.Customer.Edit(c);
             Testlogic.Customer.Check(c);
 

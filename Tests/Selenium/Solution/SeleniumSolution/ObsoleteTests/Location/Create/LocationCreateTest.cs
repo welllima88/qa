@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate("Customer/?CustomerId=401983");
-            _l = LocationFactory.Create();
+            _l = TestData.Factory.Location.Create();
             Workflow.Location.Create(_l);
         }
 

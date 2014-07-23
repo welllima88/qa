@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
-            _c = CustomerFactory.Create();
+            _c = TestData.Factory.Customer.Create();
             Workflow.Customer.Create(_c);
         }
 

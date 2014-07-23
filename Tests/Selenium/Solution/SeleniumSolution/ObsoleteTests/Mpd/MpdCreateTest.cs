@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Mpd
         public void CreateMpdToCustomer()
         {
             TestDirector.Navigate("Mpd/ListByCustomer/?CUSTOMERID=402200");
-            _mpd = MpdFactory.Create();
+            _mpd = TestData.Factory.Mpd.Create();
             Workflow.Mpd.Create(_mpd);
         }
 

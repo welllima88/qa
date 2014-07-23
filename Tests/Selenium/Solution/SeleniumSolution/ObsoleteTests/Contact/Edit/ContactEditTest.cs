@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
 
-            _p = ContactPersonFactory.Edit();
+            _p = TestData.Factory.Person.Edit();
             Workflow.Contact.Edit(_p);
         }
 

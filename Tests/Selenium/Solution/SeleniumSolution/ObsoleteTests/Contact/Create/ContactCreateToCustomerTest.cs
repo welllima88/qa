@@ -20,7 +20,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            _p = ContactPersonFactory.Create();
+            _p = TestData.Factory.Person.Create();
             Workflow.Contact.Create(_p);
         }
 
