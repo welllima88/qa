@@ -36,7 +36,8 @@ namespace Six.Scs.QA.Selenium.Location
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Ep2MerchantId")).TextField().Text();
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Ep2MerchantId")).TextField().Text();
             }
         }
 
@@ -60,7 +61,9 @@ namespace Six.Scs.QA.Selenium.Location
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_ZIP"))
+                    .TextField()
+                    .TypeText(value);
             }
             get
             {
@@ -72,7 +75,9 @@ namespace Six.Scs.QA.Selenium.Location
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_City")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_City"))
+                    .TextField()
+                    .TypeText(value);
             }
         }
 
@@ -128,7 +133,9 @@ namespace Six.Scs.QA.Selenium.Location
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Fax")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Fax"))
+                    .TextField()
+                    .TypeText(value);
             }
         }
 
@@ -169,7 +176,9 @@ namespace Six.Scs.QA.Selenium.Location
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Web")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("input#LocationData_Address_Web"))
+                    .TextField()
+                    .TypeText(value);
             }
         }
     }

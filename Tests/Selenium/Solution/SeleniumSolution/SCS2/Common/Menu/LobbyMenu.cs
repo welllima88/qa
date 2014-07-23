@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     ///     css Locator have problems with menu so use xpath until resolved the reason...
     /// </summary>
     public class LobbyMenu : WebObject
-    {        
+    {
         public static IWebElementAdapter Lobby
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }

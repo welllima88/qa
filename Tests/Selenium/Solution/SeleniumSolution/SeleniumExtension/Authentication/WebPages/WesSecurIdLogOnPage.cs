@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.WebPages
             }
         }
 
-        public static  IWebElement MessageInfo
+        public static IWebElement MessageInfo
         {
             get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divmsginfo")); }
         }

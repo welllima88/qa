@@ -23,7 +23,8 @@ namespace Six.Scs.QA.Selenium.Brand
             // By.XPath("//td[text()='" + brand + "']");
 
             ReadOnlyCollection<IWebElementAdapter> ccss =
-                WebDriver.FindAdaptedElements(By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
+                WebDriver.FindAdaptedElements(
+                    By.CssSelector("span#ctl00_bodyContentPlaceHolder_trvAvailable div a tr td.data"));
             IWebElementAdapter firstOrDefault = ccss.FirstOrDefault(d => d.Text.Contains(brand));
             if (firstOrDefault != null)
                 firstOrDefault.Click();

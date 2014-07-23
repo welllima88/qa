@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Drawing;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
@@ -18,6 +17,21 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public WebElementAdapter(IWebElement webElement)
         {
             _theWebElement = webElement;
+        }
+
+        public string TagName
+        {
+            get { return _theWebElement.TagName; }
+        }
+
+        public Point Location
+        {
+            get { return _theWebElement.Location; }
+        }
+
+        public Size Size
+        {
+            get { return _theWebElement.Size; }
         }
 
         /// <summary>
@@ -50,6 +64,41 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             return new PasswortTextFieldElement(_theWebElement);
         }
 
+        public void Click()
+        {
+            _theWebElement.Click();
+        }
+
+        public string Text
+        {
+            get { return _theWebElement.Text; }
+        }
+
+        public bool Enabled
+        {
+            get { return _theWebElement.Enabled; }
+        }
+
+        public bool Selected
+        {
+            get { return _theWebElement.Selected; }
+        }
+
+        public bool Displayed
+        {
+            get { return _theWebElement.Displayed; }
+        }
+
+        public CheckBoxElement CheckBox()
+        {
+            return new CheckBoxElement(_theWebElement);
+        }
+
+        public ButtonElement Button()
+        {
+            return new ButtonElement(_theWebElement);
+        }
+
         public IWebElement FindElement(By by)
         {
             return _theWebElement.FindElement(by);
@@ -75,11 +124,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             _theWebElement.Submit();
         }
 
-        public void Click()
-        {
-            _theWebElement.Click();
-        }
-
         public string GetAttribute(string attributeName)
         {
             return _theWebElement.GetAttribute(attributeName);
@@ -88,51 +132,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public string GetCssValue(string propertyName)
         {
             return _theWebElement.GetCssValue(propertyName);
-        }
-
-        public string TagName
-        {
-            get { return _theWebElement.TagName; }
-        }
-
-        public string Text
-        {
-            get { return _theWebElement.Text; }
-        }
-
-        public bool Enabled
-        {
-            get { return _theWebElement.Enabled; }
-        }
-
-        public bool Selected
-        {
-            get { return _theWebElement.Selected; }
-        }
-
-        public Point Location
-        {
-            get { return _theWebElement.Location; }
-        }
-
-        public Size Size
-        {
-            get { return _theWebElement.Size; }
-        }
-
-        public bool Displayed
-        {
-            get { return _theWebElement.Displayed; }
-        }
-
-        public CheckBoxElement CheckBox()
-        {
-            return new CheckBoxElement(_theWebElement);
-        }
-
-        public ButtonElement Button()
-        {
-            return new ButtonElement(_theWebElement);
         }
     }
 }

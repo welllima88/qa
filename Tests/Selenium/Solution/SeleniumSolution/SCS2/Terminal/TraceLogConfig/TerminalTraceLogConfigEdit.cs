@@ -65,7 +65,9 @@ namespace Six.Scs.QA.Selenium.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressUrl"))
+                    .TextField()
+                    .TypeText(value);
             }
         }
 
@@ -73,7 +75,9 @@ namespace Six.Scs.QA.Selenium.Terminal.TraceLogConfig
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort"))
+                    .TextField()
+                    .TypeText(value);
             }
         }
 

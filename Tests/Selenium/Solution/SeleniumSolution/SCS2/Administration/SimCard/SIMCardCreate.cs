@@ -57,6 +57,6 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
         public static string Usage
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Selector().SelectByText(value); }
-        } 
+        }
     }
 }

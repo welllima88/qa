@@ -8,7 +8,10 @@ namespace Six.Scs.QA.Selenium.Terminal
     {
         public static string Article
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text; }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblArticleName")).Text;
+            }
         }
 
         public static string DeliveryDate
@@ -134,7 +137,8 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton"));
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton"));
             }
         }
 
@@ -142,7 +146,9 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
             }
         }
     }

@@ -99,7 +99,8 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
             }
         }
 
@@ -107,7 +108,9 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
             }
         }
     }

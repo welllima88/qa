@@ -27,7 +27,10 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter Service
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService/?USERNAME=']")); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService/?USERNAME=']"));
+            }
         }
 
         public static IWebElementAdapter Roles

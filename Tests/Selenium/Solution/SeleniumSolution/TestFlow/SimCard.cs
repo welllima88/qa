@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Testlogic
 {

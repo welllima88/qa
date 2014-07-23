@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 
         public CertificateAuthentication(string mandant)
         {
-            _mandant = mandant;            
+            _mandant = mandant;
         }
 
         public void LogOn()

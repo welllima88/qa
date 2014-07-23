@@ -1,7 +1,6 @@
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Infotext;
 using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic

@@ -9,7 +9,9 @@ namespace Six.Scs.QA.Selenium.Help
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/Releasenotes']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("body div.navbar ul.nav li a[href$='/help/Releasenotes']"));
             }
         }
 

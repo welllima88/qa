@@ -57,7 +57,11 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static IWebElementAdapter ExecuteButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("tbody input#ctl00_bodyContentPlaceHolder_btnProceed")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("tbody input#ctl00_bodyContentPlaceHolder_btnProceed"));
+            }
         }
     }
 }

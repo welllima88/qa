@@ -10,7 +10,8 @@ namespace Six.Scs.QA.Selenium.Customer
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblCustomerDeleteInfo")).Button();
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lblCustomerDeleteInfo"))
+                        .Button();
             }
         }
 

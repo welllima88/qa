@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Workflow
             ContactPersonCreate.AdressAddition = c.Adress.AdressAddition;
             ContactPersonCreate.Web = c.Contact.Web;
 
-            ContactPersonEdit.SaveButton.Click();
+            ContactPersonCreate.SaveButton.Click();
 
             // c.Id = ContactPersonView.Id;
         }

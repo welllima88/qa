@@ -19,7 +19,10 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
         public static string Telephone
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Text; }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TextField().TypeText(value);
+            }
         }
 
         public static string Language

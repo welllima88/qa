@@ -30,7 +30,9 @@ namespace Six.Scs.QA.Selenium.Massmuation
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']")).Text;
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#content a[href$='/MassAcqExchange/StreamFile']"))
+                        .Text;
             }
         }
     }

@@ -9,7 +9,10 @@ namespace Six.Scs.QA.Selenium.Common.Infotext
     {
         public static ButtonElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")).Button(); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")).Button();
+            }
         }
 
         private static ReadOnlyCollection<IWebElementAdapter> Elements

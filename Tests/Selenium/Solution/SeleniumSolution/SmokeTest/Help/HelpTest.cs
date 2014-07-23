@@ -28,16 +28,16 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Help
 
         [Test]
         [Category("Help")]
-        public void Scs2LinkIsAvailable()
+        public void ReleaseNotesLinkIsAvailable()
         {
-            Assert.AreEqual("SCS2 Hilfe", HelpNavigation.Scs2.Text);
+            Assert.AreEqual("Releasenotes", HelpNavigation.ReleaseNotes.Text);
         }
 
         [Test]
         [Category("Help")]
-        public void ReleaseNotesLinkIsAvailable()
+        public void Scs2LinkIsAvailable()
         {
-            Assert.AreEqual("Releasenotes", HelpNavigation.ReleaseNotes.Text);
+            Assert.AreEqual("SCS2 Hilfe", HelpNavigation.Scs2.Text);
         }
     }
 }

@@ -10,7 +10,9 @@ namespace Six.Scs.QA.Selenium.Massmuation
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblMainTitle>h1")).Text;
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("span#ctl00_bodyContentPlaceHolder_lblMainTitle>h1"))
+                        .Text;
             }
         }
 

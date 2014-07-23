@@ -8,8 +8,6 @@ namespace Six.Scs.QA.Selenium.Extension
     /// </summary>
     public static class TestRegExpPatterns
     {
-        public static readonly string WesHeadline = @"^SIX [\s\S]* - WES.*";
-
         public const string CustomerNo = "[0-9]{1,7}";
         public const string SbsAdressNo = "[0-9]{1,7}";
         public const string SbsAdressNoOpt = "[0-9]{1,7}|";
@@ -23,5 +21,6 @@ namespace Six.Scs.QA.Selenium.Extension
         public const string UserName = @"\w{5}";
         public const string NotEmpty = @"\w";
         public const string UserPassword = @"[\w]{4,10}|";
+        public static readonly string WesHeadline = @"^SIX [\s\S]* - WES.*";
     }
 }

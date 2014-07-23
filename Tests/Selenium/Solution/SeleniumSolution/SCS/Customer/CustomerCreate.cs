@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#CustomerSegment")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select[name='CountryId']"))
-                         .Selector().SelectByText(value);
+                    .Selector().SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -46,7 +46,7 @@ namespace Six.Scs.QA.Selenium.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#BillingTenant")).
-                          Selector().SelectByText(value);
+                    Selector().SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -115,7 +115,10 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static string CustomerName
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerName']")).TextField().TypeText(value);
+            }
             get { throw new NotImplementedException(); }
         }
 
@@ -136,7 +139,7 @@ namespace Six.Scs.QA.Selenium.Customer
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("#StructureId")).
-                          Selector().SelectByText(value);
+                    Selector().SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -182,7 +185,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("select[name='SupportContractId]'")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -195,7 +198,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 WebDriver.FindAdaptedElement(
                     By.CssSelector("select[name='LanguageId]'")).Selector().
-                          SelectByText(value);
+                    SelectByText(value);
             }
             get { throw new NotImplementedException(); }
         }
@@ -214,7 +217,10 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static string CustomerNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input[name='CustomerId']")).TextField().TypeText(value);
+            }
             get { throw new NotImplementedException(); }
         }
 

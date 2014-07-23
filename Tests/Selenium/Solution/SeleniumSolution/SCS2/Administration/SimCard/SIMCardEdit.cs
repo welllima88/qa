@@ -21,7 +21,10 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static string SimCardNumber
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_CardNumber")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#SIMCard_CardNumber")).TextField().TypeText(value);
+            }
         }
 
         public static string MobileNumber

@@ -12,7 +12,9 @@ namespace Six.Scs.QA.Selenium.Brand
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextField().Text();
+                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate"))
+                        .TextField()
+                        .Text();
             }
             set
             {

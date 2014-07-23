@@ -44,7 +44,10 @@ namespace Six.Scs.QA.Selenium.Location
 
         public static string Telephone
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Telephone")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Telephone")).TextField().TypeText(value);
+            }
         }
 
         public static string Mobile

@@ -12,27 +12,42 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 
         public IWebElementAdapter ContractType
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(1)" + Suffix)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(1)" + Suffix));
+            }
         }
 
         public IWebElementAdapter InstallType
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(2)" + Suffix)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(2)" + Suffix));
+            }
         }
 
         public IWebElementAdapter DeliverDate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(3)" + Suffix)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(3)" + Suffix));
+            }
         }
 
         public IWebElementAdapter SupportContract
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(4)" + Suffix)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(4)" + Suffix));
+            }
         }
 
         public IWebElementAdapter CashIntegrator
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(5)" + Suffix)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector(Prefix + PortletId + "li:nth-child(5)" + Suffix));
+            }
         }
 
         public static IWebElementAdapter TerminalDuplicate

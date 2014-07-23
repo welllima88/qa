@@ -7,7 +7,12 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     {
         public static IWebElementAdapter Terminal
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/TerminalDashboard/?TERMINALID=']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/TerminalDashboard/?TERMINALID=']"));
+            }
         }
     }
 }

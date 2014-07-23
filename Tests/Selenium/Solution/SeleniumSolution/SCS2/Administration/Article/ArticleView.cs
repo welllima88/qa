@@ -72,7 +72,8 @@ namespace Six.Scs.QA.Selenium.Administration.Article
             {
                 return
                     WebDriver.WebElementsAsStringList(
-                        WebDriver.FindAdaptedElements(By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
+                        WebDriver.FindAdaptedElements(
+                            By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
             }
         }
 

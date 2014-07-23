@@ -27,13 +27,19 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public string Guid
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerGUIDLabel")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerGUIDLabel")).Text;
+            }
             set { throw new NotImplementedException(); }
         }
 
         public string CustomerName
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerNameTextBox")).Text;
+            }
             set { throw new NotImplementedException(); }
         }
 
@@ -43,7 +49,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_supplierDropDown_dnSupplier")).
-                              Text;
+                        Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -54,8 +60,8 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsBillingTenantLabel"))
-                             .
-                              Text;
+                        .
+                        Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -67,7 +73,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_streetNameTextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -78,7 +84,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_zipTextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -89,14 +95,17 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_cityTextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
 
         public static string SbsCurrency
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsCurrency")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_customerSbsCurrency")).Text;
+            }
             set { throw new NotImplementedException(); }
         }
 
@@ -117,7 +126,10 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public String Agency
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowAgency_sugAgency")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowAgency_sugAgency")).Text;
+            }
             set { throw new NotImplementedException(); }
         }
 
@@ -127,7 +139,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugLanguage"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -138,7 +150,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_sugCountry"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -194,7 +206,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephoneTextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -206,7 +218,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_telephone2TextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -217,14 +229,17 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_faxTextBox"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
 
         public string Web
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webLink")).Text; }
+            get
+            {
+                return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_webLink")).Text;
+            }
             set { throw new NotImplementedException(); }
         }
 
@@ -234,7 +249,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_addressControl_regionTextBox")).
-                              Text;
+                        Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -245,7 +260,7 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 return
                     WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCategoryCode_sugDropDown"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -257,7 +272,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_rowSupportContract_ddSupportContract"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }
@@ -269,7 +284,7 @@ namespace Six.Scs.QA.Selenium.Customer
                 return
                     WebDriver.FindElement(
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_rowCashIntegrator_sugCashIntegrator"))
-                             .Text;
+                        .Text;
             }
             set { throw new NotImplementedException(); }
         }

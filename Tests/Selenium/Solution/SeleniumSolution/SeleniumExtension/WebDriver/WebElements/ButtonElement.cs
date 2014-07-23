@@ -9,6 +9,5 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             //if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
             //    throw new NotButtonElementException(webElement.TagName, webElement.GetCssValue("type"));
         }
-        
     }
 }
