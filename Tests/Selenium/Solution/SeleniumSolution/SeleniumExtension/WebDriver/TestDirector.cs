@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using Six.Scs.QA.Selenium.Extension.Environment;
@@ -14,6 +12,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         public static IWebDriverAdapter WebDriver { get; private set; }
 
         public static string BaseUrl { get; private set; }
+        public static TestEnvironment TestEnvironment { get; set; }
 
         /// <summary>
         ///     Execute the required authentication procedure to fulfill the basic precondition of testing.
@@ -41,14 +40,15 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
                 // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
                 WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
 
-                Debug.WriteLine("using Selenium on local");
+                Console.WriteLine("using Selenium on local");
             }
             else
             {
                 DesiredCapabilities capability = DesiredCapabilities(firefoxProfile);
-                WebDriver = new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20)));
+                WebDriver =
+                    new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20)));
 
-                Debug.WriteLine("using Selenium Grid");
+                Console.WriteLine("using Selenium Grid");
             }
             WebObject.WebDriver = new WebDriverAdapter(WebDriver);
         }
@@ -103,6 +103,12 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         public static void Refresh()
         {
             WebDriver.Navigate().Refresh();
+        }
+
+        public static void Stop()
+        {
+            LogOff();
+            ShutdownBrowser();
         }
     }
 }
