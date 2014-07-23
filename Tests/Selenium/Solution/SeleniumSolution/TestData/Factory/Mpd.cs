@@ -1,12 +1,10 @@
-﻿using Six.Scs.QA.TestData.ValueObjects;
-
-namespace Six.Scs.QA.TestData.Factory
+﻿namespace Six.Scs.QA.TestData.Factory
 {
-    public class MpdFactory
+    public class Mpd
     {
-        public static Mpd Create()
+        public static ValueObjects.Mpd Create()
         {
-            return new Mpd
+            return new ValueObjects.Mpd
             {
                 Adress = "Adress",
                 Port = "Port",

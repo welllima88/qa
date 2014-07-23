@@ -1,12 +1,10 @@
-﻿using Six.Scs.QA.TestData.ValueObjects;
-
-namespace Six.Scs.QA.TestData.Factory
+﻿namespace Six.Scs.QA.TestData.Factory
 {
-    public class ContactFactory
+    public class Contact
     {
-        public static Contact Create()
+        public static ValueObjects.Contact Create()
         {
-            return new Contact
+            return new ValueObjects.Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-group.de",
@@ -17,9 +15,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static Contact Edit()
+        public static ValueObjects.Contact Edit()
         {
-            return new Contact
+            return new ValueObjects.Contact
             {
                 Language = "Englisch [en]",
                 Email = "marc.siegmund@six-group.uk",
@@ -30,9 +28,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static Contact Invalid()
+        public static ValueObjects.Contact Invalid()
         {
-            return new Contact
+            return new ValueObjects.Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-grou$°p.com",

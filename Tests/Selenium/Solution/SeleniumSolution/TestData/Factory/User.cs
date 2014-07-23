@@ -1,12 +1,10 @@
-using Six.Scs.QA.TestData.ValueObjects;
-
 namespace Six.Scs.QA.TestData.Factory
 {
-    public class UserFactory
+    public class User
     {
-        public static User Create()
+        public static ValueObjects.User Create()
         {
-            return new User
+            return new ValueObjects.User
             {
                 UserName = "s" + Factory.GenerateTestId(),
                 Salutation = "Herr",

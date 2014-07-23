@@ -1,12 +1,10 @@
-﻿using Six.Scs.QA.TestData.ValueObjects;
-
-namespace Six.Scs.QA.TestData.Factory
+﻿namespace Six.Scs.QA.TestData.Factory
 {
-    public class AdressFactory
+    public class Adress
     {
-        public static Adress Create()
+        public static ValueObjects.Adress Create()
         {
-            return new Adress
+            return new ValueObjects.Adress
             {
                 StreetNo = "Hardturmstr. 201",
                 Zip = "8021",
@@ -18,9 +16,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static Adress Edit()
+        public static ValueObjects.Adress Edit()
         {
-            return new Adress
+            return new ValueObjects.Adress
             {
                 StreetNo = "Theater Platz 1a-3c",
                 AdressAddition = "SYR/Stage 3",
@@ -32,9 +30,9 @@ namespace Six.Scs.QA.TestData.Factory
             };
         }
 
-        public static Adress Invalid()
+        public static ValueObjects.Adress Invalid()
         {
-            return new Adress
+            return new ValueObjects.Adress
             {
                 StreetNo = "Hardturmstr. 201$°",
                 Zip = "802$°",

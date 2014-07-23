@@ -2,11 +2,11 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.TestData.Factory
 {
-    public class TerminalDuplicateDataFactory
+    public class TerminalDuplicate
     {
-        public static TerminalDuplicate Create()
+        public static ValueObjects.TerminalDuplicate Create()
         {
-            return new TerminalDuplicate
+            return new ValueObjects.TerminalDuplicate
             {
                 NumberOfTerminals = "2",
                 InstallMessage = "SYR Install Message " + Factory.GenerateTestId(),

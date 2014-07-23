@@ -1,12 +1,10 @@
-﻿using Six.Scs.QA.TestData.ValueObjects;
-
-namespace Six.Scs.QA.TestData.Factory
+﻿namespace Six.Scs.QA.TestData.Factory
 {
-    public class CustomerFactory
+    public class Customer
     {
-        public static Customer Create()
+        public static ValueObjects.Customer Create()
         {
-            return new Customer
+            return new ValueObjects.Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "Euro",
@@ -17,23 +15,23 @@ namespace Six.Scs.QA.TestData.Factory
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 Segment = "01_CH",
                 Agency = "B05 Leiser Peter",
-                Location = LocationFactory.Create(),
+                Location = Location.Create(),
             };
         }
 
-        public static Customer Edit()
+        public static ValueObjects.Customer Edit()
         {
-            return new Customer
+            return new ValueObjects.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
-                Location = LocationFactory.Edit(),
-                Agency = "SIX Payment Services (Europe)",                
+                Location = Location.Edit(),
+                Agency = "SIX Payment Services (Europe)",
             };
         }
 
-        public static Customer Invalid()
+        public static ValueObjects.Customer Invalid()
         {
-            return new Customer
+            return new ValueObjects.Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "EUR",
@@ -41,7 +39,7 @@ namespace Six.Scs.QA.TestData.Factory
                 CustomerName = "SYR Sele Kunde A$°",
                 CustomerNumber = "^@}$°",
                 Agency = "Albert Brun & Partner",
-                Location = LocationFactory.Invalid(),
+                Location = Location.Invalid(),
             };
         }
     }
