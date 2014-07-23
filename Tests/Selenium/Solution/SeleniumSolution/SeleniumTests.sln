@@ -46,9 +46,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsoleteTests", "ObsoleteTests\ObsoleteTests.csproj", "{B313EF8D-4519-426A-B8CF-EC19CB03811E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestObjectGrabber", "TestObjectGrabber\TestObjectGrabber.csproj", "{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
+		SccNumberOfProjects = 11
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
 		SccLocalPath0 = .
@@ -88,6 +90,10 @@ Global
 		SccProjectTopLevelParentUniqueName9 = SeleniumTests.sln
 		SccProjectName9 = ObsoleteTests
 		SccLocalPath9 = ObsoleteTests
+		SccProjectUniqueName10 = TestObjectGrabber\\TestObjectGrabber.csproj
+		SccProjectTopLevelParentUniqueName10 = SeleniumTests.sln
+		SccProjectName10 = TestObjectGrabber
+		SccLocalPath10 = TestObjectGrabber
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -204,6 +210,18 @@ Global
 		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.QAL|Any CPU.Build.0 = Release|Any CPU
 		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B313EF8D-4519-426A-B8CF-EC19CB03811E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.PROD|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.PROD|Any CPU.Build.0 = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.QAK|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.QAK|Any CPU.Build.0 = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.QAL|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.QAL|Any CPU.Build.0 = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -218,5 +236,6 @@ Global
 		{6D99C089-ECA8-42DA-B74B-EAF28E457D83} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{B313EF8D-4519-426A-B8CF-EC19CB03811E} = {15F781AC-F400-4633-8DAF-D4193C83738B}
+		{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0} = {B1F12968-8683-4315-936C-3CA886A18E65}
 	EndGlobalSection
 EndGlobal

@@ -9,12 +9,12 @@ namespace Six.Scs.QA.TestData.Factory
         {
             return new Collection<ValueObjects.Brand.Currency>
             {
-                new ValueObjects.Brand.Currency()
+                new ValueObjects.Brand.Currency
                 {
                     IsoCode = "CHF"
                 }
                 ,
-                new ValueObjects.Brand.Currency()
+                new ValueObjects.Brand.Currency
                 {
                     IsoCode = "EUR"
                 }
