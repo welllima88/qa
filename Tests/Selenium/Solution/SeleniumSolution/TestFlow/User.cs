@@ -2,8 +2,6 @@
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.User;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
@@ -13,7 +11,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.User Create(TestData.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            TestData.ValueObjects.User user = UserFactory.Create();
+            TestData.ValueObjects.User user = TestData.Factory.User.Create();
             Workflow.User.Create(user);
 
             Check(user);
@@ -31,6 +29,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
+
         public static void Check(TestData.ValueObjects.User u)
         {
             Assert.AreEqual(u.UserName, UserView.UserName);

@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Mpd;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
@@ -12,7 +10,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Customer.Open(customer);
 
-            TestData.ValueObjects.Mpd mpd = MpdFactory.Create();
+            TestData.ValueObjects.Mpd mpd = TestData.Factory.Mpd.Create();
             Workflow.Mpd.Create(mpd);
             Check(mpd);
 
@@ -24,7 +22,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.Mpd Edit(TestData.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            TestData.ValueObjects.Mpd mpd = MpdFactory.Create();
+            TestData.ValueObjects.Mpd mpd = TestData.Factory.Mpd.Create();
             mpd.Id = _mpd.Id; // keep Id
 
             Workflow.Mpd.Edit(mpd);

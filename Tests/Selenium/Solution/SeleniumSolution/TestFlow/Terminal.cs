@@ -7,8 +7,8 @@ using Six.Scs.QA.Selenium.Massmuation;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
+using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Testlogic
     {
         public static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Location location)
         {
-            TestData.ValueObjects.Terminal terminal = TerminalFactory.Xentissimo();
+            TestData.ValueObjects.Terminal terminal = TestData.Factory.Terminal.Xentissimo();
             Location.Open(location);
             LocationMenu.TerminalCreate.Click();
 
@@ -45,7 +45,7 @@ namespace Six.Scs.QA.Testlogic
 
         public static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Customer customer)
         {
-            TestData.ValueObjects.Terminal terminal = TerminalFactory.Yomani();
+            TestData.ValueObjects.Terminal terminal = TestData.Factory.Terminal.Yomani();
             Customer.Open(customer);
             CustomerMenu.TerminalCreate.Click();
 
@@ -77,7 +77,7 @@ namespace Six.Scs.QA.Testlogic
         public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TerminalDuplicate terminalDuplicate = TerminalDuplicateDataFactory.Create();
+            TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
             Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalMassValidation.ExecuteButton.Click();

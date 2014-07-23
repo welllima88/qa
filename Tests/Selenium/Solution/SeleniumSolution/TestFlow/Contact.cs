@@ -2,7 +2,6 @@ using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Person;
-using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
@@ -19,7 +18,7 @@ namespace Six.Scs.QA.Testlogic
 
         private static Person CreateAndSave()
         {
-            Person person = ContactPersonFactory.Create();
+            Person person = TestData.Factory.Person.Create();
             Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
@@ -38,7 +37,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            Person person = ContactPersonFactory.Edit();
+            Person person = TestData.Factory.Person.Edit();
 
             Workflow.Contact.Edit(person);
             Check(person);

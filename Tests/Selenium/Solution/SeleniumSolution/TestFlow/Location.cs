@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Location;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
@@ -12,7 +10,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.Location Edit(TestData.ValueObjects.Location location)
         {
             Open(location);
-            TestData.ValueObjects.Location _location = LocationFactory.Edit();
+            TestData.ValueObjects.Location _location = TestData.Factory.Location.Edit();
             Workflow.Location.Edit(_location);
             Check(_location);
 
@@ -23,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
 
         public static TestData.ValueObjects.Location Create(TestData.ValueObjects.Customer customer)
         {
-            TestData.ValueObjects.Location location = LocationFactory.Create();
+            TestData.ValueObjects.Location location = TestData.Factory.Location.Create();
             Workflow.Location.Create(location);
             Check(location);
 
@@ -37,6 +35,7 @@ namespace Six.Scs.QA.Testlogic
             Search.LocationCanBeFoundByLocationName(location.CompanyName);
             // Assert.AreEqual(location.Guid, LocationView.Guid);
         }
+
         /// <summary>
         ///     Verifies the location
         /// </summary>

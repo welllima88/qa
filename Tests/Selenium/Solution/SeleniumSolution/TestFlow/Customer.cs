@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
-using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
@@ -11,7 +10,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.Customer Edit(TestData.ValueObjects.Customer customer)
         {
             Open(customer);
-            TestData.ValueObjects.Customer _customer = CustomerFactory.Edit();
+            TestData.ValueObjects.Customer _customer = TestData.Factory.Customer.Edit();
             Workflow.Customer.Edit(_customer);
             Check(_customer);
 
@@ -22,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
 
         public static TestData.ValueObjects.Customer Create()
         {
-            TestData.ValueObjects.Customer customer = CustomerFactory.Create();
+            TestData.ValueObjects.Customer customer = TestData.Factory.Customer.Create();
             Workflow.Customer.Create(customer);
             Check(customer);
             Lobby.OpenLatestElement();
