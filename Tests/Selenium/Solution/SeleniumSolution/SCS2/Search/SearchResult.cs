@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.Search
 
         public static IWebElementAdapter First(SearchDivLocator searchDivLocator)
         {
-            return Result(searchDivLocator)[1];
+            return Result(searchDivLocator)[0];
         }
 
         public static ReadOnlyCollection<IWebElementAdapter> Result(SearchDivLocator searchDivLocator)
