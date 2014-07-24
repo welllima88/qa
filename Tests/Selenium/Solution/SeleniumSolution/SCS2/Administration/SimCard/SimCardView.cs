@@ -24,7 +24,12 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static ButtonElement CreateButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[value='Hinzufügen']")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SIMCard/New']")).Button(); }
+        }
+
+        public static ButtonElement ImportButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SIMCard/Import']")).Button(); }
         }
 
         public static string NetProvider
