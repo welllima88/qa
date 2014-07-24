@@ -50,20 +50,28 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Factory\AdressFactory.cs" />
-    <Compile Include="Factory\ContactFactory.cs" />
-    <Compile Include="Factory\ContactPersonFactory.cs" />
-    <Compile Include="Factory\ContractFactory.cs" />
-    <Compile Include="Factory\CustomerFactory.cs" />
+    <Compile Include="Factory\Brand.cs" />
+    <Compile Include="Factory\Currency.cs" />
+    <Compile Include="ValueObjects\Brand\Acquirer.cs" />
+    <Compile Include="Factory\Adress.cs" />
+    <Compile Include="ValueObjects\Brand\Brand.cs" />
+    <Compile Include="Factory\Contact.cs" />
+    <Compile Include="Factory\Person.cs" />
+    <Compile Include="ValueObjects\Brand\Contract.cs" />
+    <Compile Include="Factory\Contract.cs" />
+    <Compile Include="Factory\Customer.cs" />
     <Compile Include="Factory\Factory.cs" />
-    <Compile Include="Factory\LocationFactory.cs" />
-    <Compile Include="Factory\MpdFactory.cs" />
-    <Compile Include="Factory\TerminalDuplicateDataFactory.cs" />
-    <Compile Include="Factory\TerminalFactory.cs" />
-    <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Factory\Location.cs" />
+    <Compile Include="Factory\Mpd.cs" />
+    <Compile Include="Factory\TerminalDuplicate.cs" />
+    <Compile Include="Factory\Terminal.cs" />
+    <Compile Include="Factory\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\Adress.cs" />
     <Compile Include="ValueObjects\Agency.cs" />
+    <Compile Include="ValueObjects\Brand\Currency.cs" />
+    <Compile Include="ValueObjects\Brand\OnUs.cs" />
+    <Compile Include="ValueObjects\Brand\Six.cs" />
     <Compile Include="ValueObjects\Contact.cs" />
     <Compile Include="ValueObjects\Person.cs" />
     <Compile Include="ValueObjects\Customer.cs" />
@@ -74,6 +82,7 @@
     <Compile Include="ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="ValueObjects\User.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
