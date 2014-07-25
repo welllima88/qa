@@ -9,7 +9,10 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
     {
         public static ButtonElement LockButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='lock']")).Button(); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SIMCard/LockCard?simCardId=']")).Button();
+            }
         }
 
         public static ButtonElement UnlinkButton
