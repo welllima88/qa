@@ -1,6 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Drawing;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
 {
@@ -22,16 +20,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public string TagName
         {
             get { return _theWebElement.TagName; }
-        }
-
-        public Point Location
-        {
-            get { return _theWebElement.Location; }
-        }
-
-        public Size Size
-        {
-            get { return _theWebElement.Size; }
         }
 
         /// <summary>
@@ -97,16 +85,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public ButtonElement Button()
         {
             return new ButtonElement(_theWebElement);
-        }
-
-        public IWebElement FindElement(By by)
-        {
-            return _theWebElement.FindElement(by);
-        }
-
-        public ReadOnlyCollection<IWebElement> FindElements(By by)
-        {
-            return _theWebElement.FindElements(by);
         }
 
         public void Clear()
