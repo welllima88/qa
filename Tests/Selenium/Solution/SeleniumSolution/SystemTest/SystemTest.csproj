@@ -43,6 +43,7 @@
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -76,10 +77,6 @@
     <ProjectReference Include="..\TestFlow\Testlogic.csproj">
       <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
       <Name>Testlogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Workflow\Workflow.csproj">
-      <Project>{6d99c089-eca8-42da-b74b-eaf28e457d83}</Project>
-      <Name>Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

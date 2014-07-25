@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Environments;
 using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Workflow;
+using Six.Scs.QA.Testlogic;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
             TestDirector.LogOn();
-            Lobby.ChooseLanguage(Languages.German);
+            Lobby.Language(Languages.German);
         }
 
         [TearDown]
