@@ -77,7 +77,7 @@
     <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
     <Compile Include="SIMCard\SimCardCreateTest.cs" />
     <Compile Include="SIMCard\SimCardEditTest.cs" />
-    <Compile Include="SIMCard\SimCardViewCTest.cs" />
+    <Compile Include="SIMCard\SimCardViewTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeTest.cs" />
     <Compile Include="TestLauncher.cs" />
