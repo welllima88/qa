@@ -6,9 +6,8 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Massmuation;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.Workflow;
-using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -31,13 +30,13 @@ namespace Six.Scs.QA.Testlogic
             TerminalMenu.Terminal.Click();
             terminal.Id = TerminalInfo.TerminalId;
 
-            Lobby.OpenLatestElement();
+            Workflow.Lobby.OpenLatestElement();
             Assert.AreEqual(terminal, TerminalInfo.TerminalId);
-            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
-            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
-            Assert.AreEqual("grau", BusinessViewpointPortlet.Color);
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
+            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpoint.TerminalType);
+            Assert.AreEqual("grau", BusinessViewpoint.Color);
             Assert.AreEqual(location.Contact.Language,
-                BusinessViewpointPortlet.TerminalLanguage);
+                BusinessViewpoint.TerminalLanguage);
 
             Assert.AreEqual(location.CompanyName, LocationInfo.CompanyName);
             return terminal;
@@ -60,14 +59,14 @@ namespace Six.Scs.QA.Testlogic
             TerminalMenu.Terminal.Click();
             terminal.Id = TerminalInfo.TerminalId;
 
-            Lobby.OpenLatestElement();
+            Workflow.Lobby.OpenLatestElement();
             Assert.AreEqual(terminal.Id, TerminalInfo.TerminalId);
-            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
-            Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
-            Assert.AreEqual("weiss", BusinessViewpointPortlet.Color);
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
+            Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
+            Assert.AreEqual("weiss", BusinessViewpoint.Color);
 
             Assert.AreEqual(customer.Location.Contact.Language,
-                BusinessViewpointPortlet.TerminalLanguage);
+                BusinessViewpoint.TerminalLanguage);
 
             Assert.AreEqual(customer.CustomerNumber, CustomerInfo.Number);
             Assert.AreEqual(customer.CustomerName, CustomerInfo.Name);
@@ -77,7 +76,7 @@ namespace Six.Scs.QA.Testlogic
         public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
+            TestData.ValueObjects.TerminalDuplicate terminalDuplicate = TerminalDuplicate.Create();
             Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalMassValidation.ExecuteButton.Click();

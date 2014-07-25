@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Administration.SimCard;
+using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Testlogic
@@ -8,7 +9,8 @@ namespace Six.Scs.QA.Testlogic
     {
         public static TestData.ValueObjects.SimCard Create()
         {
-            TestData.ValueObjects.SimCard simCard = Factory.Simcard.Create();
+            TestData.ValueObjects.SimCard simCard = Simcard.Create();
+            SimCardMenu.SimCardManagement.Click();
 
             Workflow.SimCard.Create(simCard);
             Check(simCard);
@@ -18,7 +20,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard)
         {
             Open(_simCard);
-            TestData.ValueObjects.SimCard simCard = Factory.Simcard.Edit();
+            TestData.ValueObjects.SimCard simCard = Simcard.Edit();
             Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;

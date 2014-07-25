@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Mpd;
-using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -14,7 +13,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Mpd.Create(mpd);
             Check(mpd);
 
-            Lobby.OpenLatestElement();
+            Workflow.Lobby.OpenLatestElement();
             Check(mpd);
             return mpd;
         }
@@ -28,7 +27,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Mpd.Edit(mpd);
             Check(mpd);
 
-            Lobby.OpenLatestElement();
+            Workflow.Lobby.OpenLatestElement();
             Check(mpd);
             return mpd;
         }

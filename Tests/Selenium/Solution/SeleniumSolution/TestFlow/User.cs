@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.User;
-using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -15,7 +14,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.User.Create(user);
 
             Check(user);
-            Lobby.OpenLatestElement();
+            Workflow.Lobby.OpenLatestElement();
             Check(user);
             return user;
         }
