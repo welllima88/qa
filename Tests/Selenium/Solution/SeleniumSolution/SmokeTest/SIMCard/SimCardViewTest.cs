@@ -6,12 +6,12 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {
     [TestFixture]
-    public class SimCardViewCTest
+    public class SimCardViewTest
     {
         [TestFixtureSetUp]
         public static void TestInit()
         {
-            TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
+            TestDirector.Navigate("SIMCard/Details?SIMCardId=16");
         }
 
         [Test]
