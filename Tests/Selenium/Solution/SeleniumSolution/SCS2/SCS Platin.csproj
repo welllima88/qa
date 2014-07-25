@@ -173,13 +173,13 @@
     <Compile Include="Search\SimCard.cs" />
     <Compile Include="Search\TerminalResult.cs" />
     <Compile Include="Search\UserResult.cs" />
-    <Compile Include="Terminal\Dashboard\Brand\Acquirer.cs" />
-    <Compile Include="Terminal\Dashboard\Brand\BrandContract.cs" />
-    <Compile Include="Terminal\Dashboard\Brand\BrandPortlet.cs" />
-    <Compile Include="Terminal\Dashboard\Brand\Pms.cs" />
-    <Compile Include="Terminal\Dashboard\Brand\ServiceCenter.cs" />
-    <Compile Include="Terminal\Dashboard\BusinessViewpointPortlet.cs" />
-    <Compile Include="Terminal\Dashboard\ContactsPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Brand\BrandContract.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Brand\BrandPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Brand\Pms.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Brand\ServiceCenter.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\BusinessViewpoint.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Contacts.cs" />
     <Compile Include="Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="Terminal\Dashboard\DashboardRes.Designer.cs">
       <DependentUpon>DashboardRes.resx</DependentUpon>
@@ -188,11 +188,11 @@
     </Compile>
     <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
-    <Compile Include="Terminal\Dashboard\SalesContractPortlet.cs" />
-    <Compile Include="Terminal\Dashboard\TechnicalViewPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\SalesContract.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\TechnicalView.cs" />
     <Compile Include="Terminal\Dashboard\TerminalInfo.cs" />
-    <Compile Include="Terminal\Dashboard\TerminalTextsPortlet.cs" />
-    <Compile Include="Terminal\Dashboard\TroubleTicketsPortlet.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\TerminalTexts.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\TroubleTickets.cs" />
     <Compile Include="Terminal\Duplicate\TerminalDuplicate.cs" />
     <Compile Include="Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="Terminal\FinancialConfig\FinancialConfigEdit.cs" />
