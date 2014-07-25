@@ -18,6 +18,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Mpd _mpd;
 
         [Test]
+        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal Duplicate"),
+         Category("Infotext"), Category("Person"), Category("MPD"), Category("User")]
         public static void ExecuteRegressiontest()
         {
             _customer = Testlogic.Customer.Create();
@@ -47,7 +49,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _duplicatedTerminals = Testlogic.Terminal.Duplicate(_terminalLocation);
 
-            Brands.Create(_duplicatedTerminals[1]);
+            Brands.Create(_duplicatedTerminals[1]); // {0,1} means second terminal
         }
     }
 }
