@@ -54,6 +54,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Brands.cs" />
+    <Compile Include="Lobby.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="Customer.cs" />
