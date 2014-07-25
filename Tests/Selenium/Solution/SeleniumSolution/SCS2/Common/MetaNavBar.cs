@@ -25,6 +25,11 @@ namespace Six.Scs.QA.Selenium.Common
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
         }
 
+        public static string ActualLanguage
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a.menu#ctl00_hplLanguages")).Text; }
+        }
+
         public static IWebElementAdapter LanguageItem(string language)
         {
             return WebDriver.FindAdaptedElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
