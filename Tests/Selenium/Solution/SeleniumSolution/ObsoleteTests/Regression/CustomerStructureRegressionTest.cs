@@ -7,7 +7,8 @@ using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
 
@@ -104,10 +105,10 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
             Lobby.OpenLatestElement();
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
-            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
-            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpointPortlet.TerminalType);
-            Assert.AreEqual("grau", BusinessViewpointPortlet.Color);
-            Assert.AreEqual(_location.Contact.Language, BusinessViewpointPortlet.TerminalLanguage);
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
+            Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpoint.TerminalType);
+            Assert.AreEqual("grau", BusinessViewpoint.Color);
+            Assert.AreEqual(_location.Contact.Language, BusinessViewpoint.TerminalLanguage);
 
             Assert.AreEqual(_location.CompanyName, LocationInfo.CompanyName);
         }
@@ -139,11 +140,11 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
             Lobby.OpenLatestElement();
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
-            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
-            Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpointPortlet.TerminalType);
-            Assert.AreEqual("weiss", BusinessViewpointPortlet.Color);
+            Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
+            Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
+            Assert.AreEqual("weiss", BusinessViewpoint.Color);
 
-            Assert.AreEqual(_customer.Location.Contact.Language, BusinessViewpointPortlet.TerminalLanguage);
+            Assert.AreEqual(_customer.Location.Contact.Language, BusinessViewpoint.TerminalLanguage);
 
             Assert.AreEqual(_customer.CustomerNumber, CustomerInfo.Number);
             Assert.AreEqual(_customer.CustomerName, CustomerInfo.Name);
@@ -353,7 +354,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
         private static void CreateInfotextOnTerminal()
         {
-            TerminalTextsPortlet.CreateInfotext.Click();
+            TerminalTexts.CreateInfotext.Click();
             InfoText.Create("Terminal");
         }
     }

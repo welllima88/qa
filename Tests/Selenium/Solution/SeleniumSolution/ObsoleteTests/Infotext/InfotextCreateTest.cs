@@ -2,7 +2,7 @@
 using Six.Scs.QA.Selenium.Common.Infotext;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Infotext
@@ -33,7 +33,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Infotext
         {
             TestDirector.Navigate("TerminalDashboard?TerminalId=24290006");
 
-            TerminalTextsPortlet.CreateInfotext.Click();
+            TerminalTexts.CreateInfotext.Click();
 
             InfoText.Create("Terminal");
         }

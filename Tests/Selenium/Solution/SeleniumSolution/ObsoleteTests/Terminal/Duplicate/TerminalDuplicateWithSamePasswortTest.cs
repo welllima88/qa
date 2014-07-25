@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Massmuation;
-using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         public static void TestInit(TestContext testContext)
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
-            SalesContractPortlet.TerminalDuplicate.Click();
+            SalesContract.TerminalDuplicate.Click();
             TerminalDuplicate.NumberOfTerminals = NumberOfTerminals.ToString();
             TerminalDuplicate.InstallationMessage = "TerminalDuplicateWithSamePasswortTest";
             TerminalDuplicate.CopyPassword = true;
