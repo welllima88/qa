@@ -10,8 +10,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
     {
         private const string HomePathUrl = "";
         public static IWebDriverAdapter WebDriver { get; private set; }
-
-        public static string BaseUrl { get; private set; }
         public static TestEnvironment TestEnvironment { get; set; }
 
         /// <summary>
@@ -19,8 +17,8 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// </summary>
         public static void LogOn()
         {
-            BaseUrl = WebObject.WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
-            ConfigureTimeouts();
+            WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
+            ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();
         }
 
@@ -28,19 +26,20 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         ///     If the adress is set, the Selenum Hub specified is used. If the address is null or empty the execution is done
         ///     locally
         /// </summary>
-        /// <param name="gridHub">optional address to selenium hub e.g. "http://wkbuild03:4488/wd/hub"</param>
+        /// <param name="gridHub">optional address to selenium hub e.g. "http://build:4488/wd/hub"</param>
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            FirefoxProfile firefoxProfile = FirefoxProfile();
+            FirefoxProfile firefoxProfile = NoProxy();
 
+            string run = "??";
             if (string.IsNullOrEmpty(gridHub))
             {
                 // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
                 // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
                 WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
 
-                Console.WriteLine("using Selenium on local");
+                run = "LOCAL";
             }
             else
             {
@@ -48,9 +47,10 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
                 WebDriver =
                     new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20)));
 
-                Console.WriteLine("using Selenium Grid");
+                run = "GRID";
             }
             WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+            Console.WriteLine("using Selenium {0} : {1}", run, gridHub);
         }
 
         private static DesiredCapabilities DesiredCapabilities(FirefoxProfile firefoxProfile)
@@ -67,20 +67,20 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             return capability;
         }
 
-        private static FirefoxProfile FirefoxProfile()
+        private static FirefoxProfile NoProxy()
         {
             var firefoxProfile = new FirefoxProfile();
             firefoxProfile.SetPreference("network.proxy.type", 0);
             return firefoxProfile;
         }
 
-        private static void ConfigureTimeouts()
+        private static void ConfigureTimeouts(Timeouts timeouts)
         {
             WebDriver.Manage()
                 .Timeouts()
-                .SetPageLoadTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetPageLoadTimeout))
-                .SetScriptTimeout(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout))
-                .ImplicitlyWait(TimeSpan.FromSeconds(TestEnvironment.SeleniumConfig.Timeouts.ImplicitlyWait));
+                .SetPageLoadTimeout(TimeSpan.FromSeconds(timeouts.SetPageLoadTimeout))
+                .SetScriptTimeout(TimeSpan.FromSeconds(timeouts.SetScriptTimeout))
+                .ImplicitlyWait(TimeSpan.FromSeconds(timeouts.ImplicitlyWait));
         }
 
         public static void ShutdownBrowser()

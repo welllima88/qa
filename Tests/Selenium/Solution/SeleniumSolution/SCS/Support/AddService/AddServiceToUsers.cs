@@ -23,7 +23,7 @@ namespace Six.Scs.QA.Selenium.Support.AddService
 
         public static void RemoveService(string userId, string serviceId)
         {
-            _driver.Navigate().GoToUrl(TestDirector.BaseUrl +
+            _driver.Navigate().GoToUrl(TestDirector.TestEnvironment.BaseUrl +
                                        "index.asp?mode=Delete&username=" + userId + "&ServiceId=" + serviceId +
                                        "&caller=&AcqName=&AcquirerLocationId=&reloadurl=/scsc-qa-l/LoginService.asp");
             _driver.SwitchTo().Frame("main");
@@ -96,7 +96,7 @@ namespace Six.Scs.QA.Selenium.Support.AddService
 
         private static void OpenUserPage(string userId)
         {
-            _driver.Navigate().GoToUrl(TestDirector.BaseUrl +
+            _driver.Navigate().GoToUrl(TestDirector.TestEnvironment.BaseUrl +
                                        "/login.asp?caller=&AcqName=&AcquirerLocationId=&username=" + userId);
             _driver.SwitchTo().Frame("main");
         }
