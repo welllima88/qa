@@ -2,7 +2,7 @@
 using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Testlogic;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {
@@ -12,16 +12,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [SetUp]
         public void TestInit()
         {
-            TestDirector.Navigate("SIMCard/New");
-            s = Testlogic.SimCard.Create();
+            TestDirector.Navigate();
         }
-
-        private SimCard s;
 
         [Test]
         public void CreateSimCardAndSave()
         {
-            Testlogic.SimCard.Check(s);
+            SimCard.Create();
 
             Assert.IsTrue(SimCardHistory.HistoryList.Count == 1);
             // "13.12.2012 15:49:27 tksyr SIM-Karte erfasst"

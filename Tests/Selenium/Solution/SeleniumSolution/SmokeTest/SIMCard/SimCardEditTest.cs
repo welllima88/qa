@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Testlogic;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {
@@ -14,14 +14,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         public void TestInit()
         {
             // SIMCard/EditCard?simCardId=11
-            TestDirector.Navigate("SIMCard/Details?SIMCardId=1");
+            TestDirector.Navigate("SIMCard/Details?SIMCardId=16");
         }
 
         [Test]
         public void EditSimcardAndSave()
         {
-            SimCard simCard = Testlogic.SimCard.Edit(Factory.Simcard.Edit());
-            Testlogic.SimCard.Check(simCard);
+            SimCard.Edit(Simcard.Edit());
         }
 
         [Test]
