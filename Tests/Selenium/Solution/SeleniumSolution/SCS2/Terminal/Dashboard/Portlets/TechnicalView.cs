@@ -2,13 +2,13 @@ using System;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
 {
-    public class TechnicalViewPortlet : PortletViewBase
+    public class TechnicalView : PortletViewBase
     {
         //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
 
-        public TechnicalViewPortlet()
+        public TechnicalView()
         {
             PortletId = "div#frame_TerminalTechnicalViewpointPortlet ";
         }

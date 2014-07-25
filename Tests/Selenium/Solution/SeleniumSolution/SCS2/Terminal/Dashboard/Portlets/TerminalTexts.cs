@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
 {
-    public class TerminalTextsPortlet : PortletViewBase
+    public class TerminalTexts : PortletViewBase
     {
         public static IWebElementAdapter CreateInfotext
         {

@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
 {
-    public class BusinessViewpointPortlet : PortletViewBase
+    public class BusinessViewpoint : PortletViewBase
     {
         public static IWebElementAdapter ReceiptHeader
         {

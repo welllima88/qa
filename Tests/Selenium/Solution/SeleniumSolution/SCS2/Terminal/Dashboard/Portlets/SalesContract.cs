@@ -1,11 +1,11 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
 {
-    public class SalesContractPortlet : PortletViewBase
+    public class SalesContract : PortletViewBase
     {
-        public SalesContractPortlet()
+        public SalesContract()
         {
             PortletId = "div#frame_SalesPortlet "; // div#SetupDataTree ul
         }

@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Brand
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
