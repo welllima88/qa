@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 
 namespace Six.Scs.QA.Selenium.Brand
 {
