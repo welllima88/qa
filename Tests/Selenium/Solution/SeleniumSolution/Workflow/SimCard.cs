@@ -1,5 +1,4 @@
 ﻿using Six.Scs.QA.Selenium.Administration.SimCard;
-using Six.Scs.QA.Selenium.Common.Menu;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -7,7 +6,7 @@ namespace Six.Scs.QA.Workflow
     {
         public static void Create(TestData.ValueObjects.SimCard simCard)
         {
-            SimCardMenu.SimCardManagement.Click();
+            SimCardView.CreateButton.Click();
 
             SimCardCreate.NetProvider = simCard.NetProvider;
             SimCardCreate.SimCardNumber = simCard.SimCardNumber;
@@ -23,13 +22,12 @@ namespace Six.Scs.QA.Workflow
         {
             SimCardView.EditButton.Click();
 
-            SimCardCreate.NetProvider = simCard.NetProvider;
-            SimCardCreate.SimCardNumber = simCard.SimCardNumber;
-            SimCardCreate.MobileNumber = simCard.MobileNumber;
-            SimCardCreate.Pin = simCard.Pin;
-            SimCardCreate.Puk = simCard.Puk;
-            SimCardCreate.Region = simCard.Region;
-
+            SimCardEdit.NetProvider = simCard.NetProvider;
+            SimCardEdit.SimCardNumber = simCard.SimCardNumber;
+            SimCardEdit.MobileNumber = simCard.MobileNumber;
+            SimCardEdit.Pin = simCard.Pin;
+            SimCardEdit.Puk = simCard.Puk;
+            SimCardEdit.Region = simCard.Region;
             SimCardEdit.Status = simCard.Status;
             SimCardEdit.TerminalId = simCard.TerminalId;
             SimCardEdit.Region = simCard.Region;
