@@ -9,3 +9,4 @@ namespace Six.Scs.QA.TestData.Factory
             return DateTime.Now.Ticks.ToString();
         }
     }
+}
