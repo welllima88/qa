@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest
 
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
             TestDirector.LogOn();
-            Workflow.Lobby.ChooseLanguage(Languages.German);
+            Testlogic.Lobby.Language(Languages.German);
         }
 
         [TearDown]
