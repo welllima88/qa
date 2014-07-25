@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -39,24 +38,9 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_PUK")).TextField().TypeText(value); }
         }
 
-        public static bool Status
-        {
-            set { throw new NotSupportedException(); }
-        }
-
-        public static string TerminalId
-        {
-            set { throw new NotSupportedException(); }
-        }
-
         public static string Region
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_LocationId")).Selector().SelectByText(value); }
-        }
-
-        public static string Usage
-        {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Selector().SelectByText(value); }
         }
     }
 }
