@@ -1,4 +1,4 @@
-using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Workflow
 
         public static void Duplicate(TerminalDuplicate duplicate)
         {
-            SalesContractPortlet.TerminalDuplicate.Click();
+            SalesContract.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
             Selenium.Terminal.Duplicate.TerminalDuplicate.NumberOfTerminals = duplicate.NumberOfTerminals;
