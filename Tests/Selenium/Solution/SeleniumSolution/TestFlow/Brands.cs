@@ -1,5 +1,5 @@
 ﻿using Six.Scs.QA.Selenium.Brand;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Brand;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 
 namespace Six.Scs.QA.Testlogic
 {
