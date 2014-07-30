@@ -29,12 +29,5 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         {
             Assert.IsTrue(Footer.Disclaimer.Displayed);
         }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void Feedback()
-        {
-            Assert.IsTrue(Footer.Feedback.Displayed);
-        }
     }
 }

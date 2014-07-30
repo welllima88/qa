@@ -5,11 +5,6 @@ namespace Six.Scs.QA.Selenium.Common
 {
     public class Footer : WebObject
     {
-        public static IWebElementAdapter Feedback
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Feedback)); }
-        }
-
         public static IWebElementAdapter Disclaimer
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
