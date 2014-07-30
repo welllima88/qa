@@ -9,7 +9,7 @@ namespace Six.Scs.QA.TestData.Factory
             return new SimCard
             {
                 NetProvider = "SIX via Swisscom",
-                SimCardNumber = "0123456789012345678",
+                SimCardNumber = "8" + Factory.GenerateTestId(),
                 MobileNumber = "1234567890",
                 Pin = "4321",
                 Puk = "22446688",
@@ -27,7 +27,7 @@ namespace Six.Scs.QA.TestData.Factory
                 Pin = "0123",
                 Puk = "01234567",
                 Region = "Schweiz",
-                SimCardNumber = "0123456789012345679",
+                SimCardNumber = "9" + Factory.GenerateTestId(),
                 Usage = "Kauf",
                 TerminalId = "31380020"
             };
