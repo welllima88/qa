@@ -22,8 +22,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 
             Assert.IsTrue(SimCardHistory.HistoryList.Count == 1);
             // "13.12.2012 15:49:27 tksyr SIM-Karte erfasst"
-            StringAssert.IsMatch(TestRegExpPatterns.DateTime + " " + TestRegExpPatterns.UserName +
-                                 " SIM Karte erfasst", SimCardHistory.HistoryList[0]);
+            StringAssert.IsMatch(TestRegExpPatterns.DateTime + ".*"+
+                                 "SIM-Karte manuell erfasst", SimCardHistory.HistoryList[0]);
         }
     }
 }
