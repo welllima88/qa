@@ -15,6 +15,7 @@ namespace Six.Scs.QA.TestData.Factory
                 Puk = "22446688",
                 Region = "Schweiz",
                 Status = true,
+                TerminalId = ""
             };
         }
 
