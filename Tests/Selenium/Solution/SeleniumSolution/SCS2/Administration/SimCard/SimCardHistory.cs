@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
     {
         private static ReadOnlyCollection<IWebElementAdapter> HistoryElements
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector("table.dataTable tbody tr")); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("table#History tbody tr")); }
         }
 
         public static List<string> HistoryList

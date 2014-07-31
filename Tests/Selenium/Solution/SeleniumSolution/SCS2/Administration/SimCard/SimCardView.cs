@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static bool Status
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCardState")).Text.Equals("aktiv"); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#state")).Text.Equals("aktiv"); }
         }
 
         public static string TerminalId
@@ -72,12 +72,12 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static string Region
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_LocationId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Location")).Text; }
         }
 
         public static string Usage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCard_UsageId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Usage")).Text; }
         }
 
         public static IEnumerable<SimHistoryElement> SimHistory
