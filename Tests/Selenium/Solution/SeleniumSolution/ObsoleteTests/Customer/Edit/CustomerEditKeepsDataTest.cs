@@ -54,7 +54,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             _fax = CustomerView.Fax;
             _web = CustomerView.Web;
 
-            CustomerView.EditCustomerButton.Click();
+            CustomerView.EditButton.Click();
         }
 
         [TestMethod]
