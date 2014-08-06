@@ -49,12 +49,12 @@ namespace Six.Scs.QA.Testlogic
             StringAssert.Contains(c.SbsCurrency, CustomerView.SbsCurrency);
 
             StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, CustomerView.SbsDebitNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, CustomerView.SbsAdressNumber);
+            // StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, CustomerView.SbsAdressNumber);
             StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, CustomerView.Ep2MerchantId);
 
             Assert.AreEqual(c.Location.Adress.Po, CustomerView.Po);
             Assert.AreEqual(c.Location.Adress.AdressAddition, CustomerView.AdressAddition);
-            Assert.AreEqual(c.Location.Adress.Region, CustomerView.Region);
+            StringAssert.Contains(c.Location.Adress.Region, CustomerView.Region);
             Assert.AreEqual(c.Location.Adress.StreetNo, CustomerView.StreetNo);
             Assert.AreEqual(c.Location.Adress.Zip, CustomerView.Zip);
             Assert.AreEqual(c.Location.Adress.City, CustomerView.City);
@@ -62,9 +62,9 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(c.Location.Contact.Language, CustomerView.Language);
             Assert.AreEqual(c.Location.Adress.Country, CustomerView.Country);
             Assert.AreEqual(c.Location.Contact.Email, CustomerView.Email);
-            Assert.AreEqual(c.Location.Contact.Telephone, CustomerView.Telephone);
-            Assert.AreEqual(c.Location.Contact.Mobile, CustomerView.Mobile);
-            Assert.AreEqual(c.Location.Contact.Fax, CustomerView.Fax);
+            StringAssert.Contains(c.Location.Contact.Telephone, CustomerView.Telephone);
+            StringAssert.Contains(c.Location.Contact.Mobile, CustomerView.Mobile);
+            StringAssert.Contains(c.Location.Contact.Fax, CustomerView.Fax);
             Assert.AreEqual(c.Location.Contact.Web, CustomerView.Web);
         }
     }
