@@ -38,7 +38,7 @@ namespace Six.Scs.QA.Workflow
 
             c.CustomerNumber = CustomerView.CustomerNumber;
             c.Location.SbsDebitNumber = CustomerView.SbsDebitNumber;
-            c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
+            // c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
         }
 
         public static void Edit(TestData.ValueObjects.Customer c)
