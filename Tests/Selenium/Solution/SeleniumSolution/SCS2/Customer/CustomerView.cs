@@ -6,9 +6,14 @@ namespace Six.Scs.QA.Selenium.Customer
 {
     public class CustomerView : WebObject
     {
-        public static IWebElementAdapter EditCustomerButton
+        public static IWebElementAdapter MoveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerEdit")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("move")); }
+        }
+
+        public static IWebElementAdapter EditButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
 
         public static IWebElementAdapter EditDefaultConfigButton
@@ -18,12 +23,12 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static string CustomerName
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_CustomerName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("CustomerName")).Text; }
         }
 
         public static string CashIntegrator
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerPref_CashIntegrator")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("CashIntegrator")).Text; }
         }
 
         public static string CompanyName
@@ -33,127 +38,127 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static string SapNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_SapNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SapNumber")).Text; }
         }
 
         public static string StreetNo
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Street")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Street")).Text; }
         }
 
         public static string Zip
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Zip")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Zip")).Text; }
         }
 
         public static string City
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_City")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
         public static String Agency
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_AgencyName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency")).Text; }
         }
 
         public static string Language
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Language")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Language")).Text; }
         }
 
         public static string Country
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Country")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Country")).Text; }
         }
 
         public static string Po
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_PO")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Po")).Text; }
         }
 
         public static string AdressAddition
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_AddressAddition")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("AddressAddition")).Text; }
         }
 
         public static string Email
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_EMail")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("EMail")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Telephone")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Telephone")).Text; }
         }
 
         public static string Mobile
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Mobile")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Mobile")).Text; }
         }
 
         public static string Fax
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Fax")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Fax")).Text; }
         }
 
         public static string Web
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Web")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Web")).Text; }
         }
 
         public static string Region
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Region")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
         public static string CategoryCode
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerPref_CategoryCode")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("CategoryCode")).Text; }
         }
 
         public static string SupportContract
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerPref_SupportContract")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SupportContract")).Text; }
         }
 
         public static string Segment
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SBSConfig_CustomerSegment")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SBSSegment")).Text; }
         }
 
         public static string Supplier
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_SupplierMandant")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SupplierMandant")).Text; }
         }
 
         public static string SbsBillingTenant
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SBSConfig_BillingTenant")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SBSBillingTenant")).Text; }
         }
 
         public static string SbsCurrency
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SBSConfig_Currency")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SBSCurrency")).Text; }
         }
 
         public static String CustomerNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_CustomerId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("CustomerId")).Text; }
         }
 
         public static String SbsDebitNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SBSConfig_DebitNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SBSDebitNumber")).Text; }
         }
 
         public static string Ep2MerchantId
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_Ep2MerchantId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Ep2MerchantId")).Text; }
         }
 
         public static String SbsAdressNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SBSConfig_AddressNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }
     }
 }
