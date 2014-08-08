@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Selenium.Customer
     {
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
         public static ButtonElement CancelButton
