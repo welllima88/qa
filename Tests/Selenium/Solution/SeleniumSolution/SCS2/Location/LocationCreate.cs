@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Location
     {
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("create")).Button(); }
         }
 
         public static string Country
