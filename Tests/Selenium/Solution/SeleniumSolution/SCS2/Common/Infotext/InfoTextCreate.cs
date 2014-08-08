@@ -12,12 +12,12 @@ namespace Six.Scs.QA.Selenium.Common.Infotext
 
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
         public static ButtonElement CancelButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#cancel")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("cancel")).Button(); }
         }
     }
 }

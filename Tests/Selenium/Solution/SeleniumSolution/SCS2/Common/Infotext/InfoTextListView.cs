@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Common.Infotext
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#content div button#createInfotext")).Button();
+                return WebDriver.FindAdaptedElement(By.Id("create")).Button();
             }
         }
 
