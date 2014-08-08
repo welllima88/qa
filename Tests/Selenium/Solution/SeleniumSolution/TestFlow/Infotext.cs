@@ -31,8 +31,8 @@ namespace Six.Scs.QA.Testlogic
             CustomerMenu.Infotexts.Click();
             InfoTextListView.CreateButton.Click();
 
-            InfoText.Create(parameter);
-            Check(parameter);
+            string infotext = InfoText.Create(parameter);
+            Check(infotext);
         }
 
         public static void Check(string infotext)
