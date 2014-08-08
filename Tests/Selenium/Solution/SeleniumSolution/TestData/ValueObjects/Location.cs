@@ -12,5 +12,6 @@ namespace Six.Scs.QA.TestData.ValueObjects
         public String SbsAdressNumber { get; set; }
         public string Ep2MerchantId { get; set; }
         public string SapNumber { get; set; }
+        public string LocationNumber { get; set; }
     }
 }
