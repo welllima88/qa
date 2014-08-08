@@ -32,9 +32,10 @@ namespace Six.Scs.QA.Workflow
             LocationCreate.SaveButton.Click();
 
             l.Guid = LocationView.Guid;
+            l.LocationNumber = LocationView.LocationNumber;
             l.Ep2MerchantId = LocationView.Ep2MerchantId;
             l.SbsDebitNumber = LocationView.SbsDebitNumber;
-            l.SbsAdressNumber = LocationView.SbsAdressNumber;
+            // l.SbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
         /// <summary>
