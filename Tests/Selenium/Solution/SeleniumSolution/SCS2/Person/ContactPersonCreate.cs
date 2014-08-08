@@ -13,12 +13,12 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
-        public static ButtonElement ClickAdressFromLocation
+        public static ButtonElement AdressFromLocation
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#defaultAdress")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("defaultAdress")).Button(); }
         }
 
         public static string FirstName
