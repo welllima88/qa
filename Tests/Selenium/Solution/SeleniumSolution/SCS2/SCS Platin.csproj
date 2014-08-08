@@ -159,11 +159,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Person\PersonViewRes.Designer.cs">
-      <DependentUpon>PersonViewRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Environments\Dev.cs" />
     <Compile Include="Search\CustomerResult.cs" />
     <Compile Include="Search\LocationResult.cs" />
@@ -244,10 +239,6 @@
     <EmbeddedResource Include="Person\PersonEditRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\PersonViewRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonViewRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Terminal\Dashboard\DashboardRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

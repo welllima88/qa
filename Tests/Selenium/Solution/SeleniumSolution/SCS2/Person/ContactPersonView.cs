@@ -7,99 +7,102 @@ namespace Six.Scs.QA.Selenium.Person
     {
         public static IWebElementAdapter EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
 
         public static string AddressAddition
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Address_AddressAddition")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("AddressAddition")).Text; }
         }
 
         public static string FirstName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.FirstName)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("FirstName")).Text; }
         }
 
         public static string Name
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Name)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LastName")).Text; }
         }
 
         public static string Salutation
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Salutation)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Salutation")).Text; }
         }
 
         public static string Country
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Country)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Country")).Text; }
         }
 
         public static string Language
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Language)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Language")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Telephone)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Telephone")).Text; }
         }
 
         public static string Mobile
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Mobile)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Mobile")).Text; }
         }
 
         public static string Fax
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(PersonViewRes.Fax)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Fax")).Text; }
         }
 
         public static string Email
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_Email")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Email")).Text; }
         }
 
         public static string Web
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_Web")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Web")).Text; }
         }
 
         public static string StreetNo
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_Street")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("StreetNo")).Text; }
         }
-
-        public string AdressAddition { get; set; }
 
         public static string Po
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_PO")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Po")).Text; }
         }
 
         public static string Zip
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_ZIP")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Zip")).Text; }
         }
 
         public static string City
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_City")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
         public static string Region
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Address_Region")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
         public static IWebElementAdapter DeleteButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#delete")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
+        }
+
+        public static IWebElementAdapter CreateUser
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("CreateUser")); }
         }
 
         public static string Id
         {
-            get { return WebDriver.FindElement(By.CssSelector("td#content div.ContactPerson")).GetCssValue("id"); }
+            get { return WebDriver.FindElement(By.Id("td#content div.ContactPerson")).GetCssValue("id"); }
         }
 
         public static void DeleteConfirm()
