@@ -47,7 +47,7 @@ namespace Six.Scs.QA.Workflow
             l.Guid = LocationView.Guid;
             l.Ep2MerchantId = LocationView.Ep2MerchantId;
             l.SbsDebitNumber = LocationView.SbsDebitNumber;
-            l.SbsAdressNumber = LocationView.SbsAdressNumber;
+            // l.SbsAdressNumber = LocationView.SbsAdressNumber;
 
             LocationView.EditButton.Click();
 
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Workflow
             ChangeForm.Reason = "MerchantAddressChange";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
 
-            LocationCreate.SaveButton.Click();
+            LocationEdit.SaveButton.Click();
         }
     }
 }
