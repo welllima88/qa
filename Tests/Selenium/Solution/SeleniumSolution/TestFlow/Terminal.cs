@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Testlogic
             terminal.Id = TerminalInfo.TerminalId;
 
             Workflow.Lobby.OpenLatestElement();
-            Assert.AreEqual(terminal, TerminalInfo.TerminalId);
+            Assert.AreEqual(terminal.Id, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
             Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpoint.TerminalType);
             Assert.AreEqual("grau", BusinessViewpoint.Color);
