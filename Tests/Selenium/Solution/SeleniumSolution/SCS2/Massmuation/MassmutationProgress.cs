@@ -28,7 +28,13 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static List<string> TerminalList
         {
-            get { return WebDriver.WebElementsAsStringList(WebDriver.FindAdaptedElements(By.Id("TerminalList"))); }
+            get
+            {
+                return
+                    WebDriver.WebElementsAsStringList(
+                        WebDriver.FindAdaptedElements(
+                            By.CssSelector("table#TerminalList tbody tr td a[href*='/TerminalDashboard?TerminalId=']")));
+            }
         }
 
         public static bool HasFinished()
