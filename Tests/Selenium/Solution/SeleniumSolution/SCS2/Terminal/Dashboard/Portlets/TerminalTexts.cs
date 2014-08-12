@@ -12,7 +12,18 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/Create?&TerminalId=']"));
+                            "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/List?&TerminalId=']"));
+            }
+        }
+
+        public static IWebElementAdapter Infotexts
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/List?&TerminalId=']"));
             }
         }
     }
