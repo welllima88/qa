@@ -1,5 +1,7 @@
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Selenium.Terminal.Quit;
+using Six.Scs.QA.TestData.Factory;
+using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -31,6 +33,17 @@ namespace Six.Scs.QA.Workflow
             Selenium.Terminal.Duplicate.TerminalDuplicate.MessageForAcquirers = duplicate.MessageForAcquirers;
 
             Selenium.Terminal.Duplicate.TerminalDuplicate.DulpicateButton.Click();
+        }
+
+        public static string Quit()
+        {
+            SalesContract.Quit.Click();
+            // Selenium.Terminal.Quit.TerminalQuit.State = "";
+            // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
+            string reason = "SYR quit terminal " + Factory.GenerateTestId();
+            TerminalQuit.Reason = reason;
+            TerminalQuit.Save.Click();
+            return reason;
         }
     }
 }
