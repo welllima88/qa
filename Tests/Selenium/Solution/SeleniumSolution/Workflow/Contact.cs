@@ -27,7 +27,7 @@ namespace Six.Scs.QA.Workflow
 
             ContactPersonCreate.SaveButton.Click();
 
-            // c.Id = ContactPersonView.Id;
+            c.Id = ContactPersonView.Id;
         }
 
         public static void Edit(Person c)
