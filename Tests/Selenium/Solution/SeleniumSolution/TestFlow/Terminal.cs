@@ -89,7 +89,7 @@ namespace Six.Scs.QA.Testlogic
 
             // MassmutationProgress.DateTime;
             Assert.AreEqual("CreateTerminals", MassmutationProgress.Type);
-            Assert.AreEqual(terminalDuplicate.NumberOfTerminals, MassmutationProgress.TerminalList.Count);
+            Assert.AreEqual(terminalDuplicate.NumberOfTerminals, MassmutationProgress.TerminalList.Count.ToString());
             /*
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
@@ -110,6 +110,15 @@ namespace Six.Scs.QA.Testlogic
         public static void Check(TestData.ValueObjects.Terminal terminal)
         {
             // DB Check Terminal and Contracts?
+        }
+
+        public static void Quit(TestData.ValueObjects.Terminal terminal)
+        {
+            Open(terminal);
+            string info = Workflow.Terminal.Quit();
+            StringAssert.Contains("Gekündigt", TerminalInfo.Status);
+            StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
+            StringAssert.Contains(info, BusinessViewpoint.Status);
         }
     }
 }
