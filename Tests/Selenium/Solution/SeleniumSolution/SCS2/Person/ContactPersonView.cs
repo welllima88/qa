@@ -102,7 +102,7 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string Id
         {
-            get { return WebDriver.FindElement(By.Id("td#content div.ContactPerson")).GetCssValue("id"); }
+            get { return WebDriver.FindElement(By.CssSelector("td#content h1")).GetAttribute("id"); }
         }
 
         public static void DeleteConfirm()
