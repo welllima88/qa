@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Selenium.Location
     {
         public static IWebElementAdapter SaveButton
         {
-            get { return LocationCreate.SaveButton; }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
         public static IWebElementAdapter CancelButton
