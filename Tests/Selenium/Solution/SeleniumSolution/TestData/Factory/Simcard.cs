@@ -29,7 +29,7 @@ namespace Six.Scs.QA.TestData.Factory
                 Puk = "01234567",
                 Region = "Schweiz",
                 SimCardNumber = "9" + Factory.GenerateTestId(),
-                Usage = "Kauf",
+                Usage = "K - Kauf",
                 TerminalId = "31380020"
             };
         }
