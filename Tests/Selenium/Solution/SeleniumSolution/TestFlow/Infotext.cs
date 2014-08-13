@@ -31,7 +31,6 @@ namespace Six.Scs.QA.Testlogic
 
         private static void CreateAndSaveInfotext(string parameter)
         {
-            
             InfoTextListView.CreateButton.Click();
             string infotext = InfoText.Create(parameter);
             Check(infotext);
