@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
         public static IWebElementAdapter ClickAdressFromLocation
@@ -42,8 +42,7 @@ namespace Six.Scs.QA.Selenium.Person
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonEditRes.Country)).Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.Id("ccc")).Selector().SelectByText(value);
             }
             get
             {
