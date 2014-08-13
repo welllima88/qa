@@ -131,11 +131,6 @@
     <Compile Include="Location\BillingAdressView.cs" />
     <Compile Include="Location\LocationCreate.cs" />
     <Compile Include="Location\LocationEdit.cs" />
-    <Compile Include="Location\LocationRes.Designer.cs">
-      <DependentUpon>LocationRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Location\LocationView.cs" />
     <Compile Include="Massmuation\AcquirerChange.cs" />
     <Compile Include="Massmuation\MassmuationFileUpload.cs" />
@@ -228,10 +223,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Location\LocationRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>LocationRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Person\PersonCreateRes.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

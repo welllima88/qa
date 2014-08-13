@@ -111,7 +111,7 @@ namespace Six.Scs.QA.Selenium.Location
 
         public static string Guid
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(LocationRes.GUID)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("GUID")).Text; }
         }
 
         public static string Reason
