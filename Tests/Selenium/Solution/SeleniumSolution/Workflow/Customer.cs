@@ -45,7 +45,7 @@ namespace Six.Scs.QA.Workflow
         {
             c.CustomerNumber = CustomerView.CustomerNumber;
             c.Location.SbsDebitNumber = CustomerView.SbsDebitNumber;
-            c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
+            // c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
             c.SbsCurrency = CustomerView.SbsCurrency;
             c.SbsBillingTenant = CustomerView.SbsBillingTenant;
             c.Supplier = CustomerView.Supplier;
