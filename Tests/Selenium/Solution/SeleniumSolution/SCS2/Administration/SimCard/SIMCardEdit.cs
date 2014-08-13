@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
     {
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
         public static string NetProvider

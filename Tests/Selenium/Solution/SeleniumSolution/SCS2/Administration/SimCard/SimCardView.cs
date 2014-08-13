@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static ButtonElement EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='edit']")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")).Button(); }
         }
 
         public static ButtonElement CreateButton
