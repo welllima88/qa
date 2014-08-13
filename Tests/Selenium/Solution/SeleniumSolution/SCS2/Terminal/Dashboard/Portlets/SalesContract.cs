@@ -60,5 +60,16 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                             "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']"));
             }
         }
+
+        public static IWebElementAdapter Quit
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId=']"));
+            }
+        }
     }
 }

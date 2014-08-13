@@ -192,6 +192,7 @@
     <Compile Include="Terminal\EventLog\TerminalEventLog.cs" />
     <Compile Include="Terminal\FinancialConfig\FinancialConfigEdit.cs" />
     <Compile Include="Terminal\Functionbits.cs" />
+    <Compile Include="Terminal\Quit\TerminalQuit.cs" />
     <Compile Include="Terminal\TerminalChooser.cs" />
     <Compile Include="Terminal\TerminalConfigCreate.cs" />
     <Compile Include="Terminal\TerminalConfigDetailsCreate.cs" />
