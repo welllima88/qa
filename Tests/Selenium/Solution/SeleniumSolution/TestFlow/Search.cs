@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Mpd;
@@ -63,7 +64,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(simCardNumber);
             SearchResult.First(new Selenium.Search.SimCard()).Click();
 
-            Assert.AreEqual(simCardNumber, MpdView.Id);
+            Assert.AreEqual(simCardNumber, SimCardView.SimCardNumber);
         }
     }
 }
