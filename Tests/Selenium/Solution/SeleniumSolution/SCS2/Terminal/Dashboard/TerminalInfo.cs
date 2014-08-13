@@ -26,9 +26,9 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
             get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Article)).Text; }
         }
 
-        public string Status
+        public static string Status
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Status)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("TD_Trm_State")).Text; }
         }
     }
 }
