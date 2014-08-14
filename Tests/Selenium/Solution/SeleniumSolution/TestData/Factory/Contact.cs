@@ -20,11 +20,11 @@
             return new ValueObjects.Contact
             {
                 Language = "Englisch [en]",
-                Email = "marc.siegmund@six-group.uk",
+                Email = "marc.siegmund@six-group.proof",
                 Telephone = "+31 - 58 399 6237",
                 Mobile = "+32 - 58 399 6237",
                 Fax = "+33 - 58 399 6237",
-                Web = "www.six-group.proof/en-intern"
+                Web = "www.six-group.com/en-intern"
             };
         }
 
