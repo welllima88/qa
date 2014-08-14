@@ -16,10 +16,12 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.User _user;
         private static List<string> _duplicatedTerminals;
         private static TestData.ValueObjects.Mpd _mpd;
+        private static TestData.ValueObjects.SimCard _sim;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal Duplicate"),
-         Category("Infotext"), Category("Person"), Category("MPD"), Category("User")]
+         Category("Terminal Quit"), Category("Infotext"), Category("Person"), Category("MPD"), Category("User"),
+         Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
         {
             _customer = Testlogic.Customer.Create();
@@ -31,7 +33,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Infotext.Create(_customer);
             _mpd = Testlogic.Mpd.Create(_customer);
 
-            Brands.Create(_terminalCustomer);
+            // Brands.Create(_terminalCustomer);
 
             _terminalLocation = Testlogic.Terminal.Create(_location);
             Infotext.Create(_location);
@@ -40,16 +42,23 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Infotext.Create(_terminalLocation);
 
             _personOnLocation = Contact.Create(_location);
-            _personOnLocation = Contact.Edit(_personOnLocation);
 
             Testlogic.Mpd.Edit(_mpd);
+
+            Testlogic.Terminal.Quit(_terminalCustomer);
+            _personOnLocation = Contact.Edit(_personOnLocation);
 
             _user = Testlogic.User.Create(_customer);
             _user = Testlogic.User.Edit(_user);
 
             _duplicatedTerminals = Testlogic.Terminal.Duplicate(_terminalLocation);
+            Testlogic.User.Create(_personOnLocation);
+            Contact.Delete(_personOnLocation);
 
-            Brands.Create(_duplicatedTerminals[1]); // {0,1} means second terminal
+            // Brands.Create(_duplicatedTerminals[1]); // {0,1,..} means create brands on second terminal
+
+            _sim = Testlogic.SimCard.Create();
+            SimCard.Edit(_sim);
         }
     }
 }
