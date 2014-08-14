@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Person;
@@ -46,11 +47,11 @@ namespace Six.Scs.QA.Testlogic
             return person;
         }
 
-        private static void Open(Person person)
+        public static void Open(Person person)
         {
             // cannot directly open a contact by search, 
             // so it might fail the following step:
-            TestDirector.Navigate("/Person?PersonId=" + person.Id);
+            TestDirector.Navigate("Person/?PersonId=" + person.Id);
         }
 
         public static void Check(Person c)
@@ -71,6 +72,16 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(c.Adress.Country, ContactPersonView.Country);
             Assert.AreEqual(c.Contact.Web, ContactPersonView.Web);
             Assert.AreEqual(c.Adress.AdressAddition, ContactPersonView.AddressAddition);
+        }
+
+        public static void Delete(Person person)
+        {
+            Open(person);
+            ContactPersonView.DeleteButton.Click();
+            ContactPersonView.DeleteConfirm();
+
+            Open(person);
+            StringAssert.IsMatch("Element .*(not|nicht).*!", SiteContent.Header);
         }
     }
 }
