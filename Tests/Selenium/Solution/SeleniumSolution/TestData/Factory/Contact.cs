@@ -24,7 +24,7 @@
                 Telephone = "+31 - 58 399 6237",
                 Mobile = "+32 - 58 399 6237",
                 Fax = "+33 - 58 399 6237",
-                Web = "www.six-group.com/en-intern"
+                Web = "www.six-group.proof/en-intern"
             };
         }
 
