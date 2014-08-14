@@ -1,7 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension;
+using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.Selenium.User;
+using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -41,6 +43,17 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(u.SecurId, UserView.SecurId);
             Assert.AreEqual(u.Comment, UserView.Comment);
             Assert.AreEqual(u.WesMandant, UserView.WesMandant);
+        }
+
+        public static void Create(Person person)
+        {
+            Contact.Open(person);
+
+            ContactPersonView.CreateUser.Click();
+            
+            Assert.Equals(person.Name, UserCreate.Name);
+            Assert.Equals(person.FirstName, UserCreate.FirstName);
+            Assert.Equals(person.Contact.Language, UserCreate.Language);
         }
     }
 }
