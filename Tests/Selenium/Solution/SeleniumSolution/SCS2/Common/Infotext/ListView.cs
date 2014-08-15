@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Common.Infotext
 {
-    public class InfoTextListView : WebObject
+    public class ListView : WebObject
     {
         public static ButtonElement CreateButton
         {

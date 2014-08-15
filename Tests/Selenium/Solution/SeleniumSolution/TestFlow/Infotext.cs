@@ -31,14 +31,14 @@ namespace Six.Scs.QA.Testlogic
 
         private static void CreateAndSaveInfotext(string parameter)
         {
-            InfoTextListView.CreateButton.Click();
+            ListView.CreateButton.Click();
             string infotext = InfoText.Create(parameter);
             Check(infotext);
         }
 
         public static void Check(string infotext)
         {
-            Assert.IsTrue(InfoTextListView.List.Contains(infotext));
+            Assert.IsTrue(ListView.List.Contains(infotext));
         }
     }
 }

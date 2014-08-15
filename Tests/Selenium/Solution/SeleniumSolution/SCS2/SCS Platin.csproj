@@ -93,7 +93,7 @@
     <Compile Include="Common\Footer.cs" />
     <Compile Include="Common\FormAlert.cs" />
     <Compile Include="Common\Infotext\InfoTextCreate.cs" />
-    <Compile Include="Common\Infotext\InfoTextListView.cs" />
+    <Compile Include="Common\Infotext\ListView.cs" />
     <Compile Include="Common\Languages.cs" />
     <Compile Include="Common\LobbyView.cs" />
     <Compile Include="Common\Menu\ContactMenu.cs" />

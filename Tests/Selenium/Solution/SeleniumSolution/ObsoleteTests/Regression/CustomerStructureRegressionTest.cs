@@ -339,7 +339,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateInfotextOnLocation()
         {
             LocationMenu.Infotexts.Click();
-            InfoTextListView.CreateButton.Click();
+            ListView.CreateButton.Click();
 
             InfoText.Create("Location");
         }
@@ -347,7 +347,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateInfotextOnCustomer()
         {
             CustomerMenu.Infotexts.Click();
-            InfoTextListView.CreateButton.Click();
+            ListView.CreateButton.Click();
 
             InfoText.Create("Customer");
         }

@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Infotext
         {
             TestDirector.Navigate("Customer/?CUSTOMERID=401152");
             CustomerMenu.Infotexts.Click();
-            InfoTextListView.CreateButton.Click();
+            ListView.CreateButton.Click();
             InfoText.Create("Customer");
         }
 
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Infotext
         {
             TestDirector.Navigate("Location?LocationId=d94bf6cc-38ca-42c4-82d5-1d7c0414ab94");
             LocationMenu.Infotexts.Click();
-            InfoTextListView.CreateButton.Click();
+            ListView.CreateButton.Click();
             InfoText.Create("Location");
         }
 
