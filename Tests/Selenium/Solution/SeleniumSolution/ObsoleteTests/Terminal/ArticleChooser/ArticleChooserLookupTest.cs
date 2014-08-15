@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.ArticleChooser
             TerminalChooser.Article = article;
 
             Assert.IsTrue(TerminalConfigCreate.TerminalType.Equals(termType));
-            Assert.IsTrue(LobbyView.Headline.Text.Contains(article));
+            Assert.IsTrue(Lobby.Headline.Text.Contains(article));
         }
 
         [TestMethod]

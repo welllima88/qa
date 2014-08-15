@@ -54,10 +54,10 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         [TestMethod]
         public void EditCustomerCheckHeadline()
         {
-            StringAssert.Matches(LobbyView.Headline.Text, new Regex(@"\d+:.*"));
-            string headLine = LobbyView.Headline.Text;
+            StringAssert.Matches(Lobby.Headline.Text, new Regex(@"\d+:.*"));
+            string headLine = Lobby.Headline.Text;
             CustomerMenu.CustomerEdit.Click();
-            StringAssert.Contains(LobbyView.Headline.Text, headLine);
+            StringAssert.Contains(Lobby.Headline.Text, headLine);
         }
     }
 }

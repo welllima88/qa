@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Environments
         {
             BaseUrl = new Uri(ScsRes.UAC_LOCAL);
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
-            Application = new LobbyView();
+            Application = new Lobby();
             Authentication = new UacAuthentication(new UacLogOnPage(), ScsRes.uac_username,
                 ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig

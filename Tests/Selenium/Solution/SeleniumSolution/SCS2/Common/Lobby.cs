@@ -6,7 +6,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Common
 {
-    public class LobbyView : WebObject, IApplication
+    public class Lobby : WebObject, IApplication
     {
         public static IWebElementAdapter CompanyLogo
         {

@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Environments
         {
             BaseUrl = new Uri(ScsRes.WES_Production);
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
-            Application = new LobbyView();
+            Application = new Lobby();
             Authentication = new SecurIdAuthentication("user", "pass", ScsRes.mandant_prod, "securId");
             SeleniumConfig = new SeleniumConfig
             {

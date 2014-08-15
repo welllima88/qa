@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.LogOn
         [TestMethod]
         public void CompanyLogo()
         {
-            Assert.IsTrue(LobbyView.CompanyLogo.Displayed);
+            Assert.IsTrue(Lobby.CompanyLogo.Displayed);
         }
 
         [TestCategory("LobbyMenu")]

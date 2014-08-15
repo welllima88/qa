@@ -85,7 +85,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         public void CreateLocationCheckHeadline()
         {
             CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual("Neuer Standort", LobbyView.Headline.Text);
+            Assert.AreEqual("Neuer Standort", Lobby.Headline.Text);
         }
     }
 }

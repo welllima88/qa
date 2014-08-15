@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Environments
         {
             BaseUrl = new Uri(ScsRes.WES_QA_K);
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
-            Application = new LobbyView();
+            Application = new Lobby();
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
             {

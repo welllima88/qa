@@ -95,7 +95,7 @@
     <Compile Include="Common\Infotext\InfoTextCreate.cs" />
     <Compile Include="Common\Infotext\ListView.cs" />
     <Compile Include="Common\Languages.cs" />
-    <Compile Include="Common\LobbyView.cs" />
+    <Compile Include="Common\Lobby.cs" />
     <Compile Include="Common\Menu\ContactMenu.cs" />
     <Compile Include="Common\Menu\CustomerMenu.cs" />
     <Compile Include="Common\Menu\LobbyMenu.cs" />
