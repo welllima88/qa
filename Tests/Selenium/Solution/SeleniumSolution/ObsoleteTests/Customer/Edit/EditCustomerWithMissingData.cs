@@ -13,31 +13,31 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
 
-            CustomerEdit.CustomerName = "SYR Sele Kunde A";
-            CustomerEdit.CompanyName = "SYR Sele Firma A";
-            CustomerEdit.StreetNo = "Hardturmstr. 201";
-            CustomerEdit.Zip = "8021";
-            CustomerEdit.City = "Zürich";
-            CustomerEdit.Po = "PFO1";
-            CustomerEdit.AdressAddition = "Etage 3";
-            CustomerEdit.Region = "Reg 55";
-            CustomerEdit.SapNumber = "4440";
-            CustomerEdit.Agency = "SIX Payment Services (Europe)";
-            CustomerEdit.Language = "Deutsch [de]";
-            CustomerEdit.Country = "Schweiz [CH]";
-            CustomerEdit.Email = "marc.siegmund@six-group.com";
-            CustomerEdit.Telephone = "0031 58 399 6237";
-            CustomerEdit.Mobile = "0032 58 399 6237";
-            CustomerEdit.Fax = "0033 58 399 6237";
-            CustomerEdit.Web = "www.six-group.com/de-intern";
+            Selenium.Customer.Edit.CustomerName = "SYR Sele Kunde A";
+            Selenium.Customer.Edit.CompanyName = "SYR Sele Firma A";
+            Selenium.Customer.Edit.StreetNo = "Hardturmstr. 201";
+            Selenium.Customer.Edit.Zip = "8021";
+            Selenium.Customer.Edit.City = "Zürich";
+            Selenium.Customer.Edit.Po = "PFO1";
+            Selenium.Customer.Edit.AdressAddition = "Etage 3";
+            Selenium.Customer.Edit.Region = "Reg 55";
+            Selenium.Customer.Edit.SapNumber = "4440";
+            Selenium.Customer.Edit.Agency = "SIX Payment Services (Europe)";
+            Selenium.Customer.Edit.Language = "Deutsch [de]";
+            Selenium.Customer.Edit.Country = "Schweiz [CH]";
+            Selenium.Customer.Edit.Email = "marc.siegmund@six-group.com";
+            Selenium.Customer.Edit.Telephone = "0031 58 399 6237";
+            Selenium.Customer.Edit.Mobile = "0032 58 399 6237";
+            Selenium.Customer.Edit.Fax = "0033 58 399 6237";
+            Selenium.Customer.Edit.Web = "www.six-group.com/de-intern";
         }
 
         [TestMethod]
         public void EditCustomerWithoutCompanyNameFailed()
         {
-            CustomerEdit.CompanyName = "";
+            Selenium.Customer.Edit.CompanyName = "";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
@@ -46,37 +46,37 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         [TestMethod]
         public void EditCustomerWithoutStreetAndNumberFailed()
         {
-            CustomerEdit.StreetNo = "";
+            Selenium.Customer.Edit.StreetNo = "";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
-            CustomerEdit.CancelButton.Click();
+            Selenium.Customer.Edit.CancelButton.Click();
         }
 
         [TestMethod]
         public void EditCustomerWithoutCityFailed()
         {
-            CustomerEdit.City = "";
+            Selenium.Customer.Edit.City = "";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
-            CustomerEdit.CancelButton.Click();
+            Selenium.Customer.Edit.CancelButton.Click();
         }
 
         [TestMethod]
         public void EditCustomerWithoutZipFailed()
         {
-            CustomerEdit.Zip = "";
+            Selenium.Customer.Edit.Zip = "";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
-            CustomerEdit.CancelButton.Click();
+            Selenium.Customer.Edit.CancelButton.Click();
         }
     }
 }

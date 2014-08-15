@@ -58,62 +58,62 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             _fax = "00 63 58 399 6237";
             _web = "www.six-group.com/coop";
 
-            CustomerCreate.Supplier = _supplier;
-            CustomerCreate.CategoryCode = _categoryCode;
-            CustomerCreate.CustomerName = _customerName;
-            CustomerCreate.CompanyName = _companyName;
-            CustomerCreate.StreetNo = _streetName;
-            CustomerCreate.Zip = _zip;
-            CustomerCreate.City = _city;
-            CustomerCreate.Po = _po;
-            CustomerCreate.AdressAddition = _adressAddition;
-            CustomerCreate.Region = _region;
-            CustomerCreate.SapNumber = _sapNumber;
+            Selenium.Customer.Create.Supplier = _supplier;
+            Selenium.Customer.Create.CategoryCode = _categoryCode;
+            Selenium.Customer.Create.CustomerName = _customerName;
+            Selenium.Customer.Create.CompanyName = _companyName;
+            Selenium.Customer.Create.StreetNo = _streetName;
+            Selenium.Customer.Create.Zip = _zip;
+            Selenium.Customer.Create.City = _city;
+            Selenium.Customer.Create.Po = _po;
+            Selenium.Customer.Create.AdressAddition = _adressAddition;
+            Selenium.Customer.Create.Region = _region;
+            Selenium.Customer.Create.SapNumber = _sapNumber;
 
-            CustomerCreate.Agency = _agency;
-            CustomerCreate.Language = _language;
-            CustomerCreate.Country = _country;
-            CustomerCreate.Email = _email;
-            CustomerCreate.Telephone = _telephone;
-            CustomerCreate.Mobile = _mobile;
-            CustomerCreate.Fax = _fax;
-            CustomerCreate.Web = _web;
+            Selenium.Customer.Create.Agency = _agency;
+            Selenium.Customer.Create.Language = _language;
+            Selenium.Customer.Create.Country = _country;
+            Selenium.Customer.Create.Email = _email;
+            Selenium.Customer.Create.Telephone = _telephone;
+            Selenium.Customer.Create.Mobile = _mobile;
+            Selenium.Customer.Create.Fax = _fax;
+            Selenium.Customer.Create.Web = _web;
 
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.SaveButton.Click();
         }
 
         [TestMethod]
         public void CreateCoopDivisionCustomerAndSave()
         {
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
-            string custId = CustomerView.CustomerNumber;
+            Assert.AreEqual(_customerName, View.CustomerName);
+            string custId = View.CustomerNumber;
 
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual(custId, CustomerView.CustomerNumber);
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
-            Assert.AreEqual(_supplier, CustomerView.Supplier);
-            Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
-            Assert.AreEqual(_categoryCode, CustomerView.CategoryCode);
+            Assert.AreEqual(custId, View.CustomerNumber);
+            Assert.AreEqual(_customerName, View.CustomerName);
+            Assert.AreEqual(_supplier, View.Supplier);
+            Assert.AreEqual(_sapNumber, View.SapNumber);
+            Assert.AreEqual(_categoryCode, View.CategoryCode);
 
-            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            Assert.AreEqual(_companyName, CustomerView.CompanyName);
-            Assert.AreEqual(_po, CustomerView.Po);
-            Assert.AreEqual(_adressAddition, CustomerView.AdressAddition);
-            Assert.AreEqual(_region, CustomerView.Region);
-            Assert.AreEqual(_streetName, CustomerView.StreetNo);
-            Assert.AreEqual(_zip, CustomerView.Zip);
-            Assert.AreEqual(_city, CustomerView.City);
-            Assert.AreEqual(_agency, CustomerView.Agency);
-            Assert.AreEqual(_language, CustomerView.Language);
-            Assert.AreEqual(_country, CustomerView.Country);
-            Assert.AreEqual(_email, CustomerView.Email);
-            Assert.AreEqual(_telephone, CustomerView.Telephone);
-            Assert.AreEqual(_mobile, CustomerView.Mobile);
-            Assert.AreEqual(_fax, CustomerView.Fax);
-            Assert.AreEqual(_web, CustomerView.Web);
+            Assert.AreEqual(_companyName, View.CompanyName);
+            Assert.AreEqual(_po, View.Po);
+            Assert.AreEqual(_adressAddition, View.AdressAddition);
+            Assert.AreEqual(_region, View.Region);
+            Assert.AreEqual(_streetName, View.StreetNo);
+            Assert.AreEqual(_zip, View.Zip);
+            Assert.AreEqual(_city, View.City);
+            Assert.AreEqual(_agency, View.Agency);
+            Assert.AreEqual(_language, View.Language);
+            Assert.AreEqual(_country, View.Country);
+            Assert.AreEqual(_email, View.Email);
+            Assert.AreEqual(_telephone, View.Telephone);
+            Assert.AreEqual(_mobile, View.Mobile);
+            Assert.AreEqual(_fax, View.Fax);
+            Assert.AreEqual(_web, View.Web);
         }
     }
 }

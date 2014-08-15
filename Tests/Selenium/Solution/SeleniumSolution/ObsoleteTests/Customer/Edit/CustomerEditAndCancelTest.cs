@@ -41,91 +41,91 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         {
             TestDirector.Navigate("Customer/edit?customerId=405125");
 
-            _custId = CustomerView.CustomerNumber;
-            _customerName = CustomerView.CustomerName;
-            _supplier = CustomerView.Supplier;
+            _custId = View.CustomerNumber;
+            _customerName = View.CustomerName;
+            _supplier = View.Supplier;
 
-            _sbsBillingTenant = CustomerView.SbsBillingTenant;
-            _sbsCurrency = CustomerView.SbsCurrency;
-            _sapNumber = CustomerView.SapNumber;
-            _sbsDebitNumber = CustomerView.SbsDebitNumber;
-            _sbsAdressNumber = CustomerView.SbsAdressNumber;
-            _segment = CustomerView.Segment;
+            _sbsBillingTenant = View.SbsBillingTenant;
+            _sbsCurrency = View.SbsCurrency;
+            _sapNumber = View.SapNumber;
+            _sbsDebitNumber = View.SbsDebitNumber;
+            _sbsAdressNumber = View.SbsAdressNumber;
+            _segment = View.Segment;
 
-            _ep2MerchantId = CustomerView.Ep2MerchantId;
+            _ep2MerchantId = View.Ep2MerchantId;
 
-            _companyName = CustomerView.CompanyName;
-            _po = CustomerView.Po;
-            _adressAddition = CustomerView.AdressAddition;
-            _streetName = CustomerView.StreetNo;
-            _zip = CustomerView.Zip;
-            _city = CustomerView.City;
-            _agency = CustomerView.Agency;
-            _language = CustomerView.Language;
-            _country = CustomerView.Country;
-            _email = CustomerView.Email;
-            _telephone = CustomerView.Telephone;
-            _mobile = CustomerView.Mobile;
-            _fax = CustomerView.Fax;
-            _web = CustomerView.Web;
+            _companyName = View.CompanyName;
+            _po = View.Po;
+            _adressAddition = View.AdressAddition;
+            _streetName = View.StreetNo;
+            _zip = View.Zip;
+            _city = View.City;
+            _agency = View.Agency;
+            _language = View.Language;
+            _country = View.Country;
+            _email = View.Email;
+            _telephone = View.Telephone;
+            _mobile = View.Mobile;
+            _fax = View.Fax;
+            _web = View.Web;
 
             CustomerMenu.CustomerEdit.Click();
 
-            CustomerEdit.CustomerName = "SYR Sele Kunde AAA";
+            Selenium.Customer.Edit.CustomerName = "SYR Sele Kunde AAA";
 
-            CustomerEdit.CompanyName = "SYR Sele Firma AAA";
-            CustomerEdit.StreetNo = "Hardturmstr. 2011";
-            CustomerEdit.Zip = "80222";
-            CustomerEdit.City = "Zürichhh";
-            CustomerEdit.Po = "PFO111";
-            CustomerEdit.AdressAddition = "Etage 333";
-            CustomerEdit.Region = "Reggg";
-            CustomerEdit.SapNumber = "4449";
+            Selenium.Customer.Edit.CompanyName = "SYR Sele Firma AAA";
+            Selenium.Customer.Edit.StreetNo = "Hardturmstr. 2011";
+            Selenium.Customer.Edit.Zip = "80222";
+            Selenium.Customer.Edit.City = "Zürichhh";
+            Selenium.Customer.Edit.Po = "PFO111";
+            Selenium.Customer.Edit.AdressAddition = "Etage 333";
+            Selenium.Customer.Edit.Region = "Reggg";
+            Selenium.Customer.Edit.SapNumber = "4449";
 
-            CustomerEdit.Agency = "C01 Bellia Antoine";
-            CustomerEdit.Language = "Kroatisch [hr]";
-            CustomerEdit.Country = "Albanien [AL]";
-            CustomerEdit.Email = "marc.siegmund@six-group.commmm";
-            CustomerEdit.Telephone = "0031 58 399 623777";
-            CustomerEdit.Mobile = "0032 58 399 623777";
-            CustomerEdit.Fax = "0033 58 399 623777";
-            CustomerEdit.Web = "www.six-group.com/de-internnnn";
+            Selenium.Customer.Edit.Agency = "C01 Bellia Antoine";
+            Selenium.Customer.Edit.Language = "Kroatisch [hr]";
+            Selenium.Customer.Edit.Country = "Albanien [AL]";
+            Selenium.Customer.Edit.Email = "marc.siegmund@six-group.commmm";
+            Selenium.Customer.Edit.Telephone = "0031 58 399 623777";
+            Selenium.Customer.Edit.Mobile = "0032 58 399 623777";
+            Selenium.Customer.Edit.Fax = "0033 58 399 623777";
+            Selenium.Customer.Edit.Web = "www.six-group.com/de-internnnn";
 
-            CustomerEdit.CancelButton.Click();
+            Selenium.Customer.Edit.CancelButton.Click();
         }
 
         [TestMethod]
         public void EditCustomerAndCancel()
         {
-            Assert.AreEqual(_custId, CustomerView.CustomerNumber);
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
-            Assert.AreEqual(_supplier, CustomerView.Supplier);
-            Assert.AreEqual(_sbsDebitNumber, CustomerView.SbsDebitNumber);
-            Assert.AreEqual(_sbsAdressNumber, CustomerView.SbsAdressNumber);
-            Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
-            Assert.AreEqual(_sbsCurrency, CustomerView.SbsCurrency);
-            Assert.AreEqual(_sapNumber, CustomerView.SapNumber);
-            Assert.AreEqual(_segment, CustomerView.Segment);
-            Assert.AreEqual(_ep2MerchantId, CustomerView.Ep2MerchantId);
+            Assert.AreEqual(_custId, View.CustomerNumber);
+            Assert.AreEqual(_customerName, View.CustomerName);
+            Assert.AreEqual(_supplier, View.Supplier);
+            Assert.AreEqual(_sbsDebitNumber, View.SbsDebitNumber);
+            Assert.AreEqual(_sbsAdressNumber, View.SbsAdressNumber);
+            Assert.AreEqual(_sbsBillingTenant, View.SbsBillingTenant);
+            Assert.AreEqual(_sbsCurrency, View.SbsCurrency);
+            Assert.AreEqual(_sapNumber, View.SapNumber);
+            Assert.AreEqual(_segment, View.Segment);
+            Assert.AreEqual(_ep2MerchantId, View.Ep2MerchantId);
 
-            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
-            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
-            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            Assert.AreEqual(_companyName, CustomerView.CompanyName);
-            Assert.AreEqual(_po, CustomerView.Po);
-            Assert.AreEqual(_adressAddition, CustomerView.AdressAddition);
-            Assert.AreEqual(_streetName, CustomerView.StreetNo);
-            Assert.AreEqual(_zip, CustomerView.Zip);
-            Assert.AreEqual(_city, CustomerView.City);
-            Assert.AreEqual(_agency, CustomerView.Agency);
-            Assert.AreEqual(_language, CustomerView.Language);
-            Assert.AreEqual(_country, CustomerView.Country);
-            Assert.AreEqual(_email, CustomerView.Email);
-            Assert.AreEqual(_telephone, CustomerView.Telephone);
-            Assert.AreEqual(_mobile, CustomerView.Mobile);
-            Assert.AreEqual(_fax, CustomerView.Fax);
-            Assert.AreEqual(_web, CustomerView.Web);
+            Assert.AreEqual(_companyName, View.CompanyName);
+            Assert.AreEqual(_po, View.Po);
+            Assert.AreEqual(_adressAddition, View.AdressAddition);
+            Assert.AreEqual(_streetName, View.StreetNo);
+            Assert.AreEqual(_zip, View.Zip);
+            Assert.AreEqual(_city, View.City);
+            Assert.AreEqual(_agency, View.Agency);
+            Assert.AreEqual(_language, View.Language);
+            Assert.AreEqual(_country, View.Country);
+            Assert.AreEqual(_email, View.Email);
+            Assert.AreEqual(_telephone, View.Telephone);
+            Assert.AreEqual(_mobile, View.Mobile);
+            Assert.AreEqual(_fax, View.Fax);
+            Assert.AreEqual(_web, View.Web);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(customerId);
             SearchResult.First(new CustomerResult()).Click();
 
-            Assert.AreEqual(customerId, CustomerView.CustomerNumber);
+            Assert.AreEqual(customerId, View.CustomerNumber);
         }
 
         public static void LocationCanBeFoundByLocationName(string locationName)
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(customerName);
             SearchResult.First(new CustomerResult()).Click();
 
-            Assert.AreEqual(customerName, CustomerView.CustomerName);
+            Assert.AreEqual(customerName, View.CustomerName);
         }
 
         public static void TerminalCanBeFoundById(string terminalId)

@@ -75,7 +75,7 @@
     <Compile Include="Customer\Create\CetrelCustomerCreateTest.cs" />
     <Compile Include="Customer\Create\CoopCustomerCreateTest.cs" />
     <Compile Include="Customer\Create\CustomerCreateTest.cs" />
-    <Compile Include="Customer\Create\CustomerCreateWithInvalidDataTest.cs" />
+    <Compile Include="Customer\Create\CreateWithInvalidDataTest.cs" />
     <Compile Include="Customer\Create\CustomerCreateWithManualEp2NumberTest.cs" />
     <Compile Include="Customer\Create\CustomerCreateWithMinimalInputTest.cs" />
     <Compile Include="Customer\Create\CustomerCreateWithMissingDataTest.cs" />

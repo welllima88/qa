@@ -23,82 +23,82 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CustomerMenu.CustomerCreate.Click();
 
             string supplier = "CETREL S.A.";
-            CustomerCreate.Supplier = supplier;
+            Selenium.Customer.Create.Supplier = supplier;
             string categoryCode = "3663: HOTELES EL PRESIDENTE";
-            CustomerCreate.CategoryCode = categoryCode;
+            Selenium.Customer.Create.CategoryCode = categoryCode;
             string supportContract = "SPA Servicepaket Advance";
-            CustomerCreate.SupportContract = supportContract;
+            Selenium.Customer.Create.SupportContract = supportContract;
             string customerSegment = "07_P_CETREL";
-            CustomerCreate.Segment = customerSegment;
+            Selenium.Customer.Create.Segment = customerSegment;
             string customerName = "SYR Cetrel Kunde Create";
-            CustomerCreate.CustomerName = customerName;
+            Selenium.Customer.Create.CustomerName = customerName;
             string companyName = "SYR Cetrel Firma Create";
-            CustomerCreate.CompanyName = companyName;
+            Selenium.Customer.Create.CompanyName = companyName;
             string StreetNo = "Luxemburgerli 1a";
-            CustomerCreate.StreetNo = StreetNo;
+            Selenium.Customer.Create.StreetNo = StreetNo;
             string zip = "11247";
-            CustomerCreate.Zip = zip;
+            Selenium.Customer.Create.Zip = zip;
             string city = "Luxemburg";
-            CustomerCreate.City = city;
+            Selenium.Customer.Create.City = city;
             string po = "LUX1";
-            CustomerCreate.Po = po;
+            Selenium.Customer.Create.Po = po;
             string adressAddition = "ZusatzLUX";
-            CustomerCreate.AdressAddition = adressAddition;
+            Selenium.Customer.Create.AdressAddition = adressAddition;
             string region = "WestLUX";
-            CustomerCreate.Region = region;
+            Selenium.Customer.Create.Region = region;
             string sapNumber = "9129";
-            CustomerCreate.SapNumber = sapNumber;
+            Selenium.Customer.Create.SapNumber = sapNumber;
 
             string agency = "SIX LUX";
-            CustomerCreate.Agency = agency;
+            Selenium.Customer.Create.Agency = agency;
             string language = "Französisch [fr]";
-            CustomerCreate.Language = language;
+            Selenium.Customer.Create.Language = language;
             string country = "Luxemburg [LU]";
-            CustomerCreate.Country = country;
+            Selenium.Customer.Create.Country = country;
             string email = "marc.siegmund@six-group.com/lux";
-            CustomerCreate.Email = email;
+            Selenium.Customer.Create.Email = email;
             string telephone = "+61 58 399 6237";
-            CustomerCreate.Telephone = telephone;
+            Selenium.Customer.Create.Telephone = telephone;
             string mobile = "+62 58 399 6237";
-            CustomerCreate.Mobile = mobile;
+            Selenium.Customer.Create.Mobile = mobile;
             string fax = "+63 58 399 6237";
-            CustomerCreate.Fax = fax;
+            Selenium.Customer.Create.Fax = fax;
             string web = "www.six-group.com/cetrel";
-            CustomerCreate.Web = web;
+            Selenium.Customer.Create.Web = web;
 
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.SaveButton.Click();
 
-            Assert.AreEqual(customerName, CustomerView.CustomerName);
-            string custId = CustomerView.CustomerNumber;
+            Assert.AreEqual(customerName, View.CustomerName);
+            string custId = View.CustomerNumber;
 
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual(custId, CustomerView.CustomerNumber);
-            Assert.AreEqual(customerName, CustomerView.CustomerName);
-            Assert.AreEqual(supplier, CustomerView.Supplier);
-            Assert.AreEqual(sapNumber, CustomerView.SapNumber);
-            Assert.AreEqual(categoryCode, CustomerView.CategoryCode);
+            Assert.AreEqual(custId, View.CustomerNumber);
+            Assert.AreEqual(customerName, View.CustomerName);
+            Assert.AreEqual(supplier, View.Supplier);
+            Assert.AreEqual(sapNumber, View.SapNumber);
+            Assert.AreEqual(categoryCode, View.CategoryCode);
             Assert.AreEqual(supportContract,
-                CustomerView.SupportContract);
+                View.SupportContract);
 
-            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            Assert.AreEqual(companyName, CustomerView.CompanyName);
-            Assert.AreEqual(po, CustomerView.Po);
-            Assert.AreEqual(adressAddition, CustomerView.AdressAddition);
-            Assert.AreEqual(region, CustomerView.Region);
-            Assert.AreEqual(StreetNo, CustomerView.StreetNo);
-            Assert.AreEqual(zip, CustomerView.Zip);
-            Assert.AreEqual(city, CustomerView.City);
-            Assert.AreEqual(agency, CustomerView.Agency);
-            Assert.AreEqual(language, CustomerView.Language);
-            Assert.AreEqual(country, CustomerView.Country);
-            Assert.AreEqual(email, CustomerView.Email);
-            Assert.AreEqual(telephone, CustomerView.Telephone);
-            Assert.AreEqual(mobile, CustomerView.Mobile);
-            Assert.AreEqual(fax, CustomerView.Fax);
-            Assert.AreEqual(web, CustomerView.Web);
+            Assert.AreEqual(companyName, View.CompanyName);
+            Assert.AreEqual(po, View.Po);
+            Assert.AreEqual(adressAddition, View.AdressAddition);
+            Assert.AreEqual(region, View.Region);
+            Assert.AreEqual(StreetNo, View.StreetNo);
+            Assert.AreEqual(zip, View.Zip);
+            Assert.AreEqual(city, View.City);
+            Assert.AreEqual(agency, View.Agency);
+            Assert.AreEqual(language, View.Language);
+            Assert.AreEqual(country, View.Country);
+            Assert.AreEqual(email, View.Email);
+            Assert.AreEqual(telephone, View.Telephone);
+            Assert.AreEqual(mobile, View.Mobile);
+            Assert.AreEqual(fax, View.Fax);
+            Assert.AreEqual(web, View.Web);
         }
     }
 }

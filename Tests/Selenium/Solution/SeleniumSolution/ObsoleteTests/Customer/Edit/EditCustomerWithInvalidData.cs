@@ -13,27 +13,27 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
 
-            CustomerEdit.CustomerName = "SYR Sele Kunde A$°";
+            Selenium.Customer.Edit.CustomerName = "SYR Sele Kunde A$°";
 
-            CustomerEdit.CompanyName = "SYR Sele Firma A$°";
-            CustomerEdit.StreetNo = "Hardturmstr. 201$°";
-            CustomerEdit.Zip = "802$°";
-            CustomerEdit.City = "Zürich$°";
-            CustomerEdit.Po = "PFO1$°";
-            CustomerEdit.AdressAddition = "Etage 3$°";
-            CustomerEdit.Region = "Reg 3[]$°";
-            CustomerEdit.SapNumber = "4}$°";
+            Selenium.Customer.Edit.CompanyName = "SYR Sele Firma A$°";
+            Selenium.Customer.Edit.StreetNo = "Hardturmstr. 201$°";
+            Selenium.Customer.Edit.Zip = "802$°";
+            Selenium.Customer.Edit.City = "Zürich$°";
+            Selenium.Customer.Edit.Po = "PFO1$°";
+            Selenium.Customer.Edit.AdressAddition = "Etage 3$°";
+            Selenium.Customer.Edit.Region = "Reg 3[]$°";
+            Selenium.Customer.Edit.SapNumber = "4}$°";
 
-            CustomerEdit.Agency = "SIX Payment Services (Europe)";
-            CustomerEdit.Language = "Deutsch [de]";
-            CustomerEdit.Country = "Schweiz [CH]";
-            CustomerEdit.Email = "marc.siegmund@six-grou$°p.com";
-            CustomerEdit.Telephone = "0031 58 399 6237}$°";
-            CustomerEdit.Mobile = "0032 58 399 6237}$°";
-            CustomerEdit.Fax = "0033 58 399 6237}$°";
-            CustomerEdit.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            Selenium.Customer.Edit.Agency = "SIX Payment Services (Europe)";
+            Selenium.Customer.Edit.Language = "Deutsch [de]";
+            Selenium.Customer.Edit.Country = "Schweiz [CH]";
+            Selenium.Customer.Edit.Email = "marc.siegmund@six-grou$°p.com";
+            Selenium.Customer.Edit.Telephone = "0031 58 399 6237}$°";
+            Selenium.Customer.Edit.Mobile = "0032 58 399 6237}$°";
+            Selenium.Customer.Edit.Fax = "0033 58 399 6237}$°";
+            Selenium.Customer.Edit.Web = "www.six-^°@}$.com/de-inte[]rn$°";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
         }
 
         [TestMethod]

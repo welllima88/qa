@@ -23,42 +23,42 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void CustomerNumber()
         {
-            StringAssert.Matches(CustomerView.CustomerNumber, new Regex(TestRegExpPatterns.CustomerNo));
+            StringAssert.Matches(View.CustomerNumber, new Regex(TestRegExpPatterns.CustomerNo));
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void CustomerName()
         {
-            Assert.AreEqual(_c.CustomerName, CustomerView.CustomerName);
+            Assert.AreEqual(_c.CustomerName, View.CustomerName);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Supplier()
         {
-            Assert.AreEqual(_c.Supplier, CustomerView.Supplier);
+            Assert.AreEqual(_c.Supplier, View.Supplier);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void SbsBillingTenant()
         {
-            Assert.AreEqual(_c.SbsBillingTenant, CustomerView.SbsBillingTenant);
+            Assert.AreEqual(_c.SbsBillingTenant, View.SbsBillingTenant);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void SbsCurrency()
         {
-            Assert.AreEqual(_c.SbsCurrency, CustomerView.SbsCurrency);
+            Assert.AreEqual(_c.SbsCurrency, View.SbsCurrency);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void SapNumber()
         {
-            Assert.AreEqual(_c.Location.SapNumber, CustomerView.SapNumber);
+            Assert.AreEqual(_c.Location.SapNumber, View.SapNumber);
         }
 
         [TestMethod]
@@ -66,7 +66,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [Ignore] //because it is like other suggestors not reliable test
         public void CategoryCode()
         {
-            Assert.AreEqual(_c.CategoryCode, CustomerView.CategoryCode);
+            Assert.AreEqual(_c.CategoryCode, View.CategoryCode);
         }
 
         [TestMethod]
@@ -74,84 +74,84 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         public void SupportContract()
         {
             Assert.AreEqual(_c.SupportContract,
-                CustomerView.SupportContract);
+                View.SupportContract);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void CashIntegrator()
         {
-            Assert.AreEqual(_c.CashIntegrator, CustomerView.CashIntegrator);
+            Assert.AreEqual(_c.CashIntegrator, View.CashIntegrator);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void SbsDebitNumber()
         {
-            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void SbsAdressNumber()
         {
-            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Ep2MerchantId()
         {
-            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Po()
         {
-            Assert.AreEqual(_c.Location.Adress.Po, CustomerView.Po);
+            Assert.AreEqual(_c.Location.Adress.Po, View.Po);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void AdressAddition()
         {
-            Assert.AreEqual(_c.Location.Adress.AdressAddition, CustomerView.AdressAddition);
+            Assert.AreEqual(_c.Location.Adress.AdressAddition, View.AdressAddition);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Region()
         {
-            Assert.AreEqual(_c.Location.Adress.Region, CustomerView.Region);
+            Assert.AreEqual(_c.Location.Adress.Region, View.Region);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void StreetNo()
         {
-            Assert.AreEqual(_c.Location.Adress.StreetNo, CustomerView.StreetNo);
+            Assert.AreEqual(_c.Location.Adress.StreetNo, View.StreetNo);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Zip()
         {
-            Assert.AreEqual(_c.Location.Adress.Zip, CustomerView.Zip);
+            Assert.AreEqual(_c.Location.Adress.Zip, View.Zip);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void City()
         {
-            Assert.AreEqual(_c.Location.Adress.City, CustomerView.City);
+            Assert.AreEqual(_c.Location.Adress.City, View.City);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Agency()
         {
-            Assert.AreEqual(_c.Agency, CustomerView.Agency);
+            Assert.AreEqual(_c.Agency, View.Agency);
         }
 
         [TestMethod]
@@ -159,7 +159,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [Ignore]
         public void Language()
         {
-            Assert.AreEqual(_c.Location.Contact.Language, CustomerView.Language);
+            Assert.AreEqual(_c.Location.Contact.Language, View.Language);
         }
 
         [Ignore]
@@ -167,49 +167,49 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void Country()
         {
-            Assert.AreEqual(_c.Location.Adress.Country, CustomerView.Country);
+            Assert.AreEqual(_c.Location.Adress.Country, View.Country);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Email()
         {
-            Assert.AreEqual(_c.Location.Contact.Email, CustomerView.Email);
+            Assert.AreEqual(_c.Location.Contact.Email, View.Email);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Telephone()
         {
-            Assert.AreEqual(_c.Location.Contact.Telephone, CustomerView.Telephone);
+            Assert.AreEqual(_c.Location.Contact.Telephone, View.Telephone);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Mobile()
         {
-            Assert.AreEqual(_c.Location.Contact.Mobile, CustomerView.Mobile);
+            Assert.AreEqual(_c.Location.Contact.Mobile, View.Mobile);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Fax()
         {
-            Assert.AreEqual(_c.Location.Contact.Fax, CustomerView.Fax);
+            Assert.AreEqual(_c.Location.Contact.Fax, View.Fax);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Web()
         {
-            Assert.AreEqual(_c.Location.Contact.Web, CustomerView.Web);
+            Assert.AreEqual(_c.Location.Contact.Web, View.Web);
         }
 
         [TestMethod]
         [TestCategory("Customer"), TestCategory("Create")]
         public void Segment()
         {
-            Assert.AreEqual(_c.Segment, CustomerView.Segment);
+            Assert.AreEqual(_c.Segment, View.Segment);
         }
     }
 }

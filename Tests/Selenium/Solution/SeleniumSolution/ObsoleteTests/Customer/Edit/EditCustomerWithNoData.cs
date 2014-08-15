@@ -13,23 +13,23 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
 
-            CustomerEdit.CustomerName = "";
-            CustomerEdit.CompanyName = "";
-            CustomerEdit.StreetNo = "";
-            CustomerEdit.Zip = "";
-            CustomerEdit.City = "";
-            CustomerEdit.Po = "";
-            CustomerEdit.AdressAddition = "";
-            CustomerEdit.Region = "";
-            CustomerEdit.SapNumber = "";
+            Selenium.Customer.Edit.CustomerName = "";
+            Selenium.Customer.Edit.CompanyName = "";
+            Selenium.Customer.Edit.StreetNo = "";
+            Selenium.Customer.Edit.Zip = "";
+            Selenium.Customer.Edit.City = "";
+            Selenium.Customer.Edit.Po = "";
+            Selenium.Customer.Edit.AdressAddition = "";
+            Selenium.Customer.Edit.Region = "";
+            Selenium.Customer.Edit.SapNumber = "";
 
-            CustomerEdit.Email = "";
-            CustomerEdit.Telephone = "";
-            CustomerEdit.Mobile = "";
-            CustomerEdit.Fax = "";
-            CustomerEdit.Web = "";
+            Selenium.Customer.Edit.Email = "";
+            Selenium.Customer.Edit.Telephone = "";
+            Selenium.Customer.Edit.Mobile = "";
+            Selenium.Customer.Edit.Fax = "";
+            Selenium.Customer.Edit.Web = "";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
         }
 
         [TestMethod]

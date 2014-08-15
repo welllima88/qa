@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             TestDirector.Navigate();
 
             CustomerMenu.CustomerCreate.Click();
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.SaveButton.Click();
         }
 
         [TestMethod]

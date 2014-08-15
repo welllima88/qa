@@ -162,7 +162,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         [TestMethod]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()
         {
-            string country = CustomerView.Country;
+            string country = View.Country;
             CustomerMenu.LocationCreate.Click();
             Assert.AreEqual(country, LocationCreate.Country);
         }
@@ -170,7 +170,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         [TestMethod]
         public void LanguageOfCustomerIsUsedForAgencyOfLocation()
         {
-            string language = CustomerView.Language;
+            string language = View.Language;
             CustomerMenu.LocationCreate.Click();
             Assert.AreEqual(language, LocationCreate.Language);
         }

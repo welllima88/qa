@@ -68,37 +68,37 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 
             CustomerMenu.CustomerCreate.Click();
 
-            CustomerCreate.Supplier = _supplier;
-            CustomerCreate.SbsCurrency = _sbsCurrency;
-            CustomerCreate.SbsBillingTenant = _sbsBillingTenant;
-            CustomerCreate.CustomerName = _customerName;
-            CustomerCreate.CategoryCode = _categoryCode;
-            CustomerCreate.SupportContract = _supportContract;
-            CustomerCreate.CashIntegrator = _cashIntegrator;
-            CustomerCreate.Segment = _segment;
-            CustomerCreate.CompanyName = _companyName;
-            CustomerCreate.StreetNo = _streetName;
-            CustomerCreate.Zip = _zip;
-            CustomerCreate.City = _city;
-            CustomerCreate.Po = _po;
-            CustomerCreate.AdressAddition = _adressAddition;
-            CustomerCreate.Region = _region;
-            CustomerCreate.SapNumber = _sapNumber;
-            CustomerCreate.Agency = _agency;
-            CustomerCreate.Language = _language;
-            CustomerCreate.Country = _country;
-            CustomerCreate.Email = _email;
-            CustomerCreate.Telephone = _telephone;
-            CustomerCreate.Mobile = _mobile;
-            CustomerCreate.Fax = _fax;
-            CustomerCreate.Web = _web;
+            Selenium.Customer.Create.Supplier = _supplier;
+            Selenium.Customer.Create.SbsCurrency = _sbsCurrency;
+            Selenium.Customer.Create.SbsBillingTenant = _sbsBillingTenant;
+            Selenium.Customer.Create.CustomerName = _customerName;
+            Selenium.Customer.Create.CategoryCode = _categoryCode;
+            Selenium.Customer.Create.SupportContract = _supportContract;
+            Selenium.Customer.Create.CashIntegrator = _cashIntegrator;
+            Selenium.Customer.Create.Segment = _segment;
+            Selenium.Customer.Create.CompanyName = _companyName;
+            Selenium.Customer.Create.StreetNo = _streetName;
+            Selenium.Customer.Create.Zip = _zip;
+            Selenium.Customer.Create.City = _city;
+            Selenium.Customer.Create.Po = _po;
+            Selenium.Customer.Create.AdressAddition = _adressAddition;
+            Selenium.Customer.Create.Region = _region;
+            Selenium.Customer.Create.SapNumber = _sapNumber;
+            Selenium.Customer.Create.Agency = _agency;
+            Selenium.Customer.Create.Language = _language;
+            Selenium.Customer.Create.Country = _country;
+            Selenium.Customer.Create.Email = _email;
+            Selenium.Customer.Create.Telephone = _telephone;
+            Selenium.Customer.Create.Mobile = _mobile;
+            Selenium.Customer.Create.Fax = _fax;
+            Selenium.Customer.Create.Web = _web;
         }
 
         [TestMethod]
         public void TooShortEp2Number()
         {
-            CustomerCreate.Ep2MerchantId = "55555";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Ep2MerchantId = "55555";
+            Selenium.Customer.Create.SaveButton.Click();
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer schon vergeben");
         }
@@ -106,8 +106,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void NegativeEp2Number()
         {
-            CustomerCreate.Ep2MerchantId = "-22";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Ep2MerchantId = "-22";
+            Selenium.Customer.Create.SaveButton.Click();
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
@@ -115,8 +115,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void InvalidCharactersEp2Number()
         {
-            CustomerCreate.Ep2MerchantId = "A*%D01111111115";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Ep2MerchantId = "A*%D01111111115";
+            Selenium.Customer.Create.SaveButton.Click();
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
@@ -124,8 +124,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void PartiallyValidEp2Number()
         {
-            CustomerCreate.Ep2MerchantId = "TKSYR000000014";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Ep2MerchantId = "TKSYR000000014";
+            Selenium.Customer.Create.SaveButton.Click();
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }

@@ -44,175 +44,175 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 
             CustomerMenu.CustomerCreate.Click();
 
-            CustomerCreate.Supplier = _supplier;
-            CustomerCreate.SbsCurrency = _sbsCurrency;
-            CustomerCreate.SbsBillingTenant = _sbsBillingTenant;
+            Selenium.Customer.Create.Supplier = _supplier;
+            Selenium.Customer.Create.SbsCurrency = _sbsCurrency;
+            Selenium.Customer.Create.SbsBillingTenant = _sbsBillingTenant;
 
-            CustomerCreate.CustomerName = _customerName;
+            Selenium.Customer.Create.CustomerName = _customerName;
 
-            CustomerCreate.CompanyName = _companyName;
-            CustomerCreate.StreetNo = _streetName;
-            CustomerCreate.Zip = _zip;
-            CustomerCreate.City = _city;
+            Selenium.Customer.Create.CompanyName = _companyName;
+            Selenium.Customer.Create.StreetNo = _streetName;
+            Selenium.Customer.Create.Zip = _zip;
+            Selenium.Customer.Create.City = _city;
 
-            CustomerCreate.Language = _language;
-            CustomerCreate.Country = _country;
+            Selenium.Customer.Create.Language = _language;
+            Selenium.Customer.Create.Country = _country;
 
-            CustomerCreate.SaveButton.Click();
-            _custId = CustomerView.CustomerNumber;
+            Selenium.Customer.Create.SaveButton.Click();
+            _custId = View.CustomerNumber;
         }
 
         [TestMethod]
         public void CustomerName()
         {
-            Assert.AreEqual(_customerName, CustomerView.CustomerName);
+            Assert.AreEqual(_customerName, View.CustomerName);
         }
 
         [TestMethod]
         public void Supplier()
         {
-            Assert.AreEqual(_supplier, CustomerView.Supplier);
+            Assert.AreEqual(_supplier, View.Supplier);
         }
 
         [TestMethod]
         public void SbsBillingTenant()
         {
-            Assert.AreEqual(_sbsBillingTenant, CustomerView.SbsBillingTenant);
+            Assert.AreEqual(_sbsBillingTenant, View.SbsBillingTenant);
         }
 
         [TestMethod]
         public void SbsCurrency()
         {
-            Assert.AreEqual(_sbsCurrency, CustomerView.SbsCurrency);
+            Assert.AreEqual(_sbsCurrency, View.SbsCurrency);
         }
 
         [TestMethod]
         public void SapNumber()
         {
-            Assert.AreEqual(" ", CustomerView.SapNumber);
+            Assert.AreEqual(" ", View.SapNumber);
         }
 
         [TestMethod]
         public void CategoryCode()
         {
-            Assert.AreEqual("(Keine Branche)", CustomerView.CategoryCode);
+            Assert.AreEqual("(Keine Branche)", View.CategoryCode);
         }
 
         [TestMethod]
         public void SupportContract()
         {
             Assert.AreEqual("Kein Supportvertrag",
-                CustomerView.SupportContract);
+                View.SupportContract);
         }
 
         [TestMethod]
         public void CashIntegrator()
         {
-            Assert.AreEqual("Kein Kassenintegrator", CustomerView.CashIntegrator);
+            Assert.AreEqual("Kein Kassenintegrator", View.CashIntegrator);
         }
 
         [TestMethod]
         public void SbsDebitNumber()
         {
-            StringAssert.Matches(CustomerView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         public void SbsAdressNumber()
         {
-            StringAssert.Matches(CustomerView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
         [TestMethod]
         public void Ep2MerchantId()
         {
-            StringAssert.Matches(CustomerView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual(" ", CustomerView.Po);
+            Assert.AreEqual(" ", View.Po);
         }
 
         [TestMethod]
         public void AdressAddition()
         {
-            Assert.AreEqual(" ", CustomerView.AdressAddition);
+            Assert.AreEqual(" ", View.AdressAddition);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.AreEqual(" ", CustomerView.Region);
+            Assert.AreEqual(" ", View.Region);
         }
 
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual(_streetName, CustomerView.StreetNo);
+            Assert.AreEqual(_streetName, View.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual(_zip, CustomerView.Zip);
+            Assert.AreEqual(_zip, View.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual(_city, CustomerView.City);
+            Assert.AreEqual(_city, View.City);
         }
 
         [TestMethod]
         public void Agency()
         {
-            Assert.AreEqual("Keine Agentur", CustomerView.Agency);
+            Assert.AreEqual("Keine Agentur", View.Agency);
         }
 
         [TestMethod]
         [Ignore]
         public void Language()
         {
-            Assert.AreEqual(_language, CustomerView.Language);
+            Assert.AreEqual(_language, View.Language);
         }
 
         [Ignore]
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual(_country, CustomerView.Country);
+            Assert.AreEqual(_country, View.Country);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual(" ", CustomerView.Email);
+            Assert.AreEqual(" ", View.Email);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual(" ", CustomerView.Telephone);
+            Assert.AreEqual(" ", View.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual(" ", CustomerView.Mobile);
+            Assert.AreEqual(" ", View.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual(" ", CustomerView.Fax);
+            Assert.AreEqual(" ", View.Fax);
         }
 
         [TestMethod]
         public void Web()
         {
-            Assert.AreEqual("", CustomerView.Web);
+            Assert.AreEqual("", View.Web);
         }
 
         [TestMethod]
@@ -221,7 +221,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual(_custId, CustomerView.CustomerNumber);
+            Assert.AreEqual(_custId, View.CustomerNumber);
         }
     }
 }

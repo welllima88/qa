@@ -11,69 +11,69 @@ namespace Six.Scs.QA.Workflow
         {
             CustomerMenu.CustomerCreate.Click();
 
-            CustomerCreate.Supplier = c.Supplier;
-            CustomerCreate.SbsCurrency = c.SbsCurrency;
-            CustomerCreate.SbsBillingTenant = c.SbsBillingTenant;
-            CustomerCreate.CustomerName = c.CustomerName;
+            Selenium.Customer.Create.Supplier = c.Supplier;
+            Selenium.Customer.Create.SbsCurrency = c.SbsCurrency;
+            Selenium.Customer.Create.SbsBillingTenant = c.SbsBillingTenant;
+            Selenium.Customer.Create.CustomerName = c.CustomerName;
 
-            CustomerCreate.StreetNo = c.Location.Adress.StreetNo;
-            CustomerCreate.Zip = c.Location.Adress.Zip;
-            CustomerCreate.City = c.Location.Adress.City;
-            CustomerCreate.Po = c.Location.Adress.Po;
-            CustomerCreate.AdressAddition = c.Location.Adress.AdressAddition;
-            CustomerCreate.Region = c.Location.Adress.Region;
-            CustomerCreate.SapNumber = c.Location.SapNumber;
-            CustomerCreate.Ep2MerchantId = c.Location.Ep2MerchantId; // may be don't set anything?
-            CustomerCreate.Agency = c.Agency;
-            CustomerCreate.Language = c.Location.Contact.Language;
-            CustomerCreate.Country = c.Location.Adress.Country;
-            CustomerCreate.Email = c.Location.Contact.Email;
-            CustomerCreate.Telephone = c.Location.Contact.Telephone;
-            CustomerCreate.Mobile = c.Location.Contact.Mobile;
-            CustomerCreate.Fax = c.Location.Contact.Fax;
-            CustomerCreate.Web = c.Location.Contact.Web;
-            CustomerCreate.CategoryCode = c.CategoryCode;
+            Selenium.Customer.Create.StreetNo = c.Location.Adress.StreetNo;
+            Selenium.Customer.Create.Zip = c.Location.Adress.Zip;
+            Selenium.Customer.Create.City = c.Location.Adress.City;
+            Selenium.Customer.Create.Po = c.Location.Adress.Po;
+            Selenium.Customer.Create.AdressAddition = c.Location.Adress.AdressAddition;
+            Selenium.Customer.Create.Region = c.Location.Adress.Region;
+            Selenium.Customer.Create.SapNumber = c.Location.SapNumber;
+            Selenium.Customer.Create.Ep2MerchantId = c.Location.Ep2MerchantId; // may be don't set anything?
+            Selenium.Customer.Create.Agency = c.Agency;
+            Selenium.Customer.Create.Language = c.Location.Contact.Language;
+            Selenium.Customer.Create.Country = c.Location.Adress.Country;
+            Selenium.Customer.Create.Email = c.Location.Contact.Email;
+            Selenium.Customer.Create.Telephone = c.Location.Contact.Telephone;
+            Selenium.Customer.Create.Mobile = c.Location.Contact.Mobile;
+            Selenium.Customer.Create.Fax = c.Location.Contact.Fax;
+            Selenium.Customer.Create.Web = c.Location.Contact.Web;
+            Selenium.Customer.Create.CategoryCode = c.CategoryCode;
 
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.SaveButton.Click();
 
-            c.CustomerNumber = CustomerView.CustomerNumber;
-            c.Location.SbsDebitNumber = CustomerView.SbsDebitNumber;
+            c.CustomerNumber = View.CustomerNumber;
+            c.Location.SbsDebitNumber = View.SbsDebitNumber;
             // c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
         }
 
         public static void Edit(TestData.ValueObjects.Customer c)
         {
-            c.CustomerNumber = CustomerView.CustomerNumber;
-            c.Location.SbsDebitNumber = CustomerView.SbsDebitNumber;
+            c.CustomerNumber = View.CustomerNumber;
+            c.Location.SbsDebitNumber = View.SbsDebitNumber;
             // c.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
-            c.SbsCurrency = CustomerView.SbsCurrency;
-            c.SbsBillingTenant = CustomerView.SbsBillingTenant;
-            c.Supplier = CustomerView.Supplier;
+            c.SbsCurrency = View.SbsCurrency;
+            c.SbsBillingTenant = View.SbsBillingTenant;
+            c.Supplier = View.Supplier;
 
             CustomerMenu.CustomerEdit.Click();
 
-            CustomerEdit.CustomerName = c.CustomerName;
-            CustomerEdit.StreetNo = c.Location.Adress.StreetNo;
-            CustomerEdit.Zip = c.Location.Adress.Zip;
-            CustomerEdit.City = c.Location.Adress.City;
-            CustomerEdit.Po = c.Location.Adress.Po;
-            CustomerEdit.AdressAddition = c.Location.Adress.AdressAddition;
-            CustomerEdit.Region = c.Location.Adress.Region;
-            CustomerEdit.SapNumber = c.Location.SapNumber;
+            Selenium.Customer.Edit.CustomerName = c.CustomerName;
+            Selenium.Customer.Edit.StreetNo = c.Location.Adress.StreetNo;
+            Selenium.Customer.Edit.Zip = c.Location.Adress.Zip;
+            Selenium.Customer.Edit.City = c.Location.Adress.City;
+            Selenium.Customer.Edit.Po = c.Location.Adress.Po;
+            Selenium.Customer.Edit.AdressAddition = c.Location.Adress.AdressAddition;
+            Selenium.Customer.Edit.Region = c.Location.Adress.Region;
+            Selenium.Customer.Edit.SapNumber = c.Location.SapNumber;
 
-            CustomerEdit.Agency = c.Agency;
-            CustomerEdit.Language = c.Location.Contact.Language;
-            CustomerEdit.Country = c.Location.Adress.Country;
-            CustomerEdit.Email = c.Location.Contact.Email;
-            CustomerEdit.Telephone = c.Location.Contact.Telephone;
-            CustomerEdit.Mobile = c.Location.Contact.Mobile;
-            CustomerEdit.Fax = c.Location.Contact.Fax;
-            CustomerEdit.Web = c.Location.Contact.Web;
+            Selenium.Customer.Edit.Agency = c.Agency;
+            Selenium.Customer.Edit.Language = c.Location.Contact.Language;
+            Selenium.Customer.Edit.Country = c.Location.Adress.Country;
+            Selenium.Customer.Edit.Email = c.Location.Contact.Email;
+            Selenium.Customer.Edit.Telephone = c.Location.Contact.Telephone;
+            Selenium.Customer.Edit.Mobile = c.Location.Contact.Mobile;
+            Selenium.Customer.Edit.Fax = c.Location.Contact.Fax;
+            Selenium.Customer.Edit.Web = c.Location.Contact.Web;
 
             ChangeForm.Reason = "MerchantAddressChange";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " customer change remark";
 
-            CustomerEdit.SaveButton.Click();
+            Selenium.Customer.Edit.SaveButton.Click();
         }
     }
 }

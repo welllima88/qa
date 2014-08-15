@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Customer
 {
-    public class CustomerDeactivation : WebObject
+    public class Deactivate : WebObject
     {
         public static ButtonElement Cancel
         {

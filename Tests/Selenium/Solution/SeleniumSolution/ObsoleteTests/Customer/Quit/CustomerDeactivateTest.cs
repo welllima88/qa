@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Quit
         public void DeactivateCustomerAndCancel()
         {
             CustomerMenu.CustomerDeactivate.Click();
-            CustomerDeactivation.Cancel.Click();
+            Deactivate.Cancel.Click();
             // StringAssert.DoesNotMatch(CustomerView.header,new RegExp("deactivated"));
         }
     }

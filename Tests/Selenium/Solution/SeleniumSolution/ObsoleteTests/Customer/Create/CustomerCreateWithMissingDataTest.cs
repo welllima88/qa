@@ -19,29 +19,29 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestInitialize]
         public void TestInit()
         {
-            CustomerCreate.CustomerName = "SYR Sele Kunde A";
-            CustomerCreate.Supplier = "SIX Payment Services AG";
-            CustomerCreate.SbsCurrency = "EUR";
-            CustomerCreate.SbsBillingTenant = "SIX Payment Services (Europe)";
+            Selenium.Customer.Create.CustomerName = "SYR Sele Kunde A";
+            Selenium.Customer.Create.Supplier = "SIX Payment Services AG";
+            Selenium.Customer.Create.SbsCurrency = "EUR";
+            Selenium.Customer.Create.SbsBillingTenant = "SIX Payment Services (Europe)";
 
-            CustomerCreate.CompanyName = "SYR Sele Firma A";
-            CustomerCreate.StreetNo = "Hardturmstr. 201";
-            CustomerCreate.Zip = "8021";
-            CustomerCreate.City = "Zürich";
-            CustomerCreate.Po = "PFO1";
-            CustomerCreate.AdressAddition = "Etage 3";
-            CustomerCreate.Region = "Reg 3";
-            CustomerCreate.SapNumber = "4440";
+            Selenium.Customer.Create.CompanyName = "SYR Sele Firma A";
+            Selenium.Customer.Create.StreetNo = "Hardturmstr. 201";
+            Selenium.Customer.Create.Zip = "8021";
+            Selenium.Customer.Create.City = "Zürich";
+            Selenium.Customer.Create.Po = "PFO1";
+            Selenium.Customer.Create.AdressAddition = "Etage 3";
+            Selenium.Customer.Create.Region = "Reg 3";
+            Selenium.Customer.Create.SapNumber = "4440";
 
-            CustomerCreate.Agency = "Albert Brun & Partner";
+            Selenium.Customer.Create.Agency = "Albert Brun & Partner";
 
-            CustomerCreate.Email = "marc.siegmund@six-group.com";
-            CustomerCreate.Telephone = "0031 58 399 6237";
-            CustomerCreate.Mobile = "0032 58 399 6237";
-            CustomerCreate.Fax = "0033 58 399 6237";
-            CustomerCreate.Web = "www.six-group.com/de-intern";
-            CustomerCreate.Language = "Deutsch [de]";
-            CustomerCreate.Country = "Schweiz [CH]";
+            Selenium.Customer.Create.Email = "marc.siegmund@six-group.com";
+            Selenium.Customer.Create.Telephone = "0031 58 399 6237";
+            Selenium.Customer.Create.Mobile = "0032 58 399 6237";
+            Selenium.Customer.Create.Fax = "0033 58 399 6237";
+            Selenium.Customer.Create.Web = "www.six-group.com/de-intern";
+            Selenium.Customer.Create.Language = "Deutsch [de]";
+            Selenium.Customer.Create.Country = "Schweiz [CH]";
         }
 
         [TestCleanup]
@@ -57,8 +57,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutCustomerNameFailed()
         {
-            CustomerCreate.CustomerName = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.CustomerName = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundenname: Dies ist ein Pflichtfeld!");
@@ -67,8 +67,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutCompanyNameFailed()
         {
-            CustomerCreate.CompanyName = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.CompanyName = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
@@ -77,8 +77,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutStreetAndNumberFailed()
         {
-            CustomerCreate.StreetNo = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.StreetNo = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
@@ -87,8 +87,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutCityFailed()
         {
-            CustomerCreate.City = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.City = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
@@ -97,8 +97,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutZipFailed()
         {
-            CustomerCreate.Zip = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Zip = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
@@ -107,8 +107,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestMethod]
         public void CreateCustomerWithoutMandantFailed()
         {
-            CustomerCreate.Supplier = "";
-            CustomerCreate.SaveButton.Click();
+            Selenium.Customer.Create.Supplier = "";
+            Selenium.Customer.Create.SaveButton.Click();
 
             // Removed: thx to suggester: Assert.IsTrue(FormAlert.FormAlertList.Count == 1);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Mandant: Dies ist ein Pflichtfeld!");

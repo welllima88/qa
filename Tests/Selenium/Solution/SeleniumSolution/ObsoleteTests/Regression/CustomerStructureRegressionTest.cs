@@ -303,7 +303,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void OpenCustomer()
         {
             Testlogic.Search.CustomerCanBeFoundByCustomerNumber(_customer.CustomerNumber);
-            Assert.AreEqual(_customer.CustomerNumber, CustomerView.CustomerNumber);
+            Assert.AreEqual(_customer.CustomerNumber, View.CustomerNumber);
         }
 
         private static void CreateCustomer()

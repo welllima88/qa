@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Customer
 {
-    public class CustomerView : WebObject
+    public class View : WebObject
     {
         public static IWebElementAdapter MoveButton
         {

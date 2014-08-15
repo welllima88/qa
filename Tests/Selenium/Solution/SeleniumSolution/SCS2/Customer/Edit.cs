@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Customer
 {
-    public class CustomerEdit : WebObject
+    public class Edit : WebObject
     {
         public static ButtonElement SaveButton
         {

@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Customer
 {
-    public class CustomerCreate : WebObject
+    public class Create : WebObject
     {
         public static IWebElementAdapter CancelButton
         {

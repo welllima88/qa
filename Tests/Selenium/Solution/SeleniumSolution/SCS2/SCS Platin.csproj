@@ -117,10 +117,10 @@
     <Compile Include="Common\RecentElements.cs" />
     <Compile Include="Common\RecentMassmutations.cs" />
     <Compile Include="Common\SiteContent.cs" />
-    <Compile Include="Customer\CustomerCreate.cs" />
-    <Compile Include="Customer\CustomerDeactivation.cs" />
-    <Compile Include="Customer\CustomerEdit.cs" />
-    <Compile Include="Customer\CustomerView.cs" />
+    <Compile Include="Customer\Create.cs" />
+    <Compile Include="Customer\Deactivate.cs" />
+    <Compile Include="Customer\Edit.cs" />
+    <Compile Include="Customer\View.cs" />
     <Compile Include="Environments\Local.cs" />
     <Compile Include="Environments\Prod.cs" />
     <Compile Include="Environments\QaK.cs" />
