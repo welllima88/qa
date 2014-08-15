@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Administration;
+using Six.Scs.QA.Selenium.Administration.SerialNumberManage;
 using Six.Scs.QA.Selenium.Common.Menu;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
@@ -15,45 +16,45 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
 
         private static void CheckSupplier(string supplier, string start, string length)
         {
-            SerialNumberManage.Supplier = supplier;
+            Import.Supplier = supplier;
 
-            Assert.AreEqual(start, SerialNumberManage.StartField);
-            Assert.AreEqual(length, SerialNumberManage.LengthField);
+            Assert.AreEqual(start, Import.StartField);
+            Assert.AreEqual(length, Import.LengthField);
         }
 
         [Test]
         [Category("SerialNumberManagement")]
         public void ImportButton()
         {
-            Assert.IsTrue(SerialNumberManage.ImportButton.Displayed);
+            Assert.IsTrue(Import.ImportButton.Displayed);
         }
 
         [Test]
         [Category("SerialNumberManagement")]
         public void LengthField()
         {
-            Assert.IsNotNull(SerialNumberManage.LengthField);
+            Assert.IsNotNull(Import.LengthField);
         }
 
         [Test]
         [Category("SerialNumberManagement")]
         public void SerialNumbersField()
         {
-            Assert.IsNotNull(SerialNumberManage.SerialNumbersField);
+            Assert.IsNotNull(Import.SerialNumbersField);
         }
 
         [Test]
         [Category("SerialNumberManagement")]
         public void StartField()
         {
-            Assert.IsNotNull(SerialNumberManage.StartField);
+            Assert.IsNotNull(Import.StartField);
         }
 
         [Test]
         [Category("SerialNumberManagement")]
         public void Supplier()
         {
-            Assert.IsNotNull(SerialNumberManage.Supplier);
+            Assert.IsNotNull(Import.Supplier);
         }
 
         [Test]

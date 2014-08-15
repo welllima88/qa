@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Administration;
+using Six.Scs.QA.Selenium.Administration.SerialNumberManage;
 using Six.Scs.QA.Selenium.Common.Menu;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
@@ -15,17 +16,17 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
 
         private void CheckPreview(string start, string length, string expectedPreview)
         {
-            SerialNumberManage.StartField = start;
-            SerialNumberManage.LengthField = length;
+            Import.StartField = start;
+            Import.LengthField = length;
 
-            Assert.AreEqual(expectedPreview, SerialNumberManage.Preview);
+            Assert.AreEqual(expectedPreview, Import.Preview);
         }
 
         [Test]
         [Category("SerialNumberManagement"), Category("PreviewSerialNumbers")]
         public void PreviewSerialNumbers()
         {
-            SerialNumberManage.SerialNumbersField =
+            Import.SerialNumbersField =
                 "1234567890A11223344556677889900000\n" +
                 "11234567890B1122334455667788990000\n" +
                 "111234567890C112233445566778899000\n" +

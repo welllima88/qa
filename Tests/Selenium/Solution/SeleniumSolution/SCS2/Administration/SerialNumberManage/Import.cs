@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Administration
+namespace Six.Scs.QA.Selenium.Administration.SerialNumberManage
 {
-    public class SerialNumberManage : WebObject
+    public class Import : WebObject
     {
         public static string Supplier
         {
