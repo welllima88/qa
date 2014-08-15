@@ -8,7 +8,7 @@ using Six.Scs.QA.TestData.Factory;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateWithManualEp2NumberTest
+    public class ManualEp2Number
     {
         private static string _adressAddition;
         private static string _cashIntegrator;

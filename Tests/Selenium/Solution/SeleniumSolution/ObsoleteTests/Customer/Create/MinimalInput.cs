@@ -10,7 +10,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateWithMinimalInputTest
+    public class MinimalInput
     {
         private static long _dt;
         private static string _custId;

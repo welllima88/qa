@@ -15,8 +15,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
         [SetUp]
         public void LaunchTestDirector()
         {
-            TestDirector.TestEnvironment = new Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
+            TestDirector.TestEnvironment = new Local();
+            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.LogOn();
             Testlogic.Lobby.Language(Languages.German);
         }

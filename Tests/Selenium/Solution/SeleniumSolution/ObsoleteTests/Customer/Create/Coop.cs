@@ -9,7 +9,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CoopCustomerCreateTest
+    public class Coop
     {
         private static string _supplier;
         private static string _customerName;

@@ -10,7 +10,7 @@ using Six.Scs.QA.TestData.Factory;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateWithSbsExportTest
+    public class SbsExport
     {
         private const int WaitMilliseconds = 1000;
 

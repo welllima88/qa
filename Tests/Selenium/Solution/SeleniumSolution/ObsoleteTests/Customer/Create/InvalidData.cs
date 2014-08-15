@@ -6,7 +6,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CreateWithInvalidDataTest : Selenium.Customer.Create
+    public class InvalidData : Selenium.Customer.Create
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

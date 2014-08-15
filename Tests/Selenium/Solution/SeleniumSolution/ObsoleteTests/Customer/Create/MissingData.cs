@@ -7,7 +7,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateWithMissingDataTest
+    public class MissingData
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

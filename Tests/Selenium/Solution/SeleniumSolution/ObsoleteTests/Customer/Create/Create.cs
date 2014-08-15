@@ -7,7 +7,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
     [TestClass]
-    public class CustomerCreateTest
+    public class Create
     {
         private static TestData.ValueObjects.Customer _c;
 
