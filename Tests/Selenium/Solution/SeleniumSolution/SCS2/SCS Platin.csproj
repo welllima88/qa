@@ -68,9 +68,9 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\Agency\AgencyCreate.cs" />
-    <Compile Include="Administration\Agency\AgencyEdit.cs" />
-    <Compile Include="Administration\Agency\AgencyView.cs" />
+    <Compile Include="Administration\Agency\Create.cs" />
+    <Compile Include="Administration\Agency\Edit.cs" />
+    <Compile Include="Administration\Agency\View.cs" />
     <Compile Include="Administration\Article\ArticleView.cs" />
     <Compile Include="Administration\SerialNumberManage.cs" />
     <Compile Include="Administration\SimCard\SIMCardCreate.cs" />

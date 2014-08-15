@@ -1,6 +1,6 @@
 namespace Six.Scs.QA.Selenium.Administration.Agency
 {
-    public class AgencyEdit : AgencyCreate
+    public class Edit : Create
     {
     }
 }

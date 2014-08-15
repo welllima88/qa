@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.Agency
 {
-    public class AgencyCreate : WebObject
+    public class Create : WebObject
     {
         public static ButtonElement SaveButton
         {

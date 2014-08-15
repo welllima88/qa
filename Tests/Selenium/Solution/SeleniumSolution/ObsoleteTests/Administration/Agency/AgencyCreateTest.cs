@@ -17,78 +17,78 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Administration.Agency
 
             TestDirector.Navigate("Agency/Create");
 
-            AgencyCreate.Name = _nameDyn;
-            AgencyCreate.DisplayName = _nameDyn + "D";
-            AgencyCreate.StreetNo = "Agentur-Str. 12a";
-            AgencyCreate.Zip = "10235";
-            AgencyCreate.City = "Hamburg";
-            AgencyCreate.Country = "DE";
-            AgencyCreate.Language = "de";
-            AgencyCreate.Telephone = "+41 58 399 6237";
-            AgencyCreate.Supplier = "Alle Fremdhersteller";
-            AgencyCreate.SbsAgentId = "881144";
+            Create.Name = _nameDyn;
+            Create.DisplayName = _nameDyn + "D";
+            Create.StreetNo = "Agentur-Str. 12a";
+            Create.Zip = "10235";
+            Create.City = "Hamburg";
+            Create.Country = "DE";
+            Create.Language = "de";
+            Create.Telephone = "+41 58 399 6237";
+            Create.Supplier = "Alle Fremdhersteller";
+            Create.SbsAgentId = "881144";
 
-            AgencyCreate.SaveButton.Click();
+            Create.SaveButton.Click();
         }
 
         [TestMethod]
         public void Name()
         {
-            Assert.AreEqual(_nameDyn, AgencyView.Name);
+            Assert.AreEqual(_nameDyn, View.Name);
         }
 
         [TestMethod]
         public void DisplayName()
         {
-            Assert.AreEqual(_nameDyn + "D", AgencyView.DisplayName);
+            Assert.AreEqual(_nameDyn + "D", View.DisplayName);
         }
 
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual("Agentur-Str. 12a", AgencyView.StreetNo);
+            Assert.AreEqual("Agentur-Str. 12a", View.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("10235", AgencyView.Zip);
+            Assert.AreEqual("10235", View.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("Hamburg", AgencyView.City);
+            Assert.AreEqual("Hamburg", View.City);
         }
 
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual("Deutschland", AgencyView.Country);
+            Assert.AreEqual("Deutschland", View.Country);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("Deutsch [de]", AgencyView.Language);
+            Assert.AreEqual("Deutsch [de]", View.Language);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual("+41 58 399 6237", AgencyView.Telephone);
+            Assert.AreEqual("+41 58 399 6237", View.Telephone);
         }
 
         [TestMethod]
         public void Supplier()
         {
-            Assert.AreEqual("Alle Fremdhersteller", AgencyView.Supplier);
+            Assert.AreEqual("Alle Fremdhersteller", View.Supplier);
         }
 
         [TestMethod]
         public void SbsAgentId()
         {
-            Assert.AreEqual("881144", AgencyView.SbsAgentId);
+            Assert.AreEqual("881144", View.SbsAgentId);
         }
     }
 }
