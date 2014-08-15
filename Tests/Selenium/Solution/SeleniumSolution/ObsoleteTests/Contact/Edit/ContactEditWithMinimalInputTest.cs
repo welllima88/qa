@@ -19,123 +19,123 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             _dt = Factory.GenerateTestId();
 
-            ContactPersonView.EditButton.Click();
+            View.EditButton.Click();
 
-            ContactPersonEdit.Salutation = "";
-            ContactPersonEdit.FirstName = "";
-            ContactPersonEdit.Name = "SYR" + _dt;
-            ContactPersonEdit.Language = "fr";
-            ContactPersonEdit.Telephone = "";
-            ContactPersonEdit.Mobile = "";
-            ContactPersonEdit.Fax = "";
-            ContactPersonEdit.Email = "";
-            ContactPersonEdit.Po = "";
-            ContactPersonEdit.StreetNo = "";
-            ContactPersonEdit.Zip = "";
-            ContactPersonEdit.City = "";
-            ContactPersonEdit.Region = "";
-            ContactPersonEdit.Country = "FR";
-            ContactPersonEdit.AdressAddition = "";
-            ContactPersonEdit.Web = "";
+            Person.Edit.Salutation = "";
+            Person.Edit.FirstName = "";
+            Person.Edit.Name = "SYR" + _dt;
+            Person.Edit.Language = "fr";
+            Person.Edit.Telephone = "";
+            Person.Edit.Mobile = "";
+            Person.Edit.Fax = "";
+            Person.Edit.Email = "";
+            Person.Edit.Po = "";
+            Person.Edit.StreetNo = "";
+            Person.Edit.Zip = "";
+            Person.Edit.City = "";
+            Person.Edit.Region = "";
+            Person.Edit.Country = "FR";
+            Person.Edit.AdressAddition = "";
+            Person.Edit.Web = "";
 
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.SaveButton.Click();
         }
 
         [TestMethod]
         public void Salutation()
         {
-            Assert.AreEqual("", ContactPersonView.Salutation);
+            Assert.AreEqual("", View.Salutation);
         }
 
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual("", ContactPersonView.FirstName);
+            Assert.AreEqual("", View.FirstName);
         }
 
         [TestMethod]
         public void Name()
         {
-            Assert.AreEqual("SYR" + _dt, ContactPersonView.Name);
+            Assert.AreEqual("SYR" + _dt, View.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual("Französisch [fr]", ContactPersonView.Language);
+            Assert.AreEqual("Französisch [fr]", View.Language);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual("", ContactPersonView.Telephone);
+            Assert.AreEqual("", View.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual("", ContactPersonView.Mobile);
+            Assert.AreEqual("", View.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual("", ContactPersonView.Fax);
+            Assert.AreEqual("", View.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual("", ContactPersonView.Email);
+            Assert.AreEqual("", View.Email);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual("", ContactPersonView.Po);
+            Assert.AreEqual("", View.Po);
         }
 
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual("", ContactPersonView.StreetNo);
+            Assert.AreEqual("", View.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual("", ContactPersonView.Zip);
+            Assert.AreEqual("", View.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual("", ContactPersonView.City);
+            Assert.AreEqual("", View.City);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.AreEqual("", ContactPersonView.Region);
+            Assert.AreEqual("", View.Region);
         }
 
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual("Frankreich [FR]", ContactPersonView.Country);
+            Assert.AreEqual("Frankreich [FR]", View.Country);
         }
 
         [TestMethod]
         [Ignore]
         public void Web()
         {
-            Assert.AreEqual("", ContactPersonView.Web);
+            Assert.AreEqual("", View.Web);
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual("", ContactPersonView.AddressAddition);
+            Assert.AreEqual("", View.AddressAddition);
         }
 
         [TestMethod]

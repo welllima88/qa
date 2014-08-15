@@ -169,7 +169,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
             CustomerMenu.Contacts.Click();
 
-            ContactList.First().Click();
+            List.First().Click();
 
             Testlogic.Contact.Check(_personOnCustomer);
         }
@@ -182,7 +182,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 
             LocationMenu.Contacts.Click();
 
-            ContactList.First().Click();
+            List.First().Click();
             Testlogic.Contact.Check(_personOnLocation);
         }
 

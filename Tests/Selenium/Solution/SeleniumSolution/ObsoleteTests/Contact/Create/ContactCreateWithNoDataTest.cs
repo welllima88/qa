@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
         }
 
         [TestMethod]

@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Person
 {
-    public class ContactPersonCreate : WebObject
+    public class Create : WebObject
     {
         public static string AdressAddition
         {

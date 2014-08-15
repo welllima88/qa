@@ -23,28 +23,28 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
 
             ContactMenu.ContactEdit.Click();
 
-            ContactPersonEdit.Salutation = "Herr";
-            ContactPersonEdit.FirstName = "Marc";
-            ContactPersonEdit.Name = "Siegmund";
-            ContactPersonEdit.Language = "Italienisch [it]";
-            ContactPersonEdit.Telephone = "0123456789";
-            ContactPersonEdit.Mobile = "1234567890";
-            ContactPersonEdit.Fax = "2345678901";
-            ContactPersonEdit.Email = "tksyr_contact@six-group.com";
-            ContactPersonEdit.Po = "Pof";
-            ContactPersonEdit.StreetNo = "Strasse 1";
-            ContactPersonEdit.Zip = "2351";
-            ContactPersonEdit.City = "City";
-            ContactPersonEdit.Region = "Reg";
-            ContactPersonEdit.Country = "Frankreich [FR]";
-            ContactPersonEdit.AdressAddition = "Addr-Add";
+            Person.Edit.Salutation = "Herr";
+            Person.Edit.FirstName = "Marc";
+            Person.Edit.Name = "Siegmund";
+            Person.Edit.Language = "Italienisch [it]";
+            Person.Edit.Telephone = "0123456789";
+            Person.Edit.Mobile = "1234567890";
+            Person.Edit.Fax = "2345678901";
+            Person.Edit.Email = "tksyr_contact@six-group.com";
+            Person.Edit.Po = "Pof";
+            Person.Edit.StreetNo = "Strasse 1";
+            Person.Edit.Zip = "2351";
+            Person.Edit.City = "City";
+            Person.Edit.Region = "Reg";
+            Person.Edit.Country = "Frankreich [FR]";
+            Person.Edit.AdressAddition = "Addr-Add";
         }
 
         [TestMethod]
         public void EditContactWithoutFirstNameFailed()
         {
-            ContactPersonEdit.FirstName = "";
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.FirstName = "";
+            Person.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
@@ -53,8 +53,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         [TestMethod]
         public void EditContactWithoutNameFailed()
         {
-            ContactPersonEdit.Name = "";
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.Name = "";
+            Person.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
@@ -63,9 +63,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         [TestMethod]
         public void EditContactWithoutStreetAndNumberFailed()
         {
-            ContactPersonEdit.StreetNo = "";
+            Person.Edit.StreetNo = "";
 
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
@@ -74,9 +74,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         [TestMethod]
         public void EditContactWithoutCityFailed()
         {
-            ContactPersonEdit.City = "";
+            Person.Edit.City = "";
 
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
@@ -85,8 +85,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         [TestMethod]
         public void EditContactWithoutZipFailed()
         {
-            ContactPersonEdit.Zip = "";
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.Zip = "";
+            Person.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");

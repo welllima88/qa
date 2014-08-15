@@ -40,8 +40,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         [ClassCleanup]
         public static void DeleteContact()
         {
-            ContactPersonView.DeleteButton.Click();
-            ContactPersonView.DeleteConfirm();
+            View.DeleteButton.Click();
+            View.DeleteConfirm();
         }
     }
 }

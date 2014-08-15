@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Person
 {
-    public class ContactPersonEdit : WebObject
+    public class Edit : WebObject
     {
         public static IWebElementAdapter CancelButton
         {
@@ -22,20 +22,20 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string FirstName
         {
-            set { ContactPersonCreate.FirstName = value; }
-            get { return ContactPersonCreate.FirstName; }
+            set { Create.FirstName = value; }
+            get { return Create.FirstName; }
         }
 
         public static string Name
         {
-            set { ContactPersonCreate.Name = value; }
-            get { return ContactPersonCreate.Name; }
+            set { Create.Name = value; }
+            get { return Create.Name; }
         }
 
         public static string Salutation
         {
-            set { ContactPersonCreate.Salutation = value; }
-            get { return ContactPersonCreate.Salutation; }
+            set { Create.Salutation = value; }
+            get { return Create.Salutation; }
         }
 
         public static string Country
@@ -53,74 +53,74 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string Language
         {
-            set { ContactPersonCreate.Language = value; }
-            get { return ContactPersonCreate.Language; }
+            set { Create.Language = value; }
+            get { return Create.Language; }
         }
 
         public static string Telephone
         {
-            set { ContactPersonCreate.Telephone = value; }
-            get { return ContactPersonCreate.Telephone; }
+            set { Create.Telephone = value; }
+            get { return Create.Telephone; }
         }
 
         public static string Mobile
         {
-            set { ContactPersonCreate.Mobile = value; }
-            get { return ContactPersonCreate.Mobile; }
+            set { Create.Mobile = value; }
+            get { return Create.Mobile; }
         }
 
         public static string Fax
         {
-            set { ContactPersonCreate.Fax = value; }
-            get { return ContactPersonCreate.Fax; }
+            set { Create.Fax = value; }
+            get { return Create.Fax; }
         }
 
         public static string Email
         {
-            set { ContactPersonCreate.Email = value; }
-            get { return ContactPersonCreate.Email; }
+            set { Create.Email = value; }
+            get { return Create.Email; }
         }
 
         public static string Web
         {
-            set { ContactPersonCreate.Web = value; }
-            get { return ContactPersonCreate.Web; }
+            set { Create.Web = value; }
+            get { return Create.Web; }
         }
 
         public static string StreetNo
         {
-            set { ContactPersonCreate.StreetNo = value; }
-            get { return ContactPersonCreate.StreetNo; }
+            set { Create.StreetNo = value; }
+            get { return Create.StreetNo; }
         }
 
         public static string Po
         {
-            set { ContactPersonCreate.Po = value; }
-            get { return ContactPersonCreate.Po; }
+            set { Create.Po = value; }
+            get { return Create.Po; }
         }
 
         public static string Zip
         {
-            set { ContactPersonCreate.Zip = value; }
-            get { return ContactPersonCreate.Zip; }
+            set { Create.Zip = value; }
+            get { return Create.Zip; }
         }
 
         public static string City
         {
-            set { ContactPersonCreate.City = value; }
-            get { return ContactPersonCreate.City; }
+            set { Create.City = value; }
+            get { return Create.City; }
         }
 
         public static string Region
         {
-            set { ContactPersonCreate.Region = value; }
-            get { return ContactPersonCreate.Region; }
+            set { Create.Region = value; }
+            get { return Create.Region; }
         }
 
         public static string AdressAddition
         {
-            set { ContactPersonCreate.AdressAddition = value; }
-            get { return ContactPersonCreate.AdressAddition; }
+            set { Create.AdressAddition = value; }
+            get { return Create.AdressAddition; }
         }
     }
 }

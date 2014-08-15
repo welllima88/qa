@@ -18,24 +18,24 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
             ContactMenu.ContactEdit.Click();
 
-            ContactPersonEdit.Salutation = "Herr";
-            ContactPersonEdit.FirstName = "Marc[]rn$°";
-            ContactPersonEdit.Name = "Siegmund[]rn$°";
-            ContactPersonEdit.Language = "it";
-            ContactPersonEdit.Telephone = "0123456789[]rn$°";
-            ContactPersonEdit.Mobile = "1234567890[]rn$°";
-            ContactPersonEdit.Fax = "2345678901[]rn$°";
-            ContactPersonEdit.Email = "tksyr_contact@six-group.com[]rn$°";
-            ContactPersonEdit.Po = "Pof[]rn$°";
-            ContactPersonEdit.StreetNo = "Strasse 1[]rn$°";
-            ContactPersonEdit.Zip = "[]rn$°";
-            ContactPersonEdit.City = "City[]rn$°";
-            ContactPersonEdit.Region = "Reg[]rn$°";
-            ContactPersonEdit.Country = "IT";
-            ContactPersonEdit.AdressAddition = "Addr[]rn$°";
+            Person.Edit.Salutation = "Herr";
+            Person.Edit.FirstName = "Marc[]rn$°";
+            Person.Edit.Name = "Siegmund[]rn$°";
+            Person.Edit.Language = "it";
+            Person.Edit.Telephone = "0123456789[]rn$°";
+            Person.Edit.Mobile = "1234567890[]rn$°";
+            Person.Edit.Fax = "2345678901[]rn$°";
+            Person.Edit.Email = "tksyr_contact@six-group.com[]rn$°";
+            Person.Edit.Po = "Pof[]rn$°";
+            Person.Edit.StreetNo = "Strasse 1[]rn$°";
+            Person.Edit.Zip = "[]rn$°";
+            Person.Edit.City = "City[]rn$°";
+            Person.Edit.Region = "Reg[]rn$°";
+            Person.Edit.Country = "IT";
+            Person.Edit.AdressAddition = "Addr[]rn$°";
             // ContactPersonEdit.Web = "Web[]rn$°";
 
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.SaveButton.Click();
         }
 
         [TestMethod]

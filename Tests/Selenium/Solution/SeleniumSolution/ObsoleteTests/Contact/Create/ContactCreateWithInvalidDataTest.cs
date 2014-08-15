@@ -16,22 +16,22 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            ContactPersonCreate.Salutation = "Herr^@}$°";
-            ContactPersonCreate.FirstName = "Marc^@}$°";
-            ContactPersonCreate.Name = "SYR AUTO ^@}$°";
-            ContactPersonCreate.Telephone = "+41 58 399 ^@}$° - 1";
-            ContactPersonCreate.Mobile = "+41 58 399 ^@}$° - 2";
-            ContactPersonCreate.Fax = "+41 58 399 ^@}$° - 3";
-            ContactPersonCreate.Email = "con^@}$°tact@six-group.com";
-            ContactPersonCreate.StreetNo = "Kontakt-^@}$° 1";
-            ContactPersonCreate.Po = "P^@}$°";
-            ContactPersonCreate.Zip = "^@}$°";
-            ContactPersonCreate.City = "^City@}$°";
-            ContactPersonCreate.Region = "Re^@}$°";
-            ContactPersonCreate.AdressAddition = "Add^@}$°";
-            ContactPersonCreate.Web = "Add^@}$°";
+            Person.Create.Salutation = "Herr^@}$°";
+            Person.Create.FirstName = "Marc^@}$°";
+            Person.Create.Name = "SYR AUTO ^@}$°";
+            Person.Create.Telephone = "+41 58 399 ^@}$° - 1";
+            Person.Create.Mobile = "+41 58 399 ^@}$° - 2";
+            Person.Create.Fax = "+41 58 399 ^@}$° - 3";
+            Person.Create.Email = "con^@}$°tact@six-group.com";
+            Person.Create.StreetNo = "Kontakt-^@}$° 1";
+            Person.Create.Po = "P^@}$°";
+            Person.Create.Zip = "^@}$°";
+            Person.Create.City = "^City@}$°";
+            Person.Create.Region = "Re^@}$°";
+            Person.Create.AdressAddition = "Add^@}$°";
+            Person.Create.Web = "Add^@}$°";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
         }
 
         [TestMethod]

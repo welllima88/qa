@@ -140,10 +140,10 @@
     <Compile Include="Mpd\MpdEdit.cs" />
     <Compile Include="Mpd\MpdListView.cs" />
     <Compile Include="Mpd\MpdView.cs" />
-    <Compile Include="Person\ContactList.cs" />
-    <Compile Include="Person\ContactPersonCreate.cs" />
-    <Compile Include="Person\ContactPersonEdit.cs" />
-    <Compile Include="Person\ContactPersonView.cs" />
+    <Compile Include="Person\List.cs" />
+    <Compile Include="Person\Create.cs" />
+    <Compile Include="Person\Edit.cs" />
+    <Compile Include="Person\View.cs" />
     <Compile Include="Person\PersonCreateRes.Designer.cs">
       <DependentUpon>PersonCreateRes.resx</DependentUpon>
       <AutoGen>True</AutoGen>

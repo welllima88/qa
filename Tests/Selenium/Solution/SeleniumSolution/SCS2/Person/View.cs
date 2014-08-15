@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Person
 {
-    public class ContactPersonView : WebObject
+    public class View : WebObject
     {
         public static IWebElementAdapter EditButton
         {

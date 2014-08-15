@@ -34,45 +34,45 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
 
-            _salutation = ContactPersonView.Salutation;
-            _firstName = ContactPersonView.FirstName;
-            _name = ContactPersonView.Name;
-            _language = ContactPersonView.Language;
-            _telephone = ContactPersonView.Telephone;
-            _mobile = ContactPersonView.Mobile;
-            _fax = ContactPersonView.Fax;
-            _email = ContactPersonView.Email;
-            _po = ContactPersonView.Po;
-            _streetNo = ContactPersonView.StreetNo;
-            _zip = ContactPersonView.Zip;
-            _city = ContactPersonView.City;
-            _region = ContactPersonView.Region;
-            _country = ContactPersonView.Country;
-            _web = ContactPersonView.Web;
+            _salutation = View.Salutation;
+            _firstName = View.FirstName;
+            _name = View.Name;
+            _language = View.Language;
+            _telephone = View.Telephone;
+            _mobile = View.Mobile;
+            _fax = View.Fax;
+            _email = View.Email;
+            _po = View.Po;
+            _streetNo = View.StreetNo;
+            _zip = View.Zip;
+            _city = View.City;
+            _region = View.Region;
+            _country = View.Country;
+            _web = View.Web;
             // _web = ContactPersonView.Web;
-            _addressAddition = ContactPersonView.AddressAddition;
+            _addressAddition = View.AddressAddition;
 
             MenusTest.ContactMenuCheck();
 
             ContactMenu.ContactEdit.Click();
 
-            ContactPersonEdit.Salutation = "Herr";
-            ContactPersonEdit.FirstName = "Marc";
-            ContactPersonEdit.Name = "Siegmund";
-            ContactPersonEdit.Language = "it";
-            ContactPersonEdit.Telephone = "0123456789";
-            ContactPersonEdit.Mobile = "1234567890";
-            ContactPersonEdit.Fax = "2345678901";
-            ContactPersonEdit.Email = "tksyr_contact@six-group.com";
-            ContactPersonEdit.Po = "Pof";
-            ContactPersonEdit.StreetNo = "Strasse 1";
-            ContactPersonEdit.Zip = "2351";
-            ContactPersonEdit.City = "City";
-            ContactPersonEdit.Region = "Reg";
-            ContactPersonEdit.Country = "IT";
-            ContactPersonEdit.AdressAddition = "Addr-Add";
+            Person.Edit.Salutation = "Herr";
+            Person.Edit.FirstName = "Marc";
+            Person.Edit.Name = "Siegmund";
+            Person.Edit.Language = "it";
+            Person.Edit.Telephone = "0123456789";
+            Person.Edit.Mobile = "1234567890";
+            Person.Edit.Fax = "2345678901";
+            Person.Edit.Email = "tksyr_contact@six-group.com";
+            Person.Edit.Po = "Pof";
+            Person.Edit.StreetNo = "Strasse 1";
+            Person.Edit.Zip = "2351";
+            Person.Edit.City = "City";
+            Person.Edit.Region = "Reg";
+            Person.Edit.Country = "IT";
+            Person.Edit.AdressAddition = "Addr-Add";
 
-            ContactPersonEdit.CancelButton.Click();
+            Person.Edit.CancelButton.Click();
         }
 
         [TestMethod]
@@ -84,97 +84,97 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         [TestMethod]
         public void Salutation()
         {
-            Assert.AreEqual(_salutation, ContactPersonView.Salutation);
+            Assert.AreEqual(_salutation, View.Salutation);
         }
 
         [TestMethod]
         public void FirstName()
         {
-            Assert.AreEqual(_firstName, ContactPersonView.FirstName);
+            Assert.AreEqual(_firstName, View.FirstName);
         }
 
         [TestMethod]
         public void Name()
         {
-            Assert.AreEqual(_name, ContactPersonView.Name);
+            Assert.AreEqual(_name, View.Name);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual(_language, ContactPersonView.Language);
+            Assert.AreEqual(_language, View.Language);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual(_telephone, ContactPersonView.Telephone);
+            Assert.AreEqual(_telephone, View.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual(_mobile, ContactPersonView.Mobile);
+            Assert.AreEqual(_mobile, View.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual(_fax, ContactPersonView.Fax);
+            Assert.AreEqual(_fax, View.Fax);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual(_email, ContactPersonView.Email);
+            Assert.AreEqual(_email, View.Email);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual(_po, ContactPersonView.Po);
+            Assert.AreEqual(_po, View.Po);
         }
 
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual(_streetNo, ContactPersonView.StreetNo);
+            Assert.AreEqual(_streetNo, View.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual(_zip, ContactPersonView.Zip);
+            Assert.AreEqual(_zip, View.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual(_city, ContactPersonView.City);
+            Assert.AreEqual(_city, View.City);
         }
 
         [TestMethod]
         public void Region()
         {
-            Assert.AreEqual(_region, ContactPersonView.Region);
+            Assert.AreEqual(_region, View.Region);
         }
 
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual(_country, ContactPersonView.Country);
+            Assert.AreEqual(_country, View.Country);
         }
 
         [TestMethod]
         public void Web()
         {
-            Assert.AreEqual(_web, ContactPersonView.Web);
+            Assert.AreEqual(_web, View.Web);
         }
 
         [TestMethod]
         public void AddressAddition()
         {
-            Assert.AreEqual(_addressAddition, ContactPersonView.AddressAddition);
+            Assert.AreEqual(_addressAddition, View.AddressAddition);
         }
     }
 }

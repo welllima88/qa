@@ -19,23 +19,23 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
 
             ContactMenu.ContactEdit.Click();
 
-            ContactPersonEdit.Salutation = "";
-            ContactPersonEdit.FirstName = "";
-            ContactPersonEdit.Name = "";
-            ContactPersonEdit.Telephone = "";
-            ContactPersonEdit.Mobile = "";
-            ContactPersonEdit.Fax = "";
-            ContactPersonEdit.Email = "";
+            Person.Edit.Salutation = "";
+            Person.Edit.FirstName = "";
+            Person.Edit.Name = "";
+            Person.Edit.Telephone = "";
+            Person.Edit.Mobile = "";
+            Person.Edit.Fax = "";
+            Person.Edit.Email = "";
 
-            ContactPersonEdit.Po = "";
-            ContactPersonEdit.StreetNo = "";
-            ContactPersonEdit.Zip = "";
-            ContactPersonEdit.City = "";
-            ContactPersonEdit.Region = "";
-            ContactPersonEdit.AdressAddition = "";
-            ContactPersonEdit.Web = "";
+            Person.Edit.Po = "";
+            Person.Edit.StreetNo = "";
+            Person.Edit.Zip = "";
+            Person.Edit.City = "";
+            Person.Edit.Region = "";
+            Person.Edit.AdressAddition = "";
+            Person.Edit.Web = "";
 
-            ContactPersonEdit.SaveButton.Click();
+            Person.Edit.SaveButton.Click();
         }
 
         [TestMethod]

@@ -16,29 +16,29 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 
             CustomerMenu.ContactCreate.Click();
 
-            ContactPersonCreate.Salutation = "Herr";
-            ContactPersonCreate.FirstName = "Marc";
-            ContactPersonCreate.Name = "Siegmund SYR AUTO";
-            ContactPersonCreate.Language = "de";
-            ContactPersonCreate.Telephone = "+41 58 399 6237 - 1";
-            ContactPersonCreate.Mobile = "+41 58 399 6237 - 2";
-            ContactPersonCreate.Fax = "+41 58 399 6237 - 3";
-            ContactPersonCreate.Email = "contact@six-group.com";
-            ContactPersonCreate.StreetNo = "Kontakt-Weg 1";
-            ContactPersonCreate.Po = "POC";
-            ContactPersonCreate.Zip = "55555";
-            ContactPersonCreate.City = "Berlin";
-            ContactPersonCreate.Region = "Mitte";
-            ContactPersonCreate.Country = "DE";
-            ContactPersonCreate.AdressAddition = "Zusatz1";
+            Person.Create.Salutation = "Herr";
+            Person.Create.FirstName = "Marc";
+            Person.Create.Name = "Siegmund SYR AUTO";
+            Person.Create.Language = "de";
+            Person.Create.Telephone = "+41 58 399 6237 - 1";
+            Person.Create.Mobile = "+41 58 399 6237 - 2";
+            Person.Create.Fax = "+41 58 399 6237 - 3";
+            Person.Create.Email = "contact@six-group.com";
+            Person.Create.StreetNo = "Kontakt-Weg 1";
+            Person.Create.Po = "POC";
+            Person.Create.Zip = "55555";
+            Person.Create.City = "Berlin";
+            Person.Create.Region = "Mitte";
+            Person.Create.Country = "DE";
+            Person.Create.AdressAddition = "Zusatz1";
         }
 
         [TestMethod]
         public void WithoutFirstName()
         {
-            ContactPersonCreate.FirstName = "";
+            Person.Create.FirstName = "";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Vorname: Dies ist ein Pflichtfeld!");
@@ -47,9 +47,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         [TestMethod]
         public void WithoutLastName()
         {
-            ContactPersonCreate.Name = "";
+            Person.Create.Name = "";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Name: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
@@ -58,9 +58,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         [TestMethod]
         public void WithoutStreetAndNumber()
         {
-            ContactPersonCreate.StreetNo = "";
+            Person.Create.StreetNo = "";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
@@ -69,9 +69,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         [TestMethod]
         public void WithoutCityFailed()
         {
-            ContactPersonCreate.City = "";
+            Person.Create.City = "";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
@@ -80,9 +80,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
         [TestMethod]
         public void WithoutZipFailed()
         {
-            ContactPersonCreate.Zip = "";
+            Person.Create.Zip = "";
 
-            ContactPersonCreate.SaveButton.Click();
+            Person.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");

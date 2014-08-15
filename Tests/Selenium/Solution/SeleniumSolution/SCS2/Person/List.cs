@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Person
 {
-    public class ContactList : WebObject
+    public class List : WebObject
     {
         public static IWebElementAdapter First()
         {

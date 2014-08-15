@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Contact.Open(person);
 
-            ContactPersonView.CreateUser.Click();
+            View.CreateUser.Click();
             
             Assert.Equals(person.Name, UserCreate.Name);
             Assert.Equals(person.FirstName, UserCreate.FirstName);

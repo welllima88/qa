@@ -56,29 +56,29 @@ namespace Six.Scs.QA.Testlogic
 
         public static void Check(Person c)
         {
-            Assert.AreEqual(c.Salutation, ContactPersonView.Salutation);
-            Assert.AreEqual(c.FirstName, ContactPersonView.FirstName);
-            Assert.AreEqual(c.Name, ContactPersonView.Name);
-            Assert.AreEqual(c.Contact.Language, ContactPersonView.Language);
-            StringAssert.Contains(c.Contact.Telephone, ContactPersonView.Telephone);
-            StringAssert.Contains(c.Contact.Mobile, ContactPersonView.Mobile);
-            StringAssert.Contains(c.Contact.Fax, ContactPersonView.Fax);
-            Assert.AreEqual(c.Contact.Email, ContactPersonView.Email);
-            Assert.AreEqual(c.Adress.Po, ContactPersonView.Po);
-            Assert.AreEqual(c.Adress.StreetNo, ContactPersonView.StreetNo);
-            Assert.AreEqual(c.Adress.Zip, ContactPersonView.Zip);
-            Assert.AreEqual(c.Adress.City, ContactPersonView.City);
-            StringAssert.Contains(c.Adress.Region, ContactPersonView.Region);
-            Assert.AreEqual(c.Adress.Country, ContactPersonView.Country);
-            Assert.AreEqual(c.Contact.Web, ContactPersonView.Web);
-            Assert.AreEqual(c.Adress.AdressAddition, ContactPersonView.AddressAddition);
+            Assert.AreEqual(c.Salutation, View.Salutation);
+            Assert.AreEqual(c.FirstName, View.FirstName);
+            Assert.AreEqual(c.Name, View.Name);
+            Assert.AreEqual(c.Contact.Language, View.Language);
+            StringAssert.Contains(c.Contact.Telephone, View.Telephone);
+            StringAssert.Contains(c.Contact.Mobile, View.Mobile);
+            StringAssert.Contains(c.Contact.Fax, View.Fax);
+            Assert.AreEqual(c.Contact.Email, View.Email);
+            Assert.AreEqual(c.Adress.Po, View.Po);
+            Assert.AreEqual(c.Adress.StreetNo, View.StreetNo);
+            Assert.AreEqual(c.Adress.Zip, View.Zip);
+            Assert.AreEqual(c.Adress.City, View.City);
+            StringAssert.Contains(c.Adress.Region, View.Region);
+            Assert.AreEqual(c.Adress.Country, View.Country);
+            Assert.AreEqual(c.Contact.Web, View.Web);
+            Assert.AreEqual(c.Adress.AdressAddition, View.AddressAddition);
         }
 
         public static void Delete(Person person)
         {
             Open(person);
-            ContactPersonView.DeleteButton.Click();
-            ContactPersonView.DeleteConfirm();
+            View.DeleteButton.Click();
+            View.DeleteConfirm();
 
             Open(person);
             StringAssert.IsMatch("Element .*(not|nicht).*!", SiteContent.Header);

@@ -8,50 +8,50 @@ namespace Six.Scs.QA.Workflow
     {
         public static void Create(Person c)
         {
-            ContactPersonCreate.Salutation = c.Salutation;
-            ContactPersonCreate.FirstName = c.FirstName;
-            ContactPersonCreate.Name = c.Name;
-            ContactPersonCreate.Language = c.Contact.Language;
-            ContactPersonCreate.Telephone = c.Contact.Telephone;
-            ContactPersonCreate.Mobile = c.Contact.Mobile;
-            ContactPersonCreate.Fax = c.Contact.Fax;
-            ContactPersonCreate.Email = c.Contact.Email;
-            ContactPersonCreate.Po = c.Adress.Po;
-            ContactPersonCreate.StreetNo = c.Adress.StreetNo;
-            ContactPersonCreate.Zip = c.Adress.Zip;
-            ContactPersonCreate.City = c.Adress.City;
-            ContactPersonCreate.Region = c.Adress.Region;
-            ContactPersonCreate.Country = c.Adress.Country;
-            ContactPersonCreate.AdressAddition = c.Adress.AdressAddition;
-            ContactPersonCreate.Web = c.Contact.Web;
+            Selenium.Person.Create.Salutation = c.Salutation;
+            Selenium.Person.Create.FirstName = c.FirstName;
+            Selenium.Person.Create.Name = c.Name;
+            Selenium.Person.Create.Language = c.Contact.Language;
+            Selenium.Person.Create.Telephone = c.Contact.Telephone;
+            Selenium.Person.Create.Mobile = c.Contact.Mobile;
+            Selenium.Person.Create.Fax = c.Contact.Fax;
+            Selenium.Person.Create.Email = c.Contact.Email;
+            Selenium.Person.Create.Po = c.Adress.Po;
+            Selenium.Person.Create.StreetNo = c.Adress.StreetNo;
+            Selenium.Person.Create.Zip = c.Adress.Zip;
+            Selenium.Person.Create.City = c.Adress.City;
+            Selenium.Person.Create.Region = c.Adress.Region;
+            Selenium.Person.Create.Country = c.Adress.Country;
+            Selenium.Person.Create.AdressAddition = c.Adress.AdressAddition;
+            Selenium.Person.Create.Web = c.Contact.Web;
 
-            ContactPersonCreate.SaveButton.Click();
+            Selenium.Person.Create.SaveButton.Click();
 
-            c.Id = ContactPersonView.Id;
+            c.Id = View.Id;
         }
 
         public static void Edit(Person c)
         {
             ContactMenu.ContactEdit.Click();
 
-            ContactPersonEdit.Salutation = c.Salutation;
-            ContactPersonEdit.FirstName = c.FirstName;
-            ContactPersonEdit.Name = c.Name;
-            ContactPersonEdit.Language = c.Contact.Language;
-            ContactPersonEdit.Telephone = c.Contact.Telephone;
-            ContactPersonEdit.Mobile = c.Contact.Mobile;
-            ContactPersonEdit.Fax = c.Contact.Fax;
-            ContactPersonEdit.Email = c.Contact.Email;
-            ContactPersonEdit.Po = c.Adress.Po;
-            ContactPersonEdit.StreetNo = c.Adress.StreetNo;
-            ContactPersonEdit.Zip = c.Adress.Zip;
-            ContactPersonEdit.City = c.Adress.City;
-            ContactPersonEdit.Region = c.Adress.Region;
-            ContactPersonEdit.Country = c.Adress.Country;
-            ContactPersonEdit.AdressAddition = c.Adress.AdressAddition;
-            ContactPersonEdit.Web = c.Contact.Web;
+            Selenium.Person.Edit.Salutation = c.Salutation;
+            Selenium.Person.Edit.FirstName = c.FirstName;
+            Selenium.Person.Edit.Name = c.Name;
+            Selenium.Person.Edit.Language = c.Contact.Language;
+            Selenium.Person.Edit.Telephone = c.Contact.Telephone;
+            Selenium.Person.Edit.Mobile = c.Contact.Mobile;
+            Selenium.Person.Edit.Fax = c.Contact.Fax;
+            Selenium.Person.Edit.Email = c.Contact.Email;
+            Selenium.Person.Edit.Po = c.Adress.Po;
+            Selenium.Person.Edit.StreetNo = c.Adress.StreetNo;
+            Selenium.Person.Edit.Zip = c.Adress.Zip;
+            Selenium.Person.Edit.City = c.Adress.City;
+            Selenium.Person.Edit.Region = c.Adress.Region;
+            Selenium.Person.Edit.Country = c.Adress.Country;
+            Selenium.Person.Edit.AdressAddition = c.Adress.AdressAddition;
+            Selenium.Person.Edit.Web = c.Contact.Web;
 
-            ContactPersonEdit.SaveButton.Click();
+            Selenium.Person.Edit.SaveButton.Click();
         }
     }
 }
