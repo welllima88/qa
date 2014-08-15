@@ -4,6 +4,7 @@ using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.ValueObjects;
+using View = Six.Scs.QA.Selenium.User.View;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -33,27 +34,27 @@ namespace Six.Scs.QA.Testlogic
 
         public static void Check(TestData.ValueObjects.User u)
         {
-            Assert.AreEqual(u.UserName, UserView.UserName);
-            StringAssert.IsMatch(TestRegExpPatterns.UserPassword, UserView.Password);
-            Assert.AreEqual(u.Salutation, UserView.Salutation);
-            Assert.AreEqual(u.FirstName, UserView.FirstName);
-            Assert.AreEqual(u.Name, UserView.Name);
-            Assert.AreEqual(u.Language, UserView.Language);
-            Assert.AreEqual(u.Email, UserView.Email);
-            Assert.AreEqual(u.SecurId, UserView.SecurId);
-            Assert.AreEqual(u.Comment, UserView.Comment);
-            Assert.AreEqual(u.WesMandant, UserView.WesMandant);
+            Assert.AreEqual(u.UserName, View.UserName);
+            StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
+            Assert.AreEqual(u.Salutation, View.Salutation);
+            Assert.AreEqual(u.FirstName, View.FirstName);
+            Assert.AreEqual(u.Name, View.Name);
+            Assert.AreEqual(u.Language, View.Language);
+            Assert.AreEqual(u.Email, View.Email);
+            Assert.AreEqual(u.SecurId, View.SecurId);
+            Assert.AreEqual(u.Comment, View.Comment);
+            Assert.AreEqual(u.WesMandant, View.WesMandant);
         }
 
         public static void Create(Person person)
         {
             Contact.Open(person);
 
-            View.CreateUser.Click();
+            Selenium.Person.View.CreateUser.Click();
             
-            Assert.Equals(person.Name, UserCreate.Name);
-            Assert.Equals(person.FirstName, UserCreate.FirstName);
-            Assert.Equals(person.Contact.Language, UserCreate.Language);
+            Assert.Equals(person.Name, Selenium.User.Create.Name);
+            Assert.Equals(person.FirstName, Selenium.User.Create.FirstName);
+            Assert.Equals(person.Contact.Language, Selenium.User.Create.Language);
         }
     }
 }

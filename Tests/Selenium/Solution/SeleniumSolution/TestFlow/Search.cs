@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(userName);
             SearchResult.First(new UserResult()).Click();
 
-            Assert.AreEqual(userName, UserView.UserName);
+            Assert.AreEqual(userName, Selenium.User.View.UserName);
         }
 
         public static void MpdCanBeFoundById(string id)

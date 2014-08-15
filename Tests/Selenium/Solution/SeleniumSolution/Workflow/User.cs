@@ -8,46 +8,46 @@ namespace Six.Scs.QA.Workflow
         public static void Create(TestData.ValueObjects.User u)
         {
             CustomerMenu.Users.Click();
-            UserList.UserCreate.Click();
+            List.UserCreate.Click();
 
-            UserCreate.UserName = u.UserName;
-            UserCreate.Salutation = u.Salutation;
-            UserCreate.FirstName = u.FirstName;
-            UserCreate.Name = u.Name;
-            UserCreate.Language = u.Language;
-            UserCreate.Email = u.Email;
-            UserCreate.SecurId = u.SecurId;
-            UserCreate.Comment = u.Comment;
-            UserCreate.WesMandant = u.WesMandant;
+            Selenium.User.Create.UserName = u.UserName;
+            Selenium.User.Create.Salutation = u.Salutation;
+            Selenium.User.Create.FirstName = u.FirstName;
+            Selenium.User.Create.Name = u.Name;
+            Selenium.User.Create.Language = u.Language;
+            Selenium.User.Create.Email = u.Email;
+            Selenium.User.Create.SecurId = u.SecurId;
+            Selenium.User.Create.Comment = u.Comment;
+            Selenium.User.Create.WesMandant = u.WesMandant;
 
-            UserCreate.SaveButton.Click();
-            u.Password = UserView.Password;
+            Selenium.User.Create.SaveButton.Click();
+            u.Password = View.Password;
             // Refresh for check due to inconsistent user interface ("de" vs "Deutsch [de]")
             UserMenu.User.Click();
         }
 
         public static void Edit(TestData.ValueObjects.User u)
         {
-            UserView.EditButton.Click();
+            View.EditButton.Click();
 
-            UserCreate.UserName = u.UserName;
-            UserCreate.Salutation = u.Salutation;
-            UserCreate.FirstName = u.FirstName;
-            UserCreate.Name = u.Name;
-            UserCreate.Language = u.Language;
-            UserCreate.Email = u.Email;
-            UserCreate.SecurId = u.SecurId;
-            UserCreate.Comment = u.Comment;
-            UserCreate.WesMandant = u.WesMandant;
+            Selenium.User.Create.UserName = u.UserName;
+            Selenium.User.Create.Salutation = u.Salutation;
+            Selenium.User.Create.FirstName = u.FirstName;
+            Selenium.User.Create.Name = u.Name;
+            Selenium.User.Create.Language = u.Language;
+            Selenium.User.Create.Email = u.Email;
+            Selenium.User.Create.SecurId = u.SecurId;
+            Selenium.User.Create.Comment = u.Comment;
+            Selenium.User.Create.WesMandant = u.WesMandant;
 
-            UserCreate.SaveButton.Click();
+            Selenium.User.Create.SaveButton.Click();
         }
 
         public static string ResetPassword()
         {
             UserMenu.ResetPassword.Click();
-            UserView.ResetPasswordConfirm.Click();
-            return UserView.Password;
+            View.ResetPasswordConfirm.Click();
+            return View.Password;
         }
     }
 }

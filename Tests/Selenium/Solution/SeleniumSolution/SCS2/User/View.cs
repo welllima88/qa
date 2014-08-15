@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.User
 {
-    public class UserView : WebObject
+    public class View : WebObject
     {
         public static string UserName
         {

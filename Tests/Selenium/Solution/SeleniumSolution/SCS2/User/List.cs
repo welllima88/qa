@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.User
 {
-    public class UserList : WebObject
+    public class List : WebObject
     {
         public static IWebElementAdapter UserCreate
         {
