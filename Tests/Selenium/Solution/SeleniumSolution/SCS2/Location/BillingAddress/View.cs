@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Location
+namespace Six.Scs.QA.Selenium.Location.BillingAddress
 {
-    public class BillingAddressView : WebObject
+    public class View : WebObject
     {
         public static string CompanyName
         {

@@ -126,9 +126,9 @@
     <Compile Include="Environments\QaK.cs" />
     <Compile Include="Environments\QaL.cs" />
     <Compile Include="Help\HelpNavigation.cs" />
-    <Compile Include="Location\BillingAdressCreate.cs" />
-    <Compile Include="Location\BillingAdressEdit.cs" />
-    <Compile Include="Location\BillingAdressView.cs" />
+    <Compile Include="Location\BillingAddress\Create.cs" />
+    <Compile Include="Location\BillingAddress\Edit.cs" />
+    <Compile Include="Location\BillingAddress\View.cs" />
     <Compile Include="Location\Create.cs" />
     <Compile Include="Location\Edit.cs" />
     <Compile Include="Location\View.cs" />
