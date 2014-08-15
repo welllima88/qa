@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.FinancialConfig
 {
-    public class FinancialConfigEdit : WebObject
+    public class Edit : WebObject
     {
         public static string AdviceQueueSize
         {

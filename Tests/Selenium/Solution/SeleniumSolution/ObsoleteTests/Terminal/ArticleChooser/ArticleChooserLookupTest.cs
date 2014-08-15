@@ -22,88 +22,88 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.ArticleChooser
             const string termType = "xentissimo";
             const string article = "xentissimo MOBILE WLAN, TCP/IP";
 
-            TerminalChooser.Article = article;
+            Selenium.Terminal.ArticleChooser.Article = article;
 
-            Assert.IsTrue(TerminalConfigCreate.TerminalType.Equals(termType));
+            Assert.IsTrue(ConfigCreate.TerminalType.Equals(termType));
             Assert.IsTrue(Lobby.Headline.Text.Contains(article));
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupIsCaseInsensitive()
         {
-            TerminalChooser.ArticleFilter = "DaViNcI2 auTONoM, tCp/IP";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "DaViNcI2 auTONoM, tCp/IP";
             var pattern = new Regex(" davinci2 .*AUTONOM, TCP/IP.*");
 
-            foreach (string articleEntry in TerminalChooser.FilteredArtikelList)
+            foreach (string articleEntry in Selenium.Terminal.ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.Matches(articleEntry, pattern);
             }
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count > 2);
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupByUniqueNumber()
         {
-            TerminalChooser.ArticleFilter = "10773";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "10773";
 
-            CollectionAssert.Contains(TerminalChooser.FilteredArtikelList,
+            CollectionAssert.Contains(Selenium.Terminal.ArticleChooser.FilteredArtikelList,
                 "  davinci2 AUTONOM, TCP/IP (Internet) TCPIPEP2  10773");
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count == 1);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count == 1);
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupByTerminalType()
         {
-            TerminalChooser.ArticleFilter = "davinci1";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "davinci1";
             var pattern = new Regex(" davinci1 .*");
 
-            foreach (string articleEntry in TerminalChooser.FilteredArtikelList)
+            foreach (string articleEntry in Selenium.Terminal.ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.Matches(articleEntry, pattern);
             }
 
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count > 2);
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupByNetType()
         {
-            TerminalChooser.ArticleFilter = "TCP/IP (Internet)";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "TCP/IP (Internet)";
             var pattern = new Regex(@".*TCP/IP \(Internet\).*");
 
-            foreach (string articleEntry in TerminalChooser.FilteredArtikelList)
+            foreach (string articleEntry in Selenium.Terminal.ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.Matches(articleEntry, pattern);
             }
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count > 1);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count > 1);
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupByTerminalSubType()
         {
-            TerminalChooser.ArticleFilter = "AUTONOM";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "AUTONOM";
             var pattern = new Regex(".*AUTONOM.*");
 
-            foreach (string articleEntry in TerminalChooser.FilteredArtikelList)
+            foreach (string articleEntry in Selenium.Terminal.ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.Matches(articleEntry, pattern);
             }
 
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count > 0);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count > 0);
         }
 
         [TestMethod]
         public void CreateTerminalByArticleLookupByPartialUniqueNumber()
         {
-            TerminalChooser.ArticleFilter = "1546";
+            Selenium.Terminal.ArticleChooser.ArticleFilter = "1546";
             var pattern = new Regex(" xenta AUTONOM.*1546.*");
 
-            foreach (string articleEntry in TerminalChooser.FilteredArtikelList)
+            foreach (string articleEntry in Selenium.Terminal.ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.Matches(articleEntry, pattern);
             }
 
-            Assert.IsTrue(TerminalChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.FilteredArtikelList.Count > 2);
         }
     }
 }

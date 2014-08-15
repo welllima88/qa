@@ -19,13 +19,13 @@ namespace Six.Scs.QA.Testlogic
             Location.Open(location);
             LocationMenu.TerminalCreate.Click();
 
-            TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
-            TerminalConfigCreate.ContinueButton.Click();
+            ArticleChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
+            ArticleChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
+            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ConfigCreate.ContinueButton.Click();
 
-            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
-            TerminalConfigDetailsCreate.SaveButton.Click();
+            ConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
+            ConfigDetailsCreate.SaveButton.Click();
 
             TerminalMenu.Terminal.Click();
             terminal.Id = TerminalInfo.TerminalId;
@@ -48,12 +48,12 @@ namespace Six.Scs.QA.Testlogic
             Customer.Open(customer);
             CustomerMenu.TerminalCreate.Click();
 
-            TerminalChooser.ArticleFilter = "1550";
-            TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ArticleChooser.ArticleFilter = "1550";
+            ArticleChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
+            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
 
-            TerminalConfigCreate.ContinueButton.Click();
-            TerminalConfigCreate.SaveButton.Click();
+            ConfigCreate.ContinueButton.Click();
+            ConfigCreate.SaveButton.Click();
 
             Assert.IsTrue(BrandSelect.BrandTree().Displayed);
             TerminalMenu.Terminal.Click();

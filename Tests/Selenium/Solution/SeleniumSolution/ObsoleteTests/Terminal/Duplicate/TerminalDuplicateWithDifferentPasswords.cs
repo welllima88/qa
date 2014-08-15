@@ -18,9 +18,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
             SalesContract.TerminalDuplicate.Click();
-            TerminalDuplicate.NumberOfTerminals = NumberOfDuplications.ToString();
-            TerminalDuplicate.CopyPassword = false;
-            TerminalDuplicate.DulpicateButton.Click();
+            View.NumberOfTerminals = NumberOfDuplications.ToString();
+            View.CopyPassword = false;
+            View.DulpicateButton.Click();
         }
 
         [TestMethod]

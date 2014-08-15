@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.EventLog
 {
-    public class TerminalEventLog : WebObject
+    public class View : WebObject
     {
         /// <summary>
         ///     Mulit selectable list for choosing log event entries by severity

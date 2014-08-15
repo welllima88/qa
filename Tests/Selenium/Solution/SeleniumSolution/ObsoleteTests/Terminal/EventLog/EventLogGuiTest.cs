@@ -17,41 +17,41 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.EventLog
         [TestMethod]
         public void EventTable()
         {
-            Assert.IsTrue(TerminalEventLog.EventTable.Displayed, "at least Table with events displayed");
+            Assert.IsTrue(View.EventTable.Displayed, "at least Table with events displayed");
             // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
 
         [TestMethod]
         public void EventList()
         {
-            Assert.IsNotNull(TerminalEventLog.EventList, "at least Table with events displayed");
+            Assert.IsNotNull(View.EventList, "at least Table with events displayed");
             // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
         }
 
         [TestMethod]
         public void EventTypes()
         {
-            Assert.IsTrue(TerminalEventLog.EventTypes.Options.Any(), "at least List with");
+            Assert.IsTrue(View.EventTypes.Options.Any(), "at least List with");
             // Assert.IsTrue(TerminalEventLog.EventTypes.Options.Contains("1000 - Startup"));
         }
 
         [TestMethod]
         public void SeverityList()
         {
-            Assert.IsTrue(TerminalEventLog.SeverityList.Options.Count() == 4, "number of severities options");
+            Assert.IsTrue(View.SeverityList.Options.Count() == 4, "number of severities options");
         }
 
         [TestMethod]
         public void TimeSpan()
         {
-            Assert.IsTrue(TerminalEventLog.TimeSpan.Options.Count() == 4, "number of time span options");
+            Assert.IsTrue(View.TimeSpan.Options.Count() == 4, "number of time span options");
             // CollectionAssert.Contains(TerminalEventLog.TimeSpan.Options.Contains("24h"));
         }
 
         [TestMethod]
         public void Export()
         {
-            Assert.IsTrue(TerminalEventLog.Export.Displayed, "number of time span options");
+            Assert.IsTrue(View.Export.Displayed, "number of time span options");
             // CollectionAssert.Contains(TerminalEventLog.TimeSpan.Options.Contains("24h"));
         }
     }

@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal
 {
-    public class TerminalChooser : WebObject
+    public class ArticleChooser : WebObject
     {
         public static string ArticleFilter
         {

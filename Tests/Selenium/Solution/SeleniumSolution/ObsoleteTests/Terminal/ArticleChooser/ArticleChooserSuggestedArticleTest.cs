@@ -17,13 +17,13 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.ArticleChooser
         [TestMethod]
         public void SuggestedListHasEntries()
         {
-            Assert.IsTrue(TerminalChooser.SuggestedArtikelList.Count > 2);
+            Assert.IsTrue(Selenium.Terminal.ArticleChooser.SuggestedArtikelList.Count > 2);
         }
 
         [TestMethod]
         public void SuggestedListHasConcreteEntry()
         {
-            CollectionAssert.Contains(TerminalChooser.SuggestedArtikelList,
+            CollectionAssert.Contains(Selenium.Terminal.ArticleChooser.SuggestedArtikelList,
                 "  xentissimo MOBILE WLAN, TCP/IP TCPIPEP2  15401");
         }
     }

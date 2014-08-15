@@ -24,15 +24,15 @@ namespace Six.Scs.QA.Workflow
             SalesContract.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
-            Selenium.Terminal.Duplicate.TerminalDuplicate.NumberOfTerminals = duplicate.NumberOfTerminals;
+            Selenium.Terminal.Duplicate.View.NumberOfTerminals = duplicate.NumberOfTerminals;
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            Selenium.Terminal.Duplicate.TerminalDuplicate.InstallationMessage = duplicate.InstallMessage;
-            Selenium.Terminal.Duplicate.TerminalDuplicate.InformationText = duplicate.InformationText;
-            Selenium.Terminal.Duplicate.TerminalDuplicate.CopyPassword = duplicate.CopyPassword;
-            Selenium.Terminal.Duplicate.TerminalDuplicate.MessageForAcquirers = duplicate.MessageForAcquirers;
+            Selenium.Terminal.Duplicate.View.InstallationMessage = duplicate.InstallMessage;
+            Selenium.Terminal.Duplicate.View.InformationText = duplicate.InformationText;
+            Selenium.Terminal.Duplicate.View.CopyPassword = duplicate.CopyPassword;
+            Selenium.Terminal.Duplicate.View.MessageForAcquirers = duplicate.MessageForAcquirers;
 
-            Selenium.Terminal.Duplicate.TerminalDuplicate.DulpicateButton.Click();
+            Selenium.Terminal.Duplicate.View.DulpicateButton.Click();
         }
 
         public static string Quit()
@@ -41,8 +41,8 @@ namespace Six.Scs.QA.Workflow
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
             string reason = "SYR quit terminal " + Factory.GenerateTestId();
-            TerminalQuit.Reason = reason;
-            TerminalQuit.Save.Click();
+            Selenium.Terminal.Quit.Quit.Reason = reason;
+            Selenium.Terminal.Quit.Quit.Save.Click();
             return reason;
         }
     }

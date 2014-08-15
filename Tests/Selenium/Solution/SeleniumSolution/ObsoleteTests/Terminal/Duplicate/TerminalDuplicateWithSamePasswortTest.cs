@@ -18,10 +18,10 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
             SalesContract.TerminalDuplicate.Click();
-            TerminalDuplicate.NumberOfTerminals = NumberOfTerminals.ToString();
-            TerminalDuplicate.InstallationMessage = "TerminalDuplicateWithSamePasswortTest";
-            TerminalDuplicate.CopyPassword = true;
-            TerminalDuplicate.DulpicateButton.Click();
+            View.NumberOfTerminals = NumberOfTerminals.ToString();
+            View.InstallationMessage = "TerminalDuplicateWithSamePasswortTest";
+            View.CopyPassword = true;
+            View.DulpicateButton.Click();
         }
 
         [TestMethod]

@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal
 {
-    public class TerminalList : WebObject
+    public class ListView : WebObject
     {
         public static IWebElementAdapter First()
         {

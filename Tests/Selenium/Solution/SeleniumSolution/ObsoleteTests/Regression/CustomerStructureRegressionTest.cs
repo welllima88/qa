@@ -11,6 +11,7 @@ using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
+using ListView = Six.Scs.QA.Selenium.Terminal.ListView;
 using View = Six.Scs.QA.Selenium.Location.View;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
@@ -93,13 +94,13 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         {
             LocationMenu.TerminalCreate.Click();
 
-            TerminalChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
-            TerminalConfigCreate.ContinueButton.Click();
+            ArticleChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
+            ArticleChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
+            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ConfigCreate.ContinueButton.Click();
 
-            TerminalConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
-            TerminalConfigDetailsCreate.SaveButton.Click();
+            ConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
+            ConfigDetailsCreate.SaveButton.Click();
 
             TerminalMenu.Terminal.Click();
             _terminalIdLocation = TerminalInfo.TerminalId;
@@ -128,12 +129,12 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         {
             CustomerMenu.Customer.Click();
             CustomerMenu.TerminalCreate.Click();
-            TerminalChooser.ArticleFilter = "1550";
-            TerminalChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
-            TerminalConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ArticleChooser.ArticleFilter = "1550";
+            ArticleChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
+            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
 
-            TerminalConfigCreate.ContinueButton.Click();
-            TerminalConfigCreate.SaveButton.Click();
+            ConfigCreate.ContinueButton.Click();
+            ConfigCreate.SaveButton.Click();
 
             Assert.IsTrue(BrandSelect.BrandTree().Displayed);
             TerminalMenu.Terminal.Click();
@@ -215,7 +216,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Testlogic.Search.CustomerCanBeFoundByCustomerNumber(_customer.CustomerNumber);
 
             CustomerMenu.AllTerminals.Click();
-            TerminalList.First().Click();
+            ListView.First().Click();
             // TerminalList.Result(_terminalIdCustomer).Click();
 
             Assert.AreEqual(_terminalIdCustomer, TerminalInfo.TerminalId);
@@ -340,7 +341,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateInfotextOnLocation()
         {
             LocationMenu.Infotexts.Click();
-            ListView.CreateButton.Click();
+            Common.Infotext.ListView.CreateButton.Click();
 
             InfoText.Create("Location");
         }
@@ -348,7 +349,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void CreateInfotextOnCustomer()
         {
             CustomerMenu.Infotexts.Click();
-            ListView.CreateButton.Click();
+            Common.Infotext.ListView.CreateButton.Click();
 
             InfoText.Create("Customer");
         }

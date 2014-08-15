@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
-using TerminalDuplicate = Six.Scs.QA.Selenium.Terminal.Duplicate.TerminalDuplicate;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
 {
@@ -18,26 +18,26 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         [TestMethod]
         public void DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation()
         {
-            TerminalDuplicate.NumberOfTerminals = "2";
-            TerminalDuplicate.CopyPassword = true;
-            TerminalDuplicate.AcquirerNotification = true;
+            View.NumberOfTerminals = "2";
+            View.CopyPassword = true;
+            View.AcquirerNotification = true;
             // TerminalDuplicate.Location = "";
-            TerminalDuplicate.InstallationMessage =
+            View.InstallationMessage =
                 "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
 
-            TerminalDuplicate.DulpicateButton.Click();
+            View.DulpicateButton.Click();
         }
 
         [TestMethod]
         public void DuplicateTerminalWithNoCopyPasswordWithNoAcquirerNotificationToCustomerLocation()
         {
-            TerminalDuplicate.NumberOfTerminals = "3";
-            TerminalDuplicate.CopyPassword = false;
-            TerminalDuplicate.AcquirerNotification = false;
+            View.NumberOfTerminals = "3";
+            View.CopyPassword = false;
+            View.AcquirerNotification = false;
             // TerminalDuplicate.Location = "";
-            TerminalDuplicate.InstallationMessage =
+            View.InstallationMessage =
                 "DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation";
-            TerminalDuplicate.DulpicateButton.Click();
+            View.DulpicateButton.Click();
         }
     }
 }

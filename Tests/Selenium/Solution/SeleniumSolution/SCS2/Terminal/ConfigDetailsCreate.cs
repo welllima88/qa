@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 namespace Six.Scs.QA.Selenium.Terminal
 { //STEP 2
 
-    public class TerminalConfigDetailsCreate : WebObject
+    public class ConfigDetailsCreate : WebObject
     {
         public static string Article
         {

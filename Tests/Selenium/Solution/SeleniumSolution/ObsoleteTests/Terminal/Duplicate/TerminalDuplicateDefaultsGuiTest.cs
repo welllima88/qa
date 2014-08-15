@@ -18,31 +18,31 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         [TestMethod]
         public void NumberOfTerminals()
         {
-            Assert.AreEqual("1", TerminalDuplicate.NumberOfTerminals);
+            Assert.AreEqual("1", View.NumberOfTerminals);
         }
 
         [TestMethod]
         public void CopyPassword()
         {
-            Assert.AreEqual(false, TerminalDuplicate.CopyPassword);
+            Assert.AreEqual(false, View.CopyPassword);
         }
 
         [TestMethod]
         public void AcquirerNotification()
         {
-            Assert.AreEqual(false, TerminalDuplicate.AcquirerNotification);
+            Assert.AreEqual(false, View.AcquirerNotification);
         }
 
         [TestMethod]
         public void Location()
         {
-            StringAssert.Matches(TerminalDuplicate.Location, new Regex(TestRegExpPatterns.NotEmpty));
+            StringAssert.Matches(View.Location, new Regex(TestRegExpPatterns.NotEmpty));
         }
 
         [TestMethod]
         public void InstallationMessage()
         {
-            Assert.AreEqual("", TerminalDuplicate.InstallationMessage);
+            Assert.AreEqual("", View.InstallationMessage);
         }
     }
 }

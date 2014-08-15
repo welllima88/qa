@@ -59,8 +59,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.FinancialConfig
 
         private static void SetOnlineFinancialAndSave(string queueSize)
         {
-            FinancialConfigEdit.AdviceQueueSize = queueSize;
-            FinancialConfigEdit.SaveButton.Click();
+            Edit.AdviceQueueSize = queueSize;
+            Edit.SaveButton.Click();
         }
     }
 }

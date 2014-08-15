@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Quit
 {
-    public class TerminalQuit : WebObject
+    public class Quit : WebObject
     {
         public static string State
         {
