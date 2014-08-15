@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.SimCard
 {
-    public class SimCardEdit : WebObject
+    public class Edit : WebObject
     {
         public static ButtonElement SaveButton
         {

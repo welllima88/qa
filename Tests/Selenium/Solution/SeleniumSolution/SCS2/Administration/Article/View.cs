@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.Article
 {
-    public class ArticleView : WebObject
+    public class View : WebObject
     {
         public static ButtonElement SaveButton
         {

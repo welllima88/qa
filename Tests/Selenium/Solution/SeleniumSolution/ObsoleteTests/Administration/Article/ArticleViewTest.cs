@@ -16,91 +16,91 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Administration.Article
         [TestMethod]
         public void ArticlelName()
         {
-            Assert.AreEqual("yomani XR S C O PINPAD, TCP/IP (IP)", ArticleView.Name);
+            Assert.AreEqual("yomani XR S C O PINPAD, TCP/IP (IP)", View.Name);
         }
 
         [TestMethod]
         public void SbsArticleNumber()
         {
-            Assert.AreEqual("", ArticleView.SbsArticleNumber);
+            Assert.AreEqual("", View.SbsArticleNumber);
         }
 
         [TestMethod]
         public void Status()
         {
-            Assert.IsTrue(ArticleView.Status);
+            Assert.IsTrue(View.Status);
         }
 
         [TestMethod]
         public void SupplierList()
         {
-            CollectionAssert.AllItemsAreNotNull(ArticleView.Supplier);
+            CollectionAssert.AllItemsAreNotNull(View.Supplier);
         }
 
         [TestMethod]
         public void SupplierListHasAtLeastOneElement()
         {
-            Assert.IsTrue(ArticleView.Supplier.Count > 0, "0 - :) or less elements");
+            Assert.IsTrue(View.Supplier.Count > 0, "0 - :) or less elements");
         }
 
         [TestMethod]
         public void SupplierListHasSixSupplierElement()
         {
-            CollectionAssert.Contains(ArticleView.Supplier, "SIX Payment Services AG");
+            CollectionAssert.Contains(View.Supplier, "SIX Payment Services AG");
         }
 
         [TestMethod]
         public void Color()
         {
-            Assert.AreEqual("white", ArticleView.Color);
+            Assert.AreEqual("white", View.Color);
         }
 
         [TestMethod]
         public void NetTypeEditWithoutSave()
         {
-            Assert.AreEqual("TCPIPEP2IP", ArticleView.NetType);
+            Assert.AreEqual("TCPIPEP2IP", View.NetType);
         }
 
         [TestMethod]
         public void SoftwareId()
         {
-            Assert.AreEqual("1095", ArticleView.SoftwareId);
+            Assert.AreEqual("1095", View.SoftwareId);
         }
 
         [TestMethod]
         public void TrxSubmLim()
         {
-            Assert.AreEqual("1", ArticleView.TrxSubmLim);
+            Assert.AreEqual("1", View.TrxSubmLim);
         }
 
         [TestMethod]
         public void TrxTransLim()
         {
-            Assert.AreEqual("1", ArticleView.TrxTransLim);
+            Assert.AreEqual("1", View.TrxTransLim);
         }
 
         [TestMethod]
         public void ContactlessIndicator()
         {
-            Assert.AreEqual("1", ArticleView.ContactlessIndicator);
+            Assert.AreEqual("1", View.ContactlessIndicator);
         }
 
         [TestMethod]
         public void CardReaderType()
         {
-            Assert.AreEqual("3", ArticleView.CardReaderType);
+            Assert.AreEqual("3", View.CardReaderType);
         }
 
         [TestMethod]
         public void PosInterface()
         {
-            Assert.AreEqual("VEZ", ArticleView.PosInterface);
+            Assert.AreEqual("VEZ", View.PosInterface);
         }
 
         [TestMethod]
         public void RecallInterval()
         {
-            Assert.AreEqual("86400", ArticleView.RecallInterval);
+            Assert.AreEqual("86400", View.RecallInterval);
         }
     }
 }

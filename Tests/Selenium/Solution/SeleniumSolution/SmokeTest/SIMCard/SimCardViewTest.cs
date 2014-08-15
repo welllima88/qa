@@ -17,25 +17,25 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void MobileNumber()
         {
-            StringAssert.IsMatch(@"\d{10}", SimCardView.MobileNumber);
+            StringAssert.IsMatch(@"\d{10}", View.MobileNumber);
         }
 
         [Test]
         public void Pin()
         {
-            StringAssert.IsMatch(@"\d{4}", SimCardView.Pin);
+            StringAssert.IsMatch(@"\d{4}", View.Pin);
         }
 
         [Test]
         public void Puk()
         {
-            StringAssert.IsMatch(@"\d{8}", SimCardView.Puk);
+            StringAssert.IsMatch(@"\d{8}", View.Puk);
         }
 
         [Test]
         public void Region()
         {
-            Assert.IsNotNull(SimCardView.Region);
+            Assert.IsNotNull(View.Region);
         }
 
         [Test]
@@ -47,25 +47,25 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void SimCardNumber()
         {
-            StringAssert.IsMatch(@"\d{18}", SimCardView.SimCardNumber);
+            StringAssert.IsMatch(@"\d{18}", View.SimCardNumber);
         }
 
         [Test]
         public void Status()
         {
-            Assert.IsNotNull(SimCardView.Status);
+            Assert.IsNotNull(View.Status);
         }
 
         [Test]
         public void TerminalId()
         {
-            StringAssert.IsMatch(@"\d+", SimCardView.TerminalId);
+            StringAssert.IsMatch(@"\d+", View.TerminalId);
         }
 
         [Test]
         public void Usage()
         {
-            Assert.IsNotNull(SimCardView.Usage);
+            Assert.IsNotNull(View.Usage);
         }
     }
 }

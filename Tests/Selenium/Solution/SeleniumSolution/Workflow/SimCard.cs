@@ -6,34 +6,34 @@ namespace Six.Scs.QA.Workflow
     {
         public static void Create(TestData.ValueObjects.SimCard simCard)
         {
-            SimCardView.CreateButton.Click();
+            View.CreateButton.Click();
 
-            SimCardCreate.NetProvider = simCard.NetProvider;
-            SimCardCreate.SimCardNumber = simCard.SimCardNumber;
-            SimCardCreate.MobileNumber = simCard.MobileNumber;
-            SimCardCreate.Pin = simCard.Pin;
-            SimCardCreate.Puk = simCard.Puk;
-            SimCardCreate.Region = simCard.Region;
+            Selenium.Administration.SimCard.Create.NetProvider = simCard.NetProvider;
+            Selenium.Administration.SimCard.Create.SimCardNumber = simCard.SimCardNumber;
+            Selenium.Administration.SimCard.Create.MobileNumber = simCard.MobileNumber;
+            Selenium.Administration.SimCard.Create.Pin = simCard.Pin;
+            Selenium.Administration.SimCard.Create.Puk = simCard.Puk;
+            Selenium.Administration.SimCard.Create.Region = simCard.Region;
 
-            SimCardCreate.SaveButton.Click();
+            Selenium.Administration.SimCard.Create.SaveButton.Click();
         }
 
         public static void Edit(TestData.ValueObjects.SimCard simCard)
         {
-            SimCardView.EditButton.Click();
+            View.EditButton.Click();
 
-            SimCardEdit.NetProvider = simCard.NetProvider;
-            SimCardEdit.SimCardNumber = simCard.SimCardNumber;
-            SimCardEdit.MobileNumber = simCard.MobileNumber;
-            SimCardEdit.Pin = simCard.Pin;
-            SimCardEdit.Puk = simCard.Puk;
-            SimCardEdit.Region = simCard.Region;
-            SimCardEdit.Status = simCard.Status;
-            SimCardEdit.TerminalId = simCard.TerminalId;
-            SimCardEdit.Region = simCard.Region;
-            SimCardEdit.Usage = simCard.Usage;
+            Selenium.Administration.SimCard.Edit.NetProvider = simCard.NetProvider;
+            Selenium.Administration.SimCard.Edit.SimCardNumber = simCard.SimCardNumber;
+            Selenium.Administration.SimCard.Edit.MobileNumber = simCard.MobileNumber;
+            Selenium.Administration.SimCard.Edit.Pin = simCard.Pin;
+            Selenium.Administration.SimCard.Edit.Puk = simCard.Puk;
+            Selenium.Administration.SimCard.Edit.Region = simCard.Region;
+            Selenium.Administration.SimCard.Edit.Status = simCard.Status;
+            Selenium.Administration.SimCard.Edit.TerminalId = simCard.TerminalId;
+            Selenium.Administration.SimCard.Edit.Region = simCard.Region;
+            Selenium.Administration.SimCard.Edit.Usage = simCard.Usage;
 
-            SimCardEdit.SaveButton.Click();
+            Selenium.Administration.SimCard.Edit.SaveButton.Click();
         }
     }
 }

@@ -17,168 +17,168 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
         [Category("SoftwareExchange")]
         public void BatchCreateButton()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.BatchCreateButton.Displayed);
+            Assert.IsTrue(Create.BatchCreateButton.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void BatchTitle()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.BatchTitle.Displayed);
+            Assert.IsTrue(Create.BatchTitle.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void CustomerIds()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.CustomerIds.Displayed);
+            Assert.IsTrue(Create.CustomerIds.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void IncludeCanceled()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.IncludeCanceled.Displayed);
+            Assert.IsTrue(Create.IncludeCanceled.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void IncludeDeactivated()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.IncludeDeactivated.Displayed);
+            Assert.IsTrue(Create.IncludeDeactivated.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void IncludeKeyAccounts()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.IncludeKeyAccounts.Displayed);
+            Assert.IsTrue(Create.IncludeKeyAccounts.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void RecallNextFrom()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.RecallNextFrom.Displayed);
+            Assert.IsTrue(Create.RecallNextFrom.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void RecallNextUntil()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.RecallNextUntil.Displayed);
+            Assert.IsTrue(Create.RecallNextUntil.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void RefreshButton()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.RefreshButton.Displayed);
+            Assert.IsTrue(Create.RefreshButton.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void ResultLimit()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.ResultLimit.Displayed);
+            Assert.IsTrue(Create.ResultLimit.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectAllSwitch()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectAllSwitch.Displayed);
+            Assert.IsTrue(Create.SelectAllSwitch.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectOddEvenSwitch()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectOddEvenSwitch.Displayed);
+            Assert.IsTrue(Create.SelectOddEvenSwitch.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedCountry()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedCountry.Displayed);
+            Assert.IsTrue(Create.SelectedCountry.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedCurrentRelease()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedCurrentRelease.Displayed);
+            Assert.IsTrue(Create.SelectedCurrentRelease.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedNetType()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedNetType.Displayed);
+            Assert.IsTrue(Create.SelectedNetType.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedNewRelease()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedNewRelease.Displayed);
+            Assert.IsTrue(Create.SelectedNewRelease.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedNewTargetRelease()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedNewTargetRelease.Displayed);
+            Assert.IsTrue(Create.SelectedNewTargetRelease.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedSupplierMandant()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedSupplierMandant.Displayed);
+            Assert.IsTrue(Create.SelectedSupplierMandant.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void SelectedTerminalType()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.SelectedTerminalType.Displayed);
+            Assert.IsTrue(Create.SelectedTerminalType.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void StartDateTime()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.StartDateTime.Displayed);
+            Assert.IsTrue(Create.StartDateTime.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void TerminalIdSelection()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.TerminalIdSelection.Displayed);
+            Assert.IsTrue(Create.TerminalIdSelection.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void TidRangeEnd()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.TidRangeEnd.Displayed);
+            Assert.IsTrue(Create.TidRangeEnd.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void TidRangeStart()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.TidRangeStart.Displayed);
+            Assert.IsTrue(Create.TidRangeStart.Displayed);
         }
 
         [Test]
         [Category("SoftwareExchange")]
         public void Zips()
         {
-            Assert.IsTrue(SoftwareExchangeCreate.Zips.Displayed);
+            Assert.IsTrue(Create.Zips.Displayed);
         }
     }
 }

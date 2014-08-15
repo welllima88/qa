@@ -65,7 +65,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(simCardNumber);
             SearchResult.First(new Selenium.Search.SimCard()).Click();
 
-            Assert.AreEqual(simCardNumber, SimCardView.SimCardNumber);
+            Assert.AreEqual(simCardNumber, Selenium.Administration.SimCard.View.SimCardNumber);
         }
     }
 }

@@ -33,13 +33,13 @@ namespace Six.Scs.QA.Testlogic
 
         public static void Check(TestData.ValueObjects.SimCard simCard)
         {
-            Assert.AreEqual(simCard.NetProvider, SimCardView.NetProvider);
-            Assert.AreEqual(simCard.SimCardNumber, SimCardView.SimCardNumber);
-            Assert.AreEqual(simCard.MobileNumber, SimCardView.MobileNumber);
-            Assert.AreEqual(simCard.Pin, SimCardView.Pin);
-            Assert.AreEqual(simCard.Puk, SimCardView.Puk);
-            Assert.AreEqual(simCard.Status, SimCardView.Status);
-            Assert.AreEqual(simCard.TerminalId, SimCardView.TerminalId);
+            Assert.AreEqual(simCard.NetProvider, View.NetProvider);
+            Assert.AreEqual(simCard.SimCardNumber, View.SimCardNumber);
+            Assert.AreEqual(simCard.MobileNumber, View.MobileNumber);
+            Assert.AreEqual(simCard.Pin, View.Pin);
+            Assert.AreEqual(simCard.Puk, View.Puk);
+            Assert.AreEqual(simCard.Status, View.Status);
+            Assert.AreEqual(simCard.TerminalId, View.TerminalId);
         }
     }
 }

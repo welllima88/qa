@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.SimCard
 {
-    public class SimCardView : WebObject
+    public class View : WebObject
     {
         public static ButtonElement LockButton
         {

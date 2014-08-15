@@ -26,13 +26,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void EditSimcardForAlreadyUsedTerminalIdFails()
         {
-            SimCardView.EditButton.Click();
+            View.EditButton.Click();
 
-            SimCardEdit.NetProvider = "Swisscom";
-            SimCardEdit.Status = true;
-            SimCardEdit.TerminalId = "3001001";
+            Edit.NetProvider = "Swisscom";
+            Edit.Status = true;
+            Edit.TerminalId = "3001001";
 
-            SimCardEdit.SaveButton.Click();
+            Edit.SaveButton.Click();
 
             CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
@@ -41,11 +41,11 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void EditSimcardForInvalidTerminalIdFails()
         {
-            SimCardView.EditButton.Click();
+            View.EditButton.Click();
 
-            SimCardEdit.TerminalId = "-1";
+            Edit.TerminalId = "-1";
 
-            SimCardEdit.SaveButton.Click();
+            Edit.SaveButton.Click();
 
             CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
@@ -54,15 +54,15 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void EditSimcardForUnknownTerminalIdFails()
         {
-            SimCardView.EditButton.Click();
+            View.EditButton.Click();
 
-            SimCardEdit.NetProvider = "Orange";
-            SimCardEdit.Status = true;
-            SimCardEdit.TerminalId = "3001001";
-            SimCardEdit.Region = "Schweiz";
-            SimCardEdit.Usage = "Kurzmiete";
+            Edit.NetProvider = "Orange";
+            Edit.Status = true;
+            Edit.TerminalId = "3001001";
+            Edit.Region = "Schweiz";
+            Edit.Usage = "Kurzmiete";
 
-            SimCardEdit.SaveButton.Click();
+            Edit.SaveButton.Click();
 
             CollectionAssert.Contains(FormAlert.FormAlertList, "unknown TerminalId.");
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);

@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.SimCard
 {
-    public class SimCardHistory : WebObject
+    public class History : WebObject
     {
         private static ReadOnlyCollection<IWebElementAdapter> HistoryElements
         {

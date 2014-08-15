@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.SoftwareExchange
 {
-    public class SoftwareExchangeCreate : WebObject
+    public class Create : WebObject
     {
         public static IWebElementAdapter SelectedTerminalType
         {
