@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Search
+namespace Six.Scs.QA.Selenium.Search.Result
 {
     public class CustomerResult : SearchDivLocator
     {

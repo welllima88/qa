@@ -155,14 +155,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Environments\Dev.cs" />
-    <Compile Include="Search\CustomerResult.cs" />
-    <Compile Include="Search\LocationResult.cs" />
-    <Compile Include="Search\MpdResult.cs" />
-    <Compile Include="Search\SearchDivLocator.cs" />
-    <Compile Include="Search\SearchResult.cs" />
-    <Compile Include="Search\SimCard.cs" />
-    <Compile Include="Search\TerminalResult.cs" />
-    <Compile Include="Search\UserResult.cs" />
+    <Compile Include="Search\Result\CustomerResult.cs" />
+    <Compile Include="Search\Result\LocationResult.cs" />
+    <Compile Include="Search\Result\MpdResult.cs" />
+    <Compile Include="Search\Result\SearchDivLocator.cs" />
+    <Compile Include="Search\Result\SearchResult.cs" />
+    <Compile Include="Search\Result\SimCard.cs" />
+    <Compile Include="Search\Result\TerminalResult.cs" />
+    <Compile Include="Search\Result\UserResult.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\Brand\BrandContract.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\Brand\BrandPortlet.cs" />

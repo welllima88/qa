@@ -4,6 +4,7 @@ using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Mpd;
 using Six.Scs.QA.Selenium.Search;
+using Six.Scs.QA.Selenium.Search.Result;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.User;
 using View = Six.Scs.QA.Selenium.Location.View;
@@ -63,7 +64,7 @@ namespace Six.Scs.QA.Testlogic
         public static void SimcardBySimCardNumber(string simCardNumber)
         {
             Workflow.Search.Find(simCardNumber);
-            SearchResult.First(new Selenium.Search.SimCard()).Click();
+            SearchResult.First(new Selenium.Search.Result.SimCard()).Click();
 
             Assert.AreEqual(simCardNumber, Selenium.Administration.SimCard.View.SimCardNumber);
         }

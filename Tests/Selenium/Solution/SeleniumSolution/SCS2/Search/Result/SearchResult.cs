@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Search
+namespace Six.Scs.QA.Selenium.Search.Result
 {
     public class SearchResult : WebObject
     {

@@ -2,6 +2,7 @@
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Search;
+using Six.Scs.QA.Selenium.Search.Result;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
 {
