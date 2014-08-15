@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
     [TestClass]
-    public class CustomerEditKeepsDataTest
+    public class KeepsData
     {
         private static string _customerName;
         private static string _supplier;

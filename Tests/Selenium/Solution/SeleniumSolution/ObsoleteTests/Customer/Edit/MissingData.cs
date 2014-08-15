@@ -6,7 +6,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
     [TestClass]
-    public class EditCustomerWithMissingData
+    public class MissingData
     {
         [TestInitialize]
         public void TestInit()

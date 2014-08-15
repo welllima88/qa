@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
     [TestClass]
     [Ignore]
-    public class CustomerEditAndCancel
+    public class EditAndCancel
     {
         private static string _custId;
         private static string _customerName;

@@ -10,7 +10,7 @@ using Six.Scs.QA.Selenium.ObsoleteTests.Menu;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
     [TestClass]
-    public class CustomerEditTest
+    public class Edit
     {
         [ClassInitialize]
         public static void ClassInit(TestContext testContext)

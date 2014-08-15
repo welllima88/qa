@@ -8,7 +8,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
     [TestClass]
-    public class CustomerEditWithMinamalDataTest
+    public class MinamalData
     {
         private static string _customerNumber;
         private static string _sbsDebitNumber;
