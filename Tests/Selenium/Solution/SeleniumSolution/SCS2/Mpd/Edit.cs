@@ -3,21 +3,21 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Mpd
 {
-    public class MpdEdit : WebObject
+    public class Edit : WebObject
     {
         public static string Description
         {
-            set { MpdCreate.Description = value; }
+            set { Create.Description = value; }
         }
 
         public static string Adress
         {
-            set { MpdCreate.Adress = value; }
+            set { Create.Adress = value; }
         }
 
         public static string Port
         {
-            set { MpdCreate.Port = value; }
+            set { Create.Port = value; }
         }
 
         public static ButtonElement SaveButton

@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(id);
             SearchResult.First(new MpdResult()).Click();
 
-            Assert.AreEqual(id, MpdView.Id);
+            Assert.AreEqual(id, Selenium.Mpd.View.Id);
         }
 
         public static void SimcardBySimCardNumber(string simCardNumber)

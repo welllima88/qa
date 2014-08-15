@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Mpd
 {
-    public class MpdListView : WebObject
+    public class ListView : WebObject
     {
         public static ButtonElement CreateButton
         {

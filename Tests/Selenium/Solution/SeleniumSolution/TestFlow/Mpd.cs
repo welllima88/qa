@@ -39,10 +39,10 @@ namespace Six.Scs.QA.Testlogic
 
         public static void Check(TestData.ValueObjects.Mpd m)
         {
-            Assert.AreEqual(m.Id, MpdView.Id);
-            Assert.AreEqual(m.Description, MpdView.Description);
-            Assert.AreEqual(m.Adress, MpdView.Adress);
-            Assert.AreEqual(m.Port, MpdView.Port);
+            Assert.AreEqual(m.Id, View.Id);
+            Assert.AreEqual(m.Description, View.Description);
+            Assert.AreEqual(m.Adress, View.Adress);
+            Assert.AreEqual(m.Port, View.Port);
         }
     }
 }

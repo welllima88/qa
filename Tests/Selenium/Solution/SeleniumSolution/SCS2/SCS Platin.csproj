@@ -136,10 +136,10 @@
     <Compile Include="Massmuation\MassmuationFileUpload.cs" />
     <Compile Include="Massmuation\MassmutationProgress.cs" />
     <Compile Include="Massmuation\TerminalMassValidation.cs" />
-    <Compile Include="Mpd\MpdCreate.cs" />
-    <Compile Include="Mpd\MpdEdit.cs" />
-    <Compile Include="Mpd\MpdListView.cs" />
-    <Compile Include="Mpd\MpdView.cs" />
+    <Compile Include="Mpd\Create.cs" />
+    <Compile Include="Mpd\Edit.cs" />
+    <Compile Include="Mpd\ListView.cs" />
+    <Compile Include="Mpd\View.cs" />
     <Compile Include="Person\List.cs" />
     <Compile Include="Person\Create.cs" />
     <Compile Include="Person\Edit.cs" />

@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Mpd
 {
-    public class MpdView : WebObject
+    public class View : WebObject
     {
         public static string Id
         {

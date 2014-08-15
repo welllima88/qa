@@ -8,26 +8,26 @@ namespace Six.Scs.QA.Workflow
         public static void Create(TestData.ValueObjects.Mpd m)
         {
             CustomerMenu.AllMpds.Click();
-            MpdListView.CreateButton.Click();
+            ListView.CreateButton.Click();
 
-            MpdCreate.Description = m.Description;
-            MpdCreate.Adress = m.Adress;
-            MpdCreate.Port = m.Port;
+            Selenium.Mpd.Create.Description = m.Description;
+            Selenium.Mpd.Create.Adress = m.Adress;
+            Selenium.Mpd.Create.Port = m.Port;
 
-            MpdCreate.SaveButton.Click();
+            Selenium.Mpd.Create.SaveButton.Click();
 
-            m.Id = MpdView.Id;
+            m.Id = View.Id;
         }
 
         public static void Edit(TestData.ValueObjects.Mpd m)
         {
-            MpdView.EditButton.Click();
+            View.EditButton.Click();
 
-            MpdCreate.Description = m.Description;
-            MpdCreate.Adress = m.Adress;
-            MpdCreate.Port = m.Port;
+            Selenium.Mpd.Create.Description = m.Description;
+            Selenium.Mpd.Create.Adress = m.Adress;
+            Selenium.Mpd.Create.Port = m.Port;
 
-            MpdCreate.SaveButton.Click();
+            Selenium.Mpd.Create.SaveButton.Click();
         }
     }
 }

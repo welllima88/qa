@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Mpd
 {
-    public class MpdCreate : WebObject
+    public class Create : WebObject
     {
         public static string Description
         {
