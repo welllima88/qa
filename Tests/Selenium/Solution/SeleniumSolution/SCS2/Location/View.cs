@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Location
 {
-    public class LocationView : WebObject
+    public class View : WebObject
     {
         public static ButtonElement EditButton
         {

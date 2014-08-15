@@ -15,24 +15,24 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
             LocationMenu.LocationEdit.Click();
 
-            LocationEdit.CompanyName = "SYR Sele Firma A$°";
-            LocationEdit.StreetNo = "Hardturmstr. 201$°";
-            LocationEdit.Zip = "802$°";
-            LocationEdit.City = "Zürich$°";
-            LocationEdit.Po = "PFO1$°";
-            LocationEdit.AdressAddition = "Etage 3$°";
-            LocationEdit.Region = "Reg 3[]$°";
-            LocationEdit.SapNumber = "444$°";
+            Selenium.Location.Edit.CompanyName = "SYR Sele Firma A$°";
+            Selenium.Location.Edit.StreetNo = "Hardturmstr. 201$°";
+            Selenium.Location.Edit.Zip = "802$°";
+            Selenium.Location.Edit.City = "Zürich$°";
+            Selenium.Location.Edit.Po = "PFO1$°";
+            Selenium.Location.Edit.AdressAddition = "Etage 3$°";
+            Selenium.Location.Edit.Region = "Reg 3[]$°";
+            Selenium.Location.Edit.SapNumber = "444$°";
 
-            LocationEdit.Language = "Deutsch [de]";
-            LocationEdit.Country = "Schweiz [CH]";
-            LocationEdit.Email = "marc.siegmund@six-grou$°p.com()";
-            LocationEdit.Telephone = "0031 58 399 6237$";
-            LocationEdit.Mobile = "0032 58 399 6237$";
-            LocationEdit.Fax = "0033 58 399 6237$";
-            LocationEdit.Web = "www.six-^°@}$.com/de-inte[]rn$°";
+            Selenium.Location.Edit.Language = "Deutsch [de]";
+            Selenium.Location.Edit.Country = "Schweiz [CH]";
+            Selenium.Location.Edit.Email = "marc.siegmund@six-grou$°p.com()";
+            Selenium.Location.Edit.Telephone = "0031 58 399 6237$";
+            Selenium.Location.Edit.Mobile = "0032 58 399 6237$";
+            Selenium.Location.Edit.Fax = "0033 58 399 6237$";
+            Selenium.Location.Edit.Web = "www.six-^°@}$.com/de-inte[]rn$°";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
         }
 
         [TestMethod]

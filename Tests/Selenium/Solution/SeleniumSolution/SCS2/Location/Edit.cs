@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Location
 {
-    public class LocationEdit : WebObject
+    public class Edit : WebObject
     {
         public static IWebElementAdapter SaveButton
         {
@@ -18,95 +18,95 @@ namespace Six.Scs.QA.Selenium.Location
 
         public static string SapNumber
         {
-            set { LocationCreate.SapNumber = value; }
+            set { Create.SapNumber = value; }
         }
 
         public static string CompanyName
         {
-            set { LocationCreate.CompanyName = value; }
+            set { Create.CompanyName = value; }
         }
 
         public static String SbsDebitNumber
         {
-            get { return LocationView.SbsDebitNumber; }
+            get { return View.SbsDebitNumber; }
         }
 
         public static String SbsAdressNumber
         {
-            get { return LocationView.SbsAdressNumber; }
+            get { return View.SbsAdressNumber; }
         }
 
         public static String Ep2MerchantId
         {
-            get { return LocationView.Ep2MerchantId; }
+            get { return View.Ep2MerchantId; }
         }
 
         public static string StreetNo
         {
-            set { LocationCreate.StreetNo = value; }
+            set { Create.StreetNo = value; }
         }
 
         public static string Language
         {
-            set { LocationCreate.Language = value; }
-            get { return LocationCreate.Language; }
+            set { Create.Language = value; }
+            get { return Create.Language; }
         }
 
         public static string Country
         {
-            set { LocationCreate.Country = value; }
-            get { return LocationCreate.Country; }
+            set { Create.Country = value; }
+            get { return Create.Country; }
         }
 
         public static string Zip
         {
-            set { LocationCreate.Zip = value; }
-            get { return LocationCreate.Zip; }
+            set { Create.Zip = value; }
+            get { return Create.Zip; }
         }
 
         public static string City
         {
-            set { LocationCreate.City = value; }
+            set { Create.City = value; }
         }
 
         public static string AdressAddition
         {
-            set { LocationCreate.AdressAddition = value; }
+            set { Create.AdressAddition = value; }
         }
 
         public static string Po
         {
-            set { LocationCreate.Po = value; }
+            set { Create.Po = value; }
         }
 
         public static string Region
         {
-            set { LocationCreate.Region = value; }
+            set { Create.Region = value; }
         }
 
         public static string Telephone
         {
-            set { LocationCreate.Telephone = value; }
+            set { Create.Telephone = value; }
         }
 
         public static string Mobile
         {
-            set { LocationCreate.Mobile = value; }
+            set { Create.Mobile = value; }
         }
 
         public static string Fax
         {
-            set { LocationCreate.Fax = value; }
+            set { Create.Fax = value; }
         }
 
         public static string Email
         {
-            set { LocationCreate.Email = value; }
+            set { Create.Email = value; }
         }
 
         public static string Web
         {
-            set { LocationCreate.Web = value; }
+            set { Create.Web = value; }
         }
 
         public static string Guid

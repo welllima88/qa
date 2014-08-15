@@ -13,42 +13,42 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
 
-            LocationEdit.StreetNo = "Hardturmstr. 201";
-            LocationEdit.Zip = "8021";
-            LocationEdit.City = "Zürich";
-            LocationEdit.Po = "PFO1";
-            LocationEdit.AdressAddition = "Etage 3";
-            LocationEdit.SapNumber = "4440";
+            Selenium.Location.Edit.StreetNo = "Hardturmstr. 201";
+            Selenium.Location.Edit.Zip = "8021";
+            Selenium.Location.Edit.City = "Zürich";
+            Selenium.Location.Edit.Po = "PFO1";
+            Selenium.Location.Edit.AdressAddition = "Etage 3";
+            Selenium.Location.Edit.SapNumber = "4440";
 
-            LocationEdit.Language = "Deutsch [de]";
-            LocationEdit.Country = "Schweiz [CH]";
-            LocationEdit.Email = "marc.siegmund@six-group.com";
-            LocationEdit.Telephone = "0031 58 399 6237";
-            LocationEdit.Mobile = "0032 58 399 6237";
-            LocationEdit.Fax = "0033 58 399 6237";
-            LocationEdit.Web = "www.six-group.com/de-intern";
+            Selenium.Location.Edit.Language = "Deutsch [de]";
+            Selenium.Location.Edit.Country = "Schweiz [CH]";
+            Selenium.Location.Edit.Email = "marc.siegmund@six-group.com";
+            Selenium.Location.Edit.Telephone = "0031 58 399 6237";
+            Selenium.Location.Edit.Mobile = "0032 58 399 6237";
+            Selenium.Location.Edit.Fax = "0033 58 399 6237";
+            Selenium.Location.Edit.Web = "www.six-group.com/de-intern";
 
-            LocationEdit.CompanyName = "SYR Sele Firma A";
+            Selenium.Location.Edit.CompanyName = "SYR Sele Firma A";
         }
 
         [TestMethod]
         public void EditLocationWithoutCompanyNameFailed()
         {
-            LocationEdit.CompanyName = "";
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.CompanyName = "";
+            Selenium.Location.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count, "Wrong number of form alerts");
             Assert.IsTrue(FormAlert.FormAlertList.Contains("Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!"),
                 "Wrong text in form alerts");
-            LocationEdit.CancelButton.Click();
+            Selenium.Location.Edit.CancelButton.Click();
         }
 
         [TestMethod]
         public void EditLocationWithoutStreetAndNumberFailed()
         {
-            LocationEdit.StreetNo = "";
+            Selenium.Location.Edit.StreetNo = "";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
@@ -57,9 +57,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         [TestMethod]
         public void EditLocationWithoutCityFailed()
         {
-            LocationEdit.City = "";
+            Selenium.Location.Edit.City = "";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
@@ -68,9 +68,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         [TestMethod]
         public void EditLocationWithoutZipFailed()
         {
-            LocationEdit.Zip = "";
+            Selenium.Location.Edit.Zip = "";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");

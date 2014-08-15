@@ -129,9 +129,9 @@
     <Compile Include="Location\BillingAdressCreate.cs" />
     <Compile Include="Location\BillingAdressEdit.cs" />
     <Compile Include="Location\BillingAdressView.cs" />
-    <Compile Include="Location\LocationCreate.cs" />
-    <Compile Include="Location\LocationEdit.cs" />
-    <Compile Include="Location\LocationView.cs" />
+    <Compile Include="Location\Create.cs" />
+    <Compile Include="Location\Edit.cs" />
+    <Compile Include="Location\View.cs" />
     <Compile Include="Massmuation\AcquirerChange.cs" />
     <Compile Include="Massmuation\MassmuationFileUpload.cs" />
     <Compile Include="Massmuation\MassmutationProgress.cs" />

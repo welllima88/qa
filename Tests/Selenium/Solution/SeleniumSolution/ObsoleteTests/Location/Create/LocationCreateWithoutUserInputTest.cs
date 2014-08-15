@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
         }
 
         [TestMethod]

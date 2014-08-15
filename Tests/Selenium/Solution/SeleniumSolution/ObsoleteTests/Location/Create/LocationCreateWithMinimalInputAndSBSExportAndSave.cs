@@ -8,6 +8,7 @@ using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Location;
+using View = Six.Scs.QA.Selenium.Location.View;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
@@ -27,22 +28,22 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.CompanyName = "SYR SBS Standort A";
-            LocationCreate.StreetNo = "SBS Way 201a-c";
-            LocationCreate.Zip = "4554";
-            LocationCreate.City = "SBS";
+            Selenium.Location.Create.CompanyName = "SYR SBS Standort A";
+            Selenium.Location.Create.StreetNo = "SBS Way 201a-c";
+            Selenium.Location.Create.Zip = "4554";
+            Selenium.Location.Create.City = "SBS";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
-            Assert.AreEqual("SYR SBS Standort A", LocationView.CompanyName);
+            Assert.AreEqual("SYR SBS Standort A", View.CompanyName);
 
-            StringAssert.Matches(LocationView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
             int retry = 10;
             do
             {
                 try
                 {
-                    StringAssert.Matches(LocationView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
+                    StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
@@ -52,25 +53,25 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
                     retry--;
                 }
             } while (retry > 0);
-            Assert.AreEqual("SBS Way 201a-c", LocationView.StreetNo);
-            Assert.AreEqual("4554", LocationView.Zip);
-            Assert.AreEqual("SBS", LocationView.City);
+            Assert.AreEqual("SBS Way 201a-c", View.StreetNo);
+            Assert.AreEqual("4554", View.Zip);
+            Assert.AreEqual("SBS", View.City);
         }
 
         [TestMethod]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()
         {
-            string country = View.Country;
+            string country = Selenium.Customer.View.Country;
             CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual(country, LocationCreate.Country);
+            Assert.AreEqual(country, Selenium.Location.Create.Country);
         }
 
         [TestMethod]
         public void LanguageOfCustomerIsUsedForAgencyOfLocation()
         {
-            string language = View.Language;
+            string language = Selenium.Customer.View.Language;
             CustomerMenu.LocationCreate.Click();
-            Assert.AreEqual(language, LocationCreate.Language);
+            Assert.AreEqual(language, Selenium.Location.Create.Language);
         }
 
         [TestMethod]

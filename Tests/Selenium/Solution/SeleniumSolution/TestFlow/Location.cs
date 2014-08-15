@@ -41,23 +41,23 @@ namespace Six.Scs.QA.Testlogic
         /// <param name="l">given location data</param>
         public static void Check(TestData.ValueObjects.Location l)
         {
-            Assert.AreEqual(l.CompanyName, LocationView.CompanyName);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, LocationView.SbsDebitNumber);
+            Assert.AreEqual(l.CompanyName, View.CompanyName);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.SbsDebitNumber);
             // StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, LocationView.SbsAdressNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, LocationView.Ep2MerchantId);
-            Assert.AreEqual(l.Adress.StreetNo, LocationView.StreetNo);
-            Assert.AreEqual(l.Adress.Po, LocationView.Po);
-            Assert.AreEqual(l.Adress.Zip, LocationView.Zip);
-            Assert.AreEqual(l.Adress.City, LocationView.City);
-            StringAssert.Contains(l.Adress.Region, LocationView.Region);
-            Assert.AreEqual(l.Adress.AdressAddition, LocationView.AdressAddition);
-            Assert.AreEqual(l.Contact.Language, LocationView.Language);
-            Assert.AreEqual(l.Adress.Country, LocationView.Country);
-            Assert.AreEqual(l.Contact.Email, LocationView.Email);
-            StringAssert.Contains(l.Contact.Telephone, LocationView.Telephone);
-            StringAssert.Contains(l.Contact.Mobile, LocationView.Mobile);
-            StringAssert.Contains(l.Contact.Fax, LocationView.Fax);
-            Assert.AreEqual(l.Contact.Web, LocationView.Web);
+            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Ep2MerchantId);
+            Assert.AreEqual(l.Adress.StreetNo, View.StreetNo);
+            Assert.AreEqual(l.Adress.Po, View.Po);
+            Assert.AreEqual(l.Adress.Zip, View.Zip);
+            Assert.AreEqual(l.Adress.City, View.City);
+            StringAssert.Contains(l.Adress.Region, View.Region);
+            Assert.AreEqual(l.Adress.AdressAddition, View.AdressAddition);
+            Assert.AreEqual(l.Contact.Language, View.Language);
+            Assert.AreEqual(l.Adress.Country, View.Country);
+            Assert.AreEqual(l.Contact.Email, View.Email);
+            StringAssert.Contains(l.Contact.Telephone, View.Telephone);
+            StringAssert.Contains(l.Contact.Mobile, View.Mobile);
+            StringAssert.Contains(l.Contact.Fax, View.Fax);
+            Assert.AreEqual(l.Contact.Web, View.Web);
         }
     }
 }

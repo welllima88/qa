@@ -33,174 +33,174 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         public void TestInit()
         {
             TestDirector.Navigate("Location/?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
-            _guid = LocationView.Guid;
+            _guid = View.Guid;
 
-            _sapNumber = LocationView.SapNumber;
-            _sbsDebitNumber = LocationView.SbsDebitNumber;
-            _sbsAdressNumber = LocationView.SbsAdressNumber;
+            _sapNumber = View.SapNumber;
+            _sbsDebitNumber = View.SbsDebitNumber;
+            _sbsAdressNumber = View.SbsAdressNumber;
 
-            _ep2MerchantId = LocationView.Ep2MerchantId;
+            _ep2MerchantId = View.Ep2MerchantId;
 
-            _companyName = LocationView.CompanyName;
-            _po = LocationView.Po;
-            _adressAddition = LocationView.AdressAddition;
-            _streetName = LocationView.StreetNo;
-            _zip = LocationView.Zip;
-            _city = LocationView.City;
-            _language = LocationView.Language;
-            _country = LocationView.Country;
-            _email = LocationView.Email;
-            _telephone = LocationView.Telephone;
-            _mobile = LocationView.Mobile;
-            _fax = LocationView.Fax;
-            _web = LocationView.Web;
+            _companyName = View.CompanyName;
+            _po = View.Po;
+            _adressAddition = View.AdressAddition;
+            _streetName = View.StreetNo;
+            _zip = View.Zip;
+            _city = View.City;
+            _language = View.Language;
+            _country = View.Country;
+            _email = View.Email;
+            _telephone = View.Telephone;
+            _mobile = View.Mobile;
+            _fax = View.Fax;
+            _web = View.Web;
 
             LocationMenu.LocationEdit.Click();
 
-            LocationEdit.CompanyName = "SYR Sele Firma AAA";
-            LocationEdit.StreetNo = "Hardturmstr. 2011";
-            LocationEdit.Zip = "80222";
-            LocationEdit.City = "Zürichhh";
-            LocationEdit.Po = "PFO111";
-            LocationEdit.AdressAddition = "Etage 333";
-            LocationEdit.Region = "Reggg";
-            LocationEdit.SapNumber = "4449";
+            Selenium.Location.Edit.CompanyName = "SYR Sele Firma AAA";
+            Selenium.Location.Edit.StreetNo = "Hardturmstr. 2011";
+            Selenium.Location.Edit.Zip = "80222";
+            Selenium.Location.Edit.City = "Zürichhh";
+            Selenium.Location.Edit.Po = "PFO111";
+            Selenium.Location.Edit.AdressAddition = "Etage 333";
+            Selenium.Location.Edit.Region = "Reggg";
+            Selenium.Location.Edit.SapNumber = "4449";
 
-            LocationEdit.Language = "Kroatisch [hr]";
-            LocationEdit.Country = "Albanien [AL]";
-            LocationEdit.Email = "marc.siegmund@six-group.com";
-            LocationEdit.Telephone = "0031 58 399 623777";
-            LocationEdit.Mobile = "0032 58 399 623777";
-            LocationEdit.Fax = "0033 58 399 623777";
-            LocationEdit.Web = "www.six-group.com/de-internnnn";
+            Selenium.Location.Edit.Language = "Kroatisch [hr]";
+            Selenium.Location.Edit.Country = "Albanien [AL]";
+            Selenium.Location.Edit.Email = "marc.siegmund@six-group.com";
+            Selenium.Location.Edit.Telephone = "0031 58 399 623777";
+            Selenium.Location.Edit.Mobile = "0032 58 399 623777";
+            Selenium.Location.Edit.Fax = "0033 58 399 623777";
+            Selenium.Location.Edit.Web = "www.six-group.com/de-internnnn";
 
-            LocationEdit.CancelButton.Click();
+            Selenium.Location.Edit.CancelButton.Click();
         }
 
         [TestMethod]
         public void Guid()
         {
-            Assert.AreEqual(_guid, LocationView.Guid);
+            Assert.AreEqual(_guid, View.Guid);
         }
 
         [TestMethod]
         public void SapNumber()
         {
-            Assert.AreEqual(_sapNumber, LocationView.SapNumber);
+            Assert.AreEqual(_sapNumber, View.SapNumber);
         }
 
         [TestMethod]
         public void SbsDebitNumberPattern()
         {
-            StringAssert.Matches(LocationView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
         [TestMethod]
         public void SbsAdressNumberPattern()
         {
-            StringAssert.Matches(LocationView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
         [TestMethod]
         public void Ep2MerchantIdPattern()
         {
-            StringAssert.Matches(LocationView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
         [TestMethod]
         public void SbsDebitNumber()
         {
-            Assert.AreEqual(_sbsDebitNumber, LocationView.SbsDebitNumber);
+            Assert.AreEqual(_sbsDebitNumber, View.SbsDebitNumber);
         }
 
         [TestMethod]
         public void SbsAdressNumber()
         {
-            Assert.AreEqual(_sbsAdressNumber, LocationView.SbsAdressNumber);
+            Assert.AreEqual(_sbsAdressNumber, View.SbsAdressNumber);
         }
 
         [TestMethod]
         public void Ep2MerchantId()
         {
-            Assert.AreEqual(_ep2MerchantId, LocationView.Ep2MerchantId);
+            Assert.AreEqual(_ep2MerchantId, View.Ep2MerchantId);
         }
 
         [TestMethod]
         public void CompanyName()
         {
-            Assert.AreEqual(_companyName, LocationView.CompanyName);
+            Assert.AreEqual(_companyName, View.CompanyName);
         }
 
         [TestMethod]
         public void Po()
         {
-            Assert.AreEqual(_po, LocationView.Po);
+            Assert.AreEqual(_po, View.Po);
         }
 
         [TestMethod]
         public void AdressAddition()
         {
-            Assert.AreEqual(_adressAddition, LocationView.AdressAddition);
+            Assert.AreEqual(_adressAddition, View.AdressAddition);
         }
 
         [TestMethod]
         public void StreetNo()
         {
-            Assert.AreEqual(_streetName, LocationView.StreetNo);
+            Assert.AreEqual(_streetName, View.StreetNo);
         }
 
         [TestMethod]
         public void Zip()
         {
-            Assert.AreEqual(_zip, LocationView.Zip);
+            Assert.AreEqual(_zip, View.Zip);
         }
 
         [TestMethod]
         public void City()
         {
-            Assert.AreEqual(_city, LocationView.City);
+            Assert.AreEqual(_city, View.City);
         }
 
         [TestMethod]
         public void Language()
         {
-            Assert.AreEqual(_language, LocationView.Language);
+            Assert.AreEqual(_language, View.Language);
         }
 
         [TestMethod]
         public void Country()
         {
-            Assert.AreEqual(_country, LocationView.Country);
+            Assert.AreEqual(_country, View.Country);
         }
 
         [TestMethod]
         public void Email()
         {
-            Assert.AreEqual(_email, LocationView.Email);
+            Assert.AreEqual(_email, View.Email);
         }
 
         [TestMethod]
         public void Telephone()
         {
-            Assert.AreEqual(_telephone, LocationView.Telephone);
+            Assert.AreEqual(_telephone, View.Telephone);
         }
 
         [TestMethod]
         public void Mobile()
         {
-            Assert.AreEqual(_mobile, LocationView.Mobile);
+            Assert.AreEqual(_mobile, View.Mobile);
         }
 
         [TestMethod]
         public void Fax()
         {
-            Assert.AreEqual(_fax, LocationView.Fax);
+            Assert.AreEqual(_fax, View.Fax);
         }
 
         [TestMethod]
         public void Web()
         {
-            Assert.AreEqual(_web, LocationView.Web);
+            Assert.AreEqual(_web, View.Web);
         }
     }
 }

@@ -14,22 +14,22 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
 
-            LocationCreate.CompanyName = "SYR Sele Firma A";
-            LocationCreate.StreetNo = "Hardturmstr. 201";
-            LocationCreate.Zip = "8021";
-            LocationCreate.City = "Zürich";
-            LocationCreate.Po = "PFO1";
-            LocationCreate.AdressAddition = "Etage 3";
-            LocationCreate.Region = "Reg 55";
-            LocationCreate.SapNumber = "4440";
+            Selenium.Location.Create.CompanyName = "SYR Sele Firma A";
+            Selenium.Location.Create.StreetNo = "Hardturmstr. 201";
+            Selenium.Location.Create.Zip = "8021";
+            Selenium.Location.Create.City = "Zürich";
+            Selenium.Location.Create.Po = "PFO1";
+            Selenium.Location.Create.AdressAddition = "Etage 3";
+            Selenium.Location.Create.Region = "Reg 55";
+            Selenium.Location.Create.SapNumber = "4440";
 
-            LocationCreate.Language = "Deutsch [de]";
-            LocationCreate.Country = "Schweiz [CH]";
-            LocationCreate.Email = "marc.siegmund@six-group.com";
-            LocationCreate.Telephone = "0031 58 399 6237";
-            LocationCreate.Mobile = "0032 58 399 6237";
-            LocationCreate.Fax = "0033 58 399 6237";
-            LocationCreate.Web = "www.six-group.com/de-intern";
+            Selenium.Location.Create.Language = "Deutsch [de]";
+            Selenium.Location.Create.Country = "Schweiz [CH]";
+            Selenium.Location.Create.Email = "marc.siegmund@six-group.com";
+            Selenium.Location.Create.Telephone = "0031 58 399 6237";
+            Selenium.Location.Create.Mobile = "0032 58 399 6237";
+            Selenium.Location.Create.Fax = "0033 58 399 6237";
+            Selenium.Location.Create.Web = "www.six-group.com/de-intern";
         }
 
         [TestMethod]
@@ -37,9 +37,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.CompanyName = "";
+            Selenium.Location.Create.CompanyName = "";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld!");
@@ -50,9 +50,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.StreetNo = "";
+            Selenium.Location.Create.StreetNo = "";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
@@ -63,9 +63,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.City = "";
+            Selenium.Location.Create.City = "";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
@@ -76,9 +76,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         {
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.Zip = "";
+            Selenium.Location.Create.Zip = "";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
             Assert.AreEqual(1, FormAlert.FormAlertList.Count);
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");

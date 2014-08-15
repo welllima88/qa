@@ -13,28 +13,28 @@ namespace Six.Scs.QA.Workflow
 
             CustomerMenu.LocationCreate.Click();
 
-            LocationCreate.CompanyName = l.CompanyName;
-            LocationCreate.StreetNo = l.Adress.StreetNo;
-            LocationCreate.Zip = l.Adress.Zip;
-            LocationCreate.City = l.Adress.City;
-            LocationCreate.Po = l.Adress.Po;
-            LocationCreate.AdressAddition = l.Adress.AdressAddition;
-            LocationCreate.Region = l.Adress.Region;
-            LocationCreate.SapNumber = l.SapNumber;
-            LocationCreate.Language = l.Contact.Language;
-            LocationCreate.Country = l.Adress.Country;
-            LocationCreate.Email = l.Contact.Email;
-            LocationCreate.Telephone = l.Contact.Telephone;
-            LocationCreate.Mobile = l.Contact.Mobile;
-            LocationCreate.Fax = l.Contact.Fax;
-            LocationCreate.Web = l.Contact.Web;
+            Selenium.Location.Create.CompanyName = l.CompanyName;
+            Selenium.Location.Create.StreetNo = l.Adress.StreetNo;
+            Selenium.Location.Create.Zip = l.Adress.Zip;
+            Selenium.Location.Create.City = l.Adress.City;
+            Selenium.Location.Create.Po = l.Adress.Po;
+            Selenium.Location.Create.AdressAddition = l.Adress.AdressAddition;
+            Selenium.Location.Create.Region = l.Adress.Region;
+            Selenium.Location.Create.SapNumber = l.SapNumber;
+            Selenium.Location.Create.Language = l.Contact.Language;
+            Selenium.Location.Create.Country = l.Adress.Country;
+            Selenium.Location.Create.Email = l.Contact.Email;
+            Selenium.Location.Create.Telephone = l.Contact.Telephone;
+            Selenium.Location.Create.Mobile = l.Contact.Mobile;
+            Selenium.Location.Create.Fax = l.Contact.Fax;
+            Selenium.Location.Create.Web = l.Contact.Web;
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
 
-            l.Guid = LocationView.Guid;
-            l.LocationNumber = LocationView.LocationNumber;
-            l.Ep2MerchantId = LocationView.Ep2MerchantId;
-            l.SbsDebitNumber = LocationView.SbsDebitNumber;
+            l.Guid = View.Guid;
+            l.LocationNumber = View.LocationNumber;
+            l.Ep2MerchantId = View.Ep2MerchantId;
+            l.SbsDebitNumber = View.SbsDebitNumber;
             // l.SbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
@@ -44,35 +44,35 @@ namespace Six.Scs.QA.Workflow
         /// <param name="l">given location data</param>
         public static void Edit(TestData.ValueObjects.Location l)
         {
-            l.Guid = LocationView.Guid;
-            l.Ep2MerchantId = LocationView.Ep2MerchantId;
-            l.SbsDebitNumber = LocationView.SbsDebitNumber;
+            l.Guid = View.Guid;
+            l.Ep2MerchantId = View.Ep2MerchantId;
+            l.SbsDebitNumber = View.SbsDebitNumber;
             // l.SbsAdressNumber = LocationView.SbsAdressNumber;
 
-            LocationView.EditButton.Click();
+            View.EditButton.Click();
 
-            LocationEdit.CompanyName = l.CompanyName;
-            LocationEdit.StreetNo = l.Adress.StreetNo;
-            LocationEdit.Zip = l.Adress.Zip;
-            LocationEdit.City = l.Adress.City;
-            LocationEdit.Po = l.Adress.Po;
-            LocationEdit.Region = l.Adress.Region;
-            LocationEdit.AdressAddition = l.Adress.AdressAddition;
-            LocationEdit.SapNumber = l.SapNumber;
-            LocationEdit.Email = l.Contact.Email;
-            LocationEdit.Telephone = l.Contact.Telephone;
-            LocationEdit.Mobile = l.Contact.Mobile;
-            LocationEdit.Fax = l.Contact.Fax;
-            LocationEdit.Web = l.Contact.Web;
+            Selenium.Location.Edit.CompanyName = l.CompanyName;
+            Selenium.Location.Edit.StreetNo = l.Adress.StreetNo;
+            Selenium.Location.Edit.Zip = l.Adress.Zip;
+            Selenium.Location.Edit.City = l.Adress.City;
+            Selenium.Location.Edit.Po = l.Adress.Po;
+            Selenium.Location.Edit.Region = l.Adress.Region;
+            Selenium.Location.Edit.AdressAddition = l.Adress.AdressAddition;
+            Selenium.Location.Edit.SapNumber = l.SapNumber;
+            Selenium.Location.Edit.Email = l.Contact.Email;
+            Selenium.Location.Edit.Telephone = l.Contact.Telephone;
+            Selenium.Location.Edit.Mobile = l.Contact.Mobile;
+            Selenium.Location.Edit.Fax = l.Contact.Fax;
+            Selenium.Location.Edit.Web = l.Contact.Web;
 
-            LocationEdit.Language = l.Contact.Language;
-            LocationEdit.Country = l.Adress.Country;
+            Selenium.Location.Edit.Language = l.Contact.Language;
+            Selenium.Location.Edit.Country = l.Adress.Country;
 
-            LocationEdit.Reason = "CorrectionOnly";
+            Selenium.Location.Edit.Reason = "CorrectionOnly";
             ChangeForm.Reason = "MerchantAddressChange";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
         }
     }
 }

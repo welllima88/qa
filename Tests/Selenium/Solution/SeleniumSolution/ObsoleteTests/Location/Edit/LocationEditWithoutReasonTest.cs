@@ -14,9 +14,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
 
-            LocationEdit.CompanyName = "SYR" + Factory.GenerateTestId();
+            Selenium.Location.Edit.CompanyName = "SYR" + Factory.GenerateTestId();
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
         }
 
         [TestMethod]

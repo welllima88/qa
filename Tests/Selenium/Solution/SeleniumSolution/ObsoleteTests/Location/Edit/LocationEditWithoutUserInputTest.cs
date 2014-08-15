@@ -13,22 +13,22 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
 
-            LocationEdit.CompanyName = "";
-            LocationEdit.StreetNo = "";
-            LocationEdit.Zip = "";
-            LocationEdit.City = "";
-            LocationEdit.Po = "";
-            LocationEdit.AdressAddition = "";
-            LocationEdit.Region = "";
-            LocationEdit.SapNumber = "";
+            Selenium.Location.Edit.CompanyName = "";
+            Selenium.Location.Edit.StreetNo = "";
+            Selenium.Location.Edit.Zip = "";
+            Selenium.Location.Edit.City = "";
+            Selenium.Location.Edit.Po = "";
+            Selenium.Location.Edit.AdressAddition = "";
+            Selenium.Location.Edit.Region = "";
+            Selenium.Location.Edit.SapNumber = "";
 
-            LocationEdit.Email = "";
-            LocationEdit.Telephone = "";
-            LocationEdit.Mobile = "";
-            LocationEdit.Fax = "";
-            LocationEdit.Web = "";
+            Selenium.Location.Edit.Email = "";
+            Selenium.Location.Edit.Telephone = "";
+            Selenium.Location.Edit.Mobile = "";
+            Selenium.Location.Edit.Fax = "";
+            Selenium.Location.Edit.Web = "";
 
-            LocationEdit.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
         }
 
         [TestMethod]

@@ -11,6 +11,7 @@ using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
+using View = Six.Scs.QA.Selenium.Location.View;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
 {
@@ -287,7 +288,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void OpenLocation()
         {
             Testlogic.Search.LocationCanBeFoundByLocationName(_location.CompanyName);
-            Assert.AreEqual(_location.Guid, LocationView.Guid);
+            Assert.AreEqual(_location.Guid, View.Guid);
         }
 
         private static void CreateUser()
@@ -303,7 +304,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
         private static void OpenCustomer()
         {
             Testlogic.Search.CustomerCanBeFoundByCustomerNumber(_customer.CustomerNumber);
-            Assert.AreEqual(_customer.CustomerNumber, View.CustomerNumber);
+            Assert.AreEqual(_customer.CustomerNumber, Selenium.Customer.View.CustomerNumber);
         }
 
         private static void CreateCustomer()

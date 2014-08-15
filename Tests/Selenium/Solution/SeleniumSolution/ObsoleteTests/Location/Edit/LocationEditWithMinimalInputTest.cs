@@ -20,68 +20,68 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         public void TestInit()
         {
             TestDirector.Navigate("Location?LocationId=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
-            _guid = LocationView.Guid;
-            _ep2MerchantId = LocationView.Ep2MerchantId;
-            _sbsDebitNumber = LocationView.SbsDebitNumber;
-            _sbsAdressNumber = LocationView.SbsAdressNumber;
+            _guid = View.Guid;
+            _ep2MerchantId = View.Ep2MerchantId;
+            _sbsDebitNumber = View.SbsDebitNumber;
+            _sbsAdressNumber = View.SbsAdressNumber;
 
             LocationMenu.LocationEdit.Click();
-            Assert.AreEqual(LocationEdit.Guid, _guid);
-            Assert.AreEqual(LocationEdit.Ep2MerchantId, _ep2MerchantId);
-            Assert.AreEqual(LocationEdit.SbsDebitNumber, _sbsDebitNumber);
-            Assert.AreEqual(LocationEdit.SbsAdressNumber, _sbsAdressNumber);
+            Assert.AreEqual(Selenium.Location.Edit.Guid, _guid);
+            Assert.AreEqual(Selenium.Location.Edit.Ep2MerchantId, _ep2MerchantId);
+            Assert.AreEqual(Selenium.Location.Edit.SbsDebitNumber, _sbsDebitNumber);
+            Assert.AreEqual(Selenium.Location.Edit.SbsAdressNumber, _sbsAdressNumber);
 
-            LocationEdit.CompanyName = "SYR Standort SELE B";
-            LocationEdit.StreetNo = "Am Bärenplatz 2";
-            LocationEdit.Zip = "8001";
-            LocationEdit.City = "Kreuzlingen";
-            LocationEdit.Po = "";
-            LocationEdit.AdressAddition = "";
-            LocationEdit.SapNumber = "";
-            LocationEdit.Email = "";
-            LocationEdit.Telephone = "";
-            LocationEdit.Mobile = "";
-            LocationEdit.Fax = "";
-            LocationEdit.Web = "";
+            Selenium.Location.Edit.CompanyName = "SYR Standort SELE B";
+            Selenium.Location.Edit.StreetNo = "Am Bärenplatz 2";
+            Selenium.Location.Edit.Zip = "8001";
+            Selenium.Location.Edit.City = "Kreuzlingen";
+            Selenium.Location.Edit.Po = "";
+            Selenium.Location.Edit.AdressAddition = "";
+            Selenium.Location.Edit.SapNumber = "";
+            Selenium.Location.Edit.Email = "";
+            Selenium.Location.Edit.Telephone = "";
+            Selenium.Location.Edit.Mobile = "";
+            Selenium.Location.Edit.Fax = "";
+            Selenium.Location.Edit.Web = "";
 
-            LocationEdit.Language = "en";
-            LocationEdit.Country = "CH";
+            Selenium.Location.Edit.Language = "en";
+            Selenium.Location.Edit.Country = "CH";
 
-            LocationCreate.SaveButton.Click();
+            Selenium.Location.Create.SaveButton.Click();
         }
 
         [TestMethod]
         public void EditLocationWithMinimalAndSave()
         {
-            Assert.AreEqual(LocationView.Guid, _guid);
-            Assert.AreEqual(LocationView.Ep2MerchantId, _ep2MerchantId);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
+            Assert.AreEqual(View.Guid, _guid);
+            Assert.AreEqual(View.Ep2MerchantId, _ep2MerchantId);
+            Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
 
             NavigationBar.Lobby.Click();
             RecentElements.Latest.Click();
 
-            Assert.AreEqual(LocationView.Guid, _guid);
-            Assert.AreEqual(LocationView.Ep2MerchantId, _ep2MerchantId);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
+            Assert.AreEqual(View.Guid, _guid);
+            Assert.AreEqual(View.Ep2MerchantId, _ep2MerchantId);
+            Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
 
-            StringAssert.Matches(LocationView.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
-            StringAssert.Matches(LocationView.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
-            StringAssert.Matches(LocationView.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            Assert.AreEqual("Am Bärenplatz 2", LocationView.StreetNo);
-            Assert.AreEqual("", LocationView.SapNumber);
-            Assert.AreEqual("SYR Standort SELE B", LocationView.CompanyName);
-            Assert.AreEqual("8001", LocationView.Zip);
-            Assert.AreEqual("", LocationView.Po);
-            Assert.AreEqual("", LocationView.AdressAddition);
-            Assert.AreEqual("Kreuzlingen", LocationView.City);
-            StringAssert.Contains(LocationView.Language, "[en]");
-            StringAssert.Contains(LocationView.Country, "[CH]");
-            Assert.AreEqual("", LocationView.Email);
-            Assert.AreEqual("", LocationView.Telephone);
-            Assert.AreEqual("", LocationView.Mobile);
-            Assert.AreEqual("", LocationView.Fax);
-            Assert.AreEqual("", LocationView.Web);
+            Assert.AreEqual("Am Bärenplatz 2", View.StreetNo);
+            Assert.AreEqual("", View.SapNumber);
+            Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
+            Assert.AreEqual("8001", View.Zip);
+            Assert.AreEqual("", View.Po);
+            Assert.AreEqual("", View.AdressAddition);
+            Assert.AreEqual("Kreuzlingen", View.City);
+            StringAssert.Contains(View.Language, "[en]");
+            StringAssert.Contains(View.Country, "[CH]");
+            Assert.AreEqual("", View.Email);
+            Assert.AreEqual("", View.Telephone);
+            Assert.AreEqual("", View.Mobile);
+            Assert.AreEqual("", View.Fax);
+            Assert.AreEqual("", View.Web);
         }
     }
 }
