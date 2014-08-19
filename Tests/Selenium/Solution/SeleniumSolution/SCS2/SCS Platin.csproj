@@ -194,7 +194,6 @@
     <Compile Include="Terminal\ListView.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\Create.cs" />
     <Compile Include="User\List.cs" />
     <Compile Include="User\LoginSetup.cs" />
@@ -206,7 +205,9 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
       <Project>{D82EFC2F-3E2D-4892-9D5D-327139693BB4}</Project>
