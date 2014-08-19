@@ -197,6 +197,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\Create.cs" />
     <Compile Include="User\List.cs" />
+    <Compile Include="User\LoginSetup.cs" />
     <Compile Include="User\View.cs" />
   </ItemGroup>
   <ItemGroup>

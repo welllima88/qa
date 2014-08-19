@@ -84,5 +84,10 @@ namespace Six.Scs.QA.Selenium.User
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button#reset")).Button(); }
         }
+
+        public static IWebElementAdapter AddServiceButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService?userName=']")); }
+        }
     }
 }
