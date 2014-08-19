@@ -54,6 +54,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
             _duplicatedTerminals = Testlogic.Terminal.Duplicate(_terminalLocation);
             Testlogic.User.Create(_personOnLocation);
             Contact.Delete(_personOnLocation);
+            
+            Testlogic.User.AddService(_user);
 
             // Brands.Create(_duplicatedTerminals[1]); // {0,1,..} means create brands on second terminal
 
