@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.User;
+using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -48,6 +50,17 @@ namespace Six.Scs.QA.Workflow
             UserMenu.ResetPassword.Click();
             View.ResetPasswordConfirm.Click();
             return View.Password;
+        }
+
+        public static void AddServices(IEnumerable<Service> services)
+        {
+            View.AddServiceButton.Click();
+            foreach (Service service in services)
+            {
+                LoginSetup.Set(service.Name, service.Permission);
+            }
+
+            LoginSetup.SaveButton.Click();
         }
     }
 }
