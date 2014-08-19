@@ -1,10 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension;
-using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.Selenium.User;
+using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
-using View = Six.Scs.QA.Selenium.User.View;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -35,7 +34,7 @@ namespace Six.Scs.QA.Testlogic
         public static void Check(TestData.ValueObjects.User u)
         {
             Assert.AreEqual(u.UserName, View.UserName);
-            StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
+            // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
             Assert.AreEqual(u.Salutation, View.Salutation);
             Assert.AreEqual(u.FirstName, View.FirstName);
             Assert.AreEqual(u.Name, View.Name);
@@ -46,15 +45,31 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(u.WesMandant, View.WesMandant);
         }
 
-        public static void Create(Person person)
+        public static void Create(TestData.ValueObjects.Person person)
         {
             Contact.Open(person);
 
             Selenium.Person.View.CreateUser.Click();
-            
+
             Assert.Equals(person.Name, Selenium.User.Create.Name);
             Assert.Equals(person.FirstName, Selenium.User.Create.FirstName);
             Assert.Equals(person.Contact.Language, Selenium.User.Create.Language);
+        }
+
+        public static void AddService(TestData.ValueObjects.User user)
+        {
+            Open(user);
+            IEnumerable<Service> services = Services.Scs();
+            Workflow.User.AddServices(services);
+            Check(services);
+        }
+
+        private static void Check(IEnumerable<Service> services)
+        {
+            foreach (var service in services)
+            {
+                // TODO ..
+            }
         }
     }
 }
