@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Factory\Brand.cs" />
     <Compile Include="Factory\Currency.cs" />
+    <Compile Include="Factory\Services.cs" />
     <Compile Include="Factory\Simcard.cs" />
     <Compile Include="Repository\Customer.cs" />
     <Compile Include="Repository\IRepository.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="ValueObjects\Customer.cs" />
     <Compile Include="ValueObjects\Location.cs" />
     <Compile Include="ValueObjects\Mpd.cs" />
+    <Compile Include="ValueObjects\Service.cs" />
     <Compile Include="ValueObjects\SimCard.cs" />
     <Compile Include="ValueObjects\Terminal.cs" />
     <Compile Include="ValueObjects\TerminalDuplicate.cs" />
