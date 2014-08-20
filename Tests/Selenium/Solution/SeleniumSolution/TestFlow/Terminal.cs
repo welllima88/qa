@@ -76,7 +76,7 @@ namespace Six.Scs.QA.Testlogic
         public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TestData.ValueObjects.TerminalDuplicate terminalDuplicate = TerminalDuplicate.Create();
+            TestData.ValueObjects.TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
             Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalMassValidation.ExecuteButton.Click();
@@ -117,6 +117,7 @@ namespace Six.Scs.QA.Testlogic
             Open(terminal);
             string info = Workflow.Terminal.Quit();
             StringAssert.Contains("Gekündigt", TerminalInfo.Status);
+            Assert.IsTrue(TerminalInfo.Cancelled.Displayed);
             StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
             StringAssert.Contains(info, BusinessViewpoint.Status);
         }
