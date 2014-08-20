@@ -30,5 +30,10 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
         {
             get { return WebDriver.FindAdaptedElement(By.Id("TD_Trm_State")).Text; }
         }
+
+        public static IWebElementAdapter Cancelled
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.canceledTerminal")); }
+        }
     }
 }
