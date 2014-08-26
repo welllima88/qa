@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter Latest
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.RecentElements_MostRecent)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#ElementHistoryList ul#ElementHistoryList>li>a")); }
         }
     }
 }
