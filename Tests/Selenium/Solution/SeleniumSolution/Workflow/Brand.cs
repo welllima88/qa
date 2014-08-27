@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.TestData.ValueObjects.Brand;
 
 namespace Six.Scs.QA.Workflow
@@ -6,22 +7,12 @@ namespace Six.Scs.QA.Workflow
     public class Brand
     {
         /// <summary>
-        ///     Selects all brands in a the given List
-        /// </summary>
-        /// <param name="brands"></param>
-        public static void Select(IEnumerable<TestData.ValueObjects.Brand.Brand> brands)
-        {
-            foreach (TestData.ValueObjects.Brand.Brand brand in brands)
-            {
-            }
-        }
-
-        /// <summary>
         ///     Selects the acquirer with all its brands
         /// </summary>
         /// <param name="acquirer"></param>
         public static void Select(Acquirer acquirer)
         {
+            Selection.Select(acquirer.Id, Selection.Acquirer);
         }
 
         /// <summary>
@@ -32,7 +23,11 @@ namespace Six.Scs.QA.Workflow
         {
             foreach (Contract contract in contracts)
             {
-                Select(contract.Brands);
+                Selection.Open(contract.Acquirer.Id);
+                foreach (TestData.ValueObjects.Brand.Brand brand in contract.Brands)
+                {
+                    Selection.Select(brand.Id);
+                }
             }
         }
 
