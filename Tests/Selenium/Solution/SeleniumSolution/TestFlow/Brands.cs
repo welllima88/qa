@@ -11,6 +11,12 @@ namespace Six.Scs.QA.Testlogic
             Terminal.Open(new TestData.ValueObjects.Terminal {Id = terminalId});
 
             CreateAndSaveBrands();
+            CheckBrands();
+        }
+
+        private static void CheckBrands()
+        {
+            throw new System.NotImplementedException();
         }
 
         private static void CreateAndSaveBrands()
