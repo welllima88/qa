@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Environments;
 using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -17,7 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         {
             TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
-            TestDirector.LogOn();            
+            TestDirector.LogOn();
         }
 
         [TearDown]
