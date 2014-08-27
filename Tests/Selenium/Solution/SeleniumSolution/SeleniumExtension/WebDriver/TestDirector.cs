@@ -31,6 +31,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         public static void PrepareBrowser(string gridHub = "")
         {
             FirefoxProfile firefoxProfile = NoProxy();
+            firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de");
 
             string run = "??";
             if (string.IsNullOrEmpty(gridHub))
