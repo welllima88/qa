@@ -64,7 +64,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void SaveAndCreate()
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_lwpBrandsFinishButton")).Click();
+            WebDriver.FindAdaptedElement(By.Id("save")).Click();
         }
     }
 }

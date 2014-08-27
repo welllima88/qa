@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.Brand
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_inpComment"))
+                WebDriver.FindAdaptedElement(By.Id("ContractCreateDto_Comment"))
                     .TextField()
                     .TypeText(value);
             }
