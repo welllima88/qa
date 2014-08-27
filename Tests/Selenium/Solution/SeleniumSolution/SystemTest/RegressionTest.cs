@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             
             Testlogic.User.AddService(_user);
 
-            // Brands.Create(_duplicatedTerminals[1]); // {0,1,..} means create brands on second terminal
+            Brands.Create(_duplicatedTerminals[1]); // {0,1,..} means create brands on second terminal
 
             _sim = Testlogic.SimCard.Create();
             SimCard.Edit(_sim);
