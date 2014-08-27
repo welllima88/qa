@@ -55,7 +55,7 @@ namespace Six.Scs.QA.Testlogic
             ConfigCreate.ContinueButton.Click();
             ConfigCreate.SaveButton.Click();
 
-            Assert.IsTrue(BrandSelect.BrandTree().Displayed);
+            Assert.IsTrue(Selection.BrandTree().Displayed);
             TerminalMenu.Terminal.Click();
             terminal.Id = TerminalInfo.TerminalId;
 
