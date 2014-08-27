@@ -136,7 +136,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             ConfigCreate.ContinueButton.Click();
             ConfigCreate.SaveButton.Click();
 
-            Assert.IsTrue(BrandSelect.BrandTree().Displayed);
+            Assert.IsTrue(Selection.BrandTree().Displayed);
             TerminalMenu.Terminal.Click();
             _terminalIdCustomer = TerminalInfo.TerminalId;
 
