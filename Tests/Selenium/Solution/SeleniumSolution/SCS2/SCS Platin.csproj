@@ -81,7 +81,7 @@
     <Compile Include="Brand\AcquirerCreate.cs" />
     <Compile Include="Brand\BrandCreate.cs" />
     <Compile Include="Brand\BrandEdit.cs" />
-    <Compile Include="Brand\BrandSelect.cs" />
+    <Compile Include="Brand\Selection.cs" />
     <Compile Include="Brand\BrandView.cs" />
     <Compile Include="Common\ApplicationInfo.cs" />
     <Compile Include="Common\ChangeForm.cs" />
