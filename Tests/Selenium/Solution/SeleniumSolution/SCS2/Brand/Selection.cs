@@ -5,7 +5,7 @@ namespace Six.Scs.QA.Selenium.Brand
 {
     public class Selection : WebObject
     {
-        public const string Acquirer = "Acqirer";
+        public const string Acquirer = "Acquirer";
         public const string Brand = "Provider";
 
         public static IWebElementAdapter ConfirmButton()
@@ -33,13 +33,13 @@ namespace Six.Scs.QA.Selenium.Brand
         public static void Open(string id, string eType = Acquirer)
         {
             string locator = "li#" + eType + "_" + id + ".jstree-closed a ins.jstree-icon";
-            ClickElement(id);
+            ClickElement(locator);
         }
 
         public static void Close(string id, string eType = Acquirer)
         {
             string locator = "li#" + eType + "_" + id + ".jstree-open a ins.jstree-icon";
-            ClickElement(id);
+            ClickElement(locator);
         }
 
         public static IWebElementAdapter BrandTree()
