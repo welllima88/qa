@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static IWebElementAdapter ConfirmButton()
         {
-            return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEditDetails"));
+            return WebDriver.FindAdaptedElement(By.Id("next"));
         }
 
         /// <summary>
@@ -32,13 +32,13 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void Open(string id, string eType = Acquirer)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-closed a ins.jstree-icon";
+            string locator = "li#" + eType + "_" + id + ".jstree-closed>ins.jstree-icon";
             ClickElement(locator);
         }
 
         public static void Close(string id, string eType = Acquirer)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-open a ins.jstree-icon";
+            string locator = "li#" + eType + "_" + id + ".jstree-open>ins.jstree-icon";
             ClickElement(locator);
         }
 
