@@ -1,5 +1,6 @@
 ﻿using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -31,7 +32,7 @@ namespace Six.Scs.QA.Testlogic
 
             Selection.ConfirmButton().Click();
 
-            AcquirerCreate.Remark = "SYR Contracts" +TestData.Factory.Factory.GenerateTestId;
+            AcquirerCreate.Remark = "SYR Contracts" + Factory.GenerateTestId();
             AcquirerCreate.SaveAndCreate();
             // TODO: more special settings for brands
             // BrandCreate.
