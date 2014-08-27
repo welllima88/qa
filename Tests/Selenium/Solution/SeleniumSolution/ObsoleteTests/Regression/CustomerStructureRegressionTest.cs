@@ -44,14 +44,14 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             BrandPortlet.NewBrandButton.Click();
 
             // BrandSelect.Acquirer("SIX Payment Services").Brand("1161").Brand("877").Brand("1076").Select();
-            BrandSelect.Select("283");
-            BrandSelect.Select("332");
-            BrandSelect.Select("361");
-            BrandSelect.Select("363");
-            BrandSelect.Select("811");
-            BrandSelect.Deselect("1161");
-
-            BrandSelect.ConfirmButton().Click();
+            Selection.Select("283");
+            Selection.Select("332");
+            Selection.Select("361");
+            Selection.Select("363");
+            Selection.Select("811");
+            Selection.Deselect("1161");
+            
+            Selection.ConfirmButton().Click();
 
             AcquirerCreate.Remark = "SYR Contracts" + Factory.GenerateTestId();
             AcquirerCreate.SaveAndCreate();
