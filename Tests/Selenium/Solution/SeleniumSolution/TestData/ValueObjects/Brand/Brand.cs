@@ -3,5 +3,6 @@
     public class Brand
     {
         public bool Status;
+        public string Id { get; set; }
     }
 }
