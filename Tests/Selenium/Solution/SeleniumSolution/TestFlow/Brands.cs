@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Testlogic
             Selection.Select("283");
 
             Selection.Open("acq_multipay");
-
+            Selection.Select("1161");
             Selection.Select("332");
             Selection.Select("361");
             Selection.Select("363");
@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Testlogic
 
             Selection.ConfirmButton().Click();
 
-            AcquirerCreate.Remark = "SYR Contracts";
+            AcquirerCreate.Remark = "SYR Contracts" +TestData.Factory.Factory.GenerateTestId;
             AcquirerCreate.SaveAndCreate();
             // TODO: more special settings for brands
             // BrandCreate.

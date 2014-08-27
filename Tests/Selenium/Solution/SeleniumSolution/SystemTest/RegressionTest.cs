@@ -19,9 +19,9 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.SimCard _sim;
 
         [Test]
-        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal Duplicate"),
-         Category("Terminal Quit"), Category("Infotext"), Category("Person"), Category("MPD"), Category("User"),
-         Category("User from Contact"), Category("SIM Card")]
+        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
+         Category("Terminal Duplicate"), Category("Terminal Quit"), Category("Infotext"), Category("Person"),
+         Category("MPD"), Category("User"), Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
         {
             _customer = Testlogic.Customer.Create();
@@ -33,7 +33,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Infotext.Create(_customer);
             _mpd = Testlogic.Mpd.Create(_customer);
 
-            // Brands.Create(_terminalCustomer);
+            Brands.Create(_terminalCustomer.Id);
 
             _terminalLocation = Testlogic.Terminal.Create(_location);
             Infotext.Create(_location);
