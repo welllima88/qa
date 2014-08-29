@@ -80,9 +80,9 @@
     <Compile Include="Administration\SoftwareExchange\Create.cs" />
     <Compile Include="Brand\AcquirerCreate.cs" />
     <Compile Include="Brand\Create.cs" />
-    <Compile Include="Brand\BrandEdit.cs" />
+    <Compile Include="Brand\Edit.cs" />
     <Compile Include="Brand\Selection.cs" />
-    <Compile Include="Brand\BrandView.cs" />
+    <Compile Include="Brand\View.cs" />
     <Compile Include="Common\ApplicationInfo.cs" />
     <Compile Include="Common\ChangeForm.cs" />
     <Compile Include="Common\CommonRes.Designer.cs">
