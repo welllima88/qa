@@ -9,12 +9,12 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static String Header
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.RecentMassmutations_Header)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#BatchHistoryList div.panel-heading")).Text; }
         }
 
         public static ReadOnlyCollection<IWebElementAdapter> Elements
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector(CommonRes.RecentMassmutations_Elements)); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("div#BatchHistoryList ul#BatchHistoryList>li")); }
         }
 
         public static IWebElementAdapter MostRecent
