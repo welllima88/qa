@@ -12,8 +12,8 @@ namespace Six.Scs.QA.Workflow
         /// <param name="infotext">Substring to create an Infotext</param>
         public static string Create(string infotext)
         {
-            infotext = InfoTextCreate.Text = String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
-            InfoTextCreate.SaveButton.Click();
+            infotext = Selenium.Common.Infotext.Create.Text = String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
+            Selenium.Common.Infotext.Create.SaveButton.Click();
             return infotext;
         }
     }
