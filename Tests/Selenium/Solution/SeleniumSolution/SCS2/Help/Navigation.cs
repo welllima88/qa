@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Help
 {
-    public class HelpNavigation : WebObject
+    public class Navigation : WebObject
     {
         public static IWebElementAdapter ReleaseNotes
         {

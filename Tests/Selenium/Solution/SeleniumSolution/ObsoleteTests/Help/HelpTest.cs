@@ -23,21 +23,21 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Help
         [TestCategory("Help")]
         public void HelpIsAvialable()
         {
-            Assert.AreEqual("Startseite", HelpNavigation.ScsHelp.Text);
+            Assert.AreEqual("Startseite", Navigation.ScsHelp.Text);
         }
 
         [TestMethod]
         [TestCategory("Help")]
         public void ScsHelpLinkIsAvailable()
         {
-            Assert.AreEqual("SCS", HelpNavigation.ReleaseNotes.Text);
+            Assert.AreEqual("SCS", Navigation.ReleaseNotes.Text);
         }
 
         [TestMethod]
         [TestCategory("Help")]
         public void Scs2HelpLinkIsAvailable()
         {
-            Assert.AreEqual("SCS2", HelpNavigation.Scs2.Text);
+            Assert.AreEqual("SCS2", Navigation.Scs2.Text);
         }
     }
 }
