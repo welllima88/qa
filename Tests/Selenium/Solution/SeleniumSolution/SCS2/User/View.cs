@@ -70,9 +70,9 @@ namespace Six.Scs.QA.Selenium.User
             get { return WebDriver.FindAdaptedElement(By.Id("Comment")).Text; }
         }
 
-        public static IWebElementAdapter EditButton
+        public static IWebElementAdapter Edit
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#id a#edit[href*='/User/Edit?userName=']")); }
         }
 
         public static IWebElementAdapter ReactivateButton

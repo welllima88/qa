@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Workflow
 
         public static void Edit(TestData.ValueObjects.User u)
         {
-            View.EditButton.Click();
+            View.Edit.Click();
 
             Selenium.User.Create.UserName = u.UserName;
             Selenium.User.Create.Salutation = u.Salutation;
