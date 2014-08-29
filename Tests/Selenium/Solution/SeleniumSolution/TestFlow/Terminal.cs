@@ -79,17 +79,17 @@ namespace Six.Scs.QA.Testlogic
             TestData.ValueObjects.TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
             Workflow.Terminal.Duplicate(terminalDuplicate);
 
-            TerminalMassValidation.ExecuteButton.Click();
+            TerminalValidation.ExecuteButton.Click();
 
-            while (!MassmutationProgress.HasFinished())
+            while (!Progress.HasFinished())
             {
                 TestDirector.Refresh();
             }
-            Assert.AreEqual("0", MassmutationProgress.Failed);
+            Assert.AreEqual("0", Progress.Failed);
 
             // MassmutationProgress.DateTime;
-            Assert.AreEqual("CreateTerminals", MassmutationProgress.Type);
-            Assert.AreEqual(terminalDuplicate.NumberOfTerminals, MassmutationProgress.TerminalList.Count.ToString());
+            Assert.AreEqual("CreateTerminals", Progress.Type);
+            Assert.AreEqual(terminalDuplicate.NumberOfTerminals, Progress.TerminalList.Count.ToString());
             /*
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpointPortlet.Status);
@@ -99,7 +99,7 @@ namespace Six.Scs.QA.Testlogic
 
             Assert.AreEqual(_location.CompanyName, LocationInfo.CompanyName);
             */
-            return MassmutationProgress.TerminalList;
+            return Progress.TerminalList;
         }
 
         public static void Open(TestData.ValueObjects.Terminal terminal)

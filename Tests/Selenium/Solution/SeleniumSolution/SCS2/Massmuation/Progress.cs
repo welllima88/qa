@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Massmuation
 {
-    public class MassmutationProgress : WebObject
+    public class Progress : WebObject
     {
         public static string Failed
         {

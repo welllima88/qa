@@ -25,35 +25,35 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         {
             Assert.AreEqual(
                 "Durch Einlesen des Files im unten stehenden Link können die Businesstemplates eingestellt sowie die neue FO-Schnittstelle aktiviert werden.",
-                MassmuationFileUpload.Description);
+                FileUpload.Description);
         }
 
         [Test]
         [Category("Massmutation"), Category("BusinessTemplate")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", FileUpload.DownloadTemplate);
         }
 
         [Test]
         [Category("Massmutation"), Category("BusinessTemplate")]
         public void FileChooser()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
+            Assert.AreEqual("", FileUpload.FileChooser.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("BusinessTemplate")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
+            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("BusinessTemplate")]
         public void Title()
         {
-            Assert.AreEqual("Businesstemplates", MassmuationFileUpload.Title);
+            Assert.AreEqual("Businesstemplates", FileUpload.Title);
         }
     }
 }

@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Massmuation
 {
-    public class MassmuationFileUpload : WebObject
+    public class FileUpload : WebObject
 
     {
         public static string Title

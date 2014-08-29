@@ -26,14 +26,14 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         [TestMethod]
         public void PasswordsAreDifferent()
         {
-            CollectionAssert.AllItemsAreUnique(TerminalMassValidation.Passwords);
-            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Passwords.Distinct().Count());
+            CollectionAssert.AllItemsAreUnique(TerminalValidation.Passwords);
+            Assert.AreEqual(NumberOfDuplications, TerminalValidation.Passwords.Distinct().Count());
         }
 
         [TestMethod]
         public void ReferenceTerminalIdsAreEqual()
         {
-            foreach (string referenceTerminalId in TerminalMassValidation.ReferenceTerminalIds)
+            foreach (string referenceTerminalId in TerminalValidation.ReferenceTerminalIds)
             {
                 Assert.AreEqual(TerminalId, referenceTerminalId);
             }
@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
         [TestMethod]
         public void NumberOfTerminalsToDuplicate()
         {
-            Assert.AreEqual(NumberOfDuplications, TerminalMassValidation.Count);
+            Assert.AreEqual(NumberOfDuplications, TerminalValidation.Count);
         }
     }
 }

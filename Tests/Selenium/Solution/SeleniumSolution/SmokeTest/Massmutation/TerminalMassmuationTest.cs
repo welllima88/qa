@@ -25,35 +25,35 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         {
             Assert.AreEqual(
                 "Bitte geben Sie den Pfad zum Excel File mit den Terminaldaten an. Bitte stellen Sie sicher, dass sie das richtige File mit der Bezeichnung SCA verwenden. Die Bezeichnung befindet sich im Exceldatei an der Spalte B1. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
-                MassmuationFileUpload.Description);
+                FileUpload.Description);
         }
 
         [Test]
         [Category("Massmutation"), Category("Terminal")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", FileUpload.DownloadTemplate);
         }
 
         [Test]
         [Category("Massmutation"), Category("Terminal")]
         public void FileChooser()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
+            Assert.AreEqual("", FileUpload.FileChooser.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Terminal")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
+            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Terminal")]
         public void Title()
         {
-            Assert.AreEqual("Terminals", MassmuationFileUpload.Title);
+            Assert.AreEqual("Terminals", FileUpload.Title);
         }
     }
 }

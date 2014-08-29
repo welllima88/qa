@@ -6,7 +6,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Massmuation
 {
-    public class TerminalMassValidation : WebObject
+    public class TerminalValidation : WebObject
     {
         public static List<string> Passwords
         {

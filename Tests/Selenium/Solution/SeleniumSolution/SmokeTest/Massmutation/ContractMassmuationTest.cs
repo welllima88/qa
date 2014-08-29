@@ -25,35 +25,35 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         {
             Assert.AreEqual(
                 "Mehrere Verträge hinzufügen",
-                MassmuationFileUpload.Description);
+                FileUpload.Description);
         }
 
         [Test]
         [Category("Massmutation"), Category("Contract")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", FileUpload.DownloadTemplate);
         }
 
         [Test]
         [Category("Massmutation"), Category("Contract")]
         public void FileChooser()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
+            Assert.AreEqual("", FileUpload.FileChooser.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Contract")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
+            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Contract")]
         public void Title()
         {
-            Assert.AreEqual("Verträge", MassmuationFileUpload.Title);
+            Assert.AreEqual("Verträge", FileUpload.Title);
         }
     }
 }

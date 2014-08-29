@@ -23,7 +23,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Massmutation
         [TestCategory("Massmutation"), TestCategory("Contract")]
         public void Title()
         {
-            Assert.AreEqual("Verträge", MassmuationFileUpload.Title);
+            Assert.AreEqual("Verträge", FileUpload.Title);
         }
 
         [TestMethod]
@@ -32,28 +32,28 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Massmutation
         {
             Assert.AreEqual(
                 "Mehrere Verträge hinzufügen",
-                MassmuationFileUpload.Description);
+                FileUpload.Description);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Contract")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileUploadButton.Text);
+            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Contract")]
         public void FileChooser()
         {
-            Assert.AreEqual("", MassmuationFileUpload.FileChooser.Text);
+            Assert.AreEqual("", FileUpload.FileChooser.Text);
         }
 
         [TestMethod]
         [TestCategory("Massmutation"), TestCategory("Contract")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", MassmuationFileUpload.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", FileUpload.DownloadTemplate);
         }
     }
 }
