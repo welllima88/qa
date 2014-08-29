@@ -118,21 +118,21 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void MyGroupTickets()
         {
-            Assert.IsTrue(TicketMenu.MyGroup.Displayed);
+            Assert.IsTrue(TicketMenu.MyGroup.Enabled);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MyTickets()
         {
-            Assert.IsTrue(TicketMenu.My.Displayed);
+            Assert.IsTrue(TicketMenu.My.Enabled);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void NotAssignedTickets()
         {
-            Assert.IsTrue(TicketMenu.NotAssigned.Displayed);
+            Assert.IsTrue(TicketMenu.NotAssigned.Enabled);
         }
 
         [Test]
