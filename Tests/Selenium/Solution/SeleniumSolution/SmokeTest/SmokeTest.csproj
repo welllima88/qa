@@ -89,14 +89,6 @@
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>
       <Name>SeleniumExtension</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestData\TestData.csproj">
-      <Project>{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}</Project>
-      <Name>TestData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TestFlow\Testlogic.csproj">
-      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
-      <Name>Testlogic</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
