@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Help
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("body div.navbar ul.nav li a[href$='/help/Releasenotes']"));
+                        By.CssSelector("body div ul.nav li a[href$='/help/Releasenotes']"));
             }
         }
 
@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.Help
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/SCS2']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar-inner div.container a.brand[href*='gate.telekurs.ch/scs2']"));
             }
         }
 
@@ -27,7 +27,7 @@ namespace Six.Scs.QA.Selenium.Help
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar ul.nav li a[href$='/help/SCS2']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("body div ul.nav li a[href$='/help/SCS2']"));
             }
         }
     }

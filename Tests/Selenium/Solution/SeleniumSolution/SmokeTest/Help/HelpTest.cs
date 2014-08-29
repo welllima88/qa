@@ -37,7 +37,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Help
         [Category("Help")]
         public void Scs2LinkIsAvailable()
         {
-            Assert.AreEqual("SCS2 Hilfe", HelpNavigation.Scs2.Text);
+            Assert.AreEqual("SCS2", HelpNavigation.Scs2.Text);
         }
     }
 }
