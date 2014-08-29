@@ -56,7 +56,6 @@
     <Compile Include="Help\HelpTest.cs" />
     <Compile Include="Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Lobby\FooterTest.cs" />
-    <Compile Include="Lobby\LobbyHeader.cs" />
     <Compile Include="Lobby\MenuTest.cs" />
     <Compile Include="Lobby\MetaNavigationBarTest.cs" />
     <Compile Include="Lobby\NavigationBarTest.cs" />
@@ -75,8 +74,6 @@
     <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberImportTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
-    <Compile Include="SIMCard\SimCardCreateTest.cs" />
-    <Compile Include="SIMCard\SimCardEditTest.cs" />
     <Compile Include="SIMCard\SimCardViewTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeTest.cs" />
