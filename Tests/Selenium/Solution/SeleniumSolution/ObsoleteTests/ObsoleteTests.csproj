@@ -136,7 +136,6 @@
     <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
     <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
     <Compile Include="Terminal\TraceLogConfig\TraceLogConfigDeactivateTest.cs" />
-    <Compile Include="User\UserViewTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,8 +143,7 @@
     <None Include="TestData\TestDataExcel.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tests\" />
-    <Folder Include="Ticketing\" />
+    <Folder Include="User\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SCS2\SCS Platin.csproj">
