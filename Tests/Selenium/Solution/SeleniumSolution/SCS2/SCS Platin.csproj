@@ -125,7 +125,7 @@
     <Compile Include="Environments\Prod.cs" />
     <Compile Include="Environments\QaK.cs" />
     <Compile Include="Environments\QaL.cs" />
-    <Compile Include="Help\HelpNavigation.cs" />
+    <Compile Include="Help\Navigation.cs" />
     <Compile Include="Location\BillingAddress\Create.cs" />
     <Compile Include="Location\BillingAddress\Edit.cs" />
     <Compile Include="Location\BillingAddress\View.cs" />
