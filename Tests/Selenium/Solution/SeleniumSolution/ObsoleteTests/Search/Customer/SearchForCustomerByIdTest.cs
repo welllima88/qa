@@ -39,15 +39,15 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Search.Customer
         [TestCategory("Search"), TestCategory("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchResult.First(new CustomerResult()).Text, SearchField);
+            StringAssert.Contains(SearchResult.First(new Selenium.Search.Result.Customer()).Text, SearchField);
         }
 
         [TestMethod]
         [TestCategory("Search"), TestCategory("Customer")]
         public void ShowLocationsAndTerminals()
         {
-            SearchResult.LoadMoreLink(new CustomerResult()).Click();
-            Assert.IsFalse(SearchResult.First(new CustomerResult()).Displayed);
+            SearchResult.LoadMoreLink(new Selenium.Search.Result.Customer()).Click();
+            Assert.IsFalse(SearchResult.First(new Selenium.Search.Result.Customer()).Displayed);
         }
     }
 }

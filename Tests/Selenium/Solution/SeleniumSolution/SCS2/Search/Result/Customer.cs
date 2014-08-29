@@ -1,20 +1,20 @@
 namespace Six.Scs.QA.Selenium.Search.Result
 {
-    public class TerminalResult : SearchDivLocator
+    public class Customer : SearchDivLocator
     {
         public override string ResultId
         {
-            get { return "terminalResult"; }
+            get { return "customerResult"; }
         }
 
         public override string LinkPart
         {
-            get { return "/TerminalDashboard/?terminalId="; }
+            get { return "/Customer/?CustomerId="; }
         }
 
         public override string Section
         {
-            get { return "terminalDiv"; }
+            get { return "customerDiv"; }
         }
     }
 }

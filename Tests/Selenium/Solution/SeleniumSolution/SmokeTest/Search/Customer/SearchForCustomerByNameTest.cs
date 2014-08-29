@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchField, SearchResult.First(new CustomerResult()).Text);
+            StringAssert.Contains(SearchField, SearchResult.First(new Selenium.Search.Result.Customer()).Text);
         }
 
         [Test]

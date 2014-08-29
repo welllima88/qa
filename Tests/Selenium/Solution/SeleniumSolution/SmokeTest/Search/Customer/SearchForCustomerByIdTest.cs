@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains("SIX Payment Services AG", SearchResult.First(new CustomerResult()).Text);
+            StringAssert.Contains("SIX Payment Services AG", SearchResult.First(new Selenium.Search.Result.Customer()).Text);
         }
 
         [Test]

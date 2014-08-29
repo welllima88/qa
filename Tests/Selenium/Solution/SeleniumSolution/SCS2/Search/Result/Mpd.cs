@@ -1,20 +1,20 @@
 namespace Six.Scs.QA.Selenium.Search.Result
 {
-    public class LocationResult : SearchDivLocator
+    public class Mpd : SearchDivLocator
     {
         public override string ResultId
         {
-            get { return "locationResult"; }
+            get { return "mpdResult"; }
         }
 
         public override string LinkPart
         {
-            get { return "/Location/"; }
+            get { return "/Mpd/?mpdId="; }
         }
 
         public override string Section
         {
-            get { return "locationDiv"; }
+            get { return "mpdDiv"; }
         }
     }
 }
