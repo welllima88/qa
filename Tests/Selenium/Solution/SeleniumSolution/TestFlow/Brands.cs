@@ -16,6 +16,17 @@ namespace Six.Scs.QA.Testlogic
 
         private static void CheckBrands()
         {
+            ContractsExist();
+            TicketsCreated();
+        }
+
+        private static void TicketsCreated()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private static void ContractsExist()
+        {
             throw new System.NotImplementedException();
         }
 
