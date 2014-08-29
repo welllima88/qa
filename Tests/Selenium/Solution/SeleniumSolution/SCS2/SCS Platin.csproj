@@ -79,7 +79,7 @@
     <Compile Include="Administration\SimCard\View.cs" />
     <Compile Include="Administration\SoftwareExchange\Create.cs" />
     <Compile Include="Brand\AcquirerCreate.cs" />
-    <Compile Include="Brand\BrandCreate.cs" />
+    <Compile Include="Brand\Create.cs" />
     <Compile Include="Brand\BrandEdit.cs" />
     <Compile Include="Brand\Selection.cs" />
     <Compile Include="Brand\BrandView.cs" />

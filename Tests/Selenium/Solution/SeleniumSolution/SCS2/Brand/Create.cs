@@ -4,7 +4,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Brand
 {
-    public class BrandCreate : WebObject
+    public class Create : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
     {
         public static void ClickBrandContractEdit(String brand)

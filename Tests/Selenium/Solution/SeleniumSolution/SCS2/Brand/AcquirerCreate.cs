@@ -68,7 +68,7 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void SaveAndCreate()
         {
-            BrandCreate.SaveAndCreate();
+            Create.SaveAndCreate();
         }
     }
 }

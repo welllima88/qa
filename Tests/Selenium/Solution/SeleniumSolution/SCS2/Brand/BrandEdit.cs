@@ -65,12 +65,12 @@ namespace Six.Scs.QA.Selenium.Brand
 
         public static void Dcc(bool dccEnabeled)
         {
-            BrandCreate.Dcc(dccEnabeled);
+            Create.Dcc(dccEnabeled);
         }
 
         public static void SaveAndCreate()
         {
-            BrandCreate.SaveAndCreate();
+            Create.SaveAndCreate();
         }
     }
 }
