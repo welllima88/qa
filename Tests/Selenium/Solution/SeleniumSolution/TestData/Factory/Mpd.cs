@@ -11,5 +11,15 @@
                 Description = "SYR MPD" + Factory.GenerateTestId()
             };
         }
+
+        public static ValueObjects.Mpd Edit()
+        {
+            return new ValueObjects.Mpd
+            {
+                Adress = "Adress Edit",
+                Port = "Port E",
+                Description = "SYR MPD" + Factory.GenerateTestId()
+            };
+        }
     }
 }
