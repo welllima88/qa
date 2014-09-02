@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static bool Status
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#state")).Text.Equals("aktiv"); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCardState")).Text.Equals("aktiv"); }
         }
 
         public static string TerminalId
