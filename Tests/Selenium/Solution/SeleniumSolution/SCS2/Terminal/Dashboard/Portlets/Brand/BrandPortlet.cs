@@ -21,7 +21,15 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(string.Format(
-                        "div#frame_BrandPortlet div#contractTree ul li[id='brandContract_{0}']", brandId)));
+                        "div#frame_EP2BrandPortlet div#ep2ContractTree ul li[id^='brandContract_{0}']", brandId)));
+        }
+
+        public static IWebElementAdapter Acquirer(string acquirerId)
+        {
+            return
+                WebDriver.FindAdaptedElement(
+                    By.CssSelector(string.Format(
+                        "div#frame_EP2BrandPortlet div#ep2ContractTree ul li[id^='acqContract_'] div#{0}", acquirerId)));
         }
     }
 }
