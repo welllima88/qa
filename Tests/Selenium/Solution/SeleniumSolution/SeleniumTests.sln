@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{1700B98D-44B7-439C-A001-6C7A56EDB6D9}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS Platin", "SCS2\SCS Plat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{20517DF7-28B0-4749-864B-0E815ECD5152}"
 	ProjectSection(SolutionItems) = preProject
+		C:\Users\siegmund\Documents\Architecture Graph For SeleniumTests.png = C:\Users\siegmund\Documents\Architecture Graph For SeleniumTests.png
 		ConvertToNunit.txt = ConvertToNunit.txt
 		E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp = E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp
 		Documents\Test-Automatisierung-Konzept.docx = Documents\Test-Automatisierung-Konzept.docx
@@ -49,52 +50,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestObjectGrabber", "TestObjectGrabber\TestObjectGrabber.csproj", "{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://mdzhwctfs01:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SeleniumExtension\\SeleniumExtension.csproj
-		SccProjectTopLevelParentUniqueName1 = SeleniumTests.sln
-		SccProjectName1 = SeleniumExtension
-		SccLocalPath1 = SeleniumExtension
-		SccProjectUniqueName2 = SCS2\\SCS\u0020Platin.csproj
-		SccProjectTopLevelParentUniqueName2 = SeleniumTests.sln
-		SccProjectName2 = SCS2
-		SccLocalPath2 = SCS2
-		SccProjectUniqueName3 = SCS\\SCS\u0020Classic.csproj
-		SccProjectTopLevelParentUniqueName3 = SeleniumTests.sln
-		SccProjectName3 = SCS
-		SccLocalPath3 = SCS
-		SccProjectUniqueName4 = SystemTest\\SystemTest.csproj
-		SccProjectTopLevelParentUniqueName4 = SeleniumTests.sln
-		SccProjectName4 = SystemTest
-		SccLocalPath4 = SystemTest
-		SccProjectUniqueName5 = SmokeTest\\SmokeTest.csproj
-		SccProjectTopLevelParentUniqueName5 = SeleniumTests.sln
-		SccProjectName5 = SmokeTest
-		SccLocalPath5 = SmokeTest
-		SccProjectUniqueName6 = TestData\\TestData.csproj
-		SccProjectTopLevelParentUniqueName6 = SeleniumTests.sln
-		SccProjectName6 = TestData
-		SccLocalPath6 = TestData
-		SccProjectUniqueName7 = Workflow\\Workflow.csproj
-		SccProjectTopLevelParentUniqueName7 = SeleniumTests.sln
-		SccProjectName7 = Workflow
-		SccLocalPath7 = Workflow
-		SccProjectUniqueName8 = TestFlow\\Testlogic.csproj
-		SccProjectTopLevelParentUniqueName8 = SeleniumTests.sln
-		SccProjectName8 = TestFlow
-		SccLocalPath8 = TestFlow
-		SccProjectUniqueName9 = ObsoleteTests\\ObsoleteTests.csproj
-		SccProjectTopLevelParentUniqueName9 = SeleniumTests.sln
-		SccProjectName9 = ObsoleteTests
-		SccLocalPath9 = ObsoleteTests
-		SccProjectUniqueName10 = TestObjectGrabber\\TestObjectGrabber.csproj
-		SccProjectTopLevelParentUniqueName10 = SeleniumTests.sln
-		SccProjectName10 = TestObjectGrabber
-		SccLocalPath10 = TestObjectGrabber
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		DEV|Any CPU = DEV|Any CPU
