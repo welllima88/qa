@@ -136,6 +136,7 @@
     <Compile Include="Massmuation\FileUpload.cs" />
     <Compile Include="Massmuation\Progress.cs" />
     <Compile Include="Massmuation\TerminalValidation.cs" />
+    <Compile Include="Mpd\Assign.cs" />
     <Compile Include="Mpd\Create.cs" />
     <Compile Include="Mpd\Edit.cs" />
     <Compile Include="Mpd\ListView.cs" />
