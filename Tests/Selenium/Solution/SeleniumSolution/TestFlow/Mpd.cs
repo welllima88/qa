@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.Mpd Edit(TestData.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            TestData.ValueObjects.Mpd mpd = TestData.Factory.Mpd.Create();
+            TestData.ValueObjects.Mpd mpd = TestData.Factory.Mpd.Edit();
             mpd.Id = _mpd.Id; // keep Id
 
             Workflow.Mpd.Edit(mpd);
