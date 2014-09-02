@@ -1,4 +1,6 @@
-﻿using Six.Scs.QA.Selenium.Brand;
+﻿using System;
+using NUnit.Framework;
+using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.QA.TestData.Factory;
 
@@ -22,12 +24,20 @@ namespace Six.Scs.QA.Testlogic
 
         private static void TicketsCreated()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine(@"Checking Tickets");
         }
 
         private static void ContractsExist()
         {
-            throw new System.NotImplementedException();
+            Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
+            Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("332").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("361").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("363").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("811").Displayed);
+            Assert.IsTrue(BrandPortlet.Acquirer("acq_amexco").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("635").Displayed);
         }
 
         private static void CreateAndSaveBrands()
