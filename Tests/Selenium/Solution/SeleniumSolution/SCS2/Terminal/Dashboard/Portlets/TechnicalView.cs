@@ -73,5 +73,17 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
+
+        public static IWebElementAdapter MpdAssign
+        {
+            get
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("li#PosInterface.jstree-closed>ins")).Click();
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#portlet_TerminalTechnicalViewpointPortlet_content div#TechDataTree div#PrimaryMpdProperty div"));
+            }
+        }
     }
 }
