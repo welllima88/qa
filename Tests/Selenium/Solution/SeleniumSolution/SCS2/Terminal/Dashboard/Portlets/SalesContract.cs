@@ -68,7 +68,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId=']"));
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId='][href$='&cancel=True']"));
             }
         }
     }
