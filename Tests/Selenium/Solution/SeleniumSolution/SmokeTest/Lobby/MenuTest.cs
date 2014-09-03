@@ -116,9 +116,37 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
+        public void MyGroupProcessTickets()
+        {
+            Assert.IsTrue(LobbyMenu.MyGroupProcessTickets.Enabled);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
         public void MyGroupTickets()
         {
             Assert.IsTrue(TicketMenu.MyGroup.Enabled);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
+        public void MyIncidents()
+        {
+            Assert.IsTrue(LobbyMenu.MyIncidents.Enabled);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
+        public void MyPersonalProcessTickets()
+        {
+            Assert.IsTrue(LobbyMenu.MyPersonalProcessTickets.Enabled);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
+        public void MyTeams()
+        {
+            Assert.IsTrue(LobbyMenu.MyTeams.Enabled);
         }
 
         [Test]
@@ -154,6 +182,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public void SimCardManagement()
         {
             Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
+        public void UnAssignedProcessTickets()
+        {
+            Assert.IsTrue(LobbyMenu.UnAssignedProcessTickets.Enabled);
         }
     }
 }

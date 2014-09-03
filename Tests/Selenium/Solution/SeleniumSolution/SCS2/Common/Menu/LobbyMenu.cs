@@ -47,5 +47,45 @@ namespace Six.Scs.QA.Selenium.Common.Menu
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
         }
+
+        public static IWebElementAdapter MyIncidents
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TroubleTicket/Incident/Supporter']")); }
+        }
+
+        public static IWebElementAdapter MyTeams
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TroubleTicket/Incident/Teams']")); }
+        }
+
+        public static IWebElementAdapter MyPersonalProcessTickets
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a[href$='/TicketIntegration/MyPersonalProcessTickets/']"));
+            }
+        }
+
+        public static IWebElementAdapter MyGroupProcessTickets
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a[href$='/TicketIntegration/MyGroupProcessTickets/']"));
+            }
+        }
+
+        public static IWebElementAdapter UnAssignedProcessTickets
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a[href$='/TicketIntegration/UnAssignedProcessTickets/']"));
+            }
+        }
     }
 }
