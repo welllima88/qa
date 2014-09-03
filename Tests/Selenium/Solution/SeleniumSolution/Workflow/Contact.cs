@@ -52,6 +52,8 @@ namespace Six.Scs.QA.Workflow
             Selenium.Person.Edit.Web = c.Contact.Web;
 
             Selenium.Person.Edit.SaveButton.Click();
+
+            c.Id = View.Id;
         }
     }
 }

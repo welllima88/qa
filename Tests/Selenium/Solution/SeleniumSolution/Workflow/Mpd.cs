@@ -28,6 +28,8 @@ namespace Six.Scs.QA.Workflow
             Selenium.Mpd.Create.Port = m.Port;
 
             Selenium.Mpd.Create.SaveButton.Click();
+
+            m.Id = View.Id;
         }
     }
 }
