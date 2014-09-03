@@ -30,6 +30,14 @@ namespace Six.Scs.QA.Selenium.Common
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a.menu#ctl00_hplLanguages")).Text; }
         }
 
+        public static IWebElementAdapter CompanyLogo
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("html body#body img.companyLogo[alt='six logo']"));
+            }
+        }
+
         public static IWebElementAdapter LanguageItem(string language)
         {
             return WebDriver.FindAdaptedElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));

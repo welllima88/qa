@@ -18,6 +18,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
+        public void CompanyLogo()
+        {
+            Assert.IsTrue(MetaNavBar.CompanyLogo.Displayed);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
         public void LanguageEnglish()
         {
             MetaNavBar.Languages.Click();
