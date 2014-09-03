@@ -1,5 +1,5 @@
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Terminal.Quit;
+using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
 using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 
@@ -24,15 +24,15 @@ namespace Six.Scs.QA.Workflow
             SalesContract.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
-            Selenium.Terminal.Duplicate.View.NumberOfTerminals = duplicate.NumberOfTerminals;
+            View.NumberOfTerminals = duplicate.NumberOfTerminals;
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            Selenium.Terminal.Duplicate.View.InstallationMessage = duplicate.InstallMessage;
-            Selenium.Terminal.Duplicate.View.InformationText = duplicate.InformationText;
-            Selenium.Terminal.Duplicate.View.CopyPassword = duplicate.CopyPassword;
-            Selenium.Terminal.Duplicate.View.MessageForAcquirers = duplicate.MessageForAcquirers;
+            View.InstallationMessage = duplicate.InstallMessage;
+            View.InformationText = duplicate.InformationText;
+            View.CopyPassword = duplicate.CopyPassword;
+            View.MessageForAcquirers = duplicate.MessageForAcquirers;
 
-            Selenium.Terminal.Duplicate.View.DulpicateButton.Click();
+            View.DulpicateButton.Click();
         }
 
         public static string Quit()
@@ -44,6 +44,16 @@ namespace Six.Scs.QA.Workflow
             Selenium.Terminal.Quit.Quit.Reason = reason;
             Selenium.Terminal.Quit.Quit.Save.Click();
             return reason;
+        }
+
+        public static void Assign(TestData.ValueObjects.Mpd mpd)
+        {
+            TechnicalView.MpdAssign.Click();
+
+            Selenium.Mpd.Assign.Primary = mpd.Id;
+            Selenium.Mpd.Assign.Secondary = mpd.Id;
+
+            Selenium.Mpd.Assign.SaveButton.Click();
         }
     }
 }

@@ -8,6 +8,7 @@ using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.TestData.Factory;
+using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -53,6 +54,7 @@ namespace Six.Scs.QA.Testlogic
             ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
 
             ConfigCreate.ContinueButton.Click();
+            ConfigDetailsCreate.EcrInterface = "MPD over IP";
             ConfigCreate.SaveButton.Click();
 
             Assert.IsTrue(Selection.BrandTree().Displayed);
@@ -76,7 +78,7 @@ namespace Six.Scs.QA.Testlogic
         public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TestData.ValueObjects.TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
+            TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
             Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalValidation.ExecuteButton.Click();
@@ -120,6 +122,12 @@ namespace Six.Scs.QA.Testlogic
             Assert.IsTrue(TerminalInfo.Cancelled.Displayed);
             StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
             StringAssert.Contains(info, BusinessViewpoint.Status);
+        }
+
+        public static void Assign(TestData.ValueObjects.Mpd mpd, TestData.ValueObjects.Terminal terminal)
+        {
+            Open(terminal);
+            Workflow.Terminal.Assign(mpd);
         }
     }
 }
