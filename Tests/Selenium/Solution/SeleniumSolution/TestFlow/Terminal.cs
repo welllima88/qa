@@ -9,6 +9,7 @@ using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.TestData.Factory;
 using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
+using TerminalReplace = Six.Scs.QA.TestData.ValueObjects.TerminalReplace;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -128,6 +129,13 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
+        }
+
+        public static void Replace(TestData.ValueObjects.Terminal terminal)
+        {
+            Open(terminal);
+            TerminalReplace replace = TestData.Factory.TerminalReplace.Yoximo();
+            Workflow.Terminal.Replace(replace);
         }
     }
 }
