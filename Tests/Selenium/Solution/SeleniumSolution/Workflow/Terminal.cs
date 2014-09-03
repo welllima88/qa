@@ -1,7 +1,9 @@
+using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
 using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
+using TerminalReplace = Six.Scs.QA.TestData.ValueObjects.TerminalReplace;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -54,6 +56,24 @@ namespace Six.Scs.QA.Workflow
             Selenium.Mpd.Assign.Secondary = mpd.Id;
 
             Selenium.Mpd.Assign.SaveButton.Click();
+        }
+
+        public static void Replace(TerminalReplace replace)
+        {
+            SalesContract.Replace.Click();
+
+            ArticleChooser.Article = replace.Article;
+
+            Selenium.Terminal.Replace.InstallationType = replace.InstallationType;
+            Selenium.Terminal.Replace.SalesContract = replace.SalesContract;
+            Selenium.Terminal.Replace.SupportContract = replace.SupportContract;
+            Selenium.Terminal.Replace.Contactless = replace.Contactless;
+            Selenium.Terminal.Replace.DeliveryDate = replace.DeliveryDate;
+            Selenium.Terminal.Replace.InstallationRemark = replace.InstallationRemark;
+            Selenium.Terminal.Replace.Infotext = replace.Infotext;
+            Selenium.Terminal.Replace.SendNotifiaction = replace.SendNotifiaction;
+
+            Selenium.Terminal.Replace.SaveButton.Click();
         }
     }
 }
