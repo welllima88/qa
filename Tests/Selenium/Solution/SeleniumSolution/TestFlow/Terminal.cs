@@ -23,7 +23,7 @@ namespace Six.Scs.QA.Testlogic
 
             ArticleChooser.ArticleFilter = "xentissimo MOBILE WLAN, TCP/IP";
             ArticleChooser.Article = "xentissimo MOBILE WLAN, TCP/IP";
-            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ConfigCreate.Infotext = "Infotext SYR Terminal - xentissimo MOBILE WLAN, TCP/IP" + Factory.GenerateTestId();
             ConfigCreate.ContinueButton.Click();
 
             ConfigDetailsCreate.InstallRemark = "Install SYR Auto" + Factory.GenerateTestId();
@@ -33,6 +33,7 @@ namespace Six.Scs.QA.Testlogic
             terminal.Id = TerminalInfo.TerminalId;
 
             Workflow.Lobby.OpenLatestElement();
+
             Assert.AreEqual(terminal.Id, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
             Assert.AreEqual("xentissimo MOBILE WLAN, TCP/IP", BusinessViewpoint.TerminalType);
@@ -52,7 +53,8 @@ namespace Six.Scs.QA.Testlogic
 
             ArticleChooser.ArticleFilter = "1550";
             ArticleChooser.Article = "yomani AUTONOM, TCP/IP ep2 (DNS)";
-            ConfigCreate.Infotext = "SYR Terminal AUTO" + Factory.GenerateTestId();
+            ConfigCreate.Infotext = "Infotext SYR Terminal - yomani AUTONOM, TCP/IP ep2 (DNS)" +
+                                    Factory.GenerateTestId();
 
             ConfigCreate.ContinueButton.Click();
             ConfigDetailsCreate.EcrInterface = "MPD over IP";
@@ -63,13 +65,13 @@ namespace Six.Scs.QA.Testlogic
             terminal.Id = TerminalInfo.TerminalId;
 
             Workflow.Lobby.OpenLatestElement();
+
             Assert.AreEqual(terminal.Id, TerminalInfo.TerminalId);
             Assert.AreEqual("Aktiviert - Aktiviert", BusinessViewpoint.Status);
             Assert.AreEqual("yomani AUTONOM, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
             Assert.AreEqual("weiss", BusinessViewpoint.Color);
 
-            Assert.AreEqual(customer.Location.Contact.Language,
-                BusinessViewpoint.TerminalLanguage);
+            Assert.AreEqual(customer.Location.Contact.Language, BusinessViewpoint.TerminalLanguage);
 
             Assert.AreEqual(customer.CustomerNumber, CustomerInfo.Number);
             Assert.AreEqual(customer.CustomerName, CustomerInfo.Name);
