@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Selenium.Extension.Authentication.WebPages
+namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
 {
     public interface IUacLogOnPage
     {
