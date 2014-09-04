@@ -18,7 +18,7 @@ namespace Six.Scs.QA.TestData.Factory
                 Mobile = "+32 - 58 399 6237",
                 Category = "",
                 Solution = "",
-                Description = "SYR Trouble Ticket" + Factory.GenerateTestId();
+                Description = "SYR Trouble Ticket" + Factory.GenerateTestId()
             };
         }
     }
