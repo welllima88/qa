@@ -178,12 +178,13 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\TroubleTicket\Priority.cs" />
     <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\SalesContract.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TechnicalView.cs" />
     <Compile Include="Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TerminalTexts.cs" />
-    <Compile Include="Terminal\Dashboard\Portlets\TroubleTickets.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\TroubleTicket\TroubleTickets.cs" />
     <Compile Include="Terminal\Duplicate\View.cs" />
     <Compile Include="Terminal\EventLog\View.cs" />
     <Compile Include="Terminal\FinancialConfig\Edit.cs" />
