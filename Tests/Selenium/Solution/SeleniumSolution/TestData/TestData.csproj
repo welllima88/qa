@@ -55,6 +55,7 @@
     <Compile Include="Factory\Services.cs" />
     <Compile Include="Factory\Simcard.cs" />
     <Compile Include="Factory\TerminalReplace.cs" />
+    <Compile Include="Factory\Ticket.cs" />
     <Compile Include="Repository\Customer.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="ValueObjects\Brand\Acquirer.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="ValueObjects\Terminal.cs" />
     <Compile Include="ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="ValueObjects\TerminalReplace.cs" />
+    <Compile Include="ValueObjects\TroubleTicket.cs" />
     <Compile Include="ValueObjects\User.cs" />
   </ItemGroup>
   <ItemGroup />
