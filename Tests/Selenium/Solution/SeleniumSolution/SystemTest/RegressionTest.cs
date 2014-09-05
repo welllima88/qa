@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Tickets;
@@ -53,6 +52,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.Mpd.Edit(_mpd);
 
+            Testlogic.Terminal.ArticleChange(_terminalCustomer);
             Testlogic.Terminal.Quit(_terminalCustomer);
             _personOnLocation = Contact.Edit(_personOnLocation);
             Contact.Delete(_personOnCustomer);
