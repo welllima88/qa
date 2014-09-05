@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
 
             _terminalLocation = Testlogic.Terminal.Create(_location);
-            TroubleTicket.Create(_terminalLocation);
+            // TroubleTicket.Create(_terminalLocation);
             Infotext.Create(_location);
 
             _location = Testlogic.Location.Edit(_location);
@@ -52,7 +52,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.Mpd.Edit(_mpd);
 
-            Testlogic.Terminal.ArticleChange(_terminalCustomer);
+            // Testlogic.Terminal.ArticleChange(_terminalCustomer);
             Testlogic.Terminal.Quit(_terminalCustomer);
             _personOnLocation = Contact.Edit(_personOnLocation);
             Contact.Delete(_personOnCustomer);
