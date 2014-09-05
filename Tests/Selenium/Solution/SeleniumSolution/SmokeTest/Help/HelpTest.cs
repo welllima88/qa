@@ -9,6 +9,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Help
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestFixture]
+    [Ignore]
     public class HelpTest
     {
         [TestFixtureSetUp]
