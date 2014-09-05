@@ -37,47 +37,47 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static string NetProvider
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#NetworkProvider")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("NetworkProvider")).Text; }
         }
 
         public static string SimCardNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCardNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("SIMCardNumber")).Text; }
         }
 
         public static string MobileNumber
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#MobileNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("MobileNumber")).Text; }
         }
 
         public static string Pin
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#PIN")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("PIN")).Text; }
         }
 
         public static string Puk
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#PUK")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("PUK")).Text; }
         }
 
         public static bool Status
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#SIMCardState")).Text.Equals("aktiv"); }
+            get { return WebDriver.FindAdaptedElement(By.Id("SIMCard_State")).Text.Equals("aktiv"); }
         }
 
         public static string TerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#TerminalId")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("TerminalId")).Text; }
         }
 
         public static string Region
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Location")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Location")).Text; }
         }
 
         public static string Usage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#Usage")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Usage")).Text; }
         }
 
         public static IEnumerable<SimHistoryElement> SimHistory
@@ -85,7 +85,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
             get
             {
                 // take alle History Elements/ Wrap each in a SimHistory Element/ return a List of SimHistoryElements
-                // IEnumerable<IWebElementAdapter> d = WebDriver.FindElements(By.CssSelector("#SIMCard_History"));
+                // IEnumerable<IWebElementAdapter> d = WebDriver.FindElements(By.Id("#SIMCard_History"));
                 // d.;
                 // IEnumerable<SimHistoryElement> simHistory;
                 // return simHistory;
