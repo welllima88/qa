@@ -139,5 +139,15 @@ namespace Six.Scs.QA.Testlogic
             TerminalReplace replace = TestData.Factory.TerminalReplace.Yoximo();
             Workflow.Terminal.Replace(replace);
         }
+
+        public static void ArticleChange(TestData.ValueObjects.Terminal terminal)
+        {
+            Open(terminal);
+
+            Workflow.Terminal.ArticleChange("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)");
+            // after change of article the software change dialoge appears:
+            Workflow.Terminal.SoftwareChange();
+
+        }
     }
 }

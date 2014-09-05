@@ -195,6 +195,8 @@
     <Compile Include="Terminal\ConfigDetailsCreate.cs" />
     <Compile Include="Terminal\ListView.cs" />
     <Compile Include="Terminal\Replace.cs" />
+    <Compile Include="Terminal\ArticleChange.cs" />
+    <Compile Include="Terminal\SoftwareChange.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
     <Compile Include="User\Create.cs" />
