@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
+using Person = Six.Scs.QA.TestData.ValueObjects.Person;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -23,7 +23,17 @@ namespace Six.Scs.QA.Testlogic
 
         public static TestData.ValueObjects.User Edit(TestData.ValueObjects.User user)
         {
-            throw new NotImplementedException();
+            Open(user);
+
+            TestData.ValueObjects.User _user = TestData.Factory.User.Create();
+            _user.Password = user.Password; // copy password from creation
+            
+            Workflow.User.Edit(_user);
+            Check(_user);
+            Workflow.Lobby.OpenLatestElement();
+            Check(_user);
+
+            return _user;
         }
 
         public static void Open(TestData.ValueObjects.User user)
@@ -45,15 +55,15 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(u.WesMandant, View.WesMandant);
         }
 
-        public static void Create(TestData.ValueObjects.Person person)
+        public static void Create(Person person)
         {
             Contact.Open(person);
 
             Selenium.Person.View.CreateUser.Click();
 
-            Assert.Equals(person.Name, Selenium.User.Create.Name);
-            Assert.Equals(person.FirstName, Selenium.User.Create.FirstName);
-            Assert.Equals(person.Contact.Language, Selenium.User.Create.Language);
+            StringAssert.Contains(person.Name, Selenium.User.Create.Name);
+            StringAssert.Contains(person.FirstName, Selenium.User.Create.FirstName);
+            StringAssert.Contains(person.Contact.Language, Selenium.User.Create.Language);
         }
 
         public static void AddService(TestData.ValueObjects.User user)
@@ -66,7 +76,7 @@ namespace Six.Scs.QA.Testlogic
 
         private static void Check(IEnumerable<Service> services)
         {
-            foreach (var service in services)
+            foreach (Service service in services)
             {
                 // TODO ..
             }
