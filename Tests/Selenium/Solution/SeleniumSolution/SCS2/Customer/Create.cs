@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#save")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
         public static string Ep2MerchantId
