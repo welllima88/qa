@@ -55,7 +55,7 @@ namespace Six.Scs.QA.Selenium.User
 
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("create")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
     }
 }
