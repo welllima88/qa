@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         public TextFieldElement(IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
-                throw new NotTextBoxElementException(webElement.TagName, webElement.GetCssValue("type"));
+                throw new NotTextBoxElementException(webElement.TagName, webElement.GetAttribute("type"));
             _webElement = webElement;
         }
 
