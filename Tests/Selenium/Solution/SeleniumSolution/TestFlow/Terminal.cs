@@ -86,9 +86,15 @@ namespace Six.Scs.QA.Testlogic
 
             TerminalValidation.ExecuteButton.Click();
 
-            while (!Progress.HasFinished())
+            var tries = new Try(20);
+
+            while (!Progress.HasFinished() && tries.Again())
             {
                 TestDirector.Refresh();
+            }
+            if (tries.TooOften())
+            {
+                Assert.Fail("has not been processed probably due to Job Control error");
             }
             Assert.AreEqual("0", Progress.Failed);
 
@@ -147,7 +153,27 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Terminal.ArticleChange("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)");
             // after change of article the software change dialoge appears:
             Workflow.Terminal.SoftwareChange();
+        }
+    }
 
+    public class Try
+    {
+        private int _maxNumberOfTries;
+
+        public Try(int maxNumberOfTries)
+        {
+            _maxNumberOfTries = maxNumberOfTries;
+        }
+
+        public bool TooOften()
+        {
+            return _maxNumberOfTries <= 0;
+        }
+
+        public bool Again()
+        {
+            _maxNumberOfTries--;
+            return _maxNumberOfTries > 0;
         }
     }
 }
