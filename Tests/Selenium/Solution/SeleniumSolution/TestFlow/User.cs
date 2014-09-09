@@ -26,6 +26,7 @@ namespace Six.Scs.QA.Testlogic
             Open(user);
 
             TestData.ValueObjects.User _user = TestData.Factory.User.Create();
+            _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
             
             Workflow.User.Edit(_user);
