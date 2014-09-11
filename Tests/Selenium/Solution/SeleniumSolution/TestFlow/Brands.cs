@@ -8,14 +8,6 @@ namespace Six.Scs.QA.Testlogic
 {
     public class Brands
     {
-        public static void Create(string terminalId)
-        {
-            Terminal.Open(new TestData.ValueObjects.Terminal {Id = terminalId});
-
-            CreateAndSaveBrands();
-            CheckBrands();
-        }
-
         private static void CheckBrands()
         {
             ContractsExist();
@@ -69,6 +61,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Terminal.Open(terminal);
             CreateAndSaveBrands();
+            CheckBrands();
         }
     }
 }
