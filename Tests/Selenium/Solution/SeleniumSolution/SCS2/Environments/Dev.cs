@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Selenium.Environments
                 ScsRes.uac_passwort);
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 6, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
+                Timeouts = new Timeouts {ImplicitlyWait = 16, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
     }
