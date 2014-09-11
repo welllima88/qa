@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver
@@ -10,5 +11,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by);
         IWebElementAdapter FindAdaptedElement(By by);
         List<string> WebElementsAsStringList(ReadOnlyCollection<IWebElementAdapter> webElements);
+        WebDriverWait WebDriverWait();
     }
 }

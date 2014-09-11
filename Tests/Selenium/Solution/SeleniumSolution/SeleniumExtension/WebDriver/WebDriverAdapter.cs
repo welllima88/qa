@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.WebDriver
@@ -122,6 +123,13 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             var items = new List<String>(5);
             items.AddRange(webElements.Select(item => item.Text));
             return items;
+        }
+
+        public WebDriverWait WebDriverWait()
+        {
+            var wait = new WebDriverWait(_webDriver,
+                TimeSpan.FromSeconds(TestDirector.TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout));
+            return wait;
         }
     }
 }

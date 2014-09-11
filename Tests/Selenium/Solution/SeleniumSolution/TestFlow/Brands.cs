@@ -21,6 +21,8 @@ namespace Six.Scs.QA.Testlogic
 
         private static void ContractsExist()
         {
+            Assert.IsTrue(BrandPortlet.Available());
+
             Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
             Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
