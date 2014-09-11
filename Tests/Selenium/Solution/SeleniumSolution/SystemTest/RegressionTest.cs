@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Person _personOnCustomer;
         private static TestData.ValueObjects.Person _personOnLocation;
         private static TestData.ValueObjects.User _user;
-        private static List<string> _duplicatedTerminals;
+        private static List<TestData.ValueObjects.Terminal> _duplicatedTerminals;
         private static TestData.ValueObjects.Mpd _mpd;
         private static SimCard _sim;
 
@@ -34,7 +34,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _customer = Testlogic.Customer.Edit(_customer);
 
-            Brands.Create(_terminalCustomer.Id);
+            Brands.Create(_terminalCustomer);
 
             Infotext.Create(_customer);
 
@@ -70,7 +70,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Terminal.Replace(_terminalLocation);
 
             _sim = Testlogic.SimCard.Create();
-            Testlogic.SimCard.Edit(_sim);
+            Testlogic.SimCard.Edit(_sim, _duplicatedTerminals[0]);
         }
     }
 }
