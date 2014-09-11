@@ -9,6 +9,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
     public static class TestDirector
     {
         private const string HomePathUrl = "";
+        private const int RemoteTimeout = 44;
         public static IWebDriverAdapter WebDriver { get; private set; }
         public static TestEnvironment TestEnvironment { get; set; }
 
@@ -46,7 +47,8 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             {
                 DesiredCapabilities capability = DesiredCapabilities(firefoxProfile);
                 WebDriver =
-                    new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability, TimeSpan.FromSeconds(20)));
+                    new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability,
+                        TimeSpan.FromSeconds(RemoteTimeout)));
 
                 run = "GRID";
             }
