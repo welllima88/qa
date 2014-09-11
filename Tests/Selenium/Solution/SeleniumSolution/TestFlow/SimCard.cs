@@ -14,16 +14,19 @@ namespace Six.Scs.QA.Testlogic
             SimCardMenu.SimCardManagement.Click();
 
             TestData.ValueObjects.SimCard simCard = Simcard.Create();
-            
+
             Workflow.SimCard.Create(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard)
+        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard,
+            TestData.ValueObjects.Terminal terminal)
         {
             Open(_simCard);
             TestData.ValueObjects.SimCard simCard = Simcard.Edit();
+            simCard.TerminalId = terminal.Id;
+
             Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
