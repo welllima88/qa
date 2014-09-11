@@ -78,7 +78,7 @@ namespace Six.Scs.QA.Testlogic
             return terminal;
         }
 
-        public static List<string> Duplicate(TestData.ValueObjects.Terminal terminal)
+        public static List<TestData.ValueObjects.Terminal> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
             TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
@@ -110,7 +110,20 @@ namespace Six.Scs.QA.Testlogic
 
             Assert.AreEqual(_location.CompanyName, LocationInfo.CompanyName);
             */
-            return Progress.TerminalList;
+
+            return CreateTerminalObjectsFromIds(Progress.TerminalList);
+        }
+
+        private static List<TestData.ValueObjects.Terminal> CreateTerminalObjectsFromIds(List<string> terminalList)
+        {
+            var terminalObjects = new List<TestData.ValueObjects.Terminal>(terminalList.Count);
+
+            foreach (string terminalId in terminalList)
+            {
+                terminalObjects.Add(new TestData.ValueObjects.Terminal {Id = terminalId});
+            }
+
+            return terminalObjects;
         }
 
         public static void Open(TestData.ValueObjects.Terminal terminal)
