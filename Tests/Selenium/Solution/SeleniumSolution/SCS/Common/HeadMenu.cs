@@ -7,36 +7,36 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public const string MenuPrefix = "frame[name='head']";
 
-        public IWebElement Logout
+        public IWebElementAdapter Logout
         {
             get
             {
                 WebDriver.SwitchTo().Frame("head");
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "a[href$='UAFState=logout']"));
             }
         }
 
-        public IWebElement CompanyLogo
+        public IWebElementAdapter CompanyLogo
         {
             get
             {
                 return
-                    WebDriver.FindElement(
+                    WebDriver.FindAdaptedElement(
                         By.CssSelector(
                             "a[href$='UAFState=logout']"));
             }
         }
 
-        public IWebElement System
+        public IWebElementAdapter System
         {
             get
             {
                 WebDriver.SwitchTo().Frame("head");
                 return
-                    WebDriver.FindElement(By.CssSelector("div#system"));
+                    WebDriver.FindAdaptedElement(By.CssSelector("div#system"));
             }
         }
     }

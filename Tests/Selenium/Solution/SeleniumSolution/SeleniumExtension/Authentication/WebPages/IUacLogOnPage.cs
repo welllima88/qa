@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+﻿using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
 {
@@ -6,6 +6,6 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
     {
         string UserName { set; }
         string UserPasswort { set; }
-        IWebElement LoginButton { get; }
+        IWebElementAdapter LoginButton { get; }
     }
 }

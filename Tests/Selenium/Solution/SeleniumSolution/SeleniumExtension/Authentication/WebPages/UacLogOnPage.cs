@@ -25,9 +25,9 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
             }
         }
 
-        public IWebElement LoginButton
+        public IWebElementAdapter LoginButton
         {
-            get { return WebDriver.FindElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnLogin")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnLogin")); }
         }
     }
 }
