@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Old.Tests
         [TestFixtureSetUp]
         public static void ClassInit()
         {
-            TestDirector.Navigate();
+            // TestDirector.Navigate();
         }
 
         [Test]
