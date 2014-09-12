@@ -10,6 +10,7 @@ namespace Six.Scs.QA.Selenium.Old.Support.AddService
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestFixture]
+    [Ignore]
     public class AddServiceToUsers
     {
         [SetUp]
