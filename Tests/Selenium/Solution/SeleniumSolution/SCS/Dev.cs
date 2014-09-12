@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Old
     {
         public Dev()
         {
-            BaseUrl = new Uri("https://mdzhwcweb01/mgmt/");
+            BaseUrl = new Uri("https://mdzhwcweb01/mgmt/index.asp");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Common.Scs();
             Authentication = new UacAuthentication(new UacLogOnPageOld(),
@@ -20,9 +20,9 @@ namespace Six.Scs.QA.Selenium.Old
             {
                 Timeouts = new Timeouts
                 {
-                    ImplicitlyWait = 5,
-                    SetScriptTimeout = 10,
-                    SetPageLoadTimeout = 30
+                    ImplicitlyWait = 10,
+                    SetScriptTimeout =30,
+                    SetPageLoadTimeout = 60
                 }
             };
         }
