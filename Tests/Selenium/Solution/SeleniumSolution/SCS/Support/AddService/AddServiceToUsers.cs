@@ -4,7 +4,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium.Support.AddService
+namespace Six.Scs.QA.Selenium.Old.Support.AddService
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

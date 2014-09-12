@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Common
+namespace Six.Scs.QA.Selenium.Old.Common
 {
     public class HeadMenu : WebObject
     {
@@ -19,7 +19,7 @@ namespace Six.Scs.QA.Selenium.Common
             }
         }
 
-        public IWebElementAdapter CompanyLogo
+        public static IWebElementAdapter CompanyLogo
         {
             get
             {
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Common
             }
         }
 
-        public IWebElementAdapter System
+        public static IWebElementAdapter System
         {
             get
             {

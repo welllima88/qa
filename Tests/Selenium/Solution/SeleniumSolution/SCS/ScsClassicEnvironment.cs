@@ -3,7 +3,7 @@ using Six.Scs.QA.Selenium.Extension.Authentication.Method;
 using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.Properties;
 
-namespace Six.Scs.QA.Selenium
+namespace Six.Scs.QA.Selenium.Old
 {
     public class ScsClassicEnvironment : TestEnvironment
     {

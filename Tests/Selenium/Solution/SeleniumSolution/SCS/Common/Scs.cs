@@ -1,6 +1,6 @@
 using Six.Scs.QA.Selenium.Extension.Authentication;
 
-namespace Six.Scs.QA.Selenium.Common
+namespace Six.Scs.QA.Selenium.Old.Common
 {
     public class Scs : IApplication
     {

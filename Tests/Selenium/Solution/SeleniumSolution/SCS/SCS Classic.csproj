@@ -9,7 +9,7 @@
     <ProjectGuid>{6D095BBA-2ED9-4E34-9F85-A99D43A94FFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Selenium</RootNamespace>
+    <RootNamespace>Six.Scs.QA.Selenium.Old</RootNamespace>
     <AssemblyName>SCS Classic</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -58,6 +58,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -86,6 +87,7 @@
     <Compile Include="Customer\CustomerCreate.cs" />
     <Compile Include="Customer\CustomerEdit.cs" />
     <Compile Include="Customer\CustomerView.cs" />
+    <Compile Include="Tests\ApplicationInfoTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
+using Six.Scs.QA.Selenium.Extension.Environment;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium
+namespace Six.Scs.QA.Selenium.Old
 {
     [SetUpFixture]
     public static class TestLauncher
@@ -10,7 +11,7 @@ namespace Six.Scs.QA.Selenium
         public static void LaunchTestDirector()
         {
             TestDirector.TestEnvironment = new Dev();
-            TestDirector.PrepareBrowser();
+            TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.LogOn();
         }
 
