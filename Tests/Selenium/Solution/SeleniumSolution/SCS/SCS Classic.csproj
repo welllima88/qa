@@ -80,7 +80,7 @@
     <Compile Include="Common\HeadMenu.cs" />
     <Compile Include="Common\Scs.cs" />
     <Compile Include="Dev.cs" />
-    <Compile Include="Common\MainObject.cs" />
+    <Compile Include="MainObject.cs" />
     <Compile Include="HeadObject.cs" />
     <Compile Include="Properties\ScsRes.Designer.cs">
       <AutoGen>True</AutoGen>

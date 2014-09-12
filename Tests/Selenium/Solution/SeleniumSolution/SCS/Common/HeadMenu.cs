@@ -3,41 +3,21 @@ using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Old.Common
 {
-    public class HeadMenu : WebObject
+    public class HeadMenu : HeadObject
     {
-        public const string MenuPrefix = "frame[name='head']";
-
         public IWebElementAdapter Logout
         {
-            get
-            {
-                WebDriver.SwitchTo().Frame("head");
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "a[href$='UAFState=logout']"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='?Mode=Login&UAFState=logout']")); }
         }
 
         public static IWebElementAdapter CompanyLogo
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "a[href$='UAFState=logout']"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input[value='suchen']")); }
         }
 
         public static IWebElementAdapter System
         {
-            get
-            {
-                WebDriver.SwitchTo().Frame("head");
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("div#system"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#system")); }
         }
     }
 }

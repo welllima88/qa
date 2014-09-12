@@ -5,21 +5,21 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.Old
 {
     [SetUpFixture]
-    public static class TestLauncher
+    public class TestLauncher
     {
         [SetUp]
-        public static void LaunchTestDirector()
+        public void LaunchTestDirector()
         {
             TestDirector.TestEnvironment = new Dev();
+
             TestDirector.PrepareBrowser(SeleniumGridServer.Local);
             TestDirector.LogOn();
         }
 
         [TearDown]
-        public static void StopTestDirector()
+        public void StopTestDirector()
         {
-            TestDirector.LogOff();
-            TestDirector.ShutdownBrowser();
+            TestDirector.Stop();
         }
     }
 }
