@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("create")); }
         }
 
         public static ButtonElement AdressFromLocation
