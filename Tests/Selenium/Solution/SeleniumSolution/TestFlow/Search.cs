@@ -1,13 +1,7 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.Selenium.Location;
-using Six.Scs.QA.Selenium.Mpd;
-using Six.Scs.QA.Selenium.Search;
 using Six.Scs.QA.Selenium.Search.Result;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.User;
-using View = Six.Scs.QA.Selenium.Location.View;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -18,7 +12,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(customerId);
             SearchResult.First(new Selenium.Search.Result.Customer()).Click();
 
-            Assert.AreEqual(customerId, Selenium.Customer.View.CustomerNumber);
+            Assert.AreEqual(customerId, View.CustomerNumber);
         }
 
         public static void LocationCanBeFoundByLocationName(string locationName)
@@ -26,7 +20,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(locationName);
             SearchResult.First(new Selenium.Search.Result.Location()).Click();
 
-            Assert.AreEqual(locationName, View.CompanyName);
+            Assert.AreEqual(locationName, Selenium.Location.View.CompanyName);
         }
 
         public static void CustomerCanBeFoundByCustomerName(string customerName)
@@ -34,7 +28,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Search.Find(customerName);
             SearchResult.First(new Selenium.Search.Result.Customer()).Click();
 
-            Assert.AreEqual(customerName, Selenium.Customer.View.CustomerName);
+            Assert.AreEqual(customerName, View.CustomerName);
         }
 
         public static void TerminalCanBeFoundById(string terminalId)
