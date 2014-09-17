@@ -12,6 +12,8 @@ namespace Six.Scs.QA.Workflow
             CustomerMenu.CustomerCreate.Click();
 
             Selenium.Customer.Create.Supplier = c.Supplier;
+            Selenium.Customer.Create.Confirm.Click();
+            
             Selenium.Customer.Create.SbsCurrency = c.SbsCurrency;
             Selenium.Customer.Create.SbsBillingTenant = c.SbsBillingTenant;
             Selenium.Customer.Create.CustomerName = c.CustomerName;
@@ -22,7 +24,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Customer.Create.Po = c.Location.Adress.Po;
             Selenium.Customer.Create.AdressAddition = c.Location.Adress.AdressAddition;
             Selenium.Customer.Create.Region = c.Location.Adress.Region;
-            Selenium.Customer.Create.SapNumber = c.Location.SapNumber;
+            
             Selenium.Customer.Create.Ep2MerchantId = c.Location.Ep2MerchantId; // may be don't set anything?
             Selenium.Customer.Create.Agency = c.Agency;
             Selenium.Customer.Create.Language = c.Location.Contact.Language;
@@ -59,8 +61,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Customer.Edit.Po = c.Location.Adress.Po;
             Selenium.Customer.Edit.AdressAddition = c.Location.Adress.AdressAddition;
             Selenium.Customer.Edit.Region = c.Location.Adress.Region;
-            Selenium.Customer.Edit.SapNumber = c.Location.SapNumber;
-
+            
             Selenium.Customer.Edit.Agency = c.Agency;
             Selenium.Customer.Edit.Language = c.Location.Contact.Language;
             Selenium.Customer.Edit.Country = c.Location.Adress.Country;

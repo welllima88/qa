@@ -43,7 +43,7 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(c.Location.SbsDebitNumber, View.SbsDebitNumber);
             // Todo: not reliable check: 
             // Assert.AreEqual(c.SbsAdressNumber, CustomerView.SbsAdressNumber);
-            Assert.AreEqual(c.Location.SapNumber, View.SapNumber);
+            
             Assert.AreEqual(c.Supplier, View.Supplier);
             Assert.AreEqual(c.SbsBillingTenant, View.SbsBillingTenant);
             StringAssert.Contains(c.SbsCurrency, View.SbsCurrency);
