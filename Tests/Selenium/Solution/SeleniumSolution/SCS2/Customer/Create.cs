@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Customer
 
         public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("create")); }
         }
 
         public static string Ep2MerchantId
@@ -221,7 +221,6 @@ namespace Six.Scs.QA.Selenium.Customer
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select#StructureId")).
                     Selector().SelectByText(value);
-                SaveButton.Click();
             }
             get
             {
@@ -334,6 +333,11 @@ namespace Six.Scs.QA.Selenium.Customer
                     SelectByText(value);
             }
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_CustomerSegmentId")).Text; }
+        }
+
+        public static IWebElementAdapter Confirm
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
     }
 }
