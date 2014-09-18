@@ -12,6 +12,9 @@ namespace Six.Scs.QA.Selenium.User
 
         public static void Set(string name, string permission)
         {
+            WebDriver.FindAdaptedElement(By.CssSelector("table#NewLoginServices tr[id='" + name + "'] td select"))
+                .Selector()
+                .SelectByText(permission);
         }
     }
 }
