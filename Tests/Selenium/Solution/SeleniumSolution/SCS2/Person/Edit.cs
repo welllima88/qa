@@ -40,15 +40,8 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string Country
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.Id("ccc")).Selector().SelectByText(value);
-            }
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector(
-                    PersonEditRes.Country)).Selector().SelectedOption;
-            }
+            set { Create.Country = value; }
+            get { return Create.Country; }
         }
 
         public static string Language
