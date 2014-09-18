@@ -33,8 +33,8 @@ namespace Six.Scs.QA.Selenium.Search.Result
         {
             return
                 WebDriver.FindAdaptedElements(
-                    By.CssSelector("tbody#" + searchDivLocator.ResultId + " tr td a[href*='" + searchDivLocator.LinkPart +
-                                   "']"));
+                    By.CssSelector("div#SearchResult div#" + searchDivLocator.Section + " tbody#" +
+                                   searchDivLocator.ResultId + " tr td a[href*='" + searchDivLocator.LinkPart + "']"));
         }
     }
 }
