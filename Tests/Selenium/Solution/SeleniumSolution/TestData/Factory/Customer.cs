@@ -14,7 +14,6 @@
                 SupportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h",
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 Segment = "01_CH",
-                Agency = "B05 Leiser Peter",
                 Location = Location.Create(),
             };
         }
@@ -24,8 +23,7 @@
             return new ValueObjects.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
-                Location = Location.Edit(),
-                Agency = "SIX Payment Services (Europe)",
+                Location = Location.Edit(),                
             };
         }
 
@@ -38,7 +36,6 @@
                 SbsBillingTenant = "SIX Payment Services (Europe)",
                 CustomerName = "SYR Sele Kunde A$°",
                 CustomerNumber = "^@}$°",
-                Agency = "Albert Brun & Partner",
                 Location = Location.Invalid(),
             };
         }

@@ -20,6 +20,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Location.Create.Po = l.Adress.Po;
             Selenium.Location.Create.AdressAddition = l.Adress.AdressAddition;
             Selenium.Location.Create.Region = l.Adress.Region;
+            Selenium.Location.Create.Agency = l.Agency;
             
             Selenium.Location.Create.Language = l.Contact.Language;
             Selenium.Location.Create.Country = l.Adress.Country;
@@ -51,6 +52,7 @@ namespace Six.Scs.QA.Workflow
 
             View.EditButton.Click();
 
+            Selenium.Location.Edit.Agency = l.Agency;
             Selenium.Location.Edit.CompanyName = l.CompanyName;
             Selenium.Location.Edit.StreetNo = l.Adress.StreetNo;
             Selenium.Location.Edit.Zip = l.Adress.Zip;

@@ -151,7 +151,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void Agency()
         {
-            Assert.AreEqual(_c.Agency, View.Agency);
+            Assert.AreEqual(_c.Location.Agency, View.Agency);
         }
 
         [TestMethod]

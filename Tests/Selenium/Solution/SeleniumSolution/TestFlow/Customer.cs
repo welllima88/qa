@@ -58,7 +58,7 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(c.Location.Adress.StreetNo, View.StreetNo);
             Assert.AreEqual(c.Location.Adress.Zip, View.Zip);
             Assert.AreEqual(c.Location.Adress.City, View.City);
-            StringAssert.Contains(c.Agency, View.Agency);
+            StringAssert.Contains(c.Location.Agency, View.Agency);
             Assert.AreEqual(c.Location.Contact.Language, View.Language);
             Assert.AreEqual(c.Location.Adress.Country, View.Country);
             Assert.AreEqual(c.Location.Contact.Email, View.Email);

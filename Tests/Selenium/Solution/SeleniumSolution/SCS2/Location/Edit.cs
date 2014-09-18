@@ -134,5 +134,10 @@ namespace Six.Scs.QA.Selenium.Location
             get { return WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).Text; }
             set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).TextField().TypeText(value); }
         }
+
+        public static string Agency
+        {
+            set { Create.Agency = value; }
+        }
     }
 }

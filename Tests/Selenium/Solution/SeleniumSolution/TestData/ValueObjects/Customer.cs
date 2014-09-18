@@ -10,7 +10,6 @@ namespace Six.Scs.QA.TestData.ValueObjects
         public string SbsBillingTenant { get; set; }
         public string CashIntegrator { get; set; }
         public string CategoryCode { get; set; }
-        public string Agency { get; set; }
         public string SupportContract { get; set; }
         public string Segment { get; set; }
     }

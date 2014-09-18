@@ -181,5 +181,15 @@ namespace Six.Scs.QA.Selenium.Location
                     .TypeText(value);
             }
         }
+
+        public static string Agency
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("select#LocationData_AgencyId"))
+                    .Selector()
+                    .SelectByText(value);
+            }
+        }
     }
 }

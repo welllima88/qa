@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Customer.Create.Region = c.Location.Adress.Region;
             
             Selenium.Customer.Create.Ep2MerchantId = c.Location.Ep2MerchantId; // may be don't set anything?
-            Selenium.Customer.Create.Agency = c.Agency;
+            Selenium.Customer.Create.Agency = c.Location.Agency;
             Selenium.Customer.Create.Language = c.Location.Contact.Language;
             Selenium.Customer.Create.Country = c.Location.Adress.Country;
             Selenium.Customer.Create.Email = c.Location.Contact.Email;
@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Customer.Edit.AdressAddition = c.Location.Adress.AdressAddition;
             Selenium.Customer.Edit.Region = c.Location.Adress.Region;
             
-            Selenium.Customer.Edit.Agency = c.Agency;
+            Selenium.Customer.Edit.Agency = c.Location.Agency;
             Selenium.Customer.Edit.Language = c.Location.Contact.Language;
             Selenium.Customer.Edit.Country = c.Location.Adress.Country;
             Selenium.Customer.Edit.Email = c.Location.Contact.Email;
