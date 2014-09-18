@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Testlogic
             TestData.ValueObjects.User _user = TestData.Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
-            
+
             Workflow.User.Edit(_user);
             Check(_user);
             Workflow.Lobby.OpenLatestElement();
@@ -77,10 +77,7 @@ namespace Six.Scs.QA.Testlogic
 
         private static void Check(IEnumerable<Service> services)
         {
-            foreach (Service service in services)
-            {
-                // TODO ..
-            }
+            CollectionAssert.AreEquivalent(services, LoginSetup.GetAssignedServices());
         }
     }
 }
