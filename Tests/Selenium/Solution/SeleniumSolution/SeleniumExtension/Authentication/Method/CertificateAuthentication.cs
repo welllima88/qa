@@ -1,9 +1,8 @@
 using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
-    public class CertificateAuthentication : WebObject, IAuthentication
+    public class CertificateAuthentication : IAuthentication
     {
         private readonly string _mandant;
 

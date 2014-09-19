@@ -1,9 +1,8 @@
 using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
-    public class UacAuthentication : WebObject, IAuthentication
+    public class UacAuthentication : IAuthentication
     {
         private readonly string _password;
         private readonly IUacLogOnPage _uacLogOnPage;

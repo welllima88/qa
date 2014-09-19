@@ -1,10 +1,9 @@
 using System;
 using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
 {
-    public class SecurIdAuthentication : WebObject, IAuthentication
+    public class SecurIdAuthentication : IAuthentication
 
     {
         private readonly string _mandant;
