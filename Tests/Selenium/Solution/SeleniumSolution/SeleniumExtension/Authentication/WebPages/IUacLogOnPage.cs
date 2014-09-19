@@ -6,6 +6,6 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
     {
         string UserName { set; }
         string UserPasswort { set; }
-        IWebElementAdapter LoginButton { get; }
+        void Login();
     }
 }

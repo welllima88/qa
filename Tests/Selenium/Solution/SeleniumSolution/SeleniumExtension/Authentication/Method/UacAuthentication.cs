@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Method
         {
             _uacLogOnPage.UserName = _userName;
             _uacLogOnPage.UserPasswort = _password;
-            _uacLogOnPage.LoginButton.Click();
+            _uacLogOnPage.Login();
         }
     }
 }
