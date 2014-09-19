@@ -84,16 +84,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
                 .ImplicitlyWait(TimeSpan.FromSeconds(timeouts.ImplicitlyWait));
         }
 
-        public static void ShutdownBrowser()
-        {
-            WebDriver.Quit();
-        }
-
-        public static void LogOff()
-        {
-            TestEnvironment.Application.LogOff();
-        }
-
         public static void Navigate(string urlSuffix = HomePathUrl)
         {
             var suff = new Uri(urlSuffix, UriKind.Relative);
@@ -108,8 +98,8 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
 
         public static void Stop()
         {
-            LogOff();
-            ShutdownBrowser();
+            TestEnvironment.Application.LogOff();
+            WebDriver.Quit();
         }
     }
 }
