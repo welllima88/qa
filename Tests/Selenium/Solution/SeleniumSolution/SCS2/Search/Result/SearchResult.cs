@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Search.Result
@@ -26,15 +27,17 @@ namespace Six.Scs.QA.Selenium.Search.Result
 
         public static IWebElementAdapter First(SearchDivLocator searchDivLocator)
         {
-            return Result(searchDivLocator)[0];
+            return new WebElementAdapter(Result(searchDivLocator)[0]);
         }
 
-        public static ReadOnlyCollection<IWebElementAdapter> Result(SearchDivLocator searchDivLocator)
+        public static ReadOnlyCollection<IWebElement> Result(SearchDivLocator searchDivLocator)
         {
+            WebDriverWait w = WebDriver.WebDriverWait();
+            string cssb = "div#" + searchDivLocator.Section + " tbody#" + searchDivLocator.ResultId + " tr td a[href*='" +
+                          searchDivLocator.LinkPart + "']";
             return
-                WebDriver.FindAdaptedElements(
-                    By.CssSelector("div#SearchResult div#" + searchDivLocator.Section + " tbody#" +
-                                   searchDivLocator.ResultId + " tr td a[href*='" + searchDivLocator.LinkPart + "']"));
+                w.Until(
+                    d => d.FindElements(By.CssSelector(cssb)));
         }
     }
 }
