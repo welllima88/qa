@@ -21,7 +21,8 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
             {
                 // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
                 WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxPassword"))
-                    .PasswordTextField().TypeText(value);
+                    .PasswordTextField()
+                    .TypeText(value);
             }
         }
 

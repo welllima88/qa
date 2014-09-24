@@ -20,7 +20,8 @@ namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("input.loginInput[name='spPassword']"))
-                    .PasswordTextField().TypeText(value);
+                    .PasswordTextField()
+                    .TypeText(value);
             }
         }
 
