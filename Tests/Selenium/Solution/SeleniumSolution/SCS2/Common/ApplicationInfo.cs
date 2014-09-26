@@ -24,5 +24,19 @@ namespace Six.Scs.QA.Selenium.Common
                         By.CssSelector("div#applicationBar div.app-title span#ctl00_AppInfo_lblEnvironmentText"));
             }
         }
+
+        public static ButtonElement Support
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#applicationBar button#Support"))
+                    .Button();
+            }
+        }
+
+        public static IWebElementAdapter SupportDialog
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#myModal")); }
+        }
     }
 }

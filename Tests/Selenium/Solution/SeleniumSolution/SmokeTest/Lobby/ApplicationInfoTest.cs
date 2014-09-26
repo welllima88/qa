@@ -29,5 +29,19 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         {
             Assert.IsTrue(ApplicationInfo.Environment.Displayed);
         }
+
+        [Category("LobbyCheck")]
+        [Test]
+        public void SupportContact()
+        {
+            ApplicationInfo.Support.Click();
+
+            Assert.IsTrue(ApplicationInfo.SupportDialog.Displayed);
+
+            StringAssert.Contains("Support", ApplicationInfo.SupportDialog.Text);
+            StringAssert.Contains("SCS2", ApplicationInfo.SupportDialog.Text);
+            StringAssert.Contains("@six-group.com", ApplicationInfo.SupportDialog.Text);
+            StringAssert.Contains("+41 58 399", ApplicationInfo.SupportDialog.Text);
+        }
     }
 }
