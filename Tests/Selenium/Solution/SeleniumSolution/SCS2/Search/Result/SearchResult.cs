@@ -1,4 +1,5 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
@@ -27,17 +28,22 @@ namespace Six.Scs.QA.Selenium.Search.Result
 
         public static IWebElementAdapter First(SearchDivLocator searchDivLocator)
         {
-            return new WebElementAdapter(Result(searchDivLocator)[0]);
+            return Result(searchDivLocator).FirstOrDefault(d => d.Displayed);
         }
 
-        public static ReadOnlyCollection<IWebElement> Result(SearchDivLocator searchDivLocator)
+        private static IEnumerable<IWebElementAdapter> Result(SearchDivLocator searchDivLocator)
         {
-            WebDriverWait w = WebDriver.WebDriverWait();
+            WaitForSearchHasFinished();
+
             string cssb = "div#" + searchDivLocator.Section + " tbody#" + searchDivLocator.ResultId + " tr td a[href*='" +
                           searchDivLocator.LinkPart + "']";
-            return
-                w.Until(
-                    d => d.FindElements(By.CssSelector(cssb)));
+            return WebDriver.FindAdaptedElements(By.CssSelector(cssb));
+        }
+
+        private static void WaitForSearchHasFinished()
+        {
+            WebDriverWait w = WebDriver.WebDriverWait();
+            w.Until(d => d.FindElements(By.CssSelector("td#searchingActions")).Count == 0);
         }
     }
 }
