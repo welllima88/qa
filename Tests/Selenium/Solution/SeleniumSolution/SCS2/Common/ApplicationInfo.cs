@@ -7,12 +7,22 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter ApplicationName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ApplicationInfo_ApplicationName)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("div#applicationBar div.app-name span#ctl00_AppInfo_lblApplicationName"));
+            }
         }
 
         public static IWebElementAdapter Environment
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.ApplicationInfo_Environment)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("div#applicationBar div.app-title span#ctl00_AppInfo_lblEnvironmentText"));
+            }
         }
     }
 }
