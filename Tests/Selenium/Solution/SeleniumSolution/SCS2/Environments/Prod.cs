@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.Environments
             Authentication = new SecurIdAuthentication("user", "pass", ScsRes.mandant_prod, "securId");
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 15, SetPageLoadTimeout = 60}
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
     }

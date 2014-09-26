@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.Old
             Authentication = new SecurIdAuthentication("tksyr", @"PW", "tkcpos", "??");
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
 
@@ -27,7 +27,7 @@ namespace Six.Scs.QA.Selenium.Old
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+                Timeouts = new Timeouts {ImplicitlyWait = 3, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
 
@@ -39,7 +39,7 @@ namespace Six.Scs.QA.Selenium.Old
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 5, SetScriptTimeout = 10, SetPageLoadTimeout = 30}
+                Timeouts = new Timeouts {ImplicitlyWait = 2, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
     }

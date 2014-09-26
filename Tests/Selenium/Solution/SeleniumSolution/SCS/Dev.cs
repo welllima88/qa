@@ -20,8 +20,8 @@ namespace Six.Scs.QA.Selenium.Old
             {
                 Timeouts = new Timeouts
                 {
-                    ImplicitlyWait = 10,
-                    SetScriptTimeout =30,
+                    ImplicitlyWait = 2,
+                    SetScriptTimeout = 30,
                     SetPageLoadTimeout = 60
                 }
             };
