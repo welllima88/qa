@@ -37,6 +37,7 @@ namespace Six.Scs.QA.Testlogic
         private static void CreateAndSaveBrands()
         {
             BrandPortlet.NewBrandButton.Click();
+
             Selection.Open("acq_post");
             Selection.Select("283");
 
