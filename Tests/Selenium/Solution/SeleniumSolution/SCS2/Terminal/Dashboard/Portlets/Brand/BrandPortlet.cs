@@ -10,10 +10,14 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
         {
             get
             {
+                WebDriverWait w = WebDriver.WebDriverWait();
                 return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "div#frame_EP2BrandPortlet div.portletLinks a[href*='/EP2ContractCreate/ListByTerminal?TerminalId=']"));
+                    new WebElementAdapter(
+                        w.Until(
+                            d =>
+                                d.FindElement(
+                                    By.CssSelector(
+                                        "div#frame_EP2BrandPortlet div.portletLinks a[href*='/EP2ContractCreate/ListByTerminal?TerminalId=']"))));
             }
         }
 

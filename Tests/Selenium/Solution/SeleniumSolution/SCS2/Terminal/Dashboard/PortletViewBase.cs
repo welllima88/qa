@@ -1,10 +1,13 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 {
     public abstract class PortletViewBase : WebObject
     {
+        public static readonly WebDriverWait WebDriverWait = WebDriver.WebDriverWait();
+
         protected PortletViewBase()
         {
             Suffix = " div.portletKeyValueRow div.treeGridValueCol";

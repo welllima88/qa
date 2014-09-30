@@ -55,9 +55,9 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(
+                    new WebElementAdapter(WebDriver.WebDriverWait().Until(d => d.FindElement((
                         By.CssSelector(
-                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']"));
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']")))));
             }
         }
 
@@ -66,9 +66,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId='][href$='&cancel=True']"));
+                    new WebElementAdapter(WebDriverWait.Until(d => d.FindElement(By.CssSelector(
+                        "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId='][href$='&cancel=True']"))));
             }
         }
 
@@ -77,9 +76,9 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(
+                    new WebElementAdapter(WebDriver.WebDriverWait().Until(d => d.FindElement(
                         By.CssSelector(
-                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalArticleSelector/ReplaceTerminal/?TerminalId=']"));
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalArticleSelector/ReplaceTerminal/?TerminalId=']"))));
             }
         }
     }

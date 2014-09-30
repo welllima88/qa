@@ -1,5 +1,6 @@
 using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
@@ -78,7 +79,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
         {
             get
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("li#PosInterface.jstree-closed>ins")).Click();
+                WebDriverWait w = WebDriver.WebDriverWait();
+                w.Until(d => d.FindElement(By.CssSelector("li#PosInterface.jstree-closed>ins"))).Click();
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
