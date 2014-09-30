@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Selenium.Search.Result
 
         public override string Section
         {
-            get { return "userResult"; }
+            get { return "userDiv"; }
         }
     }
 }
