@@ -39,7 +39,7 @@ namespace Six.Scs.QA.Selenium.Old
             Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
             SeleniumConfig = new SeleniumConfig
             {
-                Timeouts = new Timeouts {ImplicitlyWait = 2, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
+                Timeouts = new Timeouts {ImplicitlyWait = 4, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
             };
         }
     }
