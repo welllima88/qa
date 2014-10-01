@@ -6,9 +6,14 @@ namespace Six.Scs.QA.Selenium.Massmuation
 {
     public class Progress : WebObject
     {
+        public static string Passed
+        {
+            get { return WebDriver.FindElement(By.Id("BatchSuccess")).GetAttribute("aria-valuenow"); }
+        }
+
         public static string Failed
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_Failed")).Text; }
+            get { return WebDriver.FindElement(By.Id("BatchFailed")).GetAttribute("aria-valuenow"); }
         }
 
         public static string Type
@@ -18,12 +23,17 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static string Done
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_Done")).Text; }
+            get { return WebDriver.FindElement(By.Id("BatchProgress")).GetAttribute("jobs_done"); }
         }
 
         public static string Total
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_All")).Text; }
+        }
+
+        public static ButtonElement RefreshButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("refresh")).Button(); }
         }
 
         public static List<string> TerminalList
@@ -33,7 +43,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
                 return
                     WebDriver.WebElementsAsStringList(
                         WebDriver.FindAdaptedElements(
-                            By.CssSelector("table#TerminalList tbody tr td a[href*='/TerminalDashboard?TerminalId=']")));
+                            By.CssSelector("div#TerminalList div p a[href*='/TerminalDashboard?TerminalId=']")));
             }
         }
 
