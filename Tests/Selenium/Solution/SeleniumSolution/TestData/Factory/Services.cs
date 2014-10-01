@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Six.Scs.QA.TestData.ValueObjects;
 
@@ -34,6 +33,11 @@ namespace Six.Scs.QA.TestData.Factory
                 {
                     Name = "SCS- ticket",
                     Permission = "Alle Tickets"
+                },
+                new Service
+                {
+                    Name = "Analyzer",
+                    Permission = "Service Benutzer"
                 }
             };
         }
