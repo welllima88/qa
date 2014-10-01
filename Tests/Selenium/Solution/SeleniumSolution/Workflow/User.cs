@@ -54,6 +54,7 @@ namespace Six.Scs.QA.Workflow
         public static void AddServices(IEnumerable<Service> services)
         {
             View.AddServiceButton.Click();
+
             foreach (Service service in services)
             {
                 LoginSetup.Set(service.Name, service.Permission);

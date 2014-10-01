@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Six.Scs.QA.TestData.ValueObjects;
 
