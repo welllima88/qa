@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
@@ -23,7 +25,7 @@ namespace Six.Scs.QA.Selenium.User
         public static Collection<Service> GetAssignedServices()
         {
             ReadOnlyCollection<IWebElement> rows =
-                WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tr"));
+                WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tbody tr"));
 
             var services = new Collection<Service>();
             foreach (IWebElement row in rows)
