@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.User
                 .SelectByText(permission);
         }
 
-        public static IEnumerable<Service> GetAssignedServices()
+        public static ICollection<Service> GetAssignedServices()
         {
             ReadOnlyCollection<IWebElement> rows =
                 WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tbody tr"));

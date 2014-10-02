@@ -4,9 +4,9 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.TestData.Factory
 {
-    public class Services
+    public static class Services
     {
-        public static IEnumerable<Service> Scs()
+        public static ICollection<Service> Scs()
         {
             return new Collection<Service>
             {
@@ -34,11 +34,6 @@ namespace Six.Scs.QA.TestData.Factory
                 {
                     Name = "SCS- ticket",
                     Permission = "Alle Tickets"
-                },
-                new Service
-                {
-                    Name = "Analyzer",
-                    Permission = "Service Benutzer"
                 }
             };
         }

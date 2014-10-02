@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.Factory;
@@ -71,9 +70,10 @@ namespace Six.Scs.QA.Testlogic
         public static void AddService(TestData.ValueObjects.User user)
         {
             Open(user);
-            IEnumerable<Service> services = Services.Scs();
+            ICollection<Service> services = Services.Scs();
             Workflow.User.AddServices(services);
-            CollectionAssert.AreEquivalent(services, LoginSetup.GetAssignedServices());
+            ICollection<Service> actList = LoginSetup.GetAssignedServices();
+            CollectionAssert.AreEquivalent(services, actList);
         }
     }
 }
