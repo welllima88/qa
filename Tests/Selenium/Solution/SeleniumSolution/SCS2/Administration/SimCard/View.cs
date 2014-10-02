@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SIMCard/LockCard?simCardId=']")).Button();
+                return WebDriver.FindAdaptedElement(By.Id("lock")).Button();
             }
         }
 
@@ -62,7 +62,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static bool Status
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("SIMCard_State")).Text.Equals("aktiv"); }
+            get { return !WebDriver.FindAdaptedElement(By.Id("SIMCard_State")).Text.Contains("in"); }
         }
 
         public static string TerminalId
