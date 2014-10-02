@@ -47,5 +47,13 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(simCard.Status, View.Status);
             Assert.AreEqual(simCard.TerminalId, View.TerminalId);
         }
+
+        public static TestData.ValueObjects.SimCard Lock(TestData.ValueObjects.SimCard sim)
+        {
+            Open(sim);
+            Workflow.SimCard.Lock(sim);
+            Check(sim);
+            return sim;
+        }
     }
 }

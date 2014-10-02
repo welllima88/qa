@@ -35,5 +35,11 @@ namespace Six.Scs.QA.Workflow
 
             Selenium.Administration.SimCard.Edit.SaveButton.Click();
         }
+
+        public static void Lock(TestData.ValueObjects.SimCard sim)
+        {
+            View.LockButton.Click();
+            sim.Status = false;
+        }
     }
 }
