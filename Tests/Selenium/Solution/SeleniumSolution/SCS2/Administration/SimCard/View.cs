@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.Administration.SimCard
 
         public static ButtonElement UnlinkButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='unlink']")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a#unlink")).Button(); }
         }
 
         public static ButtonElement EditButton
