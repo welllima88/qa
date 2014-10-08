@@ -41,5 +41,11 @@ namespace Six.Scs.QA.Workflow
             View.LockButton.Click();
             sim.Status = false;
         }
+
+        public static void Unlink(TestData.ValueObjects.SimCard simCard)
+        {
+            View.UnlinkButton.Click();
+            simCard.TerminalId = "";            
+        }
     }
 }
