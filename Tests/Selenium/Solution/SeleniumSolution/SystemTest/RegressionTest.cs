@@ -71,11 +71,11 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _sim = Testlogic.SimCard.Create();
             
-            _sim.TerminalId = _duplicatedTerminals[0].Id;
             _sim = Testlogic.SimCard.Edit(_sim);
+            _sim = Testlogic.SimCard.Link(_sim, _duplicatedTerminals[0]);
             
             Testlogic.SimCard.Lock(_sim);
-            Testlogic.SimCard.UnlinkTerminal(_sim);
+            Testlogic.SimCard.Unlink(_sim);
         }
     }
 }
