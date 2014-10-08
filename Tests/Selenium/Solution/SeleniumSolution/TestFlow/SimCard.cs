@@ -20,12 +20,10 @@ namespace Six.Scs.QA.Testlogic
             return simCard;
         }
 
-        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard,
-            TestData.ValueObjects.Terminal terminal)
+        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard)
         {
             Open(_simCard);
-            TestData.ValueObjects.SimCard simCard = Simcard.Edit();
-            simCard.TerminalId = terminal.Id;
+            TestData.ValueObjects.SimCard simCard = Simcard.Edit();            
 
             Workflow.SimCard.Edit(simCard);
             Check(simCard);
@@ -54,6 +52,14 @@ namespace Six.Scs.QA.Testlogic
             Workflow.SimCard.Lock(sim);
             Check(sim);
             return sim;
+        }
+
+        public static TestData.ValueObjects.SimCard UnlinkTerminal(TestData.ValueObjects.SimCard simCard)
+        {
+            Open(simCard);
+            Workflow.SimCard.Unlink(simCard);
+            Check(simCard);
+            return simCard;
         }
     }
 }
