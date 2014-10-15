@@ -71,5 +71,16 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                     ;
             }
         }
+
+        public static IWebElementAdapter MoveTerminal
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#frame_TerminalBusinessViewpointPortlet div.portletLinks a[href*='/TerminalChangeLocation?TerminalId=']"));
+            }
+        }
     }
 }
