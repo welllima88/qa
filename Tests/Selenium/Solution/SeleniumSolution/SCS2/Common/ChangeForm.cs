@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_NotificationReason']"))
                     .Selector()
-                    .SelectByValue(value);
+                    .SelectByText(value);
             }
         }
 
@@ -30,11 +30,11 @@ namespace Six.Scs.QA.Selenium.Common
         {
             if (changeTime.CompareTo(new TimeSpan()) > 0)
             {
-                WebDriver.FindAdaptedElement(By.Id("ChangeNow")).CheckBox().Set(false);
+                WebDriver.FindAdaptedElement(By.Id("ChangeInFuture")).CheckBox().Set(false);
                 // Example for setting a time value: 01.02.2014 13:30:41
                 WebDriver.FindAdaptedElement(By.Id("ChangeOn"))
                     .TextField()
-                    .TypeText(changeTime.ToString(""));
+                    .TypeText(changeTime.ToString("dd'.'MM'.'yyyy HH':'mm"));
             }
         }
     }
