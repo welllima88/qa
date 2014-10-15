@@ -125,7 +125,7 @@ namespace Six.Scs.QA.Selenium.Location
             }
             set
             {
-                WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByValue(value);
+                WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByText(value);
             }
         }
 
