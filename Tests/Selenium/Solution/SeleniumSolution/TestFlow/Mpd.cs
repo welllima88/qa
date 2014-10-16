@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        private static void Open(TestData.ValueObjects.Mpd mpd)
+        public static void Open(TestData.ValueObjects.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
