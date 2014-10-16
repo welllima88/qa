@@ -150,6 +150,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
+            // TODO insert a check
         }
 
         public static void Replace(TestData.ValueObjects.Terminal terminal)
@@ -157,6 +158,7 @@ namespace Six.Scs.QA.Testlogic
             Open(terminal);
             TerminalReplace replace = TestData.Factory.TerminalReplace.Yoximo();
             Workflow.Terminal.Replace(replace);
+            Assert.AreEqual(replace.Article, BusinessViewpoint.TerminalType);
         }
 
         public static void ArticleChange(TestData.ValueObjects.Terminal terminal)
@@ -166,10 +168,18 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Terminal.ArticleChange("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)");
             // after change of article the software change dialoge appears:
             Workflow.Terminal.SoftwareChange();
+            Assert.AreEqual("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
+        }
+
+        public static void Move(TestData.ValueObjects.Terminal terminal, TestData.ValueObjects.Location location)
+        {
+            Open(terminal);
+            Workflow.Terminal.Move(location);
+            Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
     }
 
-    public class Try
+    public class Try //TODO: separate
     {
         private int _maxNumberOfTries;
 
