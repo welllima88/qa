@@ -108,7 +108,7 @@ namespace Six.Scs.QA.Workflow
         {
             BusinessViewpoint.MoveTerminal.Click();
 
-            Selenium.Terminal.Move.SelectLocation(location.CompanyName);
+            // Selenium.Terminal.Move.SelectLocation(location.CompanyName);
             Selenium.Terminal.Move.UpdateReceipt = true;
 
             Selenium.Terminal.Move.SaveButton.Click();
