@@ -194,6 +194,7 @@
     <Compile Include="Terminal\EventLog\View.cs" />
     <Compile Include="Terminal\FinancialConfig\Edit.cs" />
     <Compile Include="Terminal\Functionbits.cs" />
+    <Compile Include="Terminal\Move.cs" />
     <Compile Include="Terminal\Quit\Quit.cs" />
     <Compile Include="Terminal\ArticleChooser.cs" />
     <Compile Include="Terminal\ConfigCreate.cs" />
