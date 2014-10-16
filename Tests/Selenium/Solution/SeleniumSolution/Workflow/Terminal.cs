@@ -103,5 +103,15 @@ namespace Six.Scs.QA.Workflow
         {
             Selenium.Terminal.SoftwareChange.UnBlock.Click();
         }
+
+        public static void Move(TestData.ValueObjects.Location location)
+        {
+            BusinessViewpoint.MoveTerminal.Click();
+
+            Selenium.Terminal.Move.SelectLocation(location.CompanyName);
+            Selenium.Terminal.Move.UpdateReceipt = true;
+
+            Selenium.Terminal.Move.SaveButton.Click();
+        }
     }
 }
