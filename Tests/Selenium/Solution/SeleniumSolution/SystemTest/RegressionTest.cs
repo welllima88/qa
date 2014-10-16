@@ -69,7 +69,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.Terminal.Replace(_terminalLocation);
             _location2 = Testlogic.Location.Create(_customer);
-            Testlogic.Terminal.Move(_terminalCustomer, _location2);
+            Testlogic.Terminal.Move(_terminalLocation, _location2);
 
             _sim = Testlogic.SimCard.Create();
 
