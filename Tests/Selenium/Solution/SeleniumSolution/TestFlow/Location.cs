@@ -20,6 +20,7 @@ namespace Six.Scs.QA.Testlogic
 
         public static TestData.ValueObjects.Location Create(TestData.ValueObjects.Customer customer)
         {
+            Customer.Open(customer);
             TestData.ValueObjects.Location location = TestData.Factory.Location.Create();
             Workflow.Location.Create(location);
             Check(location);
