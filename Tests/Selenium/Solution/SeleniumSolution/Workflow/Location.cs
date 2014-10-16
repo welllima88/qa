@@ -70,8 +70,8 @@ namespace Six.Scs.QA.Workflow
             Selenium.Location.Edit.Language = l.Contact.Language;
             Selenium.Location.Edit.Country = l.Adress.Country;
 
-            Selenium.Location.Edit.Reason = "CorrectionOnly";
-            ChangeForm.Reason = "MerchantAddressChange";
+            Selenium.Location.Edit.Reason = "Daten Korrektur (ohne Versand)";
+            ChangeForm.Reason = "Adressänderung";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
 
             Selenium.Location.Edit.SaveButton.Click();

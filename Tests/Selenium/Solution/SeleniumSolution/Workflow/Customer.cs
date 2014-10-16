@@ -1,3 +1,4 @@
+using System;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
@@ -71,8 +72,9 @@ namespace Six.Scs.QA.Workflow
             Selenium.Customer.Edit.Fax = c.Location.Contact.Fax;
             Selenium.Customer.Edit.Web = c.Location.Contact.Web;
 
-            ChangeForm.Reason = "MerchantAddressChange";
+            ChangeForm.Reason = "Adressänderung";
             ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " customer change remark";
+            // ChangeForm.DelayTime(new TimeSpan().Add(TimeSpan.FromMinutes(1)));
 
             Selenium.Customer.Edit.SaveButton.Click();
         }
