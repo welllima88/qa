@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Six.Scs.QA.Testlogic;
-using Six.Scs.QA.Testlogic.Tickets;
 using Contact = Six.Scs.QA.Testlogic.Contact;
 using SimCard = Six.Scs.QA.TestData.ValueObjects.SimCard;
 
@@ -13,13 +12,14 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Terminal _terminalLocation;
         private static TestData.ValueObjects.Terminal _terminalCustomer;
         private static TestData.ValueObjects.Customer _customer;
-        private static TestData.ValueObjects.Location _location;
+        private static TestData.ValueObjects.Location _location1;
         private static TestData.ValueObjects.Person _personOnCustomer;
         private static TestData.ValueObjects.Person _personOnLocation;
         private static TestData.ValueObjects.User _user;
         private static List<TestData.ValueObjects.Terminal> _duplicatedTerminals;
         private static TestData.ValueObjects.Mpd _mpd;
         private static SimCard _sim;
+        private static TestData.ValueObjects.Location _location2;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         public static void ExecuteRegressiontest()
         {
             _customer = Testlogic.Customer.Create();
-            _location = Testlogic.Location.Create(_customer);
+            _location1 = Testlogic.Location.Create(_customer);
             _personOnCustomer = Contact.Create(_customer);
             _terminalCustomer = Testlogic.Terminal.Create(_customer);
 
@@ -41,14 +41,14 @@ namespace Six.Scs.QA.Selenium.SystemTest
             _mpd = Testlogic.Mpd.Create(_customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
 
-            _terminalLocation = Testlogic.Terminal.Create(_location);
+            _terminalLocation = Testlogic.Terminal.Create(_location1);
             // TroubleTicket.Create(_terminalLocation);
-            Infotext.Create(_location);
+            Infotext.Create(_location1);
 
-            _location = Testlogic.Location.Edit(_location);
+            _location1 = Testlogic.Location.Edit(_location1);
             Infotext.Create(_terminalLocation);
 
-            _personOnLocation = Contact.Create(_location);
+            _personOnLocation = Contact.Create(_location1);
 
             Testlogic.Mpd.Edit(_mpd);
 
@@ -68,12 +68,14 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Brands.Create(_duplicatedTerminals[1]); // {0,1,..} means create brands on second terminal
 
             Testlogic.Terminal.Replace(_terminalLocation);
+            _location2 = Testlogic.Location.Create(_customer);
+            Testlogic.Terminal.Move(_terminalCustomer, _location2);
 
             _sim = Testlogic.SimCard.Create();
-            
+
             _sim = Testlogic.SimCard.Edit(_sim);
             _sim = Testlogic.SimCard.Link(_sim, _duplicatedTerminals[0]);
-            
+
             Testlogic.SimCard.Lock(_sim);
             Testlogic.SimCard.Unlink(_sim);
         }
