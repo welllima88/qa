@@ -114,6 +114,13 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             return _webDriver.FindElement(by);
         }
 
+        public WebDriverWait WebDriverWait()
+        {
+            var wait = new WebDriverWait(_webDriver,
+                TimeSpan.FromSeconds(TestDirector.TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout));
+            return wait;
+        }
+
         /// <summary>
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
@@ -123,13 +130,6 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             var items = new List<String>(5);
             items.AddRange(webElements.Select(item => item.Text));
             return items;
-        }
-
-        public WebDriverWait WebDriverWait()
-        {
-            var wait = new WebDriverWait(_webDriver,
-                TimeSpan.FromSeconds(TestDirector.TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout));
-            return wait;
         }
     }
 }

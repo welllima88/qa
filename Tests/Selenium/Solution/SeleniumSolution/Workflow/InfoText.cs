@@ -1,5 +1,4 @@
 ﻿using System;
-using Six.Scs.QA.Selenium.Common.Infotext;
 using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Workflow
@@ -12,7 +11,9 @@ namespace Six.Scs.QA.Workflow
         /// <param name="infotext">Substring to create an Infotext</param>
         public static string Create(string infotext)
         {
-            infotext = Selenium.Common.Infotext.Create.Text = String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
+            infotext =
+                Selenium.Common.Infotext.Create.Text =
+                    String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
             Selenium.Common.Infotext.Create.SaveButton.Click();
             return infotext;
         }
