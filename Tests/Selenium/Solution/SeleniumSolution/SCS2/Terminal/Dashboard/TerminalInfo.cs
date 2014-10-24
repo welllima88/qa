@@ -33,7 +33,10 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 
         public static IWebElementAdapter Cancelled
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.canceledTerminal")); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.canceledTerminal"));
+            }
         }
     }
 }

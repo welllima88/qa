@@ -19,16 +19,15 @@ namespace Six.Scs.QA.Selenium.Help
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body div.navbar-inner div.container a.brand[href*='gate.telekurs.ch/scs2']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("body div.navbar-inner div.container a.brand[href*='gate.telekurs.ch/scs2']"));
             }
         }
 
         public static IWebElementAdapter ScsHelp
         {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector("body div ul.nav li a[href$='/help/SCS2']"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("body div ul.nav li a[href$='/help/SCS2']")); }
         }
     }
 }

@@ -7,77 +7,77 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
     {
         public static string CompanyName
         {
-            set { BillingAddress.Create.CompanyName = value; }
+            set { Create.CompanyName = value; }
         }
 
         public static string StreetName
         {
-            set { BillingAddress.Create.StreetName = value; }
+            set { Create.StreetName = value; }
         }
 
         public static string Language
         {
-            set { BillingAddress.Create.Language = value; }
+            set { Create.Language = value; }
         }
 
         public static string Country
         {
-            set { BillingAddress.Create.Country = value; }
+            set { Create.Country = value; }
         }
 
         public static string Zip
         {
-            set { BillingAddress.Create.Zip = value; }
+            set { Create.Zip = value; }
         }
 
         public static string City
         {
-            set { BillingAddress.Create.City = value; }
+            set { Create.City = value; }
         }
 
         public static string AdressAddition
         {
-            set { BillingAddress.Create.AdressAddition = value; }
+            set { Create.AdressAddition = value; }
         }
 
         public static string Po
         {
-            set { BillingAddress.Create.Po = value; }
+            set { Create.Po = value; }
         }
 
         public static string Region
         {
-            set { BillingAddress.Create.Region = value; }
+            set { Create.Region = value; }
         }
 
         public static string Telephone
         {
-            set { BillingAddress.Create.Telephone = value; }
+            set { Create.Telephone = value; }
         }
 
         public static string Mobile
         {
-            set { BillingAddress.Create.Mobile = value; }
+            set { Create.Mobile = value; }
         }
 
         public static string Fax
         {
-            set { BillingAddress.Create.Fax = value; }
+            set { Create.Fax = value; }
         }
 
         public static string Email
         {
-            set { BillingAddress.Create.Email = value; }
+            set { Create.Email = value; }
         }
 
         public static string Web
         {
-            set { BillingAddress.Create.Web = value; }
+            set { Create.Web = value; }
         }
 
         public static IWebElementAdapter SaveButton
         {
-            get { return BillingAddress.Create.SaveButton; }
+            get { return Create.SaveButton; }
         }
 
         public static IWebElementAdapter CancelButton

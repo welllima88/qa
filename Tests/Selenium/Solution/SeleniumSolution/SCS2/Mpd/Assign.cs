@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Mpd
             set { WebDriver.FindAdaptedElement(By.Id("PrimaryMpdSelected")).Selector().SelectByValue(value); }
         }
 
-        public static string  Secondary
+        public static string Secondary
         {
             set { WebDriver.FindAdaptedElement(By.Id("BackupMpdSelected")).Selector().SelectByValue(value); }
         }

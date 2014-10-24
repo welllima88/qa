@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Search;
 using Six.Scs.QA.Selenium.Search.Result;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
@@ -26,7 +25,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains("SIX Payment Services AG", SearchResult.First(new Selenium.Search.Result.Customer()).Text);
+            StringAssert.Contains("SIX Payment Services AG",
+                SearchResult.First(new Selenium.Search.Result.Customer()).Text);
         }
 
         [Test]

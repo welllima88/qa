@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Administration;
 using Six.Scs.QA.Selenium.Administration.SerialNumberManage;
 using Six.Scs.QA.Selenium.Common.Menu;
 

@@ -23,7 +23,7 @@
             return new ValueObjects.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
-                Location = Location.Edit(),                
+                Location = Location.Edit(),
             };
         }
 

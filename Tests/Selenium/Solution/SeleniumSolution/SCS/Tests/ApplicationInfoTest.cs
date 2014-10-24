@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Old.Common;
 
 namespace Six.Scs.QA.Selenium.Old.Tests

@@ -7,8 +7,17 @@ namespace Six.Scs.QA.Selenium.Person
     {
         public static string AdressAddition
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition")).TextField().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition")).TextField().Text(); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition"))
+                    .TextField()
+                    .TypeText(value);
+            }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_Contact_Addition")).TextField().Text();
+            }
         }
 
         public static IWebElementAdapter SaveButton
@@ -35,7 +44,10 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static string Name
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_LastName")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_LastName")).TextField().TypeText(value);
+            }
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#PersonData_LastName")).Text; }
         }
 
