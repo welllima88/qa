@@ -13,6 +13,11 @@ namespace Six.Scs.QA.Selenium.Brand
             return WebDriver.FindAdaptedElement(By.Id("next"));
         }
 
+        public static IWebElementAdapter CancelButton()
+        {
+            return WebDriver.FindAdaptedElement(By.Id("cancel"));
+        }
+
         /// <summary>
         ///     Selects Brands which are to create on a terminal
         /// </summary>
