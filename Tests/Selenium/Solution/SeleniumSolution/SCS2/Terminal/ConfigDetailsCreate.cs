@@ -151,5 +151,16 @@ namespace Six.Scs.QA.Selenium.Terminal
                         By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
             }
         }
+
+        public static bool Dcc
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(
+                    By.Id("ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyDCCind_cbxDCC"))
+                    .CheckBox()
+                    .Set(value);
+            }
+        }
     }
 }
