@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Brand;
-using Six.Scs.QA.Selenium.Common.Infotext;
 using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
@@ -11,7 +8,6 @@ using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
-using ListView = Six.Scs.QA.Selenium.Terminal.ListView;
 using View = Six.Scs.QA.Selenium.Location.View;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
@@ -50,7 +46,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Regression
             Selection.Select("363");
             Selection.Select("811");
             Selection.Deselect("1161");
-            
+
             Selection.ConfirmButton().Click();
 
             AcquirerCreate.Remark = "SYR Contracts" + Factory.GenerateTestId();

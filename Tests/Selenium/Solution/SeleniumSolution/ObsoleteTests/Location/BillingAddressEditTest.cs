@@ -2,9 +2,7 @@
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.Selenium.Location.BillingAddress;
-using View = Six.Scs.QA.Selenium.Location.BillingAddress.View;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
 {

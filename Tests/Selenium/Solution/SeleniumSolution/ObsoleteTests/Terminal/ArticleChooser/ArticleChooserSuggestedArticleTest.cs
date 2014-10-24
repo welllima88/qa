@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Terminal;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.ArticleChooser
 {
