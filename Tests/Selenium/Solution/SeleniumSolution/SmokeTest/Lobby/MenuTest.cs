@@ -81,13 +81,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
-        public void MassMutationBusinessTemplateMigrate()
-        {
-            Assert.IsTrue(MassMutationMenu.BusinessTemplateMigrate.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
         public void MassMutationContractCreate()
         {
             Assert.IsTrue(MassMutationMenu.ContractCreate.Enabled);

@@ -65,7 +65,6 @@
     <Compile Include="Lobby\RecentMassJobsTest.cs" />
     <Compile Include="Lobby\UserViewTest.cs" />
     <Compile Include="Massmutation\AcquirerChangeTest.cs" />
-    <Compile Include="Massmutation\BusinessTemplateMassmuationTest.cs" />
     <Compile Include="Massmutation\ContractMassmuationTest.cs" />
     <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
     <Compile Include="Massmutation\LocationMassmuationTest.cs" />
