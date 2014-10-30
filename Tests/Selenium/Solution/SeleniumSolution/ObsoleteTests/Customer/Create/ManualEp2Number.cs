@@ -74,7 +74,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             Selenium.Customer.Create.CategoryCode = _categoryCode;
             Selenium.Customer.Create.SupportContract = _supportContract;
             Selenium.Customer.Create.CashIntegrator = _cashIntegrator;
-            Selenium.Customer.Create.Segment = _segment;
+            Selenium.Customer.Create.SbsSegment = _segment;
             Selenium.Customer.Create.CompanyName = _companyName;
             Selenium.Customer.Create.StreetNo = _streetName;
             Selenium.Customer.Create.Zip = _zip;

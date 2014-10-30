@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             string supportContract = "SPA Servicepaket Advance";
             Selenium.Customer.Create.SupportContract = supportContract;
             string customerSegment = "07_P_CETREL";
-            Selenium.Customer.Create.Segment = customerSegment;
+            Selenium.Customer.Create.SbsSegment = customerSegment;
             string customerName = "SYR Cetrel Kunde Create";
             Selenium.Customer.Create.CustomerName = customerName;
             string companyName = "SYR Cetrel Firma Create";

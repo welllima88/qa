@@ -11,6 +11,7 @@ namespace Six.Scs.QA.TestData.ValueObjects
         public string CashIntegrator { get; set; }
         public string CategoryCode { get; set; }
         public string SupportContract { get; set; }
-        public string Segment { get; set; }
+        public string SbsSegment { get; set; }
+        public string WesMandant { get; set; }
     }
 }

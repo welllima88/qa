@@ -13,7 +13,8 @@
                 CategoryCode = "3364: AGENCY RENT-A-CAR",
                 SupportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h",
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
-                Segment = "01_CH",
+                SbsSegment = "01_CH",
+                WesMandant = "TKCPOS",
                 Location = Location.Create(),
             };
         }

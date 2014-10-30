@@ -325,7 +325,7 @@ namespace Six.Scs.QA.Selenium.Customer
             }
         }
 
-        public static string Segment
+        public static string SbsSegment
         {
             set
             {
