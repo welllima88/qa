@@ -210,7 +210,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void Segment()
         {
-            Assert.AreEqual(_c.SbsSegment, View.Segment);
+            Assert.AreEqual(_c.Segment, View.Segment);
         }
     }
 }
