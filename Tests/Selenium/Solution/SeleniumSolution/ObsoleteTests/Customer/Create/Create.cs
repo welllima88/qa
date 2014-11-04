@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Testlogic.Builder;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
@@ -210,7 +209,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         [TestCategory("Customer"), TestCategory("Create")]
         public void Segment()
         {
-            Assert.AreEqual(_c.Segment, View.Segment);
+            Assert.AreEqual(_c.SbsSegment, View.Segment);
         }
     }
 }
