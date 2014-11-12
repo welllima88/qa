@@ -8,7 +8,7 @@ using SIX.EP2.Core.SessionHandling;
 namespace SIX.SCS.QA.Tests.EP2.COI
 {
     [TestFixture]
-    public class LaidRequestTest
+    public class CoiNotificationTest
     {
         [SetUp]
         public void PrepareCoiMessage()
@@ -23,8 +23,18 @@ namespace SIX.SCS.QA.Tests.EP2.COI
         private ICommClient _commClient;
 
         [Test]
-        public void Send()
+        public void CreateSixTerminalwithBrandsAndDcc()
         {
+            // Arrange
+            // create ojbect, set values and build message
+
+            // Act
+            // send COI message via client to (configured) environment
+
+            // Assert
+            // that COI was sent and terminal is created in GUI
+            
+            
             EP2Frame frameout = _sessionContext.OutgoingFrame();
             frameout.ContentAsXmlContent().Xml = new XDocument(); // TODO dont know
             _commClient.Send(frameout);
