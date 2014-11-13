@@ -7,7 +7,7 @@ using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Testlogic
 {
-    public class Contact
+    public static class Contact
     {
         public static Person Create(TestData.ValueObjects.Customer customer)
         {
