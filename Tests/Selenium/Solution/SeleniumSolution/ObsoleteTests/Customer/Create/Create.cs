@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Testlogic.Builder.Customer.Six;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
@@ -15,8 +16,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         public static void ClassInit(TestContext testContext)
         {
             TestDirector.Navigate();
-            _c = TestData.Factory.Customer.Create();
-            Workflow.Customer.Create(_c);
+            var cb = new Default();
+            cb.Create();
+            _c = cb.Customer;
         }
 
         [TestMethod]
