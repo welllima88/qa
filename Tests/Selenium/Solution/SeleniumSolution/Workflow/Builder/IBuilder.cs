@@ -2,7 +2,6 @@ namespace Six.Scs.QA.Workflow.Builder
 {
     public interface IBuilder : ICreate, IEdit, ICheck
     {
-        
     }
 
     public interface ICheck

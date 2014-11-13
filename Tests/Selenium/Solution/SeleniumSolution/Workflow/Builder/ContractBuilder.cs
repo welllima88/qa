@@ -1,4 +1,3 @@
-using System;
 using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.TestData.ValueObjects.Brand;
 

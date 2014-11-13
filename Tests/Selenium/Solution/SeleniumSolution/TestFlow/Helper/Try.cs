@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Testlogic.Helper
         }
 
         /// <summary>
-        /// This method is used after again() has returned false to check, if the limit has exceeded
+        ///     This method is used after again() has returned false to check, if the limit has exceeded
         /// </summary>
         /// <returns>returns true if numbers of retries exceeded else false</returns>
         public bool TooOften()
