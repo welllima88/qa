@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Testlogic
 
         private static void TicketsCreated()
         {
-            Console.WriteLine(@"Checking Tickets");
+            Console.Out.WriteLine(@"Checking Tickets");
         }
 
         private static void ContractsExist()
