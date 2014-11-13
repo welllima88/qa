@@ -60,7 +60,6 @@
     <Compile Include="SimCard.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TerminalBuilder.cs" />
     <Compile Include="Trouble.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
