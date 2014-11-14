@@ -2,6 +2,7 @@ using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
+using Six.Scs.QA.Workflow.Builder;
 using TerminalDuplicate = Six.Scs.QA.TestData.ValueObjects.TerminalDuplicate;
 using TerminalReplace = Six.Scs.QA.TestData.ValueObjects.TerminalReplace;
 
@@ -9,18 +10,6 @@ namespace Six.Scs.QA.Workflow
 {
     public class Terminal
     {
-        /// <summary>
-        ///     Using a builder to create and configure a terminal. (This approach differs from the easier objects due to the fact
-        ///     it requires more flexibility)
-        /// </summary>
-        /// <param name="terminalBuilder"></param>
-        public static void Create(TerminalBuilder terminalBuilder)
-        {
-            terminalBuilder.ChooseArticle();
-            terminalBuilder.SetBasics();
-            terminalBuilder.SetDetails();
-        }
-
         public static void Duplicate(TerminalDuplicate duplicate)
         {
             SalesContract.TerminalDuplicate.Click();
@@ -42,7 +31,7 @@ namespace Six.Scs.QA.Workflow
             SalesContract.Quit.Click();
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
-            string reason = "SYR quit terminal " + Factory.GenerateTestId();
+            string reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
             Selenium.Terminal.Quit.Quit.Reason = reason;
             Selenium.Terminal.Quit.Quit.Save.Click();
             return reason;
@@ -62,7 +51,7 @@ namespace Six.Scs.QA.Workflow
         {
             SalesContract.Replace.Click();
 
-            ArticleChooser.Article = replace.Article;
+            ArticleChooser.Select = replace.Article;
 
             Selenium.Terminal.Replace.InstallationType = replace.InstallationType;
             Selenium.Terminal.Replace.SalesContract = replace.SalesContract;
@@ -80,10 +69,8 @@ namespace Six.Scs.QA.Workflow
         {
             BusinessViewpoint.ArticleChange.Click();
 
-            ArticleChooser.Article = article;
+            ArticleChooser.Select = article;
             Selenium.Terminal.ArticleChange.Change.Click();
-            ArticleChooser.Article = article;
-
             Selenium.Terminal.ArticleChange.Save.Click();
         }
 
@@ -112,6 +99,13 @@ namespace Six.Scs.QA.Workflow
             Selenium.Terminal.Move.UpdateReceipt = true;
 
             Selenium.Terminal.Move.SaveButton.Click();
+        }
+
+        public static TestData.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
+        {
+            terminalBuilder.Create();
+
+            return terminalBuilder.Terminal;
         }
     }
 }
