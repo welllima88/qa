@@ -2,7 +2,6 @@ using System;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
-using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
@@ -30,7 +29,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
 
         protected override void SetBrandDetails()
         {
-            AcquirerCreate.Remark = "SYR ELink Contracts" + Factory.GenerateTestId();
         }
 
         protected override void ChooseBrands()
