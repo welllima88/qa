@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
-         Category("Saferpay"), Category("E-LINK")]
+         Category("Saferpay"), Category("ELINK")]
         public static void ElinkCustomerStructure()
         {
             _six = Testlogic.Customer.Create(new Default());
