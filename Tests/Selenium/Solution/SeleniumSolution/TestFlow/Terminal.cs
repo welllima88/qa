@@ -37,7 +37,7 @@ namespace Six.Scs.QA.Testlogic
             terminalBuilder.Create();
             terminalBuilder.Check();
 
-            Assert.AreEqual(customer.Location.Contact.Language, BusinessViewpoint.TerminalLanguage);
+            // Assert.AreEqual(customer.Location.Contact.Language, BusinessViewpoint.TerminalLanguage);
             Assert.AreEqual(customer.CustomerNumber, CustomerInfo.Number);
             Assert.AreEqual(customer.CustomerName, CustomerInfo.Name);
             return terminalBuilder.Terminal;
