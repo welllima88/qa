@@ -17,13 +17,13 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
         {
             Assert.IsTrue(BrandPortlet.Available());
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
+            // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1091").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
+            // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("682").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_amexco").Displayed);
+            // Assert.IsTrue(BrandPortlet.Acquirer("acq_amexco").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1284").Displayed);
         }
 
