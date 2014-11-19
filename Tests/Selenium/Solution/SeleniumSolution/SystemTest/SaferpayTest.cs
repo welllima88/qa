@@ -9,17 +9,16 @@ namespace Six.Scs.QA.Selenium.SystemTest
     [TestFixture]
     public class SaferpayTest
     {
-        private static CustomerBuilder _nsp;
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
-        private static CustomerBuilder _six;
+        private static CustomerBuilder _saferpay;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
          Category("Saferpay"), Category("ELINK")]
         public static void ElinkCustomerStructure()
         {
-            _six = Testlogic.Customer.Create(new Default());
-            _saferpayTerminal = Testlogic.Terminal.Create(_six.Customer,
+            _saferpay = Testlogic.Customer.Create(new Default());
+            _saferpayTerminal = Testlogic.Terminal.Create(_saferpay.Customer,
                 new SaferPayPos().With(new Testlogic.Builder.Brand.ELink.Default()));
         }
 
@@ -28,8 +27,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
          Category("Saferpay"), Category("GICC")]
         public static void GiccCustomerStructure()
         {
-            _nsp = Testlogic.Customer.Create(new SixNsp());
-            _saferpayTerminal = Testlogic.Terminal.Create(_nsp.Customer,
+            _saferpay = Testlogic.Customer.Create(new SixNsp());
+            _saferpayTerminal = Testlogic.Terminal.Create(_saferpay.Customer,
                 new Icp().With(new Testlogic.Builder.Brand.Gicc.Default()));
         }
     }
