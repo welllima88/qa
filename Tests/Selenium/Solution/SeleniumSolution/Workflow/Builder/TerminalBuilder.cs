@@ -16,6 +16,7 @@ namespace Six.Scs.QA.Workflow.Builder
         protected TerminalBuilder()
         {
             _contractBuilder = null;
+            Terminal = new TestData.ValueObjects.Terminal();
         }
 
         public TestData.ValueObjects.Terminal Terminal { get; set; }
