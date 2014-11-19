@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Testlogic.Builder.Customer.Nsp;
 using Six.Scs.QA.Testlogic.Builder.Customer.Six;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;
@@ -11,6 +12,12 @@ namespace Six.Scs.QA.Selenium.SystemTest
     {
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpay;
+
+        [TestFixtureSetUp]
+        public static void TestInit()
+        {
+            TestDirector.Navigate();
+        }
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
