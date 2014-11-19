@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpay;
 
-        [TestFixtureSetUp]
+        [SetUp]
         public static void TestInit()
         {
             TestDirector.Navigate();
