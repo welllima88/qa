@@ -2,6 +2,7 @@ using System;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
@@ -29,7 +30,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
 
         public override void Check()
         {
-            Assert.AreEqual(Terminal.Type, BusinessViewpoint.TerminalType);            
+            Assert.AreEqual(Terminal.Type, BusinessViewpoint.TerminalType);
         }
 
         protected override void ChooseArticle()
@@ -39,12 +40,11 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
 
         protected override void SetBasics()
         {
-            Console.Out.WriteLine("No basic Settings");
+            ConfigCreate.Infotext = "GICC" + Factory.GenerateTestId();
         }
 
         protected override void SetDetails()
         {
-            Console.Out.WriteLine("No detail Settings");
         }
     }
 }
