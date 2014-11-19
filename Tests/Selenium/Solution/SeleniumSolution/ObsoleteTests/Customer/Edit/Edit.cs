@@ -6,6 +6,7 @@ using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.ObsoleteTests.Menu;
+using Six.Scs.QA.Testlogic.Builder.Customer.Six;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
@@ -25,14 +26,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
             StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
-            TestData.ValueObjects.Customer c = TestData.Factory.Customer.Edit();
-            Workflow.Customer.Edit(c);
-            Testlogic.Customer.Check(c);
-
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
-
-            Testlogic.Customer.Check(c);
+            Testlogic.Customer.Edit(new Default());
         }
 
         [TestMethod]

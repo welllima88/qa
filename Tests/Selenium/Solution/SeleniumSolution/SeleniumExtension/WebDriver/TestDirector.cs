@@ -51,7 +51,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
                 run = "GRID";
             }
             WebObject.WebDriver = new WebDriverAdapter(WebDriver);
-            Console.WriteLine("using Selenium {0} : {1}", run, gridHub);
+            Console.Out.WriteLine("using Selenium {0} : {1}", run, gridHub);
         }
 
         private static DesiredCapabilities DesiredCapabilities(FirefoxProfile firefoxProfile)

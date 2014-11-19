@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Terminal
 {
     public class ArticleChooser : WebObject
     {
-        public static string ArticleFilter
+        public static string Filter
         {
             set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TextField().TypeText(value); }
         }
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Selenium.Terminal
             }
         }
 
-        public static string Article
+        public static string Select
         {
             set { WebDriver.FindAdaptedElement(By.LinkText(value)).Button().Click(); }
         }

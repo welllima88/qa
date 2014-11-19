@@ -40,11 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="WebDriver, Version=2.44.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -56,8 +51,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Brand.cs" />
+    <Compile Include="Builder\ContractBuilder.cs" />
+    <Compile Include="Builder\CustomerBuilder.cs" />
+    <Compile Include="Builder\IBuilder.cs" />
+    <Compile Include="Builder\TerminalBuilder.cs" />
     <Compile Include="Contact.cs" />
-    <Compile Include="Customer.cs" />
     <Compile Include="InfoText.cs" />
     <Compile Include="Lobby.cs" />
     <Compile Include="Location.cs" />
@@ -66,7 +64,6 @@
     <Compile Include="SimCard.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TerminalBuilder.cs" />
     <Compile Include="Trouble.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

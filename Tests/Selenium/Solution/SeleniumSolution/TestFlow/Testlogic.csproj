@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Six.Scs.QA.Testlogic</RootNamespace>
-    <AssemblyName>TestFlow</AssemblyName>
+    <AssemblyName>Testlogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,6 +54,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Brands.cs" />
+    <Compile Include="Builder\Brand\ELink\Default.cs" />
+    <Compile Include="Builder\Brand\Ep2\Default.cs" />
+    <Compile Include="Builder\Brand\Gicc\Default.cs" />
+    <Compile Include="Builder\Terminal\Saferpay\SaferPayPos.cs" />
+    <Compile Include="Builder\Customer\Nsp\SixNsp.cs" />
+    <Compile Include="Builder\Customer\Six\Default.cs" />
     <Compile Include="Lobby.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Contact.cs" />
@@ -63,7 +69,11 @@
     <Compile Include="Mpd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimCard.cs" />
+    <Compile Include="Builder\Terminal\Ep2\Yomani.cs" />
+    <Compile Include="Builder\Terminal\Ep2\Xentissimo.cs" />
+    <Compile Include="Builder\Terminal\Saferpay\Icp.cs" />
     <Compile Include="Terminal.cs" />
+    <Compile Include="Helper\Try.cs" />
     <Compile Include="Tickets\TroubleTicket.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
@@ -88,6 +98,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

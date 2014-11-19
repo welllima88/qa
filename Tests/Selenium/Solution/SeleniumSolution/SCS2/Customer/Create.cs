@@ -339,5 +339,15 @@ namespace Six.Scs.QA.Selenium.Customer
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
+
+        public static string WesMandant
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(
+                    By.Id("Preferences_WESMandantId")).Selector()
+                    .SelectByText(value);
+            }
+        }
     }
 }

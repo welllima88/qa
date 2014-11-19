@@ -6,6 +6,9 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
+        private const string PortletLocator = "div[id*='BrandPortlet']";
+        private const string ContractTreeLocator = "div[id*='ContractTree']>ul";
+
         public static IWebElementAdapter NewBrandButton
         {
             get
@@ -17,7 +20,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
                             d =>
                                 d.FindElement(
                                     By.CssSelector(
-                                        "div#frame_EP2BrandPortlet div.portletLinks a[href*='/EP2ContractCreate/ListByTerminal?TerminalId=']"))));
+                                        PortletLocator +
+                                        " div.portletLinks a[href*='ContractCreate/ListByTerminal?TerminalId=']"))));
             }
         }
 
@@ -26,7 +30,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(string.Format(
-                        "div#frame_EP2BrandPortlet div#ep2ContractTree ul li[id^='brandContract_{0}']", brandId)));
+                        PortletLocator + " " + ContractTreeLocator + " ul li[id^='brandContract_{0}']", brandId)));
         }
 
         public static IWebElementAdapter Acquirer(string acquirerId)
@@ -34,7 +38,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(string.Format(
-                        "div#frame_EP2BrandPortlet div#ep2ContractTree ul li[id^='acqContract_'] div#{0}", acquirerId)));
+                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}", acquirerId)));
         }
 
         public static bool Available()
@@ -43,7 +47,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
             WebDriverWait w = WebDriver.WebDriverWait();
             w.IgnoreExceptionTypes(typeof (StaleElementReferenceException));
             return
-                w.Until(d => d.FindElement(By.CssSelector("div#frame_EP2BrandPortlet div#ep2ContractTree ul")).Displayed);
+                w.Until(
+                    d => d.FindElement(By.CssSelector(PortletLocator + " " + ContractTreeLocator)).Displayed);
         }
     }
 }

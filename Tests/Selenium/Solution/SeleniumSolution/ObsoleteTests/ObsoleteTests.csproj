@@ -118,7 +118,6 @@
     <Compile Include="Massmutation\TerminalMassmuationTest.cs" />
     <Compile Include="Menu\MenusTest.cs" />
     <Compile Include="Mpd\MpdCreateTest.cs" />
-    <Compile Include="Regression\CustomerStructureRegressionTest.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByIdTest.cs" />
     <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />
     <Compile Include="Terminal\ArticleChooser\ArticleChooserLookupTest.cs" />
