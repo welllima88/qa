@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// <summary>
         ///     Execute the required authentication procedure to fulfill the basic precondition of testing.
         /// </summary>
-        public static void LogOn()
+        public static void Start()
         {
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
