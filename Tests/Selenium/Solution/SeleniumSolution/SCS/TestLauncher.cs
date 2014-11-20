@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Old
             TestDirector.TestEnvironment = new Dev();
 
             TestDirector.PrepareBrowser(SeleniumGridServer.Local);
-            TestDirector.LogOn();
+            TestDirector.Start();
         }
 
         [TearDown]

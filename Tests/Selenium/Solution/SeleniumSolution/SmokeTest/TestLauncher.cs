@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest
         {
             TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(SeleniumGridServer.Build);
-            TestDirector.LogOn();
+            TestDirector.Start();
 
             Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
