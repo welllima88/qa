@@ -117,14 +117,12 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(replace.Article, BusinessViewpoint.TerminalType);
         }
 
-        public static void ArticleChange(TestData.ValueObjects.Terminal terminal)
+        public static void ArticleChange(TestData.ValueObjects.Terminal terminal, IPerform articleChangePerfomer)
         {
             Open(terminal);
 
-            Workflow.Terminal.ArticleChange("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)");
-            // after change of article the software change dialoge appears:
-            Workflow.Terminal.SoftwareChange();
-            Assert.AreEqual("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
+            articleChangePerfomer.Do();
+            articleChangePerfomer.Check();
         }
 
         public static void Move(TestData.ValueObjects.Terminal terminal, TestData.ValueObjects.Location location)
