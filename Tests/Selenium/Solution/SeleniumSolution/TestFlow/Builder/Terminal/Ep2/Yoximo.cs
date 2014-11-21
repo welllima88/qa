@@ -1,4 +1,3 @@
-using System;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
@@ -15,12 +14,15 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
 
         protected override void SelectArticle()
         {
+            // select and change and select again:
+            ArticleChooser.Select = "yoximo MOBILE WLAN, TCP/IP ep2 (DNS)";
+            ArticleChange.Change.Click();
             ArticleChooser.Select = "yoximo MOBILE WLAN, TCP/IP ep2 (DNS)";
         }
 
         protected override void CheckInfos()
         {
-            throw new NotImplementedException();
+            Assert.IsTrue(ArticleChange.Change.Displayed);
         }
     }
 }
