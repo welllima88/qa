@@ -3,7 +3,7 @@ using Six.Scs.QA.TestData.ValueObjects.Brand;
 
 namespace Six.Scs.QA.Workflow.Builder
 {
-    public abstract class ContractBuilder : IBuilder
+    public abstract class BrandBuilder : IBuilder
     {
         public Contract Contract { get; protected set; }
 

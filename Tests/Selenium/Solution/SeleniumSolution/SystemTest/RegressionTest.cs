@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Six.Scs.QA.Testlogic;
-using Six.Scs.QA.Testlogic.Builder.Customer.Six;
+using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
 using Six.Scs.QA.Workflow.Builder;
 using Contact = Six.Scs.QA.Testlogic.Contact;
+using Default = Six.Scs.QA.Testlogic.Builder.Customer.Six.Default;
 using SimCard = Six.Scs.QA.TestData.ValueObjects.SimCard;
 
 namespace Six.Scs.QA.Selenium.SystemTest
@@ -69,7 +70,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.User.AddService(_user);
 
-            Brands.Create(_duplicatedTerminals[1], new Testlogic.Builder.Brand.Ep2.Default());
+            Brands.Create(_duplicatedTerminals[1], new Additional());
             // {0,1,..} means create brands on second terminal
 
             Testlogic.Terminal.Replace(_terminalLocation);
