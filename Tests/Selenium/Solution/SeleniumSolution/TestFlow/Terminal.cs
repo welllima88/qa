@@ -106,7 +106,10 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
-            // TODO insert a check
+            StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
+            StringAssert.Contains("(" + mpd.Description + ")", TechnicalView.PrimaryMpd);
+            StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);
+            StringAssert.Contains("(" + mpd.Description + ")", TechnicalView.SecondaryMpd);
         }
 
         public static void Replace(TestData.ValueObjects.Terminal terminal)
