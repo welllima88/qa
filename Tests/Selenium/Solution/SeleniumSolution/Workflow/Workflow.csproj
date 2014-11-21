@@ -51,7 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Brand.cs" />
-    <Compile Include="Builder\ContractBuilder.cs" />
+    <Compile Include="Builder\BrandBuilder.cs" />
     <Compile Include="Builder\ArticelChangePerformer.cs" />
     <Compile Include="Builder\CustomerBuilder.cs" />
     <Compile Include="Builder\IBuilder.cs" />

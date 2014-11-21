@@ -8,14 +8,14 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
 {
     public class Yoximo : ArticelChangePerformer
     {
-        public void Check()
+        public override void Check()
         {
             Assert.AreEqual("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
         }
 
         protected override void SelectArticle()
         {
-            ArticleChooser.Select = article;
+            ArticleChooser.Select = "yoximo MOBILE WLAN, TCP/IP ep2 (DNS)";
         }
 
         protected override void CheckInfos()
