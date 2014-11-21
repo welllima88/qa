@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.Mpd.Edit(_mpd);
 
-            // Ep2.ArticleChange(_terminalCustomer);
+            Testlogic.Terminal.ArticleChange(_terminalCustomer, new Yoximo());
             Testlogic.Terminal.Quit(_terminalCustomer);
             _personOnLocation = Contact.Edit(_personOnLocation);
             Contact.Delete(_personOnCustomer);
