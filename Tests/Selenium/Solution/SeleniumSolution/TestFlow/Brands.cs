@@ -21,14 +21,14 @@ namespace Six.Scs.QA.Testlogic
         {
         }
 
-        public static void Create(TestData.ValueObjects.Terminal terminal, ContractBuilder contractBuilder)
+        public static void Create(TestData.ValueObjects.Terminal terminal, BrandBuilder brandBuilder)
         {
             Terminal.Open(terminal);
 
             BrandPortlet.NewBrandButton.Click();
 
-            contractBuilder.Create();
-            contractBuilder.Check();
+            brandBuilder.Create();
+            brandBuilder.Check();
         }
     }
 }

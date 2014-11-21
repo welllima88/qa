@@ -6,16 +6,16 @@ namespace Six.Scs.QA.Workflow.Builder
 {
     public abstract class TerminalBuilder : IBuilder
     {
-        private ContractBuilder _contractBuilder;
+        private BrandBuilder _brandBuilder;
 
-        protected TerminalBuilder(ContractBuilder contractBuilder)
+        protected TerminalBuilder(BrandBuilder brandBuilder)
         {
-            _contractBuilder = contractBuilder;
+            _brandBuilder = brandBuilder;
         }
 
         protected TerminalBuilder()
         {
-            _contractBuilder = null;
+            _brandBuilder = null;
             Terminal = new TestData.ValueObjects.Terminal();
         }
 
@@ -60,14 +60,14 @@ namespace Six.Scs.QA.Workflow.Builder
         /// </summary>
         protected void AddContracts()
         {
-            if (_contractBuilder == null)
+            if (_brandBuilder == null)
             {
                 Selection.CancelButton().Click(); // implies that the tree view is displayed
             }
             else
             {
-                _contractBuilder.Create();
-                _contractBuilder.Check();
+                _brandBuilder.Create();
+                _brandBuilder.Check();
             }
         }
 
@@ -76,9 +76,9 @@ namespace Six.Scs.QA.Workflow.Builder
             ConfigDetailsCreate.SaveButton.Click();
         }
 
-        public TerminalBuilder With(ContractBuilder contractBuilder)
+        public TerminalBuilder With(BrandBuilder brandBuilder)
         {
-            _contractBuilder = contractBuilder;
+            _brandBuilder = brandBuilder;
             return this;
         }
     }

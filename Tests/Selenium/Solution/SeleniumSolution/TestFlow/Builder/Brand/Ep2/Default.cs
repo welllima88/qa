@@ -7,7 +7,7 @@ using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 {
-    public class Default : ContractBuilder
+    public class Default : BrandBuilder
     {
         public override void Edit()
         {
