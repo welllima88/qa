@@ -9,21 +9,14 @@ namespace Six.Scs.QA.Workflow.Builder
 
         public void Do()
         {
+            BusinessViewpoint.ArticleChange.Click();
             SelectArticle();
             CheckInfos();
-            Save();
+            ArticleChange.Save.Click();
         }
 
         protected abstract void SelectArticle();
 
         protected abstract void CheckInfos();
-
-        private void Save()
-        {
-            BusinessViewpoint.ArticleChange.Click();
-
-            ArticleChange.Change.Click();
-            ArticleChange.Save.Click();
-        }
     }
 }
