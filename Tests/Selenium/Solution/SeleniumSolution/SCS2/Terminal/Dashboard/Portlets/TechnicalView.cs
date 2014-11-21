@@ -87,5 +87,15 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                             "div#portlet_TerminalTechnicalViewpointPortlet_content div#TechDataTree div#PrimaryMpdProperty div"));
             }
         }
+
+        public static string PrimaryMpd
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("PrimaryMpdProperty")).Text; }
+        }
+
+        public static string SecondaryMpd
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("BackupMpdProperty")).Text; }
+        }
     }
 }
