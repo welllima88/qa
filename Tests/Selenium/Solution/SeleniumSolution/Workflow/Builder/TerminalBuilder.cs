@@ -76,6 +76,12 @@ namespace Six.Scs.QA.Workflow.Builder
             ConfigDetailsCreate.SaveButton.Click();
         }
 
+        /// <summary>
+        ///     The call of the 'with(..)' method sets a BrandBuilder. If set the brands will be created and checked directly after
+        ///     the creation of the Terminals.
+        /// </summary>
+        /// <param name="brandBuilder">A BrandBuilder which is used for creation and checks of Brands.</param>
+        /// <returns></returns>
         public TerminalBuilder With(BrandBuilder brandBuilder)
         {
             _brandBuilder = brandBuilder;
