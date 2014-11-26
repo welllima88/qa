@@ -43,7 +43,7 @@ namespace Six.Scs.QA.Selenium.Search.Result
         private static void WaitForSearchHasFinished()
         {
             WebDriverWait w = WebDriver.WebDriverWait();
-            w.Until(d => d.FindElements(By.CssSelector("td#searchingActions")).Count == 0);
+            w.Until(d => d.FindElements(By.CssSelector("div.progress-bar")).Count == 0);
         }
     }
 }
