@@ -1,6 +1,5 @@
 using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
@@ -8,6 +7,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
     public class TechnicalView : PortletViewBase
     {
         //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
+
+        public const string EcrLocator = "li#PosInterface";
 
         public TechnicalView()
         {
@@ -20,8 +21,8 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            Prefix + PortletId + "li:nth-child(1)" + Suffix)).Text;
+                        By.CssSelector(Prefix + PortletId + "div#TerminalIdProperty div.treeGridValueCol" + Suffix))
+                        .Text;
             }
         }
 
@@ -32,7 +33,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            Prefix + PortletId + "li:nth-child(3)" + Suffix));
+                            Prefix + PortletId + "div#SerienNoProperty div.treeGridValueCol" + Suffix));
             }
         }
 
