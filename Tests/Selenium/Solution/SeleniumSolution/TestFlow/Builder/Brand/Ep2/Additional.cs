@@ -20,9 +20,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
             Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_accarda").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1229").Displayed);
-
             Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1161").Displayed);
 
@@ -40,9 +37,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         protected override void ChooseBrands()
         {
-            Selection.Open("acq_accarda");
-            Selection.Select("1229");
-
             Selection.Open("acq_multipay");
             Selection.Select("1161");
 
