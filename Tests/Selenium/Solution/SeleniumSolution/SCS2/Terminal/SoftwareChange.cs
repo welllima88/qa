@@ -18,5 +18,10 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get { return WebDriver.FindAdaptedElement(By.Id("UnBlock")); }
         }
+
+        public static IWebElementAdapter Cancel
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content a.btn-default")); }
+        }
     }
 }
