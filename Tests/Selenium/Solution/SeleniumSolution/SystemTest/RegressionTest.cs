@@ -34,18 +34,21 @@ namespace Six.Scs.QA.Selenium.SystemTest
             _six = Testlogic.Customer.Create(new Default());
             _location1 = Testlogic.Location.Create(_six.Customer);
             _personOnCustomer = Contact.Create(_six.Customer);
-            _terminalCustomer = Testlogic.Terminal.Create(_six.Customer, new Yomani());
+            var contracts = new Testlogic.Builder.Brand.Ep2.Default();
+            _terminalCustomer = Testlogic.Terminal.Create(_six.Customer, new Yomani().With(contracts));
 
             Testlogic.Customer.Edit(_six);
-
-            Brands.Create(_terminalCustomer, new Testlogic.Builder.Brand.Ep2.Default());
 
             Infotext.Create(_six.Customer);
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
-            var contracts = new Testlogic.Builder.Brand.Ep2.Default();
-            _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo().With(contracts));
+            
+            _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo());
+            _location2 = Testlogic.Location.Create(_six.Customer);
+            Testlogic.Terminal.Move(_terminalLocation, _location2);
+
+            Brands.Create(_terminalLocation, new Testlogic.Builder.Brand.Ep2.Default());
             // TroubleTicket.Create(_terminalLocation);
             Infotext.Create(_location1);
 
@@ -74,9 +77,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
-            _location2 = Testlogic.Location.Create(_six.Customer);
-            Testlogic.Terminal.Move(_terminalLocation, _location2);
-
+            
             _sim = Testlogic.SimCard.Create();
 
             _sim = Testlogic.SimCard.Edit(_sim);
