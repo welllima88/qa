@@ -44,9 +44,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
-
-            _terminalLocation = Testlogic.Terminal.Create(_location1,
-                new Xentissimo().With(new Testlogic.Builder.Brand.Ep2.Default()));
+            var contracts = new Testlogic.Builder.Brand.Ep2.Default();
+            _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo().With(contracts));
             // TroubleTicket.Create(_terminalLocation);
             Infotext.Create(_location1);
 
@@ -70,8 +69,9 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
             Testlogic.User.AddService(_user);
 
-            Brands.Create(_duplicatedTerminals[1], new Additional());
-            // {0,1,..} means create brands on second terminal
+            Brands.Create(_duplicatedTerminals[1], new Additional()); // {0,1,..} means create brands on second terminal
+            // check again existing contracts:
+            contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
             _location2 = Testlogic.Location.Create(_six.Customer);
