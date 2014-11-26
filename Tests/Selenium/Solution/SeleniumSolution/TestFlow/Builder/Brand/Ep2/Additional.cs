@@ -15,8 +15,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Available());
-
             Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1161").Displayed);
 

@@ -16,8 +16,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Available());
-
             Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
 
