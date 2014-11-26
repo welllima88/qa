@@ -15,12 +15,11 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1161").Displayed);
+            Assert.IsTrue(BrandPortlet.Acquirer("acq_corner").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("1286").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_epa").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("703").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("562").Displayed);
+            Assert.IsTrue(BrandPortlet.Acquirer("acq_concardisfirstdata").Displayed);
+            Assert.IsTrue(BrandPortlet.Brand("1272").Displayed);
 
             Assert.IsTrue(BrandPortlet.Acquirer("acq_commtrain").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1114").Displayed);
@@ -32,12 +31,11 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         protected override void ChooseBrands()
         {
-            Selection.Open("acq_multipay");
-            Selection.Select("1161");
+            Selection.Open("acq_corner");
+            Selection.Select("1286");
 
-            Selection.Open("acq_epa");
-            Selection.Select("703");
-            Selection.Select("562");
+            Selection.Open("acq_concardisfirstdata");
+            Selection.Select("1272");
 
             Selection.Open("acq_commtrain");
             Selection.Select("1114");
