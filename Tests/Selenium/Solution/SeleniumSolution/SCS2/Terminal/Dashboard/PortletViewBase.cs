@@ -51,5 +51,11 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
             WebDriverWait w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElements(By.CssSelector("div.overly-loading")).Count == 0);
         }
+
+        public static void OpenTree(string cssLocator)
+        {
+            WebDriverWait w = WebDriver.WebDriverWait();
+            w.Until(d => d.FindElement(By.CssSelector(cssLocator + ".jstree-closed>ins"))).Click();
+        }
     }
 }
