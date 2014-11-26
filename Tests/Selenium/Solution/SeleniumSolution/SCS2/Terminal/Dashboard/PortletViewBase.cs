@@ -45,5 +45,17 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
                         By.CssSelector(Prefix + PortletId + "h1 span[title='minimize']"));
             }
         }
+
+        public static void AllHasBeenLoaded()
+        {
+            WebDriverWait w = WebDriver.WebDriverWait();
+            w.Until(d => d.FindElements(By.CssSelector("div.overly-loading")).Count == 0);
+        }
+
+        public static void OpenTree(string cssLocator)
+        {
+            WebDriverWait w = WebDriver.WebDriverWait();
+            w.Until(d => d.FindElement(By.CssSelector(cssLocator + ".jstree-closed>ins"))).Click();
+        }
     }
 }

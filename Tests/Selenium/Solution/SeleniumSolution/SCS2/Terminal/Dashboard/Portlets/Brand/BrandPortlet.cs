@@ -40,15 +40,5 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand
                     By.CssSelector(string.Format(
                         PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}", acquirerId)));
         }
-
-        public static bool Available()
-        {
-            WebDriver.Navigate().Refresh();
-            WebDriverWait w = WebDriver.WebDriverWait();
-            w.IgnoreExceptionTypes(typeof (StaleElementReferenceException));
-            return
-                w.Until(
-                    d => d.FindElement(By.CssSelector(PortletLocator + " " + ContractTreeLocator)).Displayed);
-        }
     }
 }

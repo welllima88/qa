@@ -90,6 +90,7 @@ namespace Six.Scs.QA.Testlogic
         public static void Open(TestData.ValueObjects.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
+            PortletViewBase.AllHasBeenLoaded();
         }
 
         public static void Quit(TestData.ValueObjects.Terminal terminal)
@@ -106,7 +107,10 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
-            // TODO insert a check
+            PortletViewBase.AllHasBeenLoaded();
+            PortletViewBase.OpenTree(TechnicalView.EcrLocator);
+            StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
+            StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);            
         }
 
         public static void Replace(TestData.ValueObjects.Terminal terminal)
@@ -117,14 +121,12 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(replace.Article, BusinessViewpoint.TerminalType);
         }
 
-        public static void ArticleChange(TestData.ValueObjects.Terminal terminal)
+        public static void ArticleChange(TestData.ValueObjects.Terminal terminal, IPerform articleChangePerfomer)
         {
             Open(terminal);
 
-            Workflow.Terminal.ArticleChange("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)");
-            // after change of article the software change dialoge appears:
-            Workflow.Terminal.SoftwareChange();
-            Assert.AreEqual("yoximo MOBILE WLAN, TCP/IP ep2 (DNS)", BusinessViewpoint.TerminalType);
+            articleChangePerfomer.Do();
+            articleChangePerfomer.Check();
         }
 
         public static void Move(TestData.ValueObjects.Terminal terminal, TestData.ValueObjects.Location location)

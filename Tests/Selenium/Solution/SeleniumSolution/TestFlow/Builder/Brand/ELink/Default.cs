@@ -6,7 +6,7 @@ using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
 {
-    public class Default : ContractBuilder
+    public class Default : BrandBuilder
     {
         public override void Edit()
         {
@@ -15,8 +15,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Available());
-
             // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1091").Displayed);
 

@@ -7,7 +7,7 @@ using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 {
-    public class Default : ContractBuilder
+    public class Default : BrandBuilder
     {
         public override void Edit()
         {
@@ -16,8 +16,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Available());
-
             Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
 

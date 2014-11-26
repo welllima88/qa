@@ -55,8 +55,10 @@
   <ItemGroup>
     <Compile Include="Brands.cs" />
     <Compile Include="Builder\Brand\ELink\Default.cs" />
+    <Compile Include="Builder\Brand\Ep2\Additional.cs" />
     <Compile Include="Builder\Brand\Ep2\Default.cs" />
     <Compile Include="Builder\Brand\Gicc\Default.cs" />
+    <Compile Include="Builder\Terminal\Ep2\Yoximo.cs" />
     <Compile Include="Builder\Terminal\Saferpay\SaferPayPos.cs" />
     <Compile Include="Builder\Customer\Nsp\SixNsp.cs" />
     <Compile Include="Builder\Customer\Six\Default.cs" />

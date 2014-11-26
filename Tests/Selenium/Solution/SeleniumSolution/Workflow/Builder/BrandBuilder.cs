@@ -1,9 +1,10 @@
 using Six.Scs.QA.Selenium.Brand;
+using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.TestData.ValueObjects.Brand;
 
 namespace Six.Scs.QA.Workflow.Builder
 {
-    public abstract class ContractBuilder : IBuilder
+    public abstract class BrandBuilder : IBuilder
     {
         public Contract Contract { get; protected set; }
 
@@ -27,6 +28,7 @@ namespace Six.Scs.QA.Workflow.Builder
         private void ClickCreate()
         {
             AcquirerCreate.SaveAndCreate();
+            PortletViewBase.AllHasBeenLoaded();
         }
 
         protected abstract void SetBrandDetails();

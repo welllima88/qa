@@ -118,6 +118,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         {
             var wait = new WebDriverWait(_webDriver,
                 TimeSpan.FromSeconds(TestDirector.TestEnvironment.SeleniumConfig.Timeouts.SetScriptTimeout));
+            wait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
             return wait;
         }
 

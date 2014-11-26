@@ -76,7 +76,6 @@
     <Compile Include="WebDriver\WebElements\PasswortTextFieldElement.cs" />
     <Compile Include="WebDriver\WebElements\ButtonElement.cs" />
     <Compile Include="WebDriver\WebElements\TextFieldElement.cs" />
-    <Compile Include="WebDriver\WebElements\ISuggesterWebElement.cs" />
     <Compile Include="WebDriver\IWebDriverAdapter.cs" />
     <Compile Include="WebDriver\WebElements\IWebElementAdapter.cs" />
     <Compile Include="Authentication\IAuthentication.cs" />

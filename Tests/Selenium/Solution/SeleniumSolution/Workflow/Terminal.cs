@@ -65,15 +65,6 @@ namespace Six.Scs.QA.Workflow
             Selenium.Terminal.Replace.SaveButton.Click();
         }
 
-        public static void ArticleChange(string article)
-        {
-            BusinessViewpoint.ArticleChange.Click();
-
-            ArticleChooser.Select = article;
-            Selenium.Terminal.ArticleChange.Change.Click();
-            Selenium.Terminal.ArticleChange.Save.Click();
-        }
-
         public static void SoftwareChange()
         {
             Selenium.Terminal.SoftwareChange.NewSoftware = "";
