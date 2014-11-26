@@ -17,9 +17,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
         {
             Assert.IsTrue(BrandPortlet.Available());
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
-
             Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
             Assert.IsTrue(BrandPortlet.Brand("1161").Displayed);
 
