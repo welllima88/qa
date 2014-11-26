@@ -107,6 +107,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
+            PortletViewBase.AllHasBeenLoaded();
             PortletViewBase.OpenTree(TechnicalView.EcrLocator);
             StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
             StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);            
