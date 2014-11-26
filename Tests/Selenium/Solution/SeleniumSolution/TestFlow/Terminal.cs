@@ -90,6 +90,7 @@ namespace Six.Scs.QA.Testlogic
         public static void Open(TestData.ValueObjects.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
+            PortletViewBase.AllHasBeenLoaded();
         }
 
         public static void Quit(TestData.ValueObjects.Terminal terminal)
