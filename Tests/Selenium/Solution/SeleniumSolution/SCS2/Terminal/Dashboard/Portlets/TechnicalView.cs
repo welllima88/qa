@@ -79,8 +79,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
         {
             get
             {
-                WebDriverWait w = WebDriver.WebDriverWait();
-                w.Until(d => d.FindElement(By.CssSelector("li#PosInterface.jstree-closed>ins"))).Click();
+                OpenTree(EcrLocator);
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
