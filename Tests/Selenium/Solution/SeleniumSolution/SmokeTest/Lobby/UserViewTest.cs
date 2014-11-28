@@ -6,6 +6,7 @@ using Six.Scs.QA.Selenium.User;
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 {
     [TestFixture]
+    [Ignore("because this changes last element history and causes side effects to the regression test")]
     public class UserViewTest
     {
         [TestFixtureSetUp]
