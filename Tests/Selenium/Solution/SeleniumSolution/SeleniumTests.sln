@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{1700B98D-44B7-439C-A001-6C7A56EDB6D9}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 	ProjectSection(SolutionItems) = preProject
 		C:\Users\siegmund\Documents\Architecture Graph For SeleniumTests.png = C:\Users\siegmund\Documents\Architecture Graph For SeleniumTests.png
 		ConvertToNunit.txt = ConvertToNunit.txt
+		..\..\..\..\HOME.md = ..\..\..\..\HOME.md
 		E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp = E:\ABLAGE\SCS\Projektplan für Testautomatisierung SCS.mpp
 		Documents\Test-Automatisierung-Konzept.docx = Documents\Test-Automatisierung-Konzept.docx
 		Documents\TESTAUTOMATISIERUNG.cayra = Documents\TESTAUTOMATISIERUNG.cayra
