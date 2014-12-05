@@ -60,6 +60,7 @@
     <Compile Include="Contact.cs" />
     <Compile Include="InfoText.cs" />
     <Compile Include="Lobby.cs" />
+    <Compile Include="BillingAdress.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Mpd.cs" />
     <Compile Include="Search.cs" />
