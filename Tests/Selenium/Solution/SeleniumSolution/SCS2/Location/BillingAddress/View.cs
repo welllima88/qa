@@ -95,5 +95,15 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
+
+        public static string SbsDebitNumber
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("DebitNbr")).Text; }
+        }
+
+        public static string SbsAddressNumber
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("AddressNbr")).Text; }
+        }
     }
 }
