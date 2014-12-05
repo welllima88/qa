@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Workflow.Builder
 
         public void Check()
         {
-            // do nothing
+            // check nothing for now
         }
     }
 }
