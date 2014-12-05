@@ -7,93 +7,72 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
     {
         public static string CompanyName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_LocationName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_LocationName")).Text; }
         }
 
         public static string StreetName
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Street"))
-                        .Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Street")).Text; }
         }
 
         public static string Zip
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_ZIP")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_ZIP")).Text; }
         }
 
         public static string City
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_City")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_City")).Text; }
         }
 
         public static string Language
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_LanguageId")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_LanguageId")).Text; }
         }
 
         public static string Country
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_CountryId")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_CountryId")).Text; }
         }
 
         public static string Po
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_PO")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_PO")).Text; }
         }
 
         public static string AdressAddition
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_AddressAddition")).Text; }
         }
 
         public static string Email
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Email")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Email")).Text; }
         }
 
         public static string Web
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Web")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Web")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Telephone")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Telephone")).Text; }
         }
 
         public static string Mobile
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Mobile")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Mobile")).Text; }
         }
 
         public static string Fax
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Fax")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_Fax")).Text; }
         }
 
         public static IWebElementAdapter EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("ctl00_bodyContentPlaceHolder_btnEdit")); }
         }
 
         public static string SbsDebitNumber
