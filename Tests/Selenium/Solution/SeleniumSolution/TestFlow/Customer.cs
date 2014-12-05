@@ -9,7 +9,6 @@ namespace Six.Scs.QA.Testlogic
             Open(customerBuilder.Customer);
             customerBuilder.Edit();
             customerBuilder.Check();
-
             Workflow.Lobby.OpenLatestElement();
             customerBuilder.Check();
             return customerBuilder;
