@@ -7,8 +7,6 @@ namespace Six.Scs.QA.Workflow
     {
         public static void Create(TestData.ValueObjects.Location l)
         {
-            CustomerMenu.Customer.Click(); //??
-
             CustomerMenu.BillingAdressCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = l.CompanyName;
@@ -30,17 +28,15 @@ namespace Six.Scs.QA.Workflow
             Selenium.Location.BillingAddress.Create.SaveButton.Click();
 
             l.SbsDebitNumber = View.SbsDebitNumber;
-            // l.SbsAdressNumber = LocationView.SbsAdressNumber;
         }
 
         /// <summary>
-        ///     Edits location
+        ///     Edits billing address
         /// </summary>
         /// <param name="l">given location data</param>
         public static void Edit(TestData.ValueObjects.Location l)
         {
             l.SbsDebitNumber = View.SbsDebitNumber;
-            // l.SbsAdressNumber = LocationView.SbsAdressNumber;
 
             View.EditButton.Click();
 
