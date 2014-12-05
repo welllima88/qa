@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.LocationCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR Sele Firma A$°";
-            Selenium.Location.BillingAddress.Create.StreetName = "Hardturmstr. 201$°";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Hardturmstr. 201$°";
             Selenium.Location.BillingAddress.Create.Zip = "802$°";
             Selenium.Location.BillingAddress.Create.City = "Zürich$°";
             Selenium.Location.BillingAddress.Create.Po = "PFO1$°";
@@ -79,7 +79,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.LocationCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "";
-            Selenium.Location.BillingAddress.Create.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Create.Zip = "8021";
             Selenium.Location.BillingAddress.Create.City = "Zürich";
             Selenium.Location.BillingAddress.Create.Po = "PFO1";
@@ -105,7 +105,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.LocationCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Create.StreetName = "";
+            Selenium.Location.BillingAddress.Create.StreetNo = "";
             Selenium.Location.BillingAddress.Create.Zip = "8021";
             Selenium.Location.BillingAddress.Create.City = "Zürich";
             Selenium.Location.BillingAddress.Create.Po = "PFO1";
@@ -131,7 +131,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.LocationCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Create.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Create.Zip = "8021";
             Selenium.Location.BillingAddress.Create.City = "";
             Selenium.Location.BillingAddress.Create.Po = "PFO1";
@@ -157,7 +157,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.LocationCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Create.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Create.Zip = "";
             Selenium.Location.BillingAddress.Create.City = "Zürich";
             Selenium.Location.BillingAddress.Create.Po = "PFO1";
@@ -184,7 +184,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAdressCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR ReAd SELE A";
-            Selenium.Location.BillingAddress.Create.StreetName = "Rechnungsallee 112";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Rechnungsallee 112";
             Selenium.Location.BillingAddress.Create.Zip = "10010";
             Selenium.Location.BillingAddress.Create.City = "Stuttgart";
             Selenium.Location.BillingAddress.Create.Po = "PO1";
@@ -227,7 +227,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAdressCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR ReAd SELE A";
-            Selenium.Location.BillingAddress.Create.StreetName = "Rechnungsallee 112";
+            Selenium.Location.BillingAddress.Create.StreetNo = "Rechnungsallee 112";
             Selenium.Location.BillingAddress.Create.Zip = "10010";
             Selenium.Location.BillingAddress.Create.City = "Stuttgart";
             Selenium.Location.BillingAddress.Create.Po = "PO1";

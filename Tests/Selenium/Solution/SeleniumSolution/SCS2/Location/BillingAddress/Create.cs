@@ -73,7 +73,7 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
             }
         }
 
-        public static string StreetName
+        public static string StreetNo
         {
             set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Street")).TextField().TypeText(value); }
         }
