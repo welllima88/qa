@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
-using Six.Scs.QA.Selenium.Location;
+using Six.Scs.QA.Selenium.Location.BillingAddress;
 using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Testlogic
