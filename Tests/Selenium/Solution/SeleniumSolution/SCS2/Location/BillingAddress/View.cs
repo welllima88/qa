@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("BillingName")).Text; }
         }
 
-        public static string StreetName
+        public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.Id("StreetNo")).Text; }
         }

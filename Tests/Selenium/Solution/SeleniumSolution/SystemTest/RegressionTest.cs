@@ -3,7 +3,6 @@ using NUnit.Framework;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
-using Six.Scs.QA.Workflow;
 using Six.Scs.QA.Workflow.Builder;
 using Contact = Six.Scs.QA.Testlogic.Contact;
 using Default = Six.Scs.QA.Testlogic.Builder.Customer.Six.Default;
@@ -41,11 +40,11 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Customer.Edit(_six);
 
             Infotext.Create(_six.Customer);
-            Testlogic.BillingAdress.Create(_six.Customer);
+            BillingAdress.Create(_six.Customer);
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
-            
+
             _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo());
             _location2 = Testlogic.Location.Create(_six.Customer);
             Testlogic.Terminal.Move(_terminalLocation, _location2);
@@ -79,7 +78,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
-            
+
             _sim = Testlogic.SimCard.Create();
 
             _sim = Testlogic.SimCard.Edit(_sim);

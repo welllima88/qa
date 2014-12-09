@@ -208,7 +208,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             //Assert.AreEqual(locId, BillingAddressView.Guid);
             Assert.AreEqual("SYR ReAd SELE A", View.CompanyName);
 
-            Assert.AreEqual("Rechnungsallee 112", View.StreetName);
+            Assert.AreEqual("Rechnungsallee 112", View.StreetNo);
             Assert.AreEqual("SYR ReAd SELE A", View.CompanyName);
             Assert.AreEqual("10010", View.Zip);
             Assert.AreEqual("Stuttgart", View.City);
@@ -250,7 +250,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             //Assert.AreEqual(locId, BillingAddressView.Guid);
             Assert.AreEqual("SYR ReAd SELE A", View.CompanyName);
 
-            Assert.AreEqual("Rechnungsallee 112", View.StreetName);
+            Assert.AreEqual("Rechnungsallee 112", View.StreetNo);
             Assert.AreEqual("SYR ReAd SELE A", View.CompanyName);
             Assert.AreEqual("10010", View.Zip);
             Assert.AreEqual("Stuttgart", View.City);
