@@ -44,11 +44,13 @@
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="SIX.EP2.Client">
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Client.1.1.2.6\lib\net40\SIX.EP2.Client.dll</HintPath>
+    <Reference Include="SIX.EP2.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Client.1.1.2.9\lib\net40\SIX.EP2.Client.dll</HintPath>
     </Reference>
-    <Reference Include="SIX.EP2.Core">
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Core.1.1.2.6\lib\net40\SIX.EP2.Core.dll</HintPath>
+    <Reference Include="SIX.EP2.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Core.1.1.2.9\lib\net40\SIX.EP2.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.XML" />
@@ -67,6 +69,7 @@
     <Compile Include="LaidRequestTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvideSecurityInfo.cs" />
+    <Compile Include="UnitTestMessageFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
