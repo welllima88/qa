@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Location.BillingAddress.Create.Zip = b.Adress.Zip;
             Selenium.Location.BillingAddress.Create.City = b.Adress.City;
             Selenium.Location.BillingAddress.Create.Po = b.Adress.Po;
-            Selenium.Location.BillingAddress.Create.AdressAddition = b.Adress.AdressAddition; // ??
+            Selenium.Location.BillingAddress.Create.AdressAddition = b.Adress.AdressAddition;
             Selenium.Location.BillingAddress.Create.Region = b.Adress.Region;
 
             Selenium.Location.BillingAddress.Create.Language = b.Contact.Language;
