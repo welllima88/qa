@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
+using Six.Scs.QA.Workflow;
 using Six.Scs.QA.Workflow.Builder;
 using Contact = Six.Scs.QA.Testlogic.Contact;
 using Default = Six.Scs.QA.Testlogic.Builder.Customer.Six.Default;
@@ -40,6 +41,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Customer.Edit(_six);
 
             Infotext.Create(_six.Customer);
+            Testlogic.BillingAdress.Create(_six.Customer);
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
