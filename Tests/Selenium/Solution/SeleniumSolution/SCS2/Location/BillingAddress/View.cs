@@ -86,6 +86,11 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("AddressNbr")).Text; }
         }
 
+        public static string Region
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
+        }
+
         public static IWebElementAdapter List(TestData.ValueObjects.BillingAddress billingAddress)
         {
             return
