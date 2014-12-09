@@ -1,3 +1,4 @@
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -83,6 +84,13 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
         public static string SbsAddressNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("AddressNbr")).Text; }
+        }
+
+        public static IWebElementAdapter List(TestData.ValueObjects.BillingAddress billingAddress)
+        {
+            return
+                WebDriver.FindAdaptedElements(By.Id("td#content table>tbody>tr>td>a"))
+                    .FirstOrDefault(ba => ba.Text.Contains(billingAddress.CompanyName));
         }
     }
 }
