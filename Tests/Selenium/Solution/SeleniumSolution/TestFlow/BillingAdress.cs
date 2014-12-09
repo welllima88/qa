@@ -23,8 +23,6 @@ namespace Six.Scs.QA.Testlogic
         {
             Assert.AreEqual(b.CompanyName, View.CompanyName);
             StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.SbsDebitNumber);
-            // StringAssert.IsMatch(TestRegExpPatterns.SbsAdressNoOpt, LocationView.SbsAdressNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Ep2MerchantId);
             Assert.AreEqual(b.Adress.StreetNo, View.StreetNo);
             Assert.AreEqual(b.Adress.Po, View.Po);
             Assert.AreEqual(b.Adress.Zip, View.Zip);
