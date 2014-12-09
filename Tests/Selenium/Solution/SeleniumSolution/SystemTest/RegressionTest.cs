@@ -26,7 +26,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Location _location2;
 
         [Test]
-        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
+        [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
+         Category("Terminal"),
          Category("Terminal Duplicate"), Category("Terminal Quit"), Category("Infotext"), Category("Person"),
          Category("MPD"), Category("User"), Category("User"), Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
