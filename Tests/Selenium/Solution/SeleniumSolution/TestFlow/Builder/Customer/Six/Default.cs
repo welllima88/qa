@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Customer;
+using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
@@ -44,7 +45,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
             Assert.AreEqual(Customer.Location.SbsDebitNumber, View.SbsDebitNumber);
             // Todo: not reliable check: 
             // Assert.AreEqual(Customer.SbsAdressNumber, CustomerView.SbsAdressNumber);
-            // StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Ep2MerchantId);
+            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Ep2MerchantId);
             Assert.AreEqual(Customer.Location.Adress.Po, View.Po);
             Assert.AreEqual(Customer.Location.Adress.AdressAddition, View.AdressAddition);
             StringAssert.Contains(Customer.Location.Adress.Region, View.Region);
