@@ -20,7 +20,6 @@ namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
             Selenium.Customer.Create.Po = Customer.Location.Adress.Po;
             Selenium.Customer.Create.AdressAddition = Customer.Location.Adress.AdressAddition;
             Selenium.Customer.Create.Region = Customer.Location.Adress.Region;
-            // Selenium.Customer.Create.Ep2MerchantId = Customer.Location.Ep2MerchantId;
             Selenium.Customer.Create.Agency = Customer.Location.Agency;
             Selenium.Customer.Create.Language = Customer.Location.Contact.Language;
             Selenium.Customer.Create.Country = Customer.Location.Adress.Country;
