@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             string companyName = View.CompanyName;
             string po = View.Po;
             string adressAddition = View.AdressAddition;
-            string streetName = View.StreetName;
+            string streetName = View.StreetNo;
             string zip = View.Zip;
             string city = View.City;
             string language = View.Language;
@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Sele Firma AAA";
-            Selenium.Location.BillingAddress.Edit.StreetName = "Hardturmstr. 2011";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Hardturmstr. 2011";
             Selenium.Location.BillingAddress.Edit.Zip = "80222";
             Selenium.Location.BillingAddress.Edit.City = "Zürichhh";
             Selenium.Location.BillingAddress.Edit.Po = "PFO111";
@@ -55,7 +55,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Assert.AreEqual(companyName, View.CompanyName);
             Assert.AreEqual(po, View.Po);
             Assert.AreEqual(adressAddition, View.AdressAddition);
-            Assert.AreEqual(streetName, View.StreetName);
+            Assert.AreEqual(streetName, View.StreetNo);
             Assert.AreEqual(zip, View.Zip);
             Assert.AreEqual(city, View.City);
             Assert.AreEqual(language, View.Language);
@@ -73,7 +73,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Sele Firma A$°";
-            Selenium.Location.BillingAddress.Edit.StreetName = "Hardturmstr. 201$°";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Hardturmstr. 201$°";
             Selenium.Location.BillingAddress.Edit.Zip = "802$°";
             Selenium.Location.BillingAddress.Edit.City = "Zürich$°";
             Selenium.Location.BillingAddress.Edit.Po = "PFO1$°";
@@ -109,7 +109,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
         {
             CustomerMenu.BillingAddressEdit.Click();
 
-            Selenium.Location.BillingAddress.Edit.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Edit.Zip = "8021";
             Selenium.Location.BillingAddress.Edit.City = "Zürich";
             Selenium.Location.BillingAddress.Edit.Po = "PFO1";
@@ -136,7 +136,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "";
-            Selenium.Location.BillingAddress.Edit.StreetName = "";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "";
             Selenium.Location.BillingAddress.Edit.Zip = "";
             Selenium.Location.BillingAddress.Edit.City = "";
             Selenium.Location.BillingAddress.Edit.Po = "";
@@ -166,7 +166,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Edit.StreetName = "";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "";
             Selenium.Location.BillingAddress.Edit.Zip = "8021";
             Selenium.Location.BillingAddress.Edit.City = "Zürich";
             Selenium.Location.BillingAddress.Edit.Po = "PFO1";
@@ -192,7 +192,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Edit.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Edit.Zip = "8021";
             Selenium.Location.BillingAddress.Edit.City = "";
             Selenium.Location.BillingAddress.Edit.Po = "PFO1";
@@ -218,7 +218,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Sele Firma A";
-            Selenium.Location.BillingAddress.Edit.StreetName = "Hardturmstr. 201";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Hardturmstr. 201";
             Selenium.Location.BillingAddress.Edit.Zip = "";
             Selenium.Location.BillingAddress.Edit.City = "Zürich";
             Selenium.Location.BillingAddress.Edit.Po = "PFO1";
@@ -243,7 +243,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CustomerMenu.BillingAddressEdit.Click();
 
             Selenium.Location.BillingAddress.Edit.CompanyName = "SYR Standort SELE B";
-            Selenium.Location.BillingAddress.Edit.StreetName = "Am Bärenplatz 2";
+            Selenium.Location.BillingAddress.Edit.StreetNo = "Am Bärenplatz 2";
             Selenium.Location.BillingAddress.Edit.Zip = "8001";
             Selenium.Location.BillingAddress.Edit.City = "Kreuzlingen";
             Selenium.Location.BillingAddress.Edit.Po = "PO2-A";
@@ -263,7 +263,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             RecentElements.Latest.Click();
 
             Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
-            Assert.AreEqual("Am Bärenplatz 2", View.StreetName);
+            Assert.AreEqual("Am Bärenplatz 2", View.StreetNo);
             Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
             Assert.AreEqual("8001", View.Zip);
             Assert.AreEqual("PO2-A", View.Po);

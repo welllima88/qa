@@ -9,91 +9,81 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_CountryId")).Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_CountryId")).Selector().SelectByText(value);
             }
         }
 
         public static string Zip
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_ZIP")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_ZIP")).TextField().TypeText(value); }
         }
 
         public static string City
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_City")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_City")).TextField().TypeText(value); }
         }
 
         public static string AdressAddition
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_AddressAddition"))
-                    .TextField().TypeText(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Addition")).TextField().TypeText(value); }
         }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_PO")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_PO")).TextField().TypeText(value); }
         }
 
         public static string Region
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Region")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Region")).TextField().TypeText(value); }
         }
 
         public static string Telephone
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Telephone")).TextField().TypeText(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Telephone")).TextField().TypeText(value); }
         }
 
         public static string Mobile
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Mobile")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Mobile")).TextField().TypeText(value); }
         }
 
         public static string Fax
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Fax")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Fax")).TextField().TypeText(value); }
         }
 
         public static string Email
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Email")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Email")).TextField().TypeText(value); }
         }
 
         public static string CompanyName
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LocationName")).TextField().TypeText(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Name")).TextField().TypeText(value); }
         }
 
-        public static string StreetName
+        public static string StreetNo
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Street")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Street")).TextField().TypeText(value); }
         }
 
         public static string Language
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_LanguageId")).Selector().SelectByText(value);
+                WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_LanguageId")).Selector().SelectByText(value);
             }
         }
 
         public static string Web
         {
-            set { WebDriver.FindAdaptedElement(By.CssSelector("#BillingAddress_Web")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Web")).TextField().TypeText(value); }
         }
 
         public static IWebElementAdapter SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input[value=\"Speichern\"]")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
     }
 }

@@ -26,7 +26,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Location _location2;
 
         [Test]
-        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
+        [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
+         Category("Terminal"),
          Category("Terminal Duplicate"), Category("Terminal Quit"), Category("Infotext"), Category("Person"),
          Category("MPD"), Category("User"), Category("User"), Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
@@ -40,10 +41,11 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Customer.Edit(_six);
 
             Infotext.Create(_six.Customer);
+            BillingAdress.Create(_six.Customer);
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
             Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
-            
+
             _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo());
             _location2 = Testlogic.Location.Create(_six.Customer);
             Testlogic.Terminal.Move(_terminalLocation, _location2);
@@ -77,7 +79,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
-            
+
             _sim = Testlogic.SimCard.Create();
 
             _sim = Testlogic.SimCard.Edit(_sim);

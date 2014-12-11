@@ -10,9 +10,9 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
             set { Create.CompanyName = value; }
         }
 
-        public static string StreetName
+        public static string StreetNo
         {
-            set { Create.StreetName = value; }
+            set { Create.StreetNo = value; }
         }
 
         public static string Language

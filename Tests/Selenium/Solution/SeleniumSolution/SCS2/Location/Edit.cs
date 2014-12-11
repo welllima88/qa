@@ -114,27 +114,6 @@ namespace Six.Scs.QA.Selenium.Location
             get { return WebDriver.FindAdaptedElement(By.Id("GUID")).Text; }
         }
 
-        public static string Reason
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason"))
-                        .Selector()
-                        .SelectedOption;
-            }
-            set
-            {
-                WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationReason")).Selector().SelectByText(value);
-            }
-        }
-
-        public static string ReasonRemark
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).Text; }
-            set { WebDriver.FindAdaptedElement(By.Id("LocationData_NotificationRemarks")).TextField().TypeText(value); }
-        }
-
         public static string Agency
         {
             set { Create.Agency = value; }

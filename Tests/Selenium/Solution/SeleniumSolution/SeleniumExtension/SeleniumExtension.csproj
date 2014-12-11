@@ -127,12 +127,6 @@
       <HintPath>..\packages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="GoodToKnow\DataSource.txt" />
-    <Content Include="GoodToKnow\RegReplace.txt" />
-    <Content Include="GoodToKnow\TryLocator.txt" />
-    <Content Include="GoodToKnow\WebLinks.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,13 +1,12 @@
-using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.TestData.Factory;
-using Customer = Six.Scs.QA.TestData.ValueObjects.Customer;
+using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow.Builder
 {
     public abstract class CustomerBuilder : IBuilder
     {
+        private IPerform _changeMode;
         public Customer Customer { get; protected set; }
 
         public virtual void Create()
@@ -29,7 +28,7 @@ namespace Six.Scs.QA.Workflow.Builder
             ReadInfo();
             ClickEdit();
             EditCustomerData();
-            EnterChangeReason();
+            EnterChangeData();
             SaveButton();
         }
 
@@ -48,11 +47,22 @@ namespace Six.Scs.QA.Workflow.Builder
             CustomerMenu.CustomerEdit.Click();
         }
 
-        protected virtual void EnterChangeReason()
+        public CustomerBuilder Change(IPerform changeMode)
         {
-            ChangeForm.Reason = "Adressänderung";
-            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " customer change remark";
-            // ChangeForm.DelayTime(new TimeSpan().Add(TimeSpan.FromMinutes(1)));
+            _changeMode = changeMode;
+            return this;
+        }
+
+        private void EnterChangeData()
+        {
+            if (_changeMode == null)
+            {
+                new DefaultChange().Do();
+            }
+            else
+            {
+                _changeMode.Do();
+            }
         }
 
         protected abstract void EditCustomerData();

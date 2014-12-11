@@ -2,6 +2,7 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Location;
 using Six.Scs.QA.TestData.Factory;
+using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -70,9 +71,7 @@ namespace Six.Scs.QA.Workflow
             Selenium.Location.Edit.Language = l.Contact.Language;
             Selenium.Location.Edit.Country = l.Adress.Country;
 
-            Selenium.Location.Edit.Reason = "Daten Korrektur (ohne Versand)";
-            ChangeForm.Reason = "Adressänderung";
-            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " location change remark";
+            new DefaultChange().Do();
 
             Selenium.Location.Edit.SaveButton.Click();
         }

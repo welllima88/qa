@@ -1,4 +1,0 @@
-// http://www.seleniumwiki.com/category/visual-studio-2010/
-// http://code.google.com/p/selenium/downloads/list
-// http://msdn.microsoft.com/en-us/library/ff770525.aspx
-// http://msdn.microsoft.com/en-us/library/vstudio/2k3te2cs(v=vs.120).aspx

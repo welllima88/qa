@@ -1,3 +1,4 @@
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -7,93 +8,94 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
     {
         public static string CompanyName
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_LocationName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("BillingName")).Text; }
         }
 
-        public static string StreetName
+        public static string StreetNo
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Street"))
-                        .Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("StreetNo")).Text; }
         }
 
         public static string Zip
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_ZIP")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("Zip")).Text; }
         }
 
         public static string City
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_City")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
         public static string Language
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_LanguageId")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("Language")).Text; }
         }
 
         public static string Country
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_CountryId")).Text;
-            }
+            get { return WebDriver.FindAdaptedElement(By.Id("Country")).Text; }
         }
 
         public static string Po
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_PO")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Po")).Text; }
         }
 
         public static string AdressAddition
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_AddressAddition")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("AddressAddition")).Text; }
         }
 
         public static string Email
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Email")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Email")).Text; }
         }
 
         public static string Web
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Web")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Web")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Telephone")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Telephone")).Text; }
         }
 
         public static string Mobile
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Mobile")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Mobile")).Text; }
         }
 
         public static string Fax
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#LocationData_Fax")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Fax")).Text; }
         }
 
         public static IWebElementAdapter EditButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnEdit")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
+        }
+
+        public static string SbsDebitNumber
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("DebitNbr")).Text; }
+        }
+
+        public static string SbsAddressNumber
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("AddressNbr")).Text; }
+        }
+
+        public static string Region
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
+        }
+
+        public static IWebElementAdapter List(TestData.ValueObjects.BillingAddress billingAddress)
+        {
+            return
+                WebDriver.FindAdaptedElements(By.Id("td#content table>tbody>tr>td>a"))
+                    .FirstOrDefault(ba => ba.Text.Contains(billingAddress.CompanyName));
         }
     }
 }
