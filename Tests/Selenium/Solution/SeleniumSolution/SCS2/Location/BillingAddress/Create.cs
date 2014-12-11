@@ -7,7 +7,10 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
     {
         public static string Country
         {
-            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_CountryId")).Selector().SelectByText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_CountryId")).Selector().SelectByText(value);
+            }
         }
 
         public static string Zip
@@ -22,11 +25,7 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
 
         public static string AdressAddition
         {
-            set
-            {
-                WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_AddressAddition"))
-                    .TextField().TypeText(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_Addition")).TextField().TypeText(value); }
         }
 
         public static string Po
@@ -71,7 +70,10 @@ namespace Six.Scs.QA.Selenium.Location.BillingAddress
 
         public static string Language
         {
-            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_LanguageId")).Selector().SelectByText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.Id("BillingAddress_Address_LanguageId")).Selector().SelectByText(value);
+            }
         }
 
         public static string Web
