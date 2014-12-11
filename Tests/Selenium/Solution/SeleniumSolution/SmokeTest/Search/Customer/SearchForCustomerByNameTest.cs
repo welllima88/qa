@@ -1,6 +1,8 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 using Six.Scs.QA.Selenium.Search;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
@@ -11,13 +13,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
     [TestFixture]
     public class SearchForCustomerByNameTest
     {
-        private const string SearchField = "SYR Kunde6";
+        private const string SearchString = "SYR Kunde63498 Hardt";
 
-        [TestFixtureSetUp]
+        [SetUp]
         public static void ClassInit()
         {
             TestDirector.Navigate();
-            QuickSearch.SearchField = SearchField;
+            QuickSearch.SearchField = SearchString;
             QuickSearch.SearchButton.Click();
         }
 
@@ -25,14 +27,25 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchField, SearchResult.First(Result.Customer).Text);
+            char[] splitter = {' ', '*'};
+            string[] searchStrings = SearchString.Split(splitter);
+            IEnumerable<IWebElementAdapter> results = new SearchResult(Result.Customer).Result();
+
+            foreach (IWebElementAdapter result in results)
+            {
+                foreach (string searchString in searchStrings)
+                {
+                    Assert.That(result.Text, Contains.Substring(searchString));
+                }
+            }
+            new SearchResult(Result.Customer).First().Click();
         }
 
         [Test]
         [Category("Search"), Category("Customer")]
         public void SearchStringInHeadlineIsDisplayed()
         {
-            StringAssert.Contains(SearchField, SearchResult.Headline);
+            StringAssert.Contains(SearchString, SearchResult.Headline);
         }
     }
 }

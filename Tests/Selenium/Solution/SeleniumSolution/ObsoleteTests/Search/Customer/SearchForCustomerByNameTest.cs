@@ -38,15 +38,15 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Search.Customer
         [TestCategory("Search"), TestCategory("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchResult.First(Result.Customer).Text, SearchField);
+            StringAssert.Contains(new SearchResult(Result.Customer).First().Text, SearchField);
         }
 
         [TestMethod]
         [TestCategory("Search"), TestCategory("Customer")]
         public void ShowLocationsAndTerminals()
         {
-            SearchResult.First(Result.Customer).Click();
-            Assert.IsFalse(SearchResult.First(Result.Customer).Displayed);
+            new SearchResult(Result.Customer).First().Click();
+            Assert.IsFalse(new SearchResult(Result.Customer).First().Displayed);
         }
     }
 }

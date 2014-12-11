@@ -9,6 +9,13 @@ namespace Six.Scs.QA.Selenium.Search
 {
     public class SearchResult : WebObject
     {
+        private readonly string _section;
+
+        public SearchResult(string section)
+        {
+            _section = section;
+        }
+
         /// <summary>
         ///     It is recommended to set the prefix property to the appropiate container element
         /// </summary>
@@ -17,27 +24,31 @@ namespace Six.Scs.QA.Selenium.Search
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content h1")).Text; }
         }
 
-        public static TextFieldElement FilterTextField()
+        public TextFieldElement FilterTextField()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")).TextField();
         }
 
-        public static IWebElementAdapter LoadMoreLink(string customerctrl)
+        public IWebElementAdapter LoadMoreLink()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector(" span input[id^='loadMore']"));
         }
 
-        public static IWebElementAdapter First(string section)
-        {
-            return Result(section).FirstOrDefault(d => d.Displayed);
-        }
-
-        private static IEnumerable<IWebElementAdapter> Result(string section)
+        public IWebElementAdapter First()
         {
             WaitForSearchHasFinished();
+            string cssb =
+                String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td>a strong",
+                //String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td:nth-child(3)>a",
+                    _section);
+            return WebDriver.FindAdaptedElement(By.CssSelector(cssb));
+        }
 
-            string cssb = String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td>a[ng-href]", section);
-            return WebDriver.FindAdaptedElements(By.CssSelector(cssb));
+        public IEnumerable<IWebElementAdapter> Result()
+        {
+            WaitForSearchHasFinished();
+            string cssb = String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr", _section);
+            return WebDriver.FindAdaptedElements(By.CssSelector(cssb)).Where(r => r.Displayed);
         }
 
         private static void WaitForSearchHasFinished()
