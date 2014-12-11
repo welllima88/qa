@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Search.Result
+namespace Six.Scs.QA.Selenium.Search
 {
     public class SearchResult : WebObject
     {
@@ -16,27 +17,26 @@ namespace Six.Scs.QA.Selenium.Search.Result
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content h1")).Text; }
         }
 
-        public static TextFieldElement FilterTextField(SearchDivLocator searchDivLocator)
+        public static TextFieldElement FilterTextField()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")).TextField();
         }
 
-        public static IWebElementAdapter LoadMoreLink(SearchDivLocator searchDivLocator)
+        public static IWebElementAdapter LoadMoreLink(string customerctrl)
         {
             return WebDriver.FindAdaptedElement(By.CssSelector(" span input[id^='loadMore']"));
         }
 
-        public static IWebElementAdapter First(SearchDivLocator searchDivLocator)
+        public static IWebElementAdapter First(string section)
         {
-            return Result(searchDivLocator).FirstOrDefault(d => d.Displayed);
+            return Result(section).FirstOrDefault(d => d.Displayed);
         }
 
-        private static IEnumerable<IWebElementAdapter> Result(SearchDivLocator searchDivLocator)
+        private static IEnumerable<IWebElementAdapter> Result(string section)
         {
             WaitForSearchHasFinished();
 
-            string cssb = "div#" + searchDivLocator.Section + " tbody#" + searchDivLocator.ResultId + " tr td a[href*='" +
-                          searchDivLocator.LinkPart + "']";
+            string cssb = String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td>a[ng-href]", section);
             return WebDriver.FindAdaptedElements(By.CssSelector(cssb));
         }
 
