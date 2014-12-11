@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Search.Result;
+using Six.Scs.QA.Selenium.Search;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
 {
@@ -25,7 +25,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         [Category("Search"), Category("Customer")]
         public void CustomerIdInResultIsDisplayed()
         {
-            StringAssert.Contains(SearchField, SearchResult.First(new Selenium.Search.Result.Customer()).Text);
+            StringAssert.Contains(SearchField, SearchResult.First(Result.Customer).Text);
         }
 
         [Test]
