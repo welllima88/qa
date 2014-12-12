@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
     ///     be careful with menu expander because they prevent some actions and need special handling
     /// </summary>
     [TestFixture]
-    public class SearchForCustomerByNameTest
+    public class ByNameTest
     {
         private const string SearchString = "SYR Kunde63498 Hardt";
 
