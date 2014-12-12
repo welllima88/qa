@@ -5,7 +5,6 @@ using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Location;
-using Six.Scs.QA.Selenium.ObsoleteTests.Menu;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
@@ -16,7 +15,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
         private static string _ep2MerchantId;
 
         [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        public static void ClassInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
 
@@ -34,12 +33,6 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 
             _locId = View.Guid;
             _ep2MerchantId = View.Ep2MerchantId;
-        }
-
-        [TestMethod]
-        public void MenuTest()
-        {
-            MenusTest.LocationMenuCheck();
         }
 
         [TestMethod]

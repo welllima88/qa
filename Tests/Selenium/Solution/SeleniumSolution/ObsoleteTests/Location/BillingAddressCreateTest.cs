@@ -3,7 +3,6 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Location.BillingAddress;
-using Six.Scs.QA.Selenium.ObsoleteTests.Menu;
 using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
@@ -180,7 +179,6 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
         [TestMethod]
         public void CreateBillingAddressAndSave()
         {
-            MenusTest.CustomerMenuCheck();
             CustomerMenu.BillingAdressCreate.Click();
 
             Selenium.Location.BillingAddress.Create.CompanyName = "SYR ReAd SELE A";
@@ -199,7 +197,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
 
             Selenium.Location.BillingAddress.Create.SaveButton.Click();
 
-            MenusTest.CustomerMenuCheck();
+            
 
             Assert.AreEqual("SYR ReAd SELE A", View.CompanyName);
             NavigationBar.Lobby.Click();
