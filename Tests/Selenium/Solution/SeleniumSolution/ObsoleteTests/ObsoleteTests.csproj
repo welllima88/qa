@@ -54,83 +54,45 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Administration\Agency\AgencyCreateTest.cs" />
-    <Compile Include="Administration\Agency\AgencyDeleteTest.cs" />
-    <Compile Include="Administration\Agency\AgencyEditTest.cs" />
-    <Compile Include="Administration\Article\ArticleViewTest.cs" />
-    <Compile Include="Administration\SoftwareExchange\SoftwareExchangeGuiTest.cs" />
-    <Compile Include="Administration\SoftwareExchange\SoftwareExchangeTest.cs" />
-    <Compile Include="Contact\Create\ContactCreateToCustomerTest.cs" />
-    <Compile Include="Contact\Create\ContactCreateToLocationTest.cs" />
     <Compile Include="Contact\Create\ContactCreateWithInvalidDataTest.cs" />
     <Compile Include="Contact\Create\ContactCreateWithMinimalInputTest.cs" />
     <Compile Include="Contact\Create\ContactCreateWithMissingDataTest.cs" />
     <Compile Include="Contact\Create\ContactCreateWithNoDataTest.cs" />
-    <Compile Include="Contact\Edit\ContactEditTest.cs" />
     <Compile Include="Contact\Edit\ContactEditWithMinimalInputTest.cs" />
     <Compile Include="Contact\Edit\ContactEditWithNoDataTest.cs" />
     <Compile Include="Contact\Edit\EditContactAndCancelTest.cs" />
     <Compile Include="Contact\Edit\EditContactWithInvalidDataTest.cs" />
     <Compile Include="Contact\Edit\EditContactWithMissingDataTest.cs" />
-    <Compile Include="Customer\Create\Cetrel.cs" />
-    <Compile Include="Customer\Create\Coop.cs" />
-    <Compile Include="Customer\Create\Create.cs" />
     <Compile Include="Customer\Create\InvalidData.cs" />
     <Compile Include="Customer\Create\ManualEp2Number.cs" />
     <Compile Include="Customer\Create\MinimalInput.cs" />
     <Compile Include="Customer\Create\MissingData.cs" />
     <Compile Include="Customer\Create\NoData.cs" />
     <Compile Include="Customer\Create\SbsExport.cs" />
-    <Compile Include="Customer\Edit\EditAndCancel.cs" />
     <Compile Include="Customer\Edit\KeepsData.cs" />
-    <Compile Include="Customer\Edit\Edit.cs" />
     <Compile Include="Customer\Edit\MinamalData.cs" />
-    <Compile Include="Customer\Edit\Delayed\CustomerEditAndDelayedSaveTest.cs" />
     <Compile Include="Customer\Edit\InvalidData.cs" />
     <Compile Include="Customer\Edit\MissingData.cs" />
     <Compile Include="Customer\Edit\NoData.cs" />
     <Compile Include="Customer\Quit\CustomerDeactivateTest.cs" />
     <Compile Include="Customer\Quit\CustomerDeactivateWithActiveTerminalsTest.cs" />
-    <Compile Include="Help\HelpTest.cs" />
-    <Compile Include="Infotext\InfotextCreateTest.cs" />
     <Compile Include="Location\BillingAddressCreateTest.cs" />
     <Compile Include="Location\BillingAddressEditTest.cs" />
-    <Compile Include="Location\Create\LocationCreateTest.cs" />
     <Compile Include="Location\Create\LocationCreateWithInvalidDataTest.cs" />
     <Compile Include="Location\Create\LocationCreateWithMinimalInputAndSave.cs" />
     <Compile Include="Location\Create\LocationCreateWithMinimalInputAndSBSExportAndSave.cs" />
     <Compile Include="Location\Create\LocationCreateWithMissingDataTest.cs" />
     <Compile Include="Location\Create\LocationCreateWithoutUserInputTest.cs" />
-    <Compile Include="Location\Edit\LocationEditAndCancelTest.cs" />
-    <Compile Include="Location\Edit\LocationEditAndSaveTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithInvalidDataTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithMinimalInputTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithMissingDataTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithNoChangeTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithoutReasonTest.cs" />
     <Compile Include="Location\Edit\LocationEditWithoutUserInputTest.cs" />
-    <Compile Include="LogOn\LogOnTest.cs" />
-    <Compile Include="Massmutation\AcquirerChangeTest.cs" />
-    <Compile Include="Massmutation\BusinessTemplateMassmuationTest.cs" />
-    <Compile Include="Massmutation\ContractMassmuationTest.cs" />
-    <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
-    <Compile Include="Massmutation\LocationMassmuationTest.cs" />
-    <Compile Include="Massmutation\TerminalMassmuationTest.cs" />
-    <Compile Include="Menu\MenusTest.cs" />
-    <Compile Include="Mpd\MpdCreateTest.cs" />
-    <Compile Include="Search\Customer\SearchForCustomerByIdTest.cs" />
-    <Compile Include="Search\Customer\SearchForCustomerByNameTest.cs" />
-    <Compile Include="Terminal\ArticleChooser\ArticleChooserLookupTest.cs" />
-    <Compile Include="Terminal\ArticleChooser\ArticleChooserSuggestedArticleTest.cs" />
-    <Compile Include="Terminal\Dashboard\CustomerInfoTest.cs" />
-    <Compile Include="Terminal\Dashboard\LocationlInfoTest.cs" />
-    <Compile Include="Terminal\Dashboard\Portlet\PortletBasicTest.cs" />
-    <Compile Include="Terminal\Dashboard\TerminalInfoTest.cs" />
     <Compile Include="Terminal\Duplicate\TerminalDuplicateDefaultsGuiTest.cs" />
     <Compile Include="Terminal\Duplicate\TerminalDuplicateTest.cs" />
     <Compile Include="Terminal\Duplicate\TerminalDuplicateWithDifferentPasswords.cs" />
     <Compile Include="Terminal\Duplicate\TerminalDuplicateWithSamePasswortTest.cs" />
-    <Compile Include="Terminal\EventLog\EventLogGuiTest.cs" />
     <Compile Include="Terminal\FinancialConfig\OnlineFinancialAdviceValidationTest.cs" />
     <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateTest.cs" />
     <Compile Include="Terminal\TraceLogConfig\TraceLogConfigActivateWithInvalidDataTest.cs" />
@@ -139,11 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="TestData\TestDataExcel.xlsx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SCS2\SCS Platin.csproj">
       <Project>{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}</Project>
@@ -156,14 +115,6 @@
     <ProjectReference Include="..\TestData\TestData.csproj">
       <Project>{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}</Project>
       <Name>TestData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TestFlow\Testlogic.csproj">
-      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
-      <Name>Testlogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Workflow\Workflow.csproj">
-      <Project>{6D99C089-ECA8-42DA-B74B-EAF28E457D83}</Project>
-      <Name>Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

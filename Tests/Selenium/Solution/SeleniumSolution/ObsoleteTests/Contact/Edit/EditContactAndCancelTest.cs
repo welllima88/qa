@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.ObsoleteTests.Menu;
 using Six.Scs.QA.Selenium.Person;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
@@ -52,8 +51,6 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             // _web = ContactPersonView.Web;
             _addressAddition = View.AddressAddition;
 
-            MenusTest.ContactMenuCheck();
-
             ContactMenu.ContactEdit.Click();
 
             Person.Edit.Salutation = "Herr";
@@ -73,12 +70,6 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             Person.Edit.AdressAddition = "Addr-Add";
 
             Person.Edit.CancelButton.Click();
-        }
-
-        [TestMethod]
-        public void ContactMenuCheck()
-        {
-            MenusTest.ContactMenuCheck();
         }
 
         [TestMethod]
