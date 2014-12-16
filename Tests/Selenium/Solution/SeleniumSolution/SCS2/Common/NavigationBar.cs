@@ -7,32 +7,17 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter Lobby
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(CommonRes.NavigationBar_Lobby));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Lobby)); }
         }
 
         public static IWebElementAdapter Administration
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(CommonRes.NavigationBar_Administration));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Administration)); }
         }
 
         public static IWebElementAdapter Reporting
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(CommonRes.NavigationBar_Reporting));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Reporting)); }
         }
 
         public static IWebElementAdapter Help
