@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Administration.SerialNumberManage;
 using Six.Scs.QA.Selenium.Common.Menu;
+using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
 {
@@ -10,6 +11,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
         [TestFixtureSetUp]
         public static void ClassInit()
         {
+            TestDirector.Navigate();
             LobbyMenu.SerialNumberManage.Click();
         }
 
