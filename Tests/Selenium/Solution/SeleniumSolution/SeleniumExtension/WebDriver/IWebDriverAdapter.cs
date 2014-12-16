@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
     {
         ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by);
         IWebElementAdapter FindAdaptedElement(By by);
-        List<string> WebElementsAsStringList(ReadOnlyCollection<IWebElementAdapter> webElements);
+        List<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements);
         WebDriverWait WebDriverWait();
     }
 }

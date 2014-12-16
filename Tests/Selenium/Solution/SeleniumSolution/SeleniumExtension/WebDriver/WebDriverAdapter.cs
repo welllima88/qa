@@ -48,7 +48,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
             return new WebElementAdapter(_webDriver.FindElement(by));
         }
 
-        List<string> IWebDriverAdapter.WebElementsAsStringList(ReadOnlyCollection<IWebElementAdapter> webElements)
+        List<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
         {
             return WebElementsAsStringList(webElements);
         }
@@ -126,7 +126,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
         /// <returns></returns>
-        public static List<String> WebElementsAsStringList(ReadOnlyCollection<IWebElementAdapter> webElements)
+        public static List<String> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
         {
             var items = new List<String>(5);
             items.AddRange(webElements.Select(item => item.Text));
