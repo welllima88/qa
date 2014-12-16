@@ -20,7 +20,10 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
         public static void ClassInit()
         {
             TestDirector.Navigate();
-            Workflow.Search.Find("TK0000010000001");
+            Workflow.Search.Find("TK00000100108834");
+            new SearchResult(Result.Location).First().Click();
+            
+            Assert.That("TK00000100108834", Is.EqualTo(View.Ep2MerchantId));
 
             _locationNumber = View.LocationNumber;
             _debitorNumber = View.SbsDebitNumber;
@@ -32,9 +35,10 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
         public void DebitorNumber()
         {
             Workflow.Search.Find(_debitorNumber);
-            StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
+            // StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
             new SearchResult(Result.Location).First().Click();
             Assert.That(_debitorNumber, Is.EqualTo(View.SbsDebitNumber));
+            Assert.That("TK00000100108834", Is.EqualTo(View.Ep2MerchantId));
         }
 
         [Test]
@@ -42,9 +46,10 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
         public void Ep2MerchantId()
         {
             Workflow.Search.Find(_ep2MerchantId);
-            StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
+            // StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
             new SearchResult(Result.Location).First().Click();
             Assert.That(_ep2MerchantId, Is.EqualTo(View.Ep2MerchantId));
+            Assert.That("TK00000100108834", Is.EqualTo(View.Ep2MerchantId));
         }
 
         [Test]
@@ -52,9 +57,10 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
         public void LocationNumber()
         {
             Workflow.Search.Find(_locationNumber);
-            StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
+            // StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Location).First().Text);
             new SearchResult(Result.Location).First().Click();
             Assert.That(_locationNumber, Is.EqualTo(View.LocationNumber));
+            Assert.That("TK00000100108834", Is.EqualTo(View.Ep2MerchantId));
         }
     }
 }
