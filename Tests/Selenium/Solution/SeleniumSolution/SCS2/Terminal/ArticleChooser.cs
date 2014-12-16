@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -16,8 +17,9 @@ namespace Six.Scs.QA.Selenium.Terminal
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> articleElements =
-                    WebDriver.FindAdaptedElements(By.CssSelector("tbody#allArticles tr td:not([style*='display: none'])"));
+                IEnumerable<IWebElementAdapter> articleElements = WebDriver.FindAdaptedElements(
+                    By.CssSelector("tbody#allArticles tr td strong"))
+                    .Where(e => e.Displayed);
                 return WebDriver.WebElementsAsStringList(articleElements);
             }
         }
@@ -27,7 +29,7 @@ namespace Six.Scs.QA.Selenium.Terminal
             get
             {
                 ReadOnlyCollection<IWebElementAdapter> articleElements =
-                    WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td"));
+                    WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td strong"));
                 return WebDriver.WebElementsAsStringList(articleElements);
             }
         }
