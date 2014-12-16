@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Terminal.EventLog
 
         public static IWebElementAdapter Export
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input[value='Export']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#export")); }
         }
     }
 }
