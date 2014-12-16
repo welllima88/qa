@@ -116,14 +116,6 @@
       <Project>{2F418EF9-C1C1-4E32-8954-5EA1B5257F20}</Project>
       <Name>TestData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestFlow\Testlogic.csproj">
-      <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
-      <Name>Testlogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Workflow\Workflow.csproj">
-      <Project>{6D99C089-ECA8-42DA-B74B-EAF28E457D83}</Project>
-      <Name>Workflow</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
