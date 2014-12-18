@@ -68,7 +68,11 @@
     <Compile Include="CoiNotificationTest.cs" />
     <Compile Include="Coi\Ad.cs" />
     <Compile Include="Coi\ConfigDataNotification.cs" />
+    <Compile Include="Coi\ConfigRequest.cs" />
+    <Compile Include="Coi\ConfigResponse.cs" />
     <Compile Include="Coi\ListAID.cs" />
+    <Compile Include="Coi\MyHandler.cs" />
+    <Compile Include="Coi\MySecurityProvider.cs" />
     <Compile Include="Coi\Program.cs" />
     <Compile Include="Coi\Tcd.cs" />
     <Compile Include="LaidRequestTest.cs" />
