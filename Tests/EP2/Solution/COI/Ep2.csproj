@@ -73,7 +73,7 @@
     <Compile Include="Coi\ListAID.cs" />
     <Compile Include="Coi\MyHandler.cs" />
     <Compile Include="Coi\MySecurityProvider.cs" />
-    <Compile Include="Coi\Program.cs" />
+    <Compile Include="Coi\CoiTest.cs" />
     <Compile Include="Coi\Tcd.cs" />
     <Compile Include="LaidRequestTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
