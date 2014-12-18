@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.TraceLogConfig;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.TraceLogConfig
 {
-    [TestClass]
+    [TestFixture]
     public class TraceLogConfigDeactivateTest
     {
-        [ClassInitialize]
-        public static void TestInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void TestInit()
         {
             TestDirector.Navigate("TracelogConfig/Edit/?TerminalId=21011402");
 
@@ -25,60 +25,60 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.TraceLogConfig
             TerminalTraceLogConfigEdit.Save.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void ActivatedUntil()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "24.12.2022");
         }
 
-        [TestMethod]
-        public void Parameter()
-        {
-            Assert.AreEqual(TerminalTraceLogConfigView.Parameter, "Parameter");
-        }
-
-        [TestMethod]
-        public void Medium()
-        {
-            Assert.AreEqual(TerminalTraceLogConfigView.Medium, "Local");
-        }
-
-        [TestMethod]
+        [Test]
         public void DestinationAddress()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.DestinationAddress, "111.111.111.555");
         }
 
-        [TestMethod]
+        [Test]
         public void DestinationPort()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.DestinationPort, "11115");
         }
 
-        [TestMethod]
-        public void TelephoneIsdn()
-        {
-            Assert.AreEqual(TerminalTraceLogConfigView.TelephoneIsdn, "004412345677890");
-        }
-
-        [TestMethod]
-        public void TelephonePstn()
-        {
-            Assert.AreEqual(TerminalTraceLogConfigView.TelephonePstn, "003312345677890");
-        }
-
-        [TestMethod]
+        [Test]
         public void DestinationUrl()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.DestinationUrl, "www.six-group.com");
         }
 
-        [TestMethod]
+        [Test]
         public void DestinationUrlPort()
         {
             Assert.AreEqual(TerminalTraceLogConfigView.DestinationUrlPort, "22225");
             // Assert.IsTrue(_terminalTraceLogConfig.Equals(this));
             // CollectionAssert.Contains(TerminalEventLog.EventList, "at least List with");
+        }
+
+        [Test]
+        public void Medium()
+        {
+            Assert.AreEqual(TerminalTraceLogConfigView.Medium, "Local");
+        }
+
+        [Test]
+        public void Parameter()
+        {
+            Assert.AreEqual(TerminalTraceLogConfigView.Parameter, "Parameter");
+        }
+
+        [Test]
+        public void TelephoneIsdn()
+        {
+            Assert.AreEqual(TerminalTraceLogConfigView.TelephoneIsdn, "004412345677890");
+        }
+
+        [Test]
+        public void TelephonePstn()
+        {
+            Assert.AreEqual(TerminalTraceLogConfigView.TelephonePstn, "003312345677890");
         }
     }
 }

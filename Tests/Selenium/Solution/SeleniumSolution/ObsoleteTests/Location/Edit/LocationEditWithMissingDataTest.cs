@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class LocationEditWithMissingDataTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
@@ -30,7 +30,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Selenium.Location.Edit.CompanyName = "SYR Sele Firma A";
         }
 
-        [TestMethod]
+        [Test]
         public void EditLocationWithoutCompanyNameFailed()
         {
             Selenium.Location.Edit.CompanyName = "";
@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Selenium.Location.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditLocationWithoutStreetAndNumberFailed()
         {
             Selenium.Location.Edit.StreetNo = "";
@@ -53,7 +53,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditLocationWithoutCityFailed()
         {
             Selenium.Location.Edit.City = "";
@@ -64,7 +64,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditLocationWithoutZipFailed()
         {
             Selenium.Location.Edit.Zip = "";

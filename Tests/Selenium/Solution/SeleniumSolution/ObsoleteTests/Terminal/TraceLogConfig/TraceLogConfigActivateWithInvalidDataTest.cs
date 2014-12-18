@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.TraceLogConfig;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.TraceLogConfig
 {
-    [TestClass]
+    [TestFixture]
     public class TraceLogConfigActivateWithInvalidDataTest
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("TracelogConfig/Edit/?TerminalId=21011402");
 
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.TraceLogConfig
             TerminalTraceLogConfigEdit.DestinationUrlPort = "22222";
         }
 
-        [TestMethod]
+        [Test]
         public void SetDateInThePastFailed()
         {
             TerminalTraceLogConfigEdit.ActivatedUntil = "24.10.1920";
@@ -34,7 +34,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.TraceLogConfig
             Assert.AreEqual(TerminalTraceLogConfigView.ActivatedUntil, "24.10.1920");
         }
 
-        [TestMethod]
+        [Test]
         [Ignore]
         public void WihtEmptyParameterFailed()
         {

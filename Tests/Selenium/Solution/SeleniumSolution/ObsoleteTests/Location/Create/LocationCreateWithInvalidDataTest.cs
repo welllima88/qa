@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
-    [TestClass]
+    [TestFixture]
     public class LocationCreateWithInvalidDataTest
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
 
@@ -32,79 +32,79 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Selenium.Location.Create.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyNameInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAdditionInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Zusatz: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void TelephoneInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Telefon: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void MobileNumberInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Mobiltelefon: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void FaxInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Fax: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNumberInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void ZipInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void PoInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Postfach: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void CityInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void RegionInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Region (Kurzzeichen): Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void EmailInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Email: Dies ist keine gültige E-Mail Adresse!");
         }
 
-        [TestMethod]
+        [Test]
         public void WebInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Web: Dies ist keine gültige Web Adresse!");
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfFormAlerts()
         {
             Assert.AreEqual(12, FormAlert.FormAlertList.Count);

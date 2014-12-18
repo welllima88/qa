@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Person;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class EditContactAndCancelTest
     {
         private static string _contactId;
@@ -27,8 +27,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
         private static string _addressAddition;
         private static string _web;
 
-        [ClassInitialize]
-        public static void TestInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void TestInit()
         {
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
@@ -72,97 +72,97 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             Person.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void Salutation()
         {
             Assert.AreEqual(_salutation, View.Salutation);
         }
 
-        [TestMethod]
+        [Test]
         public void FirstName()
         {
             Assert.AreEqual(_firstName, View.FirstName);
         }
 
-        [TestMethod]
+        [Test]
         public void Name()
         {
             Assert.AreEqual(_name, View.Name);
         }
 
-        [TestMethod]
+        [Test]
         public void Language()
         {
             Assert.AreEqual(_language, View.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual(_telephone, View.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual(_mobile, View.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual(_fax, View.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual(_email, View.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual(_po, View.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             Assert.AreEqual(_streetNo, View.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual(_zip, View.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual(_city, View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void Region()
         {
             Assert.AreEqual(_region, View.Region);
         }
 
-        [TestMethod]
+        [Test]
         public void Country()
         {
             Assert.AreEqual(_country, View.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual(_web, View.Web);
         }
 
-        [TestMethod]
+        [Test]
         public void AddressAddition()
         {
             Assert.AreEqual(_addressAddition, View.AddressAddition);

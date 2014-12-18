@@ -1,21 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
-    [TestClass]
+    [TestFixture]
     public class MissingData
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate();
             CustomerMenu.CustomerCreate.Click();
         }
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             Selenium.Customer.Create.CustomerName = "SYR Sele Kunde A";
@@ -43,17 +43,17 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             Selenium.Customer.Create.Country = "Schweiz [CH]";
         }
 
-        [TestCleanup]
-        public void TestCleanup()
+        [TearDown]
+        public void TearDown()
         {
         }
 
-        [ClassCleanup]
-        public static void ClassCleanup()
+        [TestFixtureTearDown]
+        public static void TestFixtureTearDown()
         {
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutCustomerNameFailed()
         {
             Selenium.Customer.Create.CustomerName = "";
@@ -63,7 +63,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundenname: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutCompanyNameFailed()
         {
             Selenium.Customer.Create.CompanyName = "";
@@ -73,7 +73,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutStreetAndNumberFailed()
         {
             Selenium.Customer.Create.StreetNo = "";
@@ -83,7 +83,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutCityFailed()
         {
             Selenium.Customer.Create.City = "";
@@ -93,7 +93,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutZipFailed()
         {
             Selenium.Customer.Create.Zip = "";
@@ -103,7 +103,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateCustomerWithoutMandantFailed()
         {
             Selenium.Customer.Create.Supplier = "";

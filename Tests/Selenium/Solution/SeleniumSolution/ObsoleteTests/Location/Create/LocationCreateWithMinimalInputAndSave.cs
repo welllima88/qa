@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
@@ -8,13 +8,13 @@ using Six.Scs.QA.Selenium.Location;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
-    [TestClass]
+    [TestFixture]
     public class LocationCreateWithMinimalInputAndSave
     {
         private static string _locId;
         private static string _ep2MerchantId;
 
-        [ClassInitialize]
+        [TestFixtureSetUp]
         public static void ClassInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
@@ -35,13 +35,13 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             _ep2MerchantId = View.Ep2MerchantId;
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyName()
         {
             Assert.AreEqual("SYR Standort SELE A", View.CompanyName);
         }
 
-        [TestMethod]
+        [Test]
         public void RecentElementsCheck()
         {
             NavigationBar.Lobby.Click();
@@ -49,109 +49,109 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual(_locId, View.Guid);
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantId()
         {
             Assert.AreEqual(_ep2MerchantId, View.Ep2MerchantId);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitNumber()
         {
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNumber()
         {
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantIdFormat()
         {
-            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.IsMatch(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
-        [TestMethod]
+        [Test]
         public void StreetName()
         {
             Assert.AreEqual("Bröselstr. 201a-c", View.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual("", View.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual("55555", View.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual("München", View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAddition()
         {
             Assert.AreEqual("", View.AdressAddition);
         }
 
-        [TestMethod]
+        [Test]
         public void Region()
         {
             Assert.AreEqual("", View.Region);
         }
 
-        [TestMethod]
+        [Test]
         public void Language()
         {
             Assert.AreEqual("Französisch [fr]", View.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void Country()
         {
             Assert.AreEqual("Frankreich [FR]", View.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual("", View.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual("", View.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual("", View.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual("", View.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual("", View.Web);
         }
 
-        [TestMethod]
+        [Test]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()
         {
             string country = Selenium.Customer.View.Country;
@@ -159,7 +159,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual(country, Selenium.Location.Create.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void LanguageOfCustomerIsUsedForAgencyOfLocation()
         {
             string language = Selenium.Customer.View.Language;
@@ -167,7 +167,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual(language, Selenium.Location.Create.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationCheckNavBar()
         {
             Assert.AreEqual("Kunde", NavigationBar.Current.Text);
@@ -175,7 +175,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual("Kunde", NavigationBar.Current.Text);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationCheckHeadline()
         {
             CustomerMenu.LocationCreate.Click();

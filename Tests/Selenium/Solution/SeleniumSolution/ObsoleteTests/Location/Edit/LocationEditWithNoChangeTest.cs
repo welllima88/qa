@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -7,7 +7,7 @@ using Six.Scs.QA.Selenium.Location;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class LocationEditWithNoChangeTest
     {
         private string _adressAddition;
@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         private string _web;
         private string _zip;
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Location?LocationId=4b77d4f2-d5db-4823-9d52-63c1534de457");
@@ -60,127 +60,127 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Selenium.Location.Edit.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void Guid()
         {
             Assert.AreEqual(_guid, View.Guid);
         }
 
-        [TestMethod]
+        [Test]
         public void SapNumber()
         {
             Assert.AreEqual(_sapNumber, View.SapNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitNumberPattern()
         {
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNumberPattern()
         {
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantIdPattern()
         {
-            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.IsMatch(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitNumber()
         {
             Assert.AreEqual(_sbsDebitNumber, View.SbsDebitNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNumber()
         {
             Assert.AreEqual(_sbsAdressNumber, View.SbsAdressNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantId()
         {
             Assert.AreEqual(_ep2MerchantId, View.Ep2MerchantId);
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyName()
         {
             Assert.AreEqual(_companyName, View.CompanyName);
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual(_po, View.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAddition()
         {
             Assert.AreEqual(_adressAddition, View.AdressAddition);
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             Assert.AreEqual(_streetName, View.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual(_zip, View.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual(_city, View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void Language()
         {
             Assert.AreEqual(_language, View.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void Country()
         {
             Assert.AreEqual(_country, View.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual(_email, View.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual(_telephone, View.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual(_mobile, View.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual(_fax, View.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual(_web, View.Web);

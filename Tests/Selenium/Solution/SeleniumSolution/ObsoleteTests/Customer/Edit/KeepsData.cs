@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class KeepsData
     {
         private static string _customerName;
@@ -28,8 +28,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         private static string _customerNumber;
         private static string _region;
 
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Customer/edit?customerId=401858");
 
@@ -57,121 +57,121 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             View.EditButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerNumber()
         {
             Assert.AreEqual(_customerNumber, Selenium.Customer.Edit.CustomerNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void Supplier()
         {
             Assert.AreEqual(_supplier, Selenium.Customer.Edit.Supplier);
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantId()
         {
             Assert.AreEqual(_ep2MerchantId, Selenium.Customer.Edit.Ep2MerchantId);
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerName()
         {
             Assert.AreEqual(_customerName, Selenium.Customer.Edit.CustomerName);
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyName()
         {
             Assert.AreEqual(_companyName, Selenium.Customer.Edit.CompanyName);
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             Assert.AreEqual(_streetNo, Selenium.Customer.Edit.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual(_zip, Selenium.Customer.Edit.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual(_city, Selenium.Customer.Edit.City);
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual(_po, Selenium.Customer.Edit.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAddition()
         {
             Assert.AreEqual(_adressAddition, Selenium.Customer.Edit.AdressAddition);
         }
 
-        [TestMethod]
+        [Test]
         public void Region()
         {
             Assert.AreEqual(_region, Selenium.Customer.Edit.Region);
         }
 
-        [TestMethod]
+        [Test]
         public void SapNumberEditCustomerAndSave()
         {
             Assert.AreEqual(_sapNumber, Selenium.Customer.Edit.SapNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void Agency()
         {
             Assert.AreEqual(_agency, Selenium.Customer.Edit.Agency);
         }
 
-        [TestMethod]
+        [Test]
         public void Language()
         {
             Assert.AreEqual(_language, Selenium.Customer.Edit.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void Country()
         {
             Assert.AreEqual(_country, Selenium.Customer.Edit.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual(_email, Selenium.Customer.Edit.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual(_telephone, Selenium.Customer.Edit.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual(_mobile, Selenium.Customer.Edit.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual(_fax, Selenium.Customer.Edit.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual(_web, Selenium.Customer.Edit.Web);

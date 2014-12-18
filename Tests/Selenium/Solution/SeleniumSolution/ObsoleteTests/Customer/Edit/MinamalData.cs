@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
@@ -7,7 +7,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class MinamalData
     {
         private static string _customerNumber;
@@ -19,8 +19,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
         private static string _sbsBillingTenant;
         private static string _supplier;
 
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=401858");
 
@@ -57,194 +57,194 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             Selenium.Customer.Edit.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerNumber()
         {
             Assert.AreEqual(_customerNumber, View.CustomerNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerNumberFormat()
         {
-            StringAssert.Matches(_customerNumber, new Regex(TestRegExpPatterns.CustomerNo));
+            StringAssert.IsMatch(_customerNumber, new Regex(TestRegExpPatterns.CustomerNo));
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerName()
         {
             Assert.AreEqual("SYR Sele Kunde Minimal", View.CustomerName);
         }
 
-        [TestMethod]
+        [Test]
         public void Supplier()
         {
             Assert.AreEqual(_supplier, View.Supplier);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsBillingTenant()
         {
             Assert.AreEqual(_sbsBillingTenant, View.SbsBillingTenant);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsCurrency()
         {
             Assert.AreEqual(_sbsCurrency, View.SbsCurrency);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitNumber()
         {
             Assert.AreEqual(_sbsDebitNumber, View.SbsDebitNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNumber()
         {
             Assert.AreEqual(_sbsAdressNumber, View.SbsAdressNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void SupportContract()
         {
             Assert.AreEqual("Kein Supportvertrag", View.SupportContract);
         }
 
-        [TestMethod]
+        [Test]
         public void CashIntegrator()
         {
             Assert.AreEqual("Kein Kassenintegrator", View.CashIntegrator);
         }
 
-        [TestMethod]
+        [Test]
         public void SapNumber()
         {
             Assert.AreEqual("", View.SapNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantId()
         {
             Assert.AreEqual(_ep2MerchantId, View.Ep2MerchantId);
         }
 
-        [TestMethod]
+        [Test]
         public void Segment()
         {
             Assert.AreEqual(_segment, View.Segment);
         }
 
-        [TestMethod]
+        [Test]
         public void CategoryCode()
         {
             Assert.AreEqual("(Keine Branche)", View.CategoryCode);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitorNo()
         {
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNoOpt()
         {
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantIdFormat()
         {
-            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.IsMatch(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyName()
         {
             Assert.AreEqual("SYR Sele Firma Minimal", View.CompanyName);
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual(" ", View.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAddition()
         {
             Assert.AreEqual(" ", View.AdressAddition);
         }
 
-        [TestMethod]
+        [Test]
         public void Region()
         {
             Assert.AreEqual(" ", View.Region);
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             Assert.AreEqual("Hardturmstr. 201", View.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual("8021", View.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual("Zürich", View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void Agency()
         {
             Assert.AreEqual("Keine Agentur", View.Agency);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual(" ", View.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual(" ", View.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual(" ", View.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual(" ", View.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual(" ", View.Web);
         }
 
-        [TestMethod]
+        [Test]
         [Ignore]
         public void LanguageEditCustomerWithMinimalAndSave()
         {
             Assert.AreEqual("Deutsch [de]", View.Language);
         }
 
-        [TestMethod]
+        [Test]
         [Ignore]
         public void Country()
         {

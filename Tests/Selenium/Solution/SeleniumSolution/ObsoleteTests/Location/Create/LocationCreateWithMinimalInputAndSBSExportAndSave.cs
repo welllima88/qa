@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
@@ -10,18 +10,18 @@ using Six.Scs.QA.Selenium.Location;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
-    [TestClass]
+    [TestFixture]
     public class LocationCreateWithMinimalInputAndSbsExportAndSave
     {
         private static readonly TimeSpan MillisecondsTimeout = TimeSpan.FromSeconds(1);
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationWithSbsAndMinimalAndSave()
         {
             CustomerMenu.LocationCreate.Click();
@@ -35,13 +35,13 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 
             Assert.AreEqual("SYR SBS Standort A", View.CompanyName);
 
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
             int retry = 10;
             do
             {
                 try
                 {
-                    StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
+                    StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
@@ -56,7 +56,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual("SBS", View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void CountryOfCustomerIsUsedForAgencyOfLocation()
         {
             string country = Selenium.Customer.View.Country;
@@ -64,7 +64,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual(country, Selenium.Location.Create.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void LanguageOfCustomerIsUsedForAgencyOfLocation()
         {
             string language = Selenium.Customer.View.Language;
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual(language, Selenium.Location.Create.Language);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationCheckNavBar()
         {
             Assert.AreEqual("Kunde", NavigationBar.Current.Text);
@@ -80,7 +80,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Assert.AreEqual("Kunde", NavigationBar.Current.Text);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationCheckHeadline()
         {
             CustomerMenu.LocationCreate.Click();

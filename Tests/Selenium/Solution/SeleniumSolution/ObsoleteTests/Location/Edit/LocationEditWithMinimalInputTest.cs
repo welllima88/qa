@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension;
@@ -8,7 +8,7 @@ using Six.Scs.QA.Selenium.Location;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class LocationEditWithMinimalInputTest
     {
         private string _ep2MerchantId;
@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
         private string _sbsAdressNumber;
         private string _sbsDebitNumber;
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Location?LocationId=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
@@ -50,7 +50,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Selenium.Location.Create.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditLocationWithMinimalAndSave()
         {
             Assert.AreEqual(View.Guid, _guid);
@@ -64,9 +64,9 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Assert.AreEqual(View.Ep2MerchantId, _ep2MerchantId);
             Assert.AreEqual("SYR Standort SELE B", View.CompanyName);
 
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
-            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
 
             Assert.AreEqual("Am Bärenplatz 2", View.StreetNo);
             Assert.AreEqual("", View.SapNumber);

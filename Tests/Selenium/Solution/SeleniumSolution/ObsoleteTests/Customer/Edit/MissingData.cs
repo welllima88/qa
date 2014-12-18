@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class MissingData
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             Selenium.Customer.Edit.Web = "www.six-group.com/de-intern";
         }
 
-        [TestMethod]
+        [Test]
         public void EditCustomerWithoutCompanyNameFailed()
         {
             Selenium.Customer.Edit.CompanyName = "";
@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditCustomerWithoutStreetAndNumberFailed()
         {
             Selenium.Customer.Edit.StreetNo = "";
@@ -54,7 +54,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             Selenium.Customer.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditCustomerWithoutCityFailed()
         {
             Selenium.Customer.Edit.City = "";
@@ -66,7 +66,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             Selenium.Customer.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditCustomerWithoutZipFailed()
         {
             Selenium.Customer.Edit.Zip = "";

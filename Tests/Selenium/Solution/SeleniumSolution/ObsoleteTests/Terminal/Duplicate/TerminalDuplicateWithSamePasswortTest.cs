@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Massmuation;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
@@ -7,14 +7,14 @@ using Six.Scs.QA.Selenium.Terminal.Duplicate;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
 {
-    [TestClass]
+    [TestFixture]
     public class TerminalDuplicateWithSamePasswortTest
     {
         private const int NumberOfTerminals = 5;
         private const string TerminalId = "21013049";
 
-        [ClassInitialize]
-        public static void TestInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void TestInit()
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=" + TerminalId);
             SalesContract.TerminalDuplicate.Click();
@@ -24,19 +24,19 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
             View.DulpicateButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void PasswordsAreSame()
         {
             Assert.AreEqual(1, TerminalValidation.Passwords.Distinct().Count());
         }
 
-        [TestMethod]
+        [Test]
         public void LocationsAreSame()
         {
             Assert.AreEqual(1, TerminalValidation.Locations.Distinct().Count());
         }
 
-        [TestMethod]
+        [Test]
         public void ReferenceTerminalIdsAreEqual()
         {
             foreach (string referenceTerminalId in TerminalValidation.ReferenceTerminalIds)
@@ -45,7 +45,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
             }
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfTerminalsToDuplicate()
         {
             Assert.AreEqual(TerminalValidation.Count, NumberOfTerminals);

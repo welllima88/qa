@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -7,19 +7,19 @@ using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
 {
-    [TestClass]
+    [TestFixture]
     public class BillingAddressCreateTest
     {
         private string _dt;
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?CustomerId=404871");
             _dt = Factory.GenerateTestId();
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithInvalidDataFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Assert.AreEqual(12, FormAlert.FormAlertList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithIncompleteDataFailed()
         {
             CustomerMenu.BillingAdressCreate.Click();
@@ -72,7 +72,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "Land: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressrWithoutCompanyNameFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -98,7 +98,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithoutStreetAndNumberFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -124,7 +124,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithoutCityFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -150,7 +150,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithoutZipFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -176,7 +176,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressAndSave()
         {
             CustomerMenu.BillingAdressCreate.Click();
@@ -219,7 +219,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Assert.AreEqual("www.six-group.com/de" + _dt, View.Web);
         }
 
-        [TestMethod]
+        [Test]
         public void CreateBillingAddressWithMinimalAndSave()
         {
             CustomerMenu.BillingAdressCreate.Click();

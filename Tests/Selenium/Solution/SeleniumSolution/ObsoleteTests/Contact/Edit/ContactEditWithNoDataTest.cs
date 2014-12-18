@@ -1,17 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class ContactEditWithNoDataTest
     {
         private static string _contactId;
 
-        [ClassInitialize]
-        public static void TestInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void TestInit()
         {
             _contactId = "31432";
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
@@ -37,37 +37,37 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             Person.Edit.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfFormAlerts()
         {
             Assert.AreEqual(5, FormAlert.FormAlertList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void NameInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Name: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void FirstNameInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Vorname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void StreetAndNumberInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void ZipInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CityInvalid()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");

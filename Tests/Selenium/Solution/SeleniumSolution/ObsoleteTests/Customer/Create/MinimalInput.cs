@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
@@ -9,7 +9,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
-    [TestClass]
+    [TestFixture]
     public class MinimalInput
     {
         private static long _dt;
@@ -25,8 +25,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         private static string _language;
         private static string _country;
 
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate();
             _dt = DateTime.Now.Ticks; //timestamp for each test
@@ -62,116 +62,116 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             _custId = View.CustomerNumber;
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerName()
         {
             Assert.AreEqual(_customerName, View.CustomerName);
         }
 
-        [TestMethod]
+        [Test]
         public void Supplier()
         {
             Assert.AreEqual(_supplier, View.Supplier);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsBillingTenant()
         {
             Assert.AreEqual(_sbsBillingTenant, View.SbsBillingTenant);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsCurrency()
         {
             Assert.AreEqual(_sbsCurrency, View.SbsCurrency);
         }
 
-        [TestMethod]
+        [Test]
         public void SapNumber()
         {
             Assert.AreEqual(" ", View.SapNumber);
         }
 
-        [TestMethod]
+        [Test]
         public void CategoryCode()
         {
             Assert.AreEqual("(Keine Branche)", View.CategoryCode);
         }
 
-        [TestMethod]
+        [Test]
         public void SupportContract()
         {
             Assert.AreEqual("Kein Supportvertrag",
                 View.SupportContract);
         }
 
-        [TestMethod]
+        [Test]
         public void CashIntegrator()
         {
             Assert.AreEqual("Kein Kassenintegrator", View.CashIntegrator);
         }
 
-        [TestMethod]
+        [Test]
         public void SbsDebitNumber()
         {
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
-        [TestMethod]
+        [Test]
         public void SbsAdressNumber()
         {
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
 
-        [TestMethod]
+        [Test]
         public void Ep2MerchantId()
         {
-            StringAssert.Matches(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
+            StringAssert.IsMatch(View.Ep2MerchantId, new Regex(TestRegExpPatterns.Ep2MerchantId));
         }
 
-        [TestMethod]
+        [Test]
         public void Po()
         {
             Assert.AreEqual(" ", View.Po);
         }
 
-        [TestMethod]
+        [Test]
         public void AdressAddition()
         {
             Assert.AreEqual(" ", View.AdressAddition);
         }
 
-        [TestMethod]
+        [Test]
         public void Region()
         {
             Assert.AreEqual(" ", View.Region);
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             Assert.AreEqual(_streetName, View.StreetNo);
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             Assert.AreEqual(_zip, View.Zip);
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             Assert.AreEqual(_city, View.City);
         }
 
-        [TestMethod]
+        [Test]
         public void Agency()
         {
             Assert.AreEqual("Keine Agentur", View.Agency);
         }
 
-        [TestMethod]
+        [Test]
         [Ignore]
         public void Language()
         {
@@ -179,43 +179,43 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         }
 
         [Ignore]
-        [TestMethod]
+        [Test]
         public void Country()
         {
             Assert.AreEqual(_country, View.Country);
         }
 
-        [TestMethod]
+        [Test]
         public void Email()
         {
             Assert.AreEqual(" ", View.Email);
         }
 
-        [TestMethod]
+        [Test]
         public void Telephone()
         {
             Assert.AreEqual(" ", View.Telephone);
         }
 
-        [TestMethod]
+        [Test]
         public void Mobile()
         {
             Assert.AreEqual(" ", View.Mobile);
         }
 
-        [TestMethod]
+        [Test]
         public void Fax()
         {
             Assert.AreEqual(" ", View.Fax);
         }
 
-        [TestMethod]
+        [Test]
         public void Web()
         {
             Assert.AreEqual("", View.Web);
         }
 
-        [TestMethod]
+        [Test]
         public void MostRecent()
         {
             NavigationBar.Lobby.Click();

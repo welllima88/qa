@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -6,17 +6,17 @@ using Six.Scs.QA.Selenium.Location.BillingAddress;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
 {
-    [TestClass]
+    [TestFixture]
     public class BillingAddressEditTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate(
                 "/BillingAddress?CustomerId=404840&BillingAddressId=1ef8d828-44ec-4304-8385-df0088cb0fc7");
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressAndCancel()
         {
             string companyName = View.CompanyName;
@@ -67,7 +67,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Assert.AreEqual(web, View.Web);
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithInvalidDataFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -104,7 +104,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Assert.AreEqual(12, FormAlert.FormAlertList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithoutCompanyNameFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -130,7 +130,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Selenium.Location.BillingAddress.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithIncompleteDataFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -160,7 +160,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Selenium.Location.BillingAddress.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithoutStreetAndNumberFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -186,7 +186,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Selenium.Location.BillingAddress.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithoutCityFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -212,7 +212,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             Selenium.Location.BillingAddress.Edit.CancelButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressWithoutZipFailed()
         {
             CustomerMenu.BillingAddressEdit.Click();
@@ -237,7 +237,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditBillingAddressAndSave()
         {
             CustomerMenu.BillingAddressEdit.Click();

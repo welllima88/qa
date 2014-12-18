@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.Selenium.Extension;
@@ -9,7 +9,7 @@ using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
-    [TestClass]
+    [TestFixture]
     public class SbsExport
     {
         private const int WaitMilliseconds = 1000;
@@ -18,8 +18,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         private static string _custId;
         private int _numberOfRetries;
 
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             _dt = Factory.GenerateTestId();
 
@@ -41,21 +41,21 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             _custId = View.CustomerNumber;
         }
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             Assert.AreEqual("SYR SBS Kunde" + _dt, View.CustomerName);
         }
 
-        [TestMethod]
-        [TestCategory("SBS"), TestCategory("Customer")]
+        [Test]
+        [Category("SBS"), Category("Customer")]
         public void SbsDebitorNumberGeneratedFromCustomerId()
         {
             Assert.AreEqual(_custId, View.SbsDebitNumber);
         }
 
-        [TestMethod]
-        [TestCategory("SBS"), TestCategory("Customer")]
+        [Test]
+        [Category("SBS"), Category("Customer")]
         public void SbsAdressNumberGeneratedFromSbs()
         {
             _numberOfRetries = 4;
@@ -64,7 +64,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             {
                 try
                 {
-                    StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
+                    StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNo));
                     retry = 0; //no retry necessary anymore
                 }
                 catch (AssertFailedException)
@@ -78,18 +78,18 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             } while (retry > 0);
         }
 
-        [TestMethod]
-        [TestCategory("SBS"), TestCategory("Customer")]
+        [Test]
+        [Category("SBS"), Category("Customer")]
         public void SbsDebitorNumberCorrectFormat()
         {
-            StringAssert.Matches(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
+            StringAssert.IsMatch(View.SbsDebitNumber, new Regex(TestRegExpPatterns.SbsDebitorNo));
         }
 
-        [TestMethod]
-        [TestCategory("SBS"), TestCategory("Customer")]
+        [Test]
+        [Category("SBS"), Category("Customer")]
         public void SbsAdressNumberCorrectFormat()
         {
-            StringAssert.Matches(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
+            StringAssert.IsMatch(View.SbsAdressNumber, new Regex(TestRegExpPatterns.SbsAdressNoOpt));
         }
     }
 }

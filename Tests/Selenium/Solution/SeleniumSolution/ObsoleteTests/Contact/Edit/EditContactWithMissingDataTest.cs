@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class EditContactWithMissingDataTest
     {
         private readonly string _contactId;
@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             _contactId = contactId;
         }
 
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Person/?PERSONID=" + _contactId);
@@ -39,7 +39,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             Person.Edit.AdressAddition = "Addr-Add";
         }
 
-        [TestMethod]
+        [Test]
         public void EditContactWithoutFirstNameFailed()
         {
             Person.Edit.FirstName = "";
@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditContactWithoutNameFailed()
         {
             Person.Edit.Name = "";
@@ -59,7 +59,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditContactWithoutStreetAndNumberFailed()
         {
             Person.Edit.StreetNo = "";
@@ -70,7 +70,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditContactWithoutCityFailed()
         {
             Person.Edit.City = "";
@@ -81,7 +81,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Edit
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void EditContactWithoutZipFailed()
         {
             Person.Edit.Zip = "";

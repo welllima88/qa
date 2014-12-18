@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class NoData
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Pages/Customer/CustomerEdit.aspx?PageMode=edit&CUSTOMERID=401858");
 
@@ -31,37 +31,37 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Edit
             Selenium.Customer.Edit.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfFormAlerts()
         {
             Assert.AreEqual(5, FormAlert.FormAlertList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void CustomerNameError()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundenname: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyNameError()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!");
         }
 
-        [TestMethod]
+        [Test]
         public void StreetAndNumberError()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");

@@ -1,45 +1,45 @@
 ﻿using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
 {
-    [TestClass]
+    [TestFixture]
     public class TerminalDuplicateDefaultsGuiTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfTerminals()
         {
             Assert.AreEqual("1", View.NumberOfTerminals);
         }
 
-        [TestMethod]
+        [Test]
         public void CopyPassword()
         {
             Assert.AreEqual(false, View.CopyPassword);
         }
 
-        [TestMethod]
+        [Test]
         public void AcquirerNotification()
         {
             Assert.AreEqual(false, View.AcquirerNotification);
         }
 
-        [TestMethod]
+        [Test]
         public void Location()
         {
-            StringAssert.Matches(View.Location, new Regex(TestRegExpPatterns.NotEmpty));
+            StringAssert.IsMatch(View.Location, new Regex(TestRegExpPatterns.NotEmpty));
         }
 
-        [TestMethod]
+        [Test]
         public void InstallationMessage()
         {
             Assert.AreEqual("", View.InstallationMessage);

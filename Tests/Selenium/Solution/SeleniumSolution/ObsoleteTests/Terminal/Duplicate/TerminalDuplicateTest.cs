@@ -1,21 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
 using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
 {
-    [TestClass]
+    [TestFixture]
     public class TerminalDuplicateTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("TerminalDuplicate?TerminalId=21013049");
             Factory.GenerateTestId();
         }
 
-        [TestMethod]
+        [Test]
         public void DuplicateTerminalWithCopyPasswordWithAcquirerNotificationToLocation()
         {
             View.NumberOfTerminals = "2";
@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.Duplicate
             View.DulpicateButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void DuplicateTerminalWithNoCopyPasswordWithNoAcquirerNotificationToCustomerLocation()
         {
             View.NumberOfTerminals = "3";

@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -6,7 +6,7 @@ using Six.Scs.QA.TestData.Factory;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
 {
-    [TestClass]
+    [TestFixture]
     public class ManualEp2Number
     {
         private static string _adressAddition;
@@ -35,8 +35,8 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
         private static string _web;
         private static string _zip;
 
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             _supplier = "SIX Payment Services AG";
             _sbsCurrency = "EUR";
@@ -93,7 +93,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             Selenium.Customer.Create.Web = _web;
         }
 
-        [TestMethod]
+        [Test]
         public void TooShortEp2Number()
         {
             Selenium.Customer.Create.Ep2MerchantId = "55555";
@@ -102,7 +102,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer schon vergeben");
         }
 
-        [TestMethod]
+        [Test]
         public void NegativeEp2Number()
         {
             Selenium.Customer.Create.Ep2MerchantId = "-22";
@@ -111,7 +111,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
 
-        [TestMethod]
+        [Test]
         public void InvalidCharactersEp2Number()
         {
             Selenium.Customer.Create.Ep2MerchantId = "A*%D01111111115";
@@ -120,7 +120,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Customer.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Kundennummer ungültig");
         }
 
-        [TestMethod]
+        [Test]
         public void PartiallyValidEp2Number()
         {
             Selenium.Customer.Create.Ep2MerchantId = "TKSYR000000014";

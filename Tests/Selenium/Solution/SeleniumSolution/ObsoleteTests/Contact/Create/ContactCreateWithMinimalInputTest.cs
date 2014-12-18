@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
@@ -6,11 +6,11 @@ using Six.Scs.QA.Selenium.Person;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 {
-    [TestClass]
+    [TestFixture]
     public class ContactCreateWithMinimalInputTest
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
 
@@ -21,101 +21,101 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             Person.Create.SaveButton.Click();
         }
 
-        [TestMethod]
-        public void FirstName()
-        {
-            Assert.AreEqual("", View.FirstName);
-        }
-
-        [TestMethod]
-        public void LastName()
-        {
-            Assert.AreEqual("Siegmund SYR AUTO", View.Name);
-        }
-
-        [TestMethod]
-        public void Language()
-        {
-            StringAssert.Contains(View.Language, "[de]");
-        }
-
-        [TestMethod]
-        public void Telephone()
-        {
-            Assert.AreEqual("", View.Telephone);
-        }
-
-        [TestMethod]
-        public void Mobile()
-        {
-            Assert.AreEqual("", View.Mobile);
-        }
-
-        [TestMethod]
-        public void Fax()
-        {
-            Assert.AreEqual("", View.Fax);
-        }
-
-        [TestMethod]
-        public void Email()
-        {
-            Assert.AreEqual("", View.Email);
-        }
-
-        [TestMethod]
-        public void Street()
-        {
-            Assert.AreEqual("", View.StreetNo);
-        }
-
-        [TestMethod]
-        public void Po()
-        {
-            Assert.AreEqual("", View.Po);
-        }
-
-        [TestMethod]
-        public void Zip()
-        {
-            Assert.AreEqual("", View.Zip);
-        }
-
-        [TestMethod]
-        public void Region()
-        {
-            Assert.AreEqual("", View.Region);
-        }
-
-        [TestMethod]
-        public void City()
-        {
-            Assert.AreEqual("", View.City);
-        }
-
-        [TestMethod]
-        public void Country()
-        {
-            StringAssert.Contains(View.Country, "[CH]");
-        }
-
-        [TestMethod]
+        [Test]
         public void AddressAddition()
         {
             Assert.AreEqual("", View.AddressAddition);
         }
 
-        [TestMethod]
+        [Test]
+        public void City()
+        {
+            Assert.AreEqual("", View.City);
+        }
+
+        [Test]
+        public void Country()
+        {
+            StringAssert.Contains(View.Country, "[CH]");
+        }
+
+        [Test]
+        public void Email()
+        {
+            Assert.AreEqual("", View.Email);
+        }
+
+        [Test]
+        public void Fax()
+        {
+            Assert.AreEqual("", View.Fax);
+        }
+
+        [Test]
+        public void FirstName()
+        {
+            Assert.AreEqual("", View.FirstName);
+        }
+
+        [Test]
+        public void Language()
+        {
+            StringAssert.Contains(View.Language, "[de]");
+        }
+
+        [Test]
+        public void LastName()
+        {
+            Assert.AreEqual("Siegmund SYR AUTO", View.Name);
+        }
+
+        [Test]
+        public void Mobile()
+        {
+            Assert.AreEqual("", View.Mobile);
+        }
+
+        [Test]
+        public void Po()
+        {
+            Assert.AreEqual("", View.Po);
+        }
+
+        [Test]
+        public void RecentElementsCheck()
+        {
+            NavigationBar.Lobby.Click();
+            RecentElements.Latest.Click();
+        }
+
+        [Test]
+        public void Region()
+        {
+            Assert.AreEqual("", View.Region);
+        }
+
+        [Test]
+        public void Street()
+        {
+            Assert.AreEqual("", View.StreetNo);
+        }
+
+        [Test]
+        public void Telephone()
+        {
+            Assert.AreEqual("", View.Telephone);
+        }
+
+        [Test]
         public void Web()
         {
             Assert.AreEqual("", View.Web);
         }
 
-        [TestMethod]
-        public void RecentElementsCheck()
+        [Test]
+        public void Zip()
         {
-            NavigationBar.Lobby.Click();
-            RecentElements.Latest.Click();
+            Assert.AreEqual("", View.Zip);
         }
     }
 }

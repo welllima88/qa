@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
 {
-    [TestClass]
+    [TestFixture]
     public class LocationEditWithoutUserInputTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Location/Edit?LOCATIONID=071b90c2-c8c5-42c5-87c5-d816b26b0a1a");
@@ -30,31 +30,31 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Edit
             Selenium.Location.Edit.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyName()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void StreetNo()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void Zip()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void City()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfFormAlerts()
         {
             Assert.AreEqual(4, FormAlert.FormAlertList.Count);

@@ -1,45 +1,45 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
-    [TestClass]
+    [TestFixture]
     public class LocationCreateWithoutUserInputTest
     {
-        [ClassInitialize]
-        public static void ClassInit(TestContext testContext)
+        [TestFixtureSetUp]
+        public static void ClassInit()
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
 
             Selenium.Location.Create.SaveButton.Click();
         }
 
-        [TestMethod]
+        [Test]
         public void NumberOfAlerts()
         {
             Assert.AreEqual(4, FormAlert.FormAlertList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void CompanyMissing()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld! Zu kurze Eingabe!");
         }
 
-        [TestMethod]
+        [Test]
         public void StreetAndNumberMissing()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void ZipMissing()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "PLZ: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CityMissing()
         {
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");

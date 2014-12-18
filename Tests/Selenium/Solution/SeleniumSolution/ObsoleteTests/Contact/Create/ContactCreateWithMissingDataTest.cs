@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
 {
-    [TestClass]
+    [TestFixture]
     public class ContactCreateWithMissingDataTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Customer/?CustomerId=401152");
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             Person.Create.AdressAddition = "Zusatz1";
         }
 
-        [TestMethod]
+        [Test]
         public void WithoutFirstName()
         {
             Person.Create.FirstName = "";
@@ -43,7 +43,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Vorname: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void WithoutLastName()
         {
             Person.Create.Name = "";
@@ -54,7 +54,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Name: Zu kurze Eingabe! Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void WithoutStreetAndNumber()
         {
             Person.Create.StreetNo = "";
@@ -65,7 +65,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void WithoutCityFailed()
         {
             Person.Create.City = "";
@@ -76,7 +76,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Contact.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void WithoutZipFailed()
         {
             Person.Create.Zip = "";

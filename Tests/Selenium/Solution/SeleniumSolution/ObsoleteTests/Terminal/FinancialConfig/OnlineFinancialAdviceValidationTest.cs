@@ -1,21 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.FinancialConfig;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.FinancialConfig
 {
-    [TestClass]
+    [TestFixture]
     public class OnlineFinancialAdviceValidationTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate(
                 "Pages/Terminal/TerminalView.aspx?PageMode=edit&EditSection=Financialconfig&TerminalId=21011402");
         }
 
-        [TestMethod]
+        [Test]
         public void CharactersNotAllowed()
         {
             SetOnlineFinancialAndSave("ab");
@@ -24,14 +24,14 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.FinancialConfig
                     "Financial Advice Queue Size: Ihre Eingabe ist ungültig! Ungültige Zeichen gefunden!"));
         }
 
-        [TestMethod]
+        [Test]
         public void AlphanumericNotAllowed()
         {
             SetOnlineFinancialAndSave("9*");
             CollectionAssert.Contains(FormAlert.FormAlertList, "Financial Advice Queue Size: Ihre Eingabe ist ungültig!");
         }
 
-        [TestMethod]
+        [Test]
         public void NegativNumberNotAllowed()
         {
             SetOnlineFinancialAndSave("-1");
@@ -40,7 +40,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.FinancialConfig
                 "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void ZeroNotAllowed()
         {
             SetOnlineFinancialAndSave("0");
@@ -49,7 +49,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Terminal.FinancialConfig
                 "Financial Advice Queue Size: Ungültige Zeichen gefunden!");
         }
 
-        [TestMethod]
+        [Test]
         public void ValueAllowed()
         {
             SetOnlineFinancialAndSave("11");

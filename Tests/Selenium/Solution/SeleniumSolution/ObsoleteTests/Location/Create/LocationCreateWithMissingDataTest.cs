@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
 {
-    [TestClass]
+    [TestFixture]
     public class LocationCreateWithMissingDataTest
     {
-        [TestInitialize]
+        [SetUp]
         public void TestInit()
         {
             TestDirector.Navigate("Location/New?CUSTOMERID=401858");
@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             Selenium.Location.Create.Web = "www.six-group.com/de-intern";
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationrWithoutCompanyNameFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -44,7 +44,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Firmenname: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationWithoutStreetAndNumberFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Strasse / Nr: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationWithoutCityFailed()
         {
             CustomerMenu.LocationCreate.Click();
@@ -70,7 +70,7 @@ namespace Six.Scs.QA.Selenium.ObsoleteTests.Location.Create
             CollectionAssert.Contains(FormAlert.FormAlertList, "Ort: Dies ist ein Pflichtfeld!");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateLocationWithoutZipFailed()
         {
             CustomerMenu.LocationCreate.Click();
