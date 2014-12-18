@@ -3,7 +3,7 @@ using SIX.EP2.Core.Header;
 using SIX.EP2.Core.Protocol;
 using SIX.EP2.Core.Util;
 
-namespace SIX.SCS.QA.Tests.EP2.COI
+namespace SIX.SCS.QA.Tests.EP2
 {
     public class ProvideSecurityInfo : IProvideSecurityInfo
     {

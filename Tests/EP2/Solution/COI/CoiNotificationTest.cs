@@ -5,7 +5,7 @@ using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.Header;
 using SIX.EP2.Core.SessionHandling;
 
-namespace SIX.SCS.QA.Tests.EP2.COI
+namespace SIX.SCS.QA.Tests.EP2
 {
     [TestFixture]
     public class CoiNotificationTest

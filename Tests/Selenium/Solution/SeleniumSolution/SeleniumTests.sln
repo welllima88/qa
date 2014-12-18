@@ -48,7 +48,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObsoleteTests", "ObsoleteTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestObjectGrabber", "TestObjectGrabber\TestObjectGrabber.csproj", "{2CDC5DB9-B0A7-4A48-BC53-D912B6D410E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COI", "..\..\..\EP2\Solution\COI\COI.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ep2", "..\..\..\EP2\Solution\COI\Ep2.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
