@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
             TestDirector.Navigate();
             Workflow.Search.Find("TK00000100108834");
             new SearchResult(Result.Location).First().Click();
-            
+
             Assert.That("TK00000100108834", Is.EqualTo(View.Ep2MerchantId));
 
             _locationNumber = View.LocationNumber;

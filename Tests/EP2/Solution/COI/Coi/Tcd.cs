@@ -7,7 +7,6 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
     [Ep2DataElement(TagName = "tcd")]
     public class Tcd
     {
-
         [Ep2DataElement(TagName = "CtlessInd", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = false)]
         public int? CtlessInd { get; set; }
 
@@ -20,7 +19,8 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
         [Ep2DataElement(TagName = "CashRegIntgT", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
         public int? CashRegIntgT { get; set; }
 
-        [Ep2DataElement(TagName = "CompSecret", TagPrefix = "ep2", DataType = Ep2DataType.b, IsMandatory = false, Encrypted = true)]
+        [Ep2DataElement(TagName = "CompSecret", TagPrefix = "ep2", DataType = Ep2DataType.b, IsMandatory = false,
+            Encrypted = true)]
         public byte[] CompSecret { get; set; }
 
         [Ep2DataElement(TagName = "CrdRdType", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
@@ -110,7 +110,6 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
         [Ep2DataElement(TagName = "FinBalInd", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = false)]
         public int? FinBalInd { get; set; }
 
-        
         [Ep2DataElement(TagName = "DataStatus", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
         public int DataStatus { get; set; }
 

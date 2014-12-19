@@ -8,7 +8,7 @@ namespace Six.Scs.QA.Workflow.Builder
         public void Do()
         {
             ChangeForm.Reason = "Daten Korrektur (ohne Versand)";
-            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " automated change remark";            
+            ChangeForm.Remark = "SYR " + Factory.GenerateTestId() + " automated change remark";
         }
 
         public void Check()

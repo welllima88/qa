@@ -110,7 +110,7 @@ namespace Six.Scs.QA.Testlogic
             PortletViewBase.AllHasBeenLoaded();
             PortletViewBase.OpenTree(TechnicalView.EcrLocator);
             StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
-            StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);            
+            StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);
         }
 
         public static void Replace(TestData.ValueObjects.Terminal terminal)

@@ -19,7 +19,8 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
         [Ep2DataElement(TagName = "DataStatus", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = false)]
         public int? DataStatus { get; set; }
 
-        [Ep2DataElement(TagName = "DataLastChDate", TagPrefix = "ep2", DataType = Ep2DataType.date, IsMandatory = false)        ]
+        [Ep2DataElement(TagName = "DataLastChDate", TagPrefix = "ep2", DataType = Ep2DataType.date, IsMandatory = false)
+        ]
         public DateTime? DataLastChDate { get; set; }
     }
 }

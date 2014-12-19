@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Customer.Open(customer);
             CustomerMenu.BillingAdresses.Click();
-            Selenium.Location.BillingAddress.View.List(BillingAddress).Click(); // choose the first match
+            View.List(BillingAddress).Click(); // choose the first match
 
             BillingAddress billingAddress = TestData.Factory.BillingAddress.Create();
 

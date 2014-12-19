@@ -39,7 +39,7 @@ namespace Six.Scs.QA.Selenium.Search
             WaitForSearchHasFinished();
             string cssb =
                 String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td>a strong",
-                //String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td:nth-child(3)>a",
+                    //String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td:nth-child(3)>a",
                     _section);
             return WebDriver.FindAdaptedElement(By.CssSelector(cssb));
         }
