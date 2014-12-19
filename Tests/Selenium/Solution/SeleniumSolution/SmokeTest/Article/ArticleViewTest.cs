@@ -20,9 +20,51 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         }
 
         [Test]
+        public void CardReaderType()
+        {
+            Assert.AreEqual("3", View.CardReaderType);
+        }
+
+        [Test]
+        public void Color()
+        {
+            Assert.AreEqual("white", View.Color);
+        }
+
+        [Test]
+        public void ContactlessIndicator()
+        {
+            Assert.AreEqual("1", View.ContactlessIndicator);
+        }
+
+        [Test]
+        public void NetTypeEditWithoutSave()
+        {
+            Assert.AreEqual("TCPIPEP2IP", View.NetType);
+        }
+
+        [Test]
+        public void PosInterface()
+        {
+            Assert.AreEqual("VEZ", View.PosInterface);
+        }
+
+        [Test]
+        public void RecallInterval()
+        {
+            Assert.AreEqual("86400", View.RecallInterval);
+        }
+
+        [Test]
         public void SbsArticleNumber()
         {
             Assert.AreEqual("", View.SbsArticleNumber);
+        }
+
+        [Test]
+        public void SoftwareId()
+        {
+            Assert.AreEqual("1095", View.SoftwareId);
         }
 
         [Test]
@@ -50,24 +92,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         }
 
         [Test]
-        public void Color()
-        {
-            Assert.AreEqual("white", View.Color);
-        }
-
-        [Test]
-        public void NetTypeEditWithoutSave()
-        {
-            Assert.AreEqual("TCPIPEP2IP", View.NetType);
-        }
-
-        [Test]
-        public void SoftwareId()
-        {
-            Assert.AreEqual("1095", View.SoftwareId);
-        }
-
-        [Test]
         public void TrxSubmLim()
         {
             Assert.AreEqual("1", View.TrxSubmLim);
@@ -77,30 +101,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         public void TrxTransLim()
         {
             Assert.AreEqual("1", View.TrxTransLim);
-        }
-
-        [Test]
-        public void ContactlessIndicator()
-        {
-            Assert.AreEqual("1", View.ContactlessIndicator);
-        }
-
-        [Test]
-        public void CardReaderType()
-        {
-            Assert.AreEqual("3", View.CardReaderType);
-        }
-
-        [Test]
-        public void PosInterface()
-        {
-            Assert.AreEqual("VEZ", View.PosInterface);
-        }
-
-        [Test]
-        public void RecallInterval()
-        {
-            Assert.AreEqual("86400", View.RecallInterval);
         }
     }
 }

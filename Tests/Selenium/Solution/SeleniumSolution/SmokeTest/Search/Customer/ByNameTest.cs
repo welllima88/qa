@@ -13,8 +13,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
     [TestFixture]
     public class ByNameTest
     {
-        private const string SearchString = "SYR Kunde63498 Hardt";
-
         [SetUp]
         public static void ClassInit()
         {
@@ -22,6 +20,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
             QuickSearch.SearchField = SearchString;
             QuickSearch.SearchButton.Click();
         }
+
+        private const string SearchString = "SYR Kunde63498 Hardt";
 
         [Test]
         [Category("Search"), Category("Customer")]

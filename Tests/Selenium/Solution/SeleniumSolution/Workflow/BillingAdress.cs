@@ -1,11 +1,12 @@
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Location.BillingAddress;
+using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
     public static class BillingAdress
     {
-        public static void Create(TestData.ValueObjects.BillingAddress b)
+        public static void Create(BillingAddress b)
         {
             CustomerMenu.BillingAdressCreate.Click();
 
@@ -34,7 +35,7 @@ namespace Six.Scs.QA.Workflow
         ///     Edits billing address
         /// </summary>
         /// <param name="b">given location data</param>
-        public static void Edit(TestData.ValueObjects.BillingAddress b)
+        public static void Edit(BillingAddress b)
         {
             b.SbsDebitNumber = View.SbsDebitNumber;
 
