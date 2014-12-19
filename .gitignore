@@ -31,3 +31,5 @@ _packages/*
 !_packages/repositories.config
 
 gittfs/*
+**/SmokeTest/TestLauncher.cs
+**/SystemTest/TestLauncher.cs
