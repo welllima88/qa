@@ -33,3 +33,4 @@ _packages/*
 gittfs/*
 **/SmokeTest/TestLauncher.cs
 **/SystemTest/TestLauncher.cs
+**/TestLauncher.cs
