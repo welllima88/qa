@@ -29,14 +29,14 @@ namespace Six.Scs.QA.Selenium.Common
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("div#applicationBar button#Support"))
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#applicationBar div.alert div.app-name>a"))
                     .Button();
             }
         }
 
         public static IWebElementAdapter SupportDialog
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#myModal")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div.modal-dialog")); }
         }
     }
 }
