@@ -16,7 +16,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest
         }
 
         [Test]
-        [Ignore]
         public void DirectArticleSelect()
         {
             const string termType = "xentissimo";
