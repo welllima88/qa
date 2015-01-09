@@ -100,7 +100,6 @@
     <Compile Include="Common\Menu\LobbyMenu.cs" />
     <Compile Include="Common\Menu\LocationMenu.cs" />
     <Compile Include="Common\Menu\MassMutationMenu.cs" />
-    <Compile Include="Common\Menu\TerminalMenu.cs" />
     <Compile Include="Common\Menu\TicketMenu.cs" />
     <Compile Include="Common\Menu\UserMenu.cs" />
     <Compile Include="Common\MetaNavBar.cs" />
