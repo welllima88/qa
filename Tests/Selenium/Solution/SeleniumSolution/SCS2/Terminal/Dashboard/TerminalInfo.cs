@@ -10,20 +10,20 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
     {
         public static string TerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_TerminalId)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_TID")).Text; }
         }
 
         public static string ExternTerminalId
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_ExternTerminalId)).Text;
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_ExtId")).Text;
             }
         }
 
         public static string Article
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.TerminalInfo_Article)).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_ArticleDisplayName")).Text; }
         }
 
         public static string Status

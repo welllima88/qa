@@ -10,12 +10,12 @@ namespace Six.Scs.QA.Selenium.Common
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField))
+                    WebDriver.FindAdaptedElement(By.CssSelector("div#searchBar>input#searchText"))
                         .TextField().Text();
             }
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchField))
+                WebDriver.FindAdaptedElement(By.CssSelector("div#searchBar>input#searchText"))
                     .TextField()
                     .TypeText(value);
             }
@@ -23,12 +23,12 @@ namespace Six.Scs.QA.Selenium.Common
 
         public static IWebElementAdapter SearchButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.QuickSearch_SearchButton)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#searchBar>p#searchSubmit")); }
         }
 
         public static void HitEnter()
         {
-            WebDriver.FindElement(By.CssSelector(CommonRes.QuickSearch_SearchField)).SendKeys(Keys.Return);
+            WebDriver.FindElement(By.CssSelector("div#searchBar>input#searchText")).SendKeys(Keys.Return);
         }
     }
 }

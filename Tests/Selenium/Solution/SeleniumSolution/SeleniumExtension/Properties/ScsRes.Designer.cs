@@ -9,9 +9,6 @@
 //------------------------------------------------------------------------------
 
 namespace Six.Scs.QA.Selenium.Extension.Properties {
-    using System;
-    
-    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

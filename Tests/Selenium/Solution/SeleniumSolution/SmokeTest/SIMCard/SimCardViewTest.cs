@@ -41,7 +41,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
         [Test]
         public void SimCardMenuCheck()
         {
-            Assert.IsTrue(SimCardMenu.SimCardManagement.Displayed);
+            Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
         }
 
         [Test]

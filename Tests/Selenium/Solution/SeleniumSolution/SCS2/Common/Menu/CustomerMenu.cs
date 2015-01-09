@@ -7,22 +7,38 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     {
         public static IWebElementAdapter Customer
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Customer)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Customer/?CUSTOMERID=']"));
+            }
         }
 
         public static IWebElementAdapter CustomerCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_CustomerCreate)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Customer/NewStep1/']"));
+            }
         }
 
         public static IWebElementAdapter LocationCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_LocationCreate)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Location/New?CUSTOMERID=']"));
+            }
         }
 
         public static IWebElementAdapter TerminalCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_TerminalCreate)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "td#leftHandMenu a[href*='/TerminalArticleSelector/CustomerTerminalNew/?CUSTOMERID=']"));
+            }
         }
 
         public static IWebElementAdapter CustomerEdit
@@ -30,8 +46,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_CustomerEdit));
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Customer/Edit/?CUSTOMERID=']"));
             }
         }
 
@@ -40,7 +55,8 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_CustomerDeactivate));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']"));
             }
         }
 
@@ -50,7 +66,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_LocationsOfCustomer));
+                        By.CssSelector("td#leftHandMenu a[href*='Location/LocationList.aspx?CUSTOMERID=']"));
             }
         }
 
@@ -60,7 +76,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_TerminalsOfCustomerLocation));
+                        By.CssSelector("td#leftHandMenu a[href*='Terminal/TerminalList.aspx?CUSTOMERLOCATIONID=']"));
             }
         }
 
@@ -69,7 +85,8 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_AllMpds));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/Mpd/ListByCustomer/?CUSTOMERID=']"));
             }
         }
 
@@ -78,7 +95,8 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_AllTerminals));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/Customer/TerminalListAll?CUSTOMERID=']"));
             }
         }
 
@@ -87,7 +105,8 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Tickets));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='TicketList.asp?ListType=customer&CUSTOMERID=']"));
             }
         }
 
@@ -95,9 +114,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
         {
             get
             {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_Users));
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/User/List/?CUSTOMERID=']"));
             }
         }
 
@@ -107,7 +124,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_Contacts));
+                        By.CssSelector("td#leftHandMenu a[href*='/Person/CustomerPersonList?CUSTOMERID=']"));
             }
         }
 
@@ -116,7 +133,8 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_ContactCreate));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/Person/CustomerPersonNew?CUSTOMERID=']"));
             }
         }
 
@@ -126,7 +144,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_BillingAdresses));
+                        By.CssSelector("td#leftHandMenu a[href*='BillingAddress/List?CUSTOMERID=']"));
             }
         }
 
@@ -136,23 +154,38 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.CustomerMenu_BillingAdressCreate));
+                        By.CssSelector("td#leftHandMenu a[href*='BillingAddress/New?CUSTOMERID=']"));
             }
         }
 
         public static IWebElementAdapter BillingAddressEdit
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_BillingAddressEdit)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/BillingAddress/Edit?CUSTOMERID=']"));
+            }
         }
 
         public static IWebElementAdapter Infotexts
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_Infotexts)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListCustomer?&CUSTOMERID=']"));
+            }
         }
 
         public static IWebElementAdapter CreateInfotext
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.CustomerMenu_InfotextCreate)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/CustomerInfoText/Create?&CUSTOMERID=']"));
+            }
         }
     }
 }
