@@ -46,7 +46,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         [Test]
         public void PosInterface()
         {
-            Assert.AreEqual("VEZ", View.PosInterface);
+            Assert.AreEqual("MPD", View.PosInterface);
         }
 
         [Test]
