@@ -89,6 +89,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         public void SupplierListHasSixSupplierElement()
         {
             CollectionAssert.Contains(View.Supplier, "SIX Payment Services AG");
+            CollectionAssert.Contains(View.Supplier, "SIX Payment Services AT");
         }
 
         [Test]
