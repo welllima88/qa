@@ -1,9 +1,0 @@
-﻿<?xml version="1.0"?>
-<ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0410" xmlns:ep2="http://www.eftpos2000.ch">
-  <ep2:cfgdatareq msgnum="1">
-  <ep2:SCID>08000000003</ep2:SCID>
-  <ep2:ConfDataObj>AISD</ep2:ConfDataObj>
-  <ep2:DataReqType>0</ep2:DataReqType>
-  <ep2:AcqID>00000000002</ep2:AcqID>
-  </ep2:cfgdatareq>
-</ep2:message>
