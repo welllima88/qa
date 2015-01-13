@@ -47,11 +47,11 @@
     </Reference>
     <Reference Include="SIX.EP2.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Client.1.1.2.11\lib\net40\SIX.EP2.Client.dll</HintPath>
+      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Client.1.2.2.5\lib\net40\SIX.EP2.Client.dll</HintPath>
     </Reference>
-    <Reference Include="SIX.EP2.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Core.1.1.2.11\lib\net40\SIX.EP2.Core.dll</HintPath>
+    <Reference Include="SIX.EP2.Core">
+      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Core.1.2.2.5\lib\net40\SIX.EP2.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.XML" />
