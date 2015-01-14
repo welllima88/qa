@@ -9,7 +9,7 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
     [TestFixture]
     public class CoiTest
     {
-        [Test]
+        [TestFixtureSetUp]
         public void SendMessage()
         {
             IMessageVersionMapper messageMapper =
@@ -24,7 +24,12 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
 
             IRequestResponseClient clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
 
-            clientProtocol.SendWith(comConfig,  new MyHandler());
+            clientProtocol.SendWith(comConfig, new MyHandler());
+        }
+
+        [Test]
+        public void Response()
+        {
         }
     }
 }

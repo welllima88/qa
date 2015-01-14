@@ -34,6 +34,7 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
         public void FirstMessage(ConfigDataNotification msg)
         {
             msg.AcqID = "3";
+            msg.SCID = "8000000001";
         }
     }
 }
