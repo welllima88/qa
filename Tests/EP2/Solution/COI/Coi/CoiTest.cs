@@ -13,17 +13,18 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
         public void SendMessage()
         {
             IMessageVersionMapper messageMapper =
-                MessageVersionMapper.Builder.AddFromAssemblyOfType<ConfigRequest>().Build();
+                MessageVersionMapper.Builder.AddFromAssemblyOfType<ConfigDataNotification>().Build();
 
-            IRequestResponseClient clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
-            var sessionHandler = new MyHandler();
             var comConfig = new ComConfig
             {
                 Port = 2253,
                 ServerAddress = "mdzhwcweb01",
-                Version = "0530"
+                Version = "0600"
             };
-            clientProtocol.SendWith(comConfig, sessionHandler);
+
+            IRequestResponseClient clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
+
+            clientProtocol.SendWith(comConfig,  new MyHandler());
         }
     }
 }
