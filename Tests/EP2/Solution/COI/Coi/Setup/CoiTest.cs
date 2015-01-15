@@ -4,32 +4,37 @@ using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi
+namespace SIX.SCS.QA.Tests.EP2.Coi.Setup
 {
     [TestFixture]
     public class CoiTest
     {
+        private IRequestResponseClient clientProtocol;
+        private ComConfig _comConfig;
+
         [TestFixtureSetUp]
         public void SendMessage()
         {
             IMessageVersionMapper messageMapper =
                 MessageVersionMapper.Builder.AddFromAssemblyOfType<ConfigDataNotification>().Build();
 
-            var comConfig = new ComConfig
+            _comConfig = new ComConfig
             {
                 Port = 2253,
                 ServerAddress = "mdzhwcweb01",
                 Version = "0600"
             };
 
-            IRequestResponseClient clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
+            clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
 
-            clientProtocol.SendWith(comConfig, new MyHandler());
+            
         }
 
         [Test]
         public void Response()
         {
+            var handlerSessionHandler = new MyHandler();
+            clientProtocol.SendWith(_comConfig, handlerSessionHandler);
         }
     }
 }
