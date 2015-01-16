@@ -1,5 +1,7 @@
 ﻿#SCS Test Automation-Solution
 Contains all files and sources for launching the test automation.
+Cooding Guidelines
+http://dgi.six-group.net/confluence/display/CardsBO/%28Secure%29+Coding+Guidelines
 
 ##Build Server
 
