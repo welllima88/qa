@@ -31,7 +31,7 @@ namespace SIX.SCS.QA.Tests.EP2.Coi.Laid
         }
 
         [Test]
-        public void Response()
+        public void ResponseWithCorrectData()
         {
             var handlerSessionHandler = new LaidHandler();
             _clientProtocol.SendWith(_comConfig, handlerSessionHandler);
