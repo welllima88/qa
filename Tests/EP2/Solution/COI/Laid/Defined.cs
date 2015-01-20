@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.ObjectModel;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi.Laid
+namespace SIX.SCS.QA.Tests.EP2.Laid
 {
     public class Defined
     {
