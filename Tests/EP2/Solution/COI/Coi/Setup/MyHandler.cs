@@ -2,18 +2,20 @@
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
+using SIX.SCS.QA.Tests.EP2.Coi.Laid;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi
+namespace SIX.SCS.QA.Tests.EP2.Coi.Setup
 {
     public class MyHandler :
         IClientSessionHandler,
         IStartWith<ConfigDataNotification>,
-        IHandleMessage<ConfigResponse>,
+        IHandleMessage<ConfigDataResponse>,
         IHandleMessage<ErrorNotification>
 
     {
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
         {
+            errorNotification.ErrorCode = 33;
         }
 
         public bool IsDone
@@ -21,7 +23,7 @@ namespace SIX.SCS.QA.Tests.EP2.Coi
             get { return true; }
         }
 
-        public IMessage Respond(ConfigResponse request)
+        public IMessage Respond(ConfigDataResponse request)
         {
             return null;
         }

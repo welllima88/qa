@@ -69,19 +69,19 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="CoiNotificationTest.cs" />
-    <Compile Include="Coi\Ad.cs" />
-    <Compile Include="Coi\ConfigDataNotification.cs" />
-    <Compile Include="Coi\ConfigRequest.cs" />
-    <Compile Include="Coi\ConfigResponse.cs" />
-    <Compile Include="Coi\ListAID.cs" />
-    <Compile Include="Coi\MyHandler.cs" />
-    <Compile Include="Coi\MySecurityProvider.cs" />
-    <Compile Include="Coi\CoiTest.cs" />
-    <Compile Include="Coi\Tcd.cs" />
-    <Compile Include="LaidRequestTest.cs" />
+    <Compile Include="Coi\Setup\Ad.cs" />
+    <Compile Include="Coi\Setup\ConfigDataNotification.cs" />
+    <Compile Include="Coi\Laid\ConfigDataRequest.cs" />
+    <Compile Include="Coi\Laid\ConfigDataResponse.cs" />
+    <Compile Include="Coi\Laid\Defined.cs" />
+    <Compile Include="Coi\Laid\LaidRequestTest.cs" />
+    <Compile Include="Coi\Laid\LaidHandler.cs" />
+    <Compile Include="Coi\Laid\ListAID.cs" />
+    <Compile Include="Coi\Setup\MyHandler.cs" />
+    <Compile Include="Common\SecurityProvider.cs" />
+    <Compile Include="Coi\Setup\CoiTest.cs" />
+    <Compile Include="Coi\Setup\Tcd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvideSecurityInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,0 +1,6 @@
+Link to specification
+http://teams.i-connect.six-group.com/dcp/DCP_Interface_Specifications/SitePages/interfaces-main.aspx
+
+http://teams.i-connect.six-group.com/dcp/DCP_Interface_Specifications/Specifications/other-Swiss/ep2/ep2_v6.2.0/07-ServiceCenter_V.6.2.0.pdf
+http://teams.i-connect.six-group.com/dcp/DCP_Interface_Specifications/Specifications/other-Swiss/ep2/ep2_v6.2.0/11-Data%20Dictionary_V.6.2.0.pdf
+http://teams.i-connect.six-group.com/dcp/DCP_Interface_Specifications/Specifications/other-Swiss/ep2/ep2_v6.2.0/10-InterfaceSpec_V.6.2.0.pdf
