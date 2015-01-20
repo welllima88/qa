@@ -7,6 +7,7 @@ using SIX.EP2.Core.Protocol;
 namespace SIX.SCS.QA.Tests.EP2.Coi.Laid
 {
     [TestFixture]
+    [Category("COI"), Category("EP2"), Category("LAID")]
     public class LaidRequestTest
     {
         private IRequestResponseClient _clientProtocol;
