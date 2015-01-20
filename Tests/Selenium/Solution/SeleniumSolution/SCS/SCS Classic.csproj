@@ -79,11 +79,6 @@
     <Compile Include="Dev.cs" />
     <Compile Include="MainObject.cs" />
     <Compile Include="HeadObject.cs" />
-    <Compile Include="Properties\ScsRes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ScsRes.resx</DependentUpon>
-    </Compile>
     <Compile Include="ScsClassicEnvironment.cs" />
     <Compile Include="Support\AddService\AddServiceToUsers.cs" />
     <Compile Include="TestLauncher.cs" />
@@ -97,13 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\ScsRes.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Support\AddService\User in Prod mit SCS Service.sql" />
   </ItemGroup>

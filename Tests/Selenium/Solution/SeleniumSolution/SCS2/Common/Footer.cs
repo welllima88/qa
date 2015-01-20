@@ -7,12 +7,15 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter Disclaimer
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Disclaimer)); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#footerNavigationBar>a[href*='/disclaimer.aspx']"));
+            }
         }
 
         public static IWebElementAdapter Copyright
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Footer_Copyright)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#footerNavigationBar>div#copyright")); }
         }
     }
 }

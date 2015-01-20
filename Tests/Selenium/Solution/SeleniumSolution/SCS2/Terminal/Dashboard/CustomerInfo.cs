@@ -10,22 +10,38 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
     {
         public static string Name
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Name)).Text; }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Customer_Name")).Text;
+            }
         }
 
         public static string Adress
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Adress)).Text; }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Customer_Address"))
+                        .Text;
+            }
         }
 
         public static string Info
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Info)).Text; }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Customer_Info")).Text;
+            }
         }
 
         public static string Number
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(DashboardRes.CustomerInfo_Id)).Text; }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Customer_Id")).Text;
+            }
         }
     }
 }

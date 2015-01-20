@@ -10,12 +10,12 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter CompanyLogo
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Lobby_CompanyLogo)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("html>body>img.companyLogo")); }
         }
 
         public static IWebElementAdapter Headline
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.Lobby_Headline)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content h1")); }
         }
 
         public void LogOff()

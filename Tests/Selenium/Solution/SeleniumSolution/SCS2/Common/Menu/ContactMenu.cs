@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.ContactMenu_Contact)).Button();
+                        By.CssSelector("td#leftHandMenu a[href*='/Person/?PERSONID=']")).Button();
             }
         }
 
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector(MenuRes.ContactMenu_ContactEdit)).Button();
+                        By.CssSelector("td#leftHandMenu a[href*='Person/Edit?PERSONID=']")).Button();
             }
         }
     }

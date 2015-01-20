@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter LogOff
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.MetaNavBar_Logout)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href*='/Logout.aspx']")); }
         }
 
         public static IWebElementAdapter User
@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Common
 
         public static IWebElementAdapter Languages
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.MetaNavBar_Languages)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLanguages.menu")); }
         }
 
         public static string ActualLanguage

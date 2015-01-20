@@ -7,35 +7,27 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     {
         public static IWebElementAdapter CustomerCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_CustomerCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassMutation/CustomersFileUpload.aspx']")); }
         }
 
         public static IWebElementAdapter LocationCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_LocationCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassMutation/LocationsFileUpload.aspx']")); }
         }
 
         public static IWebElementAdapter TerminalCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_TerminalCreate)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassMutation/TerminalsFileUpload.aspx']")); }
         }
 
         public static IWebElementAdapter ContractCreate
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_ContractCreate)); }
-        }
-
-        public static IWebElementAdapter BusinessTemplateMigrate
-        {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.MassMutationMenu_BusinessTemplateMigrate));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassMutation/ContractsFileUpload.aspx']")); }
         }
 
         public static IWebElementAdapter AcquirerChange
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.AcquirerChange)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassAcqExchange']")); }
         }
 
         public static IWebElementAdapter MassMutation

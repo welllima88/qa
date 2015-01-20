@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Testlogic
         public static TestData.ValueObjects.SimCard Create()
         {
             NavigationBar.Lobby.Click();
-            SimCardMenu.SimCardManagement.Click();
+            LobbyMenu.SimCardManage.Click();
 
             TestData.ValueObjects.SimCard simCard = Simcard.Create();
 

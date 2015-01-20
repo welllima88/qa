@@ -7,17 +7,32 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter Lobby
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Lobby)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/Lobby/']"));
+            }
         }
 
         public static IWebElementAdapter Administration
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Administration)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
+            }
         }
 
         public static IWebElementAdapter Reporting
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Reporting)); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
+            }
         }
 
         public static IWebElementAdapter Help
@@ -28,11 +43,6 @@ namespace Six.Scs.QA.Selenium.Common
                     WebDriver.FindAdaptedElement(
                         By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/scs2/help']"));
             }
-        }
-
-        public static IWebElementAdapter Current
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(CommonRes.NavigationBar_Current)); }
         }
     }
 }

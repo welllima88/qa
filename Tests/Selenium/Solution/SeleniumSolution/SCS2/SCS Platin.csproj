@@ -89,11 +89,6 @@
     <Compile Include="Brand\View.cs" />
     <Compile Include="Common\ApplicationInfo.cs" />
     <Compile Include="Common\ChangeForm.cs" />
-    <Compile Include="Common\CommonRes.Designer.cs">
-      <DependentUpon>CommonRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Common\Footer.cs" />
     <Compile Include="Common\FormAlert.cs" />
     <Compile Include="Common\Infotext\Create.cs" />
@@ -105,13 +100,6 @@
     <Compile Include="Common\Menu\LobbyMenu.cs" />
     <Compile Include="Common\Menu\LocationMenu.cs" />
     <Compile Include="Common\Menu\MassMutationMenu.cs" />
-    <Compile Include="Common\Menu\MenuRes.Designer.cs">
-      <DependentUpon>MenuRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Common\Menu\SimCardMenu.cs" />
-    <Compile Include="Common\Menu\TerminalMenu.cs" />
     <Compile Include="Common\Menu\TicketMenu.cs" />
     <Compile Include="Common\Menu\UserMenu.cs" />
     <Compile Include="Common\MetaNavBar.cs" />
@@ -149,16 +137,6 @@
     <Compile Include="Person\Create.cs" />
     <Compile Include="Person\Edit.cs" />
     <Compile Include="Person\View.cs" />
-    <Compile Include="Person\PersonCreateRes.Designer.cs">
-      <DependentUpon>PersonCreateRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Person\PersonEditRes.Designer.cs">
-      <DependentUpon>PersonEditRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Environments\Dev.cs" />
     <Compile Include="Search\SearchResult.cs" />
     <Compile Include="Search\Result.cs" />
@@ -170,11 +148,6 @@
     <Compile Include="Terminal\Dashboard\Portlets\BusinessViewpoint.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\Contacts.cs" />
     <Compile Include="Terminal\Dashboard\CustomerInfo.cs" />
-    <Compile Include="Terminal\Dashboard\DashboardRes.Designer.cs">
-      <DependentUpon>DashboardRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TroubleTicket\Priority.cs" />
     <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
@@ -221,30 +194,6 @@
       <Project>{2f418ef9-c1c1-4e32-8954-5ea1b5257f20}</Project>
       <Name>TestData</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Common\CommonRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>CommonRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Common\Menu\MenuRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>MenuRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\PersonCreateRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonCreateRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\PersonEditRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonEditRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Terminal\Dashboard\DashboardRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>DashboardRes.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

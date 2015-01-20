@@ -10,12 +10,12 @@ namespace Six.Scs.QA.Selenium.Common.Menu
     {
         public static IWebElementAdapter Lobby
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.LobbyMenu_Lobby)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Lobby/']")); }
         }
 
         public static IWebElementAdapter SimCardManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector(MenuRes.SimCardManagement)); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/SIMCard']")); }
         }
 
         public static IWebElementAdapter SerialNumberManage
