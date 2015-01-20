@@ -89,6 +89,9 @@
   <ItemGroup>
     <Folder Include="SiConfig\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infos.txt" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
