@@ -7,6 +7,7 @@ using SIX.EP2.Core.Protocol;
 namespace SIX.SCS.QA.Tests.EP2.Coi.Setup
 {
     [TestFixture]
+    [Ignore]
     public class CoiTest
     {
         private IRequestResponseClient clientProtocol;
