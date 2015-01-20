@@ -2,7 +2,7 @@ using System;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi.Setup
+namespace SIX.SCS.QA.Tests.EP2.Setup
 {
     [Ep2DataElement(TagName = "ad")]
     public class Ad

@@ -4,7 +4,7 @@ using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi.Setup
+namespace SIX.SCS.QA.Tests.EP2.Setup
 {
     [TestFixture]
     [Ignore]

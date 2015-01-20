@@ -4,7 +4,7 @@ using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 
-namespace SIX.SCS.QA.Tests.EP2.Coi.Laid
+namespace SIX.SCS.QA.Tests.EP2.Laid
 {
     [TestFixture]
     [Category("COI"), Category("EP2"), Category("LAID")]
