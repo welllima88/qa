@@ -64,6 +64,17 @@ http://www.seleniumwiki.com/
 http://code.google.com/p/selenium/wiki/Grid2
 http://www.seleniumtests.com/
 
+Seleno (Testing with MVC):
+http://www.pluralsight.com/courses/automated-aspdotnet-mvc
+http://www.pluralsight.com/courses/building-right-thing-dotnet-teststack
+
+Further
+http://jetbrains.org/
+http://docs.teststack.net/
+http://specflow.org/
+http://approvaltests.sourceforge.net/
+http://www.pluralsight.com/courses/continuous-integration
+
 ###Locator
 Default locators are 'By.Id' and 'By.CssSelector'
 
