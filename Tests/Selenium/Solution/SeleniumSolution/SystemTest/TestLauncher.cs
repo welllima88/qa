@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         public void LaunchTestDirector()
         {
             TestDirector.TestEnvironment = new Dev();
-            TestDirector.PrepareBrowser(SeleniumGridServer.Build);
+            TestDirector.PrepareBrowser(Grid.Build);
             TestDirector.Start();
         }
 
