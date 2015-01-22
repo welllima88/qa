@@ -13,7 +13,7 @@ namespace Six.Scs.QA.Selenium.Environments
             BaseUrl = new Uri(ScsRes.WES_QA_L);
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Lobby();
-            Authentication = new CertificateAuthentication(ScsRes.mandant_qa_L);
+            Authentication = new SecurIdAuthentication("tksyr","","tkcposl","");
             SeleniumConfig = new SeleniumConfig
             {
                 Timeouts = new Timeouts {ImplicitlyWait = 10, SetScriptTimeout = 30, SetPageLoadTimeout = 30}
