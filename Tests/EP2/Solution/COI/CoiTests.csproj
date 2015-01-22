@@ -78,6 +78,7 @@
     <Compile Include="Laid\LaidRequestTest.cs" />
     <Compile Include="Laid\LaidHandler.cs" />
     <Compile Include="Laid\ListAID.cs" />
+    <Compile Include="Setup\ConfigDataResponse.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />
     <Compile Include="Setup\CoiTest.cs" />

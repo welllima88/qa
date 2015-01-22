@@ -53,7 +53,7 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(u.Email, View.Email);
             Assert.AreEqual(u.SecurId, View.SecurId);
             Assert.AreEqual(u.Comment, View.Comment);
-            Assert.AreEqual(u.WesMandant, View.WesMandant);
+            StringAssert.Contains(u.WesMandant, View.WesMandant);
         }
 
         public static void Create(Person person)

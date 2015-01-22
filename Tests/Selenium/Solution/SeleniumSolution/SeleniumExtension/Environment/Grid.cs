@@ -1,6 +1,6 @@
 ﻿namespace Six.Scs.QA.Selenium.Extension.Environment
 {
-    public static class SeleniumGridServer
+    public static class Grid
     {
         public static string OldBuild
         {
