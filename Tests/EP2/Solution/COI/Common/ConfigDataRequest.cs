@@ -2,7 +2,7 @@
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.QA.Tests.EP2.Laid
+namespace SIX.SCS.QA.Tests.EP2.Common
 {
     [Ep2Message(Ep2MessageNames.ConfigDataRequest)]
     [Ep2Version("0600")]
