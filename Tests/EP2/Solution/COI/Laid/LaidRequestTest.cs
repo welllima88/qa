@@ -3,6 +3,7 @@ using SIX.EP2.Client;
 using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
+using SIX.SCS.QA.Tests.EP2.Common;
 
 namespace SIX.SCS.QA.Tests.EP2.Laid
 {
