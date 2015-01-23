@@ -32,6 +32,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
+        public void AcquirerTickets()
+        {
+            Assert.IsTrue(LobbyMenu.AcquirerTickets.Enabled);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
         public void BillableTerminals()
         {
             Assert.IsTrue(LobbyMenu.BillableTerminalsMenu.Displayed);
@@ -175,6 +182,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public void SimCardManagement()
         {
             Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+        }
+
+        [Test]
+        [Category("LobbyCheck")]
+        public void TerminalReturnShipping()
+        {
+            Assert.IsTrue(LobbyMenu.TerminalReturnShipping.Displayed);
         }
 
         [Test]
