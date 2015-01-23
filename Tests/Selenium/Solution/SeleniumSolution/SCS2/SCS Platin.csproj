@@ -108,7 +108,6 @@
     <Compile Include="Common\Menu\UserMenu.cs" />
     <Compile Include="Common\MetaNavBar.cs" />
     <Compile Include="Common\NavigationBar.cs" />
-    <Compile Include="Common\ProcessTickets.cs" />
     <Compile Include="Common\QuickSearch.cs" />
     <Compile Include="Common\RecentElements.cs" />
     <Compile Include="Common\RecentMassmutations.cs" />
