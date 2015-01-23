@@ -61,7 +61,6 @@
     <Compile Include="Lobby\MenuTest.cs" />
     <Compile Include="Lobby\MetaNavigationBarTest.cs" />
     <Compile Include="Lobby\NavigationBarTest.cs" />
-    <Compile Include="Lobby\ProcessTicketsTest.cs" />
     <Compile Include="Lobby\QuickSearchTest.cs" />
     <Compile Include="Lobby\RecentElementsTest.cs" />
     <Compile Include="Lobby\RecentMassJobsTest.cs" />
