@@ -16,23 +16,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest
         }
 
         [Test]
-        public void DirectArticleSelect()
-        {
-            const string termType = "xentissimo";
-            const string article = "xentissimo MOBILE WLAN, TCP/IP";
-
-            ArticleChooser.Filter = " ";
-            ArticleChooser.Filter = "";
-            ArticleChooser.Select = article;
-
-            Assert.IsTrue(ConfigCreate.TerminalType.Equals(termType));
-            Assert.IsTrue(Common.Lobby.Headline.Text.Contains(article));
-
-            // get to initial point
-            CustomerMenu.TerminalCreate.Click();
-        }
-
-        [Test]
         public void LookupByArticleNumber()
         {
             ArticleChooser.Filter = "10773";

@@ -53,6 +53,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="DirectArticleSelectTest.cs" />
     <Compile Include="ArticleChooserLookupTest.cs" />
     <Compile Include="Article\ArticleViewTest.cs" />
     <Compile Include="EventLog\EventLogGuiTest.cs" />
