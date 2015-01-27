@@ -56,10 +56,6 @@
     <OutputPath>bin\PROD\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="WebDriver, Version=2.44.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -120,6 +116,8 @@
     <Compile Include="Environments\Prod.cs" />
     <Compile Include="Environments\QaK.cs" />
     <Compile Include="Environments\QaL.cs" />
+    <Compile Include="Hardware\Management.cs" />
+    <Compile Include="Hardware\SerialNumberImport.cs" />
     <Compile Include="Help\Navigation.cs" />
     <Compile Include="Location\BillingAddress\Create.cs" />
     <Compile Include="Location\BillingAddress\Edit.cs" />

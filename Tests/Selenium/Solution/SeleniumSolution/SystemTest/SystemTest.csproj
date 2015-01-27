@@ -66,9 +66,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SCS2\SCS Platin.csproj">
+    <ProjectReference Include="..\SCS2\SCS.csproj">
       <Project>{4e9cd23d-6dac-46b5-a8b2-9966647cb131}</Project>
-      <Name>SCS Platin</Name>
+      <Name>SCS</Name>
     </ProjectReference>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>
