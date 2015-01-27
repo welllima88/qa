@@ -5,7 +5,7 @@ using Six.Scs.QA.Selenium.Extension.WebDriver;
 namespace Six.Scs.QA.Selenium.SmokeTest.Article
 {
     [TestFixture]
-    public class ArticleViewTest
+    public class ViewTest
     {
         [TestFixtureSetUp]
         public static void ClassInit()

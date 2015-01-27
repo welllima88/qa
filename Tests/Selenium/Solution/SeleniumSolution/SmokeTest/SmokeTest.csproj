@@ -53,9 +53,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="DirectArticleSelectTest.cs" />
-    <Compile Include="ArticleChooserLookupTest.cs" />
-    <Compile Include="Article\ArticleViewTest.cs" />
+    <Compile Include="Article\DirectSelectTest.cs" />
+    <Compile Include="Article\ChooserLookupTest.cs" />
+    <Compile Include="Article\ViewTest.cs" />
     <Compile Include="EventLog\EventLogGuiTest.cs" />
     <Compile Include="Lobby\ApplicationInfoTest.cs" />
     <Compile Include="Lobby\FooterTest.cs" />
@@ -74,6 +74,8 @@
     <Compile Include="Search\Customer\ByIdTest.cs" />
     <Compile Include="Search\Location\ByIdTest.cs" />
     <Compile Include="Search\Customer\ByNameTest.cs" />
+    <Compile Include="HardwareManagement\ImportTest.cs" />
+    <Compile Include="HardwareManagement\ManagementViewTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberImportTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
     <Compile Include="SIMCard\SimCardViewTest.cs" />
@@ -82,9 +84,9 @@
     <Compile Include="TestLauncher.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SCS2\SCS Platin.csproj">
+    <ProjectReference Include="..\SCS2\SCS.csproj">
       <Project>{4e9cd23d-6dac-46b5-a8b2-9966647cb131}</Project>
-      <Name>SCS Platin</Name>
+      <Name>SCS</Name>
     </ProjectReference>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>

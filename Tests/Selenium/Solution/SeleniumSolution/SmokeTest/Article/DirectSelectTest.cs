@@ -3,10 +3,10 @@ using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal;
 
-namespace Six.Scs.QA.Selenium.SmokeTest
+namespace Six.Scs.QA.Selenium.SmokeTest.Article
 {
     [TestFixture]
-    public class DirectArticleSelectTest
+    public class DirectSelectTest
     {
         [TestFixtureSetUp]
         public void TestInit()

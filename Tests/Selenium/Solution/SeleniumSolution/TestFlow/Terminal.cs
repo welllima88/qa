@@ -135,5 +135,15 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Terminal.Move(location);
             Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
+
+        public static void Retour(TestData.ValueObjects.Terminal terminal)
+        {
+            Open(terminal);
+            Workflow.Terminal.Retour();
+            LobbyMenu.Lobby.Click();
+            LobbyMenu.TerminalReturnShipping.Click();
+
+            // Assert.That(RetourTable, Has.Member(terminal));
+        }
     }
 }
