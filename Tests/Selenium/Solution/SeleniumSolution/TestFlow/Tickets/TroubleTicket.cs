@@ -10,6 +10,13 @@ namespace Six.Scs.QA.Testlogic.Tickets
             Terminal.Open(terminal);
             TestData.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
+            Open(troubleTicket);
+            // TODO : Add checks
+        }
+
+        private static void Open(TestData.ValueObjects.TroubleTicket troubleTicket)
+        {
+            Search.TicketCanBeFoundById(troubleTicket.Id);
         }
     }
 }
