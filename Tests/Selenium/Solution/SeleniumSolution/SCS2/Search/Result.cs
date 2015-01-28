@@ -11,5 +11,6 @@ namespace Six.Scs.QA.Selenium.Search
         public const string SerialNumber = "SerialNumberCtrl";
         public const string MasterSoftware = "MasterSoftwareCtrl";
         public const string TerminalType = "TerminalTypeCtrl";
+        public const string Ticket = "TroubleTicketCtrl";
     }
 }
