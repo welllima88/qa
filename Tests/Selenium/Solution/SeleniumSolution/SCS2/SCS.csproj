@@ -172,6 +172,7 @@
     <Compile Include="Terminal\SoftwareChange.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
+    <Compile Include="Tickets\Trouble\View.cs" />
     <Compile Include="User\Create.cs" />
     <Compile Include="User\List.cs" />
     <Compile Include="User\LoginSetup.cs" />
@@ -186,7 +187,6 @@
   <ItemGroup>
     <Folder Include="Properties\" />
     <Folder Include="Tickets\Process\" />
-    <Folder Include="Tickets\Trouble\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
