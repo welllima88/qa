@@ -150,13 +150,13 @@
     <Compile Include="Terminal\Dashboard\Portlets\Contacts.cs" />
     <Compile Include="Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
-    <Compile Include="Terminal\Dashboard\Portlets\TroubleTicket\Priority.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Support\Priority.cs" />
     <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\SalesContract.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TechnicalView.cs" />
     <Compile Include="Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TerminalTexts.cs" />
-    <Compile Include="Terminal\Dashboard\Portlets\TroubleTicket\TroubleTickets.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Support\TroubleTickets.cs" />
     <Compile Include="Terminal\Duplicate\View.cs" />
     <Compile Include="Terminal\EventLog\View.cs" />
     <Compile Include="Terminal\FinancialConfig\Edit.cs" />
@@ -185,6 +185,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="Tickets\Process\" />
+    <Folder Include="Tickets\Trouble\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
