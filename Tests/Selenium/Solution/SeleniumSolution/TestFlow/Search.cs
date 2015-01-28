@@ -62,5 +62,13 @@ namespace Six.Scs.QA.Testlogic
 
             Assert.AreEqual(simCardNumber, Selenium.Administration.SimCard.View.SimCardNumber);
         }
+
+        public static void TicketCanBeFoundById(string ticketId)
+        {
+            Workflow.Search.Find(ticketId);
+            new SearchResult(Result.Ticket).First().Click();
+
+            StringAssert.Contains(ticketId, Selenium.Tickets.Trouble.View.Header);
+        }
     }
 }
