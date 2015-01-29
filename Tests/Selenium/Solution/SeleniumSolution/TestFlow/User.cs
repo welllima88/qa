@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.Factory;
@@ -74,6 +75,15 @@ namespace Six.Scs.QA.Testlogic
             Workflow.User.AddServices(services);
             ICollection<Service> actList = LoginSetup.GetAssignedServices();
             CollectionAssert.AreEquivalent(services, actList);
+        }
+
+        public static void AssignRoles(TestData.ValueObjects.User user)
+        {
+            Open(user);
+            ICollection<string> roles =
+                new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
+            
+            Workflow.User.AssignRoles(roles);
         }
     }
 }
