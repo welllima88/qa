@@ -1,8 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1422537645008" ID="ID_450756024" MODIFIED="1422538756298" STYLE="bubble" TEXT="automated tests">
+<node COLOR="#000000" CREATED="1422537645008" ID="ID_450756024" MODIFIED="1422539209552" STYLE="bubble" TEXT="automated tests">
 <font NAME="SansSerif" SIZE="20"/>
-<hook NAME="accessories/plugins/AutomaticLayout.properties"/>
 <node COLOR="#0033ff" CREATED="1422537666341" ID="ID_1149138013" MODIFIED="1422538716397" POSITION="right" STYLE="bubble" TEXT="user">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
@@ -208,15 +207,19 @@
 <node COLOR="#990000" CREATED="1422538161194" ID="ID_303186519" MODIFIED="1422538189867" TEXT="create">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-</node>
-<node COLOR="#00b439" CREATED="1422538440497" ID="ID_1760282753" MODIFIED="1422538441294" TEXT="view">
+<node COLOR="#990000" CREATED="1422538440497" ID="ID_1760282753" MODIFIED="1422539054093" TEXT="view">
 <edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1422538450979" ID="ID_693409786" MODIFIED="1422538455272" POSITION="left" TEXT="recent elements">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1422538853477" ID="ID_28847305" MODIFIED="1422539017135" TEXT="open last">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1422538468262" ID="ID_1289165394" MODIFIED="1422538473580" POSITION="right" TEXT="search">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
