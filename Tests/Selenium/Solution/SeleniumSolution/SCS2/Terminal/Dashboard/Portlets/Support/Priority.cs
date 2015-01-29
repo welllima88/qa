@@ -1,31 +1,33 @@
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.TroubleTicket
+namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support
 {
     public class Priority : WebObject
     {
         private void SetPriority(string priority)
         {
+            string loc = string.Format("div#priorityButtons label[title='{0}']", priority);
+
             WebDriver.FindAdaptedElement(
-                By.CssSelector(string.Format("form#troubleTicketForm input#Prio[value='{0}']", priority)))
+                By.CssSelector(loc))
                 .Click();
         }
 
         public void High()
         {
             // form#troubleTicketForm input#Prio[value='High']
-            SetPriority("High");
+            SetPriority("Hohe Prio");
         }
 
         public void Low()
         {
-            SetPriority("Low");
+            SetPriority("Tiefe Prio");
         }
 
         public void Normal()
         {
-            SetPriority("Normal");
+            SetPriority("Prio zurücks.");
         }
     }
 }

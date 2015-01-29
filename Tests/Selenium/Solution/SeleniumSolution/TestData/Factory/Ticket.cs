@@ -16,9 +16,10 @@ namespace Six.Scs.QA.TestData.Factory
                 Fax = "+33 - 58 399 6237",
                 Email = "marc.siegmund@six-group.proof",
                 Mobile = "+32 - 58 399 6237",
-                Category = "",
-                Solution = "",
-                Description = "SYR Trouble Ticket" + Factory.GenerateTestId()
+                Category = "Probleme Display",
+                Solutions = new[] {"", ""},
+                Description = "SYR Trouble Ticket" + Factory.GenerateTestId(),
+                ExternReferenceId = Factory.GenerateTestId()
             };
         }
     }

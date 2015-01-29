@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
+using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
@@ -24,6 +25,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Mpd _mpd;
         private static SimCard _sim;
         private static TestData.ValueObjects.Location _location2;
+        private static TroubleTicket _troubleTicket;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
@@ -79,6 +81,11 @@ namespace Six.Scs.QA.Selenium.SystemTest
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
+
+            _troubleTicket = Testlogic.Tickets.TroubleTicket.Create(_duplicatedTerminals[1]);
+            Testlogic.Tickets.TroubleTicket.Edit(_troubleTicket);
+
+            Testlogic.Terminal.Retour(_duplicatedTerminals[1]);
 
             _sim = Testlogic.SimCard.Create();
 

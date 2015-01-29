@@ -5,11 +5,24 @@ namespace Six.Scs.QA.Testlogic.Tickets
 {
     public class TroubleTicket
     {
-        public static void Create(TestData.ValueObjects.Terminal terminal)
+        public static TestData.ValueObjects.TroubleTicket Create(TestData.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
             TestData.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
+            Open(troubleTicket);
+            // TODO : Add checks
+            return troubleTicket;
+        }
+
+        private static void Open(TestData.ValueObjects.TroubleTicket troubleTicket)
+        {
+            Search.TicketCanBeFoundById(troubleTicket.Id);
+        }
+
+        public static void Edit(TestData.ValueObjects.TroubleTicket troubleTicket)
+        {
+            // TODO: implement
         }
     }
 }

@@ -1,13 +1,21 @@
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.TroubleTicket;
+using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support;
 using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Workflow
 {
     public class Trouble
     {
-        public static void Create(TroubleTicket trouble)
+        public static TroubleTicket Create(TroubleTicket trouble)
         {
-            TroubleTickets.New.Click();
+            NewTicket(trouble);
+            TroubleTickets.Save.Click();
+            trouble.Id = TroubleTickets.FetchIdByPopup();
+            return trouble;
+        }
+
+        private static void NewTicket(TroubleTicket trouble)
+        {
+            TroubleTickets.New();
 
             TroubleTickets.MyTeam = trouble.MyTeam;
             TroubleTickets.Forward = trouble.Forward;
@@ -17,16 +25,23 @@ namespace Six.Scs.QA.Workflow
             TroubleTickets.Fax = trouble.Fax;
             TroubleTickets.Email = trouble.Email;
             TroubleTickets.Mobile = trouble.Mobile;
-            TroubleTickets.Category = trouble.Category;
-            TroubleTickets.Solution = trouble.Solution;
+            // TODO: to enable, when unique id present
+            // TroubleTickets.Category = trouble.Category;
+            // TroubleTickets.Solution = trouble.Solutions;
             TroubleTickets.Priority.High();
             TroubleTickets.Priority.Low();
             TroubleTickets.Priority.Normal();
 
             TroubleTickets.Description = trouble.Description;
+            TroubleTickets.ExternReferenceId = trouble.ExternReferenceId;
+        }
 
-            TroubleTickets.Save.Click();
+        public static TroubleTicket CreateAndClose(TroubleTicket trouble)
+        {
+            NewTicket(trouble);
             TroubleTickets.SaveAndClose.Click();
+            trouble.Id = TroubleTickets.FetchIdByPopup();
+            return trouble;
         }
     }
 }
