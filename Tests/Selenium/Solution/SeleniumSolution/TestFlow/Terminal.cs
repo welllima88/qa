@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Massmuation;
@@ -140,7 +141,7 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(terminal);
             Workflow.Terminal.Retour();
-            LobbyMenu.Lobby.Click();
+            NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 
             // Assert.That(RetourTable, Has.Member(terminal));
