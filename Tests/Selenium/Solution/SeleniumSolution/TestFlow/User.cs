@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.Factory;
@@ -70,10 +71,23 @@ namespace Six.Scs.QA.Testlogic
         public static void AddService(TestData.ValueObjects.User user)
         {
             Open(user);
-            ICollection<Service> services = Services.Scs();
+            IEnumerable<Service> services = Services.Scs();
             Workflow.User.AddServices(services);
-            ICollection<Service> actList = LoginSetup.GetAssignedServices();
+            IEnumerable<Service> actList = LoginSetup.GetAssignedServices();
             CollectionAssert.AreEquivalent(services, actList);
+        }
+
+        public static void AssignRoles(TestData.ValueObjects.User user)
+        {
+            Open(user);
+            IEnumerable<string> roles =
+                new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
+
+            Workflow.User.AssignRoles(roles);
+
+            IEnumerable<string> actList = Roles.GetAssignedRoles();
+            // TODO: reactivate when correct IDs present
+            // CollectionAssert.AreEquivalent(roles, actList);
         }
     }
 }

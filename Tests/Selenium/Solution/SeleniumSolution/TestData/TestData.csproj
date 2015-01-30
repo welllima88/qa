@@ -91,6 +91,7 @@
     <Compile Include="ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="ValueObjects\TerminalReplace.cs" />
     <Compile Include="ValueObjects\TroubleTicket.cs" />
+    <Compile Include="ValueObjects\Role.cs" />
     <Compile Include="ValueObjects\User.cs" />
   </ItemGroup>
   <ItemGroup />
