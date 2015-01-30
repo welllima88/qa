@@ -53,7 +53,6 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Terminal.Move(_terminalLocation, _location2);
 
             Brands.Create(_terminalLocation, new Testlogic.Builder.Brand.Ep2.Default());
-            // TroubleTicket.Create(_terminalLocation);
             Infotext.Create(_location1);
 
             _location1 = Testlogic.Location.Edit(_location1);
@@ -75,9 +74,10 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.User.Create(_personOnLocation);
 
             Testlogic.User.AddService(_user);
+            // Testlogic.User.AssignRoles(_user);
 
             Brands.Create(_duplicatedTerminals[1], new Additional()); // {0,1,..} means create brands on second terminal
-            // check again existing contracts:
+            // check again already existing contracts:
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
