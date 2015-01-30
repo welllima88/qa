@@ -1,9 +1,7 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.TestData.ValueObjects;
 
 namespace Six.Scs.QA.Selenium.User
 {
@@ -21,21 +19,11 @@ namespace Six.Scs.QA.Selenium.User
                 .Click();
         }
 
-        public static ICollection<Service> GetAssignedServices()
+        public static IEnumerable<string> GetAssignedRoles()
         {
-            ReadOnlyCollection<IWebElement> rows =
-                WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tbody tr"));
-
-            var services = new Collection<Service>();
-            foreach (IWebElement row in rows)
-            {
-                services.Add(new Service
-                {
-                    Name = row.FindElement(By.CssSelector("td.Service")).Text,
-                    Permission = row.FindElement(By.CssSelector("td.Permission")).Text
-                });
-            }
-            return services;
+            IEnumerable<string> rows =
+                WebDriver.FindElements(By.CssSelector("table#roles tbody tr")).Select(d => d.Text);
+            return rows;
         }
     }
 }
