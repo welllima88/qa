@@ -92,5 +92,10 @@ namespace Six.Scs.QA.Selenium.User
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService?userName=']")); }
         }
+
+        public static IWebElementAdapter AssignRoles
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("assignRoles")); }
+        }
     }
 }

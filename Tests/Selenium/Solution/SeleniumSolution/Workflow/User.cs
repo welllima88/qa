@@ -62,5 +62,16 @@ namespace Six.Scs.QA.Workflow
 
             LoginSetup.SaveButton.Click();
         }
+
+        public static void AssignRoles(IEnumerable<string> roles)
+        {
+            View.AssignRoles.Click();
+
+            foreach (string role in roles)
+            {
+                Roles.Set(role);
+            }
+            Roles.Save();
+        }
     }
 }
