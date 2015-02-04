@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Administration
         }
 
         [Test]
-        public void City()
+        public void Manage()
         {
             _agency = Testlogic.Administration.Agency.Create();
             _agency = Testlogic.Administration.Agency.Edit(_agency);
