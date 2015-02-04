@@ -25,6 +25,7 @@
         public static void Edit(TestData.ValueObjects.Agency agency)
         {
             Selenium.Administration.Agency.View.Edit();
+
             Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
             Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
             Selenium.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
@@ -42,6 +43,8 @@
 
         public static void Deactivate()
         {
+            Selenium.Administration.Agency.View.Edit();
+
             Selenium.Administration.Agency.Create.Status = false;
 
             Selenium.Administration.Agency.Create.SaveButton.Click();
