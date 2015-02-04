@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
     {
         public static string SbsAgentId
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Agency_SBSAgent")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_SBSAgentId")).Text; }
         }
 
         public static string Telephone
@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
 
         public static string Language
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Agency_Language")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_LanguageName")).Text; }
         }
 
         public static string StreetNo
@@ -27,12 +27,12 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
 
         public static string Country
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Agency_Country")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_CountryName")).Text; }
         }
 
         public static string Zip
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Agency_PLZ")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_ZIP")).Text; }
         }
 
         public static string City
