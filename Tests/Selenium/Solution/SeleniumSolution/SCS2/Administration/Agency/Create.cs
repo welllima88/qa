@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
     {
         public static ButtonElement SaveButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input.button#save")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
         public static string SbsAgentId
@@ -30,14 +30,11 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId"))
+                    WebDriver.FindAdaptedElement(By.Id("Agency_LanguageId"))
                         .Selector()
                         .SelectedOption;
             }
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_LanguageId")).Selector().SelectByValue(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("Agency_LanguageId")).Selector().SelectByText(value); }
         }
 
         public static string StreetNo
@@ -51,14 +48,11 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId"))
+                    WebDriver.FindAdaptedElement(By.Id("Agency_CountryId"))
                         .Selector()
                         .SelectedOption;
             }
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("select#Agency_CountryId")).Selector().SelectByValue(value);
-            }
+            set { WebDriver.FindAdaptedElement(By.Id("Agency_CountryId")).Selector().SelectByText(value); }
         }
 
         public static string Zip
@@ -105,6 +99,11 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
                     .Selector()
                     .SelectByText(value);
             }
+        }
+
+        public static bool Status
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("Agency_IsActive")).CheckBox().Set(value); }
         }
     }
 }

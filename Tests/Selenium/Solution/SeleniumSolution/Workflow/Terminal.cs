@@ -1,4 +1,3 @@
-using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Terminal;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
 using Six.Scs.QA.Selenium.Terminal.Duplicate;
@@ -102,7 +101,7 @@ namespace Six.Scs.QA.Workflow
 
         public static void Retour()
         {
-            SalesContract.MarkAsRetour.Click();            
+            SalesContract.MarkAsRetour.Click();
         }
     }
 }

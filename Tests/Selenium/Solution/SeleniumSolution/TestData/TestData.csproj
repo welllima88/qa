@@ -50,6 +50,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Factory\Agency.cs" />
     <Compile Include="Factory\BillingAddress.cs" />
     <Compile Include="Factory\Brand.cs" />
     <Compile Include="Factory\Currency.cs" />
