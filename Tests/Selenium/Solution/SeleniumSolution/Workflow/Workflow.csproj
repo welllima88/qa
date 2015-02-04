@@ -50,6 +50,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Agency.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Builder\BrandBuilder.cs" />
     <Compile Include="Builder\ArticelChangePerformer.cs" />
