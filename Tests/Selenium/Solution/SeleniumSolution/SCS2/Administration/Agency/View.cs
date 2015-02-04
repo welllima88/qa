@@ -20,11 +20,6 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             get { return WebDriver.FindAdaptedElement(By.Id("AgencyLanguage")).Text; }
         }
 
-        public static ButtonElement EditButton
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("edit")).Button(); }
-        }
-
         public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.Id("AgencyStreet")).Text; }
@@ -58,6 +53,16 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
         public static string Supplier
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Mandant")).Text; }
+        }
+
+        public static bool Status
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_IsActive")).CheckBox().IsChecked(); }
+        }
+
+        public static void Edit()
+        {
+            WebDriver.FindAdaptedElement(By.Id("edit")).Button().Click();
         }
     }
 }
