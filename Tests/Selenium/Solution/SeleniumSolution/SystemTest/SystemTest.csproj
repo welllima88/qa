@@ -54,7 +54,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="SaferpayTest.cs" />
+    <Compile Include="Saferpay\GiccTest.cs" />
+    <Compile Include="Saferpay\ELinkTest.cs" />
     <Compile Include="RegressionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestLauncher.cs" />
