@@ -26,7 +26,7 @@
         {
             Selenium.Administration.Agency.View.Edit();
 
-            Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
+            Selenium.Administration.Agency.Create.Name = agency.Name;
             Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
             Selenium.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
             Selenium.Administration.Agency.Create.Zip = agency.Adress.Zip;
