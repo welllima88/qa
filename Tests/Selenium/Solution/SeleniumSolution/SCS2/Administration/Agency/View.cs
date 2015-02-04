@@ -7,52 +7,52 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
     {
         public static string SbsAgentId
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencySBSAgent")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_SBSAgent")).Text; }
         }
 
         public static string Telephone
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyPhoneNumber")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_PhoneNumber")).Text; }
         }
 
         public static string Language
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyLanguage")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_Language")).Text; }
         }
 
         public static string StreetNo
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyStreet")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_Street")).Text; }
         }
 
         public static string Country
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyCountry")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_Country")).Text; }
         }
 
         public static string Zip
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyPLZ")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_PLZ")).Text; }
         }
 
         public static string City
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyCity")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_City")).Text; }
         }
 
         public static string Name
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_AgencyName")).Text; }
         }
 
         public static string DisplayName
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("AgencyUserDefinedName")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_AgencyUserDefinedName")).Text; }
         }
 
         public static string Supplier
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("Mandant")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency_SupplierMandantName")).Text; }
         }
 
         public static bool Status
