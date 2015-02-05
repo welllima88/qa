@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
 
@@ -11,8 +12,15 @@ namespace Six.Scs.QA.Testlogic.Tickets
             TestData.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
             Open(troubleTicket);
-            // TODO : Add checks
+            
+            Check(troubleTicket);
+
             return troubleTicket;
+        }
+
+        private static void Check(TestData.ValueObjects.TroubleTicket troubleTicket)
+        {
+            Assert.That(Selenium.Tickets.Trouble.View.Header,Is.StringMatching(troubleTicket.Id));
         }
 
         private static void Open(TestData.ValueObjects.TroubleTicket troubleTicket)
