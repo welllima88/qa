@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support
                 foreach (string solution in value)
                 {
                     WebDriver.FindAdaptedElement(By.CssSelector("button.dropdown-toggle")).Click();
-                    WebDriver.FindAdaptedElements(By.CssSelector("resolutionDropdown ul#resolutionDropdown li"))
+                    WebDriver.FindAdaptedElements(By.CssSelector("ul#resolutionDropdown li"))
                         .Where(e => e.Text.Contains(solution));
                 }
             }

@@ -25,9 +25,8 @@ namespace Six.Scs.QA.Workflow
             TroubleTickets.Fax = trouble.Fax;
             TroubleTickets.Email = trouble.Email;
             TroubleTickets.Mobile = trouble.Mobile;
-            // TODO: to enable, when unique id present
-            // TroubleTickets.Category = trouble.Category;
-            // TroubleTickets.Solution = trouble.Solutions;
+            TroubleTickets.Category = trouble.Category;
+            TroubleTickets.Solution = trouble.Solutions;
             TroubleTickets.Priority.High();
             TroubleTickets.Priority.Low();
             TroubleTickets.Priority.Normal();

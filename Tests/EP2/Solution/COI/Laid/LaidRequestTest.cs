@@ -11,6 +11,9 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
     [Category("COI"), Category("EP2"), Category("LAID")]
     public class LaidRequestTest
     {
+        private const int Port = 2253;
+        private const string ServerAddress = "mdzhwcweb01";
+        private const string Version = "0600";
         private IRequestResponseClient _clientProtocol;
         private ComConfig _comConfig;
 
@@ -22,9 +25,9 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
 
             _comConfig = new ComConfig
             {
-                Port = 2253,
-                ServerAddress = "mdzhwcweb01",
-                Version = "0600"
+                Port = Port,
+                ServerAddress = ServerAddress,
+                Version = Version
             };
 
             _clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
