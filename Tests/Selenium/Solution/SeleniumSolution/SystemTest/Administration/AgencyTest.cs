@@ -16,6 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Administration
         }
 
         [Test]
+        [Category("Agency"), Category("Create"), Category("Edit"), Category("Deactivate")]
         public void Manage()
         {
             _agency = Testlogic.Administration.Agency.Create();
