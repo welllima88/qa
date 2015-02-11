@@ -50,6 +50,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
             ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.GenerateTestId();
             ConfigDetailsCreate.EcrInterface = "MPD over IP";
             ConfigDetailsCreate.EcrText = "SYR with MPD over IP";
+            ConfigDetailsCreate.MinimumContractPeriodDate = "20.02.2020";
         }
     }
 }
