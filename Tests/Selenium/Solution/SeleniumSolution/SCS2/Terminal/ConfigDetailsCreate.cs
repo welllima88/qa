@@ -55,6 +55,17 @@ namespace Six.Scs.QA.Selenium.Terminal
             }
         }
 
+        public static string MinimumContractPeriodDate
+        {
+            set
+            {
+                WebDriver.FindAdaptedElement(
+                    By.CssSelector(
+                        "#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyMinimumContractPeriodDate_dtpMinimumContractPeriodDate"))
+                    .TextField().TypeText(value);
+            }
+        }
+
         public static string Contract
         {
             set
@@ -133,25 +144,6 @@ namespace Six.Scs.QA.Selenium.Terminal
             }
         }
 
-        public static IWebElementAdapter BackButton
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton"));
-            }
-        }
-
-        public static IWebElementAdapter SaveButton
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
-            }
-        }
-
         public static bool Dcc
         {
             set
@@ -161,6 +153,18 @@ namespace Six.Scs.QA.Selenium.Terminal
                     .CheckBox()
                     .Set(value);
             }
+        }
+
+        public static void Save()
+        {
+            WebDriver.FindAdaptedElement(
+                By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")).Click();
+        }
+
+        public static void Back()
+        {
+            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalBackButton"))
+                .Click();
         }
     }
 }
