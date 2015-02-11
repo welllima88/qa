@@ -39,13 +39,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
-        public void BillableTerminals()
-        {
-            Assert.IsTrue(LobbyMenu.BillableTerminalsMenu.Displayed);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
         public void CustomerCreate()
         {
             Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
@@ -123,13 +116,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
-        public void MyGroupTickets()
-        {
-            Assert.IsTrue(TicketMenu.MyGroup.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
         public void MyIncidents()
         {
             Assert.IsTrue(LobbyMenu.MyIncidents.Enabled);
@@ -147,27 +133,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public void MyTeams()
         {
             Assert.IsTrue(LobbyMenu.MyTeams.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void MyTickets()
-        {
-            Assert.IsTrue(TicketMenu.My.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void NotAssignedTickets()
-        {
-            Assert.IsTrue(TicketMenu.NotAssigned.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void PostDeliveryTickets()
-        {
-            Assert.IsTrue(LobbyMenu.PostDeliveryTickets.Displayed);
         }
 
         [Test]

@@ -23,16 +23,6 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SerialNumberManagement/']")); }
         }
 
-        public static IWebElementAdapter BillableTerminalsMenu
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/BillableTerminals/']")); }
-        }
-
-        public static IWebElementAdapter PostDeliveryTickets
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/DeliveryTicketsPost/']")); }
-        }
-
         public static IWebElementAdapter AccessoireOrders
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
