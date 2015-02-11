@@ -25,9 +25,9 @@ namespace Six.Scs.QA.Workflow.Builder
         {
             ChooseArticle();
             SetBasics();
-            Continue();
+            ConfigCreate.Continue();
             SetDetails();
-            Save();
+            ConfigDetailsCreate.Save();
             AddContracts();
             ReadInfo();
         }
@@ -42,11 +42,6 @@ namespace Six.Scs.QA.Workflow.Builder
         protected void ReadInfo()
         {
             Terminal.Id = TerminalInfo.TerminalId;
-        }
-
-        private void Continue()
-        {
-            ConfigCreate.ContinueButton.Click();
         }
 
         protected abstract void ChooseArticle();
@@ -69,11 +64,6 @@ namespace Six.Scs.QA.Workflow.Builder
                 _brandBuilder.Create();
                 _brandBuilder.Check();
             }
-        }
-
-        protected static void Save()
-        {
-            ConfigDetailsCreate.SaveButton.Click();
         }
 
         /// <summary>

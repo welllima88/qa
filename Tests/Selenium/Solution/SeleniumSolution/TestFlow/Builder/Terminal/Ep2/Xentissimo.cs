@@ -42,6 +42,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
         protected override void SetDetails()
         {
             ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.GenerateTestId();
+            ConfigDetailsCreate.MinimumContractPeriodDate = "20.02.2020";
         }
     }
 }

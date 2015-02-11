@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -45,7 +46,16 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
 
         public IWebElementAdapter FindAdaptedElement(By by)
         {
-            return new WebElementAdapter(_webDriver.FindElement(by));
+            try
+            {
+                return new WebElementAdapter(_webDriver.FindElement(by));
+            }
+            catch (NotFoundException)
+            {
+                // _webDriver.TakeScreenshot().SaveAsFile("failure", ImageFormat.Png);
+                Debug.Print(_webDriver.PageSource);
+                throw;
+            }
         }
 
         List<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)

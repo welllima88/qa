@@ -95,23 +95,16 @@ namespace Six.Scs.QA.Selenium.Terminal
             }
         }
 
-        public static IWebElementAdapter ContinueButton
+        public static void Save()
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"));
-            }
+            WebDriver.FindAdaptedElement(
+                By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton")).Click();
         }
 
-        public static IWebElementAdapter SaveButton
+        public static void Continue()
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalFinishButton"));
-            }
+            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_wzNewTerminalNextButton"))
+                .Click();
         }
     }
 }

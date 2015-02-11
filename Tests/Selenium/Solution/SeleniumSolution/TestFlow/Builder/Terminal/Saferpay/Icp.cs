@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
         {
             ChooseArticle();
             SetBasics();
-            Save();
+            ConfigCreate.Save();
             AddContracts();
             ReadInfo();
         }
