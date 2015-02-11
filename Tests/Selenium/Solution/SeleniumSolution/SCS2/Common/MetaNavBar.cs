@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#metaNavBar a#ctl00_hplSimpleUserInfo[href*='/User/Index?UserName=']"));
+                        By.CssSelector("td#metaNavBar a#ctl00_hplSimpleUserInfo[href*='/User/Preferences?UserName=']"));
             }
         }
 
