@@ -109,23 +109,9 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
-        public void MyGroupProcessTickets()
-        {
-            Assert.IsTrue(LobbyMenu.MyGroupProcessTickets.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
         public void MyIncidents()
         {
             Assert.IsTrue(LobbyMenu.MyIncidents.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void MyPersonalProcessTickets()
-        {
-            Assert.IsTrue(LobbyMenu.MyPersonalProcessTickets.Enabled);
         }
 
         [Test]
@@ -154,13 +140,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public void TerminalReturnShipping()
         {
             Assert.IsTrue(LobbyMenu.TerminalReturnShipping.Displayed);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void UnAssignedProcessTickets()
-        {
-            Assert.IsTrue(LobbyMenu.UnAssignedProcessTickets.Enabled);
         }
     }
 }
