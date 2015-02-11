@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoiTests", "..\..\..\EP2\Solution\COI\CoiTests.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backoffice", "SaferpayBackoffice\Backoffice.csproj", "{724744A8-0BAA-437E-8CE2-3160CBDD9F44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{C828CF02-3114-4E87-A42C-A6B157D361C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C828CF02-3114-4E87-A42C-A6B157D361C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C828CF02-3114-4E87-A42C-A6B157D361C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,5 +103,6 @@ Global
 		{6D99C089-ECA8-42DA-B74B-EAF28E457D83} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{C828CF02-3114-4E87-A42C-A6B157D361C0} = {15F781AC-F400-4633-8DAF-D4193C83738B}
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 	EndGlobalSection
 EndGlobal
