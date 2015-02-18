@@ -48,11 +48,6 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TroubleTicket/Incident/Teams']")); }
         }
 
-        public static IWebElementAdapter AcquirerTickets
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AcquirerTicket/team/index']")); }
-        }
-
         public static IWebElementAdapter TerminalReturnShipping
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TerminalReturnShipping/']")); }
