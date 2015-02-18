@@ -107,7 +107,8 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static void DeleteConfirm()
         {
-            WebDriver.SwitchTo().Alert().Accept();
+            // WebDriver.SwitchTo().Alert().Accept();
+            WebDriver.FindAdaptedElement(By.CssSelector("div.modal-content button[type='submit']")).Click();
         }
     }
 }
