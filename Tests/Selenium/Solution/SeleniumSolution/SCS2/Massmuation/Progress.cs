@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -41,9 +42,9 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get
             {
                 return
-                    WebDriver.WebElementsAsStringList(
-                        WebDriver.FindAdaptedElements(
-                            By.CssSelector("div#TerminalList div p a[href*='/TerminalDashboard?TerminalId=']")));
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("div#TerminalList div p a[href*='/TerminalDashboard?TerminalId=']"))
+                        .Select(e => e.Text);
             }
         }
 
