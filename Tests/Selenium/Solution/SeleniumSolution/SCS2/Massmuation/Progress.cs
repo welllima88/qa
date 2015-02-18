@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get { return WebDriver.FindAdaptedElement(By.Id("refresh")).Button(); }
         }
 
-        public static List<string> TerminalList
+        public static IEnumerable<string> TerminalList
         {
             get
             {
