@@ -32,13 +32,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 
         [Test]
         [Category("LobbyCheck")]
-        public void AcquirerTickets()
-        {
-            Assert.IsTrue(LobbyMenu.AcquirerTickets.Enabled);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
         public void CustomerCreate()
         {
             Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
