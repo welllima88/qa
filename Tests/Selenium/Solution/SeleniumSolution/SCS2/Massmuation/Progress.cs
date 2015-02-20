@@ -45,7 +45,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static bool HasFinished()
         {
-            return string.Equals(Total, Done);
+            return Todo.Equals("0");
         }
     }
 }
