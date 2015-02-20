@@ -27,11 +27,6 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get { return WebDriver.FindElement(By.Id("BatchTodo")).GetAttribute("aria-valuenow"); }
         }
 
-        public static string Total
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_All")).Text; }
-        }
-
         public static ButtonElement RefreshButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("refresh")).Button(); }
