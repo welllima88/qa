@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -21,14 +22,9 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_BatchType")).Text; }
         }
 
-        public static string Done
+        public static string Todo
         {
-            get { return WebDriver.FindElement(By.Id("BatchProgress")).GetAttribute("jobs_done"); }
-        }
-
-        public static string Total
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_All")).Text; }
+            get { return WebDriver.FindElement(By.Id("BatchTodo")).GetAttribute("aria-valuenow"); }
         }
 
         public static ButtonElement RefreshButton
@@ -36,20 +32,20 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get { return WebDriver.FindAdaptedElement(By.Id("refresh")).Button(); }
         }
 
-        public static List<string> TerminalList
+        public static IEnumerable<string> TerminalList
         {
             get
             {
                 return
-                    WebDriver.WebElementsAsStringList(
-                        WebDriver.FindAdaptedElements(
-                            By.CssSelector("div#TerminalList div p a[href*='/TerminalDashboard?TerminalId=']")));
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("div#TerminalList div p a[href*='/TerminalDashboard?TerminalId=']"))
+                        .Select(e => e.Text);
             }
         }
 
         public static bool HasFinished()
         {
-            return string.Equals(Total, Done);
+            return Todo.Equals("0");
         }
     }
 }
