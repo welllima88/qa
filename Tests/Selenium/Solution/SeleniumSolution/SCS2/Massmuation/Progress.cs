@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
             get { return WebDriver.FindAdaptedElement(By.Id("Massmutation_BatchType")).Text; }
         }
 
-        public static string Done
+        public static string Todo
         {
             get { return WebDriver.FindElement(By.Id("BatchTodo")).GetAttribute("aria-valuenow"); }
         }
