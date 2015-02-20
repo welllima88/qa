@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.Massmuation
 
         public static string Done
         {
-            get { return WebDriver.FindElement(By.Id("BatchProgress")).GetAttribute("jobs_done"); }
+            get { return WebDriver.FindElement(By.Id("BatchTodo")).GetAttribute("aria-valuenow"); }
         }
 
         public static string Total
