@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("div#applicationBar div.app-name span#ctl00_AppInfo_lblApplicationName"));
+                        By.CssSelector("div#applicationBar div.app-name span"));
             }
         }
 
