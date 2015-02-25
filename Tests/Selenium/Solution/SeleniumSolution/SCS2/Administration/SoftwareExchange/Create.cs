@@ -140,7 +140,7 @@ namespace Six.Scs.QA.Selenium.Administration.SoftwareExchange
 
         public static IWebElementAdapter StartDateTime
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#StartDateTime")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#startDateTime")); }
             set { throw new NotImplementedException(); }
         }
 
