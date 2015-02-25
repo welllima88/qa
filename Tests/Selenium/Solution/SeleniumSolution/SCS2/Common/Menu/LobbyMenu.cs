@@ -21,37 +21,37 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter SerialNumberManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/SerialNumberManagement/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/SerialNumberManagement/']")); }
         }
 
         public static IWebElementAdapter AccessoireOrders
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoriesOrder/List/']")); }
         }
 
         public static IWebElementAdapter HardwareManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/HWManagement']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/HWManagement']")); }
         }
 
         public static IWebElementAdapter AcccessoiresOrders
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/AccessoriesOrder/List/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoriesOrder/List/']")); }
         }
 
         public static IWebElementAdapter MyIncidents
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TroubleTicket/Incident/Supporter']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Supporter']")); }
         }
 
         public static IWebElementAdapter MyTeams
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TroubleTicket/Incident/Teams']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Teams']")); }
         }
 
         public static IWebElementAdapter TerminalReturnShipping
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TerminalReturnShipping/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TerminalReturnShipping/']")); }
         }
 
         public static void Expand(string menuName)

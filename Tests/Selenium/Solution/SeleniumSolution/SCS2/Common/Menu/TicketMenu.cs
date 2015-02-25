@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/InstallationTicket/InstallationTicket']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/InstallationTicket/InstallationTicket']"));
             }
         }
     }
