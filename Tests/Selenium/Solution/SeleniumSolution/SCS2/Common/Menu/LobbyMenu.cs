@@ -1,3 +1,4 @@
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -51,6 +52,18 @@ namespace Six.Scs.QA.Selenium.Common.Menu
         public static IWebElementAdapter TerminalReturnShipping
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/TerminalReturnShipping/']")); }
+        }
+
+        public static void Expand(string menuName)
+        {
+            // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
+            IWebElement massMenu =
+                WebDriver.FindElements(
+                    By.CssSelector(
+                        "tbody tr#rowContent td#leftHandMenu span#ctl00_trvNavigation a.level2:not(.open) td"))
+                    .FirstOrDefault(e => e.Text.Contains(menuName));
+
+            if (massMenu != null) massMenu.Click();
         }
     }
 }

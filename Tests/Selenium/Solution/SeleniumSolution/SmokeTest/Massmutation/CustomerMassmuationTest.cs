@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         public static void ClassInit()
         {
             TestDirector.Navigate();
-            MassMutationMenu.Expand(true);
+            LobbyMenu.Expand("Massenmutation");
             MassMutationMenu.CustomerCreate.Click();
         }
 
