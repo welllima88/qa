@@ -1,3 +1,4 @@
+using System.Linq;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -7,7 +8,11 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IWebElementAdapter LogOff
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href*='/Logout.aspx']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href*='/Logout.aspx']"));
+            }
         }
 
         public static IWebElementAdapter User
@@ -40,7 +45,9 @@ namespace Six.Scs.QA.Selenium.Common
 
         public static IWebElementAdapter LanguageItem(string language)
         {
-            return WebDriver.FindAdaptedElement(By.XPath("//div[@class='popup']/a[text()='" + language + "']"));
+            return
+                WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a"))
+                    .FirstOrDefault(e => e.Text.Contains(language));
         }
     }
 }
