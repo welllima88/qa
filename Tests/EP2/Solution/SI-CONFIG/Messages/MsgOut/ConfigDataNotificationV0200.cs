@@ -1,0 +1,25 @@
+using System.Collections.Generic;
+using SIX.EP2.Core.ContentHandling;
+using SIX.EP2.Core.ContentHandling.Serialization;
+using SIX.SCS.EP2.SIConfig.Host.Messages.Containers;
+
+namespace SIX.SCS.EP2.SIConfig.Host.Messages.MsgOut
+{
+	[Ep2Message(Ep2MessageNames.ConfigDataNotification)]
+	public class ConfigDataNotificationV0200 : ConfigDataNotificationBase
+	{
+		public ConfigDataNotificationV0200()
+		{
+			tcd = new TcdV0200();
+		}
+
+		[Ep2DataElement(TagName = "tcd")]
+		public TcdV0200 tcd { get; set; }
+
+		public override void Accept(IConfigNotificationVisitor visitor)
+		{
+			visitor.Visit(this);
+			
+		}
+	}
+}
