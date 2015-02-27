@@ -65,7 +65,6 @@ namespace Six.Scs.QA.Testlogic
             Assert.That(Progress.Failed, Is.EqualTo("0"));
 
             // MassmutationProgress.DateTime;
-            Assert.AreEqual("CreateTerminals", Progress.Type);
             Assert.AreEqual(terminalDuplicate.NumberOfTerminals, Progress.TerminalList.Count().ToString());
             /*
             Assert.AreEqual(_terminalIdLocation, TerminalInfo.TerminalId);
