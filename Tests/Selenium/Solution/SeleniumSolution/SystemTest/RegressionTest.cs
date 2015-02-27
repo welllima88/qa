@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.TestData.ValueObjects;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
@@ -26,6 +27,12 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static SimCard _sim;
         private static TestData.ValueObjects.Location _location2;
         private static TroubleTicket _troubleTicket;
+
+        [TestFixtureSetUp]
+        public void Home()
+        {
+            TestDirector.Navigate();
+        }
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
