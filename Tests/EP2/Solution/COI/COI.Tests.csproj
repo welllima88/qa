@@ -51,14 +51,14 @@
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="SIX.EP2.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c0e3d03bc16c7ed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Client.1.2.2.5\lib\net40\SIX.EP2.Client.dll</HintPath>
+      <HintPath>..\packages\SIX.EP2.Client.1.2.2.5\lib\net40\SIX.EP2.Client.dll</HintPath>
     </Reference>
     <Reference Include="SIX.EP2.Core">
-      <HintPath>..\..\..\Selenium\Solution\SeleniumSolution\packages\SIX.EP2.Core.1.2.2.5\lib\net40\SIX.EP2.Core.dll</HintPath>
+      <HintPath>..\packages\SIX.EP2.Core.1.2.2.5\lib\net40\SIX.EP2.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
