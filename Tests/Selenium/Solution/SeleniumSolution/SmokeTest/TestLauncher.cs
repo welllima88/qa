@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
+using Six.QA.Selenium.Extension.Environment;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Environments;
-using Six.Scs.QA.Selenium.Extension.Environment;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest
 {

@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Extension.Authentication.Webpages
+﻿namespace Six.QA.Selenium.Extension.Authentication.Webpages
 {
     public interface IUacLogOnPage
     {

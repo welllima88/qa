@@ -2,7 +2,7 @@
 using System.Linq;
 using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.QA.Selenium.Extension.WebDriver.WebElements
 {
     public class SelectElement
     {

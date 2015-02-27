@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Administration.SimCard;
 using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
 {

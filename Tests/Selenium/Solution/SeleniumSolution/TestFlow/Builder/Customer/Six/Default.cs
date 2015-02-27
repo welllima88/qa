@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
+using Six.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.Selenium.Extension;
 using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
