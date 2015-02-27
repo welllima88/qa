@@ -1,28 +1,12 @@
-using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Saferpay.QA.Selenium.Common
 {
-    public class NavigationBar : WebObject
+    public class NavigationBar
     {
-        public static IWebElementAdapter MySaferpay
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("li#topic_home"));
-            }
-        }
+        [FindsBy(How = How.CssSelector, Using = "li#topic_home a")] public static IWebElementAdapter MySaferpay;
 
-        public static IWebElementAdapter OnlineSupport
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("li#topic_support"));
-            }
-        }
+        [FindsBy(How = How.CssSelector, Using = "li#topic_support a")] public static IWebElementAdapter OnlineSupport;
     }
 }
