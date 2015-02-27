@@ -1,7 +1,7 @@
 using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.TestData.ValueObjects;
 

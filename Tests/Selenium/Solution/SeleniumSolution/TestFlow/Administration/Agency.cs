@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Administration.Agency;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Testlogic.Administration
 {

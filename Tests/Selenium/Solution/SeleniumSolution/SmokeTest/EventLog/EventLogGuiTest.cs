@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Terminal.EventLog;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.EventLog
