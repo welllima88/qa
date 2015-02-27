@@ -29,7 +29,7 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 _packages/*
 !_packages/repositories.config
-
+packages/
 gittfs/*
 **/SmokeTest/TestLauncher.cs
 **/SystemTest/TestLauncher.cs
