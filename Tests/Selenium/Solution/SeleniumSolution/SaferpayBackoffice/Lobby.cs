@@ -11,7 +11,7 @@ namespace Six.Saferpay.QA.Selenium
     {
         public static IWebElementAdapter CompanyLogo
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("html>body>img.companyLogo")); }
+            get { return WebDriver.FindAdaptedElement(By.Id("html>body>img.companyLogo")); }
         }
 
         public static IWebElementAdapter Headline
