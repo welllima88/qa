@@ -42,7 +42,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflow", "Workflow\Workfl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testlogic.csproj", "{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoiTests", "..\..\..\EP2\Solution\COI\CoiTests.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoiTests", "..\..\..\EP2\Solution\COI\COI.Tests.csproj", "{C828CF02-3114-4E87-A42C-A6B157D361C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
