@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Terminal
 
         public static string Contactless
         {
-            set { WebDriver.FindAdaptedElement(By.Id("ContactlessId")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("ContactlessInd")).Selector().SelectByText(value); }
         }
 
         public static string InstallationRemark
