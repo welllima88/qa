@@ -1,4 +1,4 @@
-using System.Linq;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -43,11 +43,9 @@ namespace Six.Scs.QA.Selenium.Common
             }
         }
 
-        public static IWebElementAdapter LanguageItem(string language)
+        public static IEnumerable<IWebElementAdapter> LanguageItems
         {
-            return
-                WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a"))
-                    .FirstOrDefault(e => e.Text.Contains(language));
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a")); }
         }
     }
 }

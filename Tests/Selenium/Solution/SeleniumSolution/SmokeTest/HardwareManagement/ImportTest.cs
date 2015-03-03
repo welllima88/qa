@@ -39,14 +39,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
         [Category("Hardware")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", Hardware.SerialNumberImport.FileUploadButton.Text);
+            Assert.AreEqual("Importieren", Hardware.SerialNumberImport.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Hardware")]
         public void Title()
         {
-            Assert.AreEqual("Importieren von Seriennummern für Hardware-Verwaltung", Hardware.SerialNumberImport.Title);
+            Assert.AreEqual("Seriennummern importieren", Hardware.SerialNumberImport.Title);
         }
     }
 }

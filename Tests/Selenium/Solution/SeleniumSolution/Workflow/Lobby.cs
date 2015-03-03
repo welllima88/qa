@@ -1,4 +1,5 @@
-﻿using Six.Scs.QA.Selenium.Common;
+﻿using System.Linq;
+using Six.Scs.QA.Selenium.Common;
 
 namespace Six.Scs.QA.Workflow
 {
@@ -7,7 +8,7 @@ namespace Six.Scs.QA.Workflow
         public static void ChooseLanguage(string language)
         {
             MetaNavBar.Languages.Click();
-            MetaNavBar.LanguageItem(language).Click();
+            MetaNavBar.LanguageItems.FirstOrDefault(e => e.Text.Contains(language));
         }
 
         public static void OpenLatestElement()
