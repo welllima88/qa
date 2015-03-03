@@ -19,8 +19,8 @@ namespace Six.Scs.QA.Selenium.Administration.SerialNumberManage
 
         public static string LengthField
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextField().Text(); }
-            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Len")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Length")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.CssSelector("input#Length")).TextField().TypeText(value); }
         }
 
         public static string SerialNumbersField
@@ -37,7 +37,7 @@ namespace Six.Scs.QA.Selenium.Administration.SerialNumberManage
 
         public static ButtonElement ImportButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#import")).Button(); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#import")).Button(); }
         }
 
         public static string Preview
