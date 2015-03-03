@@ -17,12 +17,12 @@ namespace Six.Scs.QA.Selenium.Hardware
 
         public static string Description
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content div>div>p")).Text; }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content form>p")).Text; }
         }
 
         public static IWebElementAdapter FileChooser
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div span input[type='file']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content input[type='file']")); }
         }
 
         public static IWebElementAdapter FileUploadButton
