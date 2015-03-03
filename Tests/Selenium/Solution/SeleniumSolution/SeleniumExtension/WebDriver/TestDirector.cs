@@ -17,6 +17,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
         /// </summary>
         public static void Start()
         {
+            WebDriver.Manage().Window.Maximize();
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();
