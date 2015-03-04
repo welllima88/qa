@@ -63,6 +63,8 @@ namespace Six.Scs.QA.Workflow
             Selenium.Terminal.Replace.SendNotifiaction = replace.SendNotifiaction;
 
             Selenium.Terminal.Replace.SaveButton.Click();
+            
+            Selenium.Terminal.Replace.SaveButton.Click(); // TODO: ContactlessCapabilities save without any changes
         }
 
         public static void SoftwareChange()
