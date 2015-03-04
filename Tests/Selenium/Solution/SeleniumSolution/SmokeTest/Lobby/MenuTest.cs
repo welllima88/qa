@@ -20,63 +20,62 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void AcccessoiresOrders()
         {
-            Assert.IsTrue(LobbyMenu.AcccessoiresOrders.Displayed);
-        }
-
-        [Test]
-        [Category("LobbyCheck")]
-        public void AccessoireOrders()
-        {
-            Assert.IsTrue(LobbyMenu.AccessoireOrders.Displayed);
+            Assert.That(LobbyMenu.AcccessoiresOrders.Displayed);
+            Assert.That(LobbyMenu.AcccessoiresOrders.Text, Contains.Substring("Kleinmaterial Bestellungen"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void CustomerCreate()
         {
-            Assert.IsTrue(CustomerMenu.CustomerCreate.Displayed);
+            Assert.That(CustomerMenu.CustomerCreate.Displayed);
+            Assert.That(CustomerMenu.CustomerCreate.Text, Contains.Substring("Neuer Kunde"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void HardwareManagement()
         {
-            Assert.IsTrue(LobbyMenu.HardwareManage.Displayed);
+            Assert.That(LobbyMenu.HardwareManage.Displayed);
+            Assert.That(LobbyMenu.HardwareManage.Text, Contains.Substring("Hardware-Verwaltung"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void InstallationsTickets()
         {
-            Assert.IsTrue(TicketMenu.Installations.Displayed);
+            Assert.That(TicketMenu.Installations.Displayed);
+            Assert.That(TicketMenu.Installations.Text, Contains.Substring("Installation / Wartung"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void Lobby()
         {
-            Assert.IsTrue(LobbyMenu.Lobby.Displayed);
+            Assert.That(LobbyMenu.Lobby.Displayed);
+            Assert.That(LobbyMenu.Lobby.Text, Contains.Substring("Lobby"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MassMutation()
         {
-            Assert.IsTrue(MassMutationMenu.MassMutation.Displayed);
+            Assert.That(MassMutationMenu.MassMutation.Displayed);
+            Assert.That(MassMutationMenu.MassMutation.Text, Contains.Substring("Massenmutation"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MassMutationAcquirerChange()
         {
-            Assert.IsTrue(MassMutationMenu.AcquirerChange.Enabled);
+            Assert.That(MassMutationMenu.AcquirerChange.Enabled);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MassMutationContractCreate()
         {
-            Assert.IsTrue(MassMutationMenu.ContractCreate.Enabled);
+            Assert.That(MassMutationMenu.ContractCreate.Enabled);
         }
 
         [Test]
@@ -90,7 +89,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void MassMutationLocationCreate()
         {
-            Assert.IsTrue(MassMutationMenu.LocationCreate.Enabled);
+            Assert.That(MassMutationMenu.LocationCreate.Enabled);
         }
 
         [Test]
@@ -118,21 +117,24 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void SerialNumberManagement()
         {
-            Assert.IsTrue(LobbyMenu.SerialNumberManage.Displayed);
+            Assert.That(LobbyMenu.SerialNumberManage.Displayed);
+            Assert.That(LobbyMenu.SerialNumberManage.Text, Contains.Substring("Seriennummerverwaltung"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void SimCardManagement()
         {
-            Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+            Assert.That(LobbyMenu.SimCardManage.Displayed);
+            Assert.That(LobbyMenu.SimCardManage.Text, Contains.Substring("SIM-Kartenverwaltung"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void TerminalReturnShipping()
         {
-            Assert.IsTrue(LobbyMenu.TerminalReturnShipping.Displayed);
+            Assert.That(LobbyMenu.TerminalReturnShipping.Displayed);
+            Assert.That(LobbyMenu.TerminalReturnShipping.Text, Contains.Substring("Terminal Rücknahmen"));
         }
     }
 }
