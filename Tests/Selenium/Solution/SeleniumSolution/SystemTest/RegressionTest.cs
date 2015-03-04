@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.TestData.ValueObjects;
@@ -22,7 +23,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         private static TestData.ValueObjects.Person _personOnCustomer;
         private static TestData.ValueObjects.Person _personOnLocation;
         private static TestData.ValueObjects.User _user;
-        private static List<TestData.ValueObjects.Terminal> _duplicatedTerminals;
+        private static IEnumerable<TestData.ValueObjects.Terminal> _duplicatedTerminals;
         private static TestData.ValueObjects.Mpd _mpd;
         private static SimCard _sim;
         private static TestData.ValueObjects.Location _location2;
@@ -83,21 +84,21 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.User.AddService(_user);
             // Testlogic.User.AssignRoles(_user);
 
-            Brands.Create(_duplicatedTerminals[1], new Additional()); // {0,1,..} means create brands on second terminal
+            Brands.Create(_duplicatedTerminals.ElementAt(1), new Additional()); // {0,1,..} means create brands on second terminal
             // check again already existing contracts:
             contracts.Check();
 
             Testlogic.Terminal.Replace(_terminalLocation);
 
-            _troubleTicket = Testlogic.Tickets.TroubleTicket.Create(_duplicatedTerminals[1]);
+            _troubleTicket = Testlogic.Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             Testlogic.Tickets.TroubleTicket.Edit(_troubleTicket);
 
-            Testlogic.Terminal.Retour(_duplicatedTerminals[1]);
+            Testlogic.Terminal.Retour(_duplicatedTerminals.ElementAt(1));
 
             _sim = Testlogic.SimCard.Create();
 
             _sim = Testlogic.SimCard.Edit(_sim);
-            _sim = Testlogic.SimCard.Link(_sim, _duplicatedTerminals[0]);
+            _sim = Testlogic.SimCard.Link(_sim, _duplicatedTerminals.ElementAt(0));
 
             Testlogic.SimCard.Lock(_sim);
             Testlogic.SimCard.Unlink(_sim);
