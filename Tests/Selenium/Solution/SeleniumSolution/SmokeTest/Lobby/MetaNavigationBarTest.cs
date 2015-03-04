@@ -52,7 +52,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void LogOff()
         {
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Text, Is.EqualTo("Abmelden"));
         }
 
         [Test]

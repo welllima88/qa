@@ -118,7 +118,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public void SerialNumberManagement()
         {
             Assert.That(LobbyMenu.SerialNumberManage.Displayed);
-            Assert.That(LobbyMenu.SerialNumberManage.Text, Contains.Substring("Seriennummerverwaltung"));
+            Assert.That(LobbyMenu.SerialNumberManage.Text, Contains.Substring("Seriennummernverwaltung"));
         }
 
         [Test]
