@@ -44,7 +44,7 @@ namespace Six.Scs.QA.Testlogic
             return terminalBuilder.Terminal;
         }
 
-        public static List<TestData.ValueObjects.Terminal> Duplicate(TestData.ValueObjects.Terminal terminal)
+        public static IEnumerable<TestData.ValueObjects.Terminal> Duplicate(TestData.ValueObjects.Terminal terminal)
         {
             Open(terminal);
             TerminalDuplicate terminalDuplicate = TestData.Factory.TerminalDuplicate.Create();
@@ -79,7 +79,7 @@ namespace Six.Scs.QA.Testlogic
             return CreateTerminalObjectsFromIds(Progress.TerminalList);
         }
 
-        private static List<TestData.ValueObjects.Terminal> CreateTerminalObjectsFromIds(IEnumerable<string> terminalList)
+        private static IEnumerable<TestData.ValueObjects.Terminal> CreateTerminalObjectsFromIds(IEnumerable<string> terminalList)
         {
             var terminalObjects = new List<TestData.ValueObjects.Terminal>(terminalList.Count());
             terminalObjects.AddRange(

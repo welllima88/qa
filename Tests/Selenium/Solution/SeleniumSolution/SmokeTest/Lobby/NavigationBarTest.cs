@@ -20,28 +20,32 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void Administration()
         {
-            Assert.IsTrue(NavigationBar.Administration.Displayed);
+            Assert.That(NavigationBar.Administration.Displayed);
+            Assert.That(NavigationBar.Administration.Text, Is.EqualTo("Verwaltung"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void Help()
         {
-            Assert.IsTrue(NavigationBar.Help.Displayed);
+            Assert.That(NavigationBar.Help.Displayed);
+            Assert.That(NavigationBar.Help.Text, Is.EqualTo("Hilfe"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void Lobby()
         {
-            Assert.IsTrue(NavigationBar.Lobby.Displayed);
+            Assert.That(NavigationBar.Lobby.Displayed);
+            Assert.That(NavigationBar.Lobby.Text, Contains.Substring("Lobby"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void Reporting()
         {
-            Assert.IsTrue(NavigationBar.Reporting.Displayed);
+            Assert.That(NavigationBar.Reporting.Displayed);
+            Assert.That(NavigationBar.Reporting.Text, Is.EqualTo("Reporting"));
         }
     }
 }
