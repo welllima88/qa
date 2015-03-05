@@ -10,14 +10,14 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
     [TestFixture]
     public class GiccTest
     {
+        private static TestData.ValueObjects.Terminal _saferpayTerminal;
+        private static CustomerBuilder _saferpay;
+
         [SetUp]
         public static void TestInit()
         {
             TestDirector.Navigate();
         }
-
-        private static TestData.ValueObjects.Terminal _saferpayTerminal;
-        private static CustomerBuilder _saferpay;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
