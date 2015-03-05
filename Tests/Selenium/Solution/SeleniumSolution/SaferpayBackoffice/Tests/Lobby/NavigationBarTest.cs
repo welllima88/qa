@@ -14,10 +14,10 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
         private NavigationBar navigationBar;
 
         [TestFixtureSetUp]
-        public static void ClassInit()
+        public void ClassInit()
         {
             TestDirector.Navigate();
-            var navigationBar = new NavigationBar();
+            navigationBar = new NavigationBar();
             PageFactory.InitElements(TestDirector.WebDriver, navigationBar);
         }
 
