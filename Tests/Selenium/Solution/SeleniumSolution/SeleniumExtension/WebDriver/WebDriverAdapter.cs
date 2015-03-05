@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Extension.WebDriver
+namespace Six.QA.Selenium.Extension.WebDriver
 {
     /// <summary>
     ///     This WebDriver adapter adds one method to make use of adapted web elements

@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Extension.Environment
+﻿namespace Six.QA.Selenium.Extension.Environment
 {
     public static class Grid
     {

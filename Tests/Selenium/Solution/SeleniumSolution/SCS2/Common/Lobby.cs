@@ -1,8 +1,8 @@
 using System;
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.Authentication;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.Authentication;
+using Six.QA.Selenium.Extension.WebDriver;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Common
 {

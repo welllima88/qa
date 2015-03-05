@@ -1,5 +1,5 @@
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 {
@@ -35,7 +35,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.canceledTerminal"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.bg-danger"));
             }
         }
     }

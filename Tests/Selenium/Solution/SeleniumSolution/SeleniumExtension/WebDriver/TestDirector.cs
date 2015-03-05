@@ -1,10 +1,10 @@
 using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using Six.Scs.QA.Selenium.Extension.Environment;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.Environment;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.Extension.WebDriver
+namespace Six.QA.Selenium.Extension.WebDriver
 {
     public static class TestDirector
     {
@@ -17,6 +17,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver
         /// </summary>
         public static void Start()
         {
+            WebDriver.Manage().Window.Maximize();
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();

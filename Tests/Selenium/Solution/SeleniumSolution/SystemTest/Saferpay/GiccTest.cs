@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Testlogic.Builder.Brand.Gicc;
 using Six.Scs.QA.Testlogic.Builder.Customer.Nsp;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;

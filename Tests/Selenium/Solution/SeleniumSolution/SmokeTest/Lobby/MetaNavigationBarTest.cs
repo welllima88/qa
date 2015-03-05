@@ -1,6 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 {
@@ -14,6 +15,9 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         public static void ClassInit()
         {
             TestDirector.Navigate();
+
+            MetaNavBar.Languages.Click();
+            MetaNavBar.Languages.Click();
         }
 
         [Test]
@@ -27,18 +31,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void LanguageEnglish()
         {
-            MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.LanguageItem("English").Enabled);
-            MetaNavBar.Languages.Click();
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("English"));            
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void LanguageGerman()
         {
-            MetaNavBar.Languages.Click();
-            Assert.IsTrue(MetaNavBar.LanguageItem("Deutsch").Enabled);
-            MetaNavBar.Languages.Click();
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("Deutsch"));            
         }
 
         [Test]
@@ -52,7 +52,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void LogOff()
         {
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Text, Is.EqualTo("Abmelden"));
         }
 
         [Test]

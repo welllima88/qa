@@ -1,5 +1,5 @@
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Person
 {
@@ -107,7 +107,8 @@ namespace Six.Scs.QA.Selenium.Person
 
         public static void DeleteConfirm()
         {
-            WebDriver.SwitchTo().Alert().Accept();
+            // WebDriver.SwitchTo().Alert().Accept();
+            WebDriver.FindAdaptedElement(By.CssSelector("div.modal-content button[type='submit']")).Click();
         }
     }
 }

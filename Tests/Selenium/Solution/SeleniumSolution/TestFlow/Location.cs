@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Extension;
+using Six.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Location;
 
 namespace Six.Scs.QA.Testlogic

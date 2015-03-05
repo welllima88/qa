@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support
 {
@@ -16,7 +16,12 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support
 
         public static string Category
         {
-            set { WebDriver.FindAdaptedElement(By.Id("InputIncidentCategory")).TextField().TypeText(value); }
+            set
+            {
+                WebDriver.FindAdaptedElement(By.Id("InputIncidentCategory")).TextField().TypeText(value);
+                WebDriver.FindAdaptedElements(By.CssSelector("ul.ui-autocomplete>li.ui-menu-item>a"))
+                    .FirstOrDefault(e => e.Text.Contains(value)).Click();
+            }
         }
 
         public static IEnumerable<string> Solution

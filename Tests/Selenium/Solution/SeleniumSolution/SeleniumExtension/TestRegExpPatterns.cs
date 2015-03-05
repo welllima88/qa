@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Extension
+namespace Six.QA.Selenium.Extension
 {
     /// <summary>
     ///     add @ to double escape the patterns for regular expressions

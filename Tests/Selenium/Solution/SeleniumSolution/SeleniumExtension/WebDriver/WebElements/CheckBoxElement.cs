@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.QA.Selenium.Extension.WebDriver.WebElements
 {
     public class CheckBoxElement
     {
@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         }
 
         /// <summary>
-        ///     ensures and sets the the value for a checkbox if necessary
+        ///     ensures the de-/activation for a checkbox given to the value and clicks the element (only) if necessary
         /// </summary>
         /// <param name="userInput"></param>
         public void Set(bool userInput)
@@ -25,6 +25,10 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
             }
         }
 
+        /// <summary>
+        ///     Returns whether an (input) element is selected or not this
+        /// </summary>
+        /// <returns>true if the element is selected, else false</returns>
         public bool IsChecked()
         {
             return _webElement.Selected;

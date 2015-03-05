@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.QA.Selenium.Extension.WebDriver.WebElements
 {
     /// <summary>
     ///     This class wraps WebElements from selenium and adds features which are commonly needed.
@@ -16,7 +16,9 @@ namespace Six.Scs.QA.Selenium.Extension.WebDriver.WebElements
         {
             _theWebElement = webElement;
         }
-
+        /// <summary>
+        /// Gets the tag name of this element.
+        /// </summary>
         public string TagName
         {
             get { return _theWebElement.TagName; }

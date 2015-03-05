@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 {
@@ -20,14 +20,15 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Test]
         public void ApplicationName()
         {
-            Assert.IsTrue(ApplicationInfo.ApplicationName.Displayed);
+            Assert.That(ApplicationInfo.ApplicationName.Displayed);
+            Assert.That(ApplicationInfo.ApplicationName.Text, Is.EqualTo("SCS2"));
         }
 
         [Category("LobbyCheck")]
         [Test]
         public void Environment()
         {
-            Assert.IsTrue(ApplicationInfo.Environment.Displayed);
+            Assert.That(ApplicationInfo.Environment.Displayed);            
         }
 
         [Category("LobbyCheck")]
@@ -36,12 +37,12 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         {
             ApplicationInfo.Support.Click();
 
-            Assert.IsTrue(ApplicationInfo.SupportDialog.Displayed);
+            Assert.That(ApplicationInfo.SupportDialog.Displayed);
 
-            StringAssert.Contains("Support", ApplicationInfo.SupportDialog.Text);
-            StringAssert.Contains("SCS2", ApplicationInfo.SupportDialog.Text);
-            StringAssert.Contains("@six-group.com", ApplicationInfo.SupportDialog.Text);
-            StringAssert.Contains("+41 58 399", ApplicationInfo.SupportDialog.Text);
+            Assert.That(ApplicationInfo.SupportDialog.Text, Contains.Substring("Support"));
+            Assert.That(ApplicationInfo.SupportDialog.Text, Contains.Substring("SCS2"));
+            Assert.That(ApplicationInfo.SupportDialog.Text, Contains.Substring("@six-group.com"));
+            Assert.That(ApplicationInfo.SupportDialog.Text, Contains.Substring("+41 58 399"));
         }
     }
 }

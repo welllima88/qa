@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
+using Six.QA.Selenium.Extension.WebDriver;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
 using Six.Scs.QA.Selenium.Search;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer

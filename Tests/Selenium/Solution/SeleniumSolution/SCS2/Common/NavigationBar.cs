@@ -1,5 +1,5 @@
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Common
 {
@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/Lobby/']"));
+                        By.CssSelector("div#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/Lobby/']"));
             }
         }
 
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
+                        By.CssSelector("div#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AdminOverview']"));
             }
         }
 
@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
+                        By.CssSelector("div#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='AnalysisOverview']"));
             }
         }
 
@@ -41,7 +41,7 @@ namespace Six.Scs.QA.Selenium.Common
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/scs2/help']"));
+                        By.CssSelector("div#tabNavBar div#ctl00_pnlMainMenu div#menuItems a[href*='/scs2/help']"));
             }
         }
     }

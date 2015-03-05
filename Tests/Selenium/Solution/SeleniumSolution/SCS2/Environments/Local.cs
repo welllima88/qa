@@ -1,9 +1,9 @@
 using System;
+using Six.QA.Selenium.Extension.Authentication.Method;
+using Six.QA.Selenium.Extension.Authentication.Webpages;
+using Six.QA.Selenium.Extension.Environment;
+using Six.QA.Selenium.Extension.Properties;
 using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Extension.Authentication.Method;
-using Six.Scs.QA.Selenium.Extension.Authentication.Webpages;
-using Six.Scs.QA.Selenium.Extension.Environment;
-using Six.Scs.QA.Selenium.Extension.Properties;
 
 namespace Six.Scs.QA.Selenium.Environments
 {

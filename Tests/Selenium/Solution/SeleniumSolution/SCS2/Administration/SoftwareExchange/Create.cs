@@ -1,6 +1,6 @@
 using System;
 using OpenQA.Selenium;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Scs.QA.Selenium.Administration.SoftwareExchange
 {
@@ -140,7 +140,7 @@ namespace Six.Scs.QA.Selenium.Administration.SoftwareExchange
 
         public static IWebElementAdapter StartDateTime
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("#StartDateTime")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#startDateTime")); }
             set { throw new NotImplementedException(); }
         }
 

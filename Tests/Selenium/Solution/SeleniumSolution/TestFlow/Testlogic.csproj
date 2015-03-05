@@ -65,7 +65,6 @@
     <Compile Include="Builder\Terminal\Saferpay\SaferPayPos.cs" />
     <Compile Include="Builder\Customer\Nsp\SixNsp.cs" />
     <Compile Include="Builder\Customer\Six\Default.cs" />
-    <Compile Include="Lobby.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="Customer.cs" />
