@@ -1,5 +1,5 @@
 using OpenQA.Selenium.Support.PageObjects;
-using Six.Scs.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
 namespace Six.Saferpay.QA.Selenium.Payment
 {
@@ -16,6 +16,5 @@ namespace Six.Saferpay.QA.Selenium.Payment
         [FindsBy(How = How.Id, Using = "C-Description")] public static IWebElementAdapter Description;
         [FindsBy(How = How.Id, Using = "C-PayerNote")] public static IWebElementAdapter PayerNote;
         [FindsBy(How = How.CssSelector, Using = "button")] public static IWebElementAdapter Pay;
-
     }
 }
