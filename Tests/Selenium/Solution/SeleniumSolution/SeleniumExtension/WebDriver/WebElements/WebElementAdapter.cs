@@ -16,7 +16,9 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         {
             _theWebElement = webElement;
         }
-
+        /// <summary>
+        /// Gets the tag name of this element.
+        /// </summary>
         public string TagName
         {
             get { return _theWebElement.TagName; }

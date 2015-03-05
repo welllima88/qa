@@ -23,7 +23,7 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         }
 
         /// <summary>
-        ///     ensures and sets the the value for a checkbox if necessary
+        ///     Types in the given string into the textfield by first clearing it.
         /// </summary>
         /// <param name="userInput"></param>
         public void TypeText(string userInput)
@@ -32,11 +32,18 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
             _webElement.SendKeys(userInput);
         }
 
+        /// <summary>
+        ///     Reads the text from the text-field
+        /// </summary>
+        /// <returns>the string value from the text-field</returns>
         public string Text()
         {
             return _webElement.GetAttribute("value");
         }
 
+        /// <summary>
+        ///     clears the text-field (useful for deleting predefined texts)
+        /// </summary>
         public void Clear()
         {
             _webElement.Clear();
