@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.Authentication;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Saferpay.QA.Selenium.Common;
+using Six.Saferpay.QA.Selenium.Views.Common;
 
 namespace Six.Saferpay.QA.Selenium
 {

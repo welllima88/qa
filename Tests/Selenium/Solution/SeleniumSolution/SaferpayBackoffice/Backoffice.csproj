@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,10 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\MetaNavBar.cs" />
-    <Compile Include="Common\NavigationBar.cs" />
+    <Compile Include="Environment\Dev.cs" />
+    <Compile Include="Tests\Lobby\NavigationBarTest.cs" />
+    <Compile Include="Tests\TestLauncher.cs" />
+    <Compile Include="Views\Common\MetaNavBar.cs" />
+    <Compile Include="Views\Common\NavigationBar.cs" />
     <Compile Include="Lobby.cs" />
-    <Compile Include="Payment\Booking.cs" />
+    <Compile Include="Views\Payment\Booking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
