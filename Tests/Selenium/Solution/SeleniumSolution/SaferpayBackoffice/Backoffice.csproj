@@ -57,6 +57,7 @@
     <Compile Include="Views\Common\MetaNavBar.cs" />
     <Compile Include="Views\Common\NavigationBar.cs" />
     <Compile Include="Lobby.cs" />
+    <Compile Include="Views\Common\UacLogOnPage.cs" />
     <Compile Include="Views\Payment\Booking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
