@@ -5,10 +5,8 @@ using Six.Saferpay.QA.Selenium.Views.Common;
 
 namespace Six.Saferpay.QA.Selenium.Tests.Lobby
 {
-    /// <summary>
-    ///     be careful with menu expander because they prevent some actions and need special handling
-    /// </summary>
     [TestFixture]
+    [Category("Navigation")]
     public class NavigationBarTest
     {
         private NavigationBar navigationBar;
