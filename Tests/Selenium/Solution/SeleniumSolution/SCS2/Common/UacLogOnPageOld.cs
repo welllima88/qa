@@ -1,7 +1,8 @@
 ﻿using OpenQA.Selenium;
+using Six.QA.Selenium.Extension.Authentication.Webpages;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.Authentication.Webpages
+namespace Six.Scs.QA.Selenium.Common
 {
     public class UacLogOnPageOld : WebObject, IUacLogOnPage
     {
