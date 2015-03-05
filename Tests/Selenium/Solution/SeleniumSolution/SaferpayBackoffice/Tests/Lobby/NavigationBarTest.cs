@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Saferpay.QA.Selenium.Views.Common;
 
@@ -10,24 +11,28 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
     [TestFixture]
     public class NavigationBarTest
     {
+        private NavigationBar navigationBar;
+
         [TestFixtureSetUp]
         public static void ClassInit()
         {
             TestDirector.Navigate();
+            var navigationBar = new NavigationBar();
+            PageFactory.InitElements(TestDirector.WebDriver, navigationBar);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MySaferpay()
         {
-            Assert.That(NavigationBar.MySaferpay.Displayed);
+            Assert.That(navigationBar.MySaferpay.Displayed);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void OnlineSupport()
         {
-            Assert.That(NavigationBar.OnlineSupport.Displayed);
+            Assert.That(navigationBar.OnlineSupport.Displayed);
         }
     }
 }
