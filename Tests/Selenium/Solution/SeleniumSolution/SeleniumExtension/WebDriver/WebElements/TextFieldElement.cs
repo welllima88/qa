@@ -4,13 +4,19 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
 {
     public class TextFieldElement
     {
-        private readonly IWebElement _webElement;
+        protected IWebElement WebElement;
+        /// <summary>
+        /// provides the constructor for derived classes which need to skip the check of the base clase and use its own init
+        /// </summary>
+        protected TextFieldElement()
+        {
+        }
 
         public TextFieldElement(IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
                 throw new NotTextBoxElementException(webElement.TagName, webElement.GetAttribute("type"));
-            _webElement = webElement;
+            WebElement = webElement;
         }
 
         /// <summary>
@@ -28,8 +34,8 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         /// <param name="userInput"></param>
         public void TypeText(string userInput)
         {
-            _webElement.Clear();
-            _webElement.SendKeys(userInput);
+            WebElement.Clear();
+            WebElement.SendKeys(userInput);
         }
 
         /// <summary>
@@ -38,7 +44,7 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         /// <returns>the string value from the text-field</returns>
         public string Text()
         {
-            return _webElement.GetAttribute("value");
+            return WebElement.GetAttribute("value");
         }
 
         /// <summary>
@@ -46,7 +52,7 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         /// </summary>
         public void Clear()
         {
-            _webElement.Clear();
+            WebElement.Clear();
         }
     }
 }
