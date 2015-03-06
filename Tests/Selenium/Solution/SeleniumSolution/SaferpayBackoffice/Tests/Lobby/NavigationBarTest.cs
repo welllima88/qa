@@ -9,28 +9,28 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
     [Category("Navigation")]
     public class NavigationBarTest
     {
-        private NavigationBar navigationBar;
+        private NavigationBar _navigationBar;
 
         [TestFixtureSetUp]
         public void ClassInit()
         {
             TestDirector.Navigate();
-            navigationBar = new NavigationBar();
-            PageFactory.InitElements(TestDirector.WebDriver, navigationBar);
+            _navigationBar = new NavigationBar();
+            PageFactory.InitElements(TestDirector.WebDriver, _navigationBar);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MySaferpay()
         {
-            Assert.That(navigationBar.MySaferpay.Displayed);
+            Assert.That(_navigationBar.MySaferpay.Displayed);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void OnlineSupport()
         {
-            Assert.That(navigationBar.OnlineSupport.Displayed);
+            Assert.That(_navigationBar.OnlineSupport.Displayed);
         }
     }
 }
