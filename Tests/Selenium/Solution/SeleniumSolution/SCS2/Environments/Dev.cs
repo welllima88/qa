@@ -1,7 +1,6 @@
 ﻿using System;
 using Six.QA.Selenium.Extension.Authentication.Method;
 using Six.QA.Selenium.Extension.Environment;
-using Six.QA.Selenium.Extension.Properties;
 using Six.Scs.QA.Selenium.Common;
 
 namespace Six.Scs.QA.Selenium.Environments
@@ -10,11 +9,10 @@ namespace Six.Scs.QA.Selenium.Environments
     {
         public Dev()
         {
-            BaseUrl = new Uri(ScsRes.UAC_DEV);
-            BrowserProfileName = ScsRes.FirefoxProfile_Plain;
+            BaseUrl = new Uri("https://mdzhwcweb01/scs2/");
+
             Application = new Lobby();
-            Authentication = new UacAuthentication(new UacLogOnPage(), ScsRes.uac_username,
-                ScsRes.uac_passwort);
+            Authentication = new UacAuthentication(new UacLogOnPage(), "six_scs_auto", "six_scs_auto_PW");
             SeleniumConfig = new SeleniumConfig
             {
                 Timeouts = new Timeouts {ImplicitlyWait = 10, SetScriptTimeout = 30, SetPageLoadTimeout = 60}
