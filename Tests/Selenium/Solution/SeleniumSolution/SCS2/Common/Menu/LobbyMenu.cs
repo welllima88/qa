@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter AcccessoiresOrders
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoriesOrder/List/']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoireShop/AccessoireOrder/List/']")); }
         }
 
         public static IWebElementAdapter MyIncidents

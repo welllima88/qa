@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
-    <Compile Include="Authentication\Webpages\UacLogOnPageOld.cs" />
     <Compile Include="Environment\Grid.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
@@ -84,7 +83,6 @@
     <Compile Include="Authentication\Method\NoAuthentication.cs" />
     <Compile Include="Authentication\Method\SecurIdAuthentication.cs" />
     <Compile Include="Authentication\Method\UacAuthentication.cs" />
-    <Compile Include="Authentication\Webpages\UacLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\WesCertificateLogOnPage.cs" />
     <Compile Include="Authentication\Webpages\WesSecurIdLogOnPage.cs" />
     <Compile Include="WebDriver\WebElements\NotCheckableElementException.cs" />

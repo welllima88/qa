@@ -1,6 +1,5 @@
 ﻿using System;
 using Six.QA.Selenium.Extension.Authentication.Method;
-using Six.QA.Selenium.Extension.Authentication.Webpages;
 using Six.QA.Selenium.Extension.Environment;
 using Six.QA.Selenium.Extension.Properties;
 using Six.Scs.QA.Selenium.Common;

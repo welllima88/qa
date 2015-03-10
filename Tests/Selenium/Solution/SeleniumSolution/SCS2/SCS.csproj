@@ -109,6 +109,8 @@
     <Compile Include="Common\RecentElements.cs" />
     <Compile Include="Common\RecentMassmutations.cs" />
     <Compile Include="Common\SiteContent.cs" />
+    <Compile Include="Common\UacLogOnPage.cs" />
+    <Compile Include="Common\UacLogOnPageOld.cs" />
     <Compile Include="Customer\Create.cs" />
     <Compile Include="Customer\Deactivate.cs" />
     <Compile Include="Customer\Edit.cs" />

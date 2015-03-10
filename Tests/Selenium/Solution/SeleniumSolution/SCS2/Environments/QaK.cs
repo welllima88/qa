@@ -10,10 +10,10 @@ namespace Six.Scs.QA.Selenium.Environments
     {
         public QaK()
         {
-            BaseUrl = new Uri(ScsRes.WES_QA_K);
+            BaseUrl = new Uri("https://gateint.telekurs.ch/scs2s-qa-k/");
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Lobby();
-            Authentication = new CertificateAuthentication(ScsRes.mandant_qa_K);
+            Authentication = new SecurIdAuthentication("tksyr",@"password","tkcposk","securId+passcode");
             SeleniumConfig = new SeleniumConfig
             {
                 Timeouts = new Timeouts {ImplicitlyWait = 3, SetScriptTimeout = 30, SetPageLoadTimeout = 60}

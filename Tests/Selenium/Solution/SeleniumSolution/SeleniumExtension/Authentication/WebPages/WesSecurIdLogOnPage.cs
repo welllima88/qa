@@ -60,7 +60,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Webpages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswd']"))
-                    .TextField()
+                    .PasswordTextField()
                     .TypeText(value);
             }
         }
@@ -78,7 +78,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Webpages
             set
             {
                 WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] input[name='isiwebpasswdInput']"))
-                    .TextField()
+                    .PasswordTextField()
                     .TypeText(value);
             }
         }

@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflow", "Workflow\Workfl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testlogic.csproj", "{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backoffice", "SaferpayBackoffice\Backoffice.csproj", "{724744A8-0BAA-437E-8CE2-3160CBDD9F44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +96,6 @@ Global
 		{2F418EF9-C1C1-4E32-8954-5EA1B5257F20} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{6D99C089-ECA8-42DA-B74B-EAF28E457D83} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 		{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
+		{724744A8-0BAA-437E-8CE2-3160CBDD9F44} = {97FDFEA0-5A98-43AD-909F-244631AE6C4A}
 	EndGlobalSection
 EndGlobal

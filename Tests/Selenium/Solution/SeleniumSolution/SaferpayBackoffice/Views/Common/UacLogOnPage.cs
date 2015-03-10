@@ -1,7 +1,8 @@
 ﻿using OpenQA.Selenium;
+using Six.QA.Selenium.Extension.Authentication.Webpages;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.Authentication.Webpages
+namespace Six.Saferpay.QA.Selenium.Views.Common
 {
     public class UacLogOnPage : WebObject, IUacLogOnPage
     {
@@ -9,7 +10,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Webpages
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername"))
+                WebDriver.FindAdaptedElement(By.Id("Username"))
                     .TextField()
                     .TypeText(value);
             }
@@ -20,7 +21,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Webpages
             set
             {
                 // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
-                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxPassword"))
+                WebDriver.FindAdaptedElement(By.Id("Password"))
                     .PasswordTextField()
                     .TypeText(value);
             }
@@ -28,7 +29,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Webpages
 
         public void Login()
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnLogin")).Click();
+            WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Click();
         }
     }
 }
