@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Environments
     {
         public Prod()
         {
-            BaseUrl = new Uri(ScsRes.WES_Production);
+            BaseUrl = new Uri("https://gate.telekurs.ch/scs2s/");
             BrowserProfileName = ScsRes.FirefoxProfile_Plain;
             Application = new Lobby();
             Authentication = new SecurIdAuthentication("tksyr", "password", "tkcpos", "securId+passcode");
