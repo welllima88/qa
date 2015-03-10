@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Environments
     {
         public QaL()
         {
-            BaseUrl = new Uri(ScsRes.WES_QA_L);
+            BaseUrl = new Uri("https://gateint.telekurs.ch/scs2s-qa-l/");
             BrowserProfileName = ScsRes.FirefoxProfile_Certificate;
             Application = new Lobby();
             Authentication = new SecurIdAuthentication("tksyr", "", "tkcposl", "");
