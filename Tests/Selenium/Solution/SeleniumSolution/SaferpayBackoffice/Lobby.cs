@@ -1,30 +1,23 @@
 using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.Authentication;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Saferpay.QA.Selenium.Views.Common;
 
 namespace Six.Saferpay.QA.Selenium
 {
-    public class Lobby : WebObject, IApplication
+    public class Lobby : IApplication
     {
-        public static IWebElementAdapter CompanyLogo
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("html>body>img.companyLogo")); }
-        }
-
-        public static IWebElementAdapter Headline
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content h1")); }
-        }
+        [FindsBy(How = How.CssSelector, Using = "html>body>img.companyLogo")] public IWebElement CompanyLogo;
+        [FindsBy(How = How.CssSelector, Using = "td#content h1")] public IWebElement Headline;
+        [FindsBy(How = How.CssSelector, Using = "li#text_logout>a")] public IWebElement LogOffLink;
 
         public void LogOff()
         {
             try
             {
                 TestDirector.Navigate();
-                MetaNavBar.LogOff.Click();
+                LogOffLink.Click();
             }
             catch (NoSuchElementException)
             {
