@@ -1,3 +1,4 @@
+using System;
 using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support;
 using Six.Scs.QA.TestData.ValueObjects;
 
@@ -45,7 +46,7 @@ namespace Six.Scs.QA.Workflow
 
         public static void Edit(TroubleTicket ticket)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,6 +4,7 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Person;
 using Six.Scs.QA.TestData.ValueObjects;
+using Lobby = Six.Scs.QA.Workflow.Lobby;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -21,7 +22,7 @@ namespace Six.Scs.QA.Testlogic
             Person person = TestData.Factory.Person.Create();
             Workflow.Contact.Create(person);
             Check(person);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(person);
             return person;
         }
@@ -42,7 +43,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Contact.Edit(person);
             Check(person);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(person);
             return person;
         }

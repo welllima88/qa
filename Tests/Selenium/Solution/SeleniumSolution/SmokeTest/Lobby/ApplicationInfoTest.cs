@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Test]
         public void Environment()
         {
-            Assert.That(ApplicationInfo.Environment.Displayed);            
+            Assert.That(ApplicationInfo.Environment.Displayed);
         }
 
         [Category("LobbyCheck")]

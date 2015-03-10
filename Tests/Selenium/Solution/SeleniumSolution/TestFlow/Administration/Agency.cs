@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Administration.Agency;
+using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic.Administration
 {
@@ -10,22 +11,22 @@ namespace Six.Scs.QA.Testlogic.Administration
         {
             TestData.ValueObjects.Agency agency = TestData.Factory.Agency.Default();
             Workflow.Agency.Create(agency);
-            
+
             Check(agency);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(agency);
-            
+
             return agency;
         }
 
         public static TestData.ValueObjects.Agency Edit(TestData.ValueObjects.Agency agency)
         {
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             agency = TestData.Factory.Agency.Edit();
             Workflow.Agency.Edit(agency);
 
             Check(agency);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(agency);
 
             return agency;
@@ -51,12 +52,12 @@ namespace Six.Scs.QA.Testlogic.Administration
 
         public static void Deactivate(TestData.ValueObjects.Agency agency)
         {
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Workflow.Agency.Deactivate();
             agency.Status = false;
 
             Check(agency);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(agency);
         }
     }

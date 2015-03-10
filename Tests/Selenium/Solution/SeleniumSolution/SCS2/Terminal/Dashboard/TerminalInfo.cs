@@ -10,7 +10,10 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
     {
         public static string TerminalId
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_TID")).Text; }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_TID")).Text;
+            }
         }
 
         public static string ExternTerminalId
@@ -23,7 +26,12 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 
         public static string Article
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer #TD_Trm_ArticleDisplayName")).Text; }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("div#DashboardSummaryContainer #TD_Trm_ArticleDisplayName")).Text;
+            }
         }
 
         public static string Status
@@ -33,10 +41,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
 
         public static IWebElementAdapter Cancelled
         {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.bg-danger"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.bg-danger")); }
         }
     }
 }

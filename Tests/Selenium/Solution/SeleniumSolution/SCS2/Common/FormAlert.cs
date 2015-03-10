@@ -9,7 +9,10 @@ namespace Six.Scs.QA.Selenium.Common
     {
         public static IEnumerable<string> FormAlertList
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector("div.formAlert div.body ul li")).Select(e => e.Text); }
+            get
+            {
+                return WebDriver.FindAdaptedElements(By.CssSelector("div.formAlert div.body ul li")).Select(e => e.Text);
+            }
         }
     }
 }
