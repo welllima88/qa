@@ -15,8 +15,7 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
         public void ClassInit()
         {
             TestDirector.Navigate();
-            _navigationBar = new NavigationBar();
-            PageFactory.InitElements(TestDirector.WebDriver, _navigationBar);
+            _navigationBar = new NavigationBar();            
         }
 
         [Test]

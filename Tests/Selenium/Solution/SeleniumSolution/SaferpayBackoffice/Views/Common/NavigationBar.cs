@@ -1,10 +1,15 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Six.QA.Selenium.Extension.WebDriver;
 
 namespace Six.Saferpay.QA.Selenium.Views.Common
 {
     public class NavigationBar
     {
+        public NavigationBar()
+        {
+            PageFactory.InitElements(TestDirector.WebDriver, this);
+        }
         [FindsBy(How = How.CssSelector, Using = "li#topic_home a")] public IWebElement MySaferpay;
 
         [FindsBy(How = How.CssSelector, Using = "li#topic_support a")] public IWebElement OnlineSupport;
