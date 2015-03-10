@@ -87,11 +87,6 @@
     <Compile Include="Authentication\Webpages\WesSecurIdLogOnPage.cs" />
     <Compile Include="WebDriver\WebElements\NotCheckableElementException.cs" />
     <Compile Include="WebDriver\WebElements\NotSelectableElementException.cs" />
-    <Compile Include="Properties\ScsRes.Designer.cs">
-      <DependentUpon>ScsRes.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Environment\SeleniumConfig.cs" />
     <Compile Include="WebDriver\TestDirector.cs" />
     <Compile Include="Environment\TestEnvironment.cs" />
@@ -106,13 +101,8 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Properties\ScsRes.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ScsRes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
