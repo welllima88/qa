@@ -77,6 +77,8 @@
     <Compile Include="Administration\Agency\List.cs" />
     <Compile Include="Administration\Agency\View.cs" />
     <Compile Include="Administration\Article\View.cs" />
+    <Compile Include="Administration\Provider\List.cs" />
+    <Compile Include="Administration\Provider\View.cs" />
     <Compile Include="Administration\SerialNumberManage\Import.cs" />
     <Compile Include="Administration\SimCard\Create.cs" />
     <Compile Include="Administration\SimCard\Edit.cs" />
