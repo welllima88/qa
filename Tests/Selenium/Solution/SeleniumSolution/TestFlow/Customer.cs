@@ -1,4 +1,5 @@
-﻿using Six.Scs.QA.Workflow.Builder;
+﻿using Six.Scs.QA.Workflow;
+using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -9,7 +10,7 @@ namespace Six.Scs.QA.Testlogic
             Open(customerBuilder.Customer);
             customerBuilder.Edit();
             customerBuilder.Check();
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             customerBuilder.Check();
             return customerBuilder;
         }
@@ -18,7 +19,7 @@ namespace Six.Scs.QA.Testlogic
         {
             customerBuilder.Create();
             customerBuilder.Check();
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             customerBuilder.Check();
             return customerBuilder;
         }

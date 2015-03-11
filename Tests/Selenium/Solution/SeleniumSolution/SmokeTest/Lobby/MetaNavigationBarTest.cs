@@ -31,14 +31,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void LanguageEnglish()
         {
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("English"));            
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("English"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void LanguageGerman()
         {
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("Deutsch"));            
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("Deutsch"));
         }
 
         [Test]

@@ -1,11 +1,13 @@
-﻿namespace Six.Scs.QA.Workflow
+﻿using Six.Scs.QA.Selenium.Administration.Agency;
+
+namespace Six.Scs.QA.Workflow
 {
     public static class Agency
 
     {
         public static void Create(TestData.ValueObjects.Agency agency)
         {
-            Selenium.Administration.Agency.List.Create.Click();
+            List.Create.Click();
 
             Selenium.Administration.Agency.Create.Name = agency.Name;
             Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
@@ -24,7 +26,7 @@
 
         public static void Edit(TestData.ValueObjects.Agency agency)
         {
-            Selenium.Administration.Agency.View.Edit();
+            View.Edit();
 
             Selenium.Administration.Agency.Create.Name = agency.Name;
             Selenium.Administration.Agency.Create.DisplayName = agency.DisplayName;
@@ -43,7 +45,7 @@
 
         public static void Deactivate()
         {
-            Selenium.Administration.Agency.View.Edit();
+            View.Edit();
 
             Selenium.Administration.Agency.Create.Status = false;
 

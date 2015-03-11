@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Saferpay.QA.Selenium.Views.Common;
 
@@ -15,7 +14,7 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
         public void ClassInit()
         {
             TestDirector.Navigate();
-            _navigationBar = new NavigationBar();            
+            _navigationBar = new NavigationBar();
         }
 
         [Test]

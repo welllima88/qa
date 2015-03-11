@@ -4,6 +4,7 @@ using NUnit.Framework;
 using Six.Scs.QA.Selenium.User;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Workflow;
 using Person = Six.Scs.QA.TestData.ValueObjects.Person;
 
 namespace Six.Scs.QA.Testlogic
@@ -17,7 +18,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.User.Create(user);
 
             Check(user);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(user);
             return user;
         }
@@ -32,7 +33,7 @@ namespace Six.Scs.QA.Testlogic
 
             Workflow.User.Edit(_user);
             Check(_user);
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(_user);
 
             return _user;

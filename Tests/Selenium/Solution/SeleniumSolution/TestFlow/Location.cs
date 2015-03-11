@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension;
 using Six.Scs.QA.Selenium.Location;
+using Six.Scs.QA.Workflow;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -13,7 +14,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Location.Edit(_location);
             Check(_location);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(_location);
             return _location;
         }
@@ -25,7 +26,7 @@ namespace Six.Scs.QA.Testlogic
             Workflow.Location.Create(location);
             Check(location);
 
-            Workflow.Lobby.OpenLatestElement();
+            Lobby.OpenLatestElement();
             Check(location);
             return location;
         }

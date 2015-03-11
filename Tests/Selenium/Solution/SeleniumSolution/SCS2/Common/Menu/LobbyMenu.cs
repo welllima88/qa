@@ -21,12 +21,19 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter SerialNumberManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/SerialNumberManagement/']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/SerialNumberManagement/']"));
+            }
         }
 
         public static IWebElementAdapter AccessoireOrders
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoriesOrder/List/']")); }
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoriesOrder/List/']"));
+            }
         }
 
         public static IWebElementAdapter HardwareManage
@@ -36,22 +43,41 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter AcccessoiresOrders
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/AccessoireShop/AccessoireOrder/List/']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href$='/AccessoireShop/AccessoireOrder/List/']"));
+            }
         }
 
         public static IWebElementAdapter MyIncidents
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Supporter']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Supporter']"));
+            }
         }
 
         public static IWebElementAdapter MyTeams
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Teams']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href$='/TroubleTicket/Incident/Teams']"));
+            }
         }
 
         public static IWebElementAdapter TerminalReturnShipping
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TerminalReturnShipping/']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/TerminalReturnShipping/']"));
+            }
         }
 
         public static void Expand(string menuName)

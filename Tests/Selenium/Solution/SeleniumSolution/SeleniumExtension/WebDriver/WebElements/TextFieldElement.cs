@@ -5,8 +5,9 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
     public class TextFieldElement
     {
         protected IWebElement WebElement;
+
         /// <summary>
-        /// provides the constructor for derived classes which need to skip the check of the base clase and use its own init
+        ///     provides the constructor for derived classes which need to skip the check of the base clase and use its own init
         /// </summary>
         protected TextFieldElement()
         {

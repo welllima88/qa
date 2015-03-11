@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Six.Scs.QA.Selenium.Tickets.Trouble;
 using Six.Scs.QA.TestData.Factory;
 using Six.Scs.QA.Workflow;
 
@@ -12,7 +13,7 @@ namespace Six.Scs.QA.Testlogic.Tickets
             TestData.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
             Open(troubleTicket);
-            
+
             Check(troubleTicket);
 
             return troubleTicket;
@@ -20,7 +21,7 @@ namespace Six.Scs.QA.Testlogic.Tickets
 
         private static void Check(TestData.ValueObjects.TroubleTicket troubleTicket)
         {
-            Assert.That(Selenium.Tickets.Trouble.View.Header,Is.StringMatching(troubleTicket.Id));
+            Assert.That(View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
         private static void Open(TestData.ValueObjects.TroubleTicket troubleTicket)

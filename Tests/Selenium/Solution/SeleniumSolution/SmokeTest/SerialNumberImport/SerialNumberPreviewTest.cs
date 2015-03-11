@@ -34,6 +34,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
             CheckPreview("1", "10", "1234567890");
             CheckPreview("2", "11", "234567890A1");
             CheckPreview("5", "1", "5");
+            CheckPreview("5", "30", "567890A11223344556677889900000");
         }
     }
 }

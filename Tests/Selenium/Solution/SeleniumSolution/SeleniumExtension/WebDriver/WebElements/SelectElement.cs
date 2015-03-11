@@ -44,7 +44,7 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
         /// <param name="text">the text of a select option</param>
         public void SelectByText(string text)
         {
-            _webElement.Options.FirstOrDefault(o=>o.Text.Contains(text)).Click();
+            _webElement.Options.FirstOrDefault(o => o.Text.Contains(text)).Click();
             //_webElement.SelectByText(text);
         }
     }

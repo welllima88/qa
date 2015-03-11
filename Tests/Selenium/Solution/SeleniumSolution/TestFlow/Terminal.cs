@@ -79,7 +79,8 @@ namespace Six.Scs.QA.Testlogic
             return CreateTerminalObjectsFromIds(Progress.TerminalList);
         }
 
-        private static IEnumerable<TestData.ValueObjects.Terminal> CreateTerminalObjectsFromIds(IEnumerable<string> terminalList)
+        private static IEnumerable<TestData.ValueObjects.Terminal> CreateTerminalObjectsFromIds(
+            IEnumerable<string> terminalList)
         {
             var terminalObjects = new List<TestData.ValueObjects.Terminal>(terminalList.Count());
             terminalObjects.AddRange(

@@ -15,14 +15,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
             LobbyMenu.SerialNumberManage.Click();
         }
 
-        private static void CheckSupplier(string supplier, string start, string length)
-        {
-            Import.Supplier = supplier;
-
-            Assert.AreEqual(start, Import.StartField);
-            Assert.AreEqual(length, Import.LengthField);
-        }
-
         [Test]
         [Category("SerialNumberManagement")]
         public void ImportButton()
@@ -56,27 +48,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
         public void Supplier()
         {
             Assert.IsNotNull(Import.Supplier);
-        }
-
-        [Test]
-        [Category("SerialNumberManagement"), Category("Atos")]
-        public void SupplierAtos()
-        {
-            CheckSupplier("Atos", "4", "16");
-        }
-
-        [Test]
-        [Category("SerialNumberManagement"), Category("GMX")]
-        public void SupplierGmx()
-        {
-            CheckSupplier("GMX", "1", "11");
-        }
-
-        [Test]
-        [Category("SerialNumberManagement"), Category("PayTec")]
-        public void SupplierPaytec()
-        {
-            CheckSupplier("PayTec", "2", "7");
         }
     }
 }
