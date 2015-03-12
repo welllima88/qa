@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
@@ -15,7 +14,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
             PortletId = "div#frame_TerminalTechnicalViewpointPortlet ";
         }
 
-        public string TerminalId
+        public static string TerminalId
         {
             get
             {
@@ -68,12 +67,6 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
                         By.CssSelector(
                             Prefix + PortletId + "li:nth-child(6)" + Suffix));
             }
-        }
-
-        public static string Headline
-        {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
         }
 
         public static IWebElementAdapter MpdAssign

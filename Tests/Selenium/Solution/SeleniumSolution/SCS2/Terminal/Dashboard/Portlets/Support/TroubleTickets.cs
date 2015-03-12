@@ -97,6 +97,14 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Support
             get { return WebDriver.FindAdaptedElement(By.Id("SaveAndClose")); }
         }
 
+        public static string SupportContract
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("#frame_SupportPortlet #TicketsSupportContract")).Text;
+            }
+        }
+
         public static void New()
         {
             WebDriver.FindAdaptedElement(By.Id("ShowNewIncidentControl")).Click();
