@@ -25,6 +25,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
 
         [Test]
         [Category("Terminal Replace")]
+        public void ContractPeriodMinimum()
+        {
+            Assert.That(Selenium.Terminal.Replace.ContractPeriodMinimum, Is.Not.Null);
+            Assert.That(Selenium.Terminal.Replace.ContractPeriodMinimum, Is.Empty);
+        }
+
+        [Test]
+        [Category("Terminal Replace")]
         public void DeliveryDate()
         {
             Assert.That(Selenium.Terminal.Replace.DeliveryDate, Is.Not.Empty);
@@ -58,6 +66,20 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
         public void SalesContract()
         {
             Assert.That(Selenium.Terminal.Replace.SalesContract, Is.Not.Empty);
+        }
+
+        [Test]
+        [Category("Terminal Replace")]
+        public void SaveButton()
+        {
+            Assert.That(Selenium.Terminal.Replace.SaveButton.Displayed);
+        }
+
+        [Test]
+        [Category("Terminal Replace")]
+        public void SendNotifiaction()
+        {
+            Assert.That(Selenium.Terminal.Replace.SendNotifiaction, Is.False);
         }
 
         [Test]
