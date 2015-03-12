@@ -7,8 +7,8 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
     /// </summary>
     public abstract class WebObject : IWebObject
     {
-        protected string Prefix = "";
-        protected string Suffix = "";
+        protected static string Prefix = "";
+        protected static string Suffix = "";
 
         public By Locator { get; set; }
 
