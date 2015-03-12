@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Selenium.Terminal
         public static string SalesContract
         {
             set { WebDriver.FindAdaptedElement(By.Id("HandoverTypeId")).Selector().SelectByText(value); }
-            get { return  WebDriver.FindAdaptedElement(By.Id("HandoverTypeId")).Selector().SelectedOption; }
+            get { return WebDriver.FindAdaptedElement(By.Id("HandoverTypeId")).Selector().SelectedOption; }
         }
 
         public static string SupportContract
@@ -55,6 +55,13 @@ namespace Six.Scs.QA.Selenium.Terminal
         public static bool SendNotifiaction
         {
             set { WebDriver.FindAdaptedElement(By.Id("SendToMultipay")).CheckBox().Set(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("SendToMultipay")).CheckBox().IsChecked(); }
+        }
+
+        public static string ContractPeriodMinimum
+        {
+            set { WebDriver.FindAdaptedElement(By.Id("contractPeriodMinimum")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("contractPeriodMinimum")).TextField().Text(); }
         }
     }
 }
