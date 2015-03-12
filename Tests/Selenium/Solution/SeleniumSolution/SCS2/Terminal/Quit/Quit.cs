@@ -8,16 +8,19 @@ namespace Six.Scs.QA.Selenium.Terminal.Quit
         public static string State
         {
             set { WebDriver.FindAdaptedElement(By.Id("StateAndSubState")).Selector().SelectByText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("StateAndSubState")).Selector().SelectedOption; }
         }
 
-        public static string Delivery
+        public static bool InstallationOnSiteRequested
         {
-            set { WebDriver.FindAdaptedElement(By.Id("SelectedDeliveryType")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("InstallationOnSiteRequested")).CheckBox().Set(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("InstallationOnSiteRequested")).CheckBox().IsChecked(); }
         }
 
         public static string Reason
         {
             set { WebDriver.FindAdaptedElement(By.Id("Motivation")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("Motivation")).TextField().Text(); }
         }
 
         public static IWebElementAdapter Save
