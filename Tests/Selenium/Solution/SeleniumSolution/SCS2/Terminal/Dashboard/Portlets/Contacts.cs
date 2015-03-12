@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
+using OpenQA.Selenium;
+
 namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
 {
     public class Contacts : PortletViewBase
@@ -5,6 +9,11 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets
         public Contacts()
         {
             PortletId = "div#frame_ContactPortlet";
+        }
+
+        public static IEnumerable<string> CustomerContacts
+        {
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("#CustomerContacts ul li")).Select(e => e.Text); }
         }
     }
 }
