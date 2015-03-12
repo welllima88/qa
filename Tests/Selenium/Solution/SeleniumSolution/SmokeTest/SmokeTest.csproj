@@ -82,6 +82,7 @@
     <Compile Include="SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeTest.cs" />
     <Compile Include="Terminal\Quit.cs" />
+    <Compile Include="Terminal\Portlets.cs" />
     <Compile Include="Terminal\Replace.cs" />
     <Compile Include="TestLauncher.cs" />
   </ItemGroup>
