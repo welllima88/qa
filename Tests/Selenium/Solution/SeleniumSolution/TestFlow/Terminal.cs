@@ -60,7 +60,8 @@ namespace Six.Scs.QA.Testlogic
             }
             if (tries.TooOften())
             {
-                Assert.Fail("has not been processed probably due to Job Control error");
+                Assert.Fail("Batch has not been processed probably due to Job Control error. BatchId:{0} JobId:{1}",
+                    Progress.JobId, Progress.BatchId);
             }
             Assert.That(Progress.Failed, Is.EqualTo("0"));
 

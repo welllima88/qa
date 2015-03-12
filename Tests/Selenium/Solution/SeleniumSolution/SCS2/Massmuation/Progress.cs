@@ -38,6 +38,30 @@ namespace Six.Scs.QA.Selenium.Massmuation
             }
         }
 
+        public static string BatchId
+        {
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector(
+                            "#content > div:nth-child(4) > div > div > div.panel-body > div.row > div:nth-child(1) > div > p"))
+                        .Text;
+            }
+        }
+
+        public static string JobId
+        {
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector(
+                            "#content > div:nth-child(4) > div > div > div.panel-body > div.row > div:nth-child(2) > div > p"))
+                        .Text;
+            }
+        }
+
         public static bool HasFinished()
         {
             return Todo.Equals("0");
