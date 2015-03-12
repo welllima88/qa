@@ -14,7 +14,7 @@ namespace Six.Scs.QA.Selenium.Terminal.Dashboard
             Prefix = "tbody div#dashboarditems div ";
         }
 
-        protected string PortletId { get; set; }
+        protected static string PortletId { get; set; }
 
         public IWebElementAdapter PortletTitle
         {
