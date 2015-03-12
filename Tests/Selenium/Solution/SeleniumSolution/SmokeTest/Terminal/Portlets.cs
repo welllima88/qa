@@ -28,6 +28,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
         }
 
         [Test]
+        [Category("Contacts")]
+        public void Contacts()
+        {
+            Assert.That(Selenium.Terminal.Dashboard.Portlets.Contacts.CustomerContacts, Is.Not.Empty);
+        }
+
+        [Test]
         [Category("SalesContract")]
         public void SalesContract()
         {
