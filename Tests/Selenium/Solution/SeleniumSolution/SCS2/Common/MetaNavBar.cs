@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Common
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href*='/Logout.aspx']"));
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href$='/Account/Logout/']"));
             }
         }
 
