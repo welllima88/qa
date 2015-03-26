@@ -11,8 +11,8 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         [TestFixtureSetUp]
         public void TestInit()
         {
-            TestDirector.Navigate("Customer/?CustomerId=1");
-            CustomerMenu.TerminalCreate.Click();
+            TestDirector.Navigate("Location?LocationId=261a0d6e-8136-4b48-95f4-bfcb986a142c");
+            LocationMenu.TerminalCreate.Click();
         }
 
         [Test]
