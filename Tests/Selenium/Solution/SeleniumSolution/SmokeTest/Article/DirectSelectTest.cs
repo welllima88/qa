@@ -27,9 +27,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
 
             Assert.IsTrue(ConfigCreate.TerminalType.Equals(termType));
             Assert.IsTrue(Common.Lobby.Headline.Text.Contains(article));
-
-            // get to initial point
-            CustomerMenu.TerminalCreate.Click();
         }
     }
 }
