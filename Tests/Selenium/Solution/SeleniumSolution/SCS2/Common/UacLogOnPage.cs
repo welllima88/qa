@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Common
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxUsername"))
+                WebDriver.FindAdaptedElement(By.Id("Username"))
                     .TextField()
                     .TypeText(value);
             }
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Common
             set
             {
                 // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
-                WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_tbxPassword"))
+                WebDriver.FindAdaptedElement(By.Id("Password"))
                     .PasswordTextField()
                     .TypeText(value);
             }
@@ -29,7 +29,7 @@ namespace Six.Scs.QA.Selenium.Common
 
         public void Login()
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_btnLogin")).Click();
+            WebDriver.FindAdaptedElement(By.Id("login")).Click();
         }
     }
 }
