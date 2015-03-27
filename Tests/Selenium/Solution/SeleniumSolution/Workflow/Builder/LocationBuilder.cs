@@ -31,7 +31,7 @@ namespace Six.Scs.QA.Workflow.Builder
 
         private static void SaveButton()
         {
-            Selenium.Location.Create.SaveButton.Click();
+            Selenium.Location.Edit.SaveButton.Click();
         }
 
         protected void ClickCreate()
