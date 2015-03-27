@@ -16,8 +16,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
     [TestFixture]
     public class RegressionTest
     {
-        private static TestData.ValueObjects.Terminal _terminalLocation;
-        private static TestData.ValueObjects.Terminal _terminalCustomer;
+        private static TestData.ValueObjects.Terminal _terminalLocation2;
+        private static TestData.ValueObjects.Terminal _terminalLocation1;
         private static CustomerBuilder _six;
         private static TestData.ValueObjects.Location _location1;
         private static TestData.ValueObjects.Person _personOnCustomer;
@@ -43,10 +43,10 @@ namespace Six.Scs.QA.Selenium.SystemTest
         public static void ExecuteRegressiontest()
         {
             _six = Testlogic.Customer.Create(new Default());
-            _location1 = Testlogic.Location.Create(_six.Customer);
+            _location1 = Testlogic.Location.Create(_six.Customer, new Testlogic.Builder.Location.Default()).Location;
             _personOnCustomer = Contact.Create(_six.Customer);
             var contracts = new Testlogic.Builder.Brand.Ep2.Default();
-            _terminalCustomer = Testlogic.Terminal.Create(_six.Customer, new Yomani().With(contracts));
+            _terminalLocation1 = Testlogic.Terminal.Create(_location1, new Yomani().With(contracts));
 
             Testlogic.Customer.Edit(_six);
 
@@ -54,31 +54,31 @@ namespace Six.Scs.QA.Selenium.SystemTest
             BillingAdress.Create(_six.Customer);
 
             _mpd = Testlogic.Mpd.Create(_six.Customer);
-            Testlogic.Terminal.Assign(_mpd, _terminalCustomer);
+            Testlogic.Terminal.Assign(_mpd, _terminalLocation1);
 
-            _terminalLocation = Testlogic.Terminal.Create(_location1, new Xentissimo());
-            _location2 = Testlogic.Location.Create(_six.Customer);
-            Testlogic.Terminal.Move(_terminalLocation, _location2);
+            _terminalLocation2 = Testlogic.Terminal.Create(_location1, new Xentissimo());
+            _location2 = Testlogic.Location.Create(_six.Customer, new Testlogic.Builder.Location.Default()).Location;
+            Testlogic.Terminal.Move(_terminalLocation2, _location2);
 
-            Brands.Create(_terminalLocation, new Testlogic.Builder.Brand.Ep2.Default());
+            Brands.Create(_terminalLocation2, new Testlogic.Builder.Brand.Ep2.Default());
             Infotext.Create(_location1);
 
-            _location1 = Testlogic.Location.Edit(_location1);
-            Infotext.Create(_terminalLocation);
+            _location1 = Testlogic.Location.Edit(_location1, new Testlogic.Builder.Location.Default()).Location;
+            Infotext.Create(_terminalLocation2);
 
             _personOnLocation = Contact.Create(_location1);
 
             Testlogic.Mpd.Edit(_mpd);
 
-            Testlogic.Terminal.ArticleChange(_terminalCustomer, new Yoximo());
-            Testlogic.Terminal.Quit(_terminalCustomer);
+            Testlogic.Terminal.ArticleChange(_terminalLocation1, new Yoximo());
+            Testlogic.Terminal.Quit(_terminalLocation1);
             _personOnLocation = Contact.Edit(_personOnLocation);
             Contact.Delete(_personOnCustomer);
 
             _user = Testlogic.User.Create(_six.Customer);
             _user = Testlogic.User.Edit(_user);
 
-            _duplicatedTerminals = Testlogic.Terminal.Duplicate(_terminalLocation);
+            _duplicatedTerminals = Testlogic.Terminal.Duplicate(_terminalLocation2);
             Testlogic.User.Create(_personOnLocation);
 
             Testlogic.User.AddService(_user);
@@ -89,7 +89,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             // check again already existing contracts:
             contracts.Check();
 
-            Testlogic.Terminal.Replace(_terminalLocation);
+            Testlogic.Terminal.Replace(_terminalLocation2);
 
             _troubleTicket = Testlogic.Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             Testlogic.Tickets.TroubleTicket.Edit(_troubleTicket);
