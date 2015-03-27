@@ -24,29 +24,8 @@ namespace Six.Scs.QA.Testlogic
             terminalBuilder.Create();
             terminalBuilder.Check();
 
-            Assert.AreEqual(location.Contact.Language, BusinessViewpoint.TerminalLanguage);
+            Assert.AreEqual(terminalBuilder.Terminal.Type, BusinessViewpoint.TerminalType);
             Assert.AreEqual(location.CompanyName, LocationInfo.CompanyName);
-            return terminalBuilder.Terminal;
-        }
-
-        /// <summary>
-        ///     Not supported anymore
-        /// </summary>
-        /// <param name="customer"></param>
-        /// <param name="terminalBuilder"></param>
-        /// <returns></returns>
-        private static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Customer customer,
-            TerminalBuilder terminalBuilder)
-        {
-            Customer.Open(customer);
-            CustomerMenu.TerminalCreate.Click();
-
-            terminalBuilder.Create();
-            terminalBuilder.Check();
-
-            // Assert.AreEqual(customer.Location.Contact.Language, BusinessViewpoint.TerminalLanguage);
-            Assert.AreEqual(customer.CustomerNumber, CustomerInfo.Number);
-            Assert.AreEqual(customer.CustomerName, CustomerInfo.Name);
             return terminalBuilder.Terminal;
         }
 
