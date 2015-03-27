@@ -16,15 +16,6 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             set { WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_SBSAgentId")).TextField().TypeText(value); }
         }
 
-        public static string Telephone
-        {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).Text; }
-            set
-            {
-                WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_PhoneNumber")).TextField().TypeText(value);
-            }
-        }
-
         public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).Text; }

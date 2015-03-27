@@ -45,7 +45,6 @@ namespace Six.Scs.QA.Testlogic.Administration
             Assert.That(View.City, Is.EqualTo(agency.Adress.City));
             Assert.That(View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
             Assert.That(agency.Adress.Country, Is.StringMatching(View.Country)); // "Schweiz" vs "Schweiz [CH]"
-            Assert.That(View.Telephone, Is.EqualTo(agency.Contact.Telephone));
             Assert.That(View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
             Assert.That(View.Supplier, Is.EqualTo(agency.Supplier));
         }
