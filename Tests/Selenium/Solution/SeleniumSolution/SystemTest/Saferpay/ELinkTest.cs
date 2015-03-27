@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
 
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpayCustomer;
-        private static TestData.ValueObjects.Location _saferpayLocation;
+        private static LocationBuilder _saferpayLocation;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
@@ -25,8 +25,8 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
         public static void ElinkCustomerStructure()
         {
             _saferpayCustomer = Testlogic.Customer.Create(new Default());
-            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer);
-            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation,
+            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer, new Testlogic.Builder.Location.Default());
+            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation.Location,
                 new SaferPayPos().With(new Testlogic.Builder.Brand.ELink.Default()));
         }
     }

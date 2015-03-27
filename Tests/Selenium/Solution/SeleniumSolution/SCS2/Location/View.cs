@@ -110,5 +110,10 @@ namespace Six.Scs.QA.Selenium.Location
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
+
+        public static string Agency
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("Agency")).Text; }
+        }
     }
 }

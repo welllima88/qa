@@ -43,7 +43,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
         public static void ExecuteRegressiontest()
         {
             _six = Testlogic.Customer.Create(new Default());
-            _location1 = Testlogic.Location.Create(_six.Customer);
+            _location1 = Testlogic.Location.Create(_six.Customer, new Testlogic.Builder.Location.Default()).Location;
             _personOnCustomer = Contact.Create(_six.Customer);
             var contracts = new Testlogic.Builder.Brand.Ep2.Default();
             _terminalLocation1 = Testlogic.Terminal.Create(_location1, new Yomani().With(contracts));
@@ -57,13 +57,13 @@ namespace Six.Scs.QA.Selenium.SystemTest
             Testlogic.Terminal.Assign(_mpd, _terminalLocation1);
 
             _terminalLocation2 = Testlogic.Terminal.Create(_location1, new Xentissimo());
-            _location2 = Testlogic.Location.Create(_six.Customer);
+            _location2 = Testlogic.Location.Create(_six.Customer, new Testlogic.Builder.Location.Default()).Location;
             Testlogic.Terminal.Move(_terminalLocation2, _location2);
 
             Brands.Create(_terminalLocation2, new Testlogic.Builder.Brand.Ep2.Default());
             Infotext.Create(_location1);
 
-            _location1 = Testlogic.Location.Edit(_location1);
+            _location1 = Testlogic.Location.Edit(_location1, new Testlogic.Builder.Location.Default()).Location;
             Infotext.Create(_terminalLocation2);
 
             _personOnLocation = Contact.Create(_location1);

@@ -1,9 +1,10 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Testlogic.Builder.Brand.Gicc;
 using Six.Scs.QA.Testlogic.Builder.Customer.Nsp;
+using Six.Scs.QA.Testlogic.Builder.Location;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;
 using Six.Scs.QA.Workflow.Builder;
+using Default = Six.Scs.QA.Testlogic.Builder.Brand.Gicc.Default;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
 {
@@ -18,7 +19,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
 
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpayCustomer;
-        private static TestData.ValueObjects.Location _saferpayLocation;
+        private static LocationBuilder _saferpayLocation;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
@@ -26,8 +27,8 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
         public static void GiccCustomerStructure()
         {
             _saferpayCustomer = Testlogic.Customer.Create(new SixNsp());
-            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer);
-            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation,
+            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer, new Gicc());
+            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation.Location,
                 new Icp().With(new Default()));
         }
     }
