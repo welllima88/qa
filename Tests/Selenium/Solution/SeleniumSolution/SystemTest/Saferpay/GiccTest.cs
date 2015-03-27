@@ -17,15 +17,17 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
         }
 
         private static TestData.ValueObjects.Terminal _saferpayTerminal;
-        private static CustomerBuilder _saferpay;
+        private static CustomerBuilder _saferpayCustomer;
+        private static TestData.ValueObjects.Location _saferpayLocation;
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
          Category("Saferpay"), Category("GICC")]
         public static void GiccCustomerStructure()
         {
-            _saferpay = Testlogic.Customer.Create(new SixNsp());
-            _saferpayTerminal = Testlogic.Terminal.Create(_saferpay.Customer,
+            _saferpayCustomer = Testlogic.Customer.Create(new SixNsp());
+            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer);
+            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation,
                 new Icp().With(new Default()));
         }
     }
