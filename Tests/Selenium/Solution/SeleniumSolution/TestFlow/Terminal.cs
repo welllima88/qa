@@ -29,7 +29,13 @@ namespace Six.Scs.QA.Testlogic
             return terminalBuilder.Terminal;
         }
 
-        public static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Customer customer,
+        /// <summary>
+        ///     Not supported anymore
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <param name="terminalBuilder"></param>
+        /// <returns></returns>
+        private static TestData.ValueObjects.Terminal Create(TestData.ValueObjects.Customer customer,
             TerminalBuilder terminalBuilder)
         {
             Customer.Open(customer);
