@@ -15,7 +15,6 @@ namespace Six.Scs.QA.Workflow
             Selenium.Administration.Agency.Create.Zip = agency.Adress.Zip;
             Selenium.Administration.Agency.Create.City = agency.Adress.City;
             Selenium.Administration.Agency.Create.Country = agency.Adress.Country;
-            Selenium.Administration.Agency.Create.Language = agency.Contact.Language;
             Selenium.Administration.Agency.Create.Telephone = agency.Contact.Telephone;
             Selenium.Administration.Agency.Create.Supplier = agency.Supplier;
             Selenium.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
@@ -34,7 +33,6 @@ namespace Six.Scs.QA.Workflow
             Selenium.Administration.Agency.Create.Zip = agency.Adress.Zip;
             Selenium.Administration.Agency.Create.City = agency.Adress.City;
             Selenium.Administration.Agency.Create.Country = agency.Adress.Country;
-            Selenium.Administration.Agency.Create.Language = agency.Contact.Language;
             Selenium.Administration.Agency.Create.Telephone = agency.Contact.Telephone;
             Selenium.Administration.Agency.Create.Supplier = agency.Supplier;
             Selenium.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
