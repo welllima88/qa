@@ -29,7 +29,7 @@ namespace Six.Saferpay.QA.Selenium.Views.Common
 
         public void Login()
         {
-            WebDriver.FindAdaptedElement(By.CssSelector("input.button[type='submit']")).Click();
+            WebDriver.FindAdaptedElement(By.CssSelector("button[type='submit']")).Click();
         }
     }
 }
