@@ -25,18 +25,6 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             }
         }
 
-        public static string Language
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.Id("Agency_LanguageId"))
-                        .Selector()
-                        .SelectedOption;
-            }
-            set { WebDriver.FindAdaptedElement(By.Id("Agency_LanguageId")).Selector().SelectByText(value); }
-        }
-
         public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#Agency_Street")).Text; }

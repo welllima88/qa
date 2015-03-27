@@ -15,11 +15,6 @@ namespace Six.Scs.QA.Selenium.Administration.Agency
             get { return WebDriver.FindAdaptedElement(By.Id("Agency_PhoneNumber")).Text; }
         }
 
-        public static string Language
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("Agency_LanguageName")).Text; }
-        }
-
         public static string StreetNo
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Agency_Street")).Text; }
