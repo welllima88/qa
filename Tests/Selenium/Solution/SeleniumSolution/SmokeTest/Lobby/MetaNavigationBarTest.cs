@@ -31,20 +31,16 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
         [Category("LobbyCheck")]
         public void LanguageEnglish()
         {
-            // TODO: the assert sometimes brings false failed:
-            //         Test(s) failed.   Expected: collection containing "English"
-            // But was:  < "Deutsch", "English" >
-            // at NUnit.Framework.Assert.That(Object actual, IResolveConstraint expression, String message, Object[] args)
-            // so added both checks, if the second fails only it must be NUnit
-            Assert.IsTrue(MetaNavBar.LanguageItems.Select(e => e.Text).Contains("English"));
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("English"));
+            // be careful with  using the Assert, because seems to contain an error
+            // Assert.That(.., Contains.Item("English"));
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).Contains("English"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void LanguageGerman()
         {
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text), Contains.Item("Deutsch"));
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).Contains("Deutsch"));
         }
 
         [Test]
