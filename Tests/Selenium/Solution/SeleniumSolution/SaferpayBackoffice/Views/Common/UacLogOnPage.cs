@@ -20,7 +20,6 @@ namespace Six.Saferpay.QA.Selenium.Views.Common
         {
             set
             {
-                // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
                 WebDriver.FindAdaptedElement(By.Id("Password"))
                     .PasswordTextField()
                     .TypeText(value);

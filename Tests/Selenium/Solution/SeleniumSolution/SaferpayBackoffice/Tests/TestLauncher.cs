@@ -17,7 +17,7 @@ namespace Six.Saferpay.QA.Selenium.Tests
         public void LaunchTestDirector()
         {
             TestDirector.TestEnvironment = new Dev();
-            TestDirector.PrepareBrowser(Grid.Local);
+            TestDirector.PrepareBrowser(Grid.Build);
             TestDirector.Start();
 
             PageFactory.InitElements(TestDirector.WebDriver, TestDirector.TestEnvironment.Application);
