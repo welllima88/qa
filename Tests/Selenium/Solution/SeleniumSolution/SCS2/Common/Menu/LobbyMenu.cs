@@ -38,7 +38,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
 
         public static IWebElementAdapter HardwareManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/HWManagement']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/HWManagement/SingleDevice']")); }
         }
 
         public static IWebElementAdapter AcccessoiresOrders
