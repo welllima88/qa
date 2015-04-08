@@ -224,7 +224,7 @@ namespace Six.Scs.QA.Selenium.Customer
             }
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_StructureId")).
+                return WebDriver.FindAdaptedElement(By.CssSelector("select#StructureId")).
                     Selector().SelectedOption;
             }
         }
