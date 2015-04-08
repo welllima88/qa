@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
@@ -20,10 +21,21 @@ namespace Six.Scs.QA.Selenium.SystemTest.Validation
         }
 
         [Test]
-        public void CustomerName()
+        public void City()
         {
-            
-            Assert.That(FormAlert.FormAlertList, Contains.Item("Dies ist ein Pflichtfeld!"));
+            Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Address.City"));
+        }
+
+        [Test]
+        public void Name()
+        {
+            Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Name"));
+        }
+
+        [Test]
+        public void Zip()
+        {
+            Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Address.ZIP"));
         }
     }
 }
