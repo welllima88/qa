@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
         [TestFixtureSetUp]
         public static void ClassInit()
         {
-            TestDirector.Navigate("HWManagement/");
+            TestDirector.Navigate("HWManagement/SingleDevice");
         }
 
         [Test]

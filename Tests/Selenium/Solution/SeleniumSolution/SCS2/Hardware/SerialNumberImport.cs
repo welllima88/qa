@@ -35,7 +35,7 @@ namespace Six.Scs.QA.Selenium.Hardware
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/HWManagementImportSerialNumber/StreamFile']"))
+                    WebDriver.FindAdaptedElement(By.CssSelector("a[href$='/HWManagement/ImportSerialNumber/StreamFile']"))
                         .Text;
             }
         }
