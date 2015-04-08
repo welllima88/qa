@@ -5,10 +5,10 @@ using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Validation
+namespace Six.Scs.QA.Selenium.SystemTest.Validation.Customer
 {
     [TestFixture]
-    public class CreateCustomerWithNoInput
+    public class CreateWithNoInput
     {
         [SetUp]
         public void GoToCreateCustomer()
