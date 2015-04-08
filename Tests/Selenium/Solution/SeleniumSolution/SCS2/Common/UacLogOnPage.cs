@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.Common
         {
             set
             {
-                WebDriver.FindAdaptedElement(By.Id("Username"))
+                WebDriver.FindAdaptedElement(By.Id("username"))
                     .TextField()
                     .TypeText(value);
             }
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Common
             set
             {
                 // DB:       CryptedPassword=0x5F06F9D51AA05BFB6B6F7AF49AD9464427C9733A
-                WebDriver.FindAdaptedElement(By.Id("Password"))
+                WebDriver.FindAdaptedElement(By.Id("password"))
                     .PasswordTextField()
                     .TypeText(value);
             }
