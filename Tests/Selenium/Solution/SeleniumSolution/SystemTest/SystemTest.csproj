@@ -63,6 +63,7 @@
     <Compile Include="Administration\AgencyTest.cs" />
     <Compile Include="Validation\Mpd\CreateWithNoInput.cs" />
     <Compile Include="Validation\Agency\CreateWithNoInput.cs" />
+    <Compile Include="Validation\User\CreateWithNoInput.cs" />
     <Compile Include="Validation\Person\CreateWithNoInput.cs" />
     <Compile Include="Validation\Customer\CreateWithInvalidInput.cs" />
     <Compile Include="Validation\Customer\CreateWithNoInput.cs" />
