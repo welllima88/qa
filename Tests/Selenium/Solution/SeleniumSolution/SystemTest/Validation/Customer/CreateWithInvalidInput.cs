@@ -7,10 +7,10 @@ using Six.Scs.QA.Selenium.Customer;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Validation.Customer
 {
-    [TestFixture]
+    //[TestFixture]
     public class CreateWithInvalidInput
     {
-        [TestFixtureSetUp]
+        //[TestFixtureSetUp]
         public void CreateAndInvalidInput()
         {
             TestDirector.Navigate();
@@ -20,22 +20,10 @@ namespace Six.Scs.QA.Selenium.SystemTest.Validation.Customer
             Create.SaveButton.Click();
         }
 
-        [Test]
+        //[Test]
         public void City()
         {
             Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Address.City"));
-        }
-
-        [Test]
-        public void Name()
-        {
-            Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Name"));
-        }
-
-        [Test]
-        public void Zip()
-        {
-            Assert.That(FormAlert.InvalidElementNames.Contains("CustomerData.Address.ZIP"));
         }
     }
 }
