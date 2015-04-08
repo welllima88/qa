@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
         [TestFixtureSetUp]
         public static void ClassInit()
         {
-            TestDirector.Navigate("HWManagementImportSerialNumber/index");
+            TestDirector.Navigate("HWManagement/ImportSerialNumber");
         }
 
         [Test]
