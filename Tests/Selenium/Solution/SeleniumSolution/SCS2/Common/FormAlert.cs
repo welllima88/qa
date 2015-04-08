@@ -14,5 +14,15 @@ namespace Six.Scs.QA.Selenium.Common
                 return WebDriver.FindAdaptedElements(By.CssSelector("div.formAlert div.body ul li")).Select(e => e.Text);
             }
         }
+
+        public static IEnumerable<string> InvalidElementNames
+        {
+            get
+            {
+                return
+                    WebDriver.FindElements(By.CssSelector("input.input-validation-error"))
+                        .Select(e => e.GetAttribute("name"));
+            }
+        }
     }
 }
