@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Validation.Customer
     [TestFixture]
     public class CreateWithNoInput
     {
-        [SetUp]
+        [TestFixtureSetUp]
         public void GoToCreateCustomer()
         {
             TestDirector.Navigate();
