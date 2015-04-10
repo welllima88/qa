@@ -155,6 +155,7 @@
     <Compile Include="Terminal\Dashboard\CustomerInfo.cs" />
     <Compile Include="Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\Support\Priority.cs" />
+    <Compile Include="Terminal\Dashboard\Portlets\Activity.cs" />
     <Compile Include="Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\SalesContract.cs" />
     <Compile Include="Terminal\Dashboard\Portlets\TechnicalView.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Terminal\Duplicate\View.cs" />
     <Compile Include="Terminal\EventLog\View.cs" />
     <Compile Include="Terminal\FinancialConfig\Edit.cs" />
+    <Compile Include="Terminal\FoMessages\FoMessage.cs" />
     <Compile Include="Terminal\Functionbits.cs" />
     <Compile Include="Terminal\Move.cs" />
     <Compile Include="Terminal\Quit\Quit.cs" />
