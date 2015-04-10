@@ -81,6 +81,7 @@
     <Compile Include="SIMCard\SimCardViewTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeGuiTest.cs" />
     <Compile Include="SoftwareExchange\SoftwareExchangeTest.cs" />
+    <Compile Include="Terminal\FoMessage.cs" />
     <Compile Include="Terminal\Quit.cs" />
     <Compile Include="Terminal\Portlets.cs" />
     <Compile Include="Terminal\Replace.cs" />

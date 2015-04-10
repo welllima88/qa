@@ -8,6 +8,7 @@ namespace Six.Scs.QA.Selenium.User
         public static string UserName
         {
             set { WebDriver.FindAdaptedElement(By.Id("UserData_Username")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("UserData_Username")).TextField().Text(); }
         }
 
         public static string Salutation
