@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1429089080366" ID="ID_1403822952" MODIFIED="1429090066031" TEXT="System Test">
+<node COLOR="#000000" CREATED="1429089080366" ID="ID_1403822952" MODIFIED="1429100561256" TEXT="System Test">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
 <node COLOR="#0033ff" CREATED="1429089108174" ID="ID_1891176767" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Administration/" MODIFIED="1429089158486" POSITION="right" TEXT="Administration">
@@ -9,10 +9,23 @@
 <node COLOR="#00b439" CREATED="1429089108174" ID="ID_1540927255" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Administration/AgencyTest.cs" MODIFIED="1429089141986" TEXT="AgencyTest.cs">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1429093353514" ID="ID_1917021697" MODIFIED="1429093355664" TEXT="create">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1429093358111" ID="ID_98825229" MODIFIED="1429093360011" TEXT="view">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1429093361141" ID="ID_1379956833" MODIFIED="1429093365364" TEXT="edit">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1429093367126" ID="ID_1609343941" MODIFIED="1429093369411" TEXT="deactivate">
+<font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1429089108246" ID="ID_344051995" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Defaults/" MODIFIED="1429089156406" POSITION="right" TEXT="Defaults">
+</node>
+<node COLOR="#0033ff" CREATED="1429089108246" ID="ID_344051995" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Defaults/" MODIFIED="1429100622567" POSITION="right" TEXT="Defaults">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
+<cloud/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1429089108246" ID="ID_10965537" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Defaults/MandantIsSavedForNextCustomerCreate.cs" MODIFIED="1429089141986" TEXT="MandantIsSavedForNextCustomerCreate.cs">
 <edge STYLE="bezier" WIDTH="thin"/>
@@ -31,8 +44,9 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1429089108296" ID="ID_1601601046" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Validation/" MODIFIED="1429090045630" POSITION="right" TEXT="Validation">
+<node COLOR="#0033ff" CREATED="1429089108296" ID="ID_1601601046" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Validation/" MODIFIED="1429100600606" POSITION="right" TEXT="Validation">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
+<cloud/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1429089108296" ID="ID_578412158" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SystemTest/Validation/Agency/" MODIFIED="1429089231974" TEXT="Agency">
 <edge STYLE="bezier" WIDTH="thin"/>
@@ -219,7 +233,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1422537951060" ID="ID_1019102356" MODIFIED="1429089901511" STYLE="bubble" TEXT="mpd">
+<node COLOR="#00b439" CREATED="1422537951060" ID="ID_1019102356" MODIFIED="1429100590036" STYLE="bubble" TEXT="mpd">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1422537955308" ID="ID_990239225" MODIFIED="1429089935610" STYLE="bubble" TEXT="create">
@@ -371,18 +385,6 @@
 <node COLOR="#111111" CREATED="1422538647463" ID="ID_344238944" MODIFIED="1429088854848" TEXT="id">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-</node>
-</node>
-<node COLOR="#00b439" CREATED="1429086732385" ID="ID_381643372" MODIFIED="1429089901535" TEXT="agency">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1429086743565" ID="ID_1476033049" MODIFIED="1429089901535" TEXT="create">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="14"/>
-</node>
-<node COLOR="#990000" CREATED="1429086747535" ID="ID_179434394" MODIFIED="1429089901535" TEXT="edit">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
 <node COLOR="#00b439" CREATED="1429086848196" ID="ID_1348284203" MODIFIED="1429089901536" TEXT="authentication">

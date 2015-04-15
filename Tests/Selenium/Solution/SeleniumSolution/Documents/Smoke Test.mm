@@ -3,22 +3,6 @@
 <node COLOR="#000000" CREATED="1429089244416" ID="ID_534108498" MODIFIED="1429090074771" TEXT="Smoke Test">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1429089274886" ID="ID_866828901" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Agency/" MODIFIED="1429089379149" POSITION="right" TEXT="Agency">
-<edge STYLE="sharp_bezier" WIDTH="8"/>
-<font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1429089274886" ID="ID_1886152894" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Agency/AgencyCreateTest.cs" MODIFIED="1429089304212" TEXT="AgencyCreateTest.cs">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-<node COLOR="#00b439" CREATED="1429089274886" ID="ID_1148901284" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Agency/AgencyDeleteTest.cs" MODIFIED="1429089304212" TEXT="AgencyDeleteTest.cs">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-<node COLOR="#00b439" CREATED="1429089274886" ID="ID_230067443" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Agency/AgencyEditTest.cs" MODIFIED="1429089304212" TEXT="AgencyEditTest.cs">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-</node>
 <node COLOR="#0033ff" CREATED="1429089274886" ID="ID_680454027" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Article/" MODIFIED="1429089306162" POSITION="left" TEXT="Article">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
