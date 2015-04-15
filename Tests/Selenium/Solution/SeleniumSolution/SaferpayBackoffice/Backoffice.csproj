@@ -45,10 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Payment\Booking.cs" />
     <Compile Include="Environment\Dev.cs" />
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\MetaNavigationBarTest.cs" />
     <Compile Include="Tests\Lobby\NavigationBarTest.cs" />
+    <Compile Include="Tests\Payment\Booking.cs" />
     <Compile Include="Tests\Support\NewRequest.cs" />
     <Compile Include="Tests\TestLauncher.cs" />
     <Compile Include="Views\Batch\Impport.cs" />
