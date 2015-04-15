@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1429089244416" ID="ID_534108498" MODIFIED="1429089304272" TEXT="Smoke Test">
+<node COLOR="#000000" CREATED="1429089244416" ID="ID_534108498" MODIFIED="1429090074771" TEXT="Smoke Test">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
 <node COLOR="#0033ff" CREATED="1429089274886" ID="ID_866828901" LINK="file:/D:/git/QA/Tests/Selenium/Solution/SeleniumSolution/SmokeTest/Agency/" MODIFIED="1429089379149" POSITION="right" TEXT="Agency">
