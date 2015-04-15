@@ -2,9 +2,9 @@ namespace Six.Saferpay.QA.Selenium.Factory
 {
     public class Account
     {
-        public Account Default()
+        public static Data.Account Default()
         {
-            return new Account();
+            return new Data.Account();
         }
     }
 }
