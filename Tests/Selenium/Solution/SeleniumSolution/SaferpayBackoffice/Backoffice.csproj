@@ -53,16 +53,16 @@
     <Compile Include="Workflow\Payment\Booking.cs" />
     <Compile Include="Tests\Support\NewRequest.cs" />
     <Compile Include="Tests\TestLauncher.cs" />
-    <Compile Include="Views\Batch\Impport.cs" />
-    <Compile Include="Views\Batch\Overview.cs" />
-    <Compile Include="Views\Common\MetaNavBar.cs" />
-    <Compile Include="Views\Common\NavigationBar.cs" />
-    <Compile Include="Views\Common\Lobby.cs" />
-    <Compile Include="Views\Common\UacLogOnPage.cs" />
-    <Compile Include="Views\Menu\Menu.cs" />
-    <Compile Include="Views\Payment\Booking.cs" />
+    <Compile Include="Pages\Batch\Impport.cs" />
+    <Compile Include="Pages\Batch\Overview.cs" />
+    <Compile Include="Pages\Common\MetaNavBar.cs" />
+    <Compile Include="Pages\Common\NavigationBar.cs" />
+    <Compile Include="Pages\Common\Lobby.cs" />
+    <Compile Include="Pages\Common\UacLogOnPage.cs" />
+    <Compile Include="Pages\Menu\Menu.cs" />
+    <Compile Include="Pages\Payment\Booking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Support\NewRequest.cs" />
+    <Compile Include="Pages\Support\NewRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
@@ -74,10 +74,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Transaction\Closing\" />
-    <Folder Include="Views\Transaction\Payment\" />
-    <Folder Include="Views\Transaction\Referal\" />
-    <Folder Include="Views\Transaction\Reservation\" />
+    <Folder Include="Pages\Transaction\Closing\" />
+    <Folder Include="Pages\Transaction\Payment\" />
+    <Folder Include="Pages\Transaction\Referal\" />
+    <Folder Include="Pages\Transaction\Reservation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

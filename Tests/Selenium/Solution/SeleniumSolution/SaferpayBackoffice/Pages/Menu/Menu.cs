@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Views.Menu
+namespace Six.Saferpay.QA.Selenium.Pages.Menu
 {
     public class Menu
     {
