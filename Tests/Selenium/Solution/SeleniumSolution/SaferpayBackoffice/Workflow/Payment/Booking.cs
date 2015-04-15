@@ -1,6 +1,7 @@
 using System;
 using Six.QA.Selenium.Extension.Helper;
 using Six.Saferpay.QA.Selenium.Data;
+using Six.Saferpay.QA.Selenium.Factory;
 
 namespace Six.Saferpay.QA.Selenium.Workflow.Payment
 {
@@ -29,12 +30,11 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
 
         private void ClickExecute()
         {
-            throw new NotImplementedException();
+            Pages.Payment.Booking.Pay.Button().Click();
         }
 
         private void ClickBooking()
         {
-            Pages.Payment.Booking.Pay.Button().Click();
         }
 
         public Booking On(Account account)
@@ -45,8 +45,7 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
 
         private void ChooseAccount()
         {
-            if (_account == null)_account = new Default();
-
+            if (_account == null) _account = new Default();
         }
 
         protected virtual void EnterBookingData(Data.Payment.Booking booking)
