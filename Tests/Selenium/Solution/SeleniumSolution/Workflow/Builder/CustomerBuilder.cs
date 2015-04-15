@@ -1,3 +1,4 @@
+using Six.QA.Selenium.Extension.Helper;
 using Six.Scs.QA.Selenium.Common.Menu;
 using Six.Scs.QA.Selenium.Customer;
 using Six.Scs.QA.TestData.ValueObjects;

@@ -67,6 +67,8 @@
   <ItemGroup>
     <Compile Include="Authentication\Webpages\IUacLogOnPage.cs" />
     <Compile Include="Environment\Grid.cs" />
+    <Compile Include="Helper\IBuilder.cs" />
+    <Compile Include="Helper\IPerform.cs" />
     <Compile Include="WebDriver\WebElements\CheckBoxElement.cs" />
     <Compile Include="WebDriver\WebElements\NotTextAreaElementException.cs" />
     <Compile Include="WebDriver\WebElements\SelectElement.cs" />
