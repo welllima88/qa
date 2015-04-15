@@ -2,16 +2,16 @@ namespace Six.Saferpay.QA.Selenium.Data.Payment
 {
     public class Booking
     {
-        public static string ExpiryMonth;
-        public static string ExpiryYear;
-        public static string CardHolderName;
-        public static string VerificationCode;
-        public static string Currency;
-        public static string Amount;
-        public static string OrderId;
-        public static string Description;
-        public static string PayerNote;
-        public static string Pay;
+        public string Amount;
+        public string CardHolderName;
         public string CardNumber;
+        public string Currency;
+        public string Description;
+        public string ExpiryMonth;
+        public string ExpiryYear;
+        public string OrderId;
+        public string Pay;
+        public string PayerNote;
+        public string VerificationCode;
     }
 }
