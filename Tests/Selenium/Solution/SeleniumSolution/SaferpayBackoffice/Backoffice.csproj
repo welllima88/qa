@@ -50,6 +50,7 @@
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\MetaNavigationBarTest.cs" />
     <Compile Include="Tests\Lobby\NavigationBarTest.cs" />
+    <Compile Include="Data\Account.cs" />
     <Compile Include="Workflow\Payment\Booking.cs" />
     <Compile Include="Tests\Support\NewRequest.cs" />
     <Compile Include="Tests\TestLauncher.cs" />
