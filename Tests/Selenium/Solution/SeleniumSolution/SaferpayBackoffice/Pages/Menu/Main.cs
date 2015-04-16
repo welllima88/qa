@@ -1,0 +1,20 @@
+using OpenQA.Selenium.Support.PageObjects;
+using Six.QA.Selenium.Extension.WebDriver;
+
+namespace Six.Saferpay.QA.Selenium.Pages.Menu
+{
+    public class Main
+    {
+        public readonly FurtherProducts FurtherProducts;
+        public readonly MySaferpay MySaferpay;
+        public readonly UserSetup UserSetup;
+
+        public Main()
+        {
+           
+            PageFactory.InitElements(TestDirector.WebDriver, FurtherProducts);
+            PageFactory.InitElements(TestDirector.WebDriver, UserSetup);
+            PageFactory.InitElements(TestDirector.WebDriver, MySaferpay);
+        }
+    }
+}
