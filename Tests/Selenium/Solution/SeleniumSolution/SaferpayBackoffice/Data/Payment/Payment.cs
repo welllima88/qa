@@ -1,6 +1,6 @@
 namespace Six.Saferpay.QA.Selenium.Data.Payment
 {
-    public class Booking
+    public class Payment
     {
         public string Amount;
         public string CardHolderName;

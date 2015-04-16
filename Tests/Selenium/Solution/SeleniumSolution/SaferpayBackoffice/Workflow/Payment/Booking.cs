@@ -6,12 +6,12 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
 {
     public class Booking : IPerform
     {
-        private readonly Data.Payment.Booking _booking;
+        private readonly Data.Payment.Payment _payment;
         private Account _account;
 
-        public Booking(Data.Payment.Booking booking)
+        public Booking(Data.Payment.Payment payment)
         {
-            _booking = booking;
+            _payment = payment;
         }
 
         public void Check()
@@ -23,7 +23,7 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
         {
             ClickBooking();
             ChooseAccount();
-            EnterBookingData(_booking);
+            EnterBookingData(_payment);
             ClickExecute();
         }
 
@@ -47,19 +47,19 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
             if (_account == null) _account = Factory.Account.Default();
         }
 
-        protected virtual void EnterBookingData(Data.Payment.Booking booking)
+        protected virtual void EnterBookingData(Data.Payment.Payment payment)
         {
-            Pages.Payment.Booking.CardNumber.TextField().TypeText(booking.CardNumber);
-            Pages.Payment.Booking.ExpiryMonth.Selector().SelectByText(booking.ExpiryMonth);
-            Pages.Payment.Booking.ExpiryYear.Selector().SelectByText(booking.ExpiryYear);
-            Pages.Payment.Booking.CardHolderName.TextField().TypeText(booking.CardHolderName);
-            Pages.Payment.Booking.VerificationCode.TextField().TypeText(booking.VerificationCode);
-            Pages.Payment.Booking.Currency.TextField().TypeText(booking.Currency);
-            Pages.Payment.Booking.Amount.TextField().TypeText(booking.Amount);
-            Pages.Payment.Booking.OrderId.TextField().TypeText(booking.OrderId);
-            Pages.Payment.Booking.Description.TextField().TypeText(booking.Description);
-            Pages.Payment.Booking.Amount.TextField().TypeText(booking.Amount);
-            Pages.Payment.Booking.PayerNote.TextField().TypeText(booking.PayerNote);
+            Pages.Payment.Booking.CardNumber.TextField().TypeText(payment.CardNumber);
+            Pages.Payment.Booking.ExpiryMonth.Selector().SelectByText(payment.ExpiryMonth);
+            Pages.Payment.Booking.ExpiryYear.Selector().SelectByText(payment.ExpiryYear);
+            Pages.Payment.Booking.CardHolderName.TextField().TypeText(payment.CardHolderName);
+            Pages.Payment.Booking.VerificationCode.TextField().TypeText(payment.VerificationCode);
+            Pages.Payment.Booking.Currency.TextField().TypeText(payment.Currency);
+            Pages.Payment.Booking.Amount.TextField().TypeText(payment.Amount);
+            Pages.Payment.Booking.OrderId.TextField().TypeText(payment.OrderId);
+            Pages.Payment.Booking.Description.TextField().TypeText(payment.Description);
+            Pages.Payment.Booking.Amount.TextField().TypeText(payment.Amount);
+            Pages.Payment.Booking.PayerNote.TextField().TypeText(payment.PayerNote);
         }
     }
 }

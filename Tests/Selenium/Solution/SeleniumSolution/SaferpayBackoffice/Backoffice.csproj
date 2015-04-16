@@ -45,7 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Payment\Booking.cs" />
+    <Compile Include="Data\Payment\Payment.cs" />
     <Compile Include="Environment\Dev.cs" />
     <Compile Include="Tests\Lobby\MenuTest.cs" />
     <Compile Include="Tests\Lobby\MetaNavigationBarTest.cs" />
