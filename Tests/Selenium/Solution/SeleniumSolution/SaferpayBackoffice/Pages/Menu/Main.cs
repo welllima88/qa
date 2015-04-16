@@ -9,7 +9,7 @@ namespace Six.Saferpay.QA.Selenium.Pages.Menu
         public readonly MySaferpay MySaferpay;
         public readonly UserSetup UserSetup;
 
-        public Main()
+        private Main()
         {
             FurtherProducts = new FurtherProducts();
             UserSetup = new UserSetup();
@@ -17,6 +17,11 @@ namespace Six.Saferpay.QA.Selenium.Pages.Menu
             PageFactory.InitElements(TestDirector.WebDriver, FurtherProducts);
             PageFactory.InitElements(TestDirector.WebDriver, UserSetup);
             PageFactory.InitElements(TestDirector.WebDriver, MySaferpay);
+        }
+
+        public static Main Menu()
+        {
+            return new Main();
         }
     }
 }
