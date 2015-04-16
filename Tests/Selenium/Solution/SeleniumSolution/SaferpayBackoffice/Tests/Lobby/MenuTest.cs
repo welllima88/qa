@@ -8,13 +8,13 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
     [Category("Main")]
     public class MenuTest
     {
-        private Main _menu;
+        private Menu _menu;
 
         [TestFixtureSetUp]
         public void ClassInit()
         {
             TestDirector.Navigate();
-            _menu = Main.Menu();
+            _menu = Menu.Main();
         }
 
         [Test]
