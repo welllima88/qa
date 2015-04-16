@@ -5,93 +5,93 @@ using Six.Saferpay.QA.Selenium.Pages.Menu;
 namespace Six.Saferpay.QA.Selenium.Tests.Lobby
 {
     [TestFixture]
-    [Category("Menu")]
+    [Category("Main")]
     public class MenuTest
     {
-        private Menu _menu;
+        private Main _menu;
 
         [TestFixtureSetUp]
         public void ClassInit()
         {
             TestDirector.Navigate();
-            _menu = new Menu();
+            _menu = new Main();
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void Administration()
         {
-            Assert.That(_menu.Administration.Displayed);
+            Assert.That(_menu.MySaferpay.Administration.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void BatchProcessing()
         {
-            Assert.That(_menu.BatchProcessing.Displayed);
+            Assert.That(_menu.MySaferpay.BatchProcessing.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void ChangeEmail()
         {
-            Assert.That(_menu.ChangeEmail.Displayed);
+            Assert.That(_menu.UserSetup.ChangeEmail.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void ChangePassword()
         {
-            Assert.That(_menu.ChangePassword.Displayed);
+            Assert.That(_menu.UserSetup.ChangePassword.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void OnlineSupport()
         {
-            Assert.That(_menu.OnlineSupport.Displayed);
+            Assert.That(_menu.MySaferpay.OnlineSupport.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void ProductInfo()
         {
-            Assert.That(_menu.ProductInfo.Displayed);
+            Assert.That(_menu.FurtherProducts.ProductInfo.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void RiskManagement()
         {
-            Assert.That(_menu.RiskManagement.Displayed);
+            Assert.That(_menu.MySaferpay.RiskManagement.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void SecureCardData()
         {
-            Assert.That(_menu.SecureCardData.Displayed);
+            Assert.That(_menu.MySaferpay.SecureCardData.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void SecurePayGate()
         {
-            Assert.That(_menu.SecurePayGate.Displayed);
+            Assert.That(_menu.MySaferpay.SecurePayGate.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void TopasPms()
         {
-            Assert.That(_menu.TopasPms.Displayed);
+            Assert.That(_menu.FurtherProducts.TopasPms.Displayed);
         }
 
         [Test]
-        [Category("Menu")]
+        [Category("Main")]
         public void Transactions()
         {
-            Assert.That(_menu.Transactions.Displayed);
+            Assert.That(_menu.MySaferpay.Transactions.Displayed);
         }
     }
 }
