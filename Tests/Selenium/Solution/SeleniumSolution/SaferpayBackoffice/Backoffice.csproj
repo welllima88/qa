@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Data\Payment\Payment.cs" />
     <Compile Include="Environment\Dev.cs" />
+    <Compile Include="Pages\Menu\Payments.cs" />
     <Compile Include="Pages\Menu\FurtherProducts.cs" />
     <Compile Include="Pages\Menu\MySaferpay.cs" />
     <Compile Include="Pages\Menu\UserSetup.cs" />
@@ -65,7 +66,7 @@
     <Compile Include="Pages\Common\NavigationBar.cs" />
     <Compile Include="Pages\Common\Lobby.cs" />
     <Compile Include="Pages\Common\UacLogOnPage.cs" />
-    <Compile Include="Pages\Menu\Main.cs" />
+    <Compile Include="Pages\Menu\Menu.cs" />
     <Compile Include="Pages\Payment\Booking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Support\NewRequest.cs" />
