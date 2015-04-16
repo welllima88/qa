@@ -11,7 +11,9 @@ namespace Six.Saferpay.QA.Selenium.Pages.Menu
 
         public Main()
         {
-           
+            FurtherProducts = new FurtherProducts();
+            UserSetup = new UserSetup();
+            MySaferpay = new MySaferpay();
             PageFactory.InitElements(TestDirector.WebDriver, FurtherProducts);
             PageFactory.InitElements(TestDirector.WebDriver, UserSetup);
             PageFactory.InitElements(TestDirector.WebDriver, MySaferpay);
