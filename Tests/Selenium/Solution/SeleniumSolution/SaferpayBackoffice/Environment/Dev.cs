@@ -1,7 +1,7 @@
 ﻿using System;
 using Six.QA.Selenium.Extension.Authentication.Method;
 using Six.QA.Selenium.Extension.Environment;
-using Six.Saferpay.QA.Selenium.Views.Common;
+using Six.Saferpay.QA.Selenium.Pages.Common;
 
 namespace Six.Saferpay.QA.Selenium.Environment
 {
