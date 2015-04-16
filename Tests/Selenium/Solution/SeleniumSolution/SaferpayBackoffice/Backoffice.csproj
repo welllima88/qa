@@ -69,7 +69,7 @@
     <Compile Include="Pages\Payment\Booking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Support\NewRequest.cs" />
-    <Compile Include="Factory\Default.cs" />
+    <Compile Include="Factory\Account\Default.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">

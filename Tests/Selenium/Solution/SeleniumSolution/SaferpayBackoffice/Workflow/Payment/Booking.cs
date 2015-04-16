@@ -44,7 +44,7 @@ namespace Six.Saferpay.QA.Selenium.Workflow.Payment
 
         private void ChooseAccount()
         {
-            if (_account == null) _account = Factory.Account.Default();
+            if (_account == null) _account = Factory.Account.Account.Default();
         }
 
         protected virtual void EnterBookingData(Data.Payment.Payment payment)
