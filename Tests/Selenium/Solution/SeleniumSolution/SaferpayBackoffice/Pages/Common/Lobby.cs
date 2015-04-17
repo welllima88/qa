@@ -17,6 +17,8 @@ namespace Six.Saferpay.QA.Selenium.Pages.Common
             try
             {
                 TestDirector.Navigate();
+                // redirect is very slow and we click the logoff with lower timeout
+                TestDirector.WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(2));
                 LogOffLink.Click();
             }
             catch (NoSuchElementException)
