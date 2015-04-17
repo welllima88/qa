@@ -14,7 +14,7 @@ namespace Six.Saferpay.QA.Selenium.Tests.Lobby
         public void ClassInit()
         {
             TestDirector.Navigate();
-            _menu = Menu.Main();
+            _menu = Menu.Home();
         }
 
         [Test]

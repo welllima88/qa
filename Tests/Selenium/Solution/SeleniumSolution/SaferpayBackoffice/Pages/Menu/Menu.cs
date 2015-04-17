@@ -23,7 +23,7 @@ namespace Six.Saferpay.QA.Selenium.Pages.Menu
             PageFactory.InitElements(TestDirector.WebDriver, Payments);
         }
 
-        public static Menu Main()
+        public static Menu Home()
         {
             return new Menu();
         }
