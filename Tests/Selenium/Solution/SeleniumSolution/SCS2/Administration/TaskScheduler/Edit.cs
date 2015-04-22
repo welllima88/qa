@@ -5,8 +5,50 @@ namespace Six.Scs.QA.Selenium.Administration.TaskScheduler
 {
     public class Edit : WebObject
     {
-        private const string Pre =
-            "html body#body table#tableStructure tbody tr#rowContent td#content table tbody tr.Summary td";
+        public static IWebElementAdapter Retries
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter NextRun
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter Errors
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter State
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter LastErrorMessage
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter LastErrorCode
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter LastRun
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter LastStop
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
+
+        public static IWebElementAdapter LastChange
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("??")); }
+        }
 
         public static IWebElementAdapter SaveButton
         {
