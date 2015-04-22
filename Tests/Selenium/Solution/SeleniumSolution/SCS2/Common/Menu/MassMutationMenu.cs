@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/MassMutation/CustomersFileUpload.aspx']"));
+                        By.CssSelector("td#leftHandMenu a[href$='/merchant/customermassmutation/']"));
             }
         }
 
@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/MassMutation/LocationsFileUpload.aspx']"));
+                        By.CssSelector("td#leftHandMenu a[href$='/merchant/locationmassmutation/']"));
             }
         }
 
@@ -32,7 +32,7 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/MassMutation/TerminalsFileUpload.aspx']"));
+                        By.CssSelector("td#leftHandMenu a[href$='/terminal/terminalmassmutation/']"));
             }
         }
 
@@ -42,13 +42,13 @@ namespace Six.Scs.QA.Selenium.Common.Menu
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/MassMutation/ContractsFileUpload.aspx']"));
+                        By.CssSelector("td#leftHandMenu a[href$='/terminal/contractmassmutation/']"));
             }
         }
 
         public static IWebElementAdapter AcquirerChange
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/MassAcqExchange']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/terminal/acquirerexchangemassmutation/']")); }
         }
 
         public static IWebElementAdapter MassMutation
