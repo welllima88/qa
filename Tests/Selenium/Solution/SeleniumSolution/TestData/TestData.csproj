@@ -60,6 +60,7 @@
     <Compile Include="Factory\Ticket.cs" />
     <Compile Include="Repository\Customer.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="ValueObjects\Task.cs" />
     <Compile Include="ValueObjects\BillingAddress.cs" />
     <Compile Include="ValueObjects\Brand\Acquirer.cs" />
     <Compile Include="Factory\Adress.cs" />
