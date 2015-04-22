@@ -128,7 +128,6 @@
     <Compile Include="Location\Create.cs" />
     <Compile Include="Location\Edit.cs" />
     <Compile Include="Location\View.cs" />
-    <Compile Include="Massmuation\AcquirerChange.cs" />
     <Compile Include="Massmuation\FileUpload.cs" />
     <Compile Include="Massmuation\Progress.cs" />
     <Compile Include="Massmuation\TerminalValidation.cs" />
