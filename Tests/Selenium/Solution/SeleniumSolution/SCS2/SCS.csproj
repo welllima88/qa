@@ -83,6 +83,9 @@
     <Compile Include="Administration\SimCard\History.cs" />
     <Compile Include="Administration\SimCard\View.cs" />
     <Compile Include="Administration\SoftwareExchange\Create.cs" />
+    <Compile Include="Administration\TaskScheduler\Edit.cs" />
+    <Compile Include="Administration\TaskScheduler\Create.cs" />
+    <Compile Include="Administration\TaskScheduler\List.cs" />
     <Compile Include="Brand\AcquirerCreate.cs" />
     <Compile Include="Brand\Create.cs" />
     <Compile Include="Brand\Edit.cs" />
