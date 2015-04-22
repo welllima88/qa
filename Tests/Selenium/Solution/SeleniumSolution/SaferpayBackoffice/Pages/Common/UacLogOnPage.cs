@@ -2,7 +2,7 @@
 using Six.QA.Selenium.Extension.Authentication.Webpages;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Saferpay.QA.Selenium.Views.Common
+namespace Six.Saferpay.QA.Selenium.Pages.Common
 {
     public class UacLogOnPage : WebObject, IUacLogOnPage
     {

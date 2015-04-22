@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Saferpay.QA.Selenium.Views.Common;
+using Six.Saferpay.QA.Selenium.Pages.Common;
 
 namespace Six.Saferpay.QA.Selenium.Tests.Lobby
 {

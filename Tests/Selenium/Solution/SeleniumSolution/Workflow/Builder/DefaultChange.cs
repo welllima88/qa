@@ -1,3 +1,4 @@
+using Six.QA.Selenium.Extension.Helper;
 using Six.Scs.QA.Selenium.Common;
 using Six.Scs.QA.TestData.Factory;
 

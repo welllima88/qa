@@ -58,8 +58,6 @@
     <Compile Include="Builder\CustomerBuilder.cs" />
     <Compile Include="Builder\DelayedChange.cs" />
     <Compile Include="Builder\DefaultChange.cs" />
-    <Compile Include="Builder\IBuilder.cs" />
-    <Compile Include="Builder\IPerform.cs" />
     <Compile Include="Builder\TerminalBuilder.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="InfoText.cs" />

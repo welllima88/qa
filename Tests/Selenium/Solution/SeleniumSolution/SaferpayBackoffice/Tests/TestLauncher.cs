@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.Environment;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.Saferpay.QA.Selenium.Environment;
-using Six.Saferpay.QA.Selenium.Views.Common;
+using Six.Saferpay.QA.Selenium.Pages.Common;
 
 namespace Six.Saferpay.QA.Selenium.Tests
 {
@@ -17,7 +17,7 @@ namespace Six.Saferpay.QA.Selenium.Tests
         public void LaunchTestDirector()
         {
             TestDirector.TestEnvironment = new Dev();
-            TestDirector.PrepareBrowser(Grid.Build);
+            TestDirector.PrepareBrowser(Grid.Local);
             TestDirector.Start();
 
             PageFactory.InitElements(TestDirector.WebDriver, TestDirector.TestEnvironment.Application);

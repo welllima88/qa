@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Six.Saferpay.QA.Selenium.Views.Batch
+namespace Six.Saferpay.QA.Selenium.Pages.Batch
 {
-    public class Overview
+    public class Impport
     {
         [FindsBy(How = How.CssSelector, Using = "html>body>img.companyLogo")]
         public IWebElement CompanyLogo;

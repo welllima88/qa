@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Selenium.Environments
     {
         public Dev()
         {
-            BaseUrl = new Uri("https://mdzhwcweb01/scs2/");
+            BaseUrl = new Uri("https://scs.tkcdev.com/scs2/");
 
             Application = new Lobby();
             Authentication = new UacAuthentication(new UacLogOnPage(), "six_scs_auto", "six_scs_auto_PW");

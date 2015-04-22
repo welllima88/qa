@@ -85,7 +85,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             // Testlogic.User.AssignRoles(_user);
 
             Brands.Create(_duplicatedTerminals.ElementAt(1), new Additional());
-                // {0,1,..} means create brands on second terminal
+            // {0,1,..} means create brands on second terminal
             // check again already existing contracts:
             contracts.Check();
 

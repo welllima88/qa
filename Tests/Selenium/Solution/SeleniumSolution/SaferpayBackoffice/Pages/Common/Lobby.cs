@@ -4,7 +4,7 @@ using OpenQA.Selenium.Support.PageObjects;
 using Six.QA.Selenium.Extension.Authentication;
 using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Views.Common
+namespace Six.Saferpay.QA.Selenium.Pages.Common
 {
     public class Lobby : IApplication
     {
@@ -17,6 +17,8 @@ namespace Six.Saferpay.QA.Selenium.Views.Common
             try
             {
                 TestDirector.Navigate();
+                // redirect is very slow and we click the logoff with lower timeout
+                TestDirector.WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(2));
                 LogOffLink.Click();
             }
             catch (NoSuchElementException)

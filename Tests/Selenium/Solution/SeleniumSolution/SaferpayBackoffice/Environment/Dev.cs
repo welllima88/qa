@@ -1,7 +1,7 @@
 ﻿using System;
 using Six.QA.Selenium.Extension.Authentication.Method;
 using Six.QA.Selenium.Extension.Environment;
-using Six.Saferpay.QA.Selenium.Views.Common;
+using Six.Saferpay.QA.Selenium.Pages.Common;
 
 namespace Six.Saferpay.QA.Selenium.Environment
 {
@@ -9,7 +9,7 @@ namespace Six.Saferpay.QA.Selenium.Environment
     {
         public Dev()
         {
-            BaseUrl = new Uri("https://mdzhwcweb01/Saferpay/BO");
+            BaseUrl = new Uri("https://saferpay.tkcdev.com/BO");
             Application = new Lobby();
             Authentication = new UacAuthentication(new UacLogOnPage(), "six_scs_auto", "six_scs_auto_PW");
             SeleniumConfig = new SeleniumConfig

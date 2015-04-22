@@ -1,10 +1,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Views.Menu
+namespace Six.Saferpay.QA.Selenium.Pages.Menu
 {
-    public class Menu
+    public class MySaferpay
     {
         [FindsBy(How = How.CssSelector, Using = "div#menu li a[href$='/Administration/Account']")]
         public IWebElement
@@ -14,22 +13,10 @@ namespace Six.Saferpay.QA.Selenium.Views.Menu
         public IWebElement
             BatchProcessing;
 
-        [FindsBy(How = How.CssSelector, Using = "div#menu li a[href$='/BO/ChangeEmailAddress']")]
-        public IWebElement
-            ChangeEmail;
-
-        [FindsBy(How = How.CssSelector, Using = "div#menu li a[href$='/BO/ChangePassword']")]
-        public IWebElement
-            ChangePassword;
-
         [FindsBy(How = How.CssSelector, Using = "div#menu li a[href*='/user/Support.asp?CSRFToken=']")]
         public
             IWebElement
             OnlineSupport;
-
-        [FindsBy(How = How.CssSelector,
-            Using = "div#menu li a[href='https://www.six-payment-services.com/de/shared/offering/products/psp.html']")]
-        public IWebElement ProductInfo;
 
         [FindsBy(How = How.CssSelector, Using = "div#menu li a[href$='/Risk/Overview']")]
         public IWebElement RiskManagement;
@@ -43,17 +30,8 @@ namespace Six.Saferpay.QA.Selenium.Views.Menu
         public IWebElement
             SecurePayGate;
 
-        [FindsBy(How = How.CssSelector, Using = "div#menu li a[href='https://gate.telekurs.ch/pmsp/?login']")]
-        public
-            IWebElement TopasPms;
-
         [FindsBy(How = How.CssSelector, Using = "div#menu li a[href$='/Commerce/JournalOverview']")]
         public IWebElement
             Transactions;
-
-        public Menu()
-        {
-            PageFactory.InitElements(TestDirector.WebDriver, this);
-        }
     }
 }

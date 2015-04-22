@@ -1,3 +1,4 @@
+using Six.QA.Selenium.Extension.Helper;
 using Six.Scs.QA.Selenium.Brand;
 using Six.Scs.QA.Selenium.Terminal.Dashboard;
 using Six.Scs.QA.TestData.ValueObjects.Brand;

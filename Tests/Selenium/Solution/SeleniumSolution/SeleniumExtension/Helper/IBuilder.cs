@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Workflow.Builder
+namespace Six.QA.Selenium.Extension.Helper
 {
     public interface IBuilder : ICreate, IEdit, ICheck
     {
