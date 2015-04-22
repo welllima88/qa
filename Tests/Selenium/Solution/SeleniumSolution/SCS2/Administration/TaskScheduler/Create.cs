@@ -5,9 +5,6 @@ namespace Six.Scs.QA.Selenium.Administration.TaskScheduler
 {
     public class Create : WebObject
     {
-        private const string Pre =
-            "html body#body table#tableStructure tbody tr#rowContent td#content table tbody tr.Summary td";
-
         public static string MachineName
         {
             get { return WebDriver.FindAdaptedElement(By.Id("TaskScheduler_Machine")).Text; }
