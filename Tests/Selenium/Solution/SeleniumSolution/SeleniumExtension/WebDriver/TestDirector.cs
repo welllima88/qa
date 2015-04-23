@@ -101,7 +101,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
         public static void Stop()
         {
             TestEnvironment.Application.LogOff();
-            Console.Out.WriteLine("Logon");
+            Console.Out.WriteLine("Logoff");
             WebDriver.Quit();
             Console.Out.WriteLine("Close WebDriver");
         }
