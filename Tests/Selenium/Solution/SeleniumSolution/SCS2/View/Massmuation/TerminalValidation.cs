@@ -60,7 +60,7 @@ namespace Six.Scs.QA.Selenium.View.Massmuation
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("tbody input#ctl00_bodyContentPlaceHolder_btnProceed"));
+                    WebDriver.FindAdaptedElement(By.Id("save"));
             }
         }
     }
