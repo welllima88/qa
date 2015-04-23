@@ -18,18 +18,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest
             TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(Grid.Build);
             TestDirector.Start();
+
+            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
 
         [TearDown]
         public void StopTestDirector()
         {
             TestDirector.Stop();
-        }
-
-        [TearDown]
-        public void LoginSuccessful()
-        {
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
     }
 }
