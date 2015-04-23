@@ -8,9 +8,14 @@ namespace Six.Saferpay.QA.Selenium.Pages.Common
 {
     public class Lobby : IApplication
     {
-        [FindsBy(How = How.CssSelector, Using = "html>body>img.companyLogo")] public IWebElement CompanyLogo;
-        [FindsBy(How = How.CssSelector, Using = "td#content h1")] public IWebElement Headline;
-        [FindsBy(How = How.CssSelector, Using = "li#text_logout>a")] public IWebElement LogOffLink;
+        [FindsBy(How = How.CssSelector, Using = "html>body>img.companyLogo")]
+        public IWebElement CompanyLogo;
+
+        [FindsBy(How = How.CssSelector, Using = "td#content h1")]
+        public IWebElement Headline;
+
+        [FindsBy(How = How.CssSelector, Using = "li#text_logout>a")]
+        public IWebElement LogOffLink;
 
         public void LogOff()
         {
@@ -24,6 +29,10 @@ namespace Six.Saferpay.QA.Selenium.Pages.Common
             catch (NoSuchElementException)
             {
                 Console.Error.WriteLine("Closing browser without logoff, because logout-element not found..");
+            }
+            catch (WebDriverTimeoutException)
+            {
+                Console.Error.WriteLine("Ignoring the page-load-TIMEOUT after logoff..");
             }
         }
     }
