@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Administration.SerialNumberManage;
-using Six.Scs.QA.Selenium.Common.Menu;
+using Six.Scs.QA.Selenium.View.Administration.SerialNumberManage;
+using Six.Scs.QA.Selenium.View.Common.Menu;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
 {

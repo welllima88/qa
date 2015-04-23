@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Selenium.Model.ValueObjects;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Administration
 {

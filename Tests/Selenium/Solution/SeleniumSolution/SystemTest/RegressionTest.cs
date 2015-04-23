@@ -2,31 +2,31 @@
 using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
-using Six.Scs.QA.Workflow.Builder;
 using Contact = Six.Scs.QA.Testlogic.Contact;
 using Default = Six.Scs.QA.Testlogic.Builder.Customer.Six.Default;
-using SimCard = Six.Scs.QA.TestData.ValueObjects.SimCard;
+using SimCard = Six.Scs.QA.Selenium.Model.ValueObjects.SimCard;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
     [TestFixture]
     public class RegressionTest
     {
-        private static TestData.ValueObjects.Terminal _terminalLocation2;
-        private static TestData.ValueObjects.Terminal _terminalLocation1;
+        private static Model.ValueObjects.Terminal _terminalLocation2;
+        private static Model.ValueObjects.Terminal _terminalLocation1;
         private static CustomerBuilder _six;
-        private static TestData.ValueObjects.Location _location1;
-        private static TestData.ValueObjects.Person _personOnCustomer;
-        private static TestData.ValueObjects.Person _personOnLocation;
-        private static TestData.ValueObjects.User _user;
-        private static IEnumerable<TestData.ValueObjects.Terminal> _duplicatedTerminals;
-        private static TestData.ValueObjects.Mpd _mpd;
+        private static Model.ValueObjects.Location _location1;
+        private static Model.ValueObjects.Person _personOnCustomer;
+        private static Model.ValueObjects.Person _personOnLocation;
+        private static Model.ValueObjects.User _user;
+        private static IEnumerable<Model.ValueObjects.Terminal> _duplicatedTerminals;
+        private static Model.ValueObjects.Mpd _mpd;
         private static SimCard _sim;
-        private static TestData.ValueObjects.Location _location2;
+        private static Model.ValueObjects.Location _location2;
         private static TroubleTicket _troubleTicket;
 
         [TestFixtureSetUp]

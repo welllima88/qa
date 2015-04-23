@@ -50,50 +50,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Factory\Agency.cs" />
-    <Compile Include="Factory\BillingAddress.cs" />
-    <Compile Include="Factory\Brand.cs" />
-    <Compile Include="Factory\Currency.cs" />
-    <Compile Include="Factory\Services.cs" />
-    <Compile Include="Factory\Simcard.cs" />
-    <Compile Include="Factory\TerminalReplace.cs" />
-    <Compile Include="Factory\Ticket.cs" />
-    <Compile Include="Repository\Customer.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="ValueObjects\BillingAddress.cs" />
-    <Compile Include="ValueObjects\Brand\Acquirer.cs" />
-    <Compile Include="Factory\Adress.cs" />
-    <Compile Include="ValueObjects\Brand\Brand.cs" />
-    <Compile Include="Factory\Contact.cs" />
-    <Compile Include="Factory\Person.cs" />
-    <Compile Include="ValueObjects\Brand\Contract.cs" />
-    <Compile Include="Factory\Contract.cs" />
-    <Compile Include="Factory\Customer.cs" />
-    <Compile Include="Factory\Factory.cs" />
-    <Compile Include="Factory\Location.cs" />
-    <Compile Include="Factory\Mpd.cs" />
-    <Compile Include="Factory\TerminalDuplicate.cs" />
-    <Compile Include="Factory\Terminal.cs" />
-    <Compile Include="Factory\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueObjects\Adress.cs" />
-    <Compile Include="ValueObjects\Agency.cs" />
-    <Compile Include="ValueObjects\Brand\Currency.cs" />
-    <Compile Include="ValueObjects\Brand\OnUs.cs" />
-    <Compile Include="ValueObjects\Brand\Six.cs" />
-    <Compile Include="ValueObjects\Contact.cs" />
-    <Compile Include="ValueObjects\Person.cs" />
-    <Compile Include="ValueObjects\Customer.cs" />
-    <Compile Include="ValueObjects\Location.cs" />
-    <Compile Include="ValueObjects\Mpd.cs" />
-    <Compile Include="ValueObjects\Service.cs" />
-    <Compile Include="ValueObjects\SimCard.cs" />
-    <Compile Include="ValueObjects\Terminal.cs" />
-    <Compile Include="ValueObjects\TerminalDuplicate.cs" />
-    <Compile Include="ValueObjects\TerminalReplace.cs" />
-    <Compile Include="ValueObjects\TroubleTicket.cs" />
-    <Compile Include="ValueObjects\Role.cs" />
-    <Compile Include="ValueObjects\User.cs" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

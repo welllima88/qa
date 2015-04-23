@@ -1,41 +1,41 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Administration.SimCard;
-using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.TestData.Factory;
+using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Selenium.View.Administration.SimCard;
+using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Selenium.View.Common.Menu;
 
 namespace Six.Scs.QA.Testlogic
 {
     public class SimCard
     {
-        public static TestData.ValueObjects.SimCard Create()
+        public static Selenium.Model.ValueObjects.SimCard Create()
         {
             NavigationBar.Lobby.Click();
             LobbyMenu.SimCardManage.Click();
 
-            TestData.ValueObjects.SimCard simCard = Simcard.Create();
+            Selenium.Model.ValueObjects.SimCard simCard = Simcard.Create();
 
-            Workflow.SimCard.Create(simCard);
+            Selenium.Workflow.SimCard.Create(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static TestData.ValueObjects.SimCard Edit(TestData.ValueObjects.SimCard _simCard)
+        public static Selenium.Model.ValueObjects.SimCard Edit(Selenium.Model.ValueObjects.SimCard _simCard)
         {
             Open(_simCard);
-            TestData.ValueObjects.SimCard simCard = Simcard.Edit();
+            Selenium.Model.ValueObjects.SimCard simCard = Simcard.Edit();
 
-            Workflow.SimCard.Edit(simCard);
+            Selenium.Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }
 
-        private static void Open(TestData.ValueObjects.SimCard simCard)
+        private static void Open(Selenium.Model.ValueObjects.SimCard simCard)
         {
             Search.SimcardBySimCardNumber(simCard.SimCardNumber);
         }
 
-        public static void Check(TestData.ValueObjects.SimCard simCard)
+        public static void Check(Selenium.Model.ValueObjects.SimCard simCard)
         {
             Assert.AreEqual(simCard.NetProvider, View.NetProvider);
             Assert.AreEqual(simCard.SimCardNumber, View.SimCardNumber);
@@ -46,28 +46,28 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(simCard.TerminalId, View.TerminalId);
         }
 
-        public static TestData.ValueObjects.SimCard Lock(TestData.ValueObjects.SimCard sim)
+        public static Selenium.Model.ValueObjects.SimCard Lock(Selenium.Model.ValueObjects.SimCard sim)
         {
             Open(sim);
-            Workflow.SimCard.Lock(sim);
+            Selenium.Workflow.SimCard.Lock(sim);
             Check(sim);
             return sim;
         }
 
-        public static TestData.ValueObjects.SimCard Unlink(TestData.ValueObjects.SimCard simCard)
+        public static Selenium.Model.ValueObjects.SimCard Unlink(Selenium.Model.ValueObjects.SimCard simCard)
         {
             Open(simCard);
-            Workflow.SimCard.Unlink(simCard);
+            Selenium.Workflow.SimCard.Unlink(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static TestData.ValueObjects.SimCard Link(TestData.ValueObjects.SimCard simCard,
-            TestData.ValueObjects.Terminal terminal)
+        public static Selenium.Model.ValueObjects.SimCard Link(Selenium.Model.ValueObjects.SimCard simCard,
+            Selenium.Model.ValueObjects.Terminal terminal)
         {
             Open(simCard);
             simCard.TerminalId = terminal.Id;
-            Workflow.SimCard.Edit(simCard);
+            Selenium.Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }

@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.User;
-using List = Six.Scs.QA.Selenium.User.List;
+using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.User;
+using List = Six.Scs.QA.Selenium.View.User.List;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Validation.User
 {

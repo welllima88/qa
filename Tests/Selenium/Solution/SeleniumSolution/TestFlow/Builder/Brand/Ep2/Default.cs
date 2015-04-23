@@ -1,9 +1,9 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Brand;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets.Brand;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.Workflow.Builder;
+using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Selenium.View.Brand;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Brand.Ep2
 {
