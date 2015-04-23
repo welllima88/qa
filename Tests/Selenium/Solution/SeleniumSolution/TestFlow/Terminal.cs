@@ -38,7 +38,7 @@ namespace Six.Scs.QA.Testlogic
 
             TerminalValidation.ExecuteButton.Click();
 
-            var tries = new Try(20);
+            var tries = new Try(33);
 
             while (!Progress.HasFinished() && tries.Again())
             {
