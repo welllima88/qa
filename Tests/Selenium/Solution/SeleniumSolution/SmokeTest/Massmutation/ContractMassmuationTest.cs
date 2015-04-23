@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Massmuation;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Massmuation;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
 {
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         public void Description()
         {
             Assert.AreEqual(
-                "Mehrere Verträge hinzufügen",
+                "Bitte geben Sie den Pfad zur Excel Datei mit den Vertragsdaten an. Stellen Sie sicher, dass Sie die richtige Vorlage verwenden. Die neuste Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
                 FileUpload.Description);
         }
 
@@ -46,14 +46,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         [Category("Massmutation"), Category("Contract")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
+            Assert.AreEqual("Importieren", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Contract")]
         public void Title()
         {
-            Assert.AreEqual("Verträge", FileUpload.Title);
+            Assert.AreEqual("Vertrag Massenmutation", FileUpload.Title);
         }
     }
 }

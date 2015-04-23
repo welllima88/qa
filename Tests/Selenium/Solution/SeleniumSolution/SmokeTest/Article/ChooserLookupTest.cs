@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Terminal;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Terminal;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Article
 {

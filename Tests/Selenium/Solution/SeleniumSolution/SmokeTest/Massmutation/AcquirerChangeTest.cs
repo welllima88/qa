@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Massmuation;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Massmuation;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
 {
@@ -24,36 +24,36 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         public void Description()
         {
             Assert.AreEqual(
-                "Bitte geben Sie den Pfad zum Excel File mit den Acquirerwechsel Daten an. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
-                AcquirerChange.Description);
+                "Bitte geben Sie den Pfad zur Excel Datei mit den Acquirerdaten an. Stellen Sie sicher, dass Sie die richtige Vorlage verwenden. Die neuste Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
+                FileUpload.Description);
         }
 
         [Test]
         [Category("Massmutation"), Category("AcquirerChange")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel Vorlage herunterladen", AcquirerChange.DownloadTemplate);
+            Assert.AreEqual("Excel Vorlage herunterladen", FileUpload.DownloadTemplate);
         }
 
         [Test]
         [Category("Massmutation"), Category("AcquirerChange")]
         public void FileChooser()
         {
-            Assert.AreEqual("", AcquirerChange.FileChooser.Text);
+            Assert.AreEqual("", FileUpload.FileChooser.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("AcquirerChange")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", AcquirerChange.FileUploadButton.Text);
+            Assert.AreEqual("Importieren", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("AcquirerChange")]
         public void Title()
         {
-            Assert.AreEqual("Mehrere Acquirer wechseln", AcquirerChange.Title);
+            Assert.AreEqual("Acquirerwechsel Massenmutation", FileUpload.Title);
         }
     }
 }

@@ -1,16 +1,16 @@
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Person;
-using Six.Scs.QA.TestData.ValueObjects;
-using Lobby = Six.Scs.QA.Workflow.Lobby;
+using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Person;
+using Lobby = Six.Scs.QA.Selenium.Workflow.Lobby;
 
 namespace Six.Scs.QA.Testlogic
 {
     public static class Contact
     {
-        public static Person Create(TestData.ValueObjects.Customer customer)
+        public static Person Create(Selenium.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();
@@ -19,15 +19,15 @@ namespace Six.Scs.QA.Testlogic
 
         private static Person CreateAndSave()
         {
-            Person person = TestData.Factory.Person.Create();
-            Workflow.Contact.Create(person);
+            Person person = Selenium.Model.Factory.Person.Create();
+            Selenium.Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
             Check(person);
             return person;
         }
 
-        public static Person Create(TestData.ValueObjects.Location location)
+        public static Person Create(Selenium.Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.ContactCreate.Click();
@@ -38,9 +38,9 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            Person person = TestData.Factory.Person.Edit();
+            Person person = Selenium.Model.Factory.Person.Edit();
 
-            Workflow.Contact.Edit(person);
+            Selenium.Workflow.Contact.Edit(person);
             Check(person);
 
             Lobby.OpenLatestElement();

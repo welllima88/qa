@@ -96,10 +96,6 @@
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>
       <Name>SeleniumExtension</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Workflow\Workflow.csproj">
-      <Project>{6d99c089-eca8-42da-b74b-eaf28e457d83}</Project>
-      <Name>Workflow</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -18,35 +18,35 @@ namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
         {
             Assert.AreEqual(
                 "Bitte wählen Sie das Excel-File (XLSX) mit den Seriennummern aus. Eine aktualisierte Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
-                Hardware.SerialNumberImport.Description);
+                View.Hardware.SerialNumberImport.Description);
         }
 
         [Test]
         [Category("Hardware")]
         public void DownloadTemplate()
         {
-            Assert.AreEqual("Excel-Vorlage herunterladen", Hardware.SerialNumberImport.DownloadTemplate);
+            Assert.AreEqual("Excel-Vorlage herunterladen", View.Hardware.SerialNumberImport.DownloadTemplate);
         }
 
         [Test]
         [Category("Hardware")]
         public void FileChooser()
         {
-            Assert.AreEqual("", Hardware.SerialNumberImport.FileChooser.Text);
+            Assert.AreEqual("", View.Hardware.SerialNumberImport.FileChooser.Text);
         }
 
         [Test]
         [Category("Hardware")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("Importieren", Hardware.SerialNumberImport.FileUploadButton.Text);
+            Assert.AreEqual("Importieren", View.Hardware.SerialNumberImport.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Hardware")]
         public void Title()
         {
-            Assert.AreEqual("Seriennummern importieren", Hardware.SerialNumberImport.Title);
+            Assert.AreEqual("Seriennummern importieren", View.Hardware.SerialNumberImport.Title);
         }
     }
 }

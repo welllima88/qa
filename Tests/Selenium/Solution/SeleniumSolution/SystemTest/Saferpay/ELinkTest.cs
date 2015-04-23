@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 using Six.Scs.QA.Testlogic.Builder.Customer.Six;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;
-using Six.Scs.QA.Workflow.Builder;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
 {
@@ -15,7 +15,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
             TestDirector.Navigate();
         }
 
-        private static TestData.ValueObjects.Terminal _saferpayTerminal;
+        private static Model.ValueObjects.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpayCustomer;
         private static LocationBuilder _saferpayLocation;
 

@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.User;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.TestData.ValueObjects;
-using Six.Scs.QA.Workflow;
-using Person = Six.Scs.QA.TestData.ValueObjects.Person;
+using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Selenium.View.User;
+using Six.Scs.QA.Selenium.Workflow;
+using Person = Six.Scs.QA.Selenium.Model.ValueObjects.Person;
 
 namespace Six.Scs.QA.Testlogic
 {
     public class User
     {
-        public static TestData.ValueObjects.User Create(TestData.ValueObjects.Customer customer)
+        public static Selenium.Model.ValueObjects.User Create(Selenium.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            TestData.ValueObjects.User user = TestData.Factory.User.Create();
-            Workflow.User.Create(user);
+            Selenium.Model.ValueObjects.User user = Selenium.Model.Factory.User.Create();
+            Selenium.Workflow.User.Create(user);
 
             Check(user);
             Lobby.OpenLatestElement();
@@ -23,15 +23,15 @@ namespace Six.Scs.QA.Testlogic
             return user;
         }
 
-        public static TestData.ValueObjects.User Edit(TestData.ValueObjects.User user)
+        public static Selenium.Model.ValueObjects.User Edit(Selenium.Model.ValueObjects.User user)
         {
             Open(user);
 
-            TestData.ValueObjects.User _user = TestData.Factory.User.Create();
+            Selenium.Model.ValueObjects.User _user = Selenium.Model.Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
 
-            Workflow.User.Edit(_user);
+            Selenium.Workflow.User.Edit(_user);
             Check(_user);
             Lobby.OpenLatestElement();
             Check(_user);
@@ -39,12 +39,12 @@ namespace Six.Scs.QA.Testlogic
             return _user;
         }
 
-        public static void Open(TestData.ValueObjects.User user)
+        public static void Open(Selenium.Model.ValueObjects.User user)
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
 
-        public static void Check(TestData.ValueObjects.User u)
+        public static void Check(Selenium.Model.ValueObjects.User u)
         {
             Assert.AreEqual(u.UserName, View.UserName);
             // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
@@ -62,29 +62,29 @@ namespace Six.Scs.QA.Testlogic
         {
             Contact.Open(person);
 
-            Selenium.Person.View.CreateUser.Click();
+            Selenium.View.Person.View.CreateUser.Click();
 
-            StringAssert.Contains(person.Name, Selenium.User.Create.Name);
-            StringAssert.Contains(person.FirstName, Selenium.User.Create.FirstName);
-            StringAssert.Contains(person.Contact.Language, Selenium.User.Create.Language);
+            StringAssert.Contains(person.Name, Selenium.View.User.Create.Name);
+            StringAssert.Contains(person.FirstName, Selenium.View.User.Create.FirstName);
+            StringAssert.Contains(person.Contact.Language, Selenium.View.User.Create.Language);
         }
 
-        public static void AddService(TestData.ValueObjects.User user)
+        public static void AddService(Selenium.Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<Service> services = Services.Scs();
-            Workflow.User.AddServices(services);
+            Selenium.Workflow.User.AddServices(services);
             IEnumerable<Service> actList = LoginSetup.GetAssignedServices();
             CollectionAssert.AreEquivalent(services, actList);
         }
 
-        public static void AssignRoles(TestData.ValueObjects.User user)
+        public static void AssignRoles(Selenium.Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<string> roles =
                 new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
 
-            Workflow.User.AssignRoles(roles);
+            Selenium.Workflow.User.AssignRoles(roles);
 
             IEnumerable<string> actList = Roles.GetAssignedRoles();
             CollectionAssert.AreEquivalent(roles, actList);

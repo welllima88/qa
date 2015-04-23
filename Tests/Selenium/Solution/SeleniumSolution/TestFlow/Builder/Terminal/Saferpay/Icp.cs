@@ -1,9 +1,9 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Terminal;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.Workflow.Builder;
+using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Selenium.View.Terminal;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
 {
@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
     {
         public Icp()
         {
-            Terminal = new TestData.ValueObjects.Terminal {Type = "ICP"};
+            Terminal = new Selenium.Model.ValueObjects.Terminal {Type = "ICP"};
         }
 
         public override void Create()

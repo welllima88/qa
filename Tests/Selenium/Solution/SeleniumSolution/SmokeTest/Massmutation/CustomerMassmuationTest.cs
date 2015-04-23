@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Massmuation;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Massmuation;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
 {
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         public void Description()
         {
             Assert.AreEqual(
-                "Bitte geben Sie den Pfad zum Excel File mit den Kundendaten an. Bitte stellen Sie sicher, dass sie das richtige File mit der Bezeichnung SCA verwenden. Die Bezeichnung befindet sich im Exceldatei an der Spalte B1. Die Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
+                "Bitte geben Sie den Pfad zur Excel Datei mit den Kundendaten an. Stellen Sie sicher, dass Sie die richtige Vorlage verwenden. Die neuste Vorlage kann mittels untenstehendem Link heruntergeladen werden.",
                 FileUpload.Description);
         }
 
@@ -46,14 +46,14 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
         [Category("Massmutation"), Category("Customer")]
         public void FileUploadButton()
         {
-            Assert.AreEqual("", FileUpload.FileUploadButton.Text);
+            Assert.AreEqual("Importieren", FileUpload.FileUploadButton.Text);
         }
 
         [Test]
         [Category("Massmutation"), Category("Customer")]
         public void Title()
         {
-            Assert.AreEqual("Kunden", FileUpload.Title);
+            Assert.AreEqual("Kunden Massenmutation", FileUpload.Title);
         }
     }
 }

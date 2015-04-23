@@ -85,17 +85,9 @@
       <Project>{d82efc2f-3e2d-4892-9d5d-327139693bb4}</Project>
       <Name>SeleniumExtension</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestData\TestData.csproj">
-      <Project>{2f418ef9-c1c1-4e32-8954-5ea1b5257f20}</Project>
-      <Name>TestData</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TestFlow\Testlogic.csproj">
       <Project>{4db6ce42-98da-41b4-a830-1a0f8a0b973f}</Project>
       <Name>Testlogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Workflow\Workflow.csproj">
-      <Project>{6D99C089-ECA8-42DA-B74B-EAF28E457D83}</Project>
-      <Name>Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
