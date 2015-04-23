@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common;
+using Six.Scs.QA.Selenium.View.Common;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
 {

@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.Environment;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Environments;
+using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Selenium.View.Environments;
 
 namespace Six.Scs.QA.Selenium.SmokeTest
 {
@@ -18,14 +18,18 @@ namespace Six.Scs.QA.Selenium.SmokeTest
             TestDirector.TestEnvironment = new Dev();
             TestDirector.PrepareBrowser(Grid.Build);
             TestDirector.Start();
-
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
 
         [TearDown]
         public void StopTestDirector()
         {
             TestDirector.Stop();
+        }
+
+        [TearDown]
+        public void LoginSuccessful()
+        {
+            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
         }
     }
 }

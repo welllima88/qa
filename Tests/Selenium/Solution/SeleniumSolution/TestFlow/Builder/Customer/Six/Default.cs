@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension;
-using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.Workflow.Builder;
+using Six.Scs.QA.Selenium.View.Customer;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
 {
@@ -9,29 +9,29 @@ namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
     {
         protected override void SetCustomerData()
         {
-            Selenium.Customer.Create.SbsCurrency = Customer.SbsCurrency;
-            Selenium.Customer.Create.SbsBillingTenant = Customer.SbsBillingTenant;
-            Selenium.Customer.Create.SbsSegment = Customer.SbsSegment;
-            Selenium.Customer.Create.CustomerName = Customer.CustomerName;
+            Selenium.View.Customer.Create.SbsCurrency = Customer.SbsCurrency;
+            Selenium.View.Customer.Create.SbsBillingTenant = Customer.SbsBillingTenant;
+            Selenium.View.Customer.Create.SbsSegment = Customer.SbsSegment;
+            Selenium.View.Customer.Create.CustomerName = Customer.CustomerName;
 
-            Selenium.Customer.Create.StreetNo = Customer.Location.Adress.StreetNo;
-            Selenium.Customer.Create.Zip = Customer.Location.Adress.Zip;
-            Selenium.Customer.Create.City = Customer.Location.Adress.City;
-            Selenium.Customer.Create.Po = Customer.Location.Adress.Po;
-            Selenium.Customer.Create.AdressAddition = Customer.Location.Adress.AdressAddition;
-            Selenium.Customer.Create.Region = Customer.Location.Adress.Region;
-            Selenium.Customer.Create.Agency = Customer.Location.Agency;
-            Selenium.Customer.Create.Language = Customer.Location.Contact.Language;
-            Selenium.Customer.Create.Country = Customer.Location.Adress.Country;
-            Selenium.Customer.Create.Email = Customer.Location.Contact.Email;
-            Selenium.Customer.Create.Telephone = Customer.Location.Contact.Telephone;
-            Selenium.Customer.Create.Mobile = Customer.Location.Contact.Mobile;
-            Selenium.Customer.Create.Fax = Customer.Location.Contact.Fax;
-            Selenium.Customer.Create.Web = Customer.Location.Contact.Web;
-            Selenium.Customer.Create.CategoryCode = Customer.CategoryCode;
-            Selenium.Customer.Create.SupportContract = Customer.SupportContract;
-            Selenium.Customer.Create.CashIntegrator = Customer.CashIntegrator;
-            Selenium.Customer.Create.WesMandant = Customer.WesMandant;
+            Selenium.View.Customer.Create.StreetNo = Customer.Location.Adress.StreetNo;
+            Selenium.View.Customer.Create.Zip = Customer.Location.Adress.Zip;
+            Selenium.View.Customer.Create.City = Customer.Location.Adress.City;
+            Selenium.View.Customer.Create.Po = Customer.Location.Adress.Po;
+            Selenium.View.Customer.Create.AdressAddition = Customer.Location.Adress.AdressAddition;
+            Selenium.View.Customer.Create.Region = Customer.Location.Adress.Region;
+            Selenium.View.Customer.Create.Agency = Customer.Location.Agency;
+            Selenium.View.Customer.Create.Language = Customer.Location.Contact.Language;
+            Selenium.View.Customer.Create.Country = Customer.Location.Adress.Country;
+            Selenium.View.Customer.Create.Email = Customer.Location.Contact.Email;
+            Selenium.View.Customer.Create.Telephone = Customer.Location.Contact.Telephone;
+            Selenium.View.Customer.Create.Mobile = Customer.Location.Contact.Mobile;
+            Selenium.View.Customer.Create.Fax = Customer.Location.Contact.Fax;
+            Selenium.View.Customer.Create.Web = Customer.Location.Contact.Web;
+            Selenium.View.Customer.Create.CategoryCode = Customer.CategoryCode;
+            Selenium.View.Customer.Create.SupportContract = Customer.SupportContract;
+            Selenium.View.Customer.Create.CashIntegrator = Customer.CashIntegrator;
+            Selenium.View.Customer.Create.WesMandant = Customer.WesMandant;
         }
 
         public override void Check()
@@ -63,21 +63,21 @@ namespace Six.Scs.QA.Testlogic.Builder.Customer.Six
 
         protected override void EditCustomerData()
         {
-            Selenium.Customer.Edit.CustomerName = Customer.CustomerName;
-            Selenium.Customer.Edit.StreetNo = Customer.Location.Adress.StreetNo;
-            Selenium.Customer.Edit.Zip = Customer.Location.Adress.Zip;
-            Selenium.Customer.Edit.City = Customer.Location.Adress.City;
-            Selenium.Customer.Edit.Po = Customer.Location.Adress.Po;
-            Selenium.Customer.Edit.AdressAddition = Customer.Location.Adress.AdressAddition;
-            Selenium.Customer.Edit.Region = Customer.Location.Adress.Region;
-            Selenium.Customer.Edit.Agency = Customer.Location.Agency;
-            Selenium.Customer.Edit.Language = Customer.Location.Contact.Language;
-            Selenium.Customer.Edit.Country = Customer.Location.Adress.Country;
-            Selenium.Customer.Edit.Email = Customer.Location.Contact.Email;
-            Selenium.Customer.Edit.Telephone = Customer.Location.Contact.Telephone;
-            Selenium.Customer.Edit.Mobile = Customer.Location.Contact.Mobile;
-            Selenium.Customer.Edit.Fax = Customer.Location.Contact.Fax;
-            Selenium.Customer.Edit.Web = Customer.Location.Contact.Web;
+            Selenium.View.Customer.Edit.CustomerName = Customer.CustomerName;
+            Selenium.View.Customer.Edit.StreetNo = Customer.Location.Adress.StreetNo;
+            Selenium.View.Customer.Edit.Zip = Customer.Location.Adress.Zip;
+            Selenium.View.Customer.Edit.City = Customer.Location.Adress.City;
+            Selenium.View.Customer.Edit.Po = Customer.Location.Adress.Po;
+            Selenium.View.Customer.Edit.AdressAddition = Customer.Location.Adress.AdressAddition;
+            Selenium.View.Customer.Edit.Region = Customer.Location.Adress.Region;
+            Selenium.View.Customer.Edit.Agency = Customer.Location.Agency;
+            Selenium.View.Customer.Edit.Language = Customer.Location.Contact.Language;
+            Selenium.View.Customer.Edit.Country = Customer.Location.Adress.Country;
+            Selenium.View.Customer.Edit.Email = Customer.Location.Contact.Email;
+            Selenium.View.Customer.Edit.Telephone = Customer.Location.Contact.Telephone;
+            Selenium.View.Customer.Edit.Mobile = Customer.Location.Contact.Mobile;
+            Selenium.View.Customer.Edit.Fax = Customer.Location.Contact.Fax;
+            Selenium.View.Customer.Edit.Web = Customer.Location.Contact.Web;
         }
 
         protected override void ReadInfo()

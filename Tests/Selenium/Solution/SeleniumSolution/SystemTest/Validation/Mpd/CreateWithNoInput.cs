@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Administration.Agency;
-using Six.Scs.QA.Selenium.Common;
-using Six.Scs.QA.Selenium.Common.Menu;
-using List = Six.Scs.QA.Selenium.Mpd;
+using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Mpd;
+using Create = Six.Scs.QA.Selenium.View.Administration.Agency.Create;
 
 namespace Six.Scs.QA.Selenium.SystemTest.Validation.Mpd
 {
@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Validation.Mpd
         {
             TestDirector.Navigate("Customer/?CUSTOMERID=1");
             CustomerMenu.AllMpds.Click();
-            List.ListView.CreateButton.Click();
+            ListView.CreateButton.Click();
             Create.SaveButton.Click();
         }
 

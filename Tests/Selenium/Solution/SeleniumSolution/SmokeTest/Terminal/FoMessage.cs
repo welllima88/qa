@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
 {
@@ -17,37 +17,37 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
         [Test]
         public void Date()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
         }
 
         [Test]
         public void Id()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
         }
 
         [Test]
         public void JobId()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
         }
 
         [Test]
         public void ResponseCode()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
         }
 
         [Test]
         public void TerminalId()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
         }
 
         [Test]
         public void UserName()
         {
-            Assert.That(Selenium.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
         }
     }
 }

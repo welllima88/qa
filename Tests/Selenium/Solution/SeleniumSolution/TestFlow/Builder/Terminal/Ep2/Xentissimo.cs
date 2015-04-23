@@ -1,10 +1,10 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Terminal;
-using Six.Scs.QA.Selenium.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.TestData.Factory;
-using Six.Scs.QA.Workflow.Builder;
+using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Selenium.View.Terminal;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Selenium.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
 {
@@ -12,7 +12,7 @@ namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
     {
         public Xentissimo()
         {
-            Terminal = TestData.Factory.Terminal.Xentissimo();
+            Terminal = Selenium.Model.Factory.Terminal.Xentissimo();
         }
 
         public override void Edit()

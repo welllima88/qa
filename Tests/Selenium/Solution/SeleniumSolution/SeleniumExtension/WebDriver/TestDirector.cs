@@ -21,6 +21,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();
+            Console.Out.WriteLine("Logon");
         }
 
         /// <summary>
@@ -100,7 +101,9 @@ namespace Six.QA.Selenium.Extension.WebDriver
         public static void Stop()
         {
             TestEnvironment.Application.LogOff();
+            Console.Out.WriteLine("Logon");
             WebDriver.Quit();
+            Console.Out.WriteLine("Close WebDriver");
         }
     }
 }

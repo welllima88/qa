@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Hardware;
+using Six.Scs.QA.Selenium.View.Hardware;
 
 namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
 {

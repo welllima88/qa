@@ -1,21 +1,21 @@
 using NUnit.Framework;
 using Six.QA.Selenium.Extension;
-using Six.Scs.QA.Selenium.Common.Menu;
-using Six.Scs.QA.Selenium.Location.BillingAddress;
-using Six.Scs.QA.TestData.ValueObjects;
+using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Selenium.View.Location.BillingAddress;
 
 namespace Six.Scs.QA.Testlogic
 {
     public class BillingAdress
     {
-        public static void Create(TestData.ValueObjects.Customer customer)
+        public static void Create(Selenium.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
             CustomerMenu.BillingAdressCreate.Click();
-            BillingAddress billingAddress = TestData.Factory.BillingAddress.Create();
+            BillingAddress billingAddress = Selenium.Model.Factory.BillingAddress.Create();
 
-            Workflow.BillingAdress.Create(billingAddress);
+            Selenium.Workflow.BillingAdress.Create(billingAddress);
             Check(billingAddress);
         }
 
@@ -38,15 +38,15 @@ namespace Six.Scs.QA.Testlogic
             Assert.AreEqual(b.Contact.Web, View.Web);
         }
 
-        public static void Edit(TestData.ValueObjects.Customer customer, BillingAddress BillingAddress)
+        public static void Edit(Selenium.Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
         {
             Customer.Open(customer);
             CustomerMenu.BillingAdresses.Click();
             View.List(BillingAddress).Click(); // choose the first match
 
-            BillingAddress billingAddress = TestData.Factory.BillingAddress.Create();
+            BillingAddress billingAddress = Selenium.Model.Factory.BillingAddress.Create();
 
-            Workflow.BillingAdress.Edit(billingAddress);
+            Selenium.Workflow.BillingAdress.Edit(billingAddress);
             Check(billingAddress);
         }
     }

@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.Environment;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Environments;
+using Six.Scs.QA.Selenium.View.Environments;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {

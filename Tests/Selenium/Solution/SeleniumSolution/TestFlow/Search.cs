@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Customer;
-using Six.Scs.QA.Selenium.Search;
-using Six.Scs.QA.Selenium.Terminal.Dashboard;
+using Six.Scs.QA.Selenium.View.Customer;
+using Six.Scs.QA.Selenium.View.Search;
+using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -9,7 +9,7 @@ namespace Six.Scs.QA.Testlogic
     {
         public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
-            Workflow.Search.Find(customerId);
+            Selenium.Workflow.Search.Find(customerId);
             new SearchResult(Result.Customer).First().Click();
 
             Assert.AreEqual(customerId, View.CustomerNumber);
@@ -17,15 +17,15 @@ namespace Six.Scs.QA.Testlogic
 
         public static void LocationCanBeFoundByLocationName(string locationName)
         {
-            Workflow.Search.Find(locationName);
+            Selenium.Workflow.Search.Find(locationName);
             new SearchResult(Result.Location).First().Click();
 
-            Assert.AreEqual(locationName, Selenium.Location.View.CompanyName);
+            Assert.AreEqual(locationName, Selenium.View.Location.View.CompanyName);
         }
 
         public static void CustomerCanBeFoundByCustomerName(string customerName)
         {
-            Workflow.Search.Find(customerName);
+            Selenium.Workflow.Search.Find(customerName);
             new SearchResult(Result.Customer).First().Click();
 
             Assert.AreEqual(customerName, View.CustomerName);
@@ -33,7 +33,7 @@ namespace Six.Scs.QA.Testlogic
 
         public static void TerminalCanBeFoundById(string terminalId)
         {
-            Workflow.Search.Find(terminalId);
+            Selenium.Workflow.Search.Find(terminalId);
             new SearchResult(Result.Terminal).First().Click();
 
             Assert.AreEqual(terminalId, TerminalInfo.TerminalId);
@@ -41,34 +41,34 @@ namespace Six.Scs.QA.Testlogic
 
         public static void UserCanBeFoundByCustomerName(string userName)
         {
-            Workflow.Search.Find(userName);
+            Selenium.Workflow.Search.Find(userName);
             new SearchResult(Result.User).First().Click();
 
-            Assert.AreEqual(userName, Selenium.User.View.UserName);
+            Assert.AreEqual(userName, Selenium.View.User.View.UserName);
         }
 
         public static void MpdCanBeFoundById(string id)
         {
-            Workflow.Search.Find(id);
+            Selenium.Workflow.Search.Find(id);
             new SearchResult(Result.Mpd).First().Click();
 
-            Assert.AreEqual(id, Selenium.Mpd.View.Id);
+            Assert.AreEqual(id, Selenium.View.Mpd.View.Id);
         }
 
         public static void SimcardBySimCardNumber(string simCardNumber)
         {
-            Workflow.Search.Find(simCardNumber);
+            Selenium.Workflow.Search.Find(simCardNumber);
             new SearchResult(Result.SimCard).First().Click();
 
-            Assert.AreEqual(simCardNumber, Selenium.Administration.SimCard.View.SimCardNumber);
+            Assert.AreEqual(simCardNumber, Selenium.View.Administration.SimCard.View.SimCardNumber);
         }
 
         public static void TicketCanBeFoundById(string ticketId)
         {
-            Workflow.Search.Find(ticketId);
+            Selenium.Workflow.Search.Find(ticketId);
             new SearchResult(Result.Ticket).First().Click();
 
-            StringAssert.Contains(ticketId, Selenium.Tickets.Trouble.View.Header);
+            StringAssert.Contains(ticketId, Selenium.View.Tickets.Trouble.View.Header);
         }
     }
 }
