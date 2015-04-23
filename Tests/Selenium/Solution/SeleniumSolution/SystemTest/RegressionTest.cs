@@ -8,25 +8,30 @@ using Six.Scs.QA.Testlogic;
 using Six.Scs.QA.Testlogic.Builder.Brand.Ep2;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Ep2;
 using Contact = Six.Scs.QA.Testlogic.Contact;
+using Customer = Six.Scs.QA.Testlogic.Customer;
 using Default = Six.Scs.QA.Testlogic.Builder.Customer.Six.Default;
+using Location = Six.Scs.QA.Selenium.Model.ValueObjects.Location;
+using Mpd = Six.Scs.QA.Selenium.Model.ValueObjects.Mpd;
 using SimCard = Six.Scs.QA.Selenium.Model.ValueObjects.SimCard;
+using Terminal = Six.Scs.QA.Selenium.Model.ValueObjects.Terminal;
+using User = Six.Scs.QA.Selenium.Model.ValueObjects.User;
 
 namespace Six.Scs.QA.Selenium.SystemTest
 {
     [TestFixture]
     public class RegressionTest
     {
-        private static Model.ValueObjects.Terminal _terminalLocation2;
-        private static Model.ValueObjects.Terminal _terminalLocation1;
+        private static Terminal _terminalLocation2;
+        private static Terminal _terminalLocation1;
         private static CustomerBuilder _six;
-        private static Model.ValueObjects.Location _location1;
-        private static Model.ValueObjects.Person _personOnCustomer;
-        private static Model.ValueObjects.Person _personOnLocation;
-        private static Model.ValueObjects.User _user;
-        private static IEnumerable<Model.ValueObjects.Terminal> _duplicatedTerminals;
-        private static Model.ValueObjects.Mpd _mpd;
+        private static Location _location1;
+        private static Person _personOnCustomer;
+        private static Person _personOnLocation;
+        private static User _user;
+        private static IEnumerable<Terminal> _duplicatedTerminals;
+        private static Mpd _mpd;
         private static SimCard _sim;
-        private static Model.ValueObjects.Location _location2;
+        private static Location _location2;
         private static TroubleTicket _troubleTicket;
 
         [TestFixtureSetUp]
@@ -42,13 +47,13 @@ namespace Six.Scs.QA.Selenium.SystemTest
          Category("MPD"), Category("User"), Category("User"), Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
         {
-            _six = Testlogic.Customer.Create(new Default());
+            _six = Customer.Create(new Default());
             _location1 = Testlogic.Location.Create(_six.Customer, new Testlogic.Builder.Location.Default()).Location;
             _personOnCustomer = Contact.Create(_six.Customer);
             var contracts = new Testlogic.Builder.Brand.Ep2.Default();
             _terminalLocation1 = Testlogic.Terminal.Create(_location1, new Yomani().With(contracts));
 
-            Testlogic.Customer.Edit(_six);
+            Customer.Edit(_six);
 
             Infotext.Create(_six.Customer);
             BillingAdress.Create(_six.Customer);
@@ -88,6 +93,8 @@ namespace Six.Scs.QA.Selenium.SystemTest
             // {0,1,..} means create brands on second terminal
             // check again already existing contracts:
             contracts.Check();
+            
+            // Testlogic.User.Delete(_user);
 
             Testlogic.Terminal.Replace(_terminalLocation2);
 
