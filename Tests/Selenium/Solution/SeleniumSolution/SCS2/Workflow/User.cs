@@ -7,7 +7,7 @@ namespace Six.Scs.QA.Selenium.Workflow
 {
     public static class User
     {
-        public static void Create(Selenium.Model.ValueObjects.User u)
+        public static void Create(Model.ValueObjects.User u)
         {
             CustomerMenu.Users.Click();
             List.UserCreate.Click();
@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             UserMenu.User.Click();
         }
 
-        public static void Edit(Selenium.Model.ValueObjects.User u)
+        public static void Edit(Model.ValueObjects.User u)
         {
             View.User.View.Edit.Click();
 
@@ -72,6 +72,12 @@ namespace Six.Scs.QA.Selenium.Workflow
                 Roles.Set(role);
             }
             Roles.Save();
+        }
+
+        public static void Delete()
+        {
+            View.User.View.DeleteButton.Click();
+            View.User.Delete.ConfirmButton.Click();
         }
     }
 }

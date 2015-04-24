@@ -30,7 +30,8 @@ namespace Six.Scs.QA.Testlogic
             return terminalBuilder.Terminal;
         }
 
-        public static IEnumerable<Selenium.Model.ValueObjects.Terminal> Duplicate(Selenium.Model.ValueObjects.Terminal terminal)
+        public static IEnumerable<Selenium.Model.ValueObjects.Terminal> Duplicate(
+            Selenium.Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
             TerminalDuplicate terminalDuplicate = Selenium.Model.Factory.TerminalDuplicate.Create();
@@ -47,7 +48,7 @@ namespace Six.Scs.QA.Testlogic
             if (tries.TooOften())
             {
                 Assert.Fail("Batch has not been processed probably due to Job Control error. BatchId:{0} JobId:{1}",
-                    Progress.JobId, Progress.BatchId);
+                    Progress.BatchId, Progress.JobId);
             }
             Assert.That(Progress.Failed, Is.EqualTo("0"));
 
@@ -117,7 +118,8 @@ namespace Six.Scs.QA.Testlogic
             articleChangePerfomer.Check();
         }
 
-        public static void Move(Selenium.Model.ValueObjects.Terminal terminal, Selenium.Model.ValueObjects.Location location)
+        public static void Move(Selenium.Model.ValueObjects.Terminal terminal,
+            Selenium.Model.ValueObjects.Location location)
         {
             Open(terminal);
             Selenium.Workflow.Terminal.Move(location);
