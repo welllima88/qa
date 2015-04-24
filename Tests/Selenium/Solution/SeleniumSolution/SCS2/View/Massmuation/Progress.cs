@@ -57,7 +57,7 @@ namespace Six.Scs.QA.Selenium.View.Massmuation
                 return
                     WebDriver.FindElement(
                         By.CssSelector(
-                            "#content > div:nth-child(4) > div > div > div.panel-body > div.row > div:nth-child(2) > div > p"))
+                            "#content > div:nth-child(4) > div > div > div.panel-body > div.row > div:nth-child(3) > div > p"))
                         .Text;
             }
         }
