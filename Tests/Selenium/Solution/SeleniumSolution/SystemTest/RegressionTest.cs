@@ -42,7 +42,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
 
         [Test]
         [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
-         Category("Terminal"),
+         Category("Terminal"),Category("Search"),
          Category("Terminal Duplicate"), Category("Terminal Quit"), Category("Infotext"), Category("Person"),
          Category("MPD"), Category("User"), Category("User"), Category("User from Contact"), Category("SIM Card")]
         public static void ExecuteRegressiontest()
@@ -94,7 +94,7 @@ namespace Six.Scs.QA.Selenium.SystemTest
             // check again already existing contracts:
             contracts.Check();
             
-            // Testlogic.User.Delete(_user);
+            Testlogic.User.Delete(_user);
 
             Testlogic.Terminal.Replace(_terminalLocation2);
 
