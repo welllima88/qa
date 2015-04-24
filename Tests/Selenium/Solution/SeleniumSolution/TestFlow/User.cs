@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using NUnit.Framework;
 using Six.Scs.QA.Selenium.Model.Factory;
 using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Selenium.View.Search;
 using Six.Scs.QA.Selenium.View.User;
 using Six.Scs.QA.Selenium.Workflow;
 using Person = Six.Scs.QA.Selenium.Model.ValueObjects.Person;
@@ -88,6 +89,15 @@ namespace Six.Scs.QA.Testlogic
 
             IEnumerable<string> actList = Roles.GetAssignedRoles();
             CollectionAssert.AreEquivalent(roles, actList);
+        }
+
+        public static void Delete(Selenium.Model.ValueObjects.User user)
+        {
+            Open(user);
+            Selenium.Workflow.User.Delete();
+            Selenium.Workflow.Search.Find(user.UserName);
+            Assert.That(new SearchResult(Result.User).Result(), Is.Not.Null);
+            Assert.That(new SearchResult(Result.User).Result(), Is.Empty);
         }
     }
 }

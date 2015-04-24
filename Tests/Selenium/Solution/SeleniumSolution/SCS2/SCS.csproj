@@ -237,6 +237,7 @@
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
+    <Compile Include="View\User\Delete.cs" />
     <Compile Include="Workflow\InfoText.cs" />
     <Compile Include="Workflow\Lobby.cs" />
     <Compile Include="Workflow\Location.cs" />
