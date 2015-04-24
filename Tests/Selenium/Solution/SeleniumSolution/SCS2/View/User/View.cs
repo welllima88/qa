@@ -97,5 +97,10 @@ namespace Six.Scs.QA.Selenium.View.User
         {
             get { return WebDriver.FindAdaptedElement(By.Id("assignRoles")); }
         }
+
+        public static IWebElementAdapter DeleteButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Delete?userName=']")); }
+        }
     }
 }
