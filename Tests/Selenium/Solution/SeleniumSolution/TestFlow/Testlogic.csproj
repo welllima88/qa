@@ -55,6 +55,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Administration\Agency.cs" />
+    <Compile Include="Administration\TerminalType.cs" />
     <Compile Include="BillingAdress.cs" />
     <Compile Include="Brands.cs" />
     <Compile Include="Builder\Brand\ELink\Default.cs" />
