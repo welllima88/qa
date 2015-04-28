@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Administration.SimCard
+namespace Six.Scs.QA.Application.View.Administration.SimCard
 {
     public class Edit : WebObject
     {

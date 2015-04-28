@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Administration.SerialNumberManage
+namespace Six.Scs.QA.Application.View.Administration.SerialNumberManage
 {
     public class Import : WebObject
     {

@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Terminal;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.View.Terminal;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Article
+namespace Six.Scs.QA.Application.SmokeTest.Article
 {
     [TestFixture]
     public class ChooserLookupTest

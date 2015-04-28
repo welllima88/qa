@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Application.View.Common.Menu;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.SIMCard
+namespace Six.Scs.QA.Application.SmokeTest.SIMCard
 {
     [TestFixture]
     public class SimCardViewTest

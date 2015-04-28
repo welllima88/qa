@@ -1,9 +1,9 @@
 using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.View.Brand;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
+using Six.Scs.QA.Application.View.Brand;
+using Six.Scs.QA.Application.View.Terminal;
+using Six.Scs.QA.Application.View.Terminal.Dashboard;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.QA.Application.Workflow.Builder
 {
     public abstract class TerminalBuilder : IBuilder
     {
@@ -17,10 +17,10 @@ namespace Six.Scs.QA.Selenium.Workflow.Builder
         protected TerminalBuilder()
         {
             _brandBuilder = null;
-            Terminal = new Selenium.Model.ValueObjects.Terminal();
+            Terminal = new Model.ValueObjects.Terminal();
         }
 
-        public Selenium.Model.ValueObjects.Terminal Terminal { get; set; }
+        public Model.ValueObjects.Terminal Terminal { get; set; }
 
         public virtual void Create()
         {

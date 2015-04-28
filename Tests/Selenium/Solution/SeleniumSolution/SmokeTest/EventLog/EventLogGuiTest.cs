@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.EventLog
+namespace Six.Scs.QA.Application.SmokeTest.EventLog
 {
     [TestFixture]
     public class EventLogGuiTest

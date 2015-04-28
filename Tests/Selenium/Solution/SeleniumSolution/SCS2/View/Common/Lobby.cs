@@ -4,7 +4,7 @@ using Six.QA.Selenium.Extension.Authentication;
 using Six.QA.Selenium.Extension.WebDriver;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common
+namespace Six.Scs.QA.Application.View.Common
 {
     public class Lobby : WebObject, IApplication
     {

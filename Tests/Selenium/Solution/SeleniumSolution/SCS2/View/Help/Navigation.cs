@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Help
+namespace Six.Scs.QA.Application.View.Help
 {
     public class Navigation : WebObject
     {

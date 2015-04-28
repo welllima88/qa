@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.FinancialConfig
+namespace Six.Scs.QA.Application.View.Terminal.FinancialConfig
 {
     public class Edit : WebObject
     {

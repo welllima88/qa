@@ -4,7 +4,7 @@ using System.Linq;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Massmuation
+namespace Six.Scs.QA.Application.View.Massmuation
 {
     public class TerminalValidation : WebObject
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using Six.Scs.QA.Selenium.Model.Factory;
+using Six.Scs.QA.Application.Model.Factory;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public static class InfoText
     {

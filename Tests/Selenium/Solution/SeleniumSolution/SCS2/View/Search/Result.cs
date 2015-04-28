@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.View.Search
+namespace Six.Scs.QA.Application.View.Search
 {
     public static class Result
     {

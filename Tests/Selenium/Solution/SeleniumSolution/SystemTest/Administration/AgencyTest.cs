@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.QA.Application.Model.ValueObjects;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Administration
+namespace Six.Scs.QA.Application.SystemTest.Administration
 {
     [TestFixture]
     public class AgencyTest

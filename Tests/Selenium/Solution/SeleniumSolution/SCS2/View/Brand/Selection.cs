@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Brand
+namespace Six.Scs.QA.Application.View.Brand
 {
     public class Selection : WebObject
     {

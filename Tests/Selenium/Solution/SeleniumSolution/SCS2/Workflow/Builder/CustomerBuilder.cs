@@ -1,8 +1,8 @@
 using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.QA.Application.View.Common.Menu;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.QA.Application.Workflow.Builder
 {
     public abstract class CustomerBuilder : IBuilder
     {
@@ -11,7 +11,7 @@ namespace Six.Scs.QA.Selenium.Workflow.Builder
 
         public virtual void Create()
         {
-            Customer = Selenium.Model.Factory.Customer.Create();
+            Customer = Model.Factory.Customer.Create();
             ClickCreate();
             SelectTenant();
             Confirm();
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.Workflow.Builder
 
         public virtual void Edit()
         {
-            Customer = Selenium.Model.Factory.Customer.Edit();
+            Customer = Model.Factory.Customer.Edit();
             ReadInfo();
             ClickEdit();
             EditCustomerData();

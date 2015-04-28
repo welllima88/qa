@@ -1,12 +1,12 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.QA.Application.Workflow.Builder;
 using Six.Scs.QA.Testlogic.Builder.Customer.Nsp;
 using Six.Scs.QA.Testlogic.Builder.Location;
 using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;
 using Default = Six.Scs.QA.Testlogic.Builder.Brand.Gicc.Default;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Saferpay
+namespace Six.Scs.QA.Application.SystemTest.Saferpay
 {
     [TestFixture]
     public class GiccTest

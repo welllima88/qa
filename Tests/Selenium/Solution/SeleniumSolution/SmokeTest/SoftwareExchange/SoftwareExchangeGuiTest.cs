@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Administration.SoftwareExchange;
+using Six.Scs.QA.Application.View.Administration.SoftwareExchange;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
+namespace Six.Scs.QA.Application.SmokeTest.SoftwareExchange
 {
     [TestFixture]
     public class SoftwareExchangeGuiTest

@@ -1,15 +1,15 @@
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
-using TerminalDuplicate = Six.Scs.QA.Selenium.Model.ValueObjects.TerminalDuplicate;
-using TerminalReplace = Six.Scs.QA.Selenium.Model.ValueObjects.TerminalReplace;
+using Six.Scs.QA.Application.Model.Factory;
+using Six.Scs.QA.Application.View.Terminal;
+using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Application.Workflow.Builder;
+using TerminalDuplicate = Six.Scs.QA.Application.Model.ValueObjects.TerminalDuplicate;
+using TerminalReplace = Six.Scs.QA.Application.Model.ValueObjects.TerminalReplace;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public class Terminal
     {
-        public static void Duplicate(TerminalDuplicate duplicate)
+        public static void Duplicate(Model.ValueObjects.TerminalDuplicate duplicate)
         {
             SalesContract.TerminalDuplicate.Click();
 
@@ -36,7 +36,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             return reason;
         }
 
-        public static void Assign(Selenium.Model.ValueObjects.Mpd mpd)
+        public static void Assign(Model.ValueObjects.Mpd mpd)
         {
             TechnicalView.MpdAssign.Click();
 
@@ -46,7 +46,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Mpd.Assign.SaveButton.Click();
         }
 
-        public static void Replace(TerminalReplace replace)
+        public static void Replace(Model.ValueObjects.TerminalReplace replace)
         {
             SalesContract.Replace.Click();
 
@@ -83,7 +83,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Terminal.SoftwareChange.UnBlock.Click();
         }
 
-        public static void Move(Selenium.Model.ValueObjects.Location location)
+        public static void Move(Model.ValueObjects.Location location)
         {
             BusinessViewpoint.MoveTerminal.Click();
 
@@ -93,7 +93,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Terminal.Move.SaveButton.Click();
         }
 
-        public static Selenium.Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
+        public static Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
         {
             terminalBuilder.Create();
 

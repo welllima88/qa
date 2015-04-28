@@ -1,11 +1,11 @@
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.Workflow.Builder;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public static class Location
     {
-        public static void Create(Selenium.Model.ValueObjects.Location l)
+        public static void Create(Model.ValueObjects.Location l)
         {
             CustomerMenu.Customer.Click();
 
@@ -41,7 +41,7 @@ namespace Six.Scs.QA.Selenium.Workflow
         ///     Edits location
         /// </summary>
         /// <param name="l">given location data</param>
-        public static void Edit(Selenium.Model.ValueObjects.Location l)
+        public static void Edit(Model.ValueObjects.Location l)
         {
             l.Guid = View.Location.View.Guid;
             l.Ep2MerchantId = View.Location.View.Ep2MerchantId;

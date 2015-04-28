@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Six.Scs.QA.Selenium.Model.Factory
+namespace Six.Scs.QA.Application.Model.Factory
 {
     public static class Factory
     {

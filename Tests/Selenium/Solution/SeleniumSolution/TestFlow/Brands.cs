@@ -1,6 +1,6 @@
 ﻿using System;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Brand;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.QA.Application.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic
 {
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Testlogic
         {
         }
 
-        public static void Create(Selenium.Model.ValueObjects.Terminal terminal, BrandBuilder brandBuilder)
+        public static void Create(Application.Model.ValueObjects.Terminal terminal, BrandBuilder brandBuilder)
         {
             Terminal.Open(terminal);
 

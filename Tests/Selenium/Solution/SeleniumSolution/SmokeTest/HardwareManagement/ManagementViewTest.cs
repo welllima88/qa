@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Hardware;
+using Six.Scs.QA.Application.View.Hardware;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
+namespace Six.Scs.QA.Application.SmokeTest.HardwareManagement
 {
     [TestFixture]
     public class ManagementViewTest

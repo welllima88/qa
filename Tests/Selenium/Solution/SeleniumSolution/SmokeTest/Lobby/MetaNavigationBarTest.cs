@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Application.View.Common;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
+namespace Six.Scs.QA.Application.SmokeTest.Lobby
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

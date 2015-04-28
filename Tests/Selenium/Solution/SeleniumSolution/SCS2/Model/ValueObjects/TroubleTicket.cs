@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Six.Scs.QA.Selenium.Model.ValueObjects
+namespace Six.Scs.QA.Application.Model.ValueObjects
 {
     public class TroubleTicket
     {

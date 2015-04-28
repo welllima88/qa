@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Selenium.Model.ValueObjects.Brand;
-using Six.Scs.QA.Selenium.View.Brand;
+using Six.Scs.QA.Application.Model.ValueObjects.Brand;
+using Six.Scs.QA.Application.View.Brand;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public class Brand
     {
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             foreach (Contract contract in contracts)
             {
                 Selection.Open(contract.Acquirer.Id);
-                foreach (Selenium.Model.ValueObjects.Brand.Brand brand in contract.Brands)
+                foreach (Model.ValueObjects.Brand.Brand brand in contract.Brands)
                 {
                     Selection.Select(brand.Id);
                 }

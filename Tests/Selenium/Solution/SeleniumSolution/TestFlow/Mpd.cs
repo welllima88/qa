@@ -1,17 +1,17 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Mpd;
-using Six.Scs.QA.Selenium.Workflow;
+using Six.Scs.QA.Application.View.Mpd;
+using Six.Scs.QA.Application.Workflow;
 
 namespace Six.Scs.QA.Testlogic
 {
     public class Mpd
     {
-        public static Selenium.Model.ValueObjects.Mpd Create(Selenium.Model.ValueObjects.Customer customer)
+        public static Application.Model.ValueObjects.Mpd Create(Application.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
-            Selenium.Model.ValueObjects.Mpd mpd = Selenium.Model.Factory.Mpd.Create();
-            Selenium.Workflow.Mpd.Create(mpd);
+            Application.Model.ValueObjects.Mpd mpd = Application.Model.Factory.Mpd.Create();
+            Application.Workflow.Mpd.Create(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -19,13 +19,13 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static Selenium.Model.ValueObjects.Mpd Edit(Selenium.Model.ValueObjects.Mpd _mpd)
+        public static Application.Model.ValueObjects.Mpd Edit(Application.Model.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            Selenium.Model.ValueObjects.Mpd mpd = Selenium.Model.Factory.Mpd.Edit();
+            Application.Model.ValueObjects.Mpd mpd = Application.Model.Factory.Mpd.Edit();
             mpd.Id = _mpd.Id; // keep Id
 
-            Selenium.Workflow.Mpd.Edit(mpd);
+            Application.Workflow.Mpd.Edit(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -33,12 +33,12 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static void Open(Selenium.Model.ValueObjects.Mpd mpd)
+        public static void Open(Application.Model.ValueObjects.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
 
-        public static void Check(Selenium.Model.ValueObjects.Mpd m)
+        public static void Check(Application.Model.ValueObjects.Mpd m)
         {
             Assert.AreEqual(m.Id, View.Id);
             Assert.AreEqual(m.Description, View.Description);

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.User;
+using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.View.User;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public static class User
     {

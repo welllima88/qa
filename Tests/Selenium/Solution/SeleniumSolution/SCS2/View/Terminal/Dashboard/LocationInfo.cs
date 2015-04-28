@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard
+namespace Six.Scs.QA.Application.View.Terminal.Dashboard
 {
     /// <summary>
     ///     Location info object that represent the fix part in terminal dash board which shows location infos

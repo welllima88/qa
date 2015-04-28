@@ -2,7 +2,7 @@ using System;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Brand
+namespace Six.Scs.QA.Application.View.Brand
 {
     public class Create : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed

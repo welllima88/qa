@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension;
-using Six.Scs.QA.Selenium.View.Location;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.QA.Application.View.Location;
+using Six.Scs.QA.Application.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Location
 {
@@ -9,20 +9,20 @@ namespace Six.Scs.QA.Testlogic.Builder.Location
     {
         protected override void SetData()
         {
-            Selenium.View.Location.Create.CompanyName = Location.CompanyName;
-            Selenium.View.Location.Create.StreetNo = Location.Adress.StreetNo;
-            Selenium.View.Location.Create.Zip = Location.Adress.Zip;
-            Selenium.View.Location.Create.City = Location.Adress.City;
-            Selenium.View.Location.Create.Po = Location.Adress.Po;
-            Selenium.View.Location.Create.AdressAddition = Location.Adress.AdressAddition;
-            Selenium.View.Location.Create.Region = Location.Adress.Region;
-            Selenium.View.Location.Create.Language = Location.Contact.Language;
-            Selenium.View.Location.Create.Country = Location.Adress.Country;
-            Selenium.View.Location.Create.Email = Location.Contact.Email;
-            Selenium.View.Location.Create.Telephone = Location.Contact.Telephone;
-            Selenium.View.Location.Create.Mobile = Location.Contact.Mobile;
-            Selenium.View.Location.Create.Fax = Location.Contact.Fax;
-            Selenium.View.Location.Create.Web = Location.Contact.Web;
+            Application.View.Location.Create.CompanyName = Location.CompanyName;
+            Application.View.Location.Create.StreetNo = Location.Adress.StreetNo;
+            Application.View.Location.Create.Zip = Location.Adress.Zip;
+            Application.View.Location.Create.City = Location.Adress.City;
+            Application.View.Location.Create.Po = Location.Adress.Po;
+            Application.View.Location.Create.AdressAddition = Location.Adress.AdressAddition;
+            Application.View.Location.Create.Region = Location.Adress.Region;
+            Application.View.Location.Create.Language = Location.Contact.Language;
+            Application.View.Location.Create.Country = Location.Adress.Country;
+            Application.View.Location.Create.Email = Location.Contact.Email;
+            Application.View.Location.Create.Telephone = Location.Contact.Telephone;
+            Application.View.Location.Create.Mobile = Location.Contact.Mobile;
+            Application.View.Location.Create.Fax = Location.Contact.Fax;
+            Application.View.Location.Create.Web = Location.Contact.Web;
         }
 
         public override void Check()
@@ -45,20 +45,20 @@ namespace Six.Scs.QA.Testlogic.Builder.Location
 
         protected override void EditData()
         {
-            Selenium.View.Location.Edit.CompanyName = Location.CompanyName;
-            Selenium.View.Location.Edit.StreetNo = Location.Adress.StreetNo;
-            Selenium.View.Location.Edit.Zip = Location.Adress.Zip;
-            Selenium.View.Location.Edit.City = Location.Adress.City;
-            Selenium.View.Location.Edit.Po = Location.Adress.Po;
-            Selenium.View.Location.Edit.Region = Location.Adress.Region;
-            Selenium.View.Location.Edit.AdressAddition = Location.Adress.AdressAddition;
-            Selenium.View.Location.Edit.Email = Location.Contact.Email;
-            Selenium.View.Location.Edit.Telephone = Location.Contact.Telephone;
-            Selenium.View.Location.Edit.Mobile = Location.Contact.Mobile;
-            Selenium.View.Location.Edit.Fax = Location.Contact.Fax;
-            Selenium.View.Location.Edit.Web = Location.Contact.Web;
-            Selenium.View.Location.Edit.Language = Location.Contact.Language;
-            Selenium.View.Location.Edit.Country = Location.Adress.Country;
+            Application.View.Location.Edit.CompanyName = Location.CompanyName;
+            Application.View.Location.Edit.StreetNo = Location.Adress.StreetNo;
+            Application.View.Location.Edit.Zip = Location.Adress.Zip;
+            Application.View.Location.Edit.City = Location.Adress.City;
+            Application.View.Location.Edit.Po = Location.Adress.Po;
+            Application.View.Location.Edit.Region = Location.Adress.Region;
+            Application.View.Location.Edit.AdressAddition = Location.Adress.AdressAddition;
+            Application.View.Location.Edit.Email = Location.Contact.Email;
+            Application.View.Location.Edit.Telephone = Location.Contact.Telephone;
+            Application.View.Location.Edit.Mobile = Location.Contact.Mobile;
+            Application.View.Location.Edit.Fax = Location.Contact.Fax;
+            Application.View.Location.Edit.Web = Location.Contact.Web;
+            Application.View.Location.Edit.Language = Location.Contact.Language;
+            Application.View.Location.Edit.Country = Location.Adress.Country;
         }
 
     }

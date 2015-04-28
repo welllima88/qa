@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Massmuation;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.View.Massmuation;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Massmutation
+namespace Six.Scs.QA.Application.SmokeTest.Massmutation
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Model.ValueObjects
+namespace Six.Scs.QA.Application.Model.ValueObjects
 {
     /// <summary>
     ///     the contact person has adress and contact fields

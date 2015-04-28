@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Model.ValueObjects.Brand
+namespace Six.Scs.QA.Application.Model.ValueObjects.Brand
 {
     public class Six : Acquirer
     {

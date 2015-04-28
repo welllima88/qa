@@ -1,6 +1,6 @@
-﻿using Six.Scs.QA.Selenium.View.Common;
+﻿using Six.Scs.QA.Application.View.Common;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public static class Search
     {

@@ -1,16 +1,16 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Administration.Agency;
-using Six.Scs.QA.Selenium.Workflow;
+using Six.Scs.QA.Application.View.Administration.Agency;
+using Six.Scs.QA.Application.Workflow;
 
 namespace Six.Scs.QA.Testlogic.Administration
 {
     public class Agency
     {
-        public static Selenium.Model.ValueObjects.Agency Create()
+        public static Application.Model.ValueObjects.Agency Create()
         {
-            Selenium.Model.ValueObjects.Agency agency = Selenium.Model.Factory.Agency.Default();
-            Selenium.Workflow.Agency.Create(agency);
+            Application.Model.ValueObjects.Agency agency = Application.Model.Factory.Agency.Default();
+            Application.Workflow.Agency.Create(agency);
 
             Check(agency);
             Lobby.OpenLatestElement();
@@ -19,11 +19,11 @@ namespace Six.Scs.QA.Testlogic.Administration
             return agency;
         }
 
-        public static Selenium.Model.ValueObjects.Agency Edit(Selenium.Model.ValueObjects.Agency agency)
+        public static Application.Model.ValueObjects.Agency Edit(Application.Model.ValueObjects.Agency agency)
         {
             Lobby.OpenLatestElement();
-            agency = Selenium.Model.Factory.Agency.Edit();
-            Selenium.Workflow.Agency.Edit(agency);
+            agency = Application.Model.Factory.Agency.Edit();
+            Application.Workflow.Agency.Edit(agency);
 
             Check(agency);
             Lobby.OpenLatestElement();
@@ -32,12 +32,12 @@ namespace Six.Scs.QA.Testlogic.Administration
             return agency;
         }
 
-        private static void Open(Selenium.Model.ValueObjects.Agency agency)
+        private static void Open(Application.Model.ValueObjects.Agency agency)
         {
             TestDirector.Navigate("Agency/List");
         }
 
-        private static void Check(Selenium.Model.ValueObjects.Agency agency)
+        private static void Check(Application.Model.ValueObjects.Agency agency)
         {
             Assert.That(View.Status, Is.EqualTo(agency.Status));
             Assert.That(View.Name, Is.EqualTo(agency.Name));
@@ -49,10 +49,10 @@ namespace Six.Scs.QA.Testlogic.Administration
             Assert.That(View.Supplier, Is.EqualTo(agency.Supplier));
         }
 
-        public static void Deactivate(Selenium.Model.ValueObjects.Agency agency)
+        public static void Deactivate(Application.Model.ValueObjects.Agency agency)
         {
             Lobby.OpenLatestElement();
-            Selenium.Workflow.Agency.Deactivate();
+            Application.Workflow.Agency.Deactivate();
             agency.Status = false;
 
             Check(agency);

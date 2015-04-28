@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard
+namespace Six.Scs.QA.Application.View.Terminal.Dashboard
 {
     public abstract class PortletViewBase : WebObject
     {

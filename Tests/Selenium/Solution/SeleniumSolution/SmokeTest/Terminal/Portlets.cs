@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
+namespace Six.Scs.QA.Application.SmokeTest.Terminal
 {
     [TestFixture]
     [Category("Portlets")]

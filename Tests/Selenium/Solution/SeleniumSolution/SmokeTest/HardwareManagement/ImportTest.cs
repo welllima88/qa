@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.HardwareManagement
+namespace Six.Scs.QA.Application.SmokeTest.HardwareManagement
 {
     [TestFixture]
     public class ImportTest

@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Model.Repository
+﻿namespace Six.Scs.QA.Application.Model.Repository
 {
     public interface IRepository
     {

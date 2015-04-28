@@ -4,7 +4,7 @@ using System.Linq;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal
+namespace Six.Scs.QA.Application.View.Terminal
 {
     public class ArticleChooser : WebObject
     {

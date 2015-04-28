@@ -1,8 +1,8 @@
 using System;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Support;
+using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets.Support;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.QA.Application.Workflow
 {
     public class Trouble
     {

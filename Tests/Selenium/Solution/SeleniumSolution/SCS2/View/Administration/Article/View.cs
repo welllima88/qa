@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Administration.Article
+namespace Six.Scs.QA.Application.View.Administration.Article
 {
     public class View : WebObject
     {

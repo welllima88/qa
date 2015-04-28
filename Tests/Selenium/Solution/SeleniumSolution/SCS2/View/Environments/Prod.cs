@@ -1,9 +1,9 @@
 using System;
 using Six.QA.Selenium.Extension.Authentication.Method;
 using Six.QA.Selenium.Extension.Environment;
-using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.QA.Application.View.Common;
 
-namespace Six.Scs.QA.Selenium.View.Environments
+namespace Six.Scs.QA.Application.View.Environments
 {
     public class Prod : TestEnvironment
     {

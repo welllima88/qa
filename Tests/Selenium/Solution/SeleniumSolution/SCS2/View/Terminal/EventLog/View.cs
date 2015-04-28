@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.EventLog
+namespace Six.Scs.QA.Application.View.Terminal.EventLog
 {
     public class View : WebObject
     {

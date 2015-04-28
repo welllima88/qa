@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common.Infotext
+namespace Six.Scs.QA.Application.View.Common.Infotext
 {
     public class Create : WebObject
     {

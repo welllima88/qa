@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Mpd;
-using Create = Six.Scs.QA.Selenium.View.Administration.Agency.Create;
+using Six.Scs.QA.Application.View.Common;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.View.Mpd;
+using Create = Six.Scs.QA.Application.View.Administration.Agency.Create;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Validation.Mpd
+namespace Six.Scs.QA.Application.SystemTest.Validation.Mpd
 {
     [TestFixture]
     public class CreateWithNoInput
@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Validation.Mpd
             TestDirector.Navigate("Customer/?CUSTOMERID=1");
             CustomerMenu.AllMpds.Click();
             ListView.CreateButton.Click();
-            Create.SaveButton.Click();
+            View.Administration.Agency.Create.SaveButton.Click();
         }
 
         [Test]

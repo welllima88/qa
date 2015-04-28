@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common.Menu
+namespace Six.Scs.QA.Application.View.Common.Menu
 {
     public class ContactMenu : WebObject
     {

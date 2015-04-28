@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.TraceLogConfig
+namespace Six.Scs.QA.Application.View.Terminal.TraceLogConfig
 {
     public class TerminalTraceLogConfigView : WebObject
     {

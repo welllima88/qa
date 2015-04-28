@@ -1,16 +1,16 @@
 using NUnit.Framework;
 using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Person;
-using Lobby = Six.Scs.QA.Selenium.Workflow.Lobby;
+using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.QA.Application.View.Common;
+using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.QA.Application.View.Person;
+using Lobby = Six.Scs.QA.Application.Workflow.Lobby;
 
 namespace Six.Scs.QA.Testlogic
 {
     public static class Contact
     {
-        public static Person Create(Selenium.Model.ValueObjects.Customer customer)
+        public static Person Create(Application.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();
@@ -19,15 +19,15 @@ namespace Six.Scs.QA.Testlogic
 
         private static Person CreateAndSave()
         {
-            Person person = Selenium.Model.Factory.Person.Create();
-            Selenium.Workflow.Contact.Create(person);
+            Person person = Application.Model.Factory.Person.Create();
+            Application.Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
             Check(person);
             return person;
         }
 
-        public static Person Create(Selenium.Model.ValueObjects.Location location)
+        public static Person Create(Application.Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.ContactCreate.Click();
@@ -38,9 +38,9 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            Person person = Selenium.Model.Factory.Person.Edit();
+            Person person = Application.Model.Factory.Person.Edit();
 
-            Selenium.Workflow.Contact.Edit(person);
+            Application.Workflow.Contact.Edit(person);
             Check(person);
 
             Lobby.OpenLatestElement();

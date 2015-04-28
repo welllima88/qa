@@ -2,7 +2,7 @@ using System;
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Customer
+namespace Six.Scs.QA.Application.View.Customer
 {
     public class Edit : WebObject
     {

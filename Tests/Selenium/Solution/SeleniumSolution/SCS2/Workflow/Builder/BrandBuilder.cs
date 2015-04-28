@@ -1,9 +1,9 @@
 using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.Model.ValueObjects.Brand;
-using Six.Scs.QA.Selenium.View.Brand;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
+using Six.Scs.QA.Application.Model.ValueObjects.Brand;
+using Six.Scs.QA.Application.View.Brand;
+using Six.Scs.QA.Application.View.Terminal.Dashboard;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.QA.Application.Workflow.Builder
 {
     public abstract class BrandBuilder : IBuilder
     {

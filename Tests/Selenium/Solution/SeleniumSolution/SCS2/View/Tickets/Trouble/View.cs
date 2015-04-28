@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using Six.QA.Selenium.Extension.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Tickets.Trouble
+namespace Six.Scs.QA.Application.View.Tickets.Trouble
 {
     public class View : WebObject
     {

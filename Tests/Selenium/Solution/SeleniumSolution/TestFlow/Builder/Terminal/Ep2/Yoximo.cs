@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.QA.Application.View.Terminal;
+using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
+using Six.Scs.QA.Application.Workflow.Builder;
 
 namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
 {
