@@ -10,6 +10,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Administration
         [SetUp]
         public static void Navigate()
         {
+            // open xentissimo
             TestDirector.Navigate("TerminalType?TerminalTypeId=1025");
         }
 
