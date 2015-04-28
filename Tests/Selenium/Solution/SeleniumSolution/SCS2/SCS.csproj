@@ -113,6 +113,7 @@
     <Compile Include="Model\ValueObjects\Terminal.cs" />
     <Compile Include="Model\ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="Model\ValueObjects\TerminalReplace.cs" />
+    <Compile Include="Model\ValueObjects\TerminalType.cs" />
     <Compile Include="Model\ValueObjects\TroubleTicket.cs" />
     <Compile Include="Model\ValueObjects\User.cs" />
     <Compile Include="View\Administration\Agency\Create.cs" />
@@ -126,6 +127,8 @@
     <Compile Include="View\Administration\SimCard\History.cs" />
     <Compile Include="View\Administration\SimCard\View.cs" />
     <Compile Include="View\Administration\SoftwareExchange\Create.cs" />
+    <Compile Include="View\Administration\TerminalType\Edit.cs" />
+    <Compile Include="View\Administration\TerminalType\View.cs" />
     <Compile Include="View\Brand\AcquirerCreate.cs" />
     <Compile Include="View\Brand\Create.cs" />
     <Compile Include="View\Brand\Edit.cs" />
