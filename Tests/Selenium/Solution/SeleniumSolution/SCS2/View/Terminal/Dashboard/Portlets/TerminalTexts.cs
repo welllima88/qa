@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets
+namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
     public class TerminalTexts : PortletViewBase
     {

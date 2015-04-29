@@ -1,17 +1,17 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.QA.Application.Model.Factory;
-using Six.Scs.QA.Application.View.Terminal;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Application.Workflow.Builder;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
+namespace Six.Scs.Test.Builder.Terminal.Saferpay
 {
     public class Icp : TerminalBuilder
     {
         public Icp()
         {
-            Terminal = new Application.Model.ValueObjects.Terminal {Type = "ICP"};
+            Terminal = new Test.Model.ValueObjects.Terminal {Type = "ICP"};
         }
 
         public override void Create()

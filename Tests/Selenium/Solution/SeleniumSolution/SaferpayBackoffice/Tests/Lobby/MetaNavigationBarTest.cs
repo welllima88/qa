@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Saferpay.QA.Selenium.Pages.Common;
+using Six.Saferpay.Backoffice.Test.Pages.Common;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Tests.Lobby
+namespace Six.Saferpay.Backoffice.Test.Tests.Lobby
 {
     [TestFixture]
     [Category("Navigation")]

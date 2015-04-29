@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Customer;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Customer;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SystemTest.Validation.Customer
+namespace Six.Scs.Test.Validation.Customer
 {
     //[TestFixture]
     public class CreateWithInvalidInput

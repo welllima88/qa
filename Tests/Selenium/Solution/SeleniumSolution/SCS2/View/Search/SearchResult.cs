@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Search
+namespace Six.Scs.Test.View.Search
 {
     public class SearchResult : WebObject
     {

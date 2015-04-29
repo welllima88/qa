@@ -6,7 +6,7 @@
     <ProjectGuid>{30D92BBD-3D78-4448-AC5D-EAD720E16B66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Selenium.SmokeTest</RootNamespace>
+    <RootNamespace>Six.Scs.Test</RootNamespace>
     <AssemblyName>SmokeTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

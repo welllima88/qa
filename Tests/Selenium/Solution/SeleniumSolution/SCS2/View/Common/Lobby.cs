@@ -1,10 +1,10 @@
 using System;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.Authentication;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.Authentication;
+using Six.Test.Selenium.WebDriver;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Common
+namespace Six.Scs.Test.View.Common
 {
     public class Lobby : WebObject, IApplication
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Six.Scs.QA.Application.Model.ValueObjects.Brand
+namespace Six.Scs.Test.Model.ValueObjects.Brand
 {
     public class OnUs : Brand
     {

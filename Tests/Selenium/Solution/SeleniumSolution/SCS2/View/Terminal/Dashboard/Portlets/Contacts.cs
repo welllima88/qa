@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 
-namespace Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets
+namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
     public class Contacts : PortletViewBase
     {

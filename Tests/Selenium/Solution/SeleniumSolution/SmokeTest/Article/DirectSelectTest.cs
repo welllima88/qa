@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Terminal;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Terminal;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SmokeTest.Article
+namespace Six.Scs.Test.Article
 {
     [TestFixture]
     public class DirectSelectTest
@@ -26,7 +26,7 @@ namespace Six.Scs.QA.Application.SmokeTest.Article
             ArticleChooser.Select = article;
 
             Assert.IsTrue(ConfigCreate.TerminalType.Equals(termType));
-            Assert.IsTrue(View.Common.Lobby.Headline.Text.Contains(article));
+            Assert.IsTrue(Test.View.Common.Lobby.Headline.Text.Contains(article));
         }
     }
 }

@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Six.Saferpay.QA.Selenium.Tests.Support
+namespace Six.Saferpay.Backoffice.Test.Tests.Support
 {
     [TestFixture]
     public class NewRequest

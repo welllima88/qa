@@ -1,16 +1,15 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Administration.Agency;
-using Six.Scs.QA.Application.Workflow;
+using Six.Scs.Test.Workflow;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Testlogic.Administration
+namespace Six.Scs.Test.Administration
 {
     public class Agency
     {
-        public static Application.Model.ValueObjects.Agency Create()
+        public static Test.Model.ValueObjects.Agency Create()
         {
-            Application.Model.ValueObjects.Agency agency = Application.Model.Factory.Agency.Default();
-            Application.Workflow.Agency.Create(agency);
+            Test.Model.ValueObjects.Agency agency = Test.Model.Factory.Agency.Default();
+            Test.Workflow.Agency.Create(agency);
 
             Check(agency);
             Lobby.OpenLatestElement();
@@ -19,11 +18,11 @@ namespace Six.Scs.QA.Testlogic.Administration
             return agency;
         }
 
-        public static Application.Model.ValueObjects.Agency Edit(Application.Model.ValueObjects.Agency agency)
+        public static Test.Model.ValueObjects.Agency Edit(Test.Model.ValueObjects.Agency agency)
         {
             Lobby.OpenLatestElement();
-            agency = Application.Model.Factory.Agency.Edit();
-            Application.Workflow.Agency.Edit(agency);
+            agency = Test.Model.Factory.Agency.Edit();
+            Test.Workflow.Agency.Edit(agency);
 
             Check(agency);
             Lobby.OpenLatestElement();
@@ -32,27 +31,27 @@ namespace Six.Scs.QA.Testlogic.Administration
             return agency;
         }
 
-        private static void Open(Application.Model.ValueObjects.Agency agency)
+        private static void Open(Test.Model.ValueObjects.Agency agency)
         {
             TestDirector.Navigate("Agency/List");
         }
 
-        private static void Check(Application.Model.ValueObjects.Agency agency)
+        private static void Check(Test.Model.ValueObjects.Agency agency)
         {
-            Assert.That(View.Status, Is.EqualTo(agency.Status));
-            Assert.That(View.Name, Is.EqualTo(agency.Name));
-            Assert.That(View.DisplayName, Is.EqualTo(agency.DisplayName));
-            Assert.That(View.City, Is.EqualTo(agency.Adress.City));
-            Assert.That(View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
-            Assert.That(agency.Adress.Country, Is.StringMatching(View.Country)); // "Schweiz" vs "Schweiz [CH]"
-            Assert.That(View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
-            Assert.That(View.Supplier, Is.EqualTo(agency.Supplier));
+            Assert.That(View.Administration.Agency.View.Status, Is.EqualTo(agency.Status));
+            Assert.That(View.Administration.Agency.View.Name, Is.EqualTo(agency.Name));
+            Assert.That(View.Administration.Agency.View.DisplayName, Is.EqualTo(agency.DisplayName));
+            Assert.That(View.Administration.Agency.View.City, Is.EqualTo(agency.Adress.City));
+            Assert.That(View.Administration.Agency.View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
+            Assert.That(agency.Adress.Country, Is.StringMatching(View.Administration.Agency.View.Country)); // "Schweiz" vs "Schweiz [CH]"
+            Assert.That(View.Administration.Agency.View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
+            Assert.That(View.Administration.Agency.View.Supplier, Is.EqualTo(agency.Supplier));
         }
 
-        public static void Deactivate(Application.Model.ValueObjects.Agency agency)
+        public static void Deactivate(Test.Model.ValueObjects.Agency agency)
         {
             Lobby.OpenLatestElement();
-            Application.Workflow.Agency.Deactivate();
+            Test.Workflow.Agency.Deactivate();
             agency.Status = false;
 
             Check(agency);

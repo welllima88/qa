@@ -1,8 +1,8 @@
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Common.Menu
+namespace Six.Scs.Test.View.Common.Menu
 {
     public class MassMutationMenu : WebObject
     {

@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Terminal.Quit
+namespace Six.Scs.Test.View.Terminal.Quit
 {
     public class Quit : WebObject
     {

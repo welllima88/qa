@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Search;
+using Six.Scs.Test.View.Search;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SmokeTest.Search.Customer
+namespace Six.Scs.Test.Search.Customer
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling
@@ -18,7 +18,7 @@ namespace Six.Scs.QA.Application.SmokeTest.Search.Customer
         public static void ClassInit()
         {
             TestDirector.Navigate();
-            Workflow.Search.Find("1");
+            Test.Workflow.Search.Find("1");
             new SearchResult(Result.Customer).First().Click();
             _debitorNumber = View.Location.View.SbsDebitNumber;
             _ep2MerchantId = View.Location.View.Ep2MerchantId;
@@ -28,7 +28,7 @@ namespace Six.Scs.QA.Application.SmokeTest.Search.Customer
         [Category("Search"), Category("Location")]
         public void DebitorNumber()
         {
-            Workflow.Search.Find(_debitorNumber);
+            Test.Workflow.Search.Find(_debitorNumber);
             StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Customer).First().Text);
             new SearchResult(Result.Customer).First().Click();
             Assert.That(_debitorNumber, Is.EqualTo(View.Location.View.SbsDebitNumber));
@@ -38,7 +38,7 @@ namespace Six.Scs.QA.Application.SmokeTest.Search.Customer
         [Category("Search"), Category("Location")]
         public void Ep2MerchantId()
         {
-            Workflow.Search.Find(_ep2MerchantId);
+            Test.Workflow.Search.Find(_ep2MerchantId);
             StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Customer).First().Text);
             new SearchResult(Result.Customer).First().Click();
             Assert.That(_ep2MerchantId, Is.EqualTo(View.Location.View.Ep2MerchantId));

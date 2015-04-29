@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.Environment;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common;
-using Six.Scs.QA.Application.View.Environments;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Environments;
+using Six.Test.Selenium.Environment;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SmokeTest
+namespace Six.Scs.Test
 {
     /// <summary>
     ///     The TestLauncher prepares Browser with TestDirector and keeps this

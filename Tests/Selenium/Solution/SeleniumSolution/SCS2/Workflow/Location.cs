@@ -1,7 +1,7 @@
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.Workflow.Builder;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class Location
     {

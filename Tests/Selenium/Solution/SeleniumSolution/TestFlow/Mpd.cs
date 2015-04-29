@@ -1,17 +1,16 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Application.View.Mpd;
-using Six.Scs.QA.Application.Workflow;
+using Six.Scs.Test.Workflow;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class Mpd
     {
-        public static Application.Model.ValueObjects.Mpd Create(Application.Model.ValueObjects.Customer customer)
+        public static Test.Model.ValueObjects.Mpd Create(Test.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
-            Application.Model.ValueObjects.Mpd mpd = Application.Model.Factory.Mpd.Create();
-            Application.Workflow.Mpd.Create(mpd);
+            Test.Model.ValueObjects.Mpd mpd = Test.Model.Factory.Mpd.Create();
+            Test.Workflow.Mpd.Create(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -19,13 +18,13 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static Application.Model.ValueObjects.Mpd Edit(Application.Model.ValueObjects.Mpd _mpd)
+        public static Test.Model.ValueObjects.Mpd Edit(Test.Model.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            Application.Model.ValueObjects.Mpd mpd = Application.Model.Factory.Mpd.Edit();
+            Test.Model.ValueObjects.Mpd mpd = Test.Model.Factory.Mpd.Edit();
             mpd.Id = _mpd.Id; // keep Id
 
-            Application.Workflow.Mpd.Edit(mpd);
+            Test.Workflow.Mpd.Edit(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -33,17 +32,17 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static void Open(Application.Model.ValueObjects.Mpd mpd)
+        public static void Open(Test.Model.ValueObjects.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
 
-        public static void Check(Application.Model.ValueObjects.Mpd m)
+        public static void Check(Test.Model.ValueObjects.Mpd m)
         {
-            Assert.AreEqual(m.Id, View.Id);
-            Assert.AreEqual(m.Description, View.Description);
-            Assert.AreEqual(m.Adress, View.Adress);
-            Assert.AreEqual(m.Port, View.Port);
+            Assert.AreEqual(m.Id, View.Mpd.View.Id);
+            Assert.AreEqual(m.Description, View.Mpd.View.Description);
+            Assert.AreEqual(m.Adress, View.Mpd.View.Adress);
+            Assert.AreEqual(m.Port, View.Mpd.View.Port);
         }
     }
 }

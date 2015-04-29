@@ -1,4 +1,4 @@
-namespace Six.QA.Selenium.Extension.Authentication.Method
+namespace Six.Test.Selenium.Authentication.Method
 {
     public class NoAuthentication : IAuthentication
     {

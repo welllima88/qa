@@ -1,6 +1,6 @@
 using System;
 
-namespace Six.Scs.QA.Application.Model.ValueObjects
+namespace Six.Scs.Test.Model.ValueObjects
 {
     public class Location
     {

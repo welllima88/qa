@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SmokeTest.Terminal
+namespace Six.Scs.Test.Terminal
 {
     [TestFixture]
     [Category("Terminal Quit")]
@@ -19,22 +19,22 @@ namespace Six.Scs.QA.Application.SmokeTest.Terminal
         [Category("Terminal Quit")]
         public void Delivery()
         {
-            Assert.That(View.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
+            Assert.That(Test.View.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void Reason()
         {
-            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Not.Null);
-            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Empty);
+            Assert.That(Test.View.Terminal.Quit.Quit.Reason, Is.Not.Null);
+            Assert.That(Test.View.Terminal.Quit.Quit.Reason, Is.Empty);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void State()
         {
-            Assert.That(View.Terminal.Quit.Quit.State, Is.Not.Empty);
+            Assert.That(Test.View.Terminal.Quit.Quit.State, Is.Not.Empty);
         }
     }
 }

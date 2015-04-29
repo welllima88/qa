@@ -6,7 +6,7 @@
     <ProjectGuid>{4DB6CE42-98DA-41B4-A830-1A0F8A0B973F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Testlogic</RootNamespace>
+    <RootNamespace>Six.Scs.Test</RootNamespace>
     <AssemblyName>Testlogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

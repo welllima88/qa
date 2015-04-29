@@ -1,4 +1,4 @@
-namespace Six.Saferpay.QA.Selenium.Factory.Account
+namespace Six.Saferpay.Backoffice.Test.Factory.Account
 {
     public class Account
     {

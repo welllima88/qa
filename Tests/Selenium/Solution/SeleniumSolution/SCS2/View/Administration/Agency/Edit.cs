@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Application.View.Administration.Agency
+namespace Six.Scs.Test.View.Administration.Agency
 {
     public class Edit : Create
     {

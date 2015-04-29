@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Six.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.Test.Selenium.WebDriver.WebElements
 {
     public class TextFieldElement
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.Application.View.Common;
-using Six.Scs.QA.Application.View.Search;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Search;
+using Six.Test.Selenium.WebDriver;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.SmokeTest.Search.Customer
+namespace Six.Scs.Test.Search.Customer
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

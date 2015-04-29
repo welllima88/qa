@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Application.Model.ValueObjects.Brand;
-using Six.Scs.QA.Application.View.Brand;
+using Six.Scs.Test.Model.ValueObjects.Brand;
+using Six.Scs.Test.View.Brand;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public class Brand
     {

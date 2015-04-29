@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.Test.Model.ValueObjects;
 
-namespace Six.Scs.QA.Application.Model.Factory
+namespace Six.Scs.Test.Model.Factory
 {
     public static class Services
     {

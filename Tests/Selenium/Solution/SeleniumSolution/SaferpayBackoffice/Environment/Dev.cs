@@ -1,9 +1,9 @@
 ﻿using System;
-using Six.QA.Selenium.Extension.Authentication.Method;
-using Six.QA.Selenium.Extension.Environment;
-using Six.Saferpay.QA.Selenium.Pages.Common;
+using Six.Saferpay.Backoffice.Test.Pages.Common;
+using Six.Test.Selenium.Authentication.Method;
+using Six.Test.Selenium.Environment;
 
-namespace Six.Saferpay.QA.Selenium.Environment
+namespace Six.Saferpay.Backoffice.Test.Environment
 {
     public class Dev : TestEnvironment
     {

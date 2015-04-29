@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Application.View.Search
+namespace Six.Scs.Test.View.Search
 {
     public static class Result
     {

@@ -1,4 +1,4 @@
-namespace Six.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.Test.Selenium.WebDriver.WebElements
 {
     /// <summary>
     ///     defines interface for a test object

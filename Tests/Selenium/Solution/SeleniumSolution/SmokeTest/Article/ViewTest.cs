@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SmokeTest.Article
+namespace Six.Scs.Test.Article
 {
     [TestFixture]
     public class ViewTest

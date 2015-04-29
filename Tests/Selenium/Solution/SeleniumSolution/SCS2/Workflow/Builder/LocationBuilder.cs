@@ -1,7 +1,7 @@
-using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Application.View.Common.Menu;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Scs.QA.Application.Workflow.Builder
+namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class LocationBuilder : IBuilder
     {

@@ -1,16 +1,15 @@
 using NUnit.Framework;
-using Six.Scs.QA.Application.Model.Factory;
-using Six.Scs.QA.Application.View.Tickets.Trouble;
-using Six.Scs.QA.Application.Workflow;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Workflow;
 
-namespace Six.Scs.QA.Testlogic.Tickets
+namespace Six.Scs.Test.Tickets
 {
     public class TroubleTicket
     {
-        public static Application.Model.ValueObjects.TroubleTicket Create(Application.Model.ValueObjects.Terminal terminal)
+        public static Test.Model.ValueObjects.TroubleTicket Create(Test.Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
-            Application.Model.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
+            Test.Model.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
             Open(troubleTicket);
 
@@ -19,17 +18,17 @@ namespace Six.Scs.QA.Testlogic.Tickets
             return troubleTicket;
         }
 
-        private static void Check(Application.Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Check(Test.Model.ValueObjects.TroubleTicket troubleTicket)
         {
-            Assert.That(View.Header, Is.StringMatching(troubleTicket.Id));
+            Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
-        private static void Open(Application.Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Open(Test.Model.ValueObjects.TroubleTicket troubleTicket)
         {
             Search.TicketCanBeFoundById(troubleTicket.Id);
         }
 
-        public static void Edit(Application.Model.ValueObjects.TroubleTicket troubleTicket)
+        public static void Edit(Test.Model.ValueObjects.TroubleTicket troubleTicket)
         {
             // TODO: implement
         }

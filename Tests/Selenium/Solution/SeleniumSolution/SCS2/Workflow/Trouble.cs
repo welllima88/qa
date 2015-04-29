@@ -1,8 +1,8 @@
 using System;
-using Six.Scs.QA.Application.Model.ValueObjects;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets.Support;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public class Trouble
     {

@@ -1,13 +1,12 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SystemTest.Administration
+namespace Six.Scs.Test.Administration
 {
     [TestFixture]
     public class AgencyTest
     {
-        private Agency _agency;
+        private Model.ValueObjects.Agency _agency;
 
         [TestFixtureSetUp]
         public static void ClassInit()
@@ -19,9 +18,9 @@ namespace Six.Scs.QA.Application.SystemTest.Administration
         [Category("Agency"), Category("Create"), Category("Edit"), Category("Deactivate")]
         public void Manage()
         {
-            _agency = Testlogic.Administration.Agency.Create();
-            _agency = Testlogic.Administration.Agency.Edit(_agency);
-            Testlogic.Administration.Agency.Deactivate(_agency);
+            _agency = Agency.Create();
+            _agency = Agency.Edit(_agency);
+            Agency.Deactivate(_agency);
         }
     }
 }

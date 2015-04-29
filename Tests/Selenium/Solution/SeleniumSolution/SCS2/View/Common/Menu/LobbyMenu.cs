@@ -1,8 +1,8 @@
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Common.Menu
+namespace Six.Scs.Test.View.Common.Menu
 {
     /// <summary>
     ///     css Locator have problems with menu so use xpath until resolved the reason...

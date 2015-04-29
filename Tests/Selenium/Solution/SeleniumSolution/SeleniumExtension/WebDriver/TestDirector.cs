@@ -1,10 +1,10 @@
 using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using Six.QA.Selenium.Extension.Environment;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.Environment;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.WebDriver
+namespace Six.Test.Selenium.WebDriver
 {
     public static class TestDirector
     {

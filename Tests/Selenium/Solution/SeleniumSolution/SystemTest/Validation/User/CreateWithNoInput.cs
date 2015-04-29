@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.User;
-using List = Six.Scs.QA.Application.View.User.List;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.User;
+using Six.Test.Selenium.WebDriver;
+using List = Six.Scs.Test.View.User.List;
 
-namespace Six.Scs.QA.Application.SystemTest.Validation.User
+namespace Six.Scs.Test.Validation.User
 {
     [TestFixture]
     public class CreateWithNoInput
@@ -16,7 +16,7 @@ namespace Six.Scs.QA.Application.SystemTest.Validation.User
         {
             TestDirector.Navigate("Customer/?CUSTOMERID=1");
             CustomerMenu.Users.Click();
-            View.User.List.UserCreate.Click();
+            List.UserCreate.Click();
             Create.SaveButton.Click();
         }
 

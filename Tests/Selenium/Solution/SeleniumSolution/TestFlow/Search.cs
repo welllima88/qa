@@ -1,39 +1,38 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Application.View.Customer;
-using Six.Scs.QA.Application.View.Search;
-using Six.Scs.QA.Application.View.Terminal.Dashboard;
+using Six.Scs.Test.View.Search;
+using Six.Scs.Test.View.Terminal.Dashboard;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class Search
     {
         public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
-            Application.Workflow.Search.Find(customerId);
+            Test.Workflow.Search.Find(customerId);
             new SearchResult(Result.Customer).First().Click();
 
-            Assert.AreEqual(customerId, View.CustomerNumber);
+            Assert.AreEqual(customerId, View.Customer.View.CustomerNumber);
         }
 
         public static void LocationCanBeFoundByLocationName(string locationName)
         {
-            Application.Workflow.Search.Find(locationName);
+            Test.Workflow.Search.Find(locationName);
             new SearchResult(Result.Location).First().Click();
 
-            Assert.AreEqual(locationName, Application.View.Location.View.CompanyName);
+            Assert.AreEqual(locationName, Test.View.Location.View.CompanyName);
         }
 
         public static void CustomerCanBeFoundByCustomerName(string customerName)
         {
-            Application.Workflow.Search.Find(customerName);
+            Test.Workflow.Search.Find(customerName);
             new SearchResult(Result.Customer).First().Click();
 
-            Assert.AreEqual(customerName, View.CustomerName);
+            Assert.AreEqual(customerName, View.Customer.View.CustomerName);
         }
 
         public static void TerminalCanBeFoundById(string terminalId)
         {
-            Application.Workflow.Search.Find(terminalId);
+            Test.Workflow.Search.Find(terminalId);
             new SearchResult(Result.Terminal).First().Click();
 
             Assert.AreEqual(terminalId, TerminalInfo.TerminalId);
@@ -41,34 +40,34 @@ namespace Six.Scs.QA.Testlogic
 
         public static void UserCanBeFoundByCustomerName(string userName)
         {
-            Application.Workflow.Search.Find(userName);
+            Test.Workflow.Search.Find(userName);
             new SearchResult(Result.User).First().Click();
 
-            Assert.AreEqual(userName, Application.View.User.View.UserName);
+            Assert.AreEqual(userName, Test.View.User.View.UserName);
         }
 
         public static void MpdCanBeFoundById(string id)
         {
-            Application.Workflow.Search.Find(id);
+            Test.Workflow.Search.Find(id);
             new SearchResult(Result.Mpd).First().Click();
 
-            Assert.AreEqual(id, Application.View.Mpd.View.Id);
+            Assert.AreEqual(id, Test.View.Mpd.View.Id);
         }
 
         public static void SimcardBySimCardNumber(string simCardNumber)
         {
-            Application.Workflow.Search.Find(simCardNumber);
+            Test.Workflow.Search.Find(simCardNumber);
             new SearchResult(Result.SimCard).First().Click();
 
-            Assert.AreEqual(simCardNumber, Application.View.Administration.SimCard.View.SimCardNumber);
+            Assert.AreEqual(simCardNumber, Test.View.Administration.SimCard.View.SimCardNumber);
         }
 
         public static void TicketCanBeFoundById(string ticketId)
         {
-            Application.Workflow.Search.Find(ticketId);
+            Test.Workflow.Search.Find(ticketId);
             new SearchResult(Result.Ticket).First().Click();
 
-            StringAssert.Contains(ticketId, Application.View.Tickets.Trouble.View.Header);
+            StringAssert.Contains(ticketId, Test.View.Tickets.Trouble.View.Header);
         }
     }
 }

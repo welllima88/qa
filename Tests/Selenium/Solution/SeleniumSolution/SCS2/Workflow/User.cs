@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Application.Model.ValueObjects;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.User;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.User;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class User
     {

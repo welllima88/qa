@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.Workflow.Builder;
-using Six.Scs.QA.Testlogic.Builder.Customer.Six;
-using Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay;
+using Six.Scs.Test.Builder.Customer.Six;
+using Six.Scs.Test.Builder.Terminal.Saferpay;
+using Six.Scs.Test.Workflow.Builder;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SystemTest.Saferpay
+namespace Six.Scs.Test.Saferpay
 {
     [TestFixture]
     public class ELinkTest
@@ -24,10 +24,10 @@ namespace Six.Scs.QA.Application.SystemTest.Saferpay
          Category("Saferpay"), Category("ELINK")]
         public static void ElinkCustomerStructure()
         {
-            _saferpayCustomer = Testlogic.Customer.Create(new Default());
-            _saferpayLocation = Testlogic.Location.Create(_saferpayCustomer.Customer, new Testlogic.Builder.Location.Default());
-            _saferpayTerminal = Testlogic.Terminal.Create(_saferpayLocation.Location,
-                new SaferPayPos().With(new Testlogic.Builder.Brand.ELink.Default()));
+            _saferpayCustomer = Customer.Create(new Default());
+            _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default());
+            _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
+                new SaferPayPos().With(new Builder.Brand.ELink.Default()));
         }
     }
 }

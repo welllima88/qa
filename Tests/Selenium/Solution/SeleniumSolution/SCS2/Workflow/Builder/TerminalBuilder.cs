@@ -1,9 +1,9 @@
-using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Application.View.Brand;
-using Six.Scs.QA.Application.View.Terminal;
-using Six.Scs.QA.Application.View.Terminal.Dashboard;
+using Six.Scs.Test.View.Brand;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Scs.QA.Application.Workflow.Builder
+namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class TerminalBuilder : IBuilder
     {

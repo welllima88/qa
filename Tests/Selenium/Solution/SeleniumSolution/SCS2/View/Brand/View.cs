@@ -1,8 +1,8 @@
 using System;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Brand
+namespace Six.Scs.Test.View.Brand
 {
     public class View : WebObject
     {

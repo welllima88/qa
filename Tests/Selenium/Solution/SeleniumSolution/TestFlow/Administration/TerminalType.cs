@@ -1,27 +1,27 @@
-﻿namespace Six.Scs.QA.Testlogic.Administration
+﻿namespace Six.Scs.Test.Administration
 {
     public class TerminalType
     {
-        public static Selenium.Model.ValueObjects.TerminalType Edit(
-            Selenium.Model.ValueObjects.TerminalType terminalType)
+        public static Test.Model.ValueObjects.TerminalType Edit(
+            Test.Model.ValueObjects.TerminalType terminalType)
         {
-            return new Selenium.Model.ValueObjects.TerminalType();
+            return new Test.Model.ValueObjects.TerminalType();
         }
 
-        public static Selenium.Model.ValueObjects.TerminalType View()
+        public static Test.Model.ValueObjects.TerminalType View()
         {
-            var actualTerminalType = new Selenium.Model.ValueObjects.TerminalType
+            var actualTerminalType = new Test.Model.ValueObjects.TerminalType
             {
                 DefaultAdditionalCapabilities =
-                    Selenium.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,
-                DefaultCapabilities = Selenium.View.Administration.TerminalType.View.DefaultCapabilities,
-                DeviceType = Selenium.View.Administration.TerminalType.View.DeviceType,
-                Range = Selenium.View.Administration.TerminalType.View.Range,
-                ReferenceSystem = Selenium.View.Administration.TerminalType.View.ReferenceSystem,
-                Supplier = Selenium.View.Administration.TerminalType.View.Supplier,
-                Providers = Selenium.View.Administration.TerminalType.View.Providers,
-                SoftwareIds = Selenium.View.Administration.TerminalType.View.SoftwareIds,
-                Suppliers = Selenium.View.Administration.TerminalType.View.Suppliers
+                    Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,
+                DefaultCapabilities = Test.View.Administration.TerminalType.View.DefaultCapabilities,
+                DeviceType = Test.View.Administration.TerminalType.View.DeviceType,
+                Range = Test.View.Administration.TerminalType.View.Range,
+                ReferenceSystem = Test.View.Administration.TerminalType.View.ReferenceSystem,
+                Supplier = Test.View.Administration.TerminalType.View.Supplier,
+                Providers = Test.View.Administration.TerminalType.View.Providers,
+                SoftwareIds = Test.View.Administration.TerminalType.View.SoftwareIds,
+                Suppliers = Test.View.Administration.TerminalType.View.Suppliers
             };
 
             return actualTerminalType;

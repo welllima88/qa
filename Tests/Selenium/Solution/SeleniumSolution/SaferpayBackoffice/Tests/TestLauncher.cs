@@ -1,11 +1,11 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.Environment;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Saferpay.QA.Selenium.Environment;
-using Six.Saferpay.QA.Selenium.Pages.Common;
+using Six.Saferpay.Backoffice.Test.Environment;
+using Six.Saferpay.Backoffice.Test.Pages.Common;
+using Six.Test.Selenium.Environment;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Tests
+namespace Six.Saferpay.Backoffice.Test.Tests
 {
     /// <summary>
     ///     The TestLauncher prepares Browser with TestDirector and keeps this

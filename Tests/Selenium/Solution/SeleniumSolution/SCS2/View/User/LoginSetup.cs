@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.Application.Model.ValueObjects;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.User
+namespace Six.Scs.Test.View.User
 {
     public class LoginSetup : WebObject
     {

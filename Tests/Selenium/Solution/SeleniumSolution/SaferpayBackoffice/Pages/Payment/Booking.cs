@@ -1,7 +1,7 @@
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Payment
+namespace Six.Saferpay.Backoffice.Test.Pages.Payment
 {
     public class Booking
     {

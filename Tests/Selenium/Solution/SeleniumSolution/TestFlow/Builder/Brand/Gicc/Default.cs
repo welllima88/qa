@@ -1,11 +1,11 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.QA.Application.Model.Factory;
-using Six.Scs.QA.Application.View.Brand;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets.Brand;
-using Six.Scs.QA.Application.Workflow.Builder;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Brand;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Brand.Gicc
+namespace Six.Scs.Test.Builder.Brand.Gicc
 {
     public class Default : BrandBuilder
     {

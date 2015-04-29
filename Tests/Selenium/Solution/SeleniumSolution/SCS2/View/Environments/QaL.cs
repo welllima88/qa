@@ -1,9 +1,9 @@
 using System;
-using Six.QA.Selenium.Extension.Authentication.Method;
-using Six.QA.Selenium.Extension.Environment;
-using Six.Scs.QA.Application.View.Common;
+using Six.Scs.Test.View.Common;
+using Six.Test.Selenium.Authentication.Method;
+using Six.Test.Selenium.Environment;
 
-namespace Six.Scs.QA.Application.View.Environments
+namespace Six.Scs.Test.View.Environments
 {
     public class QaL : TestEnvironment
     {

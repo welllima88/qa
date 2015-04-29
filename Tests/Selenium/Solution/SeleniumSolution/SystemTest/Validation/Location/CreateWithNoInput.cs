@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Location;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Location;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SystemTest.Validation.Location
+namespace Six.Scs.Test.Validation.Location
 {
     [TestFixture]
     public class CreateWithNoInput

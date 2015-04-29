@@ -1,52 +1,51 @@
 using NUnit.Framework;
-using Six.QA.Selenium.Extension;
-using Six.Scs.QA.Application.Model.ValueObjects;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Location.BillingAddress;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class BillingAdress
     {
-        public static void Create(Application.Model.ValueObjects.Customer customer)
+        public static void Create(Test.Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
             CustomerMenu.BillingAdressCreate.Click();
-            BillingAddress billingAddress = Application.Model.Factory.BillingAddress.Create();
+            BillingAddress billingAddress = Test.Model.Factory.BillingAddress.Create();
 
-            Application.Workflow.BillingAdress.Create(billingAddress);
+            Test.Workflow.BillingAdress.Create(billingAddress);
             Check(billingAddress);
         }
 
         private static void Check(BillingAddress b)
         {
-            Assert.AreEqual(b.CompanyName, View.CompanyName);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.SbsDebitNumber);
-            Assert.AreEqual(b.Adress.StreetNo, View.StreetNo);
-            Assert.AreEqual(b.Adress.Po, View.Po);
-            Assert.AreEqual(b.Adress.Zip, View.Zip);
-            Assert.AreEqual(b.Adress.City, View.City);
-            StringAssert.Contains(b.Adress.Region, View.Region);
-            Assert.AreEqual(b.Adress.AdressAddition, View.AdressAddition);
-            Assert.AreEqual(b.Contact.Language, View.Language);
-            Assert.AreEqual(b.Adress.Country, View.Country);
-            Assert.AreEqual(b.Contact.Email, View.Email);
-            StringAssert.Contains(b.Contact.Telephone, View.Telephone);
-            StringAssert.Contains(b.Contact.Mobile, View.Mobile);
-            StringAssert.Contains(b.Contact.Fax, View.Fax);
-            Assert.AreEqual(b.Contact.Web, View.Web);
+            Assert.AreEqual(b.CompanyName, View.Location.BillingAddress.View.CompanyName);
+            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.Location.BillingAddress.View.SbsDebitNumber);
+            Assert.AreEqual(b.Adress.StreetNo, View.Location.BillingAddress.View.StreetNo);
+            Assert.AreEqual(b.Adress.Po, View.Location.BillingAddress.View.Po);
+            Assert.AreEqual(b.Adress.Zip, View.Location.BillingAddress.View.Zip);
+            Assert.AreEqual(b.Adress.City, View.Location.BillingAddress.View.City);
+            StringAssert.Contains(b.Adress.Region, View.Location.BillingAddress.View.Region);
+            Assert.AreEqual(b.Adress.AdressAddition, View.Location.BillingAddress.View.AdressAddition);
+            Assert.AreEqual(b.Contact.Language, View.Location.BillingAddress.View.Language);
+            Assert.AreEqual(b.Adress.Country, View.Location.BillingAddress.View.Country);
+            Assert.AreEqual(b.Contact.Email, View.Location.BillingAddress.View.Email);
+            StringAssert.Contains(b.Contact.Telephone, View.Location.BillingAddress.View.Telephone);
+            StringAssert.Contains(b.Contact.Mobile, View.Location.BillingAddress.View.Mobile);
+            StringAssert.Contains(b.Contact.Fax, View.Location.BillingAddress.View.Fax);
+            Assert.AreEqual(b.Contact.Web, View.Location.BillingAddress.View.Web);
         }
 
-        public static void Edit(Application.Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
+        public static void Edit(Test.Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
         {
             Customer.Open(customer);
             CustomerMenu.BillingAdresses.Click();
-            View.List(BillingAddress).Click(); // choose the first match
+            View.Location.BillingAddress.View.List(BillingAddress).Click(); // choose the first match
 
-            BillingAddress billingAddress = Application.Model.Factory.BillingAddress.Create();
+            BillingAddress billingAddress = Test.Model.Factory.BillingAddress.Create();
 
-            Application.Workflow.BillingAdress.Edit(billingAddress);
+            Test.Workflow.BillingAdress.Edit(billingAddress);
             Check(billingAddress);
         }
     }

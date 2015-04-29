@@ -1,9 +1,9 @@
 using System;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Common
+namespace Six.Scs.Test.View.Common
 {
     public class RecentMassmutations : WebObject
     {

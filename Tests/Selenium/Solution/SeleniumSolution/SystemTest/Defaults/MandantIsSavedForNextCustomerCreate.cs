@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Customer;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Customer;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Application.SystemTest.Defaults
+namespace Six.Scs.Test.Defaults
 {
     [TestFixture]
     public class MandantIsSavedForNextCustomerCreate

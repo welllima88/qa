@@ -1,7 +1,7 @@
-﻿using Six.Scs.QA.Application.View.Common.Menu;
-using Six.Scs.QA.Application.View.Mpd;
+﻿using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Mpd;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class Mpd
     {

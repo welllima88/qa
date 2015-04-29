@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Application.Workflow
+﻿namespace Six.Scs.Test.Workflow
 {
     public class SimCard
     {

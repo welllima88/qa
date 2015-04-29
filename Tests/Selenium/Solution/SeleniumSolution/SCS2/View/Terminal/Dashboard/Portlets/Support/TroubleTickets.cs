@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets.Support
+namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
 {
     public class TroubleTickets : PortletViewBase
     {

@@ -1,18 +1,18 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.QA.Application.Model.Factory;
-using Six.Scs.QA.Application.View.Terminal;
-using Six.Scs.QA.Application.View.Terminal.Dashboard;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Application.Workflow.Builder;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
+namespace Six.Scs.Test.Builder.Terminal.Ep2
 {
     public class Xentissimo : TerminalBuilder
     {
         public Xentissimo()
         {
-            Terminal = Application.Model.Factory.Terminal.Xentissimo();
+            Terminal = Test.Model.Factory.Terminal.Xentissimo();
         }
 
         public override void Edit()

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Six.Scs.QA.Application.Model.Factory
+namespace Six.Scs.Test.Model.Factory
 {
     public class Currency
     {

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace Six.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.Test.Selenium.WebDriver.WebElements
 {
     /// <summary>
     ///     This class wraps WebElements from selenium and adds features which are commonly needed.

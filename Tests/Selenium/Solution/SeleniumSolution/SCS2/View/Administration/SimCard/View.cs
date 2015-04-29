@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Application.View.Administration.SimCard
+namespace Six.Scs.Test.View.Administration.SimCard
 {
     public class View : WebObject
     {

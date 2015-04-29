@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Application.Model.Repository
+﻿namespace Six.Scs.Test.Model.Repository
 {
     public class Customer : IRepository
     {

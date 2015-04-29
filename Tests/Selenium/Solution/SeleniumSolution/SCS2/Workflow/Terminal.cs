@@ -1,11 +1,9 @@
-using Six.Scs.QA.Application.Model.Factory;
-using Six.Scs.QA.Application.View.Terminal;
-using Six.Scs.QA.Application.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Application.Workflow.Builder;
-using TerminalDuplicate = Six.Scs.QA.Application.Model.ValueObjects.TerminalDuplicate;
-using TerminalReplace = Six.Scs.QA.Application.Model.ValueObjects.TerminalReplace;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public class Terminal
     {

@@ -1,6 +1,6 @@
-﻿using Six.Scs.QA.Application.View.Administration.Agency;
+﻿using Six.Scs.Test.View.Administration.Agency;
 
-namespace Six.Scs.QA.Application.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class Agency
 
