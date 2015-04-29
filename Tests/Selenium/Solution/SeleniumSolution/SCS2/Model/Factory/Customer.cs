@@ -15,7 +15,7 @@
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 SbsSegment = "01_CH",
                 WesMandant = "TKCPOS",
-                Location = Location.Create(),
+                Location = Location.Create()
             };
         }
 
@@ -24,7 +24,7 @@
             return new ValueObjects.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
-                Location = Location.Edit(),
+                Location = Location.Edit()
             };
         }
 
@@ -37,7 +37,7 @@
                 SbsBillingTenant = "SIX Payment Services (Europe)",
                 CustomerName = "SYR Sele Kunde A$°",
                 CustomerNumber = "^@}$°",
-                Location = Location.Invalid(),
+                Location = Location.Invalid()
             };
         }
     }

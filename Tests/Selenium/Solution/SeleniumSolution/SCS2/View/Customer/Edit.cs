@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -53,12 +52,12 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("LocationData_LocationGUID")).Text; }
         }
 
-        public static String CustomerNumber
+        public static string CustomerNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_CustomerId")).Text; }
         }
 
-        public static String Ep2MerchantId
+        public static string Ep2MerchantId
         {
             get
             {

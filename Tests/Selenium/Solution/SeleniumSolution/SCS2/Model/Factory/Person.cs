@@ -10,7 +10,7 @@
                 Name = "SYR - Create",
                 Salutation = "Herr",
                 Adress = Adress.Create(),
-                Contact = Contact.Create(),
+                Contact = Contact.Create()
             };
         }
 
@@ -22,7 +22,7 @@
                 Name = "SYR - Edit",
                 Salutation = "Frau",
                 Adress = Adress.Edit(),
-                Contact = Contact.Edit(),
+                Contact = Contact.Edit()
             };
         }
     }

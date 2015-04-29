@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
@@ -17,7 +16,7 @@ namespace Six.Scs.Test.View.Terminal
         {
             get
             {
-                IEnumerable<IWebElementAdapter> articleElements = WebDriver.FindAdaptedElements(
+                var articleElements = WebDriver.FindAdaptedElements(
                     By.CssSelector("tbody#allArticles tr td strong"))
                     .Where(e => e.Displayed);
                 return WebDriver.WebElementsAsStringList(articleElements);
@@ -28,7 +27,7 @@ namespace Six.Scs.Test.View.Terminal
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> articleElements =
+                var articleElements =
                     WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td strong"));
                 return WebDriver.WebElementsAsStringList(articleElements);
             }

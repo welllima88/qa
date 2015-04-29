@@ -11,7 +11,7 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
     {
         public SaferPayPos()
         {
-            Terminal = new Test.Model.ValueObjects.Terminal {Type = "Saferpay POS Terminal"};
+            Terminal = new Model.ValueObjects.Terminal {Type = "Saferpay POS Terminal"};
         }
 
         public override void Edit()

@@ -12,11 +12,11 @@ namespace Six.Scs.Test
 {
     public class User
     {
-        public static Test.Model.ValueObjects.User Create(Test.Model.ValueObjects.Customer customer)
+        public static Model.ValueObjects.User Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            Test.Model.ValueObjects.User user = Test.Model.Factory.User.Create();
-            Test.Workflow.User.Create(user);
+            var user = Model.Factory.User.Create();
+            Workflow.User.Create(user);
 
             Check(user);
             Lobby.OpenLatestElement();
@@ -24,15 +24,15 @@ namespace Six.Scs.Test
             return user;
         }
 
-        public static Test.Model.ValueObjects.User Edit(Test.Model.ValueObjects.User user)
+        public static Model.ValueObjects.User Edit(Model.ValueObjects.User user)
         {
             Open(user);
 
-            Test.Model.ValueObjects.User _user = Test.Model.Factory.User.Create();
+            var _user = Model.Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
 
-            Test.Workflow.User.Edit(_user);
+            Workflow.User.Edit(_user);
             Check(_user);
             Lobby.OpenLatestElement();
             Check(_user);
@@ -40,12 +40,12 @@ namespace Six.Scs.Test
             return _user;
         }
 
-        public static void Open(Test.Model.ValueObjects.User user)
+        public static void Open(Model.ValueObjects.User user)
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
 
-        public static void Check(Test.Model.ValueObjects.User u)
+        public static void Check(Model.ValueObjects.User u)
         {
             Assert.AreEqual(u.UserName, View.User.View.UserName);
             // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
@@ -63,39 +63,39 @@ namespace Six.Scs.Test
         {
             Contact.Open(person);
 
-            Test.View.Person.View.CreateUser.Click();
+            View.Person.View.CreateUser.Click();
 
-            StringAssert.Contains(person.Name, Test.View.User.Create.Name);
-            StringAssert.Contains(person.FirstName, Test.View.User.Create.FirstName);
-            StringAssert.Contains(person.Contact.Language, Test.View.User.Create.Language);
+            StringAssert.Contains(person.Name, View.User.Create.Name);
+            StringAssert.Contains(person.FirstName, View.User.Create.FirstName);
+            StringAssert.Contains(person.Contact.Language, View.User.Create.Language);
         }
 
-        public static void AddService(Test.Model.ValueObjects.User user)
+        public static void AddService(Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<Service> services = Services.Scs();
-            Test.Workflow.User.AddServices(services);
+            Workflow.User.AddServices(services);
             IEnumerable<Service> actList = LoginSetup.GetAssignedServices();
             CollectionAssert.AreEquivalent(services, actList);
         }
 
-        public static void AssignRoles(Test.Model.ValueObjects.User user)
+        public static void AssignRoles(Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<string> roles =
                 new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
 
-            Test.Workflow.User.AssignRoles(roles);
+            Workflow.User.AssignRoles(roles);
 
-            IEnumerable<string> actList = Roles.GetAssignedRoles();
+            var actList = Roles.GetAssignedRoles();
             CollectionAssert.AreEquivalent(roles, actList);
         }
 
-        public static void Delete(Test.Model.ValueObjects.User user)
+        public static void Delete(Model.ValueObjects.User user)
         {
             Open(user);
-            Test.Workflow.User.Delete();
-            Test.Workflow.Search.Find(user.UserName);
+            Workflow.User.Delete();
+            Workflow.Search.Find(user.UserName);
             Assert.That(new SearchResult(Result.User).Result(), Is.Not.Null);
             Assert.That(new SearchResult(Result.User).Result(), Is.Empty);
         }

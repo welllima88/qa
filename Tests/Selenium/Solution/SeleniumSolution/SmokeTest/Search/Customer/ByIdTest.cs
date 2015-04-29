@@ -18,7 +18,7 @@ namespace Six.Scs.Test.Search.Customer
         public static void ClassInit()
         {
             TestDirector.Navigate();
-            Test.Workflow.Search.Find("1");
+            Workflow.Search.Find("1");
             new SearchResult(Result.Customer).First().Click();
             _debitorNumber = View.Location.View.SbsDebitNumber;
             _ep2MerchantId = View.Location.View.Ep2MerchantId;
@@ -28,7 +28,7 @@ namespace Six.Scs.Test.Search.Customer
         [Category("Search"), Category("Location")]
         public void DebitorNumber()
         {
-            Test.Workflow.Search.Find(_debitorNumber);
+            Workflow.Search.Find(_debitorNumber);
             StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Customer).First().Text);
             new SearchResult(Result.Customer).First().Click();
             Assert.That(_debitorNumber, Is.EqualTo(View.Location.View.SbsDebitNumber));
@@ -38,7 +38,7 @@ namespace Six.Scs.Test.Search.Customer
         [Category("Search"), Category("Location")]
         public void Ep2MerchantId()
         {
-            Test.Workflow.Search.Find(_ep2MerchantId);
+            Workflow.Search.Find(_ep2MerchantId);
             StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Customer).First().Text);
             new SearchResult(Result.Customer).First().Click();
             Assert.That(_ep2MerchantId, Is.EqualTo(View.Location.View.Ep2MerchantId));

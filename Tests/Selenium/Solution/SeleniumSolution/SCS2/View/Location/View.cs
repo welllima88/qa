@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -41,12 +40,12 @@ namespace Six.Scs.Test.View.Location
             get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
-        public static String SbsDebitNumber
+        public static string SbsDebitNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSDebitNumber")).Text; }
         }
 
-        public static String SbsAdressNumber
+        public static string SbsAdressNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }

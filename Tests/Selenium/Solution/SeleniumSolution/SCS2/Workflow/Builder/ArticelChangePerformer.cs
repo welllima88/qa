@@ -31,7 +31,6 @@ namespace Six.Scs.Test.Workflow.Builder
         }
 
         protected abstract void SelectArticle();
-
         protected abstract void CheckInfos();
 
         public void Software(IPerform softwareChange)

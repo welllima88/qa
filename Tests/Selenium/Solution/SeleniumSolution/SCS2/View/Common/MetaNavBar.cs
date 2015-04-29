@@ -11,7 +11,8 @@ namespace Six.Scs.Test.View.Common
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href$='/Account/Logout/']"));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href$='/Account/Logout/']"));
             }
         }
 

@@ -55,7 +55,7 @@ namespace Six.Scs.Test.Workflow
         {
             View.User.View.AddServiceButton.Click();
 
-            foreach (Service service in services)
+            foreach (var service in services)
             {
                 LoginSetup.Set(service.Name, service.Permission);
             }
@@ -67,7 +67,7 @@ namespace Six.Scs.Test.Workflow
         {
             View.User.View.AssignRoles.Click();
 
-            foreach (string role in roles)
+            foreach (var role in roles)
             {
                 Roles.Set(role);
             }

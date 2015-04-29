@@ -21,7 +21,7 @@ namespace Six.Scs.Test
         {
         }
 
-        public static void Create(Test.Model.ValueObjects.Terminal terminal, BrandBuilder brandBuilder)
+        public static void Create(Model.ValueObjects.Terminal terminal, BrandBuilder brandBuilder)
         {
             Terminal.Open(terminal);
 

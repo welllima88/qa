@@ -11,7 +11,7 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
     {
         public Icp()
         {
-            Terminal = new Test.Model.ValueObjects.Terminal {Type = "ICP"};
+            Terminal = new Model.ValueObjects.Terminal {Type = "ICP"};
         }
 
         public override void Create()

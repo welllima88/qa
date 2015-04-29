@@ -48,13 +48,13 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
 
         public static void AllHasBeenLoaded()
         {
-            WebDriverWait w = WebDriver.WebDriverWait();
+            var w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElements(By.CssSelector("div.overly-loading")).Count == 0);
         }
 
         public static void OpenTree(string cssLocator)
         {
-            WebDriverWait w = WebDriver.WebDriverWait();
+            var w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElement(By.CssSelector(cssLocator + ".jstree-closed>ins"))).Click();
         }
     }

@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Model.Factory
             {
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
-                CompanyName = "SYR Billing Create" + Factory.GenerateTestId(),
+                CompanyName = "SYR Billing Create" + Factory.GenerateTestId()
             };
         }
 
@@ -18,7 +18,7 @@ namespace Six.Scs.Test.Model.Factory
             {
                 Adress = Adress.Edit(),
                 Contact = Contact.Edit(),
-                CompanyName = "SYR Billing Edit" + Factory.GenerateTestId(),
+                CompanyName = "SYR Billing Edit" + Factory.GenerateTestId()
             };
         }
     }

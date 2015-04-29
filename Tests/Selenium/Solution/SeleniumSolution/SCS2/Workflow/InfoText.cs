@@ -1,5 +1,4 @@
-﻿using System;
-using Six.Scs.Test.Model.Factory;
+﻿using Six.Scs.Test.Model.Factory;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -13,7 +12,7 @@ namespace Six.Scs.Test.Workflow
         {
             infotext =
                 View.Common.Infotext.Create.Text =
-                    String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
+                    string.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
             View.Common.Infotext.Create.SaveButton.Click();
             return infotext;
         }

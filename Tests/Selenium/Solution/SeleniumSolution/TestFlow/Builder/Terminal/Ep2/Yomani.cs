@@ -12,7 +12,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
     {
         public Yomani()
         {
-            Terminal = Test.Model.Factory.Terminal.Yomani();
+            Terminal = Model.Factory.Terminal.Yomani();
         }
 
         public override void Edit()

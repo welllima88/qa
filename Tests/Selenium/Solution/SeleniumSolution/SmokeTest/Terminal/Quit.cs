@@ -19,22 +19,22 @@ namespace Six.Scs.Test.Terminal
         [Category("Terminal Quit")]
         public void Delivery()
         {
-            Assert.That(Test.View.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
+            Assert.That(View.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void Reason()
         {
-            Assert.That(Test.View.Terminal.Quit.Quit.Reason, Is.Not.Null);
-            Assert.That(Test.View.Terminal.Quit.Quit.Reason, Is.Empty);
+            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Not.Null);
+            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Empty);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void State()
         {
-            Assert.That(Test.View.Terminal.Quit.Quit.State, Is.Not.Empty);
+            Assert.That(View.Terminal.Quit.Quit.State, Is.Not.Empty);
         }
     }
 }

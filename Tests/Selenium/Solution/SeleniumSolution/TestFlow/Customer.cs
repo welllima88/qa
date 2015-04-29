@@ -24,7 +24,7 @@ namespace Six.Scs.Test
             return customerBuilder;
         }
 
-        public static void Open(Test.Model.ValueObjects.Customer customer)
+        public static void Open(Model.ValueObjects.Customer customer)
         {
             Search.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
         }

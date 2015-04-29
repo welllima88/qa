@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -56,7 +55,7 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
-        public static String Agency
+        public static string Agency
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Agency")).Text; }
         }
@@ -141,12 +140,12 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("SBSCurrency")).Text; }
         }
 
-        public static String CustomerNumber
+        public static string CustomerNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("CustomerId")).Text; }
         }
 
-        public static String SbsDebitNumber
+        public static string SbsDebitNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSDebitNumber")).Text; }
         }
@@ -156,7 +155,7 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("Ep2MerchantId")).Text; }
         }
 
-        public static String SbsAdressNumber
+        public static string SbsAdressNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }

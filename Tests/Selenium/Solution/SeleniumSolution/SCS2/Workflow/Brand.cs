@@ -21,10 +21,10 @@ namespace Six.Scs.Test.Workflow
         /// <param name="contracts"></param>
         public static void Select(IEnumerable<Contract> contracts)
         {
-            foreach (Contract contract in contracts)
+            foreach (var contract in contracts)
             {
                 Selection.Open(contract.Acquirer.Id);
-                foreach (Model.ValueObjects.Brand.Brand brand in contract.Brands)
+                foreach (var brand in contract.Brands)
                 {
                     Selection.Select(brand.Id);
                 }

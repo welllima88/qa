@@ -12,7 +12,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
     {
         public Xentissimo()
         {
-            Terminal = Test.Model.Factory.Terminal.Xentissimo();
+            Terminal = Model.Factory.Terminal.Xentissimo();
         }
 
         public override void Edit()

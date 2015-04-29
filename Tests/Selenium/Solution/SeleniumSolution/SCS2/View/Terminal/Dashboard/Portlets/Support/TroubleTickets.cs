@@ -28,7 +28,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
         {
             set
             {
-                foreach (string solution in value)
+                foreach (var solution in value)
                 {
                     WebDriver.FindAdaptedElement(By.CssSelector("button.dropdown-toggle")).Click();
                     WebDriver.FindAdaptedElements(By.CssSelector("ul#resolutionDropdown li"))
@@ -121,7 +121,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
 
         public static string FetchIdByPopup()
         {
-            string ticketNo = WebDriver.SwitchTo().Alert().Text;
+            var ticketNo = WebDriver.SwitchTo().Alert().Text;
             WebDriver.SwitchTo().Alert().Accept();
             return ticketNo;
         }

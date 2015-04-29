@@ -25,25 +25,25 @@ namespace Six.Scs.Test.View.Brand
         /// <param name="eType"></param>
         public static void Select(string id, string eType = Brand)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-unchecked.Brand>a ins";
+            var locator = "li#" + eType + "_" + id + ".jstree-unchecked.Brand>a ins";
             ClickElement(locator);
         }
 
         public static void Deselect(string id, string eType = Brand)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-checked.Brand>a ins";
+            var locator = "li#" + eType + "_" + id + ".jstree-checked.Brand>a ins";
             ClickElement(locator);
         }
 
         public static void Open(string id, string eType = Acquirer)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-closed>ins.jstree-icon";
+            var locator = "li#" + eType + "_" + id + ".jstree-closed>ins.jstree-icon";
             ClickElement(locator);
         }
 
         public static void Close(string id, string eType = Acquirer)
         {
-            string locator = "li#" + eType + "_" + id + ".jstree-open>ins.jstree-icon";
+            var locator = "li#" + eType + "_" + id + ".jstree-open>ins.jstree-icon";
             ClickElement(locator);
         }
 
@@ -54,7 +54,7 @@ namespace Six.Scs.Test.View.Brand
 
         private static void ClickElement(string locator)
         {
-            IWebElementAdapter d = WebDriver.FindAdaptedElement(By.CssSelector(locator));
+            var d = WebDriver.FindAdaptedElement(By.CssSelector(locator));
             d.Click();
         }
     }

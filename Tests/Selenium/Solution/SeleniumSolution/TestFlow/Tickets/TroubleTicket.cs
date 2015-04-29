@@ -6,10 +6,10 @@ namespace Six.Scs.Test.Tickets
 {
     public class TroubleTicket
     {
-        public static Test.Model.ValueObjects.TroubleTicket Create(Test.Model.ValueObjects.Terminal terminal)
+        public static Model.ValueObjects.TroubleTicket Create(Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
-            Test.Model.ValueObjects.TroubleTicket troubleTicket = Ticket.TroubleTicket();
+            var troubleTicket = Ticket.TroubleTicket();
             Trouble.Create(troubleTicket);
             Open(troubleTicket);
 
@@ -18,17 +18,17 @@ namespace Six.Scs.Test.Tickets
             return troubleTicket;
         }
 
-        private static void Check(Test.Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Check(Model.ValueObjects.TroubleTicket troubleTicket)
         {
             Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
-        private static void Open(Test.Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Open(Model.ValueObjects.TroubleTicket troubleTicket)
         {
             Search.TicketCanBeFoundById(troubleTicket.Id);
         }
 
-        public static void Edit(Test.Model.ValueObjects.TroubleTicket troubleTicket)
+        public static void Edit(Model.ValueObjects.TroubleTicket troubleTicket)
         {
             // TODO: implement
         }

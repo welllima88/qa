@@ -7,34 +7,34 @@ namespace Six.Scs.Test
 {
     public class SimCard
     {
-        public static Test.Model.ValueObjects.SimCard Create()
+        public static Model.ValueObjects.SimCard Create()
         {
             NavigationBar.Lobby.Click();
             LobbyMenu.SimCardManage.Click();
 
-            Test.Model.ValueObjects.SimCard simCard = Simcard.Create();
+            var simCard = Simcard.Create();
 
-            Test.Workflow.SimCard.Create(simCard);
+            Workflow.SimCard.Create(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static Test.Model.ValueObjects.SimCard Edit(Test.Model.ValueObjects.SimCard _simCard)
+        public static Model.ValueObjects.SimCard Edit(Model.ValueObjects.SimCard _simCard)
         {
             Open(_simCard);
-            Test.Model.ValueObjects.SimCard simCard = Simcard.Edit();
+            var simCard = Simcard.Edit();
 
-            Test.Workflow.SimCard.Edit(simCard);
+            Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }
 
-        private static void Open(Test.Model.ValueObjects.SimCard simCard)
+        private static void Open(Model.ValueObjects.SimCard simCard)
         {
             Search.SimcardBySimCardNumber(simCard.SimCardNumber);
         }
 
-        public static void Check(Test.Model.ValueObjects.SimCard simCard)
+        public static void Check(Model.ValueObjects.SimCard simCard)
         {
             Assert.AreEqual(simCard.NetProvider, View.Administration.SimCard.View.NetProvider);
             Assert.AreEqual(simCard.SimCardNumber, View.Administration.SimCard.View.SimCardNumber);
@@ -45,28 +45,28 @@ namespace Six.Scs.Test
             Assert.AreEqual(simCard.TerminalId, View.Administration.SimCard.View.TerminalId);
         }
 
-        public static Test.Model.ValueObjects.SimCard Lock(Test.Model.ValueObjects.SimCard sim)
+        public static Model.ValueObjects.SimCard Lock(Model.ValueObjects.SimCard sim)
         {
             Open(sim);
-            Test.Workflow.SimCard.Lock(sim);
+            Workflow.SimCard.Lock(sim);
             Check(sim);
             return sim;
         }
 
-        public static Test.Model.ValueObjects.SimCard Unlink(Test.Model.ValueObjects.SimCard simCard)
+        public static Model.ValueObjects.SimCard Unlink(Model.ValueObjects.SimCard simCard)
         {
             Open(simCard);
-            Test.Workflow.SimCard.Unlink(simCard);
+            Workflow.SimCard.Unlink(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static Test.Model.ValueObjects.SimCard Link(Test.Model.ValueObjects.SimCard simCard,
-            Test.Model.ValueObjects.Terminal terminal)
+        public static Model.ValueObjects.SimCard Link(Model.ValueObjects.SimCard simCard,
+            Model.ValueObjects.Terminal terminal)
         {
             Open(simCard);
             simCard.TerminalId = terminal.Id;
-            Test.Workflow.SimCard.Edit(simCard);
+            Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }

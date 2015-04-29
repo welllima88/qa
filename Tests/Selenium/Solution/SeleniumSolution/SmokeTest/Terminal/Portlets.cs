@@ -17,49 +17,49 @@ namespace Six.Scs.Test.Terminal
         [Category("Brand")]
         public void BrandPortlet()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.Brand.BrandPortlet.NewBrandButton.Displayed);
+            Assert.That(View.Terminal.Dashboard.Portlets.Brand.BrandPortlet.NewBrandButton.Displayed);
         }
 
         [Test]
         [Category("BusinessViewpoint")]
         public void BusinessViewpoint()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.BusinessViewpoint.Status, Is.Not.Empty);
+            Assert.That(View.Terminal.Dashboard.Portlets.BusinessViewpoint.Status, Is.Not.Empty);
         }
 
         [Test]
         [Category("Contacts")]
         public void Contacts()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.Contacts.CustomerContacts, Is.Not.Empty);
+            Assert.That(View.Terminal.Dashboard.Portlets.Contacts.CustomerContacts, Is.Not.Empty);
         }
 
         [Test]
         [Category("SalesContract")]
         public void SalesContract()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.SalesContract.TerminalDuplicate.Displayed);
+            Assert.That(View.Terminal.Dashboard.Portlets.SalesContract.TerminalDuplicate.Displayed);
         }
 
         [Test]
         [Category("TechnicalView")]
         public void TechnicalView()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.TechnicalView.TerminalId, Is.Not.Empty);
+            Assert.That(View.Terminal.Dashboard.Portlets.TechnicalView.TerminalId, Is.Not.Empty);
         }
 
         [Test]
         [Category("TerminalTexts")]
         public void TerminalTexts()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.TerminalTexts.CreateInfotext, Is.Not.Null);
+            Assert.That(View.Terminal.Dashboard.Portlets.TerminalTexts.CreateInfotext, Is.Not.Null);
         }
 
         [Test]
         [Category("TroubleTickets")]
         public void TroubleTickets()
         {
-            Assert.That(Test.View.Terminal.Dashboard.Portlets.Support.TroubleTickets.SupportContract, Is.Not.Empty);
+            Assert.That(View.Terminal.Dashboard.Portlets.Support.TroubleTickets.SupportContract, Is.Not.Empty);
         }
     }
 }

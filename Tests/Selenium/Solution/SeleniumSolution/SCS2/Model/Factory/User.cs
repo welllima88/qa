@@ -14,7 +14,7 @@ namespace Six.Scs.Test.Model.Factory
                 Email = "marc.siegmund@six-group.com",
                 SecurId = "tksyr",
                 Comment = "User created by automated test",
-                WesMandant = "TKCPOS",
+                WesMandant = "TKCPOS"
             };
         }
     }

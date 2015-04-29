@@ -7,7 +7,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
     {
         private void SetPriority(string priority)
         {
-            string loc = string.Format("div#priorityButtons label[title='{0}']", priority);
+            var loc = string.Format("div#priorityButtons label[title='{0}']", priority);
 
             WebDriver.FindAdaptedElement(
                 By.CssSelector(loc))

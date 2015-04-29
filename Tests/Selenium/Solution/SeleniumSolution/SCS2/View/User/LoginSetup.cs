@@ -23,11 +23,11 @@ namespace Six.Scs.Test.View.User
 
         public static ICollection<Service> GetAssignedServices()
         {
-            ReadOnlyCollection<IWebElement> rows =
+            var rows =
                 WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tbody tr"));
 
             var services = new Collection<Service>();
-            foreach (IWebElement row in rows)
+            foreach (var row in rows)
             {
                 services.Add(new Service
                 {

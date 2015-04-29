@@ -9,7 +9,7 @@ namespace Six.Scs.Test
 {
     public static class Contact
     {
-        public static Person Create(Test.Model.ValueObjects.Customer customer)
+        public static Person Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();
@@ -18,15 +18,15 @@ namespace Six.Scs.Test
 
         private static Person CreateAndSave()
         {
-            Person person = Test.Model.Factory.Person.Create();
-            Test.Workflow.Contact.Create(person);
+            var person = Model.Factory.Person.Create();
+            Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
             Check(person);
             return person;
         }
 
-        public static Person Create(Test.Model.ValueObjects.Location location)
+        public static Person Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.ContactCreate.Click();
@@ -37,9 +37,9 @@ namespace Six.Scs.Test
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            Person person = Test.Model.Factory.Person.Edit();
+            var person = Model.Factory.Person.Edit();
 
-            Test.Workflow.Contact.Edit(person);
+            Workflow.Contact.Edit(person);
             Check(person);
 
             Lobby.OpenLatestElement();

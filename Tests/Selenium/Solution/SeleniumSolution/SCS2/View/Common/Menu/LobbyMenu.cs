@@ -38,7 +38,11 @@ namespace Six.Scs.Test.View.Common.Menu
 
         public static IWebElementAdapter HardwareManage
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/HWManagement/SingleDevice']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/HWManagement/SingleDevice']"));
+            }
         }
 
         public static IWebElementAdapter AcccessoiresOrders
@@ -83,7 +87,7 @@ namespace Six.Scs.Test.View.Common.Menu
         public static void Expand(string menuName)
         {
             // css=td#leftHandMenu a+div>a[href*='/MassMutation/']
-            IWebElement massMenu =
+            var massMenu =
                 WebDriver.FindElements(
                     By.CssSelector(
                         "tbody tr#rowContent td#leftHandMenu span#ctl00_trvNavigation a.level2:not(.open) td"))

@@ -8,21 +8,21 @@ namespace Six.Scs.Test
 {
     public class Infotext
     {
-        public static void Create(Test.Model.ValueObjects.Customer customer)
+        public static void Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.Infotexts.Click();
             CreateAndSaveInfotext("Customer");
         }
 
-        public static void Create(Test.Model.ValueObjects.Location location)
+        public static void Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.Infotexts.Click();
             CreateAndSaveInfotext("Location");
         }
 
-        public static void Create(Test.Model.ValueObjects.Terminal terminal)
+        public static void Create(Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
             TerminalTexts.Infotexts.Click();
@@ -32,7 +32,7 @@ namespace Six.Scs.Test
         private static void CreateAndSaveInfotext(string parameter)
         {
             ListView.CreateButton.Click();
-            string infotext = InfoText.Create(parameter);
+            var infotext = InfoText.Create(parameter);
             Check(infotext);
         }
 

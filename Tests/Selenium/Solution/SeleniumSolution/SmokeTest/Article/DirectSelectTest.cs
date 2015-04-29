@@ -26,7 +26,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Select = article;
 
             Assert.IsTrue(ConfigCreate.TerminalType.Equals(termType));
-            Assert.IsTrue(Test.View.Common.Lobby.Headline.Text.Contains(article));
+            Assert.IsTrue(View.Common.Lobby.Headline.Text.Contains(article));
         }
     }
 }

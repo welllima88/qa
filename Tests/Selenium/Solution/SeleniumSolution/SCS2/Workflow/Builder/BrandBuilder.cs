@@ -18,7 +18,6 @@ namespace Six.Scs.Test.Workflow.Builder
         }
 
         public abstract void Edit();
-
         public abstract void Check();
 
         private void ConfirmSelection()
@@ -33,7 +32,6 @@ namespace Six.Scs.Test.Workflow.Builder
         }
 
         protected abstract void SetBrandDetails();
-
         protected abstract void ChooseBrands();
     }
 }

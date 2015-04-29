@@ -92,13 +92,6 @@ namespace Six.Scs.Test.SoftwareExchange
 
         [Test]
         [Category("SoftwareExchange")]
-        public void SelectOddEvenSwitch()
-        {
-            Assert.IsTrue(Create.SelectOddEvenSwitch.Displayed);
-        }
-
-        [Test]
-        [Category("SoftwareExchange")]
         public void SelectedCountry()
         {
             Assert.IsTrue(Create.SelectedCountry.Displayed);
@@ -144,6 +137,13 @@ namespace Six.Scs.Test.SoftwareExchange
         public void SelectedTerminalType()
         {
             Assert.IsTrue(Create.SelectedTerminalType.Displayed);
+        }
+
+        [Test]
+        [Category("SoftwareExchange")]
+        public void SelectOddEvenSwitch()
+        {
+            Assert.IsTrue(Create.SelectOddEvenSwitch.Displayed);
         }
 
         [Test]

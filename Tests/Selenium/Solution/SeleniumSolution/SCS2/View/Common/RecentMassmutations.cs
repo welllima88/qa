@@ -1,4 +1,3 @@
-using System;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
@@ -7,7 +6,7 @@ namespace Six.Scs.Test.View.Common
 {
     public class RecentMassmutations : WebObject
     {
-        public static String Header
+        public static string Header
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("div#BatchHistoryList div.panel-heading")).Text; }
         }

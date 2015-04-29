@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -7,24 +6,24 @@ namespace Six.Scs.Test.View.Brand
     public class Create : WebObject
 //TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
     {
-        public static void ClickBrandContractEdit(String brand)
+        public static void ClickBrandContractEdit(string brand)
         {
             ClickEditContract(brand, "contract");
         }
 
-        public static void ClickAcquirerContractEdit(String acquirer)
+        public static void ClickAcquirerContractEdit(string acquirer)
         {
             ClickEditContract(acquirer, "brand");
         }
 
-        private static void ClickEditContract(String brand, String brandType)
+        private static void ClickEditContract(string brand, string brandType)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("div.title[textContent~=\"" + brand + "\"] input[src$=\"" + brandType + "_edit.gif\"]")).
                 Click();
         }
 
-        public static void SelectMcc(String mcc)
+        public static void SelectMcc(string mcc)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
@@ -32,7 +31,7 @@ namespace Six.Scs.Test.View.Brand
                 .Selector().SelectByText(mcc);
         }
 
-        public static void SetVpNo(String vpNo)
+        public static void SetVpNo(string vpNo)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector(
@@ -41,7 +40,7 @@ namespace Six.Scs.Test.View.Brand
                 .TypeText(vpNo);
         }
 
-        public static void SelectBusinessTemplate(String businessTemplate)
+        public static void SelectBusinessTemplate(string businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
@@ -55,7 +54,7 @@ namespace Six.Scs.Test.View.Brand
                 .Set(dccEnabled);
         }
 
-        public static void SetDccBaseCurrency(String dccBaseCurrency)
+        public static void SetDccBaseCurrency(string dccBaseCurrency)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))

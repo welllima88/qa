@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Search;
 using Six.Test.Selenium.WebDriver;
-using Six.Test.Selenium.WebDriver.WebElements;
 
 namespace Six.Scs.Test.Search.Customer
 {
@@ -28,12 +26,12 @@ namespace Six.Scs.Test.Search.Customer
         public void CustomerIdInResultIsDisplayed()
         {
             char[] splitter = {' ', '*'};
-            string[] searchStrings = SearchString.Split(splitter);
-            IEnumerable<IWebElementAdapter> results = new SearchResult(Result.Customer).Result();
+            var searchStrings = SearchString.Split(splitter);
+            var results = new SearchResult(Result.Customer).Result();
 
-            foreach (IWebElementAdapter result in results)
+            foreach (var result in results)
             {
-                foreach (string searchString in searchStrings)
+                foreach (var searchString in searchStrings)
                 {
                     Assert.That(result.Text, Contains.Substring(searchString));
                 }

@@ -46,9 +46,7 @@ namespace Six.Scs.Test.Workflow.Builder
         }
 
         protected abstract void ChooseArticle();
-
         protected abstract void SetBasics();
-
         protected abstract void SetDetails();
 
         /// <summary>

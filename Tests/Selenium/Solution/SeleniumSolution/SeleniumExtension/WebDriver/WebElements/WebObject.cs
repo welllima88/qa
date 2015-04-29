@@ -9,7 +9,6 @@ namespace Six.Test.Selenium.WebDriver.WebElements
     {
         protected static string Prefix = "";
         protected static string Suffix = "";
-
         public By Locator { get; set; }
 
         /// <summary>

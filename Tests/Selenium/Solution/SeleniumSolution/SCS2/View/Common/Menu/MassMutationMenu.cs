@@ -48,7 +48,12 @@ namespace Six.Scs.Test.View.Common.Menu
 
         public static IWebElementAdapter AcquirerChange
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/terminal/acquirerexchangemassmutation/']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href$='/terminal/acquirerexchangemassmutation/']"));
+            }
         }
 
         public static IWebElementAdapter MassMutation

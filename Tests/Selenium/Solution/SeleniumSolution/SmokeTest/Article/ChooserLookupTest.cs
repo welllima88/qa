@@ -31,7 +31,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Filter = "TCP/IP (Internet)";
             const string pattern = @".*TCP/IP \(Internet\).*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
@@ -44,7 +44,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Filter = "1546";
             const string pattern = "xenta AUTONOM.*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
@@ -58,7 +58,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Filter = "AUTONOM";
             const string pattern = ".*AUTONOM.*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
@@ -72,7 +72,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Filter = "yoximo Mobile";
             const string pattern = "yoximo MOBILE .*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
@@ -86,7 +86,7 @@ namespace Six.Scs.Test.Article
             ArticleChooser.Filter = "DaViNcI2 auTONoM, tCp/IP";
             const string pattern = "davinci2.*AUTONOM, TCP/IP";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }

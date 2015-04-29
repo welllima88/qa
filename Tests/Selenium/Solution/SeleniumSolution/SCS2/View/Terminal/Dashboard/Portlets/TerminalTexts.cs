@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using Six.Test.Selenium.WebDriver.WebElements;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
@@ -21,7 +20,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
         {
             get
             {
-                WebDriverWait w = WebDriver.WebDriverWait();
+                var w = WebDriver.WebDriverWait();
                 return
                     new WebElementAdapter(
                         w.Until(

@@ -2,12 +2,14 @@ using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
+using TerminalDuplicate = Six.Scs.Test.Model.ValueObjects.TerminalDuplicate;
+using TerminalReplace = Six.Scs.Test.Model.ValueObjects.TerminalReplace;
 
 namespace Six.Scs.Test.Workflow
 {
     public class Terminal
     {
-        public static void Duplicate(Model.ValueObjects.TerminalDuplicate duplicate)
+        public static void Duplicate(TerminalDuplicate duplicate)
         {
             SalesContract.TerminalDuplicate.Click();
 
@@ -28,7 +30,7 @@ namespace Six.Scs.Test.Workflow
             SalesContract.Quit.Click();
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
-            string reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
+            var reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
             View.Terminal.Quit.Quit.Reason = reason;
             View.Terminal.Quit.Quit.Save.Click();
             return reason;
@@ -44,7 +46,7 @@ namespace Six.Scs.Test.Workflow
             View.Mpd.Assign.SaveButton.Click();
         }
 
-        public static void Replace(Model.ValueObjects.TerminalReplace replace)
+        public static void Replace(TerminalReplace replace)
         {
             SalesContract.Replace.Click();
 

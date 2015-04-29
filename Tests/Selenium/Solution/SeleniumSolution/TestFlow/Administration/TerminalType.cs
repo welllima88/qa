@@ -2,15 +2,15 @@
 {
     public class TerminalType
     {
-        public static Test.Model.ValueObjects.TerminalType Edit(
-            Test.Model.ValueObjects.TerminalType terminalType)
+        public static Model.ValueObjects.TerminalType Edit(
+            Model.ValueObjects.TerminalType terminalType)
         {
-            return new Test.Model.ValueObjects.TerminalType();
+            return new Model.ValueObjects.TerminalType();
         }
 
-        public static Test.Model.ValueObjects.TerminalType View()
+        public static Model.ValueObjects.TerminalType View()
         {
-            var actualTerminalType = new Test.Model.ValueObjects.TerminalType
+            var actualTerminalType = new Model.ValueObjects.TerminalType
             {
                 DefaultAdditionalCapabilities =
                     Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,

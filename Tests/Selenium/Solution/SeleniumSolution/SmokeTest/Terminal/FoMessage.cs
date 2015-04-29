@@ -17,37 +17,37 @@ namespace Six.Scs.Test.Terminal
         [Test]
         public void Date()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
         }
 
         [Test]
         public void Id()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
         }
 
         [Test]
         public void JobId()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
         }
 
         [Test]
         public void ResponseCode()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
         }
 
         [Test]
         public void TerminalId()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
         }
 
         [Test]
         public void UserName()
         {
-            Assert.That(Test.View.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
         }
     }
 }

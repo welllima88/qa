@@ -12,7 +12,7 @@
                 Po = "Po-O1",
                 AdressAddition = "SYR",
                 Region = "Reg 55",
-                Country = "Schweiz [CH]",
+                Country = "Schweiz [CH]"
             };
         }
 
@@ -26,7 +26,7 @@
                 Zip = "01067",
                 City = "Dresden",
                 Region = "Mitte",
-                Country = "Deutschland [DE]",
+                Country = "Deutschland [DE]"
             };
         }
 
@@ -40,7 +40,7 @@
                 Po = "PFO1$°",
                 AdressAddition = "Etage 3$°",
                 Region = "Reg 3[]$°",
-                Country = "Schweiz [CH]",
+                Country = "Schweiz [CH]"
             };
         }
     }
