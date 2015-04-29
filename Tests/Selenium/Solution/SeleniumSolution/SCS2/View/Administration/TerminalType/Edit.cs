@@ -38,7 +38,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             {
                 return
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
                         .Select(e => e.Text);
             }
             set
@@ -46,7 +46,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
                 foreach (var supplier in value)
                 {
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
                         .FirstOrDefault(e => e.Text.Equals(supplier)).Click();
                 }
             }
@@ -126,7 +126,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             {
                 return
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
                         .Select(e => e.Text);
             }
             set
@@ -134,7 +134,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
                 foreach (var provider in value)
                 {
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
                         .FirstOrDefault(e => e.Text.Equals(provider)).Click();
                 }
             }
