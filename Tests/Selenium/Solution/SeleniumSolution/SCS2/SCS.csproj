@@ -75,6 +75,7 @@
     <Compile Include="Model\Factory\Terminal.cs" />
     <Compile Include="Model\Factory\TerminalDuplicate.cs" />
     <Compile Include="Model\Factory\TerminalReplace.cs" />
+    <Compile Include="Model\Factory\TerminalTyped.cs" />
     <Compile Include="Model\Factory\Ticket.cs" />
     <Compile Include="Model\Factory\User.cs" />
     <Compile Include="Model\Repository\Customer.cs" />
