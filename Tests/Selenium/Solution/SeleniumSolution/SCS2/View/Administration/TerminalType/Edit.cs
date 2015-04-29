@@ -17,8 +17,18 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElements(By.CssSelector("select#ms-supplier-mandants div.ms-selectable"))
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
                         .Select(e => e.Text);
+            }
+            set
+            {
+                foreach (var supplier in value)
+                {
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
+                        .FirstOrDefault(e => e.Text.Equals(supplier)).Click();
+                }
             }
         }
 
@@ -27,8 +37,18 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElements(By.CssSelector("select#ms-supplier-mandants div.ms-selection"))
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection span"))
                         .Select(e => e.Text);
+            }
+            set
+            {
+                foreach (var supplier in value)
+                {
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        .FirstOrDefault(e => e.Text.Equals(supplier)).Click();
+                }
             }
         }
 
@@ -85,8 +105,18 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElements(By.CssSelector("select#SelectedProviders div.ms-selectable"))
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
                         .Select(e => e.Text);
+            }
+            set
+            {
+                foreach (var provider in value)
+                {
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
+                        .FirstOrDefault(e => e.Text.Equals(provider)).Click();
+                }
             }
         }
 
@@ -96,8 +126,17 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             {
                 return
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("select#SelectedProviders div.ms-selection"))
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection span"))
                         .Select(e => e.Text);
+            }
+            set
+            {
+                foreach (var provider in value)
+                {
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection span"))
+                        .FirstOrDefault(e => e.Text.Equals(provider)).Click();
+                }
             }
         }
     }
