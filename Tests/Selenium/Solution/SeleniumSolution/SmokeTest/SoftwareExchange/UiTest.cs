@@ -5,7 +5,7 @@ using Six.Test.Selenium.WebDriver;
 namespace Six.Scs.Test.SoftwareExchange
 {
     [TestFixture]
-    public class SoftwareExchangeGuiTest
+    public class UiTest
     {
         [TestFixtureSetUp]
         public static void ClassInit()

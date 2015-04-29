@@ -6,11 +6,6 @@ namespace Six.Scs.Test.SoftwareExchange
     [TestFixture]
     public class SoftwareExchangeTest
     {
-        [SetUp]
-        public void TestInit()
-        {
-        }
-
         [TestFixtureSetUp]
         public static void ClassInit()
         {
