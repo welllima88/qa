@@ -15,8 +15,9 @@ namespace Six.Scs.Test.Workflow
             View.Administration.TerminalType.Edit.DefaultCapabilities = terminalType.DefaultCapabilities;
             View.Administration.TerminalType.Edit.DefaultAdditionalCapabilities =
                 terminalType.DefaultAdditionalCapabilities;
-            SetProviders(terminalType.Providers);
-            SetSuppliers(terminalType.Suppliers);
+            // Page Buggy
+            // SetProviders(terminalType.Providers);
+            // SetSuppliers(terminalType.Suppliers);
 
             // View.Administration.TerminalType.Edit.SaveButton.Click();
         }
