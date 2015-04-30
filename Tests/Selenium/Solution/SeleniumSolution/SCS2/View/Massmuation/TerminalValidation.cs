@@ -11,13 +11,10 @@ namespace Six.Scs.Test.View.Massmuation
         {
             get
             {
-                var passwords =
-                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpPassword']"));
-                var passwordsAsString = new List<string>(5);
-
-                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
-
-                return passwordsAsString;
+                return
+                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpPassword']"))
+                        .Select(e => e.TextField().Text())
+                        .ToList();
             }
         }
 
@@ -25,13 +22,9 @@ namespace Six.Scs.Test.View.Massmuation
         {
             get
             {
-                var passwords =
-                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpReferenceTerminalId']"));
-                var passwordsAsString = new List<string>(5);
-
-                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
-
-                return passwordsAsString;
+                return WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpReferenceTerminalId']"))
+                    .Select(e => e.TextField().Text())
+                    .ToList();
             }
         }
 
@@ -44,13 +37,9 @@ namespace Six.Scs.Test.View.Massmuation
         {
             get
             {
-                var passwords =
-                    WebDriver.FindAdaptedElements(By.CssSelector("input[id$='_inpLocationId']"));
-                var passwordsAsString = new List<string>(5);
-
-                passwordsAsString.AddRange(passwords.Select(password => password.TextField().Text()));
-
-                return passwordsAsString;
+                return WebDriver.FindAdaptedElements(By.CssSelector("input[id$='_inpLocationId']"))
+                    .Select(e => e.TextField().Text())
+                    .ToList();
             }
         }
 
