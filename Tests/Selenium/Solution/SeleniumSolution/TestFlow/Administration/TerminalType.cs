@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Administration
         {
             Workflow.TerminalType.Edit(terminalType);
             Check(terminalType);
-            return new Model.ValueObjects.TerminalType();
+            return terminalType;
         }
 
         private static void Check(Model.ValueObjects.TerminalType terminalType)
