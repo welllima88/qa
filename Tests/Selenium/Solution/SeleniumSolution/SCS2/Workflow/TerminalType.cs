@@ -19,7 +19,7 @@ namespace Six.Scs.Test.Workflow
             // SetProviders(terminalType.Providers);
             // SetSuppliers(terminalType.Suppliers);
 
-            // View.Administration.TerminalType.Edit.SaveButton.Click();
+            View.Administration.TerminalType.Edit.SaveButton.Click();
         }
 
         private static void SetSuppliers(IEnumerable<string> suppliers)
