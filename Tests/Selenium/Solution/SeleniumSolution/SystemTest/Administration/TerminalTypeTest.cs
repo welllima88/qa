@@ -31,7 +31,7 @@ namespace Six.Scs.Test.Administration
             _terminalType.Providers = _originTerminalType.Providers;
             _terminalType.Suppliers = _originTerminalType.Suppliers;
 
-            _terminalType = TerminalType.Edit(_terminalType);
+            TerminalType.Edit(_terminalType);
         }
     }
 }

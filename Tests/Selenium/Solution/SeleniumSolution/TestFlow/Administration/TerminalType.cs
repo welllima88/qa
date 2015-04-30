@@ -4,11 +4,10 @@ namespace Six.Scs.Test.Administration
 {
     public class TerminalType
     {
-        public static Model.ValueObjects.TerminalType Edit(Model.ValueObjects.TerminalType terminalType)
+        public static void Edit(Model.ValueObjects.TerminalType terminalType)
         {
             Workflow.TerminalType.Edit(terminalType);
             Check(terminalType);
-            return terminalType;
         }
 
         private static void Check(Model.ValueObjects.TerminalType terminalType)
