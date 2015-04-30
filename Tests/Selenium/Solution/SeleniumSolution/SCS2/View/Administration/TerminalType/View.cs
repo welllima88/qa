@@ -14,7 +14,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#content div.row a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
                         .Button();
             }
         }
