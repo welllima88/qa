@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -10,46 +8,6 @@ namespace Six.Scs.Test.View.Administration.TerminalType
         public static ButtonElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
-        }
-
-        public static IEnumerable<string> AvailableSuppliers
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
-                        .Select(e => e.Text);
-            }
-            set
-            {
-                foreach (var supplier in value)
-                {
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
-                        .FirstOrDefault(e => e.Text.Equals(supplier)).Click();
-                }
-            }
-        }
-
-        public static IEnumerable<string> SelectedSuppliers
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
-                        .Select(e => e.Text);
-            }
-            set
-            {
-                foreach (var supplier in value)
-                {
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-supplier-mandants div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
-                        .FirstOrDefault(e => e.Text.Equals(supplier)).Click();
-                }
-            }
         }
 
         public static string Supplier
@@ -97,46 +55,6 @@ namespace Six.Scs.Test.View.Administration.TerminalType
                 WebDriver.FindAdaptedElement(By.Id("TerminalTypeData_AdditionalTerminalCapabilitySuggestion"))
                     .TextField()
                     .TypeText(value);
-            }
-        }
-
-        public static IEnumerable<string> AvailableProviders
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
-                        .Select(e => e.Text);
-            }
-            set
-            {
-                foreach (var provider in value)
-                {
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
-                        .FirstOrDefault(e => (e.Displayed && e.Text.Equals(provider))).Click();
-                }
-            }
-        }
-
-        public static IEnumerable<string> SelectedProviders
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
-                        .Select(e => e.Text);
-            }
-            set
-            {
-                foreach (var provider in value)
-                {
-                    WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div#ms-SelectedProviders div.ms-selection ul.ms-list li.ms-elem-selection.ms-selected span"))
-                        .FirstOrDefault(e => e.Text.Equals(provider)).Click();
-                }
             }
         }
     }
