@@ -12,7 +12,7 @@ namespace Six.Scs.Test.View.Terminal
             set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TextField().TypeText(value); }
         }
 
-        public static List<string> FilteredArtikelList
+        public static IEnumerable<string> FilteredArtikelList
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Six.Scs.Test.View.Terminal
             }
         }
 
-        public static List<string> SuggestedArtikelList
+        public static IEnumerable<string> SuggestedArtikelList
         {
             get
             {

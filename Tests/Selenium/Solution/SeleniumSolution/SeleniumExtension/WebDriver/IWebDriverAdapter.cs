@@ -10,7 +10,7 @@ namespace Six.Test.Selenium.WebDriver
     {
         ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by);
         IWebElementAdapter FindAdaptedElement(By by);
-        List<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements);
+        IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements);
         WebDriverWait WebDriverWait();
     }
 }

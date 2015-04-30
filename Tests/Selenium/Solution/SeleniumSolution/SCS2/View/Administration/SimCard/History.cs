@@ -12,7 +12,7 @@ namespace Six.Scs.Test.View.Administration.SimCard
             get { return WebDriver.FindAdaptedElements(By.CssSelector("table#History tbody tr")); }
         }
 
-        public static List<string> HistoryList
+        public static IEnumerable<string> HistoryList
         {
             get { return WebDriver.WebElementsAsStringList(HistoryElements); }
         }

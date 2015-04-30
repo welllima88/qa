@@ -66,7 +66,7 @@ namespace Six.Scs.Test.View.Administration.Article
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxTransLim")).Text; }
         }
 
-        public static List<string> Supplier
+        public static IEnumerable<string> Supplier
         {
             get
             {

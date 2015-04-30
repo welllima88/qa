@@ -17,7 +17,7 @@ namespace Six.Scs.Test.View.Common.Infotext
             get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
         }
 
-        public static List<string> List
+        public static IEnumerable<string> List
         {
             get { return WebDriver.WebElementsAsStringList(Elements); }
         }
