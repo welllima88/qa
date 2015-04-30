@@ -23,20 +23,30 @@ namespace Six.Scs.Test.Workflow
 
         private static void SetSuppliers(IEnumerable<string> suppliers)
         {
-            var needed = suppliers.Intersect(View.Administration.TerminalType.Edit.AvailableSuppliers);
+            var needed = View.Administration.TerminalType.Edit.AvailableSuppliers.Intersect(suppliers);
             View.Administration.TerminalType.Edit.AvailableSuppliers = needed;
 
             var not_needed = suppliers.Where(s => !View.Administration.TerminalType.Edit.SelectedSuppliers.Contains(s));
             View.Administration.TerminalType.Edit.SelectedSuppliers = not_needed;
         }
 
-        private static void SetProviders(IEnumerable<string> providers)
+        // BUG: Enumerable problems with intersect and except due to long webdriver execution
+        private static void SetProviders1(IEnumerable<string> providers)
         {
             var needed = View.Administration.TerminalType.Edit.AvailableProviders.Intersect(providers);
             View.Administration.TerminalType.Edit.AvailableProviders = needed;
 
-            var not_needed = providers.Where(s => !View.Administration.TerminalType.Edit.SelectedProviders.Contains(s));
+            var not_needed = View.Administration.TerminalType.Edit.AvailableProviders.Except(providers);
             View.Administration.TerminalType.Edit.SelectedProviders = not_needed;
+        }
+
+        private static void SetProviders(IEnumerable<string> providers)
+        {
+            // alle löschen = clicken
+            View.Administration.TerminalType.Edit.SelectedProviders =
+                View.Administration.TerminalType.Edit.SelectedProviders;
+
+            View.Administration.TerminalType.Edit.AvailableProviders = providers;
         }
     }
 }
