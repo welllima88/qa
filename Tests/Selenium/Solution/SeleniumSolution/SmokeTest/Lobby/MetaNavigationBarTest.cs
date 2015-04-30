@@ -33,14 +33,14 @@ namespace Six.Scs.Test.Lobby
         {
             // be careful with  using the Assert, because seems to contain an error
             // Assert.That(.., Contains.Item("English"));
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).Contains("English"));
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).ToList().Contains("English"));
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void LanguageGerman()
         {
-            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).Contains("Deutsch"));
+            Assert.That(MetaNavBar.LanguageItems.Select(e => e.Text).ToList().Contains("Deutsch"));
         }
 
         [Test]
