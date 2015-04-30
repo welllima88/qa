@@ -24,9 +24,9 @@ namespace Six.Scs.Test.Administration
             Assert.That(Test.View.Administration.TerminalType.View.Supplier, Is.EqualTo(terminalType.Supplier));
             Assert.That(Test.View.Administration.TerminalType.View.DeviceType, Is.EqualTo(terminalType.DeviceType));
 
-            Assert.That(Test.View.Administration.TerminalType.View.SoftwareIds, Contains.Item(terminalType.SoftwareIds));
-            Assert.That(Test.View.Administration.TerminalType.View.Providers, Contains.Item(terminalType.Providers));
-            Assert.That(Test.View.Administration.TerminalType.View.Suppliers, Contains.Item(terminalType.Suppliers));
+            Assert.That(Test.View.Administration.TerminalType.View.SoftwareIds, Is.EqualTo(terminalType.SoftwareIds));
+            Assert.That(Test.View.Administration.TerminalType.View.Providers, Is.EqualTo(terminalType.Providers));
+            Assert.That(Test.View.Administration.TerminalType.View.Suppliers, Is.EqualTo(terminalType.Suppliers));
         }
 
         public static Model.ValueObjects.TerminalType View()
