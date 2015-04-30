@@ -11,17 +11,7 @@
                 ReferenceSystem = "GICC",
                 DeviceType = "24",
                 DefaultCapabilities = "FF00FF",
-                DefaultAdditionalCapabilities = "FF00FF00FF",
-                Providers = new[]
-                {
-                    "Accarda ep2",
-                    "Aduno EP2"
-                },
-                Suppliers = new[]
-                {
-                    "CETREL S.A.",
-                    "Coop ep2"
-                }
+                DefaultAdditionalCapabilities = "FF00FF00FF"
             };
         }
 
@@ -34,6 +24,7 @@
                 DeviceType = "24",
                 DefaultCapabilities = "FF00FF",
                 DefaultAdditionalCapabilities = "FF00FF00FF",
+                Range = "30'090'000 - 30'099'999",
                 Providers = new[]
                 {
                     "CETREL S.A.",
