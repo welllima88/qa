@@ -1,8 +1,7 @@
-using System;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Location
+namespace Six.Scs.Test.View.Location
 {
     public class Edit : WebObject
     {
@@ -26,17 +25,17 @@ namespace Six.Scs.QA.Selenium.View.Location
             set { Create.CompanyName = value; }
         }
 
-        public static String SbsDebitNumber
+        public static string SbsDebitNumber
         {
             get { return View.SbsDebitNumber; }
         }
 
-        public static String SbsAdressNumber
+        public static string SbsAdressNumber
         {
             get { return View.SbsAdressNumber; }
         }
 
-        public static String Ep2MerchantId
+        public static string Ep2MerchantId
         {
             get { return View.Ep2MerchantId; }
         }

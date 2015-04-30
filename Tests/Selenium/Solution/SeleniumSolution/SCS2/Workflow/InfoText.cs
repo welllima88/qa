@@ -1,7 +1,6 @@
-﻿using System;
-using Six.Scs.QA.Selenium.Model.Factory;
+﻿using Six.Scs.Test.Model.Factory;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class InfoText
     {
@@ -13,7 +12,7 @@ namespace Six.Scs.QA.Selenium.Workflow
         {
             infotext =
                 View.Common.Infotext.Create.Text =
-                    String.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
+                    string.Format("SYR {0} Infotext {1}", infotext, Factory.GenerateTestId());
             View.Common.Infotext.Create.SaveButton.Click();
             return infotext;
         }

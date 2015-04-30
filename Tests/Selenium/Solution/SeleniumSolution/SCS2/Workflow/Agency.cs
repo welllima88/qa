@@ -1,11 +1,11 @@
-﻿using Six.Scs.QA.Selenium.View.Administration.Agency;
+﻿using Six.Scs.Test.View.Administration.Agency;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class Agency
 
     {
-        public static void Create(Selenium.Model.ValueObjects.Agency agency)
+        public static void Create(Model.ValueObjects.Agency agency)
         {
             List.Create.Click();
 
@@ -22,7 +22,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Administration.Agency.Create.SaveButton.Click();
         }
 
-        public static void Edit(Selenium.Model.ValueObjects.Agency agency)
+        public static void Edit(Model.ValueObjects.Agency agency)
         {
             View.Administration.Agency.View.Edit();
 

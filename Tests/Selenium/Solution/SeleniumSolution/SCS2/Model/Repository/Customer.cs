@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Model.Repository
+﻿namespace Six.Scs.Test.Model.Repository
 {
     public class Customer : IRepository
     {

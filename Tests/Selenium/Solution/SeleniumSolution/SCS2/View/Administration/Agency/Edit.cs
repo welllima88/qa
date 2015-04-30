@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.View.Administration.Agency
+namespace Six.Scs.Test.View.Administration.Agency
 {
     public class Edit : Create
     {

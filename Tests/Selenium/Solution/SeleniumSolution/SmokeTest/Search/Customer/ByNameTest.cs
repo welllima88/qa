@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Search;
+﻿using NUnit.Framework;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Search;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
+namespace Six.Scs.Test.Search.Customer
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling
@@ -28,12 +26,12 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Search.Customer
         public void CustomerIdInResultIsDisplayed()
         {
             char[] splitter = {' ', '*'};
-            string[] searchStrings = SearchString.Split(splitter);
-            IEnumerable<IWebElementAdapter> results = new SearchResult(Result.Customer).Result();
+            var searchStrings = SearchString.Split(splitter);
+            var results = new SearchResult(Result.Customer).Result();
 
-            foreach (IWebElementAdapter result in results)
+            foreach (var result in results)
             {
-                foreach (string searchString in searchStrings)
+                foreach (var searchString in searchStrings)
                 {
                     Assert.That(result.Text, Contains.Substring(searchString));
                 }

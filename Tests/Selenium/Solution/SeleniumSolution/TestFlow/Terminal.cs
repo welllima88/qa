@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.Helper;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Massmuation;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
-using Six.Scs.QA.Testlogic.Helper;
+using Six.Scs.Test.Helper;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Massmuation;
+using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
+using Six.Test.Selenium.Helper;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public static class Terminal
     {
-        public static Selenium.Model.ValueObjects.Terminal Create(Selenium.Model.ValueObjects.Location location,
+        public static Model.ValueObjects.Terminal Create(Model.ValueObjects.Location location,
             TerminalBuilder terminalBuilder)
         {
             Location.Open(location);
@@ -30,12 +30,12 @@ namespace Six.Scs.QA.Testlogic
             return terminalBuilder.Terminal;
         }
 
-        public static IEnumerable<Selenium.Model.ValueObjects.Terminal> Duplicate(
-            Selenium.Model.ValueObjects.Terminal terminal)
+        public static IEnumerable<Model.ValueObjects.Terminal> Duplicate(
+            Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TerminalDuplicate terminalDuplicate = Selenium.Model.Factory.TerminalDuplicate.Create();
-            Selenium.Workflow.Terminal.Duplicate(terminalDuplicate);
+            var terminalDuplicate = TerminalDuplicate.Create();
+            Workflow.Terminal.Duplicate(terminalDuplicate);
 
             TerminalValidation.ExecuteButton.Click();
 
@@ -67,50 +67,50 @@ namespace Six.Scs.QA.Testlogic
             return CreateTerminalObjectsFromIds(Progress.TerminalList);
         }
 
-        private static IEnumerable<Selenium.Model.ValueObjects.Terminal> CreateTerminalObjectsFromIds(
+        private static IEnumerable<Model.ValueObjects.Terminal> CreateTerminalObjectsFromIds(
             IEnumerable<string> terminalList)
         {
-            var terminalObjects = new List<Selenium.Model.ValueObjects.Terminal>(terminalList.Count());
+            var terminalObjects = new List<Model.ValueObjects.Terminal>(terminalList.Count());
             terminalObjects.AddRange(
-                terminalList.Select(terminalId => new Selenium.Model.ValueObjects.Terminal {Id = terminalId}));
+                terminalList.Select(terminalId => new Model.ValueObjects.Terminal {Id = terminalId}));
             return terminalObjects;
         }
 
-        public static void Open(Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Open(Model.ValueObjects.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
             PortletViewBase.AllHasBeenLoaded();
         }
 
-        public static void Quit(Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Quit(Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            string info = Selenium.Workflow.Terminal.Quit();
+            var info = Workflow.Terminal.Quit();
             StringAssert.Contains("Gekündigt", TerminalInfo.Status);
             Assert.IsTrue(TerminalInfo.Cancelled.Displayed);
             StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
             StringAssert.Contains(info, BusinessViewpoint.Status);
         }
 
-        public static void Assign(Selenium.Model.ValueObjects.Mpd mpd, Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Assign(Model.ValueObjects.Mpd mpd, Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            Selenium.Workflow.Terminal.Assign(mpd);
+            Workflow.Terminal.Assign(mpd);
             PortletViewBase.AllHasBeenLoaded();
             PortletViewBase.OpenTree(TechnicalView.EcrLocator);
             StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
             StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);
         }
 
-        public static void Replace(Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Replace(Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            TerminalReplace replace = Selenium.Model.Factory.TerminalReplace.Yoximo();
-            Selenium.Workflow.Terminal.Replace(replace);
+            var replace = TerminalReplace.Yoximo();
+            Workflow.Terminal.Replace(replace);
             Assert.AreEqual(replace.Article, BusinessViewpoint.TerminalType);
         }
 
-        public static void ArticleChange(Selenium.Model.ValueObjects.Terminal terminal, IPerform articleChangePerfomer)
+        public static void ArticleChange(Model.ValueObjects.Terminal terminal, IPerform articleChangePerfomer)
         {
             Open(terminal);
 
@@ -118,18 +118,18 @@ namespace Six.Scs.QA.Testlogic
             articleChangePerfomer.Check();
         }
 
-        public static void Move(Selenium.Model.ValueObjects.Terminal terminal,
-            Selenium.Model.ValueObjects.Location location)
+        public static void Move(Model.ValueObjects.Terminal terminal,
+            Model.ValueObjects.Location location)
         {
             Open(terminal);
-            Selenium.Workflow.Terminal.Move(location);
+            Workflow.Terminal.Move(location);
             Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
 
-        public static void Retour(Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Retour(Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            Selenium.Workflow.Terminal.Retour();
+            Workflow.Terminal.Retour();
             NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 

@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.User
+namespace Six.Scs.Test.View.User
 {
     public class Create : WebObject
     {

@@ -1,8 +1,7 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Brand
+namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
@@ -13,7 +12,7 @@ namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Brand
         {
             get
             {
-                WebDriverWait w = WebDriver.WebDriverWait();
+                var w = WebDriver.WebDriverWait();
                 return
                     new WebElementAdapter(
                         w.Until(

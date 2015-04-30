@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Administration.SimCard
+namespace Six.Scs.Test.View.Administration.SimCard
 {
     public class View : WebObject
     {
@@ -76,25 +74,5 @@ namespace Six.Scs.QA.Selenium.View.Administration.SimCard
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Usage")).Text; }
         }
-
-        public static IEnumerable<SimHistoryElement> SimHistory
-        {
-            get
-            {
-                // take alle History Elements/ Wrap each in a SimHistory Element/ return a List of SimHistoryElements
-                // IEnumerable<IWebElementAdapter> d = WebDriver.FindElements(By.Id("#SIMCard_History"));
-                // d.;
-                // IEnumerable<SimHistoryElement> simHistory;
-                // return simHistory;
-                throw new NotImplementedException();
-            }
-        }
-    }
-
-    public class SimHistoryElement : WebObject
-    {
-        //public string Date { get; }
-        //public string User { get; }
-        //public string Description { get; }
     }
 }

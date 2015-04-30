@@ -1,16 +1,11 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
+namespace Six.Scs.Test.SoftwareExchange
 {
     [TestFixture]
     public class SoftwareExchangeTest
     {
-        [SetUp]
-        public void TestInit()
-        {
-        }
-
         [TestFixtureSetUp]
         public static void ClassInit()
         {

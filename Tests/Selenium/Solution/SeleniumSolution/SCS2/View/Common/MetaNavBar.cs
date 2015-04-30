@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common
+namespace Six.Scs.Test.View.Common
 {
     public class MetaNavBar : WebObject
     {
@@ -11,7 +11,8 @@ namespace Six.Scs.QA.Selenium.View.Common
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href$='/Account/Logout/']"));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#metaNavBar a#ctl00_hplLogout[href$='/Account/Logout/']"));
             }
         }
 

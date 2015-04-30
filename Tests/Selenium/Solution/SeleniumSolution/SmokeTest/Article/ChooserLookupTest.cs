@@ -1,9 +1,10 @@
-﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Terminal;
+﻿using System.Linq;
+using NUnit.Framework;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Terminal;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Article
+namespace Six.Scs.Test.Article
 {
     [TestFixture]
     public class ChooserLookupTest
@@ -22,7 +23,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
 
             CollectionAssert.Contains(ArticleChooser.FilteredArtikelList,
                 "davinci2 AUTONOM, TCP/IP (Internet)");
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count == 1);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() == 1);
         }
 
         [Test]
@@ -31,11 +32,11 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
             ArticleChooser.Filter = "TCP/IP (Internet)";
             const string pattern = @".*TCP/IP \(Internet\).*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count > 1);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 1);
         }
 
         [Test]
@@ -44,12 +45,12 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
             ArticleChooser.Filter = "1546";
             const string pattern = "xenta AUTONOM.*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
 
         [Test]
@@ -58,12 +59,12 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
             ArticleChooser.Filter = "AUTONOM";
             const string pattern = ".*AUTONOM.*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count > 0);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Any());
         }
 
         [Test]
@@ -72,12 +73,12 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
             ArticleChooser.Filter = "yoximo Mobile";
             const string pattern = "yoximo MOBILE .*";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
 
         [Test]
@@ -86,11 +87,11 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
             ArticleChooser.Filter = "DaViNcI2 auTONoM, tCp/IP";
             const string pattern = "davinci2.*AUTONOM, TCP/IP";
 
-            foreach (string articleEntry in ArticleChooser.FilteredArtikelList)
+            foreach (var articleEntry in ArticleChooser.FilteredArtikelList)
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count > 2);
+            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
     }
 }

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.User;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.User;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public static class User
     {
@@ -55,7 +55,7 @@ namespace Six.Scs.QA.Selenium.Workflow
         {
             View.User.View.AddServiceButton.Click();
 
-            foreach (Service service in services)
+            foreach (var service in services)
             {
                 LoginSetup.Set(service.Name, service.Permission);
             }
@@ -67,7 +67,7 @@ namespace Six.Scs.QA.Selenium.Workflow
         {
             View.User.View.AssignRoles.Click();
 
-            foreach (string role in roles)
+            foreach (var role in roles)
             {
                 Roles.Set(role);
             }

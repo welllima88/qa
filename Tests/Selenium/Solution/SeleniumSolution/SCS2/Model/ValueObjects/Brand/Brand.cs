@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Model.ValueObjects.Brand
+﻿namespace Six.Scs.Test.Model.ValueObjects.Brand
 {
     public class Brand
     {

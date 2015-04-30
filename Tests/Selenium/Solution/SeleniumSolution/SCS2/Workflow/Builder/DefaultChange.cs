@@ -1,8 +1,8 @@
-using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Common;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Common;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.Test.Workflow.Builder
 {
     public class DefaultChange : IPerform
     {

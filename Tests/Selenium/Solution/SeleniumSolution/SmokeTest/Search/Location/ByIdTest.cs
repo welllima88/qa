@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Search;
+using Six.Scs.Test.View.Search;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Search.Location
+namespace Six.Scs.Test.Search.Location
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

@@ -1,4 +1,4 @@
-﻿namespace Six.QA.Selenium.Extension.Authentication
+﻿namespace Six.Test.Selenium.Authentication
 {
     public interface IAuthentication
     {

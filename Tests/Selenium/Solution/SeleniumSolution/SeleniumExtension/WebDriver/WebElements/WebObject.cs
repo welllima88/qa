@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Six.QA.Selenium.Extension.WebDriver.WebElements
+namespace Six.Test.Selenium.WebDriver.WebElements
 {
     /// <summary>
     ///     This abstract WebObject bundles features for all test objects, like WebDriver Reference and locator information
@@ -9,7 +9,6 @@ namespace Six.QA.Selenium.Extension.WebDriver.WebElements
     {
         protected static string Prefix = "";
         protected static string Suffix = "";
-
         public By Locator { get; set; }
 
         /// <summary>

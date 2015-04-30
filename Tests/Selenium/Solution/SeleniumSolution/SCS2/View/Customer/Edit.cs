@@ -1,8 +1,7 @@
-using System;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Customer
+namespace Six.Scs.Test.View.Customer
 {
     public class Edit : WebObject
     {
@@ -53,12 +52,12 @@ namespace Six.Scs.QA.Selenium.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("LocationData_LocationGUID")).Text; }
         }
 
-        public static String CustomerNumber
+        public static string CustomerNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("CustomerData_CustomerId")).Text; }
         }
 
-        public static String Ep2MerchantId
+        public static string Ep2MerchantId
         {
             get
             {

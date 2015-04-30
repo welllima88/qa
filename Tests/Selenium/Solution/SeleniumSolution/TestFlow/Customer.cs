@@ -1,7 +1,7 @@
-﻿using Six.Scs.QA.Selenium.Workflow;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+﻿using Six.Scs.Test.Workflow;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class Customer
     {
@@ -24,7 +24,7 @@ namespace Six.Scs.QA.Testlogic
             return customerBuilder;
         }
 
-        public static void Open(Selenium.Model.ValueObjects.Customer customer)
+        public static void Open(Model.ValueObjects.Customer customer)
         {
             Search.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
         }

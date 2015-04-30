@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Model.Factory
+﻿namespace Six.Scs.Test.Model.Factory
 {
     public class Location
     {
@@ -11,7 +11,7 @@
                 CompanyName = "SYR Location Create" + Factory.GenerateTestId(),
                 SapNumber = "4444",
                 Agency = "B05 Leiser Peter",
-                Ep2MerchantId = "",
+                Ep2MerchantId = ""
             };
         }
 
@@ -23,7 +23,7 @@
                 Contact = Contact.Edit(),
                 CompanyName = "SYR Location Edit" + Factory.GenerateTestId(),
                 SapNumber = "1234",
-                Agency = "SIX Payment Services (Europe)",
+                Agency = "SIX Payment Services (Europe)"
             };
         }
 
@@ -36,7 +36,7 @@
                 SapNumber = "444$°",
                 CompanyName = "444$°?",
                 Ep2MerchantId = "12D%FF_3-3",
-                Agency = "Albert Brun & Partner",
+                Agency = "Albert Brun & Partner"
             };
         }
     }

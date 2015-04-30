@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.Authentication.Webpages
+namespace Six.Test.Selenium.Authentication.Webpages
 {
     public class WesCertificateLogOnPage : WebObject
     {

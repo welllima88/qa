@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.View.Common
+﻿namespace Six.Scs.Test.View.Common
 {
     public static class Languages
     {

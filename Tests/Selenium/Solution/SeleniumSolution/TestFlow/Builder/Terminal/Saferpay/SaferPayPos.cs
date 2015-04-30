@@ -1,17 +1,17 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Terminal.Saferpay
+namespace Six.Scs.Test.Builder.Terminal.Saferpay
 {
     public class SaferPayPos : TerminalBuilder
     {
         public SaferPayPos()
         {
-            Terminal = new Selenium.Model.ValueObjects.Terminal {Type = "Saferpay POS Terminal"};
+            Terminal = new Model.ValueObjects.Terminal {Type = "Saferpay POS Terminal"};
         }
 
         public override void Edit()

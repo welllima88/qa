@@ -1,10 +1,10 @@
 using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.Authentication;
-using Six.QA.Selenium.Extension.WebDriver;
+using Six.Test.Selenium.Authentication;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Common
+namespace Six.Saferpay.Backoffice.Test.Pages.Common
 {
     public class Lobby : IApplication
     {

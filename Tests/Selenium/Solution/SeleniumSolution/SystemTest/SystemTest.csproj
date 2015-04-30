@@ -6,7 +6,7 @@
     <ProjectGuid>{427078EA-B71A-4CA8-BF74-155AFDFD5C5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Six.Scs.QA.Selenium.SystemTest</RootNamespace>
+    <RootNamespace>Six.Scs.Test</RootNamespace>
     <AssemblyName>SystemTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,6 +54,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Administration\TerminalTypeTest.cs" />
     <Compile Include="Defaults\MandantIsSavedForNextCustomerCreate.cs" />
     <Compile Include="Saferpay\GiccTest.cs" />
     <Compile Include="Saferpay\ELinkTest.cs" />

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Massmuation
+namespace Six.Scs.Test.View.Massmuation
 {
     public class TerminalValidation : WebObject
     {
@@ -12,7 +11,7 @@ namespace Six.Scs.QA.Selenium.View.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> passwords =
+                var passwords =
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpPassword']"));
                 var passwordsAsString = new List<string>(5);
 
@@ -26,7 +25,7 @@ namespace Six.Scs.QA.Selenium.View.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> passwords =
+                var passwords =
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='inpReferenceTerminalId']"));
                 var passwordsAsString = new List<string>(5);
 
@@ -45,7 +44,7 @@ namespace Six.Scs.QA.Selenium.View.Massmuation
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> passwords =
+                var passwords =
                     WebDriver.FindAdaptedElements(By.CssSelector("input[id$='_inpLocationId']"));
                 var passwordsAsString = new List<string>(5);
 

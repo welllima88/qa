@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Support
+namespace Six.Saferpay.Backoffice.Test.Pages.Support
 {
     public class NewRequest
     {

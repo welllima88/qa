@@ -1,8 +1,8 @@
-using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class ArticelChangePerformer : IPerform
     {
@@ -31,7 +31,6 @@ namespace Six.Scs.QA.Selenium.Workflow.Builder
         }
 
         protected abstract void SelectArticle();
-
         protected abstract void CheckInfos();
 
         public void Software(IPerform softwareChange)

@@ -1,4 +1,4 @@
-namespace Six.Saferpay.QA.Selenium.Data
+namespace Six.Saferpay.Backoffice.Test.Data
 {
     public class Account
     {

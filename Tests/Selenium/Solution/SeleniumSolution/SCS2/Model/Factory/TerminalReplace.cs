@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Model.Factory
+namespace Six.Scs.Test.Model.Factory
 {
     public class TerminalReplace
     {

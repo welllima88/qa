@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Search;
-using Six.Scs.QA.Selenium.View.User;
-using Six.Scs.QA.Selenium.Workflow;
-using Person = Six.Scs.QA.Selenium.Model.ValueObjects.Person;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Search;
+using Six.Scs.Test.View.User;
+using Six.Scs.Test.Workflow;
+using Person = Six.Scs.Test.Model.ValueObjects.Person;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class User
     {
-        public static Selenium.Model.ValueObjects.User Create(Selenium.Model.ValueObjects.Customer customer)
+        public static Model.ValueObjects.User Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            Selenium.Model.ValueObjects.User user = Selenium.Model.Factory.User.Create();
-            Selenium.Workflow.User.Create(user);
+            var user = Model.Factory.User.Create();
+            Workflow.User.Create(user);
 
             Check(user);
             Lobby.OpenLatestElement();
@@ -24,15 +24,15 @@ namespace Six.Scs.QA.Testlogic
             return user;
         }
 
-        public static Selenium.Model.ValueObjects.User Edit(Selenium.Model.ValueObjects.User user)
+        public static Model.ValueObjects.User Edit(Model.ValueObjects.User user)
         {
             Open(user);
 
-            Selenium.Model.ValueObjects.User _user = Selenium.Model.Factory.User.Create();
+            var _user = Model.Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
 
-            Selenium.Workflow.User.Edit(_user);
+            Workflow.User.Edit(_user);
             Check(_user);
             Lobby.OpenLatestElement();
             Check(_user);
@@ -40,62 +40,62 @@ namespace Six.Scs.QA.Testlogic
             return _user;
         }
 
-        public static void Open(Selenium.Model.ValueObjects.User user)
+        public static void Open(Model.ValueObjects.User user)
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
 
-        public static void Check(Selenium.Model.ValueObjects.User u)
+        public static void Check(Model.ValueObjects.User u)
         {
-            Assert.AreEqual(u.UserName, View.UserName);
+            Assert.AreEqual(u.UserName, View.User.View.UserName);
             // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
-            Assert.AreEqual(u.Salutation, View.Salutation);
-            Assert.AreEqual(u.FirstName, View.FirstName);
-            Assert.AreEqual(u.Name, View.Name);
-            Assert.AreEqual(u.Language, View.Language);
-            Assert.AreEqual(u.Email, View.Email);
-            Assert.AreEqual(u.SecurId, View.SecurId);
-            Assert.AreEqual(u.Comment, View.Comment);
-            StringAssert.Contains(u.WesMandant, View.WesMandant);
+            Assert.AreEqual(u.Salutation, View.User.View.Salutation);
+            Assert.AreEqual(u.FirstName, View.User.View.FirstName);
+            Assert.AreEqual(u.Name, View.User.View.Name);
+            Assert.AreEqual(u.Language, View.User.View.Language);
+            Assert.AreEqual(u.Email, View.User.View.Email);
+            Assert.AreEqual(u.SecurId, View.User.View.SecurId);
+            Assert.AreEqual(u.Comment, View.User.View.Comment);
+            StringAssert.Contains(u.WesMandant, View.User.View.WesMandant);
         }
 
         public static void Create(Person person)
         {
             Contact.Open(person);
 
-            Selenium.View.Person.View.CreateUser.Click();
+            View.Person.View.CreateUser.Click();
 
-            StringAssert.Contains(person.Name, Selenium.View.User.Create.Name);
-            StringAssert.Contains(person.FirstName, Selenium.View.User.Create.FirstName);
-            StringAssert.Contains(person.Contact.Language, Selenium.View.User.Create.Language);
+            StringAssert.Contains(person.Name, View.User.Create.Name);
+            StringAssert.Contains(person.FirstName, View.User.Create.FirstName);
+            StringAssert.Contains(person.Contact.Language, View.User.Create.Language);
         }
 
-        public static void AddService(Selenium.Model.ValueObjects.User user)
+        public static void AddService(Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<Service> services = Services.Scs();
-            Selenium.Workflow.User.AddServices(services);
+            Workflow.User.AddServices(services);
             IEnumerable<Service> actList = LoginSetup.GetAssignedServices();
             CollectionAssert.AreEquivalent(services, actList);
         }
 
-        public static void AssignRoles(Selenium.Model.ValueObjects.User user)
+        public static void AssignRoles(Model.ValueObjects.User user)
         {
             Open(user);
             IEnumerable<string> roles =
                 new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
 
-            Selenium.Workflow.User.AssignRoles(roles);
+            Workflow.User.AssignRoles(roles);
 
-            IEnumerable<string> actList = Roles.GetAssignedRoles();
+            var actList = Roles.GetAssignedRoles();
             CollectionAssert.AreEquivalent(roles, actList);
         }
 
-        public static void Delete(Selenium.Model.ValueObjects.User user)
+        public static void Delete(Model.ValueObjects.User user)
         {
             Open(user);
-            Selenium.Workflow.User.Delete();
-            Selenium.Workflow.Search.Find(user.UserName);
+            Workflow.User.Delete();
+            Workflow.Search.Find(user.UserName);
             Assert.That(new SearchResult(Result.User).Result(), Is.Not.Null);
             Assert.That(new SearchResult(Result.User).Result(), Is.Empty);
         }

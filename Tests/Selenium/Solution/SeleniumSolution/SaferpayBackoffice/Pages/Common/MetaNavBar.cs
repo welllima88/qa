@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Common
+namespace Six.Saferpay.Backoffice.Test.Pages.Common
 {
     public class MetaNavBar : WebObject
     {

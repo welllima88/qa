@@ -1,73 +1,72 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Administration.SimCard;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class SimCard
     {
-        public static Selenium.Model.ValueObjects.SimCard Create()
+        public static Model.ValueObjects.SimCard Create()
         {
             NavigationBar.Lobby.Click();
             LobbyMenu.SimCardManage.Click();
 
-            Selenium.Model.ValueObjects.SimCard simCard = Simcard.Create();
+            var simCard = Simcard.Create();
 
-            Selenium.Workflow.SimCard.Create(simCard);
+            Workflow.SimCard.Create(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static Selenium.Model.ValueObjects.SimCard Edit(Selenium.Model.ValueObjects.SimCard _simCard)
+        public static Model.ValueObjects.SimCard Edit(Model.ValueObjects.SimCard _simCard)
         {
             Open(_simCard);
-            Selenium.Model.ValueObjects.SimCard simCard = Simcard.Edit();
+            var simCard = Simcard.Edit();
 
-            Selenium.Workflow.SimCard.Edit(simCard);
+            Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }
 
-        private static void Open(Selenium.Model.ValueObjects.SimCard simCard)
+        private static void Open(Model.ValueObjects.SimCard simCard)
         {
             Search.SimcardBySimCardNumber(simCard.SimCardNumber);
         }
 
-        public static void Check(Selenium.Model.ValueObjects.SimCard simCard)
+        public static void Check(Model.ValueObjects.SimCard simCard)
         {
-            Assert.AreEqual(simCard.NetProvider, View.NetProvider);
-            Assert.AreEqual(simCard.SimCardNumber, View.SimCardNumber);
-            Assert.AreEqual(simCard.MobileNumber, View.MobileNumber);
-            Assert.AreEqual(simCard.Pin, View.Pin);
-            Assert.AreEqual(simCard.Puk, View.Puk);
-            Assert.AreEqual(simCard.Status, View.Status);
-            Assert.AreEqual(simCard.TerminalId, View.TerminalId);
+            Assert.AreEqual(simCard.NetProvider, View.Administration.SimCard.View.NetProvider);
+            Assert.AreEqual(simCard.SimCardNumber, View.Administration.SimCard.View.SimCardNumber);
+            Assert.AreEqual(simCard.MobileNumber, View.Administration.SimCard.View.MobileNumber);
+            Assert.AreEqual(simCard.Pin, View.Administration.SimCard.View.Pin);
+            Assert.AreEqual(simCard.Puk, View.Administration.SimCard.View.Puk);
+            Assert.AreEqual(simCard.Status, View.Administration.SimCard.View.Status);
+            Assert.AreEqual(simCard.TerminalId, View.Administration.SimCard.View.TerminalId);
         }
 
-        public static Selenium.Model.ValueObjects.SimCard Lock(Selenium.Model.ValueObjects.SimCard sim)
+        public static Model.ValueObjects.SimCard Lock(Model.ValueObjects.SimCard sim)
         {
             Open(sim);
-            Selenium.Workflow.SimCard.Lock(sim);
+            Workflow.SimCard.Lock(sim);
             Check(sim);
             return sim;
         }
 
-        public static Selenium.Model.ValueObjects.SimCard Unlink(Selenium.Model.ValueObjects.SimCard simCard)
+        public static Model.ValueObjects.SimCard Unlink(Model.ValueObjects.SimCard simCard)
         {
             Open(simCard);
-            Selenium.Workflow.SimCard.Unlink(simCard);
+            Workflow.SimCard.Unlink(simCard);
             Check(simCard);
             return simCard;
         }
 
-        public static Selenium.Model.ValueObjects.SimCard Link(Selenium.Model.ValueObjects.SimCard simCard,
-            Selenium.Model.ValueObjects.Terminal terminal)
+        public static Model.ValueObjects.SimCard Link(Model.ValueObjects.SimCard simCard,
+            Model.ValueObjects.Terminal terminal)
         {
             Open(simCard);
             simCard.TerminalId = terminal.Id;
-            Selenium.Workflow.SimCard.Edit(simCard);
+            Workflow.SimCard.Edit(simCard);
             Check(simCard);
             return simCard;
         }

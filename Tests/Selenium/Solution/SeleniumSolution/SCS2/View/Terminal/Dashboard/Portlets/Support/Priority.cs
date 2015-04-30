@@ -1,13 +1,13 @@
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Support
+namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
 {
     public class Priority : WebObject
     {
         private void SetPriority(string priority)
         {
-            string loc = string.Format("div#priorityButtons label[title='{0}']", priority);
+            var loc = string.Format("div#priorityButtons label[title='{0}']", priority);
 
             WebDriver.FindAdaptedElement(
                 By.CssSelector(loc))

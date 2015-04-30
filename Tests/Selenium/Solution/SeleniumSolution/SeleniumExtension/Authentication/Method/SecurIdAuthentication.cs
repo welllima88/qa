@@ -1,7 +1,6 @@
-using System;
-using Six.QA.Selenium.Extension.Authentication.Webpages;
+using Six.Test.Selenium.Authentication.Webpages;
 
-namespace Six.QA.Selenium.Extension.Authentication.Method
+namespace Six.Test.Selenium.Authentication.Method
 {
     public class SecurIdAuthentication : IAuthentication
 
@@ -20,7 +19,7 @@ namespace Six.QA.Selenium.Extension.Authentication.Method
         /// <param name="password">password for userName</param>
         /// <param name="mandant">e.g. "TKCPOS"</param>
         /// <param name="securId">4 digits (fix password) + 6 digits securId-token</param>
-        public SecurIdAuthentication(String userName, String password, String mandant, String securId)
+        public SecurIdAuthentication(string userName, string password, string mandant, string securId)
         {
             _securId = securId;
             _userName = userName;

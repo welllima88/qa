@@ -1,6 +1,6 @@
-using Six.QA.Selenium.Extension.Authentication.Webpages;
+using Six.Test.Selenium.Authentication.Webpages;
 
-namespace Six.QA.Selenium.Extension.Authentication.Method
+namespace Six.Test.Selenium.Authentication.Method
 {
     public class UacAuthentication : IAuthentication
     {

@@ -1,28 +1,29 @@
+using System.Linq;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Common.Infotext;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow;
+using Six.Scs.Test.View.Common.Infotext;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class Infotext
     {
-        public static void Create(Selenium.Model.ValueObjects.Customer customer)
+        public static void Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.Infotexts.Click();
             CreateAndSaveInfotext("Customer");
         }
 
-        public static void Create(Selenium.Model.ValueObjects.Location location)
+        public static void Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.Infotexts.Click();
             CreateAndSaveInfotext("Location");
         }
 
-        public static void Create(Selenium.Model.ValueObjects.Terminal terminal)
+        public static void Create(Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
             TerminalTexts.Infotexts.Click();
@@ -32,7 +33,7 @@ namespace Six.Scs.QA.Testlogic
         private static void CreateAndSaveInfotext(string parameter)
         {
             ListView.CreateButton.Click();
-            string infotext = InfoText.Create(parameter);
+            var infotext = InfoText.Create(parameter);
             Check(infotext);
         }
 

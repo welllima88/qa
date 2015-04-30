@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
+namespace Six.Scs.Test.Terminal
 {
     [TestFixture]
     [Category("Terminal Quit")]

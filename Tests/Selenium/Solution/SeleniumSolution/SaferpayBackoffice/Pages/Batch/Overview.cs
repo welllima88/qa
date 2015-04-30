@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Batch
+namespace Six.Saferpay.Backoffice.Test.Pages.Batch
 {
     public class Overview
     {

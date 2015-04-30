@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Administration.Article
+namespace Six.Scs.Test.View.Administration.Article
 {
     public class View : WebObject
     {
@@ -66,7 +66,7 @@ namespace Six.Scs.QA.Selenium.View.Administration.Article
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TrxTransLim")).Text; }
         }
 
-        public static List<string> Supplier
+        public static IEnumerable<string> Supplier
         {
             get
             {

@@ -1,8 +1,7 @@
-using System;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Location
+namespace Six.Scs.Test.View.Location
 {
     public class View : WebObject
     {
@@ -41,12 +40,12 @@ namespace Six.Scs.QA.Selenium.View.Location
             get { return WebDriver.FindAdaptedElement(By.Id("City")).Text; }
         }
 
-        public static String SbsDebitNumber
+        public static string SbsDebitNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSDebitNumber")).Text; }
         }
 
-        public static String SbsAdressNumber
+        public static string SbsAdressNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common.Infotext
+namespace Six.Scs.Test.View.Common.Infotext
 {
     public class ListView : WebObject
     {
@@ -17,7 +17,7 @@ namespace Six.Scs.QA.Selenium.View.Common.Infotext
             get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
         }
 
-        public static List<string> List
+        public static IEnumerable<string> List
         {
             get { return WebDriver.WebElementsAsStringList(Elements); }
         }

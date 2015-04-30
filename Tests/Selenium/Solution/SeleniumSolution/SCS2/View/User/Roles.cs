@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.User
+namespace Six.Scs.Test.View.User
 {
     public class Roles : WebObject
     {
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.View.User
 
         public static IEnumerable<string> GetAssignedRoles()
         {
-            IEnumerable<string> rows =
+            var rows =
                 WebDriver.FindElements(By.CssSelector("table#roles tbody tr")).Select(d => d.Text);
             return rows;
         }

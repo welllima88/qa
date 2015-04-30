@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal
+namespace Six.Scs.Test.View.Terminal
 {
     public class ArticleChooser : WebObject
     {
@@ -13,22 +12,22 @@ namespace Six.Scs.QA.Selenium.View.Terminal
             set { WebDriver.FindAdaptedElement(By.Id("articleFilter")).TextField().TypeText(value); }
         }
 
-        public static List<string> FilteredArtikelList
+        public static IEnumerable<string> FilteredArtikelList
         {
             get
             {
-                IEnumerable<IWebElementAdapter> articleElements = WebDriver.FindAdaptedElements(
+                var articleElements = WebDriver.FindAdaptedElements(
                     By.CssSelector("tbody#allArticles tr td strong"))
                     .Where(e => e.Displayed);
                 return WebDriver.WebElementsAsStringList(articleElements);
             }
         }
 
-        public static List<string> SuggestedArtikelList
+        public static IEnumerable<string> SuggestedArtikelList
         {
             get
             {
-                ReadOnlyCollection<IWebElementAdapter> articleElements =
+                var articleElements =
                     WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td strong"));
                 return WebDriver.WebElementsAsStringList(articleElements);
             }

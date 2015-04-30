@@ -1,7 +1,8 @@
-﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
+﻿using System.Linq;
+using NUnit.Framework;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Article
+namespace Six.Scs.Test.Article
 {
     [TestFixture]
     public class ViewTest
@@ -81,7 +82,7 @@ namespace Six.Scs.QA.Selenium.SmokeTest.Article
         [Test]
         public void SupplierListHasAtLeastOneElement()
         {
-            Assert.IsTrue(View.Administration.Article.View.Supplier.Count > 0, "0 - :) or less elements");
+            Assert.IsTrue(View.Administration.Article.View.Supplier.Any(), "0 - :) or less elements");
         }
 
         [Test]

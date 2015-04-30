@@ -1,8 +1,8 @@
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common.Menu
+namespace Six.Scs.Test.View.Common.Menu
 {
     public class MassMutationMenu : WebObject
     {
@@ -48,7 +48,12 @@ namespace Six.Scs.QA.Selenium.View.Common.Menu
 
         public static IWebElementAdapter AcquirerChange
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/terminal/acquirerexchangemassmutation/']")); }
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href$='/terminal/acquirerexchangemassmutation/']"));
+            }
         }
 
         public static IWebElementAdapter MassMutation

@@ -1,10 +1,10 @@
 using System;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
-using Six.QA.Selenium.Extension.Environment;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.Environment;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.WebDriver
+namespace Six.Test.Selenium.WebDriver
 {
     public static class TestDirector
     {
@@ -32,10 +32,10 @@ namespace Six.QA.Selenium.Extension.WebDriver
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
-            FirefoxProfile firefoxProfile = NoProxy();
+            var firefoxProfile = NoProxy();
             firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de");
 
-            string run = "??";
+            var run = "??";
             if (string.IsNullOrEmpty(gridHub))
             {
                 // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
@@ -46,7 +46,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
             }
             else
             {
-                DesiredCapabilities capability = DesiredCapabilities(firefoxProfile);
+                var capability = DesiredCapabilities(firefoxProfile);
                 WebDriver =
                     new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability));
 
@@ -58,7 +58,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
 
         private static DesiredCapabilities DesiredCapabilities(FirefoxProfile firefoxProfile)
         {
-            DesiredCapabilities capability = OpenQA.Selenium.Remote.DesiredCapabilities.Firefox();
+            var capability = OpenQA.Selenium.Remote.DesiredCapabilities.Firefox();
             capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
             // force german language, but doesn't work on grid:
             // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");

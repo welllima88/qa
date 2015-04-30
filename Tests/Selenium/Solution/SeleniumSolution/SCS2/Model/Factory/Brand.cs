@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Six.Scs.QA.Selenium.Model.ValueObjects.Brand;
+using Six.Scs.Test.Model.ValueObjects.Brand;
 
-namespace Six.Scs.QA.Selenium.Model.Factory
+namespace Six.Scs.Test.Model.Factory
 {
     public static class Brand
     {

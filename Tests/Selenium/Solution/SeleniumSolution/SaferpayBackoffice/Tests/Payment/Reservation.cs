@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Six.Saferpay.QA.Selenium.Tests.Payment
+namespace Six.Saferpay.Backoffice.Test.Tests.Payment
 {
     [TestFixture]
     public class Reservation

@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.QA.Selenium.Model.Factory
+﻿namespace Six.Scs.Test.Model.Factory
 {
     public class Contact
     {
@@ -11,7 +11,7 @@
                 Telephone = "0031 58 399 6237",
                 Mobile = "0032 58 399 6237",
                 Fax = "0033 58 399 6237",
-                Web = "www.six-group.com/de-intern",
+                Web = "www.six-group.com/de-intern"
             };
         }
 

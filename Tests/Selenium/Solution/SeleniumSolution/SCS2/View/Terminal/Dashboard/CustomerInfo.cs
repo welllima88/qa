@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard
+namespace Six.Scs.Test.View.Terminal.Dashboard
 {
     /// <summary>
     ///     Customer info object that represent the fix part in terminal dash board which shows customer infos

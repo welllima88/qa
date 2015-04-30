@@ -1,8 +1,8 @@
 using System;
-using Six.QA.Selenium.Extension.Helper;
-using Six.Saferpay.QA.Selenium.Data;
+using Six.Saferpay.Backoffice.Test.Data;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Saferpay.QA.Selenium.Workflow.Payment
+namespace Six.Saferpay.Backoffice.Test.Workflow.Payment
 {
     public class Booking : IPerform
     {

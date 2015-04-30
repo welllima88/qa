@@ -1,18 +1,18 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
+namespace Six.Scs.Test.Builder.Terminal.Ep2
 {
     public class Yomani : TerminalBuilder
     {
         public Yomani()
         {
-            Terminal = Selenium.Model.Factory.Terminal.Yomani();
+            Terminal = Model.Factory.Terminal.Yomani();
         }
 
         public override void Edit()

@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Administration.SerialNumberManage;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.Test.View.Administration.SerialNumberManage;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.SerialNumberImport
+namespace Six.Scs.Test.SerialNumberImport
 {
     [TestFixture]
     public class SerialNumberImportTest

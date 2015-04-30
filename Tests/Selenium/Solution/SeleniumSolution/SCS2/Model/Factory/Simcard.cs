@@ -1,6 +1,6 @@
-﻿using Six.Scs.QA.Selenium.Model.ValueObjects;
+﻿using Six.Scs.Test.Model.ValueObjects;
 
-namespace Six.Scs.QA.Selenium.Model.Factory
+namespace Six.Scs.Test.Model.Factory
 {
     public static class Simcard
     {

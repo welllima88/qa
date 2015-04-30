@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Menu
+namespace Six.Saferpay.Backoffice.Test.Pages.Menu
 {
     public class Payments
     {

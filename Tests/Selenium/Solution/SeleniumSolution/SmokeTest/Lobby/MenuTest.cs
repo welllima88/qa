@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Lobby
+namespace Six.Scs.Test.Lobby
 {
     /// <summary>
     ///     be careful with menu expander because they prevent some actions and need special handling

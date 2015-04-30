@@ -1,10 +1,10 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Brand;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets.Brand;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.Test.View.Brand;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Brand.ELink
+namespace Six.Scs.Test.Builder.Brand.ELink
 {
     public class Default : BrandBuilder
     {

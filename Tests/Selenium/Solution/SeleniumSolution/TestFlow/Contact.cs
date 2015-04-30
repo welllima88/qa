@@ -1,16 +1,15 @@
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
-using Six.Scs.QA.Selenium.View.Common;
-using Six.Scs.QA.Selenium.View.Common.Menu;
-using Six.Scs.QA.Selenium.View.Person;
-using Lobby = Six.Scs.QA.Selenium.Workflow.Lobby;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.View.Common;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium.WebDriver;
+using Lobby = Six.Scs.Test.Workflow.Lobby;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public static class Contact
     {
-        public static Person Create(Selenium.Model.ValueObjects.Customer customer)
+        public static Person Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
             CustomerMenu.ContactCreate.Click();
@@ -19,15 +18,15 @@ namespace Six.Scs.QA.Testlogic
 
         private static Person CreateAndSave()
         {
-            Person person = Selenium.Model.Factory.Person.Create();
-            Selenium.Workflow.Contact.Create(person);
+            var person = Model.Factory.Person.Create();
+            Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
             Check(person);
             return person;
         }
 
-        public static Person Create(Selenium.Model.ValueObjects.Location location)
+        public static Person Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
             LocationMenu.ContactCreate.Click();
@@ -38,9 +37,9 @@ namespace Six.Scs.QA.Testlogic
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            Person person = Selenium.Model.Factory.Person.Edit();
+            var person = Model.Factory.Person.Edit();
 
-            Selenium.Workflow.Contact.Edit(person);
+            Workflow.Contact.Edit(person);
             Check(person);
 
             Lobby.OpenLatestElement();
@@ -57,29 +56,29 @@ namespace Six.Scs.QA.Testlogic
 
         public static void Check(Person c)
         {
-            Assert.AreEqual(c.Salutation, View.Salutation);
-            Assert.AreEqual(c.FirstName, View.FirstName);
-            Assert.AreEqual(c.Name, View.Name);
-            Assert.AreEqual(c.Contact.Language, View.Language);
-            StringAssert.Contains(c.Contact.Telephone, View.Telephone);
-            StringAssert.Contains(c.Contact.Mobile, View.Mobile);
-            StringAssert.Contains(c.Contact.Fax, View.Fax);
-            Assert.AreEqual(c.Contact.Email, View.Email);
-            Assert.AreEqual(c.Adress.Po, View.Po);
-            Assert.AreEqual(c.Adress.StreetNo, View.StreetNo);
-            Assert.AreEqual(c.Adress.Zip, View.Zip);
-            Assert.AreEqual(c.Adress.City, View.City);
-            StringAssert.Contains(c.Adress.Region, View.Region);
-            Assert.AreEqual(c.Adress.Country, View.Country);
-            Assert.AreEqual(c.Contact.Web, View.Web);
-            Assert.AreEqual(c.Adress.AdressAddition, View.AddressAddition);
+            Assert.AreEqual(c.Salutation, View.Person.View.Salutation);
+            Assert.AreEqual(c.FirstName, View.Person.View.FirstName);
+            Assert.AreEqual(c.Name, View.Person.View.Name);
+            Assert.AreEqual(c.Contact.Language, View.Person.View.Language);
+            StringAssert.Contains(c.Contact.Telephone, View.Person.View.Telephone);
+            StringAssert.Contains(c.Contact.Mobile, View.Person.View.Mobile);
+            StringAssert.Contains(c.Contact.Fax, View.Person.View.Fax);
+            Assert.AreEqual(c.Contact.Email, View.Person.View.Email);
+            Assert.AreEqual(c.Adress.Po, View.Person.View.Po);
+            Assert.AreEqual(c.Adress.StreetNo, View.Person.View.StreetNo);
+            Assert.AreEqual(c.Adress.Zip, View.Person.View.Zip);
+            Assert.AreEqual(c.Adress.City, View.Person.View.City);
+            StringAssert.Contains(c.Adress.Region, View.Person.View.Region);
+            Assert.AreEqual(c.Adress.Country, View.Person.View.Country);
+            Assert.AreEqual(c.Contact.Web, View.Person.View.Web);
+            Assert.AreEqual(c.Adress.AdressAddition, View.Person.View.AddressAddition);
         }
 
         public static void Delete(Person person)
         {
             Open(person);
-            View.DeleteButton.Click();
-            View.DeleteConfirm();
+            View.Person.View.DeleteButton.Click();
+            View.Person.View.DeleteConfirm();
 
             Open(person);
             StringAssert.IsMatch("Element .*(not|nicht).*!", SiteContent.Header);

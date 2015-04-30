@@ -1,7 +1,7 @@
 using OpenQA.Selenium.Support.PageObjects;
-using Six.QA.Selenium.Extension.WebDriver;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Saferpay.QA.Selenium.Pages.Menu
+namespace Six.Saferpay.Backoffice.Test.Pages.Menu
 {
     public class Menu
     {

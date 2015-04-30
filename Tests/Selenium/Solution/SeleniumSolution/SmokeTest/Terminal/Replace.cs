@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Terminal;
+using Six.Scs.Test.View.Terminal;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Terminal
+namespace Six.Scs.Test.Terminal
 {
     [TestFixture]
     [Category("Terminal Replace")]

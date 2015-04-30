@@ -1,16 +1,16 @@
-using Six.QA.Selenium.Extension.Helper;
-using Six.Scs.QA.Selenium.View.Common.Menu;
+using Six.Scs.Test.View.Common.Menu;
+using Six.Test.Selenium.Helper;
 
-namespace Six.Scs.QA.Selenium.Workflow.Builder
+namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class LocationBuilder : IBuilder
     {
         private IPerform _changeMode;
-        public Selenium.Model.ValueObjects.Location Location { get; protected set; }
+        public Model.ValueObjects.Location Location { get; protected set; }
 
         public virtual void Create()
         {
-            Location = Selenium.Model.Factory.Location.Create();
+            Location = Model.Factory.Location.Create();
             ClickCreate();
             SetData();
             CreateButton();
@@ -21,7 +21,7 @@ namespace Six.Scs.QA.Selenium.Workflow.Builder
 
         public virtual void Edit()
         {
-            Location = Selenium.Model.Factory.Location.Edit();
+            Location = Model.Factory.Location.Edit();
             ReadInfo();
             ClickEdit();
             EditData();

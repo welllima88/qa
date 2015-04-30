@@ -1,4 +1,4 @@
-namespace Six.QA.Selenium.Extension.Helper
+namespace Six.Test.Selenium.Helper
 {
     public interface IBuilder : ICreate, IEdit, ICheck
     {

@@ -1,4 +1,4 @@
-namespace Six.Saferpay.QA.Selenium.Data.Payment
+namespace Six.Saferpay.Backoffice.Test.Data.Payment
 {
     public class Payment
     {

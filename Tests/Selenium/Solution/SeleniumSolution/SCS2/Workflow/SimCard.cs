@@ -1,8 +1,8 @@
-﻿namespace Six.Scs.QA.Selenium.Workflow
+﻿namespace Six.Scs.Test.Workflow
 {
     public class SimCard
     {
-        public static void Create(Selenium.Model.ValueObjects.SimCard simCard)
+        public static void Create(Model.ValueObjects.SimCard simCard)
         {
             View.Administration.SimCard.View.CreateButton.Click();
 
@@ -16,7 +16,7 @@
             View.Administration.SimCard.Create.SaveButton.Click();
         }
 
-        public static void Edit(Selenium.Model.ValueObjects.SimCard simCard)
+        public static void Edit(Model.ValueObjects.SimCard simCard)
         {
             View.Administration.SimCard.View.EditButton.Click();
 
@@ -34,13 +34,13 @@
             View.Administration.SimCard.Edit.SaveButton.Click();
         }
 
-        public static void Lock(Selenium.Model.ValueObjects.SimCard sim)
+        public static void Lock(Model.ValueObjects.SimCard sim)
         {
             View.Administration.SimCard.View.LockButton.Click();
             sim.Status = false;
         }
 
-        public static void Unlink(Selenium.Model.ValueObjects.SimCard simCard)
+        public static void Unlink(Model.ValueObjects.SimCard simCard)
         {
             View.Administration.SimCard.View.UnlinkButton.Click();
             simCard.TerminalId = "";

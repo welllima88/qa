@@ -1,8 +1,8 @@
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Location.BillingAddress
+namespace Six.Scs.Test.View.Location.BillingAddress
 {
     public class View : WebObject
     {

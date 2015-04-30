@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
-using Six.Scs.QA.Selenium.Model.ValueObjects;
+using Six.Scs.Test.Model.ValueObjects;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.User
+namespace Six.Scs.Test.View.User
 {
     public class LoginSetup : WebObject
     {
@@ -23,11 +23,11 @@ namespace Six.Scs.QA.Selenium.View.User
 
         public static ICollection<Service> GetAssignedServices()
         {
-            ReadOnlyCollection<IWebElement> rows =
+            var rows =
                 WebDriver.FindElements(By.CssSelector("table#AssignedLoginServices tbody tr"));
 
             var services = new Collection<Service>();
-            foreach (IWebElement row in rows)
+            foreach (var row in rows)
             {
                 services.Add(new Service
                 {

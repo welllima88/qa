@@ -1,17 +1,16 @@
 ﻿using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Mpd;
-using Six.Scs.QA.Selenium.Workflow;
+using Six.Scs.Test.Workflow;
 
-namespace Six.Scs.QA.Testlogic
+namespace Six.Scs.Test
 {
     public class Mpd
     {
-        public static Selenium.Model.ValueObjects.Mpd Create(Selenium.Model.ValueObjects.Customer customer)
+        public static Model.ValueObjects.Mpd Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
-            Selenium.Model.ValueObjects.Mpd mpd = Selenium.Model.Factory.Mpd.Create();
-            Selenium.Workflow.Mpd.Create(mpd);
+            var mpd = Model.Factory.Mpd.Create();
+            Workflow.Mpd.Create(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -19,13 +18,13 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static Selenium.Model.ValueObjects.Mpd Edit(Selenium.Model.ValueObjects.Mpd _mpd)
+        public static Model.ValueObjects.Mpd Edit(Model.ValueObjects.Mpd _mpd)
         {
             Open(_mpd);
-            Selenium.Model.ValueObjects.Mpd mpd = Selenium.Model.Factory.Mpd.Edit();
+            var mpd = Model.Factory.Mpd.Edit();
             mpd.Id = _mpd.Id; // keep Id
 
-            Selenium.Workflow.Mpd.Edit(mpd);
+            Workflow.Mpd.Edit(mpd);
             Check(mpd);
 
             Lobby.OpenLatestElement();
@@ -33,17 +32,17 @@ namespace Six.Scs.QA.Testlogic
             return mpd;
         }
 
-        public static void Open(Selenium.Model.ValueObjects.Mpd mpd)
+        public static void Open(Model.ValueObjects.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
 
-        public static void Check(Selenium.Model.ValueObjects.Mpd m)
+        public static void Check(Model.ValueObjects.Mpd m)
         {
-            Assert.AreEqual(m.Id, View.Id);
-            Assert.AreEqual(m.Description, View.Description);
-            Assert.AreEqual(m.Adress, View.Adress);
-            Assert.AreEqual(m.Port, View.Port);
+            Assert.AreEqual(m.Id, View.Mpd.View.Id);
+            Assert.AreEqual(m.Description, View.Mpd.View.Description);
+            Assert.AreEqual(m.Adress, View.Mpd.View.Adress);
+            Assert.AreEqual(m.Port, View.Mpd.View.Port);
         }
     }
 }

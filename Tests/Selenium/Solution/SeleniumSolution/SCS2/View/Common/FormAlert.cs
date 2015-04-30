@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Common
+namespace Six.Scs.Test.View.Common
 {
     public class FormAlert : WebObject
     {

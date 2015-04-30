@@ -1,11 +1,11 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Administration.SoftwareExchange;
+using Six.Scs.Test.View.Administration.SoftwareExchange;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
+namespace Six.Scs.Test.SoftwareExchange
 {
     [TestFixture]
-    public class SoftwareExchangeGuiTest
+    public class UiTest
     {
         [TestFixtureSetUp]
         public static void ClassInit()
@@ -92,13 +92,6 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
 
         [Test]
         [Category("SoftwareExchange")]
-        public void SelectOddEvenSwitch()
-        {
-            Assert.IsTrue(Create.SelectOddEvenSwitch.Displayed);
-        }
-
-        [Test]
-        [Category("SoftwareExchange")]
         public void SelectedCountry()
         {
             Assert.IsTrue(Create.SelectedCountry.Displayed);
@@ -144,6 +137,13 @@ namespace Six.Scs.QA.Selenium.SmokeTest.SoftwareExchange
         public void SelectedTerminalType()
         {
             Assert.IsTrue(Create.SelectedTerminalType.Displayed);
+        }
+
+        [Test]
+        [Category("SoftwareExchange")]
+        public void SelectOddEvenSwitch()
+        {
+            Assert.IsTrue(Create.SelectOddEvenSwitch.Displayed);
         }
 
         [Test]

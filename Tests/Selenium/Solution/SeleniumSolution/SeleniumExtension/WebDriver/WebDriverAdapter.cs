@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.QA.Selenium.Extension.WebDriver
+namespace Six.Test.Selenium.WebDriver
 {
     /// <summary>
     ///     This WebDriver adapter adds one method to make use of adapted web elements
@@ -32,11 +32,11 @@ namespace Six.QA.Selenium.Extension.WebDriver
 
         public ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by)
         {
-            ReadOnlyCollection<IWebElement> webElements = _webDriver.FindElements(by);
+            var webElements = _webDriver.FindElements(by);
             var list = new Collection<IWebElementAdapter>();
 
             // convert:
-            foreach (IWebElement webElement in webElements)
+            foreach (var webElement in webElements)
             {
                 list.Add(new WebElementAdapter(webElement));
             }
@@ -58,7 +58,7 @@ namespace Six.QA.Selenium.Extension.WebDriver
             }
         }
 
-        List<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
+        IEnumerable<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
         {
             return WebElementsAsStringList(webElements);
         }
@@ -136,11 +136,9 @@ namespace Six.QA.Selenium.Extension.WebDriver
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
         /// <returns></returns>
-        public static List<String> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
+        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
         {
-            var items = new List<String>(5);
-            items.AddRange(webElements.Select(item => item.Text));
-            return items;
+            return webElements.Select(item => item.Text).ToList();
         }
     }
 }

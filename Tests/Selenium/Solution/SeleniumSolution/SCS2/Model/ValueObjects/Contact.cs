@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Selenium.Model.ValueObjects
+namespace Six.Scs.Test.Model.ValueObjects
 {
     /// <summary>
     ///     defines the ways and media how to contact

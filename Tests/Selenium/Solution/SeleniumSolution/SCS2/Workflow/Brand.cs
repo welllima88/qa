@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Six.Scs.QA.Selenium.Model.ValueObjects.Brand;
-using Six.Scs.QA.Selenium.View.Brand;
+using Six.Scs.Test.Model.ValueObjects.Brand;
+using Six.Scs.Test.View.Brand;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public class Brand
     {
@@ -21,10 +21,10 @@ namespace Six.Scs.QA.Selenium.Workflow
         /// <param name="contracts"></param>
         public static void Select(IEnumerable<Contract> contracts)
         {
-            foreach (Contract contract in contracts)
+            foreach (var contract in contracts)
             {
                 Selection.Open(contract.Acquirer.Id);
-                foreach (Selenium.Model.ValueObjects.Brand.Brand brand in contract.Brands)
+                foreach (var brand in contract.Brands)
                 {
                     Selection.Select(brand.Id);
                 }

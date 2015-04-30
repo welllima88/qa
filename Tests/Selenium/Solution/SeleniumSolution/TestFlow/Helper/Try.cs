@@ -1,4 +1,4 @@
-namespace Six.Scs.QA.Testlogic.Helper
+namespace Six.Scs.Test.Helper
 {
     public class Try
     {

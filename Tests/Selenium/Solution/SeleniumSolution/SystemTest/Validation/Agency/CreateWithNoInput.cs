@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using Six.Scs.QA.Selenium.View.Administration.Agency;
-using Six.Scs.QA.Selenium.View.Common;
-using List = Six.Scs.QA.Selenium.View.Administration.Agency.List;
+using Six.Scs.Test.View.Administration.Agency;
+using Six.Scs.Test.View.Common;
+using Six.Test.Selenium.WebDriver;
+using List = Six.Scs.Test.View.Administration.Agency.List;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Validation.Agency
+namespace Six.Scs.Test.Validation.Agency
 {
     [TestFixture]
     public class CreateWithNoInput

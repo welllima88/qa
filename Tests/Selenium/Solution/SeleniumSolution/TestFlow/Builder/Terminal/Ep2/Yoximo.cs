@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
 
-namespace Six.Scs.QA.Testlogic.Builder.Terminal.Ep2
+namespace Six.Scs.Test.Builder.Terminal.Ep2
 {
     public class Yoximo : ArticelChangePerformer
     {

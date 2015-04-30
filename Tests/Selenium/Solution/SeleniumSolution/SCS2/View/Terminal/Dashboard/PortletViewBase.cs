@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Six.QA.Selenium.Extension.WebDriver.WebElements;
+using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard
+namespace Six.Scs.Test.View.Terminal.Dashboard
 {
     public abstract class PortletViewBase : WebObject
     {
@@ -48,13 +48,13 @@ namespace Six.Scs.QA.Selenium.View.Terminal.Dashboard
 
         public static void AllHasBeenLoaded()
         {
-            WebDriverWait w = WebDriver.WebDriverWait();
+            var w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElements(By.CssSelector("div.overly-loading")).Count == 0);
         }
 
         public static void OpenTree(string cssLocator)
         {
-            WebDriverWait w = WebDriver.WebDriverWait();
+            var w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElement(By.CssSelector(cssLocator + ".jstree-closed>ins"))).Click();
         }
     }

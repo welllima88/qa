@@ -1,11 +1,11 @@
-using Six.Scs.QA.Selenium.Model.Factory;
-using Six.Scs.QA.Selenium.View.Terminal;
-using Six.Scs.QA.Selenium.View.Terminal.Dashboard.Portlets;
-using Six.Scs.QA.Selenium.Workflow.Builder;
-using TerminalDuplicate = Six.Scs.QA.Selenium.Model.ValueObjects.TerminalDuplicate;
-using TerminalReplace = Six.Scs.QA.Selenium.Model.ValueObjects.TerminalReplace;
+using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.Workflow.Builder;
+using TerminalDuplicate = Six.Scs.Test.Model.ValueObjects.TerminalDuplicate;
+using TerminalReplace = Six.Scs.Test.Model.ValueObjects.TerminalReplace;
 
-namespace Six.Scs.QA.Selenium.Workflow
+namespace Six.Scs.Test.Workflow
 {
     public class Terminal
     {
@@ -30,13 +30,13 @@ namespace Six.Scs.QA.Selenium.Workflow
             SalesContract.Quit.Click();
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
-            string reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
+            var reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
             View.Terminal.Quit.Quit.Reason = reason;
             View.Terminal.Quit.Quit.Save.Click();
             return reason;
         }
 
-        public static void Assign(Selenium.Model.ValueObjects.Mpd mpd)
+        public static void Assign(Model.ValueObjects.Mpd mpd)
         {
             TechnicalView.MpdAssign.Click();
 
@@ -83,7 +83,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Terminal.SoftwareChange.UnBlock.Click();
         }
 
-        public static void Move(Selenium.Model.ValueObjects.Location location)
+        public static void Move(Model.ValueObjects.Location location)
         {
             BusinessViewpoint.MoveTerminal.Click();
 
@@ -93,7 +93,7 @@ namespace Six.Scs.QA.Selenium.Workflow
             View.Terminal.Move.SaveButton.Click();
         }
 
-        public static Selenium.Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
+        public static Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
         {
             terminalBuilder.Create();
 
