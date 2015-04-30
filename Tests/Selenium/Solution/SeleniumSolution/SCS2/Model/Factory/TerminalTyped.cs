@@ -19,40 +19,13 @@
         {
             return new ValueObjects.TerminalType
             {
-                Supplier = "Alle Fremdhersteller",
-                ReferenceSystem = "GICC",
-                DeviceType = "24",
-                DefaultCapabilities = "FF00FF",
-                DefaultAdditionalCapabilities = "FF00FF00FF",
+                Supplier = "SIX Payment Services (Supplier)",
+                ReferenceSystem = "EP2",
+                DeviceType = "22",
+                DefaultCapabilities = "E0F0C0",
+                DefaultAdditionalCapabilities = "C000B0A001",
                 Range = "30'090'000 - 30'099'999",
-                Providers = new[]
-                {
-                    "CETREL S.A.",
-                    "Coop ep2",
-                    "Hypercom PayLife ACP Austria",
-                    "Migros ep2",
-                    "Paylife",
-                    "PayLife DATALAN",
-                    "PayLife Printec",
-                    "PayLife Schweiz",
-                    "PayLife Tend",
-                    "SIX Payment Services AG",
-                    "SIX Payment Services AT"
-                },
-                Suppliers = new[]
-                {
-                    "CETREL S.A.",
-                    "Coop ep2",
-                    "Hypercom PayLife ACP Austria",
-                    "Migros ep2",
-                    "Paylife",
-                    "PayLife DATALAN",
-                    "PayLife Printec",
-                    "PayLife Schweiz",
-                    "PayLife Tend",
-                    "SIX Payment Services AG",
-                    "SIX Payment Services AT"
-                }
+
             };
         }
     }
