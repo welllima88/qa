@@ -14,18 +14,15 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#content div.row a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#content div.row a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
                         .Button();
             }
         }
 
         public static IEnumerable<string> Suppliers
         {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + " div:nth-child(2) dl dd")).Select(e => e.Text);
-            }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("div#Suppliers dl dd")).Select(e => e.Text).ToList(); }
         }
 
         public static string Supplier
@@ -80,8 +77,8 @@ namespace Six.Scs.Test.View.Administration.TerminalType
         {
             get
             {
-                return
-                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + " div:nth-child(1) dl dd")).Select(e => e.Text);
+                return (WebDriver.FindAdaptedElements(By.CssSelector("div#Providers dl dd")))
+                    .Select(e => e.Text).ToList();
             }
         }
 
@@ -91,8 +88,8 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             {
                 return
                     WebDriver.FindAdaptedElements(
-                        By.CssSelector("td#content div.panel-default div.panel-body table tbody tr td:nth-child(2)"))
-                        .Select(e => e.Text);
+                        By.CssSelector("td#content table#Softwares tbody tr td:nth-child(2)"))
+                        .Select(e => e.Text).ToList();
             }
         }
     }
