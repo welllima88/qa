@@ -115,7 +115,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
                 {
                     WebDriver.FindAdaptedElements(
                         By.CssSelector("td#content div#ms-SelectedProviders div.ms-selectable ul.ms-list li.ms-elem-selectable span"))
-                        .FirstOrDefault(e => e.Text.Equals(provider)).Click();
+                        .FirstOrDefault(e => (e.Displayed && e.Text.Equals(provider))).Click();
                 }
             }
         }
