@@ -7,14 +7,14 @@ namespace Six.Scs.Test.View.Administration.TerminalType
 {
     public class View : WebObject
     {
-        private const string prefix = "td#content div.panel-default div.panel-body div.row ";
+        private const string prefix = "td#content div.panel-default div.panel-body div.row";
 
         public static ButtonElement EditButton
         {
             get
             {
                 return
-                    WebDriver.FindAdaptedElement(By.CssSelector("a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#content div.row a.btn[href*='/TerminalType/Edit?TerminalTypeId=']"))
                         .Button();
             }
         }
@@ -24,7 +24,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + "div:nth-child(2) dl dd")).Select(e => e.Text);
+                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + " div:nth-child(2) dl dd")).Select(e => e.Text);
             }
         }
 
@@ -81,7 +81,7 @@ namespace Six.Scs.Test.View.Administration.TerminalType
             get
             {
                 return
-                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + "div:nth-child(1) dl dd")).Select(e => e.Text);
+                    WebDriver.FindAdaptedElements(By.CssSelector(prefix + " div:nth-child(1) dl dd")).Select(e => e.Text);
             }
         }
 

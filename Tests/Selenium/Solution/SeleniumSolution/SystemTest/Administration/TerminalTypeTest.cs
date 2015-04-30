@@ -6,23 +6,34 @@ namespace Six.Scs.Test.Administration
     [TestFixture]
     public class TerminalTypeTest
     {
-        [SetUp]
-        public static void Navigate()
+        [TestFixtureSetUp]
+        public void Navigate()
         {
-            // open xentissimo
             TestDirector.Navigate("TerminalType?TerminalTypeId=1025");
+            _originTerminalType = TerminalType.View();
+        }
+
+        [TestFixtureTearDown]
+        public void Restore()
+        {
+            TerminalType.Edit(_originTerminalType);
         }
 
         private Model.ValueObjects.TerminalType _terminalType;
         private Model.ValueObjects.TerminalType _originTerminalType;
 
         [Test]
-        [Category("TerminalType"), Category("Create"), Category("Edit"), Category("Deactivate")]
+        [Category("TerminalType"), Category("View"), Category("Edit")]
         public void EditTerminalType()
         {
-            _originTerminalType = TerminalType.View();
-            _terminalType = TerminalType.Edit(_terminalType);
-            _terminalType = TerminalType.Edit(_originTerminalType); // restore state
+            _terminalType = Model.Factory.TerminalType.XentissimoMod();
+            // use existin configuration (for checking), due to UI problems:
+            _terminalType.Providers = _originTerminalType.Providers;
+            _terminalType.SoftwareIds = _originTerminalType.SoftwareIds;
+            _terminalType.Suppliers = _originTerminalType.Suppliers;
+            _terminalType.Range = _originTerminalType.Range;
+
+            TerminalType.Edit(_terminalType);
         }
     }
 }
