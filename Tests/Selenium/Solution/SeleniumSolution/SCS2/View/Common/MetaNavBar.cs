@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -46,7 +47,10 @@ namespace Six.Scs.Test.View.Common
 
         public static IEnumerable<IWebElementAdapter> LanguageItems
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a")); }
+            get
+            {
+                return WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a"));
+            }
         }
     }
 }

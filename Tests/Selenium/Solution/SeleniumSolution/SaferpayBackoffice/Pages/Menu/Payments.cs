@@ -10,5 +10,8 @@ namespace Six.Saferpay.Backoffice.Test.Pages.Menu
 
         [FindsBy(How = How.CssSelector, Using = "div#menu li a[href*='/Commerce/Payment/Capture?CSRFToken=']")]
         public IWebElement Journal;
+
+        [FindsBy(How = How.CssSelector, Using = "div#menu li a[href*='/Commerce/Payment/Authorize']")]
+        public IWebElement Reservation;
     }
 }

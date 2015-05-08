@@ -11,7 +11,7 @@ namespace Six.Saferpay.Backoffice.Test.Tests.Payment
         public void GoToBooking()
         {
             TestDirector.Navigate();
-            Menu.Home().MySaferpay.SecurePayGate.Click();
+            Menu.Home().MySaferpay.Transactions.Click();
             Menu.Home().Payments.Booking.Click();
         }
 
