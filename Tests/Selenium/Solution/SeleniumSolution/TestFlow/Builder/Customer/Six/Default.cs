@@ -43,7 +43,6 @@ namespace Six.Scs.Test.Builder.Customer.Six
             Assert.AreEqual(Customer.Location.SbsDebitNumber, View.Customer.View.SbsDebitNumber);
             // Todo: not reliable check: 
             // Assert.AreEqual(Customer.SbsAdressNumber, CustomerView.SbsAdressNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Customer.View.Ep2MerchantId);
             Assert.AreEqual(Customer.Location.Adress.Po, View.Customer.View.Po);
             Assert.AreEqual(Customer.Location.Adress.AdressAddition, View.Customer.View.AdressAddition);
             StringAssert.Contains(Customer.Location.Adress.Region, View.Customer.View.Region);

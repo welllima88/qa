@@ -150,11 +150,6 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("SBSDebitNumber")).Text; }
         }
 
-        public static string Ep2MerchantId
-        {
-            get { return WebDriver.FindAdaptedElement(By.Id("Ep2MerchantId")).Text; }
-        }
-
         public static string SbsAdressNumber
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
