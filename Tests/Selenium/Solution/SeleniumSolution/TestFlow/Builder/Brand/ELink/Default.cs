@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.View.Brand;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
@@ -15,14 +16,14 @@ namespace Six.Scs.Test.Builder.Brand.ELink
 
         public override void Check()
         {
-            // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1091").Displayed);
+            Assert.That(BrandPortlet.Acquirers().Contains("SIX Payment Services"));
+            Assert.That(BrandPortlet.Brands().Where(s => s.Contains("1091")), Is.Not.Empty);
 
-            // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("682").Displayed);
+            Assert.That(BrandPortlet.Acquirers().Contains("SIX Payment Services (Europe)"));
+            Assert.That(BrandPortlet.Brands().Where(s => s.Contains("682")), Is.Not.Empty);
 
-            // Assert.IsTrue(BrandPortlet.Acquirer("acq_amexco").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1284").Displayed);
+            Assert.That(BrandPortlet.Acquirers().Contains("Swisscard"));
+            Assert.That(BrandPortlet.Brands().Where(s => s.Contains("1284")), Is.Not.Empty);
         }
 
         protected override void SetBrandDetails()

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -32,12 +34,31 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                         PortletLocator + " " + ContractTreeLocator + " ul li[id^='brandContract_{0}']", brandId)));
         }
 
+        public static IEnumerable<string> Brands()
+        {
+            return
+                WebDriver.FindAdaptedElements(
+                    By.CssSelector(string.Format(
+                        PortletLocator + " " + ContractTreeLocator +
+                        " ul li[id^='brandContract_'] div.treeParentNode span:nth-child(3)")))
+                    .Select(e => e.Text);
+        }
+
         public static IWebElementAdapter Acquirer(string acquirerId)
         {
             return
                 WebDriver.FindAdaptedElement(
                     By.CssSelector(string.Format(
                         PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}", acquirerId)));
+        }
+
+        public static IEnumerable<string> Acquirers()
+        {
+            return
+                WebDriver.FindAdaptedElements(
+                    By.CssSelector(string.Format(
+                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] a.acqContractNode span")))
+                    .Select(e => e.Text);
         }
     }
 }
