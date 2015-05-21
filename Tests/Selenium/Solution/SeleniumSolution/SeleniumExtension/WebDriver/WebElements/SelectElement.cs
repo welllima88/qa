@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 
@@ -44,8 +45,14 @@ namespace Six.Test.Selenium.WebDriver.WebElements
         /// <param name="text">the text of a select option</param>
         public void SelectByText(string text)
         {
-            _webElement.Options.FirstOrDefault(o => o.Text.Contains(text)).Click();
-            //_webElement.SelectByText(text);
+            try
+            {
+                _webElement.SelectByText(text);
+            }
+            catch (Exception)
+            {
+                _webElement.Options.FirstOrDefault(o => o.Text.Contains(text)).Click();
+            }
         }
     }
 }
