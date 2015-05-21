@@ -60,7 +60,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
 
         public static string CompanyName
         {
-            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_Name")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("BillingAddress_CompanyName")).TextField().TypeText(value); }
         }
 
         public static string StreetNo
