@@ -12,5 +12,6 @@ namespace Six.Scs.Test.View.Search
         public const string MasterSoftware = "MasterSoftwareCtrl";
         public const string TerminalType = "TerminalTypeCtrl";
         public const string Ticket = "TroubleTicketCtrl";
+        public static string BillingAddress = "BillingAddressCtrl";
     }
 }
