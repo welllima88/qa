@@ -22,7 +22,10 @@ namespace Six.Scs.Test.View.Administration.TerminalType
 
         public static IEnumerable<string> Suppliers
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector("div#Suppliers dl dd")).Select(e => e.Text).ToList(); }
+            get
+            {
+                return WebDriver.FindAdaptedElements(By.CssSelector("div#Suppliers dl dd")).Select(e => e.Text).ToList();
+            }
         }
 
         public static string Supplier

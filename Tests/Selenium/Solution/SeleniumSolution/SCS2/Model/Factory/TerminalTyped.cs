@@ -24,8 +24,7 @@
                 DeviceType = "22",
                 DefaultCapabilities = "E0F0C0",
                 DefaultAdditionalCapabilities = "C000B0A001",
-                Range = "30'090'000 - 30'099'999",
-
+                Range = "30'090'000 - 30'099'999"
             };
         }
     }

@@ -44,7 +44,7 @@ namespace Six.Scs.Test.Administration
             Assert.That(View.Administration.Agency.View.City, Is.EqualTo(agency.Adress.City));
             Assert.That(View.Administration.Agency.View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
             Assert.That(agency.Adress.Country, Is.StringMatching(View.Administration.Agency.View.Country));
-                // "Schweiz" vs "Schweiz [CH]"
+            // "Schweiz" vs "Schweiz [CH]"
             Assert.That(View.Administration.Agency.View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
             Assert.That(View.Administration.Agency.View.Supplier, Is.EqualTo(agency.Supplier));
         }

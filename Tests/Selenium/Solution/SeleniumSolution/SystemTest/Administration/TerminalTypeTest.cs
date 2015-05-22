@@ -14,7 +14,7 @@ namespace Six.Scs.Test.Administration
             _originTerminalType = TerminalType.View();
 
             _terminalType = Model.Factory.TerminalType.XentissimoMod();
-            // use existin configuration (for checking), due to UI problems:
+            // use existing configuration (for checking), due to UI problems:
             _terminalType.Providers = _originTerminalType.Providers;
             _terminalType.SoftwareIds = _originTerminalType.SoftwareIds;
             _terminalType.Suppliers = _originTerminalType.Suppliers;
