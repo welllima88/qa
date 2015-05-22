@@ -4,7 +4,7 @@ using NUnit.Framework;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Common;
+using SIX.SCS.QA.Tests.EP2.Message;
 
 namespace SIX.SCS.QA.Tests.EP2.Laid
 {
@@ -15,6 +15,8 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
         IHandleMessage<ErrorNotification>
 
     {
+        public IList<string> ListOfAid { get; private set; }
+
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
         {
             // errorNotification.ErrorCode = 33;
@@ -24,8 +26,6 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
         {
             get { return true; }
         }
-
-        public IList<string> ListOfAid { get; private set; }
 
         public IMessage Respond(ConfigDataResponse rsp)
         {
