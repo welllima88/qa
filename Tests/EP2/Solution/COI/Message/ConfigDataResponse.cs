@@ -1,6 +1,5 @@
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.ContentHandling.Serialization;
-using SIX.SCS.QA.Tests.EP2.Laid;
 using SIX.SCS.QA.Tests.EP2.Message.Elements;
 
 namespace SIX.SCS.QA.Tests.EP2.Message

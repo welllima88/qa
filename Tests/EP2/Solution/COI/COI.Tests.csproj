@@ -76,10 +76,10 @@
     <Compile Include="Message\ConfigDataNotification.cs" />
     <Compile Include="Message\ConfigDataRequest.cs" />
     <Compile Include="Message\ConfigDataResponse.cs" />
-    <Compile Include="Laid\Defined.cs" />
+    <Compile Include="Data\Laid.cs" />
     <Compile Include="Setup\Communication.cs" />
     <Compile Include="Test\LaidRequestTest.cs" />
-    <Compile Include="Laid\LaidHandler.cs" />
+    <Compile Include="Data\LaidHandler.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />

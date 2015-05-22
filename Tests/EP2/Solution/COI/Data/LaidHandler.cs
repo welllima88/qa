@@ -6,7 +6,7 @@ using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 using SIX.SCS.QA.Tests.EP2.Message;
 
-namespace SIX.SCS.QA.Tests.EP2.Laid
+namespace SIX.SCS.QA.Tests.EP2.Data
 {
     public class LaidHandler :
         IClientSessionHandler,
@@ -41,7 +41,7 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
 
         public void FirstMessage(ConfigDataRequest rq)
         {
-            rq.AcqID = 2;
+            rq.AcqID = 25;
             rq.SCID = "8000000001";
             rq.ConfDataObj = "LAID";
         }

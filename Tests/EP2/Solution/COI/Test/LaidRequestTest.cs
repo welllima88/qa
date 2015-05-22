@@ -2,7 +2,7 @@
 using SIX.EP2.Client;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Laid;
+using SIX.SCS.QA.Tests.EP2.Data;
 using SIX.SCS.QA.Tests.EP2.Message;
 using SIX.SCS.QA.Tests.EP2.Setup;
 
@@ -26,14 +26,21 @@ namespace SIX.SCS.QA.Tests.EP2.Test
         private IRequestResponseClient _clientProtocol;
 
         [Test]
-        public void ResponseWithCorrectData()
+        public void ResponseFromAcquirer02()
         {
             var handlerSessionHandler = new LaidHandler();
             _clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
 
-            Assert.That(handlerSessionHandler.ListOfAid.Count, Is.EqualTo(19));
-            // CollectionAssert.AreEquivalent(Defined.Laid(), handlerSessionHandler.ListOfAid);
-            Assert.That(handlerSessionHandler.ListOfAid, Is.EquivalentTo(Defined.Laid()));
+            Assert.That(handlerSessionHandler.ListOfAid, Is.EquivalentTo(Laid.Six()));
+        }
+
+        [Test]
+        public void ResponseFromAcquirer25()
+        {
+            var handlerSessionHandler = new LaidHandler();
+            _clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
+
+            Assert.That(handlerSessionHandler.ListOfAid, Is.EquivalentTo(Laid.Swisscard()));
         }
     }
 }
