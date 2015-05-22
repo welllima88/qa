@@ -36,8 +36,6 @@ namespace Six.Scs.Test.Workflow
         /// <param name="b">given location data</param>
         public static void Edit(BillingAddress b)
         {
-            b.SbsDebitNumber = View.Location.BillingAddress.View.SbsDebitNumber;
-
             View.Location.BillingAddress.View.EditButton.Click();
 
             View.Location.BillingAddress.Edit.CompanyName = b.CompanyName;
