@@ -26,6 +26,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test
         private IRequestResponseClient _clientProtocol;
 
         [Test]
+        [Category("SIX")]
         public void ResponseFromAcquirer02()
         {
             var handlerSessionHandler = new LaidHandler();
@@ -35,6 +36,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test
         }
 
         [Test]
+        [Category("Swisscard")]
         public void ResponseFromAcquirer25()
         {
             var handlerSessionHandler = new LaidHandler();
