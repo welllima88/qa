@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Six.Scs.Test.Model.ValueObjects;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.Workflow;
 using Six.Test.Selenium;
 
 namespace Six.Scs.Test
@@ -11,10 +11,11 @@ namespace Six.Scs.Test
         {
             Customer.Open(customer);
 
-            CustomerMenu.BillingAdressCreate.Click();
             var billingAddress = Model.Factory.BillingAddress.Create();
-
             Workflow.BillingAdress.Create(billingAddress);
+
+            Check(billingAddress);
+            Lobby.OpenLatestElement();
             Check(billingAddress);
 
             return billingAddress;
@@ -39,14 +40,17 @@ namespace Six.Scs.Test
             Assert.AreEqual(b.Contact.Web, View.Location.BillingAddress.View.Web);
         }
 
-        public static void Edit(BillingAddress billingAddress)
+        public static BillingAddress Edit(BillingAddress billingAddress)
         {
             Open(billingAddress);
-            View.Location.BillingAddress.View.EditButton.Click();
-            var billingAddressE = Model.Factory.BillingAddress.Edit();
 
+            var billingAddressE = Model.Factory.BillingAddress.Edit();
             Workflow.BillingAdress.Edit(billingAddressE);
+
             Check(billingAddressE);
+            Lobby.OpenLatestElement();
+            Check(billingAddressE);
+            return billingAddressE;
         }
 
         private static void Open(BillingAddress billingAddress)
