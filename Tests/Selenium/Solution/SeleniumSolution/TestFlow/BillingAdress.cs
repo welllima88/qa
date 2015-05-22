@@ -7,7 +7,7 @@ namespace Six.Scs.Test
 {
     public class BillingAdress
     {
-        public static void Create(Model.ValueObjects.Customer customer)
+        public static BillingAddress Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
@@ -16,6 +16,8 @@ namespace Six.Scs.Test
 
             Workflow.BillingAdress.Create(billingAddress);
             Check(billingAddress);
+
+            return billingAddress;
         }
 
         private static void Check(BillingAddress b)
@@ -37,14 +39,14 @@ namespace Six.Scs.Test
             Assert.AreEqual(b.Contact.Web, View.Location.BillingAddress.View.Web);
         }
 
-        public static void Edit(Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
+        public static void Edit(BillingAddress billingAddress)
         {
-            Open(BillingAddress);
+            Open(billingAddress);
             View.Location.BillingAddress.View.EditButton.Click();
-            var billingAddress = Model.Factory.BillingAddress.Create();
+            var billingAddressE = Model.Factory.BillingAddress.Edit();
 
-            Workflow.BillingAdress.Edit(billingAddress);
-            Check(billingAddress);
+            Workflow.BillingAdress.Edit(billingAddressE);
+            Check(billingAddressE);
         }
 
         private static void Open(BillingAddress billingAddress)
