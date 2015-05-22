@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -12,7 +11,7 @@ namespace Six.Scs.Test.View.Common.Infotext
             get { return WebDriver.FindAdaptedElement(By.Id("create")).Button(); }
         }
 
-        private static ReadOnlyCollection<IWebElementAdapter> Elements
+        private static IEnumerable<IWebElementAdapter> Elements
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
         }

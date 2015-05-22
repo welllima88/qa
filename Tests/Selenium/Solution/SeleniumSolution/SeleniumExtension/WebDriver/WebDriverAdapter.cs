@@ -30,7 +30,7 @@ namespace Six.Test.Selenium.WebDriver
             return _webDriver.FindElements(by);
         }
 
-        public ReadOnlyCollection<IWebElementAdapter> FindAdaptedElements(By by)
+        public IEnumerable<IWebElementAdapter> FindAdaptedElements(By by)
         {
             var webElements = _webDriver.FindElements(by);
             var list = new Collection<IWebElementAdapter>();

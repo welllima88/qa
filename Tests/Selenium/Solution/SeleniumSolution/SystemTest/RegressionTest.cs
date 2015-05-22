@@ -25,6 +25,7 @@ namespace Six.Scs.Test
         private static Model.ValueObjects.SimCard _sim;
         private static Model.ValueObjects.Location _location2;
         private static TroubleTicket _troubleTicket;
+        private static BillingAddress _billingAddress;
 
         [TestFixtureSetUp]
         public void Home()
@@ -48,7 +49,8 @@ namespace Six.Scs.Test
             Customer.Edit(_six);
 
             Infotext.Create(_six.Customer);
-            BillingAdress.Create(_six.Customer);
+            _billingAddress = BillingAdress.Create(_six.Customer);
+            BillingAdress.Edit(_billingAddress);
 
             _mpd = Mpd.Create(_six.Customer);
             Terminal.Assign(_mpd, _terminalLocation1);

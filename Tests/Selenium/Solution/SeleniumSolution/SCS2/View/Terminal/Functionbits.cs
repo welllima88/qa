@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -89,7 +89,7 @@ namespace Six.Scs.Test.View.Terminal
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_PurchaseWithCashBack']")); }
         }
 
-        public ReadOnlyCollection<IWebElementAdapter> FunctionBits
+        public IEnumerable<IWebElementAdapter> FunctionBits
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector(Pre + " input")); }
         }

@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using Six.Scs.Test.Workflow.Builder;
-using Six.Test.Selenium;
 
 namespace Six.Scs.Test.Builder.Customer.Six
 {

@@ -51,6 +51,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
             }
             catch (Exception)
             {
+                Console.Out.WriteLine("Select tolerant way: contains {0} for {1}", text, _webElement);
                 _webElement.Options.FirstOrDefault(o => o.Text.Contains(text)).Click();
             }
         }

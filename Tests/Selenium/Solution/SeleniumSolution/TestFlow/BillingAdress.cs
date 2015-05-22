@@ -1,21 +1,24 @@
 using NUnit.Framework;
 using Six.Scs.Test.Model.ValueObjects;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.Workflow;
 using Six.Test.Selenium;
 
 namespace Six.Scs.Test
 {
     public class BillingAdress
     {
-        public static void Create(Model.ValueObjects.Customer customer)
+        public static BillingAddress Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
 
-            CustomerMenu.BillingAdressCreate.Click();
             var billingAddress = Model.Factory.BillingAddress.Create();
-
             Workflow.BillingAdress.Create(billingAddress);
+
             Check(billingAddress);
+            Lobby.OpenLatestElement();
+            Check(billingAddress);
+
+            return billingAddress;
         }
 
         private static void Check(BillingAddress b)
@@ -37,16 +40,22 @@ namespace Six.Scs.Test
             Assert.AreEqual(b.Contact.Web, View.Location.BillingAddress.View.Web);
         }
 
-        public static void Edit(Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
+        public static BillingAddress Edit(BillingAddress billingAddress)
         {
-            Customer.Open(customer);
-            CustomerMenu.BillingAdresses.Click();
-            View.Location.BillingAddress.View.List(BillingAddress).Click(); // choose the first match
+            Open(billingAddress);
 
-            var billingAddress = Model.Factory.BillingAddress.Create();
+            var billingAddressE = Model.Factory.BillingAddress.Edit();
+            Workflow.BillingAdress.Edit(billingAddressE);
 
-            Workflow.BillingAdress.Edit(billingAddress);
-            Check(billingAddress);
+            Check(billingAddressE);
+            Lobby.OpenLatestElement();
+            Check(billingAddressE);
+            return billingAddressE;
+        }
+
+        private static void Open(BillingAddress billingAddress)
+        {
+            Search.BillingAddressCanBeFoundByName(billingAddress.CompanyName);
         }
     }
 }
