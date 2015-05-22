@@ -19,7 +19,6 @@ namespace SIX.SCS.QA.Tests.EP2.Data
 
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
         {
-            // errorNotification.ErrorCode = 33;
         }
 
         public bool IsDone
