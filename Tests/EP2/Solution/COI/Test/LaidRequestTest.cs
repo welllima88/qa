@@ -29,7 +29,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test
         [Category("SIX")]
         public void ResponseFromAcquirer02()
         {
-            var handlerSessionHandler = new LaidHandler();
+            var handlerSessionHandler = new LaidRequestHandler();
             _clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
 
             Assert.That(handlerSessionHandler.ListOfAid, Is.EquivalentTo(Laid.Six()));
@@ -39,7 +39,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test
         [Category("Swisscard")]
         public void ResponseFromAcquirer25()
         {
-            var handlerSessionHandler = new LaidHandler();
+            var handlerSessionHandler = new LaidRequestHandler();
             _clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
 
             Assert.That(handlerSessionHandler.ListOfAid, Is.EquivalentTo(Laid.Swisscard()));

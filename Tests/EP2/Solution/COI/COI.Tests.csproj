@@ -79,7 +79,7 @@
     <Compile Include="Data\Laid.cs" />
     <Compile Include="Setup\Communication.cs" />
     <Compile Include="Test\LaidRequestTest.cs" />
-    <Compile Include="Data\LaidHandler.cs" />
+    <Compile Include="Data\Request.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />

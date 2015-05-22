@@ -8,7 +8,7 @@ using SIX.SCS.QA.Tests.EP2.Message;
 
 namespace SIX.SCS.QA.Tests.EP2.Data
 {
-    public class LaidHandler :
+    public class LaidRequestHandler :
         IClientSessionHandler,
         IStartWith<ConfigDataRequest>,
         IHandleMessage<ConfigDataResponse>,
