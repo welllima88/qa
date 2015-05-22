@@ -39,14 +39,17 @@ namespace Six.Scs.Test
 
         public static void Edit(Model.ValueObjects.Customer customer, BillingAddress BillingAddress)
         {
-            Customer.Open(customer);
-            CustomerMenu.BillingAdresses.Click();
-            View.Location.BillingAddress.View.List(BillingAddress).Click(); // choose the first match
-
+            Open(BillingAddress);
+            View.Location.BillingAddress.View.EditButton.Click();
             var billingAddress = Model.Factory.BillingAddress.Create();
 
             Workflow.BillingAdress.Edit(billingAddress);
             Check(billingAddress);
+        }
+
+        private static void Open(BillingAddress billingAddress)
+        {
+            Search.BillingAddressCanBeFoundByName(billingAddress.CompanyName);
         }
     }
 }

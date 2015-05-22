@@ -69,5 +69,13 @@ namespace Six.Scs.Test
 
             StringAssert.Contains(ticketId, View.Tickets.Trouble.View.Header);
         }
+
+        public static void BillingAddressCanBeFoundByName(string companyName)
+        {
+            Workflow.Search.Find(companyName);
+            new SearchResult(Result.BillingAddress).First().Click();
+
+            StringAssert.Contains(companyName, View.Location.BillingAddress.View.CompanyName);
+        }
     }
 }
