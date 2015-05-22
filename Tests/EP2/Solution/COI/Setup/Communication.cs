@@ -10,7 +10,10 @@ namespace SIX.SCS.QA.Tests.EP2.Setup
             {
                 Port = 2253,
                 ServerAddress = "mdzhwcweb01",
-                Version = "0600"
+                Version = "0600",
+                ConnectionTimeout = 4,
+                ReceiveTimeout = 30000,
+                SendTimeout = 30000
             };
         }
     }

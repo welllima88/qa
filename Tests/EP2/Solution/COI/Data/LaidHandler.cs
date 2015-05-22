@@ -41,9 +41,9 @@ namespace SIX.SCS.QA.Tests.EP2.Data
 
         public void FirstMessage(ConfigDataRequest rq)
         {
-            rq.AcqID = 25;
-            rq.SCID = "8000000001";
             rq.ConfDataObj = "LAID";
+            rq.SCID = "8000000001";
+            rq.AcqID = 2;
         }
     }
 }
