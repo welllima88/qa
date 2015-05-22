@@ -1,4 +1,5 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -11,14 +12,14 @@ namespace Six.Scs.Test.View.Common
             get { return WebDriver.FindAdaptedElement(By.CssSelector("div#BatchHistoryList div.panel-heading")).Text; }
         }
 
-        public static ReadOnlyCollection<IWebElementAdapter> Elements
+        public static IEnumerable<IWebElementAdapter> Elements
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("div#BatchHistoryList ul#BatchHistoryList>li")); }
         }
 
         public static IWebElementAdapter MostRecent
         {
-            get { return Elements[0]; }
+            get { return Elements.ElementAt(0); }
         }
     }
 }

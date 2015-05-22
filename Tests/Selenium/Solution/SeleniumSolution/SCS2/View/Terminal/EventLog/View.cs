@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -29,7 +29,7 @@ namespace Six.Scs.Test.View.Terminal.EventLog
             get { return WebDriver.FindAdaptedElement(By.CssSelector("tbody tr#rowContent td#content table")); }
         }
 
-        public static ReadOnlyCollection<IWebElementAdapter> EventList
+        public static IEnumerable<IWebElementAdapter> EventList
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("td#content table tbody tr.Summary")); }
         }
