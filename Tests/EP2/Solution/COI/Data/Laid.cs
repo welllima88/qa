@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.ObjectModel;
 
-namespace SIX.SCS.QA.Tests.EP2.Laid
+namespace SIX.SCS.QA.Tests.EP2.Data
 {
-    public class Defined
+    public class Laid
     {
-        public static IEnumerable Laid()
+        public static IEnumerable Six()
         {
             return new Collection<string>
             {
@@ -28,6 +28,17 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
                 "oAAAAVcAMQ==",
                 "oAAAAAMgIA==",
                 "oAAAAVdEUg=="
+            };
+        }
+
+        public static IEnumerable Swisscard()
+        {
+            return new Collection<string>
+            {
+                "oAAAACUB",
+                "oAAAACUBAQQ=",
+                "oAAAACUBBAI=",
+                "oAAAAVcAEA=="
             };
         }
     }

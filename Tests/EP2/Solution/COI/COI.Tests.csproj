@@ -72,19 +72,21 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Setup\Ad.cs" />
-    <Compile Include="Setup\ConfigDataNotification.cs" />
-    <Compile Include="Common\ConfigDataRequest.cs" />
-    <Compile Include="Common\ConfigDataResponse.cs" />
-    <Compile Include="Laid\Defined.cs" />
-    <Compile Include="Laid\LaidRequestTest.cs" />
-    <Compile Include="Laid\LaidHandler.cs" />
-    <Compile Include="Laid\ListAID.cs" />
+    <Compile Include="Message\Elements\Ad.cs" />
+    <Compile Include="Message\ConfigDataNotification.cs" />
+    <Compile Include="Message\ConfigDataRequest.cs" />
+    <Compile Include="Message\ConfigDataResponse.cs" />
+    <Compile Include="Data\Laid.cs" />
+    <Compile Include="Setup\Communication.cs" />
+    <Compile Include="Test\LaidRequestTest.cs" />
+    <Compile Include="Data\Request.cs" />
+    <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />
-    <Compile Include="Setup\CoiTest.cs" />
-    <Compile Include="Setup\Tcd.cs" />
+    <Compile Include="Test\CoiTest.cs" />
+    <Compile Include="Message\Elements\Tcd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\MessageObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

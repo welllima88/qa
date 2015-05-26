@@ -4,20 +4,29 @@ using NUnit.Framework;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Common;
+using SIX.SCS.QA.Tests.EP2.Message;
+using SIX.SCS.QA.Tests.EP2.Test;
 
-namespace SIX.SCS.QA.Tests.EP2.Laid
+namespace SIX.SCS.QA.Tests.EP2.Data
 {
-    public class LaidHandler :
+    public class LaidRequestHandler :
         IClientSessionHandler,
         IStartWith<ConfigDataRequest>,
         IHandleMessage<ConfigDataResponse>,
         IHandleMessage<ErrorNotification>
 
     {
+        private readonly MessageObject _myService;
+
+        public LaidRequestHandler(MessageObject myService)
+        {
+            _myService = myService;
+        }
+
+        public IList<string> ListOfAid { get; private set; }
+
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
         {
-            // errorNotification.ErrorCode = 33;
         }
 
         public bool IsDone
@@ -25,11 +34,9 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
             get { return true; }
         }
 
-        public IList<string> ListOfAid { get; private set; }
-
         public IMessage Respond(ConfigDataResponse rsp)
         {
-            ListOfAid = rsp.ListAID.AID;
+            _myService.ListOfAid = rsp.ListAID.AID;
             return rsp;
         }
 
@@ -41,9 +48,9 @@ namespace SIX.SCS.QA.Tests.EP2.Laid
 
         public void FirstMessage(ConfigDataRequest rq)
         {
-            rq.AcqID = 2;
-            rq.SCID = "8000000001";
-            rq.ConfDataObj = "LAID";
+            rq.ConfDataObj = _myService.ConfDataObj;
+            rq.SCID = _myService.ScId;
+            rq.AcqID = _myService.AcqId;
         }
     }
 }

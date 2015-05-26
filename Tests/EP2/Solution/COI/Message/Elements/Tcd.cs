@@ -2,7 +2,7 @@ using System;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.QA.Tests.EP2.Setup
+namespace SIX.SCS.QA.Tests.EP2.Message.Elements
 {
     [Ep2DataElement(TagName = "tcd")]
     public class Tcd
