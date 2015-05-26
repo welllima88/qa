@@ -38,7 +38,6 @@ namespace SIX.SCS.QA.Tests.EP2.Data
                 "oAAAACUB",
                 "oAAAACUBAQQ=",
                 "oAAAACUBBAI=",
-                "oAAAAVcAEA==",
                 "oAAAAVcAEA=="
             };
         }
