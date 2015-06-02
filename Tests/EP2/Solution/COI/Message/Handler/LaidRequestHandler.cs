@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using NUnit.Framework;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Message;
 using SIX.SCS.QA.Tests.EP2.Message.Basic;
-using SIX.SCS.QA.Tests.EP2.Test;
+using SIX.SCS.QA.Tests.EP2.Message.Elements;
 
-namespace SIX.SCS.QA.Tests.EP2.Data
+namespace SIX.SCS.QA.Tests.EP2.Message.Handler
 {
     public class LaidRequestHandler :
         IClientSessionHandler,
@@ -17,14 +15,13 @@ namespace SIX.SCS.QA.Tests.EP2.Data
         IHandleMessage<ErrorNotification>
 
     {
-        private readonly Laid _myService;
+        private readonly ConfigDataRequest _rq;
+        public ListAID ListOfAid;
 
-        public LaidRequestHandler(Laid myService)
+        public LaidRequestHandler(ConfigDataRequest rq)
         {
-            _myService = myService;
+            _rq = rq;
         }
-
-        public IList<string> ListOfAid { get; private set; }
 
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
         {
@@ -35,10 +32,10 @@ namespace SIX.SCS.QA.Tests.EP2.Data
             get { return true; }
         }
 
-        public IMessage Respond(ConfigDataResponse rsp)
+        public IMessage Respond(ConfigDataResponse response)
         {
-            _myService.ListOfAid = rsp.ListAID.AID;
-            return rsp;
+            ListOfAid = response.ListAID;
+            return response;
         }
 
         public IMessage Respond(ErrorNotification err)
@@ -47,11 +44,11 @@ namespace SIX.SCS.QA.Tests.EP2.Data
             return err;
         }
 
-        public void FirstMessage(ConfigDataRequest rq)
+        public void FirstMessage(ConfigDataRequest request)
         {
-            rq.ConfDataObj = _myService.ConfDataObj;
-            rq.SCID = _myService.ScId;
-            rq.AcqID = _myService.AcqId;
+            request.ConfDataObj = _rq.ConfDataObj;
+            request.SCID = _rq.SCID;
+            request.AcqID = _rq.AcqID;
         }
     }
 }

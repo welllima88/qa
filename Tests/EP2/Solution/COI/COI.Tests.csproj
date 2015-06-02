@@ -77,16 +77,17 @@
     <Compile Include="Message\Basic\ConfigDataRequest.cs" />
     <Compile Include="Message\Basic\ConfigDataResponse.cs" />
     <Compile Include="Data\Definitions\Laid.cs" />
+    <Compile Include="Message\Basic\IConfigDataObject.cs" />
     <Compile Include="Setup\Communication.cs" />
     <Compile Include="Test\LaidRequestTest.cs" />
-    <Compile Include="Data\Request.cs" />
+    <Compile Include="Message\Handler\LaidRequestHandler.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />
     <Compile Include="Test\CoiTest.cs" />
     <Compile Include="Message\Elements\Tcd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Message\Laid.cs" />
+    <Compile Include="Message\Laid\Response.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
