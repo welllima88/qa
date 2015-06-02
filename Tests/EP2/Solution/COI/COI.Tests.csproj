@@ -72,24 +72,31 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Setup\Ad.cs" />
-    <Compile Include="Setup\ConfigDataNotification.cs" />
-    <Compile Include="Common\ConfigDataRequest.cs" />
-    <Compile Include="Common\ConfigDataResponse.cs" />
-    <Compile Include="Laid\Defined.cs" />
-    <Compile Include="Laid\LaidRequestTest.cs" />
-    <Compile Include="Laid\LaidHandler.cs" />
-    <Compile Include="Laid\ListAID.cs" />
+    <Compile Include="Message\Elements\Ad.cs" />
+    <Compile Include="Message\Basic\ConfigDataNotification.cs" />
+    <Compile Include="Message\Basic\ConfigDataRequest.cs" />
+    <Compile Include="Message\Basic\ConfigDataResponse.cs" />
+    <Compile Include="Data\Definitions\Laid.cs" />
+    <Compile Include="Message\Basic\IConfigDataObject.cs" />
+    <Compile Include="Setup\Communication.cs" />
+    <Compile Include="Test\Laid\LaidRequestTest.cs" />
+    <Compile Include="Message\Handler\LaidRequestHandler.cs" />
+    <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />
-    <Compile Include="Setup\CoiTest.cs" />
-    <Compile Include="Setup\Tcd.cs" />
+    <Compile Include="Test\CoiTest.cs" />
+    <Compile Include="Message\Elements\Tcd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Message\Laid\Response.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Test\Ad\" />
+    <Folder Include="Test\Regression\" />
+    <Folder Include="Test\Tcd\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Infos.txt" />
   </ItemGroup>

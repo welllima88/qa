@@ -1,11 +1,12 @@
 using System;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
+using SIX.SCS.QA.Tests.EP2.Message.Basic;
 
-namespace SIX.SCS.QA.Tests.EP2.Setup
+namespace SIX.SCS.QA.Tests.EP2.Message.Elements
 {
     [Ep2DataElement(TagName = "tcd")]
-    public class Tcd
+    public class Tcd : IConfigDataObject
     {
         [Ep2DataElement(TagName = "CtlessInd", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = false)]
         public int? CtlessInd { get; set; }

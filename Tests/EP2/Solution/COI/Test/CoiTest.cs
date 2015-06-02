@@ -1,41 +1,40 @@
 ﻿using NUnit.Framework;
 using SIX.EP2.Client;
-using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
+using SIX.SCS.QA.Tests.EP2.Message;
+using SIX.SCS.QA.Tests.EP2.Message.Basic;
+using SIX.SCS.QA.Tests.EP2.Setup;
 
-namespace SIX.SCS.QA.Tests.EP2.Setup
+namespace SIX.SCS.QA.Tests.EP2.Test
 {
     [TestFixture]
     [Ignore]
     public class CoiTest
     {
         private IRequestResponseClient clientProtocol;
-        private ComConfig _comConfig;
 
         [TestFixtureSetUp]
         public void SendMessage()
         {
-            IMessageVersionMapper messageMapper =
+            var messageMapper =
                 MessageVersionMapper.Builder.AddFromAssemblyOfType<ConfigDataNotification>().Build();
 
-            _comConfig = new ComConfig
-            {
-                Port = 2253,
-                ServerAddress = "mdzhwcweb01",
-                Version = "0600"
-            };
-
             clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
-
-            
         }
 
         [Test]
-        public void Response()
+        public void ResponseFromAcquirer02()
         {
             var handlerSessionHandler = new MyHandler();
-            clientProtocol.SendWith(_comConfig, handlerSessionHandler);
+            clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
+        }
+
+        [Test]
+        public void ResponseFromAcquirer25()
+        {
+            var handlerSessionHandler = new MyHandler();
+            clientProtocol.SendWith(Communication.Dev(), handlerSessionHandler);
         }
     }
 }
