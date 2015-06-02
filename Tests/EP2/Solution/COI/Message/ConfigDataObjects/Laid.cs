@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SIX.SCS.QA.Tests.EP2.Message
+namespace SIX.SCS.QA.Tests.EP2.Message.ConfigDataObjects
 {
     public class Laid
     {
