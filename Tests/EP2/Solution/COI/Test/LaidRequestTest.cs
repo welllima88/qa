@@ -20,38 +20,38 @@ namespace SIX.SCS.QA.Tests.EP2.Test
 
             _clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
 
-            _myService = new MessageObject
+            _theMessage = new MessageObject
             {
                 ConfDataObj = "LAID",
                 ScId = "8000000001"
             };
 
-            _handlerSessionHandler = new LaidRequestHandler(_myService);
+            _handlerSessionHandler = new LaidRequestHandler(_theMessage);
             // _clientProtocol.WithSecurityProvider(new SecurityProvider());
         }
 
         private IRequestResponseClient _clientProtocol;
-        private MessageObject _myService;
+        private MessageObject _theMessage;
         private LaidRequestHandler _handlerSessionHandler;
 
         [Test]
         [Category("SIX")]
         public void ResponseFromAcquirer02()
         {
-            _myService.AcqId = 2;
+            _theMessage.AcqId = 2;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_myService.ListOfAid, Is.EquivalentTo(Laid.Six()));
+            Assert.That(_theMessage.ListOfAid, Is.EquivalentTo(Laid.Six()));
         }
 
         [Test]
         [Category("Swisscard")]
         public void ResponseFromAcquirer25()
         {
-            _myService.AcqId = 25;
+            _theMessage.AcqId = 25;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_myService.ListOfAid, Is.EquivalentTo(Laid.Swisscard()));
+            Assert.That(_theMessage.ListOfAid, Is.EquivalentTo(Laid.Swisscard()));
         }
     }
 }
