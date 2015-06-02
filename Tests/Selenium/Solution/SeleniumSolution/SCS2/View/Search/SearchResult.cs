@@ -7,13 +7,6 @@ namespace Six.Scs.Test.View.Search
 {
     public class SearchResult : WebObject
     {
-        private readonly string _section;
-
-        public SearchResult(string section)
-        {
-            _section = section;
-        }
-
         /// <summary>
         ///     It is recommended to set the prefix property to the appropiate container element
         /// </summary>
@@ -32,20 +25,20 @@ namespace Six.Scs.Test.View.Search
             return WebDriver.FindAdaptedElement(By.CssSelector(" span input[id^='loadMore']"));
         }
 
-        public IWebElementAdapter First()
+        public static IWebElementAdapter First(string section)
         {
             WaitForSearchHasFinished();
             var cssb =
                 string.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td>a strong",
                     //String.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr>td:nth-child(3)>a",
-                    _section);
+                    section);
             return WebDriver.FindAdaptedElement(By.CssSelector(cssb));
         }
 
-        public IEnumerable<IWebElementAdapter> Result()
+        public static IEnumerable<IWebElementAdapter> Result(string section)
         {
             WaitForSearchHasFinished();
-            var cssb = string.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr", _section);
+            var cssb = string.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr", section);
             return WebDriver.FindAdaptedElements(By.CssSelector(cssb)).Where(r => r.Displayed);
         }
 
