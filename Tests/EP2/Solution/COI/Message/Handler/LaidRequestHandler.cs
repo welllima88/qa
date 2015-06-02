@@ -17,6 +17,7 @@ namespace SIX.SCS.QA.Tests.EP2.Message.Handler
     {
         private readonly ConfigDataRequest _rq;
         public ListAID ListOfAid;
+        public ErrorNotification Error;
 
         public LaidRequestHandler(ConfigDataRequest rq)
         {
@@ -40,7 +41,8 @@ namespace SIX.SCS.QA.Tests.EP2.Message.Handler
 
         public IMessage Respond(ErrorNotification err)
         {
-            Assert.Fail("An Eror occured: [{0}] {1}", err.ErrorCode, err.ErrorDescription);
+            Console.Out.WriteLine("An Eror occured: [{0}] {1}", err.ErrorCode, err.ErrorDescription);
+            Error = err;
             return err;
         }
 
