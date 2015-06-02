@@ -3,6 +3,7 @@ using SIX.EP2.Client;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 using SIX.SCS.QA.Tests.EP2.Message;
+using SIX.SCS.QA.Tests.EP2.Message.Basic;
 using SIX.SCS.QA.Tests.EP2.Setup;
 
 namespace SIX.SCS.QA.Tests.EP2.Test

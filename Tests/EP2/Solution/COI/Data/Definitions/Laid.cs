@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.ObjectModel;
 
-namespace SIX.SCS.QA.Tests.EP2.Data
+namespace SIX.SCS.QA.Tests.EP2.Data.Definitions
 {
-    public class Laid
+    public static class Laid
     {
         public static IEnumerable Six()
         {
