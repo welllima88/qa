@@ -16,13 +16,13 @@ namespace Six.Scs.Test.Builder.Brand.Gicc
 
         public override void Check()
         {
-            // Assert.IsTrue(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("738").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("736").Displayed);
+            // Assert.That(BrandPortlet.Acquirer("acq_multipayIntl").Displayed);
+            Assert.That(BrandPortlet.Brand("738").Displayed);
+            Assert.That(BrandPortlet.Brand("736").Displayed);
 
-            // Assert.IsTrue(BrandPortlet.Acquirer("acq_streamline").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("406").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("934").Displayed);
+            // Assert.That(BrandPortlet.Acquirer("acq_streamline").Displayed);
+            Assert.That(BrandPortlet.Brand("406").Displayed);
+            Assert.That(BrandPortlet.Brand("934").Displayed);
         }
 
         protected override void SetBrandDetails()

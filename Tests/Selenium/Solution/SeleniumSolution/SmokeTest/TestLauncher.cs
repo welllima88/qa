@@ -19,7 +19,7 @@ namespace Six.Scs.Test
             TestDirector.PrepareBrowser(Grid.Build);
             TestDirector.Start();
 
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Displayed);
         }
 
         [TearDown]

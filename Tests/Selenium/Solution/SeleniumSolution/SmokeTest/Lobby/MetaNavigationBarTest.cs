@@ -24,7 +24,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void CompanyLogo()
         {
-            Assert.IsTrue(MetaNavBar.CompanyLogo.Displayed);
+            Assert.That(MetaNavBar.CompanyLogo.Displayed);
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void Languages()
         {
-            Assert.IsTrue(MetaNavBar.Languages.Displayed);
+            Assert.That(MetaNavBar.Languages.Displayed);
         }
 
         [Test]
@@ -62,7 +62,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void User()
         {
-            Assert.IsTrue(MetaNavBar.User.Displayed);
+            Assert.That(MetaNavBar.User.Displayed);
         }
     }
 }

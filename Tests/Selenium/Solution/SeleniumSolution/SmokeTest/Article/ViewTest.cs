@@ -70,7 +70,7 @@ namespace Six.Scs.Test.Article
         [Test]
         public void Status()
         {
-            Assert.IsTrue(View.Administration.Article.View.Status);
+            Assert.That(View.Administration.Article.View.Status);
         }
 
         [Test]
@@ -82,7 +82,7 @@ namespace Six.Scs.Test.Article
         [Test]
         public void SupplierListHasAtLeastOneElement()
         {
-            Assert.IsTrue(View.Administration.Article.View.Supplier.Any(), "0 - :) or less elements");
+            Assert.That(View.Administration.Article.View.Supplier.Any(), "0 - :) or less elements");
         }
 
         [Test]

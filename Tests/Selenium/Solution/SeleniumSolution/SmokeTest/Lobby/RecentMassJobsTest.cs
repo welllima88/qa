@@ -20,7 +20,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void RecentMassmutationsContainer()
         {
-            Assert.IsTrue(RecentMassmutations.MostRecent.Displayed);
+            Assert.That(RecentMassmutations.MostRecent.Displayed);
         }
     }
 }

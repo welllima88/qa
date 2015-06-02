@@ -21,7 +21,7 @@ namespace Six.Saferpay.Backoffice.Test.Tests
             TestDirector.Start();
 
             PageFactory.InitElements(TestDirector.WebDriver, TestDirector.TestEnvironment.Application);
-            Assert.IsTrue(MetaNavBar.LogOff.Displayed);
+            Assert.That(MetaNavBar.LogOff.Displayed);
         }
 
         [TearDown]

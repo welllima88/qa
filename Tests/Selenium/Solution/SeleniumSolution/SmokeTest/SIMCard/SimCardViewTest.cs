@@ -40,7 +40,7 @@ namespace Six.Scs.Test.SIMCard
         [Test]
         public void SimCardMenuCheck()
         {
-            Assert.IsTrue(LobbyMenu.SimCardManage.Displayed);
+            Assert.That(LobbyMenu.SimCardManage.Displayed);
         }
 
         [Test]

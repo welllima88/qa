@@ -15,14 +15,14 @@ namespace Six.Scs.Test.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_corner").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1286").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_corner").Displayed);
+            Assert.That(BrandPortlet.Brand("1286").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_concardisfirstdata").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1272").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_concardisfirstdata").Displayed);
+            Assert.That(BrandPortlet.Brand("1272").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_commtrain").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("1114").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_commtrain").Displayed);
+            Assert.That(BrandPortlet.Brand("1114").Displayed);
         }
 
         protected override void SetBrandDetails()
