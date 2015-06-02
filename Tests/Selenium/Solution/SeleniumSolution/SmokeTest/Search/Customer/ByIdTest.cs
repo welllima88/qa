@@ -18,7 +18,7 @@ namespace Six.Scs.Test.Search.Customer
         {
             TestDirector.Navigate();
             Workflow.Search.Find("1");
-            new SearchResult(Result.Customer).First().Click();
+            SearchResult.First(Result.Customer).Click();
             _debitorNumber = View.Location.View.SbsDebitNumber;
         }
 
@@ -27,8 +27,8 @@ namespace Six.Scs.Test.Search.Customer
         public void DebitorNumber()
         {
             Workflow.Search.Find(_debitorNumber);
-            StringAssert.Contains("SIX Payment Services AG", new SearchResult(Result.Customer).First().Text);
-            new SearchResult(Result.Customer).First().Click();
+            StringAssert.Contains("SIX Payment Services AG", SearchResult.First(Result.Customer).Text);
+            SearchResult.First(Result.Customer).Click();
             Assert.That(_debitorNumber, Is.EqualTo(View.Location.View.SbsDebitNumber));
         }
     }

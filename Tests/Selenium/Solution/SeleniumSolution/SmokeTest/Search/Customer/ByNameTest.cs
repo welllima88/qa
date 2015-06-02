@@ -27,7 +27,7 @@ namespace Six.Scs.Test.Search.Customer
         {
             char[] splitter = {' ', '*'};
             var searchStrings = SearchString.Split(splitter);
-            var results = new SearchResult(Result.Customer).Result();
+            var results = SearchResult.Result(Result.Customer);
 
             foreach (var result in results)
             {
@@ -36,7 +36,7 @@ namespace Six.Scs.Test.Search.Customer
                     Assert.That(result.Text, Contains.Substring(searchString));
                 }
             }
-            new SearchResult(Result.Customer).First().Click();
+            SearchResult.First(Result.Customer).Click();
         }
 
         [Test]
