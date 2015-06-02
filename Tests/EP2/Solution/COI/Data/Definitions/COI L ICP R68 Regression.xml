@@ -1,643 +1,667 @@
 <?xml version="1.0"?>
 <MainWindowViewModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SavedMessages>
-    <string>&lt;?xml version="1.0"?&gt;
-&lt;ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0530" xmlns:ep2="http://www.eftpos2000.ch"&gt;
-  &lt;ep2:cfgdatareq msgnum="1"&gt;
-  &lt;ep2:SCID&gt;08000000027&lt;/ep2:SCID&gt;
-  &lt;ep2:ConfDataObj&gt;LAID&lt;/ep2:ConfDataObj&gt;
-  &lt;ep2:DataReqType&gt;0&lt;/ep2:DataReqType&gt;
-  &lt;ep2:AcqID&gt;00000000002&lt;/ep2:AcqID&gt;
-  &lt;/ep2:cfgdatareq&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0"?&gt;
-&lt;ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0600" xmlns:ep2="http://www.eftpos2000.ch"&gt;
-  &lt;ep2:cfgdatareq msgnum="1"&gt;
-  &lt;ep2:SCID&gt;08000000037&lt;/ep2:SCID&gt;
-  &lt;ep2:ConfDataObj&gt;AISD&lt;/ep2:ConfDataObj&gt;
-  &lt;ep2:DataReqType&gt;0&lt;/ep2:DataReqType&gt;
-  &lt;ep2:AcqID&gt;00000000002&lt;/ep2:AcqID&gt;
-  &lt;/ep2:cfgdatareq&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0"?&gt;
-&lt;ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0600" xmlns:ep2="http://www.eftpos2000.ch"&gt;
-  &lt;ep2:cfgdatareq msgnum="1"&gt;
-  &lt;ep2:SCID&gt;08000000037&lt;/ep2:SCID&gt;
-  &lt;ep2:ConfDataObj&gt;LAID&lt;/ep2:ConfDataObj&gt;
-  &lt;ep2:DataReqType&gt;0&lt;/ep2:DataReqType&gt;
-  &lt;ep2:AcqID&gt;00000000002&lt;/ep2:AcqID&gt;
-  &lt;/ep2:cfgdatareq&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0002&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;1&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:ad&gt;
-			&lt;ep2:ActDate /&gt;
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:MctCctAddr&gt;
-				&lt;ep2:MctCctFamN /&gt;
-				&lt;ep2:MctCctFrstN /&gt;
-				&lt;ep2:MctCity &gt;Zuerich&lt;/ep2:MctCity&gt; 
-				&lt;ep2:MctCntryCode &gt;756&lt;/ep2:MctCntryCode&gt; 
-				&lt;ep2:MctCompName &gt;SCS Releasetest R68&lt;/ep2:MctCompName&gt; 
-				&lt;ep2:MctEMail &gt;joerg.blaser@six-group.com&lt;/ep2:MctEMail&gt; 
-				&lt;ep2:MctFax &gt;058 399 6217&lt;/ep2:MctFax&gt; 
-				&lt;ep2:MctPBox /&gt;
-				&lt;ep2:MctPC &gt;8021&lt;/ep2:MctPC&gt; 
-				&lt;ep2:MctPhone &gt;058 399 6217&lt;/ep2:MctPhone&gt; 
-				&lt;ep2:MctMobile &gt;079 000 0000&lt;/ep2:MctMobile&gt; 
-				&lt;ep2:MctStreetName &gt;Hardturmstrasse 201&lt;/ep2:MctStreetName&gt; 
-				&lt;ep2:MctStreetNum /&gt;
-			&lt;/ep2:MctCctAddr&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:MctNameLoc&gt;
-				&lt;ep2:MctAddInfo &gt;SCS Releasetest R68&lt;/ep2:MctAddInfo&gt; 
-				&lt;ep2:MctCity &gt;Zuerich &lt;/ep2:MctCity&gt; 
-				&lt;ep2:MctCntryCode &gt;756&lt;/ep2:MctCntryCode&gt; 
-				&lt;ep2:MctCompName &gt;SIX Card Solutions AG&lt;/ep2:MctCompName&gt; 
-				&lt;ep2:MctPBox /&gt;
-				&lt;ep2:MctPC &gt;8021&lt;/ep2:MctPC&gt; 
-				&lt;ep2:MctStreetName &gt;Hardturmstrasse 201&lt;/ep2:MctStreetName&gt; 
-				&lt;ep2:MctStreetNum /&gt;
-			&lt;/ep2:MctNameLoc&gt;
-		&lt;/ep2:ad&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" xmlns:TKC="http://www.telekurs-card-solutions.com" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0002&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;1&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-				&lt;ep2:AID&gt;oAAAAAMQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQwYA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAABAQMA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAGUQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIg==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAQA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVdEQw==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVdEUg==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAYhEQw==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0005&lt;/ep2:TrmID&gt;
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt;
-			&lt;ep2:CtlessInd&gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;TKC:CashBackInd&gt;1&lt;/TKC:CashBackInd&gt;
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;5&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0025&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;1&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-      &lt;ep2:AID&gt;oAAAACUB&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAACUBAQQ=&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAAVcAEA==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0005&lt;/ep2:TrmID&gt; 
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt; 
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;0&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0002&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;2&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;0&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-				&lt;ep2:AID&gt;oAAAAAMQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQwYA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAABAQMA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAGUQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIg==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAQA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVdEQw==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVdEUg==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAYhEQw==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0005&lt;/ep2:TrmID&gt;
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt; 
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;5&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0025&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;2&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-      &lt;ep2:AID&gt;oAAAACUB&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAACUBAQQ=&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAAVcAEA==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0005&lt;/ep2:TrmID&gt; 
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt; 
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;0&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0002&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;2&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;0&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID /&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0001&lt;/ep2:TrmID&gt;
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt; 
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;5&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-    <string>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" xmlns:TKC="http://www.telekurs-card-solutions.com" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;00999100022&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;1&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-				&lt;ep2:AID&gt;oAAAAAMQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAYhEQw==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQwYA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAQQEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgIA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAIQ==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAAMgEA==&lt;/ep2:AID&gt;
-				&lt;ep2:AID&gt;oAAAAVcAMA==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0004&lt;/ep2:TrmID&gt;
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt;
-			&lt;ep2:CtlessInd&gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;TKC:CashBackInd&gt;1&lt;/TKC:CashBackInd&gt;
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;5&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</string>
-  </SavedMessages>
-  <MessageConfigs>
-    <SessionConfig xsi:nil="true" />
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000025</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000025</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00000000002</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-    <SessionConfig>
-      <Version>0530</Version>
-      <SenderType>ServiceCenter</SenderType>
-      <SenderId>08000000037</SenderId>
-      <PublicKey>099910002203129901018003D56D0B30720779E02E92A5A6CA4E698CD430F8CFFFEE0E8932CA4F38C578586DE7925CE4AC462E1091ABCE4036D6C3686595B607F4C3EE41623D68691D81087DF7F0F5F3B9D2B42470E696592ACA1B334900D572097DB3D1E29F170724FC7AD3BDFD1635093AEEA50DBA7CB4AB9E95BA6E147E3554CCA76EAEE01D20D5515027010001F9DF2839EC178BADE09B8C0B5AF1C3F984E72B57</PublicKey>
-      <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-      <RecipientId>00999100022</RecipientId>
-      <SessionKey>11223344556677889900112233445566</SessionKey>
-      <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-      <ServerAddress>153.46.253.2</ServerAddress>
-      <Port>2253</Port>
-    </SessionConfig>
-  </MessageConfigs>
-  <SlotInfos>
-    <string xsi:nil="true" />
-    <string>AISD</string>
-    <string>LAID</string>
-    <string>AD</string>
-    <string>TCD02</string>
-    <string>TCD25</string>
-    <string>lösch02</string>
-    <string>lösch25</string>
-    <string />
-    <string>TCD22CB</string>
-  </SlotInfos>
-  <RecipientId>00000000025</RecipientId>
-  <Port>2253</Port>
-  <SenderId>08000000037</SenderId>
-  <ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
-  <XmlIn>&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch"&gt;
-  &lt;ep2:cfgdataack msgnum="1540"&gt;
-    &lt;ep2:AcqID&gt;0025&lt;/ep2:AcqID&gt;
-    &lt;ep2:SCID&gt;08000000037&lt;/ep2:SCID&gt;
-  &lt;/ep2:cfgdataack&gt;
-&lt;/ep2:message&gt;</XmlIn>
-  <XmlOut>&lt;?xml version="1.0" ?&gt; 
-&lt;ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" &gt;
-	&lt;ep2:cfgdatantf msgnum="1540" &gt;
-		&lt;ep2:AcqID &gt;0025&lt;/ep2:AcqID&gt; 
-		&lt;ep2:DataProcCmd &gt;2&lt;/ep2:DataProcCmd&gt; 
-		&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-		&lt;ep2:tcd&gt;
-			&lt;ep2:AddTrmCap &gt;YACwUAE=&lt;/ep2:AddTrmCap&gt; 
-			&lt;ep2:AdminRem /&gt;
-			&lt;ep2:AutoDataSubm &gt;1&lt;/ep2:AutoDataSubm&gt; 
-			&lt;ep2:AutoDataTrans &gt;1&lt;/ep2:AutoDataTrans&gt; 
-			&lt;ep2:AutoDeclRef &gt;0&lt;/ep2:AutoDeclRef&gt; 
-			&lt;ep2:CashRegIntgT &gt;0&lt;/ep2:CashRegIntgT&gt; 
-			&lt;ep2:CompSecret &gt;xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A&lt;/ep2:CompSecret&gt; 
-			&lt;ep2:ConfActivDate &gt;20091103&lt;/ep2:ConfActivDate&gt; 
-			&lt;ep2:CtlessInd &gt;1&lt;/ep2:CtlessInd&gt;
-			&lt;ep2:ContractPNo /&gt;
-			&lt;ep2:CrdRdType &gt;3&lt;/ep2:CrdRdType&gt; 
-			&lt;ep2:DataLastChDate /&gt;
-			&lt;ep2:DataStatus /&gt;
-			&lt;ep2:DataSubmMaxRetry &gt;2&lt;/ep2:DataSubmMaxRetry&gt; 
-			&lt;ep2:DataSubmRetryDel &gt;0&lt;/ep2:DataSubmRetryDel&gt; 
-			&lt;ep2:DataSubmTime &gt;000000&lt;/ep2:DataSubmTime&gt; 
-			&lt;ep2:DataSubmTrigg &gt;0&lt;/ep2:DataSubmTrigg&gt; 
-			&lt;ep2:DSub &gt;0&lt;/ep2:DSub&gt; 
-			&lt;ep2:ListAID&gt;
-      &lt;ep2:AID&gt;oAAAACUB&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAACUBAQQ=&lt;/ep2:AID&gt;
-      &lt;ep2:AID&gt;oAAAAVcAEA==&lt;/ep2:AID&gt;
-			&lt;/ep2:ListAID&gt;
-			&lt;ep2:MctCC &gt;5411&lt;/ep2:MctCC&gt;
-			&lt;ep2:MctID &gt;TEST00000000068&lt;/ep2:MctID&gt; 
-			&lt;ep2:PMSID &gt;06000000011&lt;/ep2:PMSID&gt; 
-			&lt;ep2:SCConfTime &gt;114529&lt;/ep2:SCConfTime&gt; 
-			&lt;ep2:SCID &gt;08000000037&lt;/ep2:SCID&gt; 
-			&lt;ep2:SCIntConf &gt;9999&lt;/ep2:SCIntConf&gt; 
-			&lt;ep2:StatKeyPANRct &gt;52ukvn7YVIohyvOUprWH6peXpFPmrY7H&lt;/ep2:StatKeyPANRct&gt; 
-			&lt;ep2:SubmInt /&gt;
-			&lt;ep2:SuppPhone &gt;0432115069&lt;/ep2:SuppPhone&gt; 
-			&lt;ep2:TrmCap &gt;YNjI&lt;/ep2:TrmCap&gt; 
-			&lt;ep2:TrmCntryC &gt;756&lt;/ep2:TrmCntryC&gt; 
-			&lt;ep2:TrmID &gt;R68R0005&lt;/ep2:TrmID&gt; 
-			&lt;ep2:TrmProd &gt;ICP Bia EP2 Vending&lt;/ep2:TrmProd&gt; 
-			&lt;ep2:TrmRMCap &gt;5A==&lt;/ep2:TrmRMCap&gt; 
-			&lt;ep2:TrmTrxFctCap &gt;3/4=&lt;/ep2:TrmTrxFctCap&gt; 
-			&lt;ep2:TrmType &gt;22&lt;/ep2:TrmType&gt; 
-			&lt;ep2:TrxSubmLim &gt;10&lt;/ep2:TrxSubmLim&gt; 
-			&lt;ep2:TSUID &gt;04000000025&lt;/ep2:TSUID&gt; 
-			&lt;ep2:TSUName &gt;ICP&lt;/ep2:TSUName&gt; 
-			&lt;ep2:VersSW &gt;1&lt;/ep2:VersSW&gt; 
-			&lt;ep2:SCType &gt;0&lt;/ep2:SCType&gt;
-			&lt;ep2:CommType &gt;04&lt;/ep2:CommType&gt;
-			&lt;ep2:DCCProvider&gt;0&lt;/ep2:DCCProvider&gt;
-		&lt;/ep2:tcd&gt;
-	&lt;/ep2:cfgdatantf&gt;
-&lt;/ep2:message&gt;</XmlOut>
-  <RawIn>00 00 01 07 20 05 30 01 86 6F 60 10 DC 34 D8 F1 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 75 74 66 2D 38 22 3F 3E 0D 0A 3C 65 70 32 3A 6D 65 73 73 61 67 65 20 73 70 65 63 76 65 72 73 69 6F 6E 3D 22 30 35 33 30 22 20 78 6D 6C 6E 73 3A 65 70 32 3D 22 68 74 74 70 3A 2F 2F 77 77 77 2E 65 66 74 70 6F 73 32 30 30 30 2E 63 68 22 3E 0D 0A 20 20 3C 65 70 32 3A 63 66 67 64 61 74 61 61 63 6B 20 6D 73 67 6E 75 6D 3D 22 31 35 34 30 22 3E 0D 0A 20 20 20 20 3C 65 70 32 3A 41 63 71 49 44 3E 30 30 32 35 3C 2F 65 70 32 3A 41 63 71 49 44 3E 0D 0A 20 20 20 20 3C 65 70 32 3A 53 43 49 44 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 0D 0A 20 20 3C 2F 65 70 32 3A 63 66 67 64 61 74 61 61 63 6B 3E 0D 0A 3C 2F 65 70 32 3A 6D 65 73 73 61 67 65 3E</RawIn>
-  <SessionKey>11223344556677889900112233445566</SessionKey>
-  <RawOut>00 00 08 DD 20 05 30 02 02 30 38 30 30 30 30 30 30 30 33 37 03 30 30 30 30 30 30 30 30 30 32 35 02 80 7C CB 6B 5F 12 2A 7E 06 DA C1 61 73 59 F8 FA 1F 55 F3 86 2A BF 9C A4 ED A9 35 2C 63 99 E6 07 02 5D E8 A4 D6 D4 1E A2 F9 02 DF 17 0D 91 A1 26 1C AD 1E 0C 41 D8 25 09 CE 19 54 93 D9 93 6E BB E4 9D 61 35 F6 53 E7 53 23 DB 9B B3 91 21 46 F4 80 50 27 3F 50 5F EE 1E ED 3A 99 B0 11 63 7E D1 C8 50 70 C5 57 5B 5E 9A 46 C8 74 EA 1F 23 D0 E8 72 0E FA 63 64 D5 70 58 8A AE F3 9E B4 C8 8B 0A 9A 94 B4 2B D8 66 4F 44 5C 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 3F 3E 20 0A 3C 65 70 32 3A 6D 65 73 73 61 67 65 20 73 70 65 63 76 65 72 73 69 6F 6E 3D 22 30 35 33 30 22 20 78 6D 6C 6E 73 3A 65 70 32 3D 22 68 74 74 70 3A 2F 2F 77 77 77 2E 65 66 74 70 6F 73 32 30 30 30 2E 63 68 22 20 3E 0A 09 3C 65 70 32 3A 63 66 67 64 61 74 61 6E 74 66 20 6D 73 67 6E 75 6D 3D 22 31 35 34 30 22 20 3E 0A 09 09 3C 65 70 32 3A 41 63 71 49 44 20 3E 30 30 32 35 3C 2F 65 70 32 3A 41 63 71 49 44 3E 20 0A 09 09 3C 65 70 32 3A 44 61 74 61 50 72 6F 63 43 6D 64 20 3E 32 3C 2F 65 70 32 3A 44 61 74 61 50 72 6F 63 43 6D 64 3E 20 0A 09 09 3C 65 70 32 3A 53 43 49 44 20 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 20 0A 09 09 3C 65 70 32 3A 74 63 64 3E 0A 09 09 09 3C 65 70 32 3A 41 64 64 54 72 6D 43 61 70 20 3E 59 41 43 77 55 41 45 3D 3C 2F 65 70 32 3A 41 64 64 54 72 6D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 41 64 6D 69 6E 52 65 6D 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 61 74 61 53 75 62 6D 20 3E 31 3C 2F 65 70 32 3A 41 75 74 6F 44 61 74 61 53 75 62 6D 3E 20 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 61 74 61 54 72 61 6E 73 20 3E 31 3C 2F 65 70 32 3A 41 75 74 6F 44 61 74 61 54 72 61 6E 73 3E 20 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 65 63 6C 52 65 66 20 3E 30 3C 2F 65 70 32 3A 41 75 74 6F 44 65 63 6C 52 65 66 3E 20 0A 09 09 09 3C 65 70 32 3A 43 61 73 68 52 65 67 49 6E 74 67 54 20 3E 30 3C 2F 65 70 32 3A 43 61 73 68 52 65 67 49 6E 74 67 54 3E 20 0A 09 09 09 3C 65 70 32 3A 43 6F 6D 70 53 65 63 72 65 74 20 3E 78 70 65 38 59 30 61 43 58 46 45 77 42 74 4F 34 34 6A 75 70 6C 6A 72 43 79 41 30 4E 33 63 37 41 3C 2F 65 70 32 3A 43 6F 6D 70 53 65 63 72 65 74 3E 20 0A 09 09 09 3C 65 70 32 3A 43 6F 6E 66 41 63 74 69 76 44 61 74 65 20 3E 32 30 30 39 31 31 30 33 3C 2F 65 70 32 3A 43 6F 6E 66 41 63 74 69 76 44 61 74 65 3E 20 0A 09 09 09 3C 65 70 32 3A 43 74 6C 65 73 73 49 6E 64 20 3E 31 3C 2F 65 70 32 3A 43 74 6C 65 73 73 49 6E 64 3E 0A 09 09 09 3C 65 70 32 3A 43 6F 6E 74 72 61 63 74 50 4E 6F 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 43 72 64 52 64 54 79 70 65 20 3E 33 3C 2F 65 70 32 3A 43 72 64 52 64 54 79 70 65 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 4C 61 73 74 43 68 44 61 74 65 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 74 61 74 75 73 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 4D 61 78 52 65 74 72 79 20 3E 32 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 4D 61 78 52 65 74 72 79 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 52 65 74 72 79 44 65 6C 20 3E 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 52 65 74 72 79 44 65 6C 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 54 69 6D 65 20 3E 30 30 30 30 30 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 54 69 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 54 72 69 67 67 20 3E 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 54 72 69 67 67 3E 20 0A 09 09 09 3C 65 70 32 3A 44 53 75 62 20 3E 30 3C 2F 65 70 32 3A 44 53 75 62 3E 20 0A 09 09 09 3C 65 70 32 3A 4C 69 73 74 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 43 55 42 3C 2F 65 70 32 3A 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 43 55 42 41 51 51 3D 3C 2F 65 70 32 3A 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 56 63 41 45 41 3D 3D 3C 2F 65 70 32 3A 41 49 44 3E 0A 09 09 09 3C 2F 65 70 32 3A 4C 69 73 74 41 49 44 3E 0A 09 09 09 3C 65 70 32 3A 4D 63 74 43 43 20 3E 35 34 31 31 3C 2F 65 70 32 3A 4D 63 74 43 43 3E 0A 09 09 09 3C 65 70 32 3A 4D 63 74 49 44 20 3E 54 45 53 54 30 30 30 30 30 30 30 30 30 36 38 3C 2F 65 70 32 3A 4D 63 74 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 50 4D 53 49 44 20 3E 30 36 30 30 30 30 30 30 30 31 31 3C 2F 65 70 32 3A 50 4D 53 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 43 6F 6E 66 54 69 6D 65 20 3E 31 31 34 35 32 39 3C 2F 65 70 32 3A 53 43 43 6F 6E 66 54 69 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 49 44 20 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 49 6E 74 43 6F 6E 66 20 3E 39 39 39 39 3C 2F 65 70 32 3A 53 43 49 6E 74 43 6F 6E 66 3E 20 0A 09 09 09 3C 65 70 32 3A 53 74 61 74 4B 65 79 50 41 4E 52 63 74 20 3E 35 32 75 6B 76 6E 37 59 56 49 6F 68 79 76 4F 55 70 72 57 48 36 70 65 58 70 46 50 6D 72 59 37 48 3C 2F 65 70 32 3A 53 74 61 74 4B 65 79 50 41 4E 52 63 74 3E 20 0A 09 09 09 3C 65 70 32 3A 53 75 62 6D 49 6E 74 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 53 75 70 70 50 68 6F 6E 65 20 3E 30 34 33 32 31 31 35 30 36 39 3C 2F 65 70 32 3A 53 75 70 70 50 68 6F 6E 65 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 43 61 70 20 3E 59 4E 6A 49 3C 2F 65 70 32 3A 54 72 6D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 43 6E 74 72 79 43 20 3E 37 35 36 3C 2F 65 70 32 3A 54 72 6D 43 6E 74 72 79 43 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 49 44 20 3E 52 36 38 52 30 30 30 35 3C 2F 65 70 32 3A 54 72 6D 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 50 72 6F 64 20 3E 49 43 50 20 42 69 61 20 45 50 32 20 56 65 6E 64 69 6E 67 3C 2F 65 70 32 3A 54 72 6D 50 72 6F 64 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 52 4D 43 61 70 20 3E 35 41 3D 3D 3C 2F 65 70 32 3A 54 72 6D 52 4D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 54 72 78 46 63 74 43 61 70 20 3E 33 2F 34 3D 3C 2F 65 70 32 3A 54 72 6D 54 72 78 46 63 74 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 54 79 70 65 20 3E 32 32 3C 2F 65 70 32 3A 54 72 6D 54 79 70 65 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 78 53 75 62 6D 4C 69 6D 20 3E 31 30 3C 2F 65 70 32 3A 54 72 78 53 75 62 6D 4C 69 6D 3E 20 0A 09 09 09 3C 65 70 32 3A 54 53 55 49 44 20 3E 30 34 30 30 30 30 30 30 30 32 35 3C 2F 65 70 32 3A 54 53 55 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 54 53 55 4E 61 6D 65 20 3E 49 43 50 3C 2F 65 70 32 3A 54 53 55 4E 61 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 56 65 72 73 53 57 20 3E 31 3C 2F 65 70 32 3A 56 65 72 73 53 57 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 54 79 70 65 20 3E 30 3C 2F 65 70 32 3A 53 43 54 79 70 65 3E 0A 09 09 09 3C 65 70 32 3A 43 6F 6D 6D 54 79 70 65 20 3E 30 34 3C 2F 65 70 32 3A 43 6F 6D 6D 54 79 70 65 3E 0A 09 09 09 3C 65 70 32 3A 44 43 43 50 72 6F 76 69 64 65 72 3E 30 3C 2F 65 70 32 3A 44 43 43 50 72 6F 76 69 64 65 72 3E 0A 09 09 3C 2F 65 70 32 3A 74 63 64 3E 0A 09 3C 2F 65 70 32 3A 63 66 67 64 61 74 61 6E 74 66 3E 0A 3C 2F 65 70 32 3A 6D 65 73 73 61 67 65 3E</RawOut>
-  <Version>0530</Version>
-  <MessageEncoding>SecurityExtensionsPresent</MessageEncoding>
-  <ServerAddress>153.46.253.2</ServerAddress>
-  <PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
-  <SenderType>ServiceCenter</SenderType>
-  <PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
-  <ConnectionStatus>Disconnected</ConnectionStatus>
-  <CloseOnSend>true</CloseOnSend>
-  <AutoSec>false</AutoSec>
-  <FileName>C:\Daten\EP2Tester\configs\COI L ICP R68 Regression.xml</FileName>
+	<SavedMessages>
+		<string>
+			<?xml version="1.0"?>
+			<ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0530" xmlns:ep2="http://www.eftpos2000.ch">
+				<ep2:cfgdatareq msgnum="1">
+					<ep2:SCID>08000000027</ep2:SCID>
+					<ep2:ConfDataObj>LAID</ep2:ConfDataObj>
+					<ep2:DataReqType>0</ep2:DataReqType>
+					<ep2:AcqID>00000000002</ep2:AcqID>
+				</ep2:cfgdatareq>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0"?>
+			<ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0600" xmlns:ep2="http://www.eftpos2000.ch">
+				<ep2:cfgdatareq msgnum="1">
+					<ep2:SCID>08000000037</ep2:SCID>
+					<ep2:ConfDataObj>AISD</ep2:ConfDataObj>
+					<ep2:DataReqType>0</ep2:DataReqType>
+					<ep2:AcqID>00000000002</ep2:AcqID>
+				</ep2:cfgdatareq>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0"?>
+			<ep2:message xmlns:ccv="http://www.ccv.nl/ep2" specversion="0600" xmlns:ep2="http://www.eftpos2000.ch">
+				<ep2:cfgdatareq msgnum="1">
+					<ep2:SCID>08000000037</ep2:SCID>
+					<ep2:ConfDataObj>LAID</ep2:ConfDataObj>
+					<ep2:DataReqType>0</ep2:DataReqType>
+					<ep2:AcqID>00000000002</ep2:AcqID>
+				</ep2:cfgdatareq>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0002</ep2:AcqID> 
+					<ep2:DataProcCmd >1</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:ad>
+						<ep2:ActDate />
+						<ep2:AdminRem />
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:MctCctAddr>
+							<ep2:MctCctFamN />
+							<ep2:MctCctFrstN />
+							<ep2:MctCity >Zuerich</ep2:MctCity> 
+							<ep2:MctCntryCode >756</ep2:MctCntryCode> 
+							<ep2:MctCompName >SCS Releasetest R68</ep2:MctCompName> 
+							<ep2:MctEMail >joerg.blaser@six-group.com</ep2:MctEMail> 
+							<ep2:MctFax >058 399 6217</ep2:MctFax> 
+							<ep2:MctPBox />
+							<ep2:MctPC >8021</ep2:MctPC> 
+							<ep2:MctPhone >058 399 6217</ep2:MctPhone> 
+							<ep2:MctMobile >079 000 0000</ep2:MctMobile> 
+							<ep2:MctStreetName >Hardturmstrasse 201</ep2:MctStreetName> 
+							<ep2:MctStreetNum />
+						</ep2:MctCctAddr>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:MctNameLoc>
+							<ep2:MctAddInfo >SCS Releasetest R68</ep2:MctAddInfo> 
+							<ep2:MctCity >Zuerich </ep2:MctCity> 
+							<ep2:MctCntryCode >756</ep2:MctCntryCode> 
+							<ep2:MctCompName >SIX Card Solutions AG</ep2:MctCompName> 
+							<ep2:MctPBox />
+							<ep2:MctPC >8021</ep2:MctPC> 
+							<ep2:MctStreetName >Hardturmstrasse 201</ep2:MctStreetName> 
+							<ep2:MctStreetNum />
+						</ep2:MctNameLoc>
+					</ep2:ad>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" xmlns:TKC="http://www.telekurs-card-solutions.com" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0002</ep2:AcqID> 
+					<ep2:DataProcCmd >1</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >1</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID>
+							<ep2:AID>oAAAAAMQEA==</ep2:AID>
+							<ep2:AID>oAAAAAMgEA==</ep2:AID>
+							<ep2:AID>oAAAAAMgIA==</ep2:AID>
+							<ep2:AID>oAAAAAQQEA==</ep2:AID>
+							<ep2:AID>oAAAAAQwYA==</ep2:AID>
+							<ep2:AID>oAAAABAQMA==</ep2:AID>
+							<ep2:AID>oAAAAGUQEA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIQ==</ep2:AID>
+							<ep2:AID>oAAAAVcAIg==</ep2:AID>
+							<ep2:AID>oAAAAVcAMA==</ep2:AID>
+							<ep2:AID>oAAAAVcAMQ==</ep2:AID>
+							<ep2:AID>oAAAAVcAQA==</ep2:AID>
+							<ep2:AID>oAAAAVdEQw==</ep2:AID>
+							<ep2:AID>oAAAAVdEUg==</ep2:AID>
+							<ep2:AID>oAAAAYhEQw==</ep2:AID>
+						</ep2:ListAID>
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0005</ep2:TrmID>
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW>
+						<ep2:CtlessInd>1</ep2:CtlessInd>
+						<TKC:CashBackInd>1</TKC:CashBackInd>
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>5</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0025</ep2:AcqID> 
+					<ep2:DataProcCmd >1</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >1</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID>
+							<ep2:AID>oAAAACUB</ep2:AID>
+							<ep2:AID>oAAAACUBAQQ=</ep2:AID>
+							<ep2:AID>oAAAAVcAEA==</ep2:AID>
+						</ep2:ListAID>
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0005</ep2:TrmID> 
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW> 
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>0</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0002</ep2:AcqID> 
+					<ep2:DataProcCmd >2</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >0</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID>
+							<ep2:AID>oAAAAAMQEA==</ep2:AID>
+							<ep2:AID>oAAAAAMgEA==</ep2:AID>
+							<ep2:AID>oAAAAAMgIA==</ep2:AID>
+							<ep2:AID>oAAAAAQQEA==</ep2:AID>
+							<ep2:AID>oAAAAAQwYA==</ep2:AID>
+							<ep2:AID>oAAAABAQMA==</ep2:AID>
+							<ep2:AID>oAAAAGUQEA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIQ==</ep2:AID>
+							<ep2:AID>oAAAAVcAIg==</ep2:AID>
+							<ep2:AID>oAAAAVcAMA==</ep2:AID>
+							<ep2:AID>oAAAAVcAMQ==</ep2:AID>
+							<ep2:AID>oAAAAVcAQA==</ep2:AID>
+							<ep2:AID>oAAAAVdEQw==</ep2:AID>
+							<ep2:AID>oAAAAVdEUg==</ep2:AID>
+							<ep2:AID>oAAAAYhEQw==</ep2:AID>
+						</ep2:ListAID>
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0005</ep2:TrmID>
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW> 
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>5</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0025</ep2:AcqID> 
+					<ep2:DataProcCmd >2</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >1</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID>
+							<ep2:AID>oAAAACUB</ep2:AID>
+							<ep2:AID>oAAAACUBAQQ=</ep2:AID>
+							<ep2:AID>oAAAAVcAEA==</ep2:AID>
+						</ep2:ListAID>
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0005</ep2:TrmID> 
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW> 
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>0</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >0002</ep2:AcqID> 
+					<ep2:DataProcCmd >2</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >0</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID />
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0001</ep2:TrmID>
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW> 
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>5</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+		<string>
+			<?xml version="1.0" ?> 
+			<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" xmlns:TKC="http://www.telekurs-card-solutions.com" >
+				<ep2:cfgdatantf msgnum="1540" >
+					<ep2:AcqID >00999100022</ep2:AcqID> 
+					<ep2:DataProcCmd >1</ep2:DataProcCmd> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:tcd>
+						<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+						<ep2:AdminRem />
+						<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+						<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+						<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+						<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+						<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+						<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+						<ep2:CtlessInd >1</ep2:CtlessInd>
+						<ep2:ContractPNo />
+						<ep2:CrdRdType >3</ep2:CrdRdType> 
+						<ep2:DataLastChDate />
+						<ep2:DataStatus />
+						<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+						<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+						<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+						<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+						<ep2:DSub >0</ep2:DSub> 
+						<ep2:ListAID>
+							<ep2:AID>oAAAAAMQEA==</ep2:AID>
+							<ep2:AID>oAAAAVcAMQ==</ep2:AID>
+							<ep2:AID>oAAAAYhEQw==</ep2:AID>
+							<ep2:AID>oAAAAAQwYA==</ep2:AID>
+							<ep2:AID>oAAAAAQQEA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIA==</ep2:AID>
+							<ep2:AID>oAAAAAMgIA==</ep2:AID>
+							<ep2:AID>oAAAAVcAIQ==</ep2:AID>
+							<ep2:AID>oAAAAAMgEA==</ep2:AID>
+							<ep2:AID>oAAAAVcAMA==</ep2:AID>
+						</ep2:ListAID>
+						<ep2:MctCC >5411</ep2:MctCC>
+						<ep2:MctID >TEST00000000068</ep2:MctID> 
+						<ep2:PMSID >06000000011</ep2:PMSID> 
+						<ep2:SCConfTime >114529</ep2:SCConfTime> 
+						<ep2:SCID >08000000037</ep2:SCID> 
+						<ep2:SCIntConf >9999</ep2:SCIntConf> 
+						<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+						<ep2:SubmInt />
+						<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+						<ep2:TrmCap >YNjI</ep2:TrmCap> 
+						<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+						<ep2:TrmID >R68R0004</ep2:TrmID>
+						<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+						<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+						<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+						<ep2:TrmType >22</ep2:TrmType> 
+						<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+						<ep2:TSUID >04000000025</ep2:TSUID> 
+						<ep2:TSUName >ICP</ep2:TSUName> 
+						<ep2:VersSW >1</ep2:VersSW>
+						<ep2:CtlessInd>1</ep2:CtlessInd>
+						<TKC:CashBackInd>1</TKC:CashBackInd>
+						<ep2:SCType >0</ep2:SCType>
+						<ep2:CommType >04</ep2:CommType>
+						<ep2:DCCProvider>5</ep2:DCCProvider>
+					</ep2:tcd>
+				</ep2:cfgdatantf>
+			</ep2:message>
+		</string>
+	</SavedMessages>
+	<MessageConfigs>
+		<SessionConfig xsi:nil="true" />
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000025</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000025</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>000000000203129901018003DAC0444691D8EEC53F5779C4AEEEE5E2549D901759C91FB07223D576AB747E1665E142AB9362D5D197B14E194424D6ADA54CD526EDBB4FA39090830BB70BA6368B117B7F362269FA408224C6230D2C2B17B093F3F47A0BFEAEEC1A27C91B3DAD67E27251552A8996C8A21B8555CE265360902AE26EAF7E2D13542E9C9A85D3B7010001E456A2B85DF18599EEC328A9F8F698C3F1E5D925</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00000000002</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+		<SessionConfig>
+			<Version>0530</Version>
+			<SenderType>ServiceCenter</SenderType>
+			<SenderId>08000000037</SenderId>
+			<PublicKey>099910002203129901018003D56D0B30720779E02E92A5A6CA4E698CD430F8CFFFEE0E8932CA4F38C578586DE7925CE4AC462E1091ABCE4036D6C3686595B607F4C3EE41623D68691D81087DF7F0F5F3B9D2B42470E696592ACA1B334900D572097DB3D1E29F170724FC7AD3BDFD1635093AEEA50DBA7CB4AB9E95BA6E147E3554CCA76EAEE01D20D5515027010001F9DF2839EC178BADE09B8C0B5AF1C3F984E72B57</PublicKey>
+			<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+			<RecipientId>00999100022</RecipientId>
+			<SessionKey>11223344556677889900112233445566</SessionKey>
+			<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+			<ServerAddress>153.46.253.2</ServerAddress>
+			<Port>2253</Port>
+		</SessionConfig>
+	</MessageConfigs>
+	<SlotInfos>
+		<string xsi:nil="true" />
+		<string>AISD</string>
+		<string>LAID</string>
+		<string>AD</string>
+		<string>TCD02</string>
+		<string>TCD25</string>
+		<string>lösch02</string>
+		<string>lösch25</string>
+		<string />
+		<string>TCD22CB</string>
+	</SlotInfos>
+	<RecipientId>00000000025</RecipientId>
+	<Port>2253</Port>
+	<SenderId>08000000037</SenderId>
+	<ComponentSecret>2E8DC198C5AAE41F7A4ECAF0D4B81AD3</ComponentSecret>
+	<XmlIn>
+		<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch">
+			<ep2:cfgdataack msgnum="1540">
+				<ep2:AcqID>0025</ep2:AcqID>
+				<ep2:SCID>08000000037</ep2:SCID>
+			</ep2:cfgdataack>
+		</ep2:message>
+	</XmlIn>
+	<XmlOut>
+		<?xml version="1.0" ?> 
+		<ep2:message specversion="0530" xmlns:ep2="http://www.eftpos2000.ch" >
+			<ep2:cfgdatantf msgnum="1540" >
+				<ep2:AcqID >0025</ep2:AcqID> 
+				<ep2:DataProcCmd >2</ep2:DataProcCmd> 
+				<ep2:SCID >08000000037</ep2:SCID> 
+				<ep2:tcd>
+					<ep2:AddTrmCap >YACwUAE=</ep2:AddTrmCap> 
+					<ep2:AdminRem />
+					<ep2:AutoDataSubm >1</ep2:AutoDataSubm> 
+					<ep2:AutoDataTrans >1</ep2:AutoDataTrans> 
+					<ep2:AutoDeclRef >0</ep2:AutoDeclRef> 
+					<ep2:CashRegIntgT >0</ep2:CashRegIntgT> 
+					<ep2:CompSecret >xpe8Y0aCXFEwBtO44jupljrCyA0N3c7A</ep2:CompSecret> 
+					<ep2:ConfActivDate >20091103</ep2:ConfActivDate> 
+					<ep2:CtlessInd >1</ep2:CtlessInd>
+					<ep2:ContractPNo />
+					<ep2:CrdRdType >3</ep2:CrdRdType> 
+					<ep2:DataLastChDate />
+					<ep2:DataStatus />
+					<ep2:DataSubmMaxRetry >2</ep2:DataSubmMaxRetry> 
+					<ep2:DataSubmRetryDel >0</ep2:DataSubmRetryDel> 
+					<ep2:DataSubmTime >000000</ep2:DataSubmTime> 
+					<ep2:DataSubmTrigg >0</ep2:DataSubmTrigg> 
+					<ep2:DSub >0</ep2:DSub> 
+					<ep2:ListAID>
+						<ep2:AID>oAAAACUB</ep2:AID>
+						<ep2:AID>oAAAACUBAQQ=</ep2:AID>
+						<ep2:AID>oAAAAVcAEA==</ep2:AID>
+					</ep2:ListAID>
+					<ep2:MctCC >5411</ep2:MctCC>
+					<ep2:MctID >TEST00000000068</ep2:MctID> 
+					<ep2:PMSID >06000000011</ep2:PMSID> 
+					<ep2:SCConfTime >114529</ep2:SCConfTime> 
+					<ep2:SCID >08000000037</ep2:SCID> 
+					<ep2:SCIntConf >9999</ep2:SCIntConf> 
+					<ep2:StatKeyPANRct >52ukvn7YVIohyvOUprWH6peXpFPmrY7H</ep2:StatKeyPANRct> 
+					<ep2:SubmInt />
+					<ep2:SuppPhone >0432115069</ep2:SuppPhone> 
+					<ep2:TrmCap >YNjI</ep2:TrmCap> 
+					<ep2:TrmCntryC >756</ep2:TrmCntryC> 
+					<ep2:TrmID >R68R0005</ep2:TrmID> 
+					<ep2:TrmProd >ICP Bia EP2 Vending</ep2:TrmProd> 
+					<ep2:TrmRMCap >5A==</ep2:TrmRMCap> 
+					<ep2:TrmTrxFctCap >3/4=</ep2:TrmTrxFctCap> 
+					<ep2:TrmType >22</ep2:TrmType> 
+					<ep2:TrxSubmLim >10</ep2:TrxSubmLim> 
+					<ep2:TSUID >04000000025</ep2:TSUID> 
+					<ep2:TSUName >ICP</ep2:TSUName> 
+					<ep2:VersSW >1</ep2:VersSW> 
+					<ep2:SCType >0</ep2:SCType>
+					<ep2:CommType >04</ep2:CommType>
+					<ep2:DCCProvider>0</ep2:DCCProvider>
+				</ep2:tcd>
+			</ep2:cfgdatantf>
+		</ep2:message>
+	</XmlOut>
+	<RawIn>00 00 01 07 20 05 30 01 86 6F 60 10 DC 34 D8 F1 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 75 74 66 2D 38 22 3F 3E 0D 0A 3C 65 70 32 3A 6D 65 73 73 61 67 65 20 73 70 65 63 76 65 72 73 69 6F 6E 3D 22 30 35 33 30 22 20 78 6D 6C 6E 73 3A 65 70 32 3D 22 68 74 74 70 3A 2F 2F 77 77 77 2E 65 66 74 70 6F 73 32 30 30 30 2E 63 68 22 3E 0D 0A 20 20 3C 65 70 32 3A 63 66 67 64 61 74 61 61 63 6B 20 6D 73 67 6E 75 6D 3D 22 31 35 34 30 22 3E 0D 0A 20 20 20 20 3C 65 70 32 3A 41 63 71 49 44 3E 30 30 32 35 3C 2F 65 70 32 3A 41 63 71 49 44 3E 0D 0A 20 20 20 20 3C 65 70 32 3A 53 43 49 44 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 0D 0A 20 20 3C 2F 65 70 32 3A 63 66 67 64 61 74 61 61 63 6B 3E 0D 0A 3C 2F 65 70 32 3A 6D 65 73 73 61 67 65 3E</RawIn>
+	<SessionKey>11223344556677889900112233445566</SessionKey>
+	<RawOut>00 00 08 DD 20 05 30 02 02 30 38 30 30 30 30 30 30 30 33 37 03 30 30 30 30 30 30 30 30 30 32 35 02 80 7C CB 6B 5F 12 2A 7E 06 DA C1 61 73 59 F8 FA 1F 55 F3 86 2A BF 9C A4 ED A9 35 2C 63 99 E6 07 02 5D E8 A4 D6 D4 1E A2 F9 02 DF 17 0D 91 A1 26 1C AD 1E 0C 41 D8 25 09 CE 19 54 93 D9 93 6E BB E4 9D 61 35 F6 53 E7 53 23 DB 9B B3 91 21 46 F4 80 50 27 3F 50 5F EE 1E ED 3A 99 B0 11 63 7E D1 C8 50 70 C5 57 5B 5E 9A 46 C8 74 EA 1F 23 D0 E8 72 0E FA 63 64 D5 70 58 8A AE F3 9E B4 C8 8B 0A 9A 94 B4 2B D8 66 4F 44 5C 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 3F 3E 20 0A 3C 65 70 32 3A 6D 65 73 73 61 67 65 20 73 70 65 63 76 65 72 73 69 6F 6E 3D 22 30 35 33 30 22 20 78 6D 6C 6E 73 3A 65 70 32 3D 22 68 74 74 70 3A 2F 2F 77 77 77 2E 65 66 74 70 6F 73 32 30 30 30 2E 63 68 22 20 3E 0A 09 3C 65 70 32 3A 63 66 67 64 61 74 61 6E 74 66 20 6D 73 67 6E 75 6D 3D 22 31 35 34 30 22 20 3E 0A 09 09 3C 65 70 32 3A 41 63 71 49 44 20 3E 30 30 32 35 3C 2F 65 70 32 3A 41 63 71 49 44 3E 20 0A 09 09 3C 65 70 32 3A 44 61 74 61 50 72 6F 63 43 6D 64 20 3E 32 3C 2F 65 70 32 3A 44 61 74 61 50 72 6F 63 43 6D 64 3E 20 0A 09 09 3C 65 70 32 3A 53 43 49 44 20 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 20 0A 09 09 3C 65 70 32 3A 74 63 64 3E 0A 09 09 09 3C 65 70 32 3A 41 64 64 54 72 6D 43 61 70 20 3E 59 41 43 77 55 41 45 3D 3C 2F 65 70 32 3A 41 64 64 54 72 6D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 41 64 6D 69 6E 52 65 6D 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 61 74 61 53 75 62 6D 20 3E 31 3C 2F 65 70 32 3A 41 75 74 6F 44 61 74 61 53 75 62 6D 3E 20 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 61 74 61 54 72 61 6E 73 20 3E 31 3C 2F 65 70 32 3A 41 75 74 6F 44 61 74 61 54 72 61 6E 73 3E 20 0A 09 09 09 3C 65 70 32 3A 41 75 74 6F 44 65 63 6C 52 65 66 20 3E 30 3C 2F 65 70 32 3A 41 75 74 6F 44 65 63 6C 52 65 66 3E 20 0A 09 09 09 3C 65 70 32 3A 43 61 73 68 52 65 67 49 6E 74 67 54 20 3E 30 3C 2F 65 70 32 3A 43 61 73 68 52 65 67 49 6E 74 67 54 3E 20 0A 09 09 09 3C 65 70 32 3A 43 6F 6D 70 53 65 63 72 65 74 20 3E 78 70 65 38 59 30 61 43 58 46 45 77 42 74 4F 34 34 6A 75 70 6C 6A 72 43 79 41 30 4E 33 63 37 41 3C 2F 65 70 32 3A 43 6F 6D 70 53 65 63 72 65 74 3E 20 0A 09 09 09 3C 65 70 32 3A 43 6F 6E 66 41 63 74 69 76 44 61 74 65 20 3E 32 30 30 39 31 31 30 33 3C 2F 65 70 32 3A 43 6F 6E 66 41 63 74 69 76 44 61 74 65 3E 20 0A 09 09 09 3C 65 70 32 3A 43 74 6C 65 73 73 49 6E 64 20 3E 31 3C 2F 65 70 32 3A 43 74 6C 65 73 73 49 6E 64 3E 0A 09 09 09 3C 65 70 32 3A 43 6F 6E 74 72 61 63 74 50 4E 6F 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 43 72 64 52 64 54 79 70 65 20 3E 33 3C 2F 65 70 32 3A 43 72 64 52 64 54 79 70 65 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 4C 61 73 74 43 68 44 61 74 65 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 74 61 74 75 73 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 4D 61 78 52 65 74 72 79 20 3E 32 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 4D 61 78 52 65 74 72 79 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 52 65 74 72 79 44 65 6C 20 3E 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 52 65 74 72 79 44 65 6C 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 54 69 6D 65 20 3E 30 30 30 30 30 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 54 69 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 44 61 74 61 53 75 62 6D 54 72 69 67 67 20 3E 30 3C 2F 65 70 32 3A 44 61 74 61 53 75 62 6D 54 72 69 67 67 3E 20 0A 09 09 09 3C 65 70 32 3A 44 53 75 62 20 3E 30 3C 2F 65 70 32 3A 44 53 75 62 3E 20 0A 09 09 09 3C 65 70 32 3A 4C 69 73 74 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 43 55 42 3C 2F 65 70 32 3A 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 43 55 42 41 51 51 3D 3C 2F 65 70 32 3A 41 49 44 3E 0A 20 20 20 20 20 20 3C 65 70 32 3A 41 49 44 3E 6F 41 41 41 41 56 63 41 45 41 3D 3D 3C 2F 65 70 32 3A 41 49 44 3E 0A 09 09 09 3C 2F 65 70 32 3A 4C 69 73 74 41 49 44 3E 0A 09 09 09 3C 65 70 32 3A 4D 63 74 43 43 20 3E 35 34 31 31 3C 2F 65 70 32 3A 4D 63 74 43 43 3E 0A 09 09 09 3C 65 70 32 3A 4D 63 74 49 44 20 3E 54 45 53 54 30 30 30 30 30 30 30 30 30 36 38 3C 2F 65 70 32 3A 4D 63 74 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 50 4D 53 49 44 20 3E 30 36 30 30 30 30 30 30 30 31 31 3C 2F 65 70 32 3A 50 4D 53 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 43 6F 6E 66 54 69 6D 65 20 3E 31 31 34 35 32 39 3C 2F 65 70 32 3A 53 43 43 6F 6E 66 54 69 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 49 44 20 3E 30 38 30 30 30 30 30 30 30 33 37 3C 2F 65 70 32 3A 53 43 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 49 6E 74 43 6F 6E 66 20 3E 39 39 39 39 3C 2F 65 70 32 3A 53 43 49 6E 74 43 6F 6E 66 3E 20 0A 09 09 09 3C 65 70 32 3A 53 74 61 74 4B 65 79 50 41 4E 52 63 74 20 3E 35 32 75 6B 76 6E 37 59 56 49 6F 68 79 76 4F 55 70 72 57 48 36 70 65 58 70 46 50 6D 72 59 37 48 3C 2F 65 70 32 3A 53 74 61 74 4B 65 79 50 41 4E 52 63 74 3E 20 0A 09 09 09 3C 65 70 32 3A 53 75 62 6D 49 6E 74 20 2F 3E 0A 09 09 09 3C 65 70 32 3A 53 75 70 70 50 68 6F 6E 65 20 3E 30 34 33 32 31 31 35 30 36 39 3C 2F 65 70 32 3A 53 75 70 70 50 68 6F 6E 65 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 43 61 70 20 3E 59 4E 6A 49 3C 2F 65 70 32 3A 54 72 6D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 43 6E 74 72 79 43 20 3E 37 35 36 3C 2F 65 70 32 3A 54 72 6D 43 6E 74 72 79 43 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 49 44 20 3E 52 36 38 52 30 30 30 35 3C 2F 65 70 32 3A 54 72 6D 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 50 72 6F 64 20 3E 49 43 50 20 42 69 61 20 45 50 32 20 56 65 6E 64 69 6E 67 3C 2F 65 70 32 3A 54 72 6D 50 72 6F 64 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 52 4D 43 61 70 20 3E 35 41 3D 3D 3C 2F 65 70 32 3A 54 72 6D 52 4D 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 54 72 78 46 63 74 43 61 70 20 3E 33 2F 34 3D 3C 2F 65 70 32 3A 54 72 6D 54 72 78 46 63 74 43 61 70 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 6D 54 79 70 65 20 3E 32 32 3C 2F 65 70 32 3A 54 72 6D 54 79 70 65 3E 20 0A 09 09 09 3C 65 70 32 3A 54 72 78 53 75 62 6D 4C 69 6D 20 3E 31 30 3C 2F 65 70 32 3A 54 72 78 53 75 62 6D 4C 69 6D 3E 20 0A 09 09 09 3C 65 70 32 3A 54 53 55 49 44 20 3E 30 34 30 30 30 30 30 30 30 32 35 3C 2F 65 70 32 3A 54 53 55 49 44 3E 20 0A 09 09 09 3C 65 70 32 3A 54 53 55 4E 61 6D 65 20 3E 49 43 50 3C 2F 65 70 32 3A 54 53 55 4E 61 6D 65 3E 20 0A 09 09 09 3C 65 70 32 3A 56 65 72 73 53 57 20 3E 31 3C 2F 65 70 32 3A 56 65 72 73 53 57 3E 20 0A 09 09 09 3C 65 70 32 3A 53 43 54 79 70 65 20 3E 30 3C 2F 65 70 32 3A 53 43 54 79 70 65 3E 0A 09 09 09 3C 65 70 32 3A 43 6F 6D 6D 54 79 70 65 20 3E 30 34 3C 2F 65 70 32 3A 43 6F 6D 6D 54 79 70 65 3E 0A 09 09 09 3C 65 70 32 3A 44 43 43 50 72 6F 76 69 64 65 72 3E 30 3C 2F 65 70 32 3A 44 43 43 50 72 6F 76 69 64 65 72 3E 0A 09 09 3C 2F 65 70 32 3A 74 63 64 3E 0A 09 3C 2F 65 70 32 3A 63 66 67 64 61 74 61 6E 74 66 3E 0A 3C 2F 65 70 32 3A 6D 65 73 73 61 67 65 3E</RawOut>
+	<Version>0530</Version>
+	<MessageEncoding>SecurityExtensionsPresent</MessageEncoding>
+	<ServerAddress>153.46.253.2</ServerAddress>
+	<PublicKeyOwnerType>Acquirer</PublicKeyOwnerType>
+	<SenderType>ServiceCenter</SenderType>
+	<PublicKey>000000002502129901018003C96A64B78FB8991CBAC32AA8FB72114ACB94FFA31A06032B95FF783783AB35C16833B63278F2F82F3EE37BEEE2A06560CBA5CE1354EECD43BC90BE23951DC6A638C92BE4A92F9C274A70A68CCF877116BAC4BA05AD5CDD055DF47ED3F068261BEFE6E77C8C8F6206455A4B61258A48F996C91D31163E62B01EDFF14F82125541010001B77EDDB471D015622ADB2CC947E2DE61A48A2F22</PublicKey>
+	<ConnectionStatus>Disconnected</ConnectionStatus>
+	<CloseOnSend>true</CloseOnSend>
+	<AutoSec>false</AutoSec>
+	<FileName>C:\Daten\EP2Tester\configs\COI L ICP R68 Regression.xml</FileName>
 </MainWindowViewModel>
