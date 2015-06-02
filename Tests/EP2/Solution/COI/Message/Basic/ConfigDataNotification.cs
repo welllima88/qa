@@ -2,9 +2,8 @@ using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 using SIX.SCS.QA.Tests.EP2.Message.Elements;
-using SIX.SCS.QA.Tests.EP2.Setup;
 
-namespace SIX.SCS.QA.Tests.EP2.Message
+namespace SIX.SCS.QA.Tests.EP2.Message.Basic
 {
     [Ep2Message(Ep2MessageNames.ConfigDataNotification)]
     [Ep2Version("0600")]

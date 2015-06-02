@@ -5,6 +5,7 @@ using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 using SIX.SCS.QA.Tests.EP2.Message;
+using SIX.SCS.QA.Tests.EP2.Message.Basic;
 using SIX.SCS.QA.Tests.EP2.Test;
 
 namespace SIX.SCS.QA.Tests.EP2.Data
@@ -16,9 +17,9 @@ namespace SIX.SCS.QA.Tests.EP2.Data
         IHandleMessage<ErrorNotification>
 
     {
-        private readonly MessageObject _myService;
+        private readonly Laid _myService;
 
-        public LaidRequestHandler(MessageObject myService)
+        public LaidRequestHandler(Laid myService)
         {
             _myService = myService;
         }

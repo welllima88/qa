@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace SIX.SCS.QA.Tests.EP2.Data
+namespace SIX.SCS.QA.Tests.EP2.Message
 {
-    public class MessageObject
+    public class Laid
     {
         public string ConfDataObj { get; set; }
         public string ScId { get; set; }

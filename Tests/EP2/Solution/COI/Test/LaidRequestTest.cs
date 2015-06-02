@@ -3,8 +3,11 @@ using SIX.EP2.Client;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 using SIX.SCS.QA.Tests.EP2.Data;
+using SIX.SCS.QA.Tests.EP2.Data.Definitions;
 using SIX.SCS.QA.Tests.EP2.Message;
+using SIX.SCS.QA.Tests.EP2.Message.Basic;
 using SIX.SCS.QA.Tests.EP2.Setup;
+using Laid = SIX.SCS.QA.Tests.EP2.Message.Laid;
 
 namespace SIX.SCS.QA.Tests.EP2.Test
 {
@@ -20,38 +23,38 @@ namespace SIX.SCS.QA.Tests.EP2.Test
 
             _clientProtocol = ClientProtocolBuilder.ClientProtocolWith(messageMapper);
 
-            _theMessage = new MessageObject
+            _theLaidMessage = new Laid
             {
                 ConfDataObj = "LAID",
                 ScId = "8000000001"
             };
 
-            _handlerSessionHandler = new LaidRequestHandler(_theMessage);
+            _handlerSessionHandler = new LaidRequestHandler(_theLaidMessage);
             // _clientProtocol.WithSecurityProvider(new SecurityProvider());
         }
 
         private IRequestResponseClient _clientProtocol;
-        private MessageObject _theMessage;
+        private Laid _theLaidMessage;
         private LaidRequestHandler _handlerSessionHandler;
 
         [Test]
         [Category("SIX")]
         public void ResponseFromAcquirer02()
         {
-            _theMessage.AcqId = 2;
+            _theLaidMessage.AcqId = 2;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_theMessage.ListOfAid, Is.EquivalentTo(Laid.Six()));
+            Assert.That(_theLaidMessage.ListOfAid, Is.EquivalentTo(Data.Definitions.Laid.Six()));
         }
 
         [Test]
         [Category("Swisscard")]
         public void ResponseFromAcquirer25()
         {
-            _theMessage.AcqId = 25;
+            _theLaidMessage.AcqId = 25;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_theMessage.ListOfAid, Is.EquivalentTo(Laid.Swisscard()));
+            Assert.That(_theLaidMessage.ListOfAid, Is.EquivalentTo(Data.Definitions.Laid.Swisscard()));
         }
     }
 }
