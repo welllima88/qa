@@ -16,17 +16,17 @@ namespace Six.Scs.Test.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_post").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("283").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_post").Displayed);
+            Assert.That(BrandPortlet.Brand("283").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_multipay").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("332").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("361").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("363").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("811").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_multipay").Displayed);
+            Assert.That(BrandPortlet.Brand("332").Displayed);
+            Assert.That(BrandPortlet.Brand("361").Displayed);
+            Assert.That(BrandPortlet.Brand("363").Displayed);
+            Assert.That(BrandPortlet.Brand("811").Displayed);
 
-            Assert.IsTrue(BrandPortlet.Acquirer("acq_amexco").Displayed);
-            Assert.IsTrue(BrandPortlet.Brand("635").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_amexco").Displayed);
+            Assert.That(BrandPortlet.Brand("635").Displayed);
         }
 
         protected override void SetBrandDetails()

@@ -20,7 +20,7 @@ namespace Six.Scs.Test.View.Brand
                     .TextField().TypeText(value);
             }
             //Check date format at this point? -> NOOO! In test method is right place
-            //    Assert.IsTrue(Regex.IsMatch(WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
+            //    Assert.That(Regex.IsMatch(WebDriver.FindAdaptedElement(By.CssSelector("#ctl00_bodyContentPlaceHolder_dtpSetupDate")).TextBox().Text(), "[0-9]{2}.[0-9]{2}.[0-9]{4}"));
         }
 
         public static string Remark

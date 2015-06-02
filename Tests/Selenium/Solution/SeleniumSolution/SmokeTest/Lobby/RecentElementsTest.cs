@@ -20,7 +20,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void MostRecentContainer()
         {
-            Assert.IsTrue(RecentElements.Latest.Displayed);
+            Assert.That(RecentElements.Latest.Displayed);
         }
     }
 }

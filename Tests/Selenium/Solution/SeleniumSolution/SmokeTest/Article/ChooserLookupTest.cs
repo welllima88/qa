@@ -23,7 +23,7 @@ namespace Six.Scs.Test.Article
 
             CollectionAssert.Contains(ArticleChooser.FilteredArtikelList,
                 "davinci2 AUTONOM, TCP/IP (Internet)");
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() == 1);
+            Assert.That(ArticleChooser.FilteredArtikelList.Count() == 1);
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace Six.Scs.Test.Article
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 1);
+            Assert.That(ArticleChooser.FilteredArtikelList.Count() > 1);
         }
 
         [Test]
@@ -50,7 +50,7 @@ namespace Six.Scs.Test.Article
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
+            Assert.That(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace Six.Scs.Test.Article
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Any());
+            Assert.That(ArticleChooser.FilteredArtikelList.Any());
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace Six.Scs.Test.Article
                 StringAssert.IsMatch(pattern, articleEntry);
             }
 
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
+            Assert.That(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
 
         [Test]
@@ -91,7 +91,7 @@ namespace Six.Scs.Test.Article
             {
                 StringAssert.IsMatch(pattern, articleEntry);
             }
-            Assert.IsTrue(ArticleChooser.FilteredArtikelList.Count() > 2);
+            Assert.That(ArticleChooser.FilteredArtikelList.Count() > 2);
         }
     }
 }

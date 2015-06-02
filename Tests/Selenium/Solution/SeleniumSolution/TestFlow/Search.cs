@@ -9,7 +9,7 @@ namespace Six.Scs.Test
         public static void CustomerCanBeFoundByCustomerNumber(string customerId)
         {
             Workflow.Search.Find(customerId);
-            new SearchResult(Result.Customer).First().Click();
+            SearchResult.First(Result.Customer).Click();
 
             Assert.AreEqual(customerId, View.Customer.View.CustomerNumber);
         }
@@ -17,7 +17,7 @@ namespace Six.Scs.Test
         public static void LocationCanBeFoundByLocationName(string locationName)
         {
             Workflow.Search.Find(locationName);
-            new SearchResult(Result.Location).First().Click();
+            SearchResult.First(Result.Location).Click();
 
             Assert.AreEqual(locationName, View.Location.View.CompanyName);
         }
@@ -25,7 +25,7 @@ namespace Six.Scs.Test
         public static void CustomerCanBeFoundByCustomerName(string customerName)
         {
             Workflow.Search.Find(customerName);
-            new SearchResult(Result.Customer).First().Click();
+            SearchResult.First(Result.Customer).Click();
 
             Assert.AreEqual(customerName, View.Customer.View.CustomerName);
         }
@@ -33,7 +33,7 @@ namespace Six.Scs.Test
         public static void TerminalCanBeFoundById(string terminalId)
         {
             Workflow.Search.Find(terminalId);
-            new SearchResult(Result.Terminal).First().Click();
+            SearchResult.First(Result.Terminal).Click();
 
             Assert.AreEqual(terminalId, TerminalInfo.TerminalId);
         }
@@ -41,7 +41,7 @@ namespace Six.Scs.Test
         public static void UserCanBeFoundByCustomerName(string userName)
         {
             Workflow.Search.Find(userName);
-            new SearchResult(Result.User).First().Click();
+            SearchResult.First(Result.User).Click();
 
             Assert.AreEqual(userName, View.User.View.UserName);
         }
@@ -49,7 +49,7 @@ namespace Six.Scs.Test
         public static void MpdCanBeFoundById(string id)
         {
             Workflow.Search.Find(id);
-            new SearchResult(Result.Mpd).First().Click();
+            SearchResult.First(Result.Mpd).Click();
 
             Assert.AreEqual(id, View.Mpd.View.Id);
         }
@@ -57,7 +57,7 @@ namespace Six.Scs.Test
         public static void SimcardBySimCardNumber(string simCardNumber)
         {
             Workflow.Search.Find(simCardNumber);
-            new SearchResult(Result.SimCard).First().Click();
+            SearchResult.First(Result.SimCard).Click();
 
             Assert.AreEqual(simCardNumber, View.Administration.SimCard.View.SimCardNumber);
         }
@@ -65,7 +65,7 @@ namespace Six.Scs.Test
         public static void TicketCanBeFoundById(string ticketId)
         {
             Workflow.Search.Find(ticketId);
-            new SearchResult(Result.Ticket).First().Click();
+            SearchResult.First(Result.Ticket).Click();
 
             StringAssert.Contains(ticketId, View.Tickets.Trouble.View.Header);
         }
@@ -73,7 +73,7 @@ namespace Six.Scs.Test
         public static void BillingAddressCanBeFoundByName(string companyName)
         {
             Workflow.Search.Find(companyName);
-            new SearchResult(Result.BillingAddress).First().Click();
+            SearchResult.First(Result.BillingAddress).Click();
 
             StringAssert.Contains(companyName, View.Location.BillingAddress.View.CompanyName);
         }

@@ -82,7 +82,7 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void MassMutationCustomerCreate()
         {
-            Assert.IsTrue(MassMutationMenu.CustomerCreate.Enabled);
+            Assert.That(MassMutationMenu.CustomerCreate.Enabled);
         }
 
         [Test]
@@ -96,21 +96,21 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void MassMutationTerminalCreate()
         {
-            Assert.IsTrue(MassMutationMenu.TerminalCreate.Enabled);
+            Assert.That(MassMutationMenu.TerminalCreate.Enabled);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MyIncidents()
         {
-            Assert.IsTrue(LobbyMenu.MyIncidents.Enabled);
+            Assert.That(LobbyMenu.MyIncidents.Enabled);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void MyTeams()
         {
-            Assert.IsTrue(LobbyMenu.MyTeams.Enabled);
+            Assert.That(LobbyMenu.MyTeams.Enabled);
         }
 
         [Test]

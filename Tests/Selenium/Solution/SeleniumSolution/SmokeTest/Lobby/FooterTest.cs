@@ -20,14 +20,14 @@ namespace Six.Scs.Test.Lobby
         [Category("LobbyCheck")]
         public void Copyright()
         {
-            Assert.IsTrue(Footer.Copyright.Displayed);
+            Assert.That(Footer.Copyright.Displayed);
         }
 
         [Test]
         [Category("LobbyCheck")]
         public void Disclaimer()
         {
-            Assert.IsTrue(Footer.Disclaimer.Displayed);
+            Assert.That(Footer.Disclaimer.Displayed);
         }
     }
 }

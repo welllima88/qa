@@ -87,7 +87,7 @@ namespace Six.Scs.Test
             Open(terminal);
             var info = Workflow.Terminal.Quit();
             StringAssert.Contains("Gekündigt", TerminalInfo.Status);
-            Assert.IsTrue(TerminalInfo.Cancelled.Displayed);
+            Assert.That(TerminalInfo.Cancelled.Displayed);
             StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
             StringAssert.Contains(info, BusinessViewpoint.Status);
         }

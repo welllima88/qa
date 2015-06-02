@@ -96,8 +96,8 @@ namespace Six.Scs.Test
             Open(user);
             Workflow.User.Delete();
             Workflow.Search.Find(user.UserName);
-            Assert.That(new SearchResult(Result.User).Result(), Is.Not.Null);
-            Assert.That(new SearchResult(Result.User).Result(), Is.Empty);
+            Assert.That(SearchResult.Result(Result.User), Is.Not.Null);
+            Assert.That(SearchResult.Result(Result.User), Is.Empty);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Six.Scs.Test
 
         public static void Check(string infotext)
         {
-            Assert.IsTrue(ListView.List.Contains(infotext));
+            Assert.That(ListView.List.Contains(infotext));
         }
     }
 }

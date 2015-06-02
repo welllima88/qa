@@ -19,7 +19,7 @@ namespace Six.Scs.Test.SerialNumberImport
         [Category("SerialNumberManagement")]
         public void ImportButton()
         {
-            Assert.IsTrue(Import.ImportButton.Displayed);
+            Assert.That(Import.ImportButton.Displayed);
         }
 
         [Test]

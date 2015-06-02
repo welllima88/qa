@@ -1,16 +1,20 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Test.Selenium.WebDriver;
+using Six.Scs.Test.View.Search;
 
 namespace Six.Scs.Test.Administration
 {
     [TestFixture]
+    [Category("TerminalType"),Category("Search")]
     public class TerminalTypeTest
     {
         [TestFixtureSetUp]
         public void Navigate()
         {
-            TestDirector.Navigate("TerminalType?TerminalTypeId=1025");
+            //TestDirector.Navigate("TerminalType?TerminalTypeId=1025");
+            Workflow.Search.Find("1025");
+            SearchResult.First(Result.TerminalType).Click();
+
             _originTerminalType = TerminalType.View();
 
             _terminalType = Model.Factory.TerminalType.XentissimoMod();

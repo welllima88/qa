@@ -22,7 +22,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
 
         protected override void CheckInfos()
         {
-            Assert.IsTrue(ArticleChange.Change.Displayed);
+            Assert.That(ArticleChange.Change.Displayed);
         }
     }
 }
