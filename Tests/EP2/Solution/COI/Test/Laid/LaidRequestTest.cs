@@ -55,7 +55,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test.Laid
         }
 
         [Test]
-        [Category("Swisscard")]
+        [Category("Invalid")]
         public void ResponseFromAcquirerIvalid()
         {
             _requestMsg.AcqID = -78025;
@@ -66,7 +66,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test.Laid
         }
 
         [Test]
-        [Category("Swisscard")]
+        [Category("Unknown")]
         public void ResponseFromAcquirerUnknown()
         {
             _requestMsg.AcqID = 78025;
