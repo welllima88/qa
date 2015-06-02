@@ -2,12 +2,11 @@
 using SIX.EP2.Client;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Data.Definitions;
 using SIX.SCS.QA.Tests.EP2.Message.Basic;
 using SIX.SCS.QA.Tests.EP2.Message.Handler;
 using SIX.SCS.QA.Tests.EP2.Setup;
 
-namespace SIX.SCS.QA.Tests.EP2.Test
+namespace SIX.SCS.QA.Tests.EP2.Test.Laid
 {
     [TestFixture]
     [Category("COI"), Category("EP2"), Category("LAID")]
@@ -42,7 +41,7 @@ namespace SIX.SCS.QA.Tests.EP2.Test
             _requestMsg.AcqID = 2;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_handlerSessionHandler.ListOfAid.LAID, Is.EquivalentTo(Laid.Six()));
+            Assert.That(_handlerSessionHandler.ListOfAid.LAID, Is.EquivalentTo(Data.Definitions.Laid.Six()));
         }
 
         [Test]
@@ -52,7 +51,29 @@ namespace SIX.SCS.QA.Tests.EP2.Test
             _requestMsg.AcqID = 25;
             _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
 
-            Assert.That(_handlerSessionHandler.ListOfAid.LAID, Is.EquivalentTo(Laid.Swisscard()));
+            Assert.That(_handlerSessionHandler.ListOfAid.LAID, Is.EquivalentTo(Data.Definitions.Laid.Swisscard()));
+        }
+
+        [Test]
+        [Category("Swisscard")]
+        public void ResponseFromAcquirerIvalid()
+        {
+            _requestMsg.AcqID = -78025;
+            _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
+
+            Assert.That(_handlerSessionHandler.Error.ErrorCode, Is.EqualTo(1));
+            Assert.That(_handlerSessionHandler.Error.ErrorDescription, Is.EquivalentTo("unknown acqid"));
+        }
+
+        [Test]
+        [Category("Swisscard")]
+        public void ResponseFromAcquirerUnknown()
+        {
+            _requestMsg.AcqID = 78025;
+            _clientProtocol.SendWith(Communication.Dev(), _handlerSessionHandler);
+
+            Assert.That(_handlerSessionHandler.Error.ErrorCode, Is.EqualTo(1));
+            Assert.That(_handlerSessionHandler.Error.ErrorDescription, Is.EquivalentTo("unknown acqid"));
         }
     }
 }

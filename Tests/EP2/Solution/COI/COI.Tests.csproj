@@ -79,7 +79,7 @@
     <Compile Include="Data\Definitions\Laid.cs" />
     <Compile Include="Message\Basic\IConfigDataObject.cs" />
     <Compile Include="Setup\Communication.cs" />
-    <Compile Include="Test\LaidRequestTest.cs" />
+    <Compile Include="Test\Laid\LaidRequestTest.cs" />
     <Compile Include="Message\Handler\LaidRequestHandler.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
@@ -92,7 +92,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Test\Ad\" />
+    <Folder Include="Test\Tcd\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Infos.txt" />
   </ItemGroup>
