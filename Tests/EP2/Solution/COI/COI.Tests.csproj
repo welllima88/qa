@@ -6,7 +6,7 @@
     <ProjectGuid>{C828CF02-3114-4E87-A42C-A6B157D361C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.QA.Tests.EP2</RootNamespace>
+    <RootNamespace>Six.Scs.Ep2.Coi</RootNamespace>
     <AssemblyName>COI.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -74,30 +74,29 @@
   <ItemGroup>
     <Compile Include="Data\Definitions\Aisd.cs" />
     <Compile Include="Message\Elements\Ad.cs" />
-    <Compile Include="Message\Basic\ConfigDataNotification.cs" />
-    <Compile Include="Message\Basic\ConfigDataRequest.cs" />
-    <Compile Include="Message\Basic\ConfigDataResponse.cs" />
+    <Compile Include="Message\ConfigDataNotification.cs" />
+    <Compile Include="Message\ConfigDataRequest.cs" />
+    <Compile Include="Message\ConfigDataResponse.cs" />
     <Compile Include="Data\Definitions\Laid.cs" />
-    <Compile Include="Message\Basic\IConfigDataObject.cs" />
-    <Compile Include="Setup\Communication.cs" />
     <Compile Include="Message\Handler\AisdRequestHandler.cs" />
+    <Compile Include="Message\IConfigDataObject.cs" />
+    <Compile Include="Message\Handler\NotificationHandler.cs" />
+    <Compile Include="Common\Communication.cs" />
+    <Compile Include="Test\AisdRequestTest.cs" />
+    <Compile Include="Test\LaidRequestTest.cs" />
     <Compile Include="Message\Handler\LaidRequestHandler.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
     <Compile Include="Common\SecurityProvider.cs" />
-    <Compile Include="Test\CoiTest.cs" />
     <Compile Include="Message\Elements\Tcd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Message\Laid\Response.cs" />
+    <Compile Include="Test\CoiRegressionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Test\Ad\" />
-    <Folder Include="Test\Regression\" />
-    <Folder Include="Test\Tcd\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Infos.txt" />
   </ItemGroup>

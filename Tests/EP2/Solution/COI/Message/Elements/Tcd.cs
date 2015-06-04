@@ -1,9 +1,8 @@
 using System;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
-using SIX.SCS.QA.Tests.EP2.Message.Basic;
 
-namespace SIX.SCS.QA.Tests.EP2.Message.Elements
+namespace Six.Scs.Ep2.Coi.Message.Elements
 {
     [Ep2DataElement(TagName = "tcd")]
     public class Tcd : IConfigDataObject

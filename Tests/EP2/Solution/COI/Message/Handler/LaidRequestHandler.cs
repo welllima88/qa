@@ -1,12 +1,10 @@
 ﻿using System;
-using NUnit.Framework;
+using Six.Scs.Ep2.Coi.Message.Elements;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Message.Basic;
-using SIX.SCS.QA.Tests.EP2.Message.Elements;
 
-namespace SIX.SCS.QA.Tests.EP2.Message.Handler
+namespace Six.Scs.Ep2.Coi.Message.Handler
 {
     public class LaidRequestHandler :
         IClientSessionHandler,
@@ -15,13 +13,13 @@ namespace SIX.SCS.QA.Tests.EP2.Message.Handler
         IHandleMessage<ErrorNotification>
 
     {
-        private readonly ConfigDataRequest _rq;
-        public ListAID ListOfAid;
+        private readonly ConfigDataRequest _request;
         public ErrorNotification Error;
+        public ListAID ListOfAid;
 
-        public LaidRequestHandler(ConfigDataRequest rq)
+        public LaidRequestHandler(ConfigDataRequest request)
         {
-            _rq = rq;
+            _request = request;
         }
 
         public void EnrichErrorMessage(ErrorNotification errorNotification, Exception ex)
@@ -35,7 +33,7 @@ namespace SIX.SCS.QA.Tests.EP2.Message.Handler
 
         public IMessage Respond(ConfigDataResponse response)
         {
-            ListOfAid = response.ListAID;
+            ListOfAid = response.ListAid;
             return response;
         }
 
@@ -48,9 +46,9 @@ namespace SIX.SCS.QA.Tests.EP2.Message.Handler
 
         public void FirstMessage(ConfigDataRequest request)
         {
-            request.ConfDataObj = _rq.ConfDataObj;
-            request.SCID = _rq.SCID;
-            request.AcqID = _rq.AcqID;
+            request.ConfDataObj = _request.ConfDataObj;
+            request.ScId = _request.ScId;
+            request.AcqId = _request.AcqId;
         }
     }
 }
