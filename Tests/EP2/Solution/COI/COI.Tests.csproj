@@ -72,6 +72,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Data\Definitions\Aisd.cs" />
     <Compile Include="Message\Elements\Ad.cs" />
     <Compile Include="Message\Basic\ConfigDataNotification.cs" />
     <Compile Include="Message\Basic\ConfigDataRequest.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="Data\Definitions\Laid.cs" />
     <Compile Include="Message\Basic\IConfigDataObject.cs" />
     <Compile Include="Setup\Communication.cs" />
-    <Compile Include="Test\Laid\LaidRequestTest.cs" />
+    <Compile Include="Message\Handler\AisdRequestHandler.cs" />
     <Compile Include="Message\Handler\LaidRequestHandler.cs" />
     <Compile Include="Message\Elements\ListAID.cs" />
     <Compile Include="Setup\MyHandler.cs" />
