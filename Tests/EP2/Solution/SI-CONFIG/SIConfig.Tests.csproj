@@ -6,7 +6,7 @@
     <ProjectGuid>{1EEA35E4-073B-4393-A3A7-B69963178449}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIX.SCS.QA.Tests.EP2.SICONFIG</RootNamespace>
+    <RootNamespace>Six.Scs.Ep2.SI.Config</RootNamespace>
     <AssemblyName>SIConfig.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -73,10 +73,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Messages\Containers\AcqData.cs" />
-    <Compile Include="Messages\Containers\aisd.cs" />
+    <Compile Include="Messages\Containers\Aisd.cs" />
     <Compile Include="Messages\Containers\CommAddr.cs" />
     <Compile Include="Messages\Containers\CommAddrIp.cs" />
     <Compile Include="Messages\Containers\CtlessTrmCapPerKnl.cs" />
+    <Compile Include="Messages\Containers\CustomPrefixes.cs" />
     <Compile Include="Messages\Containers\MarkupConf.cs" />
     <Compile Include="Messages\Containers\Services\AIDBasedService.cs" />
     <Compile Include="Messages\Containers\Services\SetOfTaxfreeServiceProviders.cs" />
@@ -112,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{167e7615-b2de-4c65-9532-1752c810fc99}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Choose>
