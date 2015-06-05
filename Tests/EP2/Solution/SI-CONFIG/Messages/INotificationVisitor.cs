@@ -1,19 +1,17 @@
-using SIX.SCS.EP2.SIConfig.Host.Messages.Containers;
-using SIX.SCS.EP2.SIConfig.Host.Messages.MsgOut;
+using Six.Scs.Ep2.SI.Config.Messages.Containers;
+using Six.Scs.Ep2.SI.Config.Messages.MsgOut;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages
+namespace Six.Scs.Ep2.SI.Config.Messages
 {
-	public interface IConfigNotificationVisitor
-	{
-		void Visit(ConfigDataNotificationV0200 ntf);
-		void Visit(ConfigDataNotificationV0600 ntf);
-		void Visit(ConfigDataNotificationV0500 ntf);
-		void Visit(ConfigDataNotificationV0531 ntf);
-		
-		void Visit(TcdV0200 ntf);
-		void Visit(TcdV0500 ntf);
-		void Visit(TcdV0531 ntf);
-		void Visit(TcdV0600 ntf);
-		
-	}
+    public interface IConfigNotificationVisitor
+    {
+        void Visit(ConfigDataNotificationV0200 ntf);
+        void Visit(ConfigDataNotificationV0600 ntf);
+        void Visit(ConfigDataNotificationV0500 ntf);
+        void Visit(ConfigDataNotificationV0531 ntf);
+        void Visit(TcdV0200 ntf);
+        void Visit(TcdV0500 ntf);
+        void Visit(TcdV0531 ntf);
+        void Visit(TcdV0600 ntf);
+    }
 }

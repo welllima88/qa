@@ -1,7 +1,6 @@
-using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers.Services
+namespace Six.Scs.Ep2.SI.Config.Messages.Containers.Services
 {
     public class TFSService
     {
@@ -10,8 +9,7 @@ namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers.Services
             SetOfTaxFreeServiceProviders = new SetOfTaxfreeServiceProviders();
         }
 
-        [Ep2DataElement(TagPrefix = CustomPrefixes.SixPrefix, TagName = "SetOfTaxfreeServiceProvider")]
+        [Ep2DataElement(TagPrefix = CustomPrefixes.Six, TagName = "SetOfTaxfreeServiceProvider")]
         public SetOfTaxfreeServiceProviders SetOfTaxFreeServiceProviders { get; set; }
-        
     }
 }
