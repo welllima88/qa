@@ -1,33 +1,17 @@
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers
+namespace Six.Scs.Ep2.SI.Config.Messages.Containers
 {
+    public class Aisd
+    {
+        [Ep2DataElement(TagName = "AcqID", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
+        public long AcqID { get; set; }
 
-	public static class CustomPrefixes
-	{
-		public const string SixPrefix = "TKC";
-		public const string SixNs = "http://www.six-card-solutions.com";
-	}
+        [Ep2DataElement(TagName = "AcqInitPubKey")]
+        public string AcqInitPubKey { get; set; }
 
-	public class aisd
-	{
-		[Ep2DataElement(TagName = "AcqID", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
-		public long AcqID { get; set; }
-
-		[Ep2DataElement(TagName = "AcqInitPubKey",  DataType = Ep2DataType.b)]
-		public byte[] AcqInitPubKey { get; set; }
-
-		[Ep2DataElement(TagName = "CommAddrAcqInitSrv")]
-		public CommAddr CommAddrAcqInitSrv { get; set; }
-
-		[Ep2DataElement(TagName = "MarkupConf", TagPrefix = CustomPrefixes.SixPrefix, IsMandatory = false)]
-		public MarkupConf MarkupConf { get; set; }
-
-		[Ep2DataElement(TagName = "FOTrmId", TagPrefix = CustomPrefixes.SixPrefix)]
-		public string FOTrmId { get; set; }
-
-		[Ep2DataElement(TagName = "CashSamID", TagPrefix = CustomPrefixes.SixPrefix)]
-		public int? CashSamId { get; set; }
-	}
+        [Ep2DataElement(TagName = "CommAddrAcqInitSrv")]
+        public CommAddr CommAddrAcqInitSrv { get; set; }
+    }
 }
