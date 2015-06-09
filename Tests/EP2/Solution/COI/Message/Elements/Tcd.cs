@@ -127,5 +127,8 @@ namespace Six.Scs.Ep2.Coi.Message.Elements
 
         [Ep2DataElement(TagName = "DCCProvider", TagPrefix = "ep2")]
         public int? DccProviderId { get; set; }
+
+        [Ep2DataElement(TagName = "ListAID", TagPrefix = "ep2")]
+        public ListAID ListAID { set; get; }
     }
 }
