@@ -1,4 +1,4 @@
-namespace SIX.SCS.QA.Tests.EP2.Message.Basic
+namespace Six.Scs.Ep2.Coi.Message
 {
     public interface IConfigDataObject
     {

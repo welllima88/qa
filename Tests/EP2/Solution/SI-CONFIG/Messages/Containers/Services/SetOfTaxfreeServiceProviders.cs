@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers.Services
+namespace Six.Scs.Ep2.SI.Config.Messages.Containers.Services
 {
     public class SetOfTaxfreeServiceProviders
     {
@@ -10,7 +10,7 @@ namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers.Services
             TaxFreeServiceProviders = new List<TaxFreeServiceProvider>();
         }
 
-        [Ep2DataElement(TagPrefix = CustomPrefixes.SixPrefix, TagName = "TaxFreeServiceProvider")]
+        [Ep2DataElement(TagPrefix = CustomPrefixes.Six, TagName = "TaxFreeServiceProvider")]
         public IList<TaxFreeServiceProvider> TaxFreeServiceProviders { get; set; }
     }
 }

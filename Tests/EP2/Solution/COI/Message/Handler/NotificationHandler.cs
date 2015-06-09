@@ -1,23 +1,21 @@
 ﻿using System;
-using Six.Scs.Ep2.Coi.Message.Elements;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 
 namespace Six.Scs.Ep2.Coi.Message.Handler
 {
-    public class LaidRequestHandler :
+    public class NotificationHandler :
         IClientSessionHandler,
-        IStartWith<ConfigDataRequest>,
+        IStartWith<ConfigDataNotification>,
         IHandleMessage<ConfigDataResponse>,
         IHandleMessage<ErrorNotification>
 
     {
-        private readonly ConfigDataRequest _request;
+        private readonly ConfigDataNotification _request;
         public ErrorNotification Error;
-        public ListAID ListOfAid;
 
-        public LaidRequestHandler(ConfigDataRequest request)
+        public NotificationHandler(ConfigDataNotification request)
         {
             _request = request;
         }
@@ -33,7 +31,6 @@ namespace Six.Scs.Ep2.Coi.Message.Handler
 
         public IMessage Respond(ConfigDataResponse response)
         {
-            ListOfAid = response.ListAid;
             return response;
         }
 
@@ -44,11 +41,13 @@ namespace Six.Scs.Ep2.Coi.Message.Handler
             return err;
         }
 
-        public void FirstMessage(ConfigDataRequest request)
+        public void FirstMessage(ConfigDataNotification request)
         {
-            request.ConfDataObj = _request.ConfDataObj;
+            request.DataProcCmd = _request.DataProcCmd;
             request.ScId = _request.ScId;
             request.AcqId = _request.AcqId;
+            request.Ad = _request.Ad;
+            request.Tcd = _request.Tcd;
         }
     }
 }

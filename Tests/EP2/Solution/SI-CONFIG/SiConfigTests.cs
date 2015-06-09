@@ -2,6 +2,9 @@
 using log4net;
 using Moq;
 using NUnit.Framework;
+using Six.Scs.Ep2.SI.Config.Messages.MsgIn;
+using Six.Scs.Ep2.SI.Config.Messages.MsgOut;
+using Six.Scs.Ep2.Test.Communication;
 using SIX.EP2.Client;
 using SIX.EP2.Core.Comm;
 using SIX.EP2.Core.ContentHandling;
@@ -11,10 +14,8 @@ using SIX.EP2.Core.Header;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 using SIX.EP2.Core.Util;
-using SIX.SCS.EP2.SIConfig.Host.Messages.MsgIn;
-using SIX.SCS.EP2.SIConfig.Host.Messages.MsgOut;
 
-namespace SIX.SCS.QA.Tests.EP2.SICONFIG
+namespace Six.Scs.Ep2.SI.Config
 {
     [TestFixture]
     public class SiConfigTests
@@ -33,15 +34,7 @@ namespace SIX.SCS.QA.Tests.EP2.SICONFIG
 
             _securityInfoProvider.SetupGet(x => x.PublicKeyOwner).Returns(PublicKeyOwnerType.ServiceCenter);
 
-            _comConfig = new ComConfig
-            {
-                Port = remotePort,
-                ServerAddress = remoteHost,
-                Version = "0520",
-                ConnectionTimeout = 4,
-                ReceiveTimeout = 30000,
-                SendTimeout = 30000
-            };
+            _comConfig = SiConfig.Dev();
 
             _requestResponseClientProtocol =
                 new RequestResponseClientRequestResponseProtocol(new ClientFrameAdapter(new PullComClient()),
@@ -64,10 +57,6 @@ namespace SIX.SCS.QA.Tests.EP2.SICONFIG
 
         private readonly string _pubkey =
             "800000000101121001018003C4213D101DE8E6FD8259730711AB377A1BF0EBC1E66578FBC1497E0F20C79BC858FFAA2A139B98B6D234CB2DAD25A193AE9EF056824736396DA2F9314AEA525407C80CA69C86E975F8ED5CC2E4BAFFE8D78D22B25E398A50242AAC3C22A6FB69696C959CED0EED04D5A0CB29FCFF160424D855DD6B886C24196485DD6DCD8F83010001373BFDC75FF0D8A30893E002A798B5BDB89D9C66";
-
-        //        ceptest
-        private readonly string remoteHost = "mdzhwcweb01"; //"localhost";
-        private readonly int remotePort = 8115;
 
         [Category("Integration")]
         [Test]
@@ -401,10 +390,8 @@ namespace SIX.SCS.QA.Tests.EP2.SICONFIG
             _requestResponseClientProtocol.SendWith(_comConfig, _testHandler.Object);
 
             resetTrmNotificationHandler.Verify(x => x.Respond(It.IsAny<ResetTerminalNotification>()), Times.Once());
-            //            dataNotificationHandler.Verify(
-            //                x =>
-            //                x.Response(It.Is<ConfigDataNotification>(n => n.Aisd.CommAddrAcqInitSrv.CommIpAddr == "153.46.226.2" && n.tcd.MaxFinAdvQueueSize == 20)),
-            //                Times.Once());
+
+            // do not acknoledge the last message because it will set the HasChanges value to zero
         }
 
         [Category("Integration")]

@@ -1,12 +1,12 @@
 ﻿using System;
-using Six.Scs.Ep2.Coi.Message.Elements;
+using Six.Scs.Ep2.SI.Config.Messages.Containers;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
 
 namespace Six.Scs.Ep2.Coi.Message.Handler
 {
-    public class LaidRequestHandler :
+    public class AisdRequestHandler :
         IClientSessionHandler,
         IStartWith<ConfigDataRequest>,
         IHandleMessage<ConfigDataResponse>,
@@ -14,10 +14,10 @@ namespace Six.Scs.Ep2.Coi.Message.Handler
 
     {
         private readonly ConfigDataRequest _request;
+        public Aisd Aisd;
         public ErrorNotification Error;
-        public ListAID ListOfAid;
 
-        public LaidRequestHandler(ConfigDataRequest request)
+        public AisdRequestHandler(ConfigDataRequest request)
         {
             _request = request;
         }
@@ -33,7 +33,7 @@ namespace Six.Scs.Ep2.Coi.Message.Handler
 
         public IMessage Respond(ConfigDataResponse response)
         {
-            ListOfAid = response.ListAid;
+            Aisd = response.Aisd;
             return response;
         }
 
