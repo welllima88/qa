@@ -96,7 +96,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SI-CONFIG\SIConfig.Tests.csproj">
+      <Project>{1eea35e4-073b-4393-a3a7-b69963178449}</Project>
+      <Name>SIConfig.Tests</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Infos.txt" />
   </ItemGroup>
