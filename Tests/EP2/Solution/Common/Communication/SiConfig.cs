@@ -1,16 +1,16 @@
 using SIX.EP2.Core.Comm;
 
-namespace SIX.SCS.QA.Tests.EP2.Setup
+namespace Six.Scs.Ep2.Test.Communication
 {
-    public class Communication
+    public class SiConfig
     {
         public static ComConfig Dev()
         {
             return new ComConfig
             {
-                Port = 2253,
+                Port = 8115,
                 ServerAddress = "mdzhwcweb01",
-                Version = "0600",
+                Version = "0520",
                 ConnectionTimeout = 4,
                 ReceiveTimeout = 30000,
                 SendTimeout = 30000

@@ -2,7 +2,7 @@ using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.ContentHandling.Common;
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.MsgIn
+namespace Six.Scs.Ep2.SI.Config.Messages.MsgIn
 {
     [Ep2Version("0201")]
     [Ep2Version("0300")]
@@ -18,11 +18,12 @@ namespace SIX.SCS.EP2.SIConfig.Host.Messages.MsgIn
     [Ep2Version("0600")]
     public abstract class BaseSIRequest : IMessageWithNum
     {
-        public int? MsgNum { get; set; }
         [Ep2DataElement(TagName = "TrmID", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
         public string TrmID { get; set; }
 
         [Ep2DataElement(TagName = "SCID", TagPrefix = "ep2", DataType = Ep2DataType.n, IsMandatory = true)]
         public long SCID { get; set; }
+
+        public int? MsgNum { get; set; }
     }
 }

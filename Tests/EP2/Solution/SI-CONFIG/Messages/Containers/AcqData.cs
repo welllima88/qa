@@ -1,10 +1,10 @@
 using SIX.EP2.Core.ContentHandling.Serialization;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.Containers
+namespace Six.Scs.Ep2.SI.Config.Messages.Containers
 {
-	public class AcqData
-	{
-		[Ep2DataElement(TagName = "AcqID", TagPrefix = "ep2")]
-		public string AcqID { get; set; }
-	}
+    public class AcqData
+    {
+        [Ep2DataElement(TagName = "AcqID", TagPrefix = "ep2")]
+        public string AcqID { get; set; }
+    }
 }

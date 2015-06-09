@@ -33,6 +33,7 @@ namespace Six.Scs.Test.Terminal
         public void JobId()
         {
             Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
+            Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.EqualTo("0"));
         }
 
         [Test]

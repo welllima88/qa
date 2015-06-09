@@ -1,9 +1,9 @@
 using System.Collections.Generic;
+using Six.Scs.Ep2.SI.Config.Messages.Containers;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.ContentHandling.Serialization;
-using SIX.SCS.EP2.SIConfig.Host.Messages.Containers;
 
-namespace SIX.SCS.EP2.SIConfig.Host.Messages.MsgIn
+namespace Six.Scs.Ep2.SI.Config.Messages.MsgIn
 {
     [Ep2Message(Ep2MessageNames.ConfigDataResponse)]
     public class ConfigDataResponse : BaseSIRequest, IamSIMessage

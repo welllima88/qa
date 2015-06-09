@@ -1,8 +1,8 @@
 ﻿using SIX.EP2.Core.Header;
 
-namespace Common
+namespace Six.Scs.Ep2.Test
 {
-    public class ServiceCenter: IServiceCenter
+    public class ServiceCenter : IServiceCenter
 
     {
         public string ComponentSecret = "504237B4252ACAE353DF963151DE3054"; // SIX (Acq-Key?? -SCS?

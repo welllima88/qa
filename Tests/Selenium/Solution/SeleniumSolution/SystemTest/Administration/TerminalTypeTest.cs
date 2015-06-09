@@ -1,11 +1,10 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Six.Scs.Test.View.Search;
 
 namespace Six.Scs.Test.Administration
 {
     [TestFixture]
-    [Category("TerminalType"),Category("Search")]
+    [Category("TerminalType"), Category("Search")]
     public class TerminalTypeTest
     {
         [TestFixtureSetUp]

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SIX.SCS.QA.Tests.EP2.Message.Laid
+namespace Six.Scs.Ep2.Coi.Message.Laid
 {
     public class Response
     {

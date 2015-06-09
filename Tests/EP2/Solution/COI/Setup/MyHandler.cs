@@ -1,11 +1,10 @@
 ﻿using System;
+using Six.Scs.Ep2.Coi.Message;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;
-using SIX.SCS.QA.Tests.EP2.Message;
-using SIX.SCS.QA.Tests.EP2.Message.Basic;
 
-namespace SIX.SCS.QA.Tests.EP2.Setup
+namespace Six.Scs.Ep2.Coi.Setup
 {
     public class MyHandler :
         IClientSessionHandler,
@@ -36,8 +35,8 @@ namespace SIX.SCS.QA.Tests.EP2.Setup
 
         public void FirstMessage(ConfigDataNotification msg)
         {
-            msg.AcqID = "3";
-            msg.SCID = "8000000001";
+            msg.AcqId = "3";
+            msg.ScId = "8000000001";
         }
     }
 }
