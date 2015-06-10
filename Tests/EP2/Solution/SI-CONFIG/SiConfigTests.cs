@@ -60,7 +60,6 @@ namespace Six.Scs.Ep2.SI.Config
 
         [Category("Integration")]
         [Test]
-        [TestCase]
         public void Given_DoCatchCOnfig()
         {
             _securityInfoProvider.SetupGet(x => x.SenderIdentifier).Returns(_trmWithCfgNtf);
