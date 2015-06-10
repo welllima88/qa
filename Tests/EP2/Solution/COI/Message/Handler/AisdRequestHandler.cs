@@ -1,5 +1,5 @@
 ﻿using System;
-using Six.Scs.Ep2.SI.Config.Messages.Containers;
+using Six.Scs.Ep2.Coi.Message.Elements;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.MessageHandling;
 using SIX.EP2.Core.Protocol;

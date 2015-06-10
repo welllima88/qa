@@ -2,6 +2,7 @@ using Six.Scs.Ep2.Coi.Message.Elements;
 using Six.Scs.Ep2.SI.Config.Messages.Containers;
 using SIX.EP2.Core.ContentHandling;
 using SIX.EP2.Core.ContentHandling.Serialization;
+using Aisd = Six.Scs.Ep2.Coi.Message.Elements.Aisd;
 
 namespace Six.Scs.Ep2.Coi.Message
 {

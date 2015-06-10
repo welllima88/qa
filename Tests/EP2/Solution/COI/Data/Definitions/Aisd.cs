@@ -11,7 +11,7 @@ namespace Six.Scs.Ep2.Coi.Data.Definitions
 
         public static object Swisscard()
         {
-            return new SI.Config.Messages.Containers.Aisd
+            return new Message.Elements.Aisd
             {
                 AcqID = 25,
                 AcqInitPubKey =
