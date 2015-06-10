@@ -1,15 +1,13 @@
-using System;
-
 namespace Six.Scs.Ep2.Coi.Data.Definitions
 {
     public static class Aisd
     {
-        public static object Six()
+        public static Message.Elements.Aisd Six()
         {
             throw new NotImplementedException();
         }
 
-        public static object Swisscard()
+        public static Message.Elements.Aisd Swisscard()
         {
             return new Message.Elements.Aisd
             {
