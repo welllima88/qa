@@ -78,6 +78,7 @@
     <Compile Include="Message\ConfigDataRequest.cs" />
     <Compile Include="Message\ConfigDataResponse.cs" />
     <Compile Include="Data\Definitions\Laid.cs" />
+    <Compile Include="Message\Elements\Aisd.cs" />
     <Compile Include="Message\Handler\AisdRequestHandler.cs" />
     <Compile Include="Message\IConfigDataObject.cs" />
     <Compile Include="Message\Handler\NotificationHandler.cs" />
