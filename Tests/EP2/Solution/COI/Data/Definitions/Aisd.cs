@@ -1,3 +1,5 @@
+using System;
+
 namespace Six.Scs.Ep2.Coi.Data.Definitions
 {
     public static class Aisd
