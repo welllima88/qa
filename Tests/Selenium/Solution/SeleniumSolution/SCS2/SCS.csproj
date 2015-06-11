@@ -235,7 +235,6 @@
     <Compile Include="Workflow\Helper\IPerform.cs" />
     <Compile Include="Workflow\InfoText.cs" />
     <Compile Include="Workflow\Lobby.cs" />
-    <Compile Include="Workflow\Location.cs" />
     <Compile Include="Workflow\Mpd.cs" />
     <Compile Include="Workflow\Search.cs" />
     <Compile Include="Workflow\SimCard.cs" />
