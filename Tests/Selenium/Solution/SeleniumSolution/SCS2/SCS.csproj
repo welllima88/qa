@@ -222,7 +222,7 @@
     <Compile Include="Workflow\Builder\ArticelChangePerformer.cs" />
     <Compile Include="Workflow\Builder\BrandBuilder.cs" />
     <Compile Include="Workflow\Builder\CustomerBuilder.cs" />
-    <Compile Include="Workflow\Builder\DefaultChange.cs" />
+    <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />

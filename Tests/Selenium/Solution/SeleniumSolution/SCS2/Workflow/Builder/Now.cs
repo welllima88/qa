@@ -4,7 +4,7 @@ using Six.Scs.Test.Workflow.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
-    public class DefaultChange : IPerform
+    public class Now : IPerform
     {
         public void Do()
         {

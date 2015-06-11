@@ -16,7 +16,7 @@ namespace Six.Scs.Test.Workflow.Helper
         {
             if (_changeMode == null)
             {
-                new DefaultChange().Do();
+                new Now().Do();
             }
             else
             {
