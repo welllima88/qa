@@ -1,10 +1,10 @@
 using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Common;
-using Six.Test.Selenium.Helper;
+using Six.Scs.Test.Workflow.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
-    public class DefaultChange : IPerform
+    public class Now : IPerform
     {
         public void Do()
         {

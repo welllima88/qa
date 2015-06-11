@@ -1,15 +1,13 @@
 using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.View.Common.Menu;
-using Six.Test.Selenium.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
-    public abstract class CustomerBuilder : IBuilder
+    public abstract class CustomerBuilder : Helper.Builder
     {
-        private IPerform _changeMode;
         public Customer Customer { get; protected set; }
 
-        public virtual void Create()
+        public override void Create()
         {
             Customer = Model.Factory.Customer.Create();
             ClickCreate();
@@ -20,9 +18,7 @@ namespace Six.Scs.Test.Workflow.Builder
             ReadInfo();
         }
 
-        public abstract void Check();
-
-        public virtual void Edit()
+        public override void Edit()
         {
             Customer = Model.Factory.Customer.Edit();
             ReadInfo();
@@ -45,24 +41,6 @@ namespace Six.Scs.Test.Workflow.Builder
         private void ClickEdit()
         {
             CustomerMenu.CustomerEdit.Click();
-        }
-
-        public CustomerBuilder Change(IPerform changeMode)
-        {
-            _changeMode = changeMode;
-            return this;
-        }
-
-        private void EnterChangeData()
-        {
-            if (_changeMode == null)
-            {
-                new DefaultChange().Do();
-            }
-            else
-            {
-                _changeMode.Do();
-            }
         }
 
         protected abstract void EditCustomerData();

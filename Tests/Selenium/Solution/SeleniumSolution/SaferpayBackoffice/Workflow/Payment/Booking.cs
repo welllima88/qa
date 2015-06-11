@@ -1,10 +1,9 @@
 using System;
 using Six.Saferpay.Backoffice.Test.Data;
-using Six.Test.Selenium.Helper;
 
 namespace Six.Saferpay.Backoffice.Test.Workflow.Payment
 {
-    public class Booking : IPerform
+    public class Booking
     {
         private readonly Data.Payment.Payment _payment;
         private Account _account;

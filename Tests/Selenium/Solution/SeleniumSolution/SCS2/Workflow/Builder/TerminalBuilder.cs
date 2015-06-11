@@ -1,11 +1,10 @@
 using Six.Scs.Test.View.Brand;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
-using Six.Test.Selenium.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
-    public abstract class TerminalBuilder : IBuilder
+    public abstract class TerminalBuilder : Helper.Builder
     {
         private BrandBuilder _brandBuilder;
 
@@ -22,7 +21,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         public Model.ValueObjects.Terminal Terminal { get; set; }
 
-        public virtual void Create()
+        public override void Create()
         {
             ChooseArticle();
             SetBasics();
@@ -32,13 +31,6 @@ namespace Six.Scs.Test.Workflow.Builder
             AddContracts();
             ReadInfo();
         }
-
-        /// <summary>
-        ///     Abstract method to edit anything of the terminal
-        /// </summary>
-        public abstract void Edit();
-
-        public abstract void Check();
 
         protected void ReadInfo()
         {
