@@ -9,7 +9,7 @@ using Six.Scs.Test.View.Massmuation;
 using Six.Scs.Test.View.Terminal.Dashboard;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
-using Six.Test.Selenium.Helper;
+using Six.Scs.Test.Workflow.Helper;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test

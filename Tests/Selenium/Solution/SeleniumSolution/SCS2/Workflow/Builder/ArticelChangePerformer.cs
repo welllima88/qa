@@ -1,6 +1,6 @@
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
-using Six.Test.Selenium.Helper;
+using Six.Scs.Test.Workflow.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {

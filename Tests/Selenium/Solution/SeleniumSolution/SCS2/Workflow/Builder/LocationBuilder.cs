@@ -1,14 +1,12 @@
 using Six.Scs.Test.View.Common.Menu;
-using Six.Test.Selenium.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
-    public abstract class LocationBuilder : IBuilder
+    public abstract class LocationBuilder : Helper.Builder
     {
-        private IPerform _changeMode;
         public Model.ValueObjects.Location Location { get; protected set; }
 
-        public virtual void Create()
+        public override void Create()
         {
             Location = Model.Factory.Location.Create();
             ClickCreate();
@@ -17,9 +15,7 @@ namespace Six.Scs.Test.Workflow.Builder
             ReadInfo();
         }
 
-        public abstract void Check();
-
-        public virtual void Edit()
+        public override void Edit()
         {
             Location = Model.Factory.Location.Edit();
             ReadInfo();
@@ -42,24 +38,6 @@ namespace Six.Scs.Test.Workflow.Builder
         private void ClickEdit()
         {
             LocationMenu.LocationEdit.Click();
-        }
-
-        public LocationBuilder Change(IPerform changeMode)
-        {
-            _changeMode = changeMode;
-            return this;
-        }
-
-        private void EnterChangeData()
-        {
-            if (_changeMode == null)
-            {
-                new DefaultChange().Do();
-            }
-            else
-            {
-                _changeMode.Do();
-            }
         }
 
         protected abstract void EditData();
