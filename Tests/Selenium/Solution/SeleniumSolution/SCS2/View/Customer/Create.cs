@@ -314,7 +314,7 @@ namespace Six.Scs.Test.View.Customer
             set
             {
                 WebDriver.FindAdaptedElement(
-                    By.CssSelector("select#Preferences_CashIntegratorId")).Selector()
+                    By.CssSelector("select#Preferences_IntegrationPartnerId")).Selector()
                     .SelectByText(value);
             }
             get
