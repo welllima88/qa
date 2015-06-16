@@ -109,6 +109,8 @@
     <Compile Include="View\Administration\Agency\List.cs" />
     <Compile Include="View\Administration\Agency\View.cs" />
     <Compile Include="View\Administration\Article\View.cs" />
+    <Compile Include="View\Administration\Provider\List.cs" />
+    <Compile Include="View\Administration\Provider\View.cs" />
     <Compile Include="View\Administration\SerialNumberManage\Import.cs" />
     <Compile Include="View\Administration\SimCard\Create.cs" />
     <Compile Include="View\Administration\SimCard\Edit.cs" />

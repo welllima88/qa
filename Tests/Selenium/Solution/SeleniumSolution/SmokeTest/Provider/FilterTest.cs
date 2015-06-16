@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SmokeTest.Provider
+namespace Six.Scs.Test.Provider
 {
     [TestFixture]
     public class FilterTest
