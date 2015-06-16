@@ -37,7 +37,7 @@ namespace Six.Scs.Test.Builder.Customer.Six
         public override void Check()
         {
             Assert.AreEqual(Customer.CustomerNumber, View.Customer.View.CustomerNumber);
-            var checks = new Verifier(
+            Verify.With(
                 new Action[]
                 {
                     () => Assert.AreEqual(Customer.CustomerName, View.Customer.View.CustomerName),
@@ -59,8 +59,7 @@ namespace Six.Scs.Test.Builder.Customer.Six
                     () => StringAssert.Contains(Customer.Location.Contact.Mobile, View.Customer.View.Mobile),
                     () => StringAssert.Contains(Customer.Location.Contact.Fax, View.Customer.View.Fax),
                     () => Assert.AreEqual(Customer.Location.Contact.Web, View.Customer.View.Web)
-                });
-            checks.Check();
+                }).Check();            
         }
 
         protected override void EditCustomerData()

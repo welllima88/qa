@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -86,10 +87,13 @@ namespace Six.Scs.Test
         {
             Open(terminal);
             var info = Workflow.Terminal.Quit();
-            StringAssert.Contains("Gekündigt", TerminalInfo.Status);
-            Assert.That(TerminalInfo.Cancelled.Displayed);
-            StringAssert.Contains("Gekündigt", BusinessViewpoint.Status);
-            StringAssert.Contains(info, BusinessViewpoint.Status);
+            Verify.With(new Action[]
+            {
+                () => StringAssert.Contains("Gekündigt", TerminalInfo.Status),
+                () => Assert.That(TerminalInfo.Cancelled.Displayed),
+                () => StringAssert.Contains("Gekündigt", BusinessViewpoint.Status),
+                () => StringAssert.Contains(info, BusinessViewpoint.Status)
+            }).Check();
         }
 
         public static void Assign(Model.ValueObjects.Mpd mpd, Model.ValueObjects.Terminal terminal)
