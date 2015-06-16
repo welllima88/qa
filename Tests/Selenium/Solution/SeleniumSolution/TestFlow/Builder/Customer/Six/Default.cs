@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
+using Six.Scs.Test.Helper;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Customer.Six
@@ -35,27 +37,30 @@ namespace Six.Scs.Test.Builder.Customer.Six
         public override void Check()
         {
             Assert.AreEqual(Customer.CustomerNumber, View.Customer.View.CustomerNumber);
-            Assert.AreEqual(Customer.CustomerName, View.Customer.View.CustomerName);
-            Assert.AreEqual(Customer.Supplier, View.Customer.View.Supplier);
-            Assert.AreEqual(Customer.SbsBillingTenant, View.Customer.View.SbsBillingTenant);
-            Assert.AreEqual(Customer.SbsCurrency, View.Customer.View.SbsCurrency);
-            Assert.AreEqual(Customer.Location.SbsDebitNumber, View.Customer.View.SbsDebitNumber);
-            // Todo: not reliable check: 
-            // Assert.AreEqual(Customer.SbsAdressNumber, CustomerView.SbsAdressNumber);
-            Assert.AreEqual(Customer.Location.Adress.Po, View.Customer.View.Po);
-            Assert.AreEqual(Customer.Location.Adress.AdressAddition, View.Customer.View.AdressAddition);
-            StringAssert.Contains(Customer.Location.Adress.Region, View.Customer.View.Region);
-            Assert.AreEqual(Customer.Location.Adress.StreetNo, View.Customer.View.StreetNo);
-            Assert.AreEqual(Customer.Location.Adress.Zip, View.Customer.View.Zip);
-            Assert.AreEqual(Customer.Location.Adress.City, View.Customer.View.City);
-            StringAssert.Contains(Customer.Location.Agency, View.Customer.View.Agency);
-            Assert.AreEqual(Customer.Location.Contact.Language, View.Customer.View.Language);
-            Assert.AreEqual(Customer.Location.Adress.Country, View.Customer.View.Country);
-            Assert.AreEqual(Customer.Location.Contact.Email, View.Customer.View.Email);
-            StringAssert.Contains(Customer.Location.Contact.Telephone, View.Customer.View.Telephone);
-            StringAssert.Contains(Customer.Location.Contact.Mobile, View.Customer.View.Mobile);
-            StringAssert.Contains(Customer.Location.Contact.Fax, View.Customer.View.Fax);
-            Assert.AreEqual(Customer.Location.Contact.Web, View.Customer.View.Web);
+            var checks = new Verifier(
+                new Action[]
+                {
+                    () => Assert.AreEqual(Customer.CustomerName, View.Customer.View.CustomerName),
+                    () => Assert.AreEqual(Customer.Supplier, View.Customer.View.Supplier),
+                    () => Assert.AreEqual(Customer.SbsBillingTenant, View.Customer.View.SbsBillingTenant),
+                    () => Assert.AreEqual(Customer.SbsCurrency, View.Customer.View.SbsCurrency),
+                    () => Assert.AreEqual(Customer.Location.SbsDebitNumber, View.Customer.View.SbsDebitNumber),
+                    () => Assert.AreEqual(Customer.Location.Adress.Po, View.Customer.View.Po),
+                    () => Assert.AreEqual(Customer.Location.Adress.AdressAddition, View.Customer.View.AdressAddition),
+                    () => StringAssert.Contains(Customer.Location.Adress.Region, View.Customer.View.Region),
+                    () => Assert.AreEqual(Customer.Location.Adress.StreetNo, View.Customer.View.StreetNo),
+                    () => Assert.AreEqual(Customer.Location.Adress.Zip, View.Customer.View.Zip),
+                    () => Assert.AreEqual(Customer.Location.Adress.City, View.Customer.View.City),
+                    () => StringAssert.Contains(Customer.Location.Agency, View.Customer.View.Agency),
+                    () => Assert.AreEqual(Customer.Location.Contact.Language, View.Customer.View.Language),
+                    () => Assert.AreEqual(Customer.Location.Adress.Country, View.Customer.View.Country),
+                    () => Assert.AreEqual(Customer.Location.Contact.Email, View.Customer.View.Email),
+                    () => StringAssert.Contains(Customer.Location.Contact.Telephone, View.Customer.View.Telephone),
+                    () => StringAssert.Contains(Customer.Location.Contact.Mobile, View.Customer.View.Mobile),
+                    () => StringAssert.Contains(Customer.Location.Contact.Fax, View.Customer.View.Fax),
+                    () => Assert.AreEqual(Customer.Location.Contact.Web, View.Customer.View.Web)
+                });
+            checks.Check();
         }
 
         protected override void EditCustomerData()
