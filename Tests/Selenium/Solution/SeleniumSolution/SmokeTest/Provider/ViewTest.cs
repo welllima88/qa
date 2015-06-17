@@ -37,6 +37,18 @@ namespace Six.Scs.Test.Provider
         }
 
         [Test]
+        public void ExternId()
+        {
+            Assert.That(View.Administration.Provider.View.ExternId, Is.EqualTo("T"));
+        }
+
+        [Test]
+        public void IgnoreMpiCache()
+        {
+            Assert.That(View.Administration.Provider.View.IgnoreMpiCache, Is.EqualTo("Ja"));
+        }
+
+        [Test]
         public void ProviderId()
         {
             Assert.That(View.Administration.Provider.View.ProviderId, Is.EqualTo("281"));
