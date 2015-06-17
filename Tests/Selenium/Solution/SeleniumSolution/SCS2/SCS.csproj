@@ -73,6 +73,7 @@
     <Compile Include="Model\Factory\Person.cs" />
     <Compile Include="Model\Factory\Services.cs" />
     <Compile Include="Model\Factory\Simcard.cs" />
+    <Compile Include="Model\Factory\Task.cs" />
     <Compile Include="Model\Factory\Terminal.cs" />
     <Compile Include="Model\Factory\TerminalDuplicate.cs" />
     <Compile Include="Model\Factory\TerminalReplace.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Model\ValueObjects\Role.cs" />
     <Compile Include="Model\ValueObjects\Service.cs" />
     <Compile Include="Model\ValueObjects\SimCard.cs" />
+    <Compile Include="Model\ValueObjects\Task.cs" />
     <Compile Include="Model\ValueObjects\Terminal.cs" />
     <Compile Include="Model\ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="Model\ValueObjects\TerminalReplace.cs" />
@@ -117,6 +119,9 @@
     <Compile Include="View\Administration\SimCard\History.cs" />
     <Compile Include="View\Administration\SimCard\View.cs" />
     <Compile Include="View\Administration\SoftwareExchange\Create.cs" />
+    <Compile Include="View\Administration\TaskScheduler\Create.cs" />
+    <Compile Include="View\Administration\TaskScheduler\Edit.cs" />
+    <Compile Include="View\Administration\TaskScheduler\List.cs" />
     <Compile Include="View\Administration\TerminalType\Edit.cs" />
     <Compile Include="View\Administration\TerminalType\View.cs" />
     <Compile Include="View\Brand\AcquirerCreate.cs" />
@@ -228,6 +233,7 @@
     <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
+    <Compile Include="Workflow\Builder\Tasks.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
     <Compile Include="View\User\Delete.cs" />
