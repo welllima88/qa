@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.Linq;
+using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
 namespace Six.Scs.Test.View.Administration.TaskScheduler
@@ -61,6 +62,14 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
             // /TaskScheduler/StopTask?taskId=
             // /TaskScheduler/StartTask?taskId=
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + ":nth-child(9)")).Text; }
+        }
+
+        public static void Select(string taskName)
+        {
+            WebDriver.FindAdaptedElements(
+                By.CssSelector("a[href*='/TaskScheduler/TaskSchedulerAdministration/Edit?TaskId=']"))
+                .FirstOrDefault(e => e.Text.Equals(taskName))
+                .Click();
         }
     }
 }
