@@ -13,9 +13,45 @@ namespace Six.Scs.Test.Provider
         }
 
         [Test]
-        public void Name()
+        public void AcquirerId()
         {
-            Assert.That(true);
+            Assert.That(View.Administration.Provider.View.AcquirerId, Is.EqualTo("2"));
+        }
+
+        [Test]
+        public void AcquirerName()
+        {
+            Assert.That(View.Administration.Provider.View.Acquirer, Is.EqualTo("SIX Payment Services"));
+        }
+
+        [Test]
+        public void CardType()
+        {
+            Assert.That(View.Administration.Provider.View.CardType, Is.EqualTo("600080"));
+        }
+
+        [Test]
+        public void DefaultCurrency()
+        {
+            Assert.That(View.Administration.Provider.View.DefaultCurrency, Is.EqualTo("CHF"));
+        }
+
+        [Test]
+        public void ProviderId()
+        {
+            Assert.That(View.Administration.Provider.View.ProviderId, Is.EqualTo("281"));
+        }
+
+        [Test]
+        public void Service()
+        {
+            Assert.That(View.Administration.Provider.View.Service, Is.EqualTo("ep2:ACQ"));
+        }
+
+        [Test]
+        public void Softwares()
+        {
+            Assert.That(View.Administration.Provider.View.Softwares, Is.EqualTo(Provider.Softwares.Provider281()));
         }
     }
 }
