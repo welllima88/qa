@@ -12,5 +12,6 @@ namespace Six.Scs.Test.Model.ValueObjects
         public string Type = "Executable";
         public string WaitOnShutdown = "22";
         public string WorkingDirectory = @"c:\create\\Task_SYR\HOME";
+        public string NextRun { get; set; }
     }
 }
