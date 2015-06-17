@@ -19,7 +19,7 @@ namespace Six.Scs.Test.Helper
         /// <summary>
         ///     provides access to all exceptions which have occured
         /// </summary>
-        public static List<Exception> Errors { get; private set; }
+        public static List<Exception> Exceptions { get; private set; }
 
         public void Check()
         {
@@ -38,13 +38,13 @@ namespace Six.Scs.Test.Helper
 
         public static bool ErrorOccured()
         {
-            return Errors.Count > 0;
+            return Exceptions.Count > 0;
         }
 
         private void VerifyAll(params Action[] assertions)
         {
             if (assertions == null) throw new NullReferenceException("no assertions to verify");
-            Errors = new List<Exception>();
+            Exceptions = new List<Exception>();
 
             foreach (var assertion in assertions)
                 try
@@ -53,18 +53,20 @@ namespace Six.Scs.Test.Helper
                 }
                 catch (Exception ex)
                 {
-                    Errors.Add(ex);
+                    Exceptions.Add(ex);
+                    Console.Error.WriteLine("Message: {0}\t-\tStacktrace: {1}", ex.Message, ex.StackTrace);
                 }
         }
+
 
         public static void WriteErrors()
         {
             if (!ErrorOccured()) return;
-            foreach (var error in Errors)
+            foreach (var exception in Exceptions)
             {
-                Console.Error.WriteLine("Message: {0}\t-\tStacktrace: {1}", error.Message, error.StackTrace);
+                Console.Error.WriteLine("Message: {0}", exception.Message);
             }
-            throw new AssertionException(string.Format("{0} verifies have failed during testing", Errors.Count));
+            throw new AssertionException(string.Format("{0} verifies failed during testing", Exceptions.Count));
         }
     }
 }
