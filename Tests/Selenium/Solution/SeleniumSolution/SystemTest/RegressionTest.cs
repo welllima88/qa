@@ -3,6 +3,7 @@ using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
+using Six.Scs.Test.Helper;
 using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium.WebDriver;
@@ -31,6 +32,12 @@ namespace Six.Scs.Test
         public void Home()
         {
             TestDirector.Navigate();
+        }
+
+        [TestFixtureTearDown]
+        public void CheckIfErrorsOccured()
+        {
+            Verify.WriteErrors();
         }
 
         [Test]

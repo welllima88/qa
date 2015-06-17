@@ -53,7 +53,7 @@ namespace Six.Test.Selenium.WebDriver
             catch (NotFoundException)
             {
                 // _webDriver.TakeScreenshot().SaveAsFile("failure", ImageFormat.Png);
-                Debug.Print(_webDriver.PageSource);
+                Console.Out.WriteLine(_webDriver.PageSource);
                 throw;
             }
         }

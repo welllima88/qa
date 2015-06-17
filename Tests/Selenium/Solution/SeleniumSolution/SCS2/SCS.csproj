@@ -43,13 +43,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="WebDriver, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Selenium.WebDriver.2.45.0\lib\net40\WebDriver.dll</HintPath>
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.46.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Selenium.Support.2.45.0\lib\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.46.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +73,7 @@
     <Compile Include="Model\Factory\Person.cs" />
     <Compile Include="Model\Factory\Services.cs" />
     <Compile Include="Model\Factory\Simcard.cs" />
+    <Compile Include="Model\Factory\Task.cs" />
     <Compile Include="Model\Factory\Terminal.cs" />
     <Compile Include="Model\Factory\TerminalDuplicate.cs" />
     <Compile Include="Model\Factory\TerminalReplace.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Model\ValueObjects\Role.cs" />
     <Compile Include="Model\ValueObjects\Service.cs" />
     <Compile Include="Model\ValueObjects\SimCard.cs" />
+    <Compile Include="Model\ValueObjects\Task.cs" />
     <Compile Include="Model\ValueObjects\Terminal.cs" />
     <Compile Include="Model\ValueObjects\TerminalDuplicate.cs" />
     <Compile Include="Model\ValueObjects\TerminalReplace.cs" />
@@ -108,12 +111,17 @@
     <Compile Include="View\Administration\Agency\List.cs" />
     <Compile Include="View\Administration\Agency\View.cs" />
     <Compile Include="View\Administration\Article\View.cs" />
+    <Compile Include="View\Administration\Provider\List.cs" />
+    <Compile Include="View\Administration\Provider\View.cs" />
     <Compile Include="View\Administration\SerialNumberManage\Import.cs" />
     <Compile Include="View\Administration\SimCard\Create.cs" />
     <Compile Include="View\Administration\SimCard\Edit.cs" />
     <Compile Include="View\Administration\SimCard\History.cs" />
     <Compile Include="View\Administration\SimCard\View.cs" />
     <Compile Include="View\Administration\SoftwareExchange\Create.cs" />
+    <Compile Include="View\Administration\TaskScheduler\Create.cs" />
+    <Compile Include="View\Administration\TaskScheduler\Edit.cs" />
+    <Compile Include="View\Administration\TaskScheduler\List.cs" />
     <Compile Include="View\Administration\TerminalType\Edit.cs" />
     <Compile Include="View\Administration\TerminalType\View.cs" />
     <Compile Include="View\Brand\AcquirerCreate.cs" />
@@ -225,6 +233,7 @@
     <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
+    <Compile Include="Workflow\Builder\Tasks.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
     <Compile Include="View\User\Delete.cs" />
