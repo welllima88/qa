@@ -65,6 +65,7 @@
     <Compile Include="Lobby\QuickSearchTest.cs" />
     <Compile Include="Lobby\RecentElementsTest.cs" />
     <Compile Include="Lobby\RecentMassJobsTest.cs" />
+    <Compile Include="Massmutation\BusinessTemplateTest.cs" />
     <Compile Include="Massmutation\AcquirerChangeTest.cs" />
     <Compile Include="Massmutation\ContractMassmuationTest.cs" />
     <Compile Include="Massmutation\CustomerMassmuationTest.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Search\Customer\ByNameTest.cs" />
     <Compile Include="HardwareManagement\ImportTest.cs" />
     <Compile Include="HardwareManagement\ManagementViewTest.cs" />
+    <Compile Include="Search\Terminal\ByIdTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberImportTest.cs" />
     <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
     <Compile Include="SIMCard\SimCardViewTest.cs" />
@@ -102,6 +104,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
