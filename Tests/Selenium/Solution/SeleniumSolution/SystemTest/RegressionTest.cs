@@ -3,6 +3,7 @@ using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
+using Six.Scs.Test.Builder.Terminal.Ifsf;
 using Six.Scs.Test.Helper;
 using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.Workflow.Builder;
@@ -27,6 +28,7 @@ namespace Six.Scs.Test
         private static Model.ValueObjects.Location _location2;
         private static TroubleTicket _troubleTicket;
         private static BillingAddress _billingAddress;
+        private static Model.ValueObjects.Terminal _terminalLocation3;
 
         [TestFixtureSetUp]
         public void Home()
@@ -69,6 +71,8 @@ namespace Six.Scs.Test
             Brands.Create(_terminalLocation2, new Builder.Brand.Ep2.Default());
             Infotext.Create(_location1);
 
+            _terminalLocation3 = Terminal.Create(_location1, new Davinci2());
+            Brands.Create(_terminalLocation3, new Builder.Brand.Ifsf.Default());
             _location1 = Location.Edit(_location1, new Builder.Location.Default()).Location;
             Infotext.Create(_terminalLocation2);
 
