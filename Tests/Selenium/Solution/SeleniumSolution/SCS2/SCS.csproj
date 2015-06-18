@@ -168,6 +168,7 @@
     <Compile Include="View\Location\Create.cs" />
     <Compile Include="View\Location\Edit.cs" />
     <Compile Include="View\Location\View.cs" />
+    <Compile Include="View\Massmuation\BusinessTemplate.cs" />
     <Compile Include="View\Massmuation\FileUpload.cs" />
     <Compile Include="View\Massmuation\Progress.cs" />
     <Compile Include="View\Massmuation\TerminalValidation.cs" />

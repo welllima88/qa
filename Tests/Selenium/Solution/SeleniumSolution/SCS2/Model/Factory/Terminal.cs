@@ -11,5 +11,10 @@ namespace Six.Scs.Test.Model.Factory
         {
             return new ValueObjects.Terminal {Type = "yomani AUTONOM, TCP/IP ep2 (DNS)", Color = "weiss"};
         }
+
+        public static ValueObjects.Terminal DavinciIfsf()
+        {
+            return new ValueObjects.Terminal { Type = "davinci2 SAFE PETROL PINPAD IFSF, TCP/IP ep2 (DNS)", Color = "weiss" };
+        }
     }
 }

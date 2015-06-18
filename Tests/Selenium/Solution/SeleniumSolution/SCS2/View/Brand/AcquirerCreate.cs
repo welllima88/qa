@@ -33,6 +33,11 @@ namespace Six.Scs.Test.View.Brand
             }
         }
 
+        public static string DccProvider
+        {
+            set { WebDriver.FindAdaptedElement(By.CssSelector("select[id$='_DccEP2Id']")).Selector().SelectByText(value); }
+        }
+
         /// <summary>
         ///     Sets for each acquirer, if the message (ticket, COI etc.) should be created or not
         /// </summary>
