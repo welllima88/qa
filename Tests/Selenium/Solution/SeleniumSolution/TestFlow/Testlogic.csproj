@@ -63,6 +63,7 @@
     <Compile Include="Builder\Brand\Ep2\Additional.cs" />
     <Compile Include="Builder\Brand\Ep2\Default.cs" />
     <Compile Include="Builder\Brand\Gicc\Default.cs" />
+    <Compile Include="Builder\Brand\Ifsf\Default.cs" />
     <Compile Include="Builder\Location\Gicc.cs" />
     <Compile Include="Builder\Location\Default.cs" />
     <Compile Include="Builder\Terminal\Ep2\Yoximo.cs" />
@@ -100,6 +101,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
