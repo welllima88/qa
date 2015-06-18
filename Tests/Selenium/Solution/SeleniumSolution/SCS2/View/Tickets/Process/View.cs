@@ -34,7 +34,7 @@ namespace Six.Scs.Test.View.Tickets.Process
 
         public string Brands
         {
-            set { WebDriver.FindAdaptedElement(By.Id("ep2BrandContracts")).Selector().SelectByText(value); }
+            set { WebDriver.FindAdaptedElements(By.Id("ep2BrandContracts")); }
         }
 
         public void SaveAndClose()
