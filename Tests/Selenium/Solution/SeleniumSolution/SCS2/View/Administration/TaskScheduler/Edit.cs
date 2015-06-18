@@ -54,5 +54,10 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
+
+        public static IWebElementAdapter DeleteButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
+        }
     }
 }

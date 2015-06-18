@@ -2,7 +2,7 @@ using SIX.EP2.Core.Comm;
 
 namespace Six.Scs.Ep2.Test.Communication
 {
-    public class SiConfig
+    public static class SiConfig
     {
         public static ComConfig Dev()
         {

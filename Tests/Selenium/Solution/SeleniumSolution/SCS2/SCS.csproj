@@ -217,6 +217,7 @@
     <Compile Include="View\Terminal\SoftwareChange.cs" />
     <Compile Include="View\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="View\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />
+    <Compile Include="View\Tickets\Process\View.cs" />
     <Compile Include="View\Tickets\Trouble\View.cs" />
     <Compile Include="View\User\Create.cs" />
     <Compile Include="View\User\List.cs" />
@@ -232,7 +233,7 @@
     <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
-    <Compile Include="Workflow\Builder\Tasks.cs" />
+    <Compile Include="Workflow\TasksScheduler.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
     <Compile Include="View\User\Delete.cs" />
@@ -259,7 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="View\Tickets\Process\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">
