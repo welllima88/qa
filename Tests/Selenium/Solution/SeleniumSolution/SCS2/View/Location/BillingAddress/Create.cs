@@ -15,7 +15,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
 
         public static string Zip
         {
-            set { WebDriver.FindAdaptedElement(By.Id("Address_ZIP")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("Address_Zip")).TextField().TypeText(value); }
         }
 
         public static string City
@@ -25,12 +25,12 @@ namespace Six.Scs.Test.View.Location.BillingAddress
 
         public static string AdressAddition
         {
-            set { WebDriver.FindAdaptedElement(By.Id("Address_Addition")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("Addition")).TextField().TypeText(value); }
         }
 
         public static string Po
         {
-            set { WebDriver.FindAdaptedElement(By.Id("Address_PO")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("Address_POBox")).TextField().TypeText(value); }
         }
 
         public static string Region
@@ -40,7 +40,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
 
         public static string Telephone
         {
-            set { WebDriver.FindAdaptedElement(By.Id("Address_Telephone")).TextField().TypeText(value); }
+            set { WebDriver.FindAdaptedElement(By.Id("Address_Phone")).TextField().TypeText(value); }
         }
 
         public static string Mobile
