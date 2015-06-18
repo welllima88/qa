@@ -54,6 +54,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Administration\TasksScheduler.cs" />
     <Compile Include="Administration\TerminalTypeTest.cs" />
     <Compile Include="Defaults\MandantIsSavedForNextCustomerCreate.cs" />
     <Compile Include="Saferpay\GiccTest.cs" />
