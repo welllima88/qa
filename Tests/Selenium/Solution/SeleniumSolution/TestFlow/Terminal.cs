@@ -87,10 +87,20 @@ namespace Six.Scs.Test
         {
             Open(terminal);
             var info = Workflow.Terminal.Quit();
+            const int number = 5;
+            var tries = new Try(number);
+
+            while (!TerminalInfo.Cancelled.Displayed && tries.Again())
+            {
+                TestDirector.Refresh();
+            }
+            if (tries.TooOften())
+            {
+                Assert.Fail("Terminal: {0} is still not quit after {1} refresh", terminal.Id, number);
+            }
             Verify.With(new Action[]
             {
                 () => StringAssert.Contains("Gekündigt", TerminalInfo.Status),
-                () => Assert.That(TerminalInfo.Cancelled.Displayed),
                 () => StringAssert.Contains("Gekündigt", BusinessViewpoint.Status),
                 () => StringAssert.Contains(info, BusinessViewpoint.Status)
             }).Check();
