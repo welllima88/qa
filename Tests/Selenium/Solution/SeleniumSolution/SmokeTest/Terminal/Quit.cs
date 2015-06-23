@@ -13,6 +13,7 @@ namespace Six.Scs.Test.Terminal
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=30092755");
             SalesContract.Quit.Click();
+            
         }
 
         [Test]

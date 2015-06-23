@@ -23,9 +23,9 @@ namespace Six.Scs.Test.View.Terminal.Quit
             get { return WebDriver.FindAdaptedElement(By.Id("TerminalState_Reason")).TextField().Text(); }
         }
 
-        public static IWebElementAdapter Save
+        public static void Save()
         {
-            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+            WebDriver.FindAdaptedElement(By.Id("save"));
         }
     }
 }

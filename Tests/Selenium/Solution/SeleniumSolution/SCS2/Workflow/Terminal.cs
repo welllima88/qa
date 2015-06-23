@@ -32,7 +32,7 @@ namespace Six.Scs.Test.Workflow
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
             var reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
             View.Terminal.Quit.Quit.Reason = reason;
-            View.Terminal.Quit.Quit.Save.Click();
+            View.Terminal.Quit.Quit.Save();
             return reason;
         }
 
