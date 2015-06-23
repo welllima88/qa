@@ -58,14 +58,15 @@ namespace Six.Scs.Test.Helper
                 }
         }
 
-
         public static void WriteErrors()
         {
             if (!ErrorOccured()) return;
+            Console.Error.WriteLine("---ERROR---SUMMARY---START---");
             foreach (var exception in Exceptions)
             {
                 Console.Error.WriteLine("Message: {0}", exception.Message);
             }
+            Console.Error.WriteLine("---ERROR---SUMMARY---END----");
             throw new AssertionException(string.Format("{0} verifies failed during testing", Exceptions.Count));
         }
     }
