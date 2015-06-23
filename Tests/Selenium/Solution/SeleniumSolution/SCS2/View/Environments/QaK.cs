@@ -9,7 +9,7 @@ namespace Six.Scs.Test.View.Environments
     {
         public QaK()
         {
-            BaseUrl = new Uri("https://gateint.telekurs.ch/scs2s-qa-k/");
+            BaseUrl = new Uri("https://webint.six-payment-services.com/scs2s-qa-k/");
 
             Application = new Lobby();
             Authentication = new SecurIdAuthentication("tksyr", @"password", "tkcposk", "securId+passcode");
