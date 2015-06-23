@@ -19,8 +19,8 @@ namespace Six.Scs.Test.View.Terminal.Quit
 
         public static string Reason
         {
-            set { WebDriver.FindAdaptedElement(By.Id("Motivation")).TextField().TypeText(value); }
-            get { return WebDriver.FindAdaptedElement(By.Id("Motivation")).TextField().Text(); }
+            set { WebDriver.FindAdaptedElement(By.Id("TerminalState_Reason")).TextField().TypeText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("TerminalState_Reason")).TextField().Text(); }
         }
 
         public static IWebElementAdapter Save
