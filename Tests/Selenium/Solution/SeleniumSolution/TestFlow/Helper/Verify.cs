@@ -43,7 +43,7 @@ namespace Six.Scs.Test.Helper
 
         private void VerifyAll(params Action[] assertions)
         {
-            if (assertions == null) throw new NullReferenceException("no assertions to verify");
+            if (assertions == null) return;
             Exceptions = new List<Exception>();
 
             foreach (var assertion in assertions)
