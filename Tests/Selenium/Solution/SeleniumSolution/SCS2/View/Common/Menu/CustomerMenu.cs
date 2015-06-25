@@ -149,16 +149,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Infotexts
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListCustomer?&CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter CreateInfotext
         {
             get

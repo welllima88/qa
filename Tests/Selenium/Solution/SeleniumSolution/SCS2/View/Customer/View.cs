@@ -173,5 +173,14 @@ namespace Six.Scs.Test.View.Customer
                     WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/scs2/Customer/Edit?customerId=']"));
             }
         }
+        public static IWebElementAdapter Infotexts
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListCustomer?&CUSTOMERID=']"));
+            }
+        }
     }
 }

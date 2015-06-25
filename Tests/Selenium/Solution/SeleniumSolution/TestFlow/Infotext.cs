@@ -12,7 +12,7 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            CustomerMenu.Infotexts.Click();
+            View.Customer.View.Infotexts.Click();
             CreateAndSaveInfotext("Customer");
         }
 
