@@ -11,7 +11,7 @@ namespace Six.Scs.Test.Validation.Agency
     public class CreateWithNoInput
     {
         [TestFixtureSetUp]
-        public void GoToCreateContact()
+        public void GoToCreate()
         {
             TestDirector.Navigate("Agency/List");
             List.Create.Click();

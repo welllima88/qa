@@ -12,7 +12,7 @@ namespace Six.Scs.Test.Validation.User
     public class CreateWithNoInput
     {
         [TestFixtureSetUp]
-        public void GoToCreateContact()
+        public void GoToCreate()
         {
             TestDirector.Navigate("Customer/?CUSTOMERID=1");
             CustomerMenu.Users.Click();
