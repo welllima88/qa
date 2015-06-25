@@ -179,7 +179,7 @@ namespace Six.Scs.Test.View.Customer
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListCustomer?&CUSTOMERID=']"));
+                        By.CssSelector("a[href*='/InfoText/ListCustomer?customerId=']"));
             }
         }
     }

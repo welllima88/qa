@@ -41,16 +41,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CustomerDeactivate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter LocationsOfCustomer
         {
             get
