@@ -154,5 +154,15 @@ namespace Six.Scs.Test.View.Customer
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }
+
+        public static IWebElementAdapter ContactCreate
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a[href*='/Person/CustomerPersonNew?CustomerId=']"));
+            }
+        }
     }
 }

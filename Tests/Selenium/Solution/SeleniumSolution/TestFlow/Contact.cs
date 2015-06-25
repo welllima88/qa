@@ -12,7 +12,7 @@ namespace Six.Scs.Test
         public static Person Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            CustomerMenu.ContactCreate.Click();
+            View.Customer.View.ContactCreate.Click();
             return CreateAndSave();
         }
 
