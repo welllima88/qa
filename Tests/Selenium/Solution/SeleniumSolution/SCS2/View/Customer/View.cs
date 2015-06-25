@@ -164,5 +164,14 @@ namespace Six.Scs.Test.View.Customer
                         By.CssSelector("a[href*='/Person/CustomerPersonNew?CustomerId=']"));
             }
         }
+
+        public static IWebElementAdapter CustomerEdit
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/scs2/Customer/Edit?customerId=']"));
+            }
+        }
     }
 }

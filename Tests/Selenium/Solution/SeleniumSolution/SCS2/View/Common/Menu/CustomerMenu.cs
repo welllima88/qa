@@ -41,15 +41,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CustomerEdit
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Customer/Edit/?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter CustomerDeactivate
         {
             get
