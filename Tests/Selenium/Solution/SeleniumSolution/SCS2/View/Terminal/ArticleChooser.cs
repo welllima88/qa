@@ -19,7 +19,7 @@ namespace Six.Scs.Test.View.Terminal
                 var articleElements = WebDriver.FindAdaptedElements(
                     By.CssSelector("tbody#allArticles tr td strong"))
                     .Where(e => e.Displayed);
-                return WebDriver.WebElementsAsStringList(articleElements);
+                return articleElements.Select(e => e.Text);
             }
         }
 
@@ -29,7 +29,7 @@ namespace Six.Scs.Test.View.Terminal
             {
                 var articleElements =
                     WebDriver.FindAdaptedElements(By.CssSelector("tbody#suggestedArticles tr td strong"));
-                return WebDriver.WebElementsAsStringList(articleElements);
+                return articleElements.Select(e => e.Text);
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -13,12 +14,12 @@ namespace Six.Scs.Test.View.Common.Infotext
 
         private static IEnumerable<IWebElementAdapter> Elements
         {
-            get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td.infotext")); }
+            get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td")); }
         }
 
         public static IEnumerable<string> List
         {
-            get { return WebDriver.WebElementsAsStringList(Elements); }
+            get { return Elements.Select(e => e.Text); }
         }
     }
 }

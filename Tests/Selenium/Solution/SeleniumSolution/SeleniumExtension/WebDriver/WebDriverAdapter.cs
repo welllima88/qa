@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -56,11 +55,6 @@ namespace Six.Test.Selenium.WebDriver
                 Console.Error.WriteLine(_webDriver.PageSource);
                 throw;
             }
-        }
-
-        IEnumerable<string> IWebDriverAdapter.WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
-        {
-            return WebElementsAsStringList(webElements);
         }
 
         public void Dispose()
