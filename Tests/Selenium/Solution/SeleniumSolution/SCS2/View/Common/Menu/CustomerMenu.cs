@@ -119,16 +119,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter BillingAdressCreate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='BillingAddress/New?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter BillingAddressEdit
         {
             get

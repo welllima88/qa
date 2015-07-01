@@ -34,14 +34,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter ContactCreate
-        {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='Person/New?LOCATIONID=']"));
-            }
-        }
-
         public static IWebElementAdapter LocationEdit
         {
             get
