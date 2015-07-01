@@ -114,5 +114,13 @@ namespace Six.Scs.Test.View.Location
         {
             get { return WebDriver.FindAdaptedElement(By.Id("Agency")).Text; }
         }
+
+        public static IWebElementAdapter ContactCreate
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Person/New?locationId=']"));
+            }
+        }
     }
 }
