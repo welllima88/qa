@@ -164,6 +164,7 @@
     <Compile Include="View\Help\Navigation.cs" />
     <Compile Include="View\Location\BillingAddress\Create.cs" />
     <Compile Include="View\Location\BillingAddress\Edit.cs" />
+    <Compile Include="View\Location\BillingAddress\List.cs" />
     <Compile Include="View\Location\BillingAddress\View.cs" />
     <Compile Include="View\Location\Create.cs" />
     <Compile Include="View\Location\Edit.cs" />
