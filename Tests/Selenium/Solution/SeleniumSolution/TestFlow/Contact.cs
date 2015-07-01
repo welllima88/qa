@@ -29,7 +29,7 @@ namespace Six.Scs.Test
         public static Person Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
-            LocationMenu.ContactCreate.Click();
+            View.Location.View.ContactCreate.Click();
             return CreateAndSave();
         }
 
