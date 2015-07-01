@@ -43,10 +43,13 @@ namespace Six.Scs.Test
         }
 
         [Test]
-        [Category("Regression"), Category("Customer"), Category("Location"), Category("BillingAddress"),
+        [Category("Regression")]
+        /*
+         [Category("Customer"), Category("Location"), Category("BillingAddress"),
          Category("Terminal"), Category("Search"),
          Category("Terminal Duplicate"), Category("Terminal Quit"), Category("Infotext"), Category("Person"),
          Category("MPD"), Category("User"), Category("User"), Category("User from Contact"), Category("SIM Card")]
+         */
         public static void ExecuteRegressiontest()
         {
             _six = Customer.Create(new Default());
@@ -57,7 +60,7 @@ namespace Six.Scs.Test
 
             Customer.Edit(_six);
 
-            Infotext.Create(_six.Customer);
+            // TODO: Infotext.Create(_six.Customer);
             _billingAddress = BillingAdress.Create(_six.Customer);
             BillingAdress.Edit(_billingAddress);
 
@@ -69,12 +72,12 @@ namespace Six.Scs.Test
             Terminal.Move(_terminalLocation2, _location2);
 
             Brands.Create(_terminalLocation2, new Builder.Brand.Ep2.Default());
-            Infotext.Create(_location1);
+            // TODO: Infotext.Create(_location1);
 
             _terminalLocation3 = Terminal.Create(_location1, new Davinci2());
             Brands.Create(_terminalLocation3, new Builder.Brand.Ifsf.Default());
             _location1 = Location.Edit(_location1, new Builder.Location.Default()).Location;
-            Infotext.Create(_terminalLocation2);
+            // TODO: Infotext.Create(_terminalLocation2);
 
             _personOnLocation = Contact.Create(_location1);
 
@@ -92,7 +95,7 @@ namespace Six.Scs.Test
             User.Create(_personOnLocation);
 
             User.AddService(_user);
-            // Testlogic.User.AssignRoles(_user);
+            User.AssignRoles(_user);
 
             Brands.Create(_duplicatedTerminals.ElementAt(1), new Additional());
             // {0,1,..} means create brands on second terminal
