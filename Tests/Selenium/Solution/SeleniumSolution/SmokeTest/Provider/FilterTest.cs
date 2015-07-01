@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 using Six.Test.Selenium.WebDriver;
+using List = Six.Scs.Test.View.Administration.Provider.List;
 
 namespace Six.Scs.Test.Provider
 {
@@ -19,6 +21,10 @@ namespace Six.Scs.Test.Provider
         }
 
         [Test]
+        public void AcquirerId()
+        {
+        }
+
         [Test]
         public void ById()
         {
@@ -32,7 +38,7 @@ namespace Six.Scs.Test.Provider
         [Test]
         public void ByName()
         {
-            List.Filter = "pOstCarD";
+            List.Filter = "Postcard";
             Assert.That(List.Providers, Has.All.Contains("Postcard").IgnoreCase);
             Assert.That(List.Providers, Has.Exactly(1).Contains("Postcard ep2"));
             Assert.That(List.Providers.Count(), Is.EqualTo(3));
@@ -40,6 +46,16 @@ namespace Six.Scs.Test.Provider
 
         [Test]
         public void ByReference()
+        {
+        }
+
+        [Test]
+        public void CardType()
+        {
+        }
+
+        [Test]
+        public void Protocol()
         {
         }
     }
