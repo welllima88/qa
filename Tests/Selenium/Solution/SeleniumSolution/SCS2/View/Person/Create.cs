@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Person
 {
@@ -20,7 +21,7 @@ namespace Six.Scs.Test.View.Person
             }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("create")); }
         }

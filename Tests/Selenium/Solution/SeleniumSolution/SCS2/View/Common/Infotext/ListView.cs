@@ -2,6 +2,7 @@
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Infotext
 {
@@ -12,7 +13,7 @@ namespace Six.Scs.Test.View.Common.Infotext
             get { return WebDriver.FindAdaptedElement(By.Id("create")).Button(); }
         }
 
-        private static IEnumerable<IWebElementAdapter> Elements
+        private static IEnumerable<IWebElement> Elements
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("table#infotextList tbody tr td")); }
         }

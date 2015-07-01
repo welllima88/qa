@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location.BillingAddress
 {
@@ -81,7 +82,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
             set { WebDriver.FindAdaptedElement(By.Id("Address_Web")).TextField().TypeText(value); }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }

@@ -2,6 +2,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using Six.Test.Selenium.WebDriver;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = OpenQA.Selenium.IWebElement;
 
 namespace Six.Saferpay.Backoffice.Test.Pages.Common
 {
@@ -28,9 +29,9 @@ namespace Six.Saferpay.Backoffice.Test.Pages.Common
             PageFactory.InitElements(TestDirector.WebDriver, this);
         }
 
-        public static IWebElementAdapter LogOff
+        public static IWebElement LogOff
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("li#text_logout a")); }
+            get { return WebDriver.FindElement(By.CssSelector("li#text_logout a")); }
         }
     }
 }

@@ -4,7 +4,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
 {
     public class TextFieldElement
     {
-        protected IWebElement WebElement;
+        protected OpenQA.Selenium.IWebElement WebElement;
 
         /// <summary>
         ///     provides the constructor for derived classes which need to skip the check of the base clase and use its own init
@@ -13,7 +13,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
         {
         }
 
-        public TextFieldElement(IWebElement webElement)
+        public TextFieldElement(OpenQA.Selenium.IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals(Type())))
                 throw new NotTextBoxElementException(webElement.TagName, webElement.GetAttribute("type"));

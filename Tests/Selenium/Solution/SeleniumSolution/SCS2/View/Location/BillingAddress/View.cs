@@ -1,6 +1,7 @@
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location.BillingAddress
 {
@@ -71,7 +72,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("Fax")).Text; }
         }
 
-        public static IWebElementAdapter EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
@@ -91,7 +92,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
-        public static IWebElementAdapter List(Model.ValueObjects.BillingAddress billingAddress)
+        public static IWebElement List(Model.ValueObjects.BillingAddress billingAddress)
         {
             return
                 WebDriver.FindAdaptedElements(By.Id("td#content table>tbody>tr>td>a"))

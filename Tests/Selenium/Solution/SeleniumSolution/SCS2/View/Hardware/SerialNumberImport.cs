@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Hardware
 {
@@ -20,12 +21,12 @@ namespace Six.Scs.Test.View.Hardware
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content form>p")).Text; }
         }
 
-        public static IWebElementAdapter FileChooser
+        public static IWebElement FileChooser
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content input[type='file']")); }
         }
 
-        public static IWebElementAdapter FileUploadButton
+        public static IWebElement FileUploadButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("upload")); }
         }

@@ -5,6 +5,7 @@ using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Test.Selenium.WebDriver
 {
@@ -24,30 +25,30 @@ namespace Six.Test.Selenium.WebDriver
         /// </summary>
         /// <param name="by"></param>
         /// <returns></returns>
-        public ReadOnlyCollection<IWebElement> FindElements(By by)
+        public ReadOnlyCollection<OpenQA.Selenium.IWebElement> FindElements(By by)
         {
             return _webDriver.FindElements(by);
         }
 
-        public IEnumerable<IWebElementAdapter> FindAdaptedElements(By by)
+        public IEnumerable<IWebElement> FindAdaptedElements(By by)
         {
             var webElements = _webDriver.FindElements(by);
-            var list = new Collection<IWebElementAdapter>();
+            var list = new Collection<IWebElement>();
 
             // convert:
             foreach (var webElement in webElements)
             {
-                list.Add(new WebElementAdapter(webElement));
+                list.Add(new WebElement(webElement));
             }
 
-            return new ReadOnlyCollection<IWebElementAdapter>(list);
+            return new ReadOnlyCollection<IWebElement>(list);
         }
 
-        public IWebElementAdapter FindAdaptedElement(By by)
+        public IWebElement FindAdaptedElement(By by)
         {
             try
             {
-                return new WebElementAdapter(_webDriver.FindElement(by));
+                return new WebElement(_webDriver.FindElement(by));
             }
             catch (NotFoundException)
             {
@@ -113,7 +114,7 @@ namespace Six.Test.Selenium.WebDriver
             get { return _webDriver.WindowHandles; }
         }
 
-        public IWebElement FindElement(By by)
+        public OpenQA.Selenium.IWebElement FindElement(By by)
         {
             return _webDriver.FindElement(by);
         }
@@ -130,7 +131,7 @@ namespace Six.Test.Selenium.WebDriver
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
         /// <returns></returns>
-        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
+        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElement> webElements)
         {
             return webElements.Select(item => item.Text).ToList();
         }

@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
     public class BusinessViewpoint : PortletViewBase
     {
-        public static IWebElementAdapter ReceiptHeader
+        public static IWebElement ReceiptHeader
         {
             get
             {
@@ -60,7 +61,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public static IWebElementAdapter ArticleChange
+        public static IWebElement ArticleChange
         {
             get
             {
@@ -72,7 +73,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public static IWebElementAdapter MoveTerminal
+        public static IWebElement MoveTerminal
         {
             get
             {

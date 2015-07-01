@@ -1,21 +1,22 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Customer
 {
     public class View : WebObject
     {
-        public static IWebElementAdapter MoveButton
+        public static IWebElement MoveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("move")); }
         }
 
-        public static IWebElementAdapter EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
 
-        public static IWebElementAdapter EditDefaultConfigButton
+        public static IWebElement EditDefaultConfigButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("CustomerDefaultEdit")); }
         }
@@ -155,7 +156,7 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.Id("SBSAddressNumber")).Text; }
         }
 
-        public static IWebElementAdapter ContactCreate
+        public static IWebElement ContactCreate
         {
             get
             {
@@ -165,7 +166,7 @@ namespace Six.Scs.Test.View.Customer
             }
         }
 
-        public static IWebElementAdapter CustomerEdit
+        public static IWebElement CustomerEdit
         {
             get
             {
@@ -173,7 +174,7 @@ namespace Six.Scs.Test.View.Customer
                     WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/scs2/Customer/Edit?customerId=']"));
             }
         }
-        public static IWebElementAdapter Infotexts
+        public static IWebElement Infotexts
         {
             get
             {

@@ -4,7 +4,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
 {
     public class PasswortTextFieldElement : TextFieldElement
     {
-        public PasswortTextFieldElement(IWebElement webElement) : base(webElement)
+        public PasswortTextFieldElement(OpenQA.Selenium.IWebElement webElement) : base(webElement)
         {
         }
 

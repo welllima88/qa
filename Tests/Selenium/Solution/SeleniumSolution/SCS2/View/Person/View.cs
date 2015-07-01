@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Person
 {
     public class View : WebObject
     {
-        public static IWebElementAdapter EditButton
+        public static IWebElement EditButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("edit")); }
         }
@@ -90,12 +91,12 @@ namespace Six.Scs.Test.View.Person
             get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
-        public static IWebElementAdapter DeleteButton
+        public static IWebElement DeleteButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
         }
 
-        public static IWebElementAdapter CreateUser
+        public static IWebElement CreateUser
         {
             get { return WebDriver.FindAdaptedElement(By.Id("CreateUser")); }
         }

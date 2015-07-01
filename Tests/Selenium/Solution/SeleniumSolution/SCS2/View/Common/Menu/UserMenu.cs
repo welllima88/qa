@@ -1,31 +1,32 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
     public class UserMenu : WebObject
     {
-        public static IWebElementAdapter User
+        public static IWebElement User
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Index?USERNAME=']")); }
         }
 
-        public static IWebElementAdapter New
+        public static IWebElement New
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/New/?CUSTOMERID=']")); }
         }
 
-        public static IWebElementAdapter Edit
+        public static IWebElement Edit
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Edit?USERNAME=']")); }
         }
 
-        public static IWebElementAdapter Feedback
+        public static IWebElement Feedback
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Feedback/List?USERNAME=']")); }
         }
 
-        public static IWebElementAdapter Service
+        public static IWebElement Service
         {
             get
             {
@@ -33,12 +34,12 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Roles
+        public static IWebElement Roles
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/UserRoleEdit?USERNAME=']")); }
         }
 
-        public static IWebElementAdapter ResetPassword
+        public static IWebElement ResetPassword
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/ResetPassword/?USERNAME=']")); }
         }

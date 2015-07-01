@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common
 {
     public class MetaNavBar : WebObject
     {
-        public static IWebElementAdapter LogOff
+        public static IWebElement LogOff
         {
             get
             {
@@ -16,7 +17,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter User
+        public static IWebElement User
         {
             get
             {
@@ -26,7 +27,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Languages
+        public static IWebElement Languages
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a#ctl00_hplLanguages.menu")); }
         }
@@ -36,7 +37,7 @@ namespace Six.Scs.Test.View.Common
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#metaNavBar a.menu#ctl00_hplLanguages")).Text; }
         }
 
-        public static IWebElementAdapter CompanyLogo
+        public static IWebElement CompanyLogo
         {
             get
             {
@@ -44,7 +45,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IEnumerable<IWebElementAdapter> LanguageItems
+        public static IEnumerable<IWebElement> LanguageItems
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector("body>div.popup>a")); }
         }

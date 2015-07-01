@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal
 {
@@ -9,87 +10,87 @@ namespace Six.Scs.Test.View.Terminal
         private const string Pre =
             "span#ctl00_bodyContentPlaceHolder_terminalProperties_terminalPropertiesPropertyFunctions_rowFunctions span";
 
-        public IWebElementAdapter Booking
+        public IWebElement Booking
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Booking']")); }
         }
 
-        public IWebElementAdapter BookingReservation
+        public IWebElement BookingReservation
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingReservation']")); }
         }
 
-        public IWebElementAdapter BookingTip
+        public IWebElement BookingTip
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingTIP']")); }
         }
 
-        public IWebElementAdapter BookingCashAdvance
+        public IWebElement BookingCashAdvance
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingCashAdvance']")); }
         }
 
-        public IWebElementAdapter Credit
+        public IWebElement Credit
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Credit']")); }
         }
 
-        public IWebElementAdapter BookingPhoneAuth
+        public IWebElement BookingPhoneAuth
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingPhoneAuth']")); }
         }
 
-        public IWebElementAdapter OwnRiskTransaktion
+        public IWebElement OwnRiskTransaktion
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_OwnRiskTransaktion']")); }
         }
 
-        public IWebElementAdapter BookingPhoneOrder
+        public IWebElement BookingPhoneOrder
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingPhoneOrder']")); }
         }
 
-        public IWebElementAdapter BookingAuth
+        public IWebElement BookingAuth
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingAuth']")); }
         }
 
-        public IWebElementAdapter BookingMailOrder
+        public IWebElement BookingMailOrder
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_BookingMailOrder']")); }
         }
 
-        public IWebElementAdapter Cancellation
+        public IWebElement Cancellation
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Cancelation']")); }
         }
 
-        public IWebElementAdapter Reservation
+        public IWebElement Reservation
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Reservation']")); }
         }
 
-        public IWebElementAdapter ReservationsAdjustment
+        public IWebElement ReservationsAdjustment
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_ReservationsAdjustment']")); }
         }
 
-        public IWebElementAdapter ConfirmPhoneAut
+        public IWebElement ConfirmPhoneAut
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_ConfirmPhoneAut']")); }
         }
 
-        public IWebElementAdapter Recurring
+        public IWebElement Recurring
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_Recurring']")); }
         }
 
-        public IWebElementAdapter PurchaseWithCashback
+        public IWebElement PurchaseWithCashback
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + "[id$='_PurchaseWithCashBack']")); }
         }
 
-        public IEnumerable<IWebElementAdapter> FunctionBits
+        public IEnumerable<IWebElement> FunctionBits
         {
             get { return WebDriver.FindAdaptedElements(By.CssSelector(Pre + " input")); }
         }

@@ -1,16 +1,17 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Customer
 {
     public class Create : WebObject
     {
-        public static IWebElementAdapter CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("ipnut#cancel")); }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("create")); }
         }
@@ -335,7 +336,7 @@ namespace Six.Scs.Test.View.Customer
             get { return WebDriver.FindAdaptedElement(By.CssSelector("select#CustomerData_CustomerSegmentId")).Text; }
         }
 
-        public static IWebElementAdapter Confirm
+        public static IWebElement Confirm
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }

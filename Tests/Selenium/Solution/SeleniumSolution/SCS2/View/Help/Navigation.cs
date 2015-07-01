@@ -1,11 +1,12 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Help
 {
     public class Navigation : WebObject
     {
-        public static IWebElementAdapter ReleaseNotes
+        public static IWebElement ReleaseNotes
         {
             get
             {
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Help
             }
         }
 
-        public static IWebElementAdapter Scs2
+        public static IWebElement Scs2
         {
             get
             {
@@ -25,7 +26,7 @@ namespace Six.Scs.Test.View.Help
             }
         }
 
-        public static IWebElementAdapter ScsHelp
+        public static IWebElement ScsHelp
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("body div ul.nav li a[href$='/help/SCS2']")); }
         }

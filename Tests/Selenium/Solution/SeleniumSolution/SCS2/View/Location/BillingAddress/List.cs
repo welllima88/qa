@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location.BillingAddress
 {
     public class List : WebObject
     {
-        public static IWebElementAdapter BillingAdressCreate
+        public static IWebElement BillingAdressCreate
         {
             get
             {

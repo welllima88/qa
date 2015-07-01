@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
     public class CustomerMenu : WebObject
     {
-        public static IWebElementAdapter Customer
+        public static IWebElement Customer
         {
             get
             {
@@ -13,7 +14,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CustomerCreate
+        public static IWebElement CustomerCreate
         {
             get
             {
@@ -21,7 +22,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter LocationCreate
+        public static IWebElement LocationCreate
         {
             get
             {
@@ -30,7 +31,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get
             {
@@ -41,7 +42,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter LocationsOfCustomer
+        public static IWebElement LocationsOfCustomer
         {
             get
             {
@@ -51,7 +52,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter TerminalsOfCustomerLocation
+        public static IWebElement TerminalsOfCustomerLocation
         {
             get
             {
@@ -61,7 +62,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter AllMpds
+        public static IWebElement AllMpds
         {
             get
             {
@@ -71,7 +72,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter AllTerminals
+        public static IWebElement AllTerminals
         {
             get
             {
@@ -81,7 +82,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Tickets
+        public static IWebElement Tickets
         {
             get
             {
@@ -91,7 +92,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Users
+        public static IWebElement Users
         {
             get
             {
@@ -99,7 +100,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Contacts
+        public static IWebElement Contacts
         {
             get
             {
@@ -109,7 +110,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter BillingAdresses
+        public static IWebElement BillingAdresses
         {
             get
             {
@@ -119,7 +120,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter BillingAddressEdit
+        public static IWebElement BillingAddressEdit
         {
             get
             {
@@ -129,7 +130,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CreateInfotext
+        public static IWebElement CreateInfotext
         {
             get
             {

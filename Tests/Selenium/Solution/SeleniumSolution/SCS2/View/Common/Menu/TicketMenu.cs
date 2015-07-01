@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
     public class TicketMenu : WebObject
     {
-        public static IWebElementAdapter Installations
+        public static IWebElement Installations
         {
             get
             {

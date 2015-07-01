@@ -1,12 +1,13 @@
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
     public class MassMutationMenu : WebObject
     {
-        public static IWebElementAdapter CustomerCreate
+        public static IWebElement CustomerCreate
         {
             get
             {
@@ -16,7 +17,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter LocationCreate
+        public static IWebElement LocationCreate
         {
             get
             {
@@ -26,7 +27,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get
             {
@@ -36,7 +37,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter ContractCreate
+        public static IWebElement ContractCreate
         {
             get
             {
@@ -46,7 +47,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter AcquirerChange
+        public static IWebElement AcquirerChange
         {
             get
             {
@@ -56,7 +57,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter MassMutation
+        public static IWebElement MassMutation
         {
             get
             {

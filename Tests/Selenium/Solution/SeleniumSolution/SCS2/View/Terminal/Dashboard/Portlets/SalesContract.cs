@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
@@ -10,7 +11,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             PortletId = "div#frame_SalesPortlet "; // div#SetupDataTree ul
         }
 
-        public IWebElementAdapter ContractType
+        public IWebElement ContractType
         {
             get
             {
@@ -18,7 +19,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter InstallType
+        public IWebElement InstallType
         {
             get
             {
@@ -26,7 +27,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter DeliverDate
+        public IWebElement DeliverDate
         {
             get
             {
@@ -34,7 +35,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter SupportContract
+        public IWebElement SupportContract
         {
             get
             {
@@ -42,7 +43,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter CashIntegrator
+        public IWebElement CashIntegrator
         {
             get
             {
@@ -50,39 +51,39 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public static IWebElementAdapter TerminalDuplicate
+        public static IWebElement TerminalDuplicate
         {
             get
             {
                 return
-                    new WebElementAdapter(WebDriver.WebDriverWait().Until(d => d.FindElement((
+                    new WebElement(WebDriver.WebDriverWait().Until(d => d.FindElement((
                         By.CssSelector(
                             "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']")))));
             }
         }
 
-        public static IWebElementAdapter Quit
+        public static IWebElement Quit
         {
             get
             {
                 return
-                    new WebElementAdapter(WebDriverWait.Until(d => d.FindElement(By.CssSelector(
+                    new WebElement(WebDriverWait.Until(d => d.FindElement(By.CssSelector(
                         "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalState/Edit?TerminalId='][href$='&cancel=True']"))));
             }
         }
 
-        public static IWebElementAdapter Replace
+        public static IWebElement Replace
         {
             get
             {
                 return
-                    new WebElementAdapter(WebDriver.WebDriverWait().Until(d => d.FindElement(
+                    new WebElement(WebDriver.WebDriverWait().Until(d => d.FindElement(
                         By.CssSelector(
                             "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalArticleSelector/ReplaceTerminal/?TerminalId=']"))));
             }
         }
 
-        public static IWebElementAdapter MarkAsRetour
+        public static IWebElement MarkAsRetour
         {
             get { return WebDriver.FindAdaptedElement(By.Id("markAsReturnLink")); }
         }

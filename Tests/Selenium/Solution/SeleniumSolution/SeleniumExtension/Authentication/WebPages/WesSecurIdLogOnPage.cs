@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Test.Selenium.Authentication.Webpages
 {
@@ -9,31 +10,35 @@ namespace Six.Test.Selenium.Authentication.Webpages
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Login']"));
             }
         }
 
         public static IWebElement HeadLine
         {
-            get { return WebDriver.FindElement(By.CssSelector("div.divmainheadlineinner")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div.divmainheadlineinner")); }
         }
 
         public static IWebElement Continue
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Weiter']"));
             }
         }
 
         public static IWebElement MessageInfo
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divmsginfo")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] div#divmsginfo")); }
         }
 
         public static IWebElement InputLabel
         {
-            get { return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] div#divinputlabel")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("form[name='LoginForm'] div#divinputlabel")); }
         }
 
         public static string Mandant
@@ -69,7 +74,9 @@ namespace Six.Test.Selenium.Authentication.Webpages
         {
             get
             {
-                return WebDriver.FindElement(By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Senden']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("form[name='LoginForm'] input.inputbutton[value='Senden']"));
             }
         }
 
@@ -85,17 +92,17 @@ namespace Six.Test.Selenium.Authentication.Webpages
 
         public static IWebElement LogoutLabel
         {
-            get { return WebDriver.FindElement(By.CssSelector("#divinputlabel")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#divinputlabel")); }
         }
 
         public static IWebElement LogoutMessage
         {
-            get { return WebDriver.FindElement(By.CssSelector("#divmsginfo")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("#divmsginfo")); }
         }
 
         public static IWebElement LogoutHeader
         {
-            get { return WebDriver.FindElement(By.CssSelector("div.divmainheadlineinner")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("div.divmainheadlineinner")); }
         }
     }
 }

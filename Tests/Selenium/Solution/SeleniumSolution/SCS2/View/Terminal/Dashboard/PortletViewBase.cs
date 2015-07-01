@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard
 {
@@ -16,7 +17,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
 
         protected static string PortletId { get; set; }
 
-        public IWebElementAdapter PortletTitle
+        public IWebElement PortletTitle
         {
             get
             {
@@ -26,7 +27,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
             }
         }
 
-        public IWebElementAdapter Refresh
+        public IWebElement Refresh
         {
             get
             {
@@ -36,7 +37,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
             }
         }
 
-        public IWebElementAdapter Minimize
+        public IWebElement Minimize
         {
             get
             {

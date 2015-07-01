@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
@@ -25,7 +26,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter SerialNo
+        public IWebElement SerialNo
         {
             get
             {
@@ -36,7 +37,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter Password
+        public IWebElement Password
         {
             get
             {
@@ -47,7 +48,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter TerminalType
+        public IWebElement TerminalType
         {
             get
             {
@@ -58,7 +59,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public IWebElementAdapter NetType
+        public IWebElement NetType
         {
             get
             {
@@ -69,7 +70,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public static IWebElementAdapter MpdAssign
+        public static IWebElement MpdAssign
         {
             get
             {

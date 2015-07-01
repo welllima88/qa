@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Mpd
 {
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Mpd
             set { WebDriver.FindAdaptedElement(By.Id("BackupMpdSelected")).Selector().SelectByValue(value); }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }

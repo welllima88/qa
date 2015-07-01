@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Brand
 {
@@ -8,12 +9,12 @@ namespace Six.Scs.Test.View.Brand
         public const string Acquirer = "Acquirer";
         public const string Brand = "Provider";
 
-        public static IWebElementAdapter ConfirmButton()
+        public static IWebElement ConfirmButton()
         {
             return WebDriver.FindAdaptedElement(By.Id("next"));
         }
 
-        public static IWebElementAdapter CancelButton()
+        public static IWebElement CancelButton()
         {
             return WebDriver.FindAdaptedElement(By.Id("cancel"));
         }
@@ -47,7 +48,7 @@ namespace Six.Scs.Test.View.Brand
             ClickElement(locator);
         }
 
-        public static IWebElementAdapter BrandTree()
+        public static IWebElement BrandTree()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector("div#createContractTree"));
         }

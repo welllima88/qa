@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common
 {
     public class Footer : WebObject
     {
-        public static IWebElementAdapter Disclaimer
+        public static IWebElement Disclaimer
         {
             get
             {
@@ -13,7 +14,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Copyright
+        public static IWebElement Copyright
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#footerNavigationBar>div#copyright")); }
         }

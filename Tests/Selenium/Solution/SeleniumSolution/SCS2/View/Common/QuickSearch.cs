@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common
 {
@@ -21,7 +22,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter SearchButton
+        public static IWebElement SearchButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("div#searchBar>p#searchSubmit")); }
         }

@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.User
 {
     public class List : WebObject
     {
-        public static IWebElementAdapter UserCreate
+        public static IWebElement UserCreate
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#content button[name='create']")); }
         }

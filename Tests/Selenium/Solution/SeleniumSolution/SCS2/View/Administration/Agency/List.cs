@@ -1,11 +1,12 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Administration.Agency
 {
     public class List : WebObject
     {
-        public static IWebElementAdapter Create
+        public static IWebElement Create
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='create']")); }
         }

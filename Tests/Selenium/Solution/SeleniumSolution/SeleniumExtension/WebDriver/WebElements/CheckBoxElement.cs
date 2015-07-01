@@ -4,9 +4,9 @@ namespace Six.Test.Selenium.WebDriver.WebElements
 {
     public class CheckBoxElement
     {
-        private readonly IWebElement _webElement;
+        private readonly OpenQA.Selenium.IWebElement _webElement;
 
-        public CheckBoxElement(IWebElement webElement)
+        public CheckBoxElement(OpenQA.Selenium.IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("input") && webElement.GetAttribute("type").Equals("checkbox")))
                 throw new NotCheckableElementException(webElement.TagName, webElement.GetCssValue("type"));
