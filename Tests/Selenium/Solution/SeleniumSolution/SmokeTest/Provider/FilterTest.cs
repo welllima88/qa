@@ -19,9 +19,23 @@ namespace Six.Scs.Test.Provider
         }
 
         [Test]
+        [Test]
+        public void ById()
+        {
+            List.Filter = "281";
+            Assert.That(List.Providers, Has.All.Contains("281").IgnoreCase);
+            Assert.That(List.Providers, Has.Exactly(1).Contains("SIX Payment Services ep2"));
+            Assert.That(List.Providers, Has.Exactly(1).Contains("DKV Euro Service MOC IFSF"));
+            Assert.That(List.Providers.Count(), Is.EqualTo(2));
+        }
+
+        [Test]
         public void ByName()
         {
-            // six payment services ep2
+            List.Filter = "pOstCarD";
+            Assert.That(List.Providers, Has.All.Contains("Postcard").IgnoreCase);
+            Assert.That(List.Providers, Has.Exactly(1).Contains("Postcard ep2"));
+            Assert.That(List.Providers.Count(), Is.EqualTo(3));
         }
 
         [Test]
