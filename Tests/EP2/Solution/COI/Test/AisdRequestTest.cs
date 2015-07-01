@@ -60,7 +60,7 @@ namespace Six.Scs.Ep2.Coi.Test
 
         [Test]
         [Category("SIX")]
-        [Ignore] //because reponses with no data to SC ID 8000000001
+        [Ignore("because reponses with no data to SC ID 8000000001")]
         public void ResponseFromAcquirerSix()
         {
             _requestMsg.AcqId = 2;
@@ -105,8 +105,4 @@ namespace Six.Scs.Ep2.Coi.Test
             Assert.That(_messageHandler.Error.ErrorDescription, Is.EquivalentTo("no data, missing init address"));
         }
     }
-}
-
-namespace Six.Scs.Ep2.Coi.Data.Definitions
-{
 }

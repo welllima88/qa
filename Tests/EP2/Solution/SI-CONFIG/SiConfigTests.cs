@@ -348,6 +348,7 @@ namespace Six.Scs.Ep2.SI.Config
 
         [Category("Integration")]
         [Test]
+        [Ignore("not reliable at the moment")]
         public void Given_TheTerminalNeedsReset_RightMessages_Sent()
         {
             _log.Info("Start");
