@@ -88,7 +88,7 @@ namespace Six.Scs.Test
             Workflow.User.AssignRoles(roles);
 
             var actList = Roles.GetAssignedRoles();
-            CollectionAssert.AreEquivalent(roles, actList);
+            Assert.That(actList, Is.EquivalentTo(roles));
         }
 
         public static void Delete(Model.ValueObjects.User user)
