@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Administration.Provider
 {
@@ -35,6 +36,11 @@ namespace Six.Scs.Test.View.Administration.Provider
                     WebDriver.FindAdaptedElements(By.CssSelector("td#content div table tbody tr"))
                         .Select(e => e.Text);
             }
+        }
+
+        public static IWebElement FilterReset
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("[ng-click='providerFilter = undefined']")); }
         }
     }
 }
