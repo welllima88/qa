@@ -1,6 +1,5 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
-using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard
 {
@@ -40,9 +39,15 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
             get { return WebDriver.FindAdaptedElement(By.Id("TD_Trm_State")).Text; }
         }
 
-        public static IWebElement Cancelled
+        public static bool Cancelled
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("div#DashboardSummaryContainer div.bg-danger")); }
+            get
+            {
+                return
+                    WebDriver.FindElement(By.CssSelector("div#stickySummaryHeader"))
+                        .GetAttribute("class")
+                        .Contains("bg-danger");
+            }
         }
     }
 }
