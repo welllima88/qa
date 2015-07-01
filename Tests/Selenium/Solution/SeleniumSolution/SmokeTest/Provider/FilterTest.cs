@@ -9,7 +9,7 @@ namespace Six.Scs.Test.Provider
         [TestFixtureSetUp]
         public void Navigate()
         {
-            TestDirector.Navigate("Provider/");
+            TestDirector.Navigate("Admin/Provider");
         }
 
         [Test]
