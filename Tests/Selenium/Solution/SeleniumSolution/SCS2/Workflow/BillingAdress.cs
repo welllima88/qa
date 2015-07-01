@@ -7,7 +7,8 @@ namespace Six.Scs.Test.Workflow
     {
         public static void Create(BillingAddress b)
         {
-            CustomerMenu.BillingAdressCreate.Click();
+            CustomerMenu.BillingAdresses.Click();
+            View.Location.BillingAddress.List.BillingAdressCreate.Click();
 
             View.Location.BillingAddress.Create.CompanyName = b.CompanyName;
             View.Location.BillingAddress.Create.StreetNo = b.Adress.StreetNo;

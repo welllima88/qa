@@ -27,7 +27,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
                             d =>
                                 d.FindElement(
                                     By.CssSelector(
-                                        "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/List?&TerminalId=']"))));
+                                        "div#frame_TerminalInfotextPortlet div.portletLinks a[href*='/TerminalInfoText/Create?&TerminalId=']"))));
             }
         }
     }

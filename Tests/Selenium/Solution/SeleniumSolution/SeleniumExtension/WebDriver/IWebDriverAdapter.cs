@@ -9,7 +9,6 @@ namespace Six.Test.Selenium.WebDriver
     {
         IEnumerable<IWebElementAdapter> FindAdaptedElements(By by);
         IWebElementAdapter FindAdaptedElement(By by);
-        IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements);
         WebDriverWait WebDriverWait();
     }
 }

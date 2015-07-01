@@ -41,25 +41,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CustomerEdit
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Customer/Edit/?CUSTOMERID=']"));
-            }
-        }
-
-        public static IWebElementAdapter CustomerDeactivate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='Customer/CustomerDeactivate.aspx?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter LocationsOfCustomer
         {
             get
@@ -138,16 +119,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter BillingAdressCreate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='BillingAddress/New?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElementAdapter BillingAddressEdit
         {
             get
@@ -155,16 +126,6 @@ namespace Six.Scs.Test.View.Common.Menu
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector("td#leftHandMenu a[href*='/BillingAddress/Edit?CUSTOMERID=']"));
-            }
-        }
-
-        public static IWebElementAdapter Infotexts
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListCustomer?&CUSTOMERID=']"));
             }
         }
 

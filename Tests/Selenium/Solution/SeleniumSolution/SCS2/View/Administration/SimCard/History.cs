@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -13,7 +14,7 @@ namespace Six.Scs.Test.View.Administration.SimCard
 
         public static IEnumerable<string> HistoryList
         {
-            get { return WebDriver.WebElementsAsStringList(HistoryElements); }
+            get { return HistoryElements.Select(e => e.Text); }
         }
     }
 }

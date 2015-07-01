@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
@@ -71,9 +72,8 @@ namespace Six.Scs.Test.View.Administration.Article
             get
             {
                 return
-                    WebDriver.WebElementsAsStringList(
-                        WebDriver.FindAdaptedElements(
-                            By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")));
+                    WebDriver.FindAdaptedElements(
+                        By.CssSelector("td#content form div table#tenants.dataTable tbody tr td")).Select(e => e.Text);
             }
         }
 

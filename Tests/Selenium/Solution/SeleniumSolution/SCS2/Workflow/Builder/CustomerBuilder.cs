@@ -40,7 +40,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickEdit()
         {
-            CustomerMenu.CustomerEdit.Click();
+            View.Customer.View.CustomerEdit.Click();
         }
 
         protected abstract void EditCustomerData();
