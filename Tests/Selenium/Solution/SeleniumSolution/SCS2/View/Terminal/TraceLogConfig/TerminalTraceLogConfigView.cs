@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.TraceLogConfig
 {
@@ -50,7 +51,7 @@ namespace Six.Scs.Test.View.Terminal.TraceLogConfig
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ConfigData_InternetAddressPort")).Text; }
         }
 
-        public static IWebElementAdapter Edit
+        public static IWebElement Edit
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='deactivate']")); }
         }

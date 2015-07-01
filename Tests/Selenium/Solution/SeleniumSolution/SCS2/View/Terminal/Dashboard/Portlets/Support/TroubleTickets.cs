@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
 {
@@ -87,12 +88,12 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support
             set { WebDriver.FindAdaptedElement(By.Id("Notes")).TextArea().TypeText(value); }
         }
 
-        public static IWebElementAdapter Save
+        public static IWebElement Save
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
-        public static IWebElementAdapter SaveAndClose
+        public static IWebElement SaveAndClose
         {
             get { return WebDriver.FindAdaptedElement(By.Id("SaveAndClose")); }
         }

@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common
 {
     public class NavigationBar : WebObject
     {
-        public static IWebElementAdapter Lobby
+        public static IWebElement Lobby
         {
             get
             {
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Administration
+        public static IWebElement Administration
         {
             get
             {
@@ -25,7 +26,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Reporting
+        public static IWebElement Reporting
         {
             get
             {
@@ -35,7 +36,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Help
+        public static IWebElement Help
         {
             get
             {

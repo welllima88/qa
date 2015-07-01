@@ -1,150 +1,151 @@
 using System;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Administration.SoftwareExchange
 {
     public class Create : WebObject
     {
-        public static IWebElementAdapter SelectedTerminalType
+        public static IWebElement SelectedTerminalType
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedTerminalType")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter IncludeDeactivated
+        public static IWebElement IncludeDeactivated
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#IncludeDeactivated")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter IncludeCanceled
+        public static IWebElement IncludeCanceled
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#IncludeCancelled")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedCurrentRelease
+        public static IWebElement SelectedCurrentRelease
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedCurrentReleaseCriteria")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedNewRelease
+        public static IWebElement SelectedNewRelease
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedNewReleaseCriteria")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedNewTargetRelease
+        public static IWebElement SelectedNewTargetRelease
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedNewRelease")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedNetType
+        public static IWebElement SelectedNetType
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedNetType")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter TidRangeStart
+        public static IWebElement TidRangeStart
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TidRangeStart")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter TidRangeEnd
+        public static IWebElement TidRangeEnd
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TidRangeEnd")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter TerminalIdSelection
+        public static IWebElement TerminalIdSelection
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#TerminalIdSelection")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter RecallNextFrom
+        public static IWebElement RecallNextFrom
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#RecallNextFrom")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter RecallNextUntil
+        public static IWebElement RecallNextUntil
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#RecallNextUntil")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedSupplierMandant
+        public static IWebElement SelectedSupplierMandant
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedSupplierMandant")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter IncludeKeyAccounts
+        public static IWebElement IncludeKeyAccounts
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#IncludeKeyAccounts")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter CustomerIds
+        public static IWebElement CustomerIds
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#CustomerIds")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter Zips
+        public static IWebElement Zips
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#Zips")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectedCountry
+        public static IWebElement SelectedCountry
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#SelectedCountry")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter ResultLimit
+        public static IWebElement ResultLimit
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#ResultLimit")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter RefreshButton
+        public static IWebElement RefreshButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#refresh")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter BatchTitle
+        public static IWebElement BatchTitle
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#BatchTitle")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectAllSwitch
+        public static IWebElement SelectAllSwitch
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#selectAllSwitch")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter SelectOddEvenSwitch
+        public static IWebElement SelectOddEvenSwitch
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#selectOddEvenSwitch")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter StartDateTime
+        public static IWebElement StartDateTime
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("#startDateTime")); }
             set { throw new NotImplementedException(); }
         }
 
-        public static IWebElementAdapter BatchCreateButton
+        public static IWebElement BatchCreateButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("input#execute")); }
         }

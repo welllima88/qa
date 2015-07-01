@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal
 {
@@ -10,7 +11,7 @@ namespace Six.Scs.Test.View.Terminal
             set { WebDriver.FindAdaptedElement(By.Id("TakeAddressFromNewLocation")).CheckBox().Set(value); }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }

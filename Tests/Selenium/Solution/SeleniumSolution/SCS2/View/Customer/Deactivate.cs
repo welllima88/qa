@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Customer
 {
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Customer
             }
         }
 
-        public static IWebElementAdapter Message
+        public static IWebElement Message
         {
             get
             {
@@ -24,7 +25,7 @@ namespace Six.Scs.Test.View.Customer
             }
         }
 
-        public static IWebElementAdapter DeactivateConfirm
+        public static IWebElement DeactivateConfirm
         {
             get
             {

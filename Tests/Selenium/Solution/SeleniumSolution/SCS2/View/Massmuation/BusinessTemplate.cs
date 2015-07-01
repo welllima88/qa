@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Massmuation
 {
@@ -52,12 +53,12 @@ namespace Six.Scs.Test.View.Massmuation
             set { WebDriver.FindAdaptedElement(By.Id("newBusinessTemplateDropdown")).Selector().SelectByText(value); }
         }
 
-        public static IWebElementAdapter Save
+        public static IWebElement Save
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
-        public static IWebElementAdapter Reload
+        public static IWebElement Reload
         {
             get { return WebDriver.FindAdaptedElement(By.Id("reload")); }
         }

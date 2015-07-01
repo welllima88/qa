@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Person
 {
     public class Edit : WebObject
     {
-        public static IWebElementAdapter CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button#cancel")); }
         }
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Person
             get { return WebDriver.FindAdaptedElement(By.Id("save")).Button(); }
         }
 
-        public static IWebElementAdapter ClickAdressFromLocation
+        public static IWebElement ClickAdressFromLocation
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button#defaultAdress")); }
         }

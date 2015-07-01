@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.User
 {
@@ -70,7 +71,7 @@ namespace Six.Scs.Test.View.User
             get { return WebDriver.FindAdaptedElement(By.Id("Comment")).Text; }
         }
 
-        public static IWebElementAdapter Edit
+        public static IWebElement Edit
         {
             get
             {
@@ -78,7 +79,7 @@ namespace Six.Scs.Test.View.User
             }
         }
 
-        public static IWebElementAdapter ReactivateButton
+        public static IWebElement ReactivateButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("reactivate")); }
         }
@@ -88,17 +89,17 @@ namespace Six.Scs.Test.View.User
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button#reset")).Button(); }
         }
 
-        public static IWebElementAdapter AddServiceButton
+        public static IWebElement AddServiceButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService?userName=']")); }
         }
 
-        public static IWebElementAdapter AssignRoles
+        public static IWebElement AssignRoles
         {
             get { return WebDriver.FindAdaptedElement(By.Id("assignRoles")); }
         }
 
-        public static IWebElementAdapter DeleteButton
+        public static IWebElement DeleteButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/Delete?userName=']")); }
         }

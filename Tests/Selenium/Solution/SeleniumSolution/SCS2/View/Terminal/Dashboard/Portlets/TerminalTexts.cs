@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
     public class TerminalTexts : PortletViewBase
     {
-        public static IWebElementAdapter CreateInfotext
+        public static IWebElement CreateInfotext
         {
             get
             {
@@ -16,13 +17,13 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             }
         }
 
-        public static IWebElementAdapter Infotexts
+        public static IWebElement Infotexts
         {
             get
             {
                 var w = WebDriver.WebDriverWait();
                 return
-                    new WebElementAdapter(
+                    new WebElement(
                         w.Until(
                             d =>
                                 d.FindElement(

@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location
 {
@@ -115,14 +116,14 @@ namespace Six.Scs.Test.View.Location
             get { return WebDriver.FindAdaptedElement(By.Id("Agency")).Text; }
         }
 
-        public static IWebElementAdapter ContactCreate
+        public static IWebElement ContactCreate
         {
             get
             {
                 return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Person/New?locationId=']"));
             }
         }
-        public static IWebElementAdapter Infotexts
+        public static IWebElement Infotexts
         {
             get
             {

@@ -1,61 +1,62 @@
 ﻿using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Administration.TaskScheduler
 {
     public class Edit : WebObject
     {
-        public static IWebElementAdapter Retries
+        public static IWebElement Retries
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter NextRun
+        public static IWebElement NextRun
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter Errors
+        public static IWebElement Errors
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter State
+        public static IWebElement State
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter LastErrorMessage
+        public static IWebElement LastErrorMessage
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter LastErrorCode
+        public static IWebElement LastErrorCode
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter LastRun
+        public static IWebElement LastRun
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter LastStop
+        public static IWebElement LastStop
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter LastChange
+        public static IWebElement LastChange
         {
             get { return WebDriver.FindAdaptedElement(By.Id("??")); }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
         }
 
-        public static IWebElementAdapter DeleteButton
+        public static IWebElement DeleteButton
         {
             get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
         }

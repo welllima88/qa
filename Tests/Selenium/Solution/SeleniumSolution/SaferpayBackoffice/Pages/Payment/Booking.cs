@@ -6,36 +6,36 @@ namespace Six.Saferpay.Backoffice.Test.Pages.Payment
     public class Booking
     {
         [FindsBy(How = How.Id, Using = "CardNumber")]
-        public static IWebElementAdapter CardNumber;
+        public static IWebElement CardNumber;
 
         [FindsBy(How = How.Id, Using = "ExpiryMonth")]
-        public static IWebElementAdapter ExpiryMonth;
+        public static IWebElement ExpiryMonth;
 
         [FindsBy(How = How.Id, Using = "ExpiryYear")]
-        public static IWebElementAdapter ExpiryYear;
+        public static IWebElement ExpiryYear;
 
         [FindsBy(How = How.Id, Using = "C-HolderName")]
-        public static IWebElementAdapter CardHolderName;
+        public static IWebElement CardHolderName;
 
         [FindsBy(How = How.Id, Using = "VerificationCode")]
-        public static IWebElementAdapter VerificationCode;
+        public static IWebElement VerificationCode;
 
         [FindsBy(How = How.Id, Using = "C-Currency")]
-        public static IWebElementAdapter Currency;
+        public static IWebElement Currency;
 
         [FindsBy(How = How.Id, Using = "C-Amount")]
-        public static IWebElementAdapter Amount;
+        public static IWebElement Amount;
 
         [FindsBy(How = How.Id, Using = "C-OrderId")]
-        public static IWebElementAdapter OrderId;
+        public static IWebElement OrderId;
 
         [FindsBy(How = How.Id, Using = "C-Description")]
-        public static IWebElementAdapter Description;
+        public static IWebElement Description;
 
         [FindsBy(How = How.Id, Using = "C-PayerNote")]
-        public static IWebElementAdapter PayerNote;
+        public static IWebElement PayerNote;
 
         [FindsBy(How = How.CssSelector, Using = "button")]
-        public static IWebElementAdapter Pay;
+        public static IWebElement Pay;
     }
 }

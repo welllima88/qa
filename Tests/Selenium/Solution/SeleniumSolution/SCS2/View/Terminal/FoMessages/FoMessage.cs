@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.FoMessages
 {
@@ -11,7 +12,7 @@ namespace Six.Scs.Test.View.Terminal.FoMessages
         private const string Pre =
             "html body#body table#tableStructure tbody tr#rowContent td#content table tbody tr.Summary td";
 
-        public static IWebElementAdapter Compare
+        public static IWebElement Compare
         {
             get { return WebDriver.FindAdaptedElement(By.Id("compareBtn")); }
         }

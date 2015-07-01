@@ -7,7 +7,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
     /// </summary>
     public class TextAreaElement : TextFieldElement
     {
-        public TextAreaElement(IWebElement webElement)
+        public TextAreaElement(OpenQA.Selenium.IWebElement webElement)
         {
             if (!(webElement.TagName.Equals("textarea")))
                 throw new NotTextAreaElementException(webElement.TagName);

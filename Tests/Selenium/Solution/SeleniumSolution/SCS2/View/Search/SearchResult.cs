@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Search
 {
@@ -20,12 +21,12 @@ namespace Six.Scs.Test.View.Search
             return WebDriver.FindAdaptedElement(By.CssSelector("span input[id$='Filter']")).TextField();
         }
 
-        public IWebElementAdapter LoadMoreLink()
+        public IWebElement LoadMoreLink()
         {
             return WebDriver.FindAdaptedElement(By.CssSelector(" span input[id^='loadMore']"));
         }
 
-        public static IWebElementAdapter First(string section)
+        public static IWebElement First(string section)
         {
             WaitForSearchHasFinished();
             var cssb =
@@ -35,7 +36,7 @@ namespace Six.Scs.Test.View.Search
             return WebDriver.FindAdaptedElement(By.CssSelector(cssb));
         }
 
-        public static IEnumerable<IWebElementAdapter> Result(string section)
+        public static IEnumerable<IWebElement> Result(string section)
         {
             WaitForSearchHasFinished();
             var cssb = string.Format("div[ng-app='searchApp']>div[ng-controller='{0}']>div>table>tbody>tr", section);

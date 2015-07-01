@@ -5,14 +5,14 @@ namespace Six.Test.Selenium.WebDriver.WebElements
     /// <summary>
     ///     This class wraps WebElements from selenium and adds features which are commonly needed.
     /// </summary>
-    public class WebElementAdapter : IWebElementAdapter
+    public class WebElement : IWebElement
     {
         /// <summary>
         ///     provide the public member
         /// </summary>
-        protected readonly IWebElement _theWebElement;
+        protected readonly OpenQA.Selenium.IWebElement _theWebElement;
 
-        public WebElementAdapter(IWebElement webElement)
+        public WebElement(OpenQA.Selenium.IWebElement webElement)
         {
             _theWebElement = webElement;
         }

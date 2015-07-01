@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
     public class LocationMenu : WebObject
     {
-        public static IWebElementAdapter Location
+        public static IWebElement Location
         {
             get
             {
@@ -13,7 +14,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter TerminalCreate
+        public static IWebElement TerminalCreate
         {
             get
             {
@@ -24,7 +25,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter CreateInfotext
+        public static IWebElement CreateInfotext
         {
             get
             {
@@ -34,7 +35,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter LocationEdit
+        public static IWebElement LocationEdit
         {
             get
             {
@@ -43,7 +44,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter LocationQuit
+        public static IWebElement LocationQuit
         {
             get
             {
@@ -53,7 +54,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Terminals
+        public static IWebElement Terminals
         {
             get
             {
@@ -63,7 +64,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter Contacts
+        public static IWebElement Contacts
         {
             get
             {

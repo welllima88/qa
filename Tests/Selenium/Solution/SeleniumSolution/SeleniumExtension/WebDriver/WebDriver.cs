@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = OpenQA.Selenium.IWebElement;
 
 namespace Six.Test.Selenium.WebDriver
 {
     /// <summary>
     ///     This WebDriver adapter adds one method to make use of adapted web elements
     /// </summary>
-    public class WebDriverAdapter : IWebDriverAdapter
+    public class WebDriver : IWebDriver
     {
-        private readonly IWebDriver _webDriver;
+        private readonly OpenQA.Selenium.IWebDriver _webDriver;
 
-        public WebDriverAdapter(IWebDriver webDriver)
+        public WebDriver(OpenQA.Selenium.IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }
@@ -29,25 +31,25 @@ namespace Six.Test.Selenium.WebDriver
             return _webDriver.FindElements(by);
         }
 
-        public IEnumerable<IWebElementAdapter> FindAdaptedElements(By by)
+        public IEnumerable<WebElements.IWebElement> FindAdaptedElements(By by)
         {
             var webElements = _webDriver.FindElements(by);
-            var list = new Collection<IWebElementAdapter>();
+            var list = new Collection<WebElements.IWebElement>();
 
             // convert:
             foreach (var webElement in webElements)
             {
-                list.Add(new WebElementAdapter(webElement));
+                list.Add(new WebElement(webElement));
             }
 
-            return new ReadOnlyCollection<IWebElementAdapter>(list);
+            return new ReadOnlyCollection<WebElements.IWebElement>(list);
         }
 
-        public IWebElementAdapter FindAdaptedElement(By by)
+        public WebElements.IWebElement FindAdaptedElement(By by)
         {
             try
             {
-                return new WebElementAdapter(_webDriver.FindElement(by));
+                return new WebElement(_webDriver.FindElement(by));
             }
             catch (NotFoundException)
             {
@@ -126,11 +128,16 @@ namespace Six.Test.Selenium.WebDriver
             return wait;
         }
 
+        public EventFiringWebDriver EventFiringWebDriver()
+        {
+            return new EventFiringWebDriver(_webDriver);
+        }
+
         /// <summary>
         /// </summary>
         /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
         /// <returns></returns>
-        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<IWebElementAdapter> webElements)
+        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<WebElements.IWebElement> webElements)
         {
             return webElements.Select(item => item.Text).ToList();
         }

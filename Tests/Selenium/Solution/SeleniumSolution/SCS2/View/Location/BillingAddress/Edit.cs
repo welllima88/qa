@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location.BillingAddress
 {
@@ -75,12 +76,12 @@ namespace Six.Scs.Test.View.Location.BillingAddress
             set { Create.Web = value; }
         }
 
-        public static IWebElementAdapter SaveButton
+        public static IWebElement SaveButton
         {
             get { return Create.SaveButton; }
         }
 
-        public static IWebElementAdapter CancelButton
+        public static IWebElement CancelButton
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button[name='cancel']")); }
         }

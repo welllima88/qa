@@ -2,6 +2,7 @@
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Massmuation
 {
@@ -43,7 +44,7 @@ namespace Six.Scs.Test.View.Massmuation
             }
         }
 
-        public static IWebElementAdapter ExecuteButton
+        public static IWebElement ExecuteButton
         {
             get
             {

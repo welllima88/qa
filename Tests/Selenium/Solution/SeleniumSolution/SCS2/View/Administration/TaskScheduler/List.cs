@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Administration.TaskScheduler
 {
@@ -9,7 +10,7 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         private const string Pre =
             "html body#body table#tableStructure tbody tr#rowContent td#content div table tbody tr";
 
-        public static IWebElementAdapter CreateTask
+        public static IWebElement CreateTask
         {
             get
             {

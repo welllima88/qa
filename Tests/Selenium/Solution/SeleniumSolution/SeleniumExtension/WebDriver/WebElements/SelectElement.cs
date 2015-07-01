@@ -9,7 +9,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
     {
         private readonly OpenQA.Selenium.Support.UI.SelectElement _webElement;
 
-        public SelectElement(IWebElement webElement)
+        public SelectElement(OpenQA.Selenium.IWebElement webElement)
         {
             _webElement = new OpenQA.Selenium.Support.UI.SelectElement(webElement);
         }

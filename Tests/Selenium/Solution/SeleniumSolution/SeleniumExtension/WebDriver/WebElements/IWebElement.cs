@@ -3,7 +3,7 @@
     /// <summary>
     ///     Defines the additional methods that are necessary for a common WebElement
     /// </summary>
-    public interface IWebElementAdapter
+    public interface IWebElement
     {
         string Text { get; }
         bool Selected { get; }

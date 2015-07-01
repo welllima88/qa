@@ -1,6 +1,7 @@
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common.Menu
 {
@@ -9,17 +10,17 @@ namespace Six.Scs.Test.View.Common.Menu
     /// </summary>
     public class LobbyMenu : WebObject
     {
-        public static IWebElementAdapter Lobby
+        public static IWebElement Lobby
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Lobby/']")); }
         }
 
-        public static IWebElementAdapter SimCardManage
+        public static IWebElement SimCardManage
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/SIMCard']")); }
         }
 
-        public static IWebElementAdapter SerialNumberManage
+        public static IWebElement SerialNumberManage
         {
             get
             {
@@ -28,7 +29,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter AccessoireOrders
+        public static IWebElement AccessoireOrders
         {
             get
             {
@@ -36,7 +37,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter HardwareManage
+        public static IWebElement HardwareManage
         {
             get
             {
@@ -45,7 +46,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter AcccessoiresOrders
+        public static IWebElement AcccessoiresOrders
         {
             get
             {
@@ -55,7 +56,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter MyIncidents
+        public static IWebElement MyIncidents
         {
             get
             {
@@ -65,7 +66,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter MyTeams
+        public static IWebElement MyTeams
         {
             get
             {
@@ -75,7 +76,7 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElementAdapter TerminalReturnShipping
+        public static IWebElement TerminalReturnShipping
         {
             get
             {

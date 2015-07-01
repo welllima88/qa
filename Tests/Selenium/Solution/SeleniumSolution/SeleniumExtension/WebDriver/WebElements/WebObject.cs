@@ -14,6 +14,6 @@ namespace Six.Test.Selenium.WebDriver.WebElements
         /// <summary>
         ///     provides a public WebDriver reference for global use (should be set initially and externally)
         /// </summary>
-        public static IWebDriverAdapter WebDriver { get; set; }
+        public static IWebDriver WebDriver { get; set; }
     }
 }

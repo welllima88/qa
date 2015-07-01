@@ -57,8 +57,8 @@
     <Compile Include="WebDriver\WebElements\PasswortTextFieldElement.cs" />
     <Compile Include="WebDriver\WebElements\ButtonElement.cs" />
     <Compile Include="WebDriver\WebElements\TextFieldElement.cs" />
-    <Compile Include="WebDriver\IWebDriverAdapter.cs" />
-    <Compile Include="WebDriver\WebElements\IWebElementAdapter.cs" />
+    <Compile Include="WebDriver\IWebDriver.cs" />
+    <Compile Include="WebDriver\WebElements\IWebElement.cs" />
     <Compile Include="Authentication\IAuthentication.cs" />
     <Compile Include="Authentication\IApplication.cs" />
     <Compile Include="Authentication\Method\CertificateAuthentication.cs" />
@@ -76,8 +76,8 @@
     <Compile Include="WebDriver\WebElements\WebObject.cs" />
     <Compile Include="WebDriver\WebElements\IWebObject.cs" />
     <Compile Include="TestRegExpPatterns.cs" />
-    <Compile Include="WebDriver\WebDriverAdapter.cs" />
-    <Compile Include="WebDriver\WebElements\WebElementAdapter.cs" />
+    <Compile Include="WebDriver\WebDriver.cs" />
+    <Compile Include="WebDriver\WebElements\WebElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
 {
@@ -10,13 +11,13 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
         private const string PortletLocator = "div[id*='BrandPortlet']";
         private const string ContractTreeLocator = "div[id*='ContractTree']>ul";
 
-        public static IWebElementAdapter NewBrandButton
+        public static IWebElement NewBrandButton
         {
             get
             {
                 var w = WebDriver.WebDriverWait();
                 return
-                    new WebElementAdapter(
+                    new WebElement(
                         w.Until(
                             d =>
                                 d.FindElement(
@@ -26,7 +27,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
             }
         }
 
-        public static IWebElementAdapter Brand(string brandId)
+        public static IWebElement Brand(string brandId)
         {
             return
                 WebDriver.FindAdaptedElement(
@@ -44,7 +45,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                     .Select(e => e.Text);
         }
 
-        public static IWebElementAdapter Acquirer(string acquirerId)
+        public static IWebElement Acquirer(string acquirerId)
         {
             return
                 WebDriver.FindAdaptedElement(
@@ -60,7 +61,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                         PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] a.acqContractNode span")))
                     .Select(e => e.Text);
         }
-        public static IEnumerable<IWebElementAdapter> Tickets()
+        public static IEnumerable<IWebElement> Tickets()
         {
 
             //acqContract_

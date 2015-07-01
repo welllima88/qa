@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
 {
@@ -10,7 +11,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             PortletId = "div#frame_TerminalActivityPortlet ";
         }
 
-        public static IWebElementAdapter FoMessages
+        public static IWebElement FoMessages
         {
             get
             {

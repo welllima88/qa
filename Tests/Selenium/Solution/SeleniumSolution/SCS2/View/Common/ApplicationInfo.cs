@@ -1,11 +1,12 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Common
 {
     public class ApplicationInfo : WebObject
     {
-        public static IWebElementAdapter ApplicationName
+        public static IWebElement ApplicationName
         {
             get
             {
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter Environment
+        public static IWebElement Environment
         {
             get
             {
@@ -34,7 +35,7 @@ namespace Six.Scs.Test.View.Common
             }
         }
 
-        public static IWebElementAdapter SupportDialog
+        public static IWebElement SupportDialog
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("div.modal-dialog")); }
         }
