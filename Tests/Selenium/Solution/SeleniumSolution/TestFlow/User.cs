@@ -83,7 +83,8 @@ namespace Six.Scs.Test
         {
             Open(user);
             IEnumerable<string> roles =
-                new Collection<string>(new[] {"Techsupport", "Kundendienst", "Terminal aufschalten +Intern", "PRIMAS"});
+                new Collection<string>(new[]
+                {"Tickets", "Kunde anzeigen", "Benutzer anzeigen", "SCS Administrator", "Verwaltung"});
 
             Workflow.User.AssignRoles(roles);
 
