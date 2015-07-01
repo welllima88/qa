@@ -6,6 +6,12 @@ namespace Six.Scs.Test.Provider
     [TestFixture]
     public class FilterTest
     {
+        [SetUp]
+        public void ResetFilter()
+        {
+            List.FilterReset.Click();
+        }
+
         [TestFixtureSetUp]
         public void Navigate()
         {
