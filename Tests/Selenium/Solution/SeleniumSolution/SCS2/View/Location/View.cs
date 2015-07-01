@@ -122,5 +122,12 @@ namespace Six.Scs.Test.View.Location
                 return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Person/New?locationId=']"));
             }
         }
+        public static IWebElementAdapter Infotexts
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/InfoText/NewLocationInfoText?locationId=']"));
+            }
+        }
     }
 }

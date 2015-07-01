@@ -72,13 +72,5 @@ namespace Six.Scs.Test.View.Common.Menu
                         By.CssSelector("td#leftHandMenu a[href*='/Person/LocationPersonList'][href*='&LOCATIONID=']"));
             }
         }
-
-        public static IWebElementAdapter Infotexts
-        {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/InfoText/ListLocation']"));
-            }
-        }
     }
 }
