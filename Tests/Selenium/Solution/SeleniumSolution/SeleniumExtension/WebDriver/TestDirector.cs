@@ -9,7 +9,7 @@ namespace Six.Test.Selenium.WebDriver
     public static class TestDirector
     {
         private const string HomePathUrl = "";
-        public static IWebDriverAdapter WebDriver { get; private set; }
+        public static IWebDriver WebDriver { get; private set; }
         public static TestEnvironment TestEnvironment { get; set; }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace Six.Test.Selenium.WebDriver
             {
                 // var firefoxBinary = new FirefoxBinary(@"..\Firefox\firefox.exe");
                 // WebDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
-                WebDriver = new WebDriverAdapter(new FirefoxDriver(firefoxProfile));
+                WebDriver = new WebDriver(new FirefoxDriver(firefoxProfile));
 
                 run = "LOCAL";
             }
@@ -48,11 +48,11 @@ namespace Six.Test.Selenium.WebDriver
             {
                 var capability = DesiredCapabilities(firefoxProfile);
                 WebDriver =
-                    new WebDriverAdapter(new RemoteWebDriver(new Uri(gridHub), capability));
+                    new WebDriver(new RemoteWebDriver(new Uri(gridHub), capability));
 
                 run = "GRID";
             }
-            WebObject.WebDriver = new WebDriverAdapter(WebDriver);
+            WebObject.WebDriver = new WebDriver(WebDriver);
             Console.Out.WriteLine("using Selenium {0} : {1}", run, gridHub);
         }
 

@@ -11,11 +11,11 @@ namespace Six.Test.Selenium.WebDriver
     /// <summary>
     ///     This WebDriver adapter adds one method to make use of adapted web elements
     /// </summary>
-    public class WebDriverAdapter : IWebDriverAdapter
+    public class WebDriver : IWebDriver
     {
-        private readonly IWebDriver _webDriver;
+        private readonly OpenQA.Selenium.IWebDriver _webDriver;
 
-        public WebDriverAdapter(IWebDriver webDriver)
+        public WebDriver(OpenQA.Selenium.IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }
