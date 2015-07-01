@@ -25,6 +25,11 @@ namespace Six.Scs.Test.View.Administration.Provider
                 WebDriver.FindAdaptedElement(By.CssSelector("input[ng-model='providerFilter']"))
                     .TextField()
                     .TypeText(value);
+                WebDriver.WebDriverWait()
+                    .Until(
+                        d =>
+                            d.FindElements(By.CssSelector("td#content div table tbody tr"))
+                                .All(e => e.Text.Contains(value)));
             }
         }
 
