@@ -120,14 +120,14 @@ namespace Six.Scs.Test.View.Location
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/Person/New?locationId=']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Person/New?locationId=']"));
             }
         }
         public static IWebElement Infotexts
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='/InfoText/NewLocationInfoText?locationId=']"));
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/InfoText/NewLocationInfoText?locationId=']"));
             }
         }
     }
