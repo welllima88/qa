@@ -25,7 +25,7 @@ namespace Six.Scs.Test.View.Terminal.Quit
 
         public static void Save()
         {
-            WebDriver.FindAdaptedElement(By.Id("save"));
+            WebDriver.FindAdaptedElement(By.Id("save")).Click();
         }
     }
 }
