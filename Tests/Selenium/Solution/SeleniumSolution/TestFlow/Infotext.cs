@@ -19,7 +19,7 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
-            LocationMenu.Infotexts.Click();
+            View.Location.View.Infotexts.Click();
             CreateAndSaveInfotext("Location");
         }
 
@@ -32,7 +32,6 @@ namespace Six.Scs.Test
 
         private static void CreateAndSaveInfotext(string parameter)
         {
-            ListView.CreateButton.Click();
             var infotext = InfoText.Create(parameter);
             Check(infotext);
         }
