@@ -1,7 +1,6 @@
 using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.View.Common.Infotext;
-using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow;
 
