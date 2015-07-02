@@ -39,7 +39,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
             get { return WebDriver.FindAdaptedElement(By.Id("TD_Trm_State")).Text; }
         }
 
-        public static bool Cancelled
+        public static bool Canceled
         {
             get
             {

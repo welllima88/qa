@@ -90,7 +90,7 @@ namespace Six.Scs.Test
             const int number = 5;
             var tries = new Try(number);
 
-            while (!TerminalInfo.Cancelled && tries.Again())
+            while (!TerminalInfo.Canceled && tries.Again())
             {
                 TestDirector.Refresh();
             }
