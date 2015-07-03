@@ -130,5 +130,9 @@ namespace Six.Scs.Test.View.Location
                 return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/InfoText/NewLocationInfoText?locationId=']"));
             }
         }
+        public static bool IsCanceled
+        {
+            get { return WebDriver.FindElements(By.CssSelector("td#content>div.canceled")).Count > 0; }
+        }
     }
 }
