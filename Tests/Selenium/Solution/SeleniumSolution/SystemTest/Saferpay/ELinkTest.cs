@@ -28,6 +28,8 @@ namespace Six.Scs.Test.Saferpay
             _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default());
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new SaferPayPos().With(new Builder.Brand.ELink.Default()));
+            Terminal.Quit(_saferpayTerminal);
+            Customer.Quit(_saferpayCustomer);
         }
     }
 }
