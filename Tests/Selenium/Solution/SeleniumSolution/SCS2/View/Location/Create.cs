@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Location
 {
@@ -190,6 +191,11 @@ namespace Six.Scs.Test.View.Location
                     .Selector()
                     .SelectByText(value);
             }
+        }
+
+        public static IWebElement CopyFromCustomer
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#defaultAddress")); }
         }
     }
 }
