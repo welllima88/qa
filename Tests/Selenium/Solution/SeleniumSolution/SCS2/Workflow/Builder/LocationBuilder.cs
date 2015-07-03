@@ -28,7 +28,7 @@ namespace Six.Scs.Test.Workflow.Builder
             View.Location.Edit.SaveButton.Click();
         }
 
-        protected void ClickCreate()
+        private void ClickCreate()
         {
             CustomerMenu.LocationCreate.Click();
         }
@@ -45,7 +45,7 @@ namespace Six.Scs.Test.Workflow.Builder
             Location.Guid = View.Location.View.Guid;
         }
 
-        protected static void CreateButton()
+        private static void CreateButton()
         {
             View.Customer.Create.SaveButton.Click();
         }
