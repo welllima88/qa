@@ -183,5 +183,9 @@ namespace Six.Scs.Test.View.Customer
                         By.CssSelector("a[href*='/InfoText/NewCustomerInfoText?customerId=']"));
             }
         }
+        public static bool IsCanceled
+        {
+            get { return WebDriver.FindElements(By.CssSelector("td#content>div.canceled")).Count > 0; }
+        }
     }
 }
