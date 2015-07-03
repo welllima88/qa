@@ -65,8 +65,10 @@ namespace Six.Scs.Test
             Location.Activate(_location1);
 
             _personOnCustomer = Contact.Create(_six.Customer);
+            
             var contracts = new Builder.Brand.Ep2.Default();
-            _terminalLocation1 = Terminal.Create(_location1, new Yomani().With(contracts));
+            
+            _terminalLocation1 = Terminal.Create(_location1.Location, new Yomani().With(contracts));
 
             Customer.Edit(_six);
 
