@@ -4,11 +4,10 @@ namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class LocationBuilder : Helper.Builder
     {
-        public Model.ValueObjects.Location Location { get; protected set; }
+        public Model.ValueObjects.Location Location { get; set; }
 
         public override void Create()
         {
-            Location = Model.Factory.Location.Create();
             ClickCreate();
             SetData();
             CreateButton();
@@ -17,7 +16,6 @@ namespace Six.Scs.Test.Workflow.Builder
 
         public override void Edit()
         {
-            Location = Model.Factory.Location.Edit();
             ReadInfo();
             ClickEdit();
             EditData();
