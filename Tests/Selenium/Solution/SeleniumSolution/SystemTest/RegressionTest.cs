@@ -53,7 +53,17 @@ namespace Six.Scs.Test
         public static void ExecuteRegressiontest()
         {
             _six = Customer.Create(new Default());
-            _location1 = Location.Create(_six.Customer, new Builder.Location.Default()).Location;
+            Customer.Quit(_six);
+            Customer.Activate(_six);
+
+            _location1 = Location.Create(_six.Customer, new Builder.Location.Default());
+            Location.Quit(_location1);
+            Location.Activate(_location1);
+
+            Customer.Quit(_six);
+            Customer.Activate(_six);
+            Location.Activate(_location1);
+
             _personOnCustomer = Contact.Create(_six.Customer);
             var contracts = new Builder.Brand.Ep2.Default();
             _terminalLocation1 = Terminal.Create(_location1, new Yomani().With(contracts));
