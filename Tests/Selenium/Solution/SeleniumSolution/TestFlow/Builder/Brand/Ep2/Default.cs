@@ -16,16 +16,16 @@ namespace Six.Scs.Test.Builder.Brand.Ep2
 
         public override void Check()
         {
-            Assert.That(BrandPortlet.Acquirer("acq_post").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_post").Name, Is.EqualTo("Die Schweizerische Post"));
             Assert.That(BrandPortlet.Brand("283").Displayed);
 
-            Assert.That(BrandPortlet.Acquirer("acq_multipay").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_multipay").Name, Is.EqualTo("SIX Payment Services"));
             Assert.That(BrandPortlet.Brand("332").Displayed);
             Assert.That(BrandPortlet.Brand("361").Displayed);
             Assert.That(BrandPortlet.Brand("363").Displayed);
             Assert.That(BrandPortlet.Brand("811").Displayed);
 
-            Assert.That(BrandPortlet.Acquirer("acq_amexco").Displayed);
+            Assert.That(BrandPortlet.Acquirer("acq_amexco").Name, Is.EqualTo("Swisscard"));
             Assert.That(BrandPortlet.Brand("635").Displayed);
         }
 
