@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
+using Six.Scs.Test.Helper;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium;
 
@@ -6,9 +8,9 @@ namespace Six.Scs.Test.Builder.Location
 {
     public class FromCustomer : LocationBuilder
     {
-        public FromCustomer(CustomerBuilder customerBuilder)
+        public FromCustomer(Model.ValueObjects.Customer customer) : base(customer.Location)
         {
-            Location = customerBuilder.Customer.Location;
+            Location.CompanyName = customer.CustomerName;
         }
 
         protected override void SetData()
