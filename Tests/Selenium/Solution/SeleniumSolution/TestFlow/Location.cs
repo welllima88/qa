@@ -9,7 +9,6 @@ namespace Six.Scs.Test
         public static LocationBuilder Edit(Model.ValueObjects.Location location, LocationBuilder locationBuilder)
         {
             Open(location);
-            locationBuilder.Location = Model.Factory.Location.Edit();
             locationBuilder.Edit();
             locationBuilder.Check();
             Lobby.OpenLatestElement();
@@ -20,7 +19,6 @@ namespace Six.Scs.Test
         public static LocationBuilder Create(Model.ValueObjects.Customer customer, LocationBuilder locationBuilder)
         {
             Customer.Open(customer);
-            locationBuilder.Location = Model.Factory.Location.Create();
             locationBuilder.Create();
             locationBuilder.Check();
             Lobby.OpenLatestElement();
