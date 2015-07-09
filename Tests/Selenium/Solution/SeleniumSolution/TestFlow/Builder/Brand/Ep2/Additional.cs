@@ -18,10 +18,10 @@ namespace Six.Scs.Test.Builder.Brand.Ep2
             Assert.That(BrandPortlet.Acquirer("acq_corner").Name, Is.EqualTo("Aduno"));
             Assert.That(BrandPortlet.Brand("1286").Displayed);
 
-            Assert.That(BrandPortlet.Acquirer("acq_concardisfirstdata"), Is.EqualTo("ConCardis FirstData"));
+            Assert.That(BrandPortlet.Acquirer("acq_concardisfirstdata").Name, Is.EqualTo("ConCardis FirstData"));
             Assert.That(BrandPortlet.Brand("1272").Displayed);
 
-            Assert.That(BrandPortlet.Acquirer("acq_commtrain"), Is.EqualTo("Innocard AG"));
+            Assert.That(BrandPortlet.Acquirer("acq_commtrain").Name, Is.EqualTo("Innocard AG"));
             Assert.That(BrandPortlet.Brand("1114").Displayed);
         }
 
