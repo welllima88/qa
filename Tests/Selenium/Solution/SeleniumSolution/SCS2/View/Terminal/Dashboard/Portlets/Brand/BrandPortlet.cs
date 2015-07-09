@@ -70,5 +70,10 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
             return WebDriver.FindAdaptedElements(By.CssSelector("li[id$='acqContract']"));
         }
         
+
+        public static void ExpandAll()
+        {
+            WebDriver.FindAdaptedElement(By.CssSelector(PortletLocator + " span[title='expand']")).Click();
+        }
     }
 }
