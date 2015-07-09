@@ -104,6 +104,7 @@ namespace Six.Scs.Test
             _user = User.Edit(_user);
 
             _duplicatedTerminals = Terminal.Duplicate(_terminalLocation2);
+            BusinessTemplate.Change(_duplicatedTerminals);
             User.Create(_personOnLocation);
 
             User.AddService(_user);
