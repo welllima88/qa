@@ -31,7 +31,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
             {
                 return WebDriver.FindElement(
                     By.CssSelector(string.Format(
-                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}", _acquirerId)))
+                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}>span", _acquirerId)))
                     .Text;
             }
         }
