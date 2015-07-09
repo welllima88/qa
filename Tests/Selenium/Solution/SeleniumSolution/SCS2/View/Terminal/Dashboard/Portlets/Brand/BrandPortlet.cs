@@ -45,12 +45,10 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                     .Select(e => e.Text);
         }
 
-        public static IWebElement Acquirer(string acquirerId)
+        public static Acquirer Acquirer(string acquirerId)
         {
             return
-                WebDriver.FindAdaptedElement(
-                    By.CssSelector(string.Format(
-                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}", acquirerId)));
+                new Acquirer(acquirerId);
         }
 
         public static IEnumerable<string> Acquirers()
@@ -61,15 +59,14 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                         PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] a.acqContractNode span")))
                     .Select(e => e.Text);
         }
+
         public static IEnumerable<IWebElement> Tickets()
         {
-
             //acqContract_
             //_ProcessTicket
             //css=acqContract #774e1b93-b51f-4e38-84e3-2b014ffaca98_730746 > div.portletKeyValueRow div.treeValueCol > a
             return WebDriver.FindAdaptedElements(By.CssSelector("li[id$='acqContract']"));
         }
-        
 
         public static void ExpandAll()
         {
