@@ -58,5 +58,9 @@ namespace Six.Scs.Test.Builder.Location
             View.Location.Edit.Language = Location.Contact.Language;
             View.Location.Edit.Country = Location.Adress.Country;
         }
+
+        public Gicc(Model.ValueObjects.Location location) : base(location)
+        {
+        }
     }
 }

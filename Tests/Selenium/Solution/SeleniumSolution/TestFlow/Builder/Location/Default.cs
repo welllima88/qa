@@ -73,5 +73,9 @@ namespace Six.Scs.Test.Builder.Location
             Location.SbsDebitNumber = View.Location.View.SbsDebitNumber;
             // Customer.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
         }
+
+        public Default(Model.ValueObjects.Location location) : base(location)
+        {
+        }
     }
 }
