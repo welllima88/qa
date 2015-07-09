@@ -1,10 +1,16 @@
+using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.View.Common.Menu;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class LocationBuilder : Helper.Builder
     {
-        public Model.ValueObjects.Location Location { get; set; }
+        public LocationBuilder(Location location)
+        {
+            Location = location;
+        }
+
+        public Location Location { get; private set; }
 
         public override void Create()
         {
