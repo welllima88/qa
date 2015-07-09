@@ -36,12 +36,6 @@ namespace Six.Scs.Test
             TestDirector.Navigate();
         }
 
-        [TestFixtureTearDown]
-        public void CheckIfErrorsOccured()
-        {
-            Verify.WriteErrors();
-        }
-
         [Test]
         [Category("Regression")]
         /*
