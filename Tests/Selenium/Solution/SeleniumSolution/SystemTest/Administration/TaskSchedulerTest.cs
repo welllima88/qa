@@ -16,7 +16,9 @@ namespace Six.Scs.Test.Administration
         [Category("TaskScheduler"), Category("Create"), Category("Edit"), Category("Delete")]
         public void Manage()
         {
-            List.CreateTask.Click();
+            TasksScheduler.Create();
+            var t = TasksScheduler.Edit();
+            TasksScheduler.Delete(t);
         }
     }
 }
