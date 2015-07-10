@@ -1,14 +1,19 @@
+using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.View.Common.Menu;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class LocationBuilder : Helper.Builder
     {
-        public Model.ValueObjects.Location Location { get; protected set; }
+        public LocationBuilder(Location location)
+        {
+            Location = location;
+        }
+
+        public Location Location { get; private set; }
 
         public override void Create()
         {
-            Location = Model.Factory.Location.Create();
             ClickCreate();
             SetData();
             CreateButton();
@@ -17,7 +22,6 @@ namespace Six.Scs.Test.Workflow.Builder
 
         public override void Edit()
         {
-            Location = Model.Factory.Location.Edit();
             ReadInfo();
             ClickEdit();
             EditData();
@@ -30,7 +34,7 @@ namespace Six.Scs.Test.Workflow.Builder
             View.Location.Edit.SaveButton.Click();
         }
 
-        protected void ClickCreate()
+        private void ClickCreate()
         {
             CustomerMenu.LocationCreate.Click();
         }
@@ -47,11 +51,23 @@ namespace Six.Scs.Test.Workflow.Builder
             Location.Guid = View.Location.View.Guid;
         }
 
-        protected static void CreateButton()
+        private static void CreateButton()
         {
             View.Customer.Create.SaveButton.Click();
         }
 
         protected abstract void SetData();
+
+        public void Quit()
+        {
+            View.Location.View.Quit.Click();
+            View.Location.View.ConfirmQuit.Click();
+        }
+
+        public void Activate()
+        {
+            View.Location.View.Activate.Click();
+            View.Location.View.ConfirmActivate.Click();
+        }
     }
 }

@@ -118,17 +118,49 @@ namespace Six.Scs.Test.View.Location
 
         public static IWebElement ContactCreate
         {
-            get
-            {
-                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Person/New?locationId=']"));
-            }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Person/New?locationId=']")); }
         }
+
         public static IWebElement Infotexts
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/InfoText/NewLocationInfoText?locationId=']"));
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/InfoText/NewLocationInfoText?locationId=']"));
             }
+        }
+
+        public static IWebElement Quit
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a#resign[href*='/Location/Resign?locationId=']"));
+            }
+        }
+
+        public static IWebElement ConfirmQuit
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#resign")); }
+        }
+
+        public static bool IsCanceled
+        {
+            get { return WebDriver.FindElements(By.CssSelector("td#content>div.canceled")).Count > 0; }
+        }
+
+        public static IWebElement Activate
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("a#activate[href*='/Location/Activate?locationId=']"));
+            }
+        }
+
+        public static IWebElement ConfirmActivate
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#activate")); }
         }
     }
 }

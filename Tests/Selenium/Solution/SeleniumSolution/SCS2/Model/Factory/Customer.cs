@@ -24,6 +24,7 @@
             return new ValueObjects.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
+                SbsSegment = "01_CH",
                 Location = Location.Edit()
             };
         }
@@ -37,6 +38,7 @@
                 SbsBillingTenant = "SIX Payment Services (Europe)",
                 CustomerName = "SYR Sele Kunde A$°",
                 CustomerNumber = "^@}$°",
+                SbsSegment = "01_CH",
                 Location = Location.Invalid()
             };
         }

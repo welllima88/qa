@@ -1,15 +1,39 @@
-using System.Collections.Generic;
+using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
 {
     public class Acquirer : WebObject
     {
-        public List<BrandContract> Brands;
+        private const string PortletLocator = "div[id*='BrandPortlet']";
+        private const string ContractTreeLocator = "div[id*='ContractTree']>ul";
+        private readonly string _acquirerId;
 
-        public Acquirer()
+        public Acquirer(string acquirerId)
         {
-            Brands = new List<BrandContract>(5);
+            _acquirerId = acquirerId;
+        }
+
+        public string BusinessTemplate
+        {
+            get
+            {
+                return
+                    WebDriver.FindElement(
+                        By.CssSelector(string.Format("div#{0} +ul li[id$='_Business Template'] div.treeValueCol>span",
+                            _acquirerId))).Text;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return WebDriver.FindElement(
+                    By.CssSelector(string.Format(
+                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] div#{0}>span", _acquirerId)))
+                    .Text;
+            }
         }
     }
 }

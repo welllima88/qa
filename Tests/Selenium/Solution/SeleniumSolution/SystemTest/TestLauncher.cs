@@ -23,6 +23,7 @@ namespace Six.Scs.Test
         public void StopTestDirector()
         {
             TestDirector.Stop();
+            Verify.WriteErrors();
         }
     }
 }

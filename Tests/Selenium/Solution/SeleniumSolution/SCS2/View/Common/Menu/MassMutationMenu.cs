@@ -67,5 +67,14 @@ namespace Six.Scs.Test.View.Common.Menu
                         .FirstOrDefault(e => e.Text.Contains("Massenmutation"));
             }
         }
+
+        public static IWebElement BusinessTemplate
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href$='/BusinessTemplate/Change']"));
+            }
+        }
     }
 }

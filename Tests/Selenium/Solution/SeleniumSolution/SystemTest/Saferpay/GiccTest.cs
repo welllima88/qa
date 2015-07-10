@@ -27,7 +27,7 @@ namespace Six.Scs.Test.Saferpay
         public static void GiccCustomerStructure()
         {
             _saferpayCustomer = Customer.Create(new SixNsp());
-            _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Gicc());
+            _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Gicc(Model.Factory.Location.Create()));
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new Icp().With(new Default()));
         }

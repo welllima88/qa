@@ -4,7 +4,7 @@ using NUnit.Framework;
 using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ifsf;
-using Six.Scs.Test.Helper;
+using Six.Scs.Test.Massmutation;
 using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium.WebDriver;
@@ -18,7 +18,7 @@ namespace Six.Scs.Test
         private static Model.ValueObjects.Terminal _terminalLocation2;
         private static Model.ValueObjects.Terminal _terminalLocation1;
         private static CustomerBuilder _six;
-        private static Model.ValueObjects.Location _location1;
+        private static LocationBuilder _location1;
         private static Person _personOnCustomer;
         private static Person _personOnLocation;
         private static Model.ValueObjects.User _user;
@@ -36,12 +36,6 @@ namespace Six.Scs.Test
             TestDirector.Navigate();
         }
 
-        [TestFixtureTearDown]
-        public void CheckIfErrorsOccured()
-        {
-            Verify.WriteErrors();
-        }
-
         [Test]
         [Category("Regression")]
         /*
@@ -53,10 +47,22 @@ namespace Six.Scs.Test
         public static void ExecuteRegressiontest()
         {
             _six = Customer.Create(new Default());
-            _location1 = Location.Create(_six.Customer, new Builder.Location.Default()).Location;
+            Customer.Quit(_six);
+            Customer.Activate(_six);
+
+            _location1 = Location.Create(_six.Customer, new Builder.Location.Default(Model.Factory.Location.Create()));
+            Location.Quit(_location1);
+            Location.Activate(_location1);
+
+            Customer.Quit(_six);
+            Customer.Activate(_six);
+            Location.Activate(_location1);
+
             _personOnCustomer = Contact.Create(_six.Customer);
+
             var contracts = new Builder.Brand.Ep2.Default();
-            _terminalLocation1 = Terminal.Create(_location1, new Yomani().With(contracts));
+
+            _terminalLocation1 = Terminal.Create(_location1.Location, new Yomani().With(contracts));
 
             Customer.Edit(_six);
 
@@ -67,19 +73,19 @@ namespace Six.Scs.Test
             _mpd = Mpd.Create(_six.Customer);
             Terminal.Assign(_mpd, _terminalLocation1);
 
-            _terminalLocation2 = Terminal.Create(_location1, new Xentissimo());
-            _location2 = Location.Create(_six.Customer, new Builder.Location.Default()).Location;
+            _terminalLocation2 = Terminal.Create(_location1.Location, new Xentissimo());
+            _location2 = Location.CreateFromCustomer(_six.Customer).Location;
             Terminal.Move(_terminalLocation2, _location2);
 
             Brands.Create(_terminalLocation2, new Builder.Brand.Ep2.Default());
             // TODO: Infotext.Create(_location1);
 
-            _terminalLocation3 = Terminal.Create(_location1, new Davinci2());
+            _terminalLocation3 = Terminal.Create(_location1.Location, new Davinci2());
             Brands.Create(_terminalLocation3, new Builder.Brand.Ifsf.Default());
-            _location1 = Location.Edit(_location1, new Builder.Location.Default()).Location;
+            _location1 = Location.Edit(_location1.Location, new Builder.Location.Default(Model.Factory.Location.Edit()));
             // TODO: Infotext.Create(_terminalLocation2);
 
-            _personOnLocation = Contact.Create(_location1);
+            _personOnLocation = Contact.Create(_location1.Location);
 
             Mpd.Edit(_mpd);
 
@@ -92,12 +98,14 @@ namespace Six.Scs.Test
             _user = User.Edit(_user);
 
             _duplicatedTerminals = Terminal.Duplicate(_terminalLocation2);
+            BusinessTemplate.Change(_duplicatedTerminals);
             User.Create(_personOnLocation);
 
             User.AddService(_user);
             User.AssignRoles(_user);
 
-            Brands.Create(_duplicatedTerminals.ElementAt(1), new Additional());
+            Brands.Create(_duplicatedTerminals.ElementAt(1),
+                new Additional());
             // {0,1,..} means create brands on second terminal
             // check again already existing contracts:
             contracts.Check();
@@ -114,7 +122,8 @@ namespace Six.Scs.Test
             _sim = SimCard.Create();
 
             _sim = SimCard.Edit(_sim);
-            _sim = SimCard.Link(_sim, _duplicatedTerminals.ElementAt(0));
+            _sim = SimCard.Link(_sim,
+                _duplicatedTerminals.ElementAt(0));
 
             SimCard.Lock(_sim);
             SimCard.Unlink(_sim);

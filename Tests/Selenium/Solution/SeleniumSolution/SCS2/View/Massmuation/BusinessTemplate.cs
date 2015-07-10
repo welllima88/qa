@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
@@ -61,6 +62,16 @@ namespace Six.Scs.Test.View.Massmuation
         public static IWebElement Reload
         {
             get { return WebDriver.FindAdaptedElement(By.Id("reload")); }
+        }
+
+        public static IEnumerable<string> AffectedTerminals
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElements(By.CssSelector("tbody tr[ng-repeat='terminal in affectedTerminals'] td:nth-child(1)"))
+                        .Select(e => e.Text);
+            }
         }
     }
 }

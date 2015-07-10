@@ -35,9 +35,9 @@ namespace Six.Scs.Test.Builder.Location
             Assert.AreEqual(Location.Contact.Language, View.Location.View.Language);
             Assert.AreEqual(Location.Adress.Country, View.Location.View.Country);
             Assert.AreEqual(Location.Contact.Email, View.Location.View.Email);
-            StringAssert.Contains(Location.Contact.Telephone, View.Location.View.Telephone);
-            StringAssert.Contains(Location.Contact.Mobile, View.Location.View.Mobile);
-            StringAssert.Contains(Location.Contact.Fax, View.Location.View.Fax);
+            Assert.That(View.Customer.View.Telephone, Is.StringEnding(Location.Contact.Telephone));
+            Assert.That(View.Customer.View.Mobile, Is.StringEnding(Location.Contact.Mobile));
+            Assert.That(View.Customer.View.Fax, Is.StringEnding(Location.Contact.Fax));
             Assert.AreEqual(Location.Contact.Web, View.Location.View.Web);
         }
 
@@ -57,6 +57,10 @@ namespace Six.Scs.Test.Builder.Location
             View.Location.Edit.Web = Location.Contact.Web;
             View.Location.Edit.Language = Location.Contact.Language;
             View.Location.Edit.Country = Location.Adress.Country;
+        }
+
+        public Gicc(Model.ValueObjects.Location location) : base(location)
+        {
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using Six.Scs.Test.Workflow;
+﻿using NUnit.Framework;
+using Six.Scs.Test.Builder.Location;
+using Six.Scs.Test.Workflow;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test
 {
-    public class Location
+    public static class Location
     {
         public static LocationBuilder Edit(Model.ValueObjects.Location location, LocationBuilder locationBuilder)
         {
@@ -29,6 +31,36 @@ namespace Six.Scs.Test
         {
             Search.LocationCanBeFoundByLocationName(location.CompanyName);
             // Assert.AreEqual(location.Guid, LocationView.Guid);
+        }
+
+        public static void Activate(LocationBuilder locationBuilder)
+        {
+            Open(locationBuilder.Location);
+
+            locationBuilder.Activate();
+            locationBuilder.Check();
+            Assert.That(!View.Location.View.IsCanceled);
+            Assert.That(View.Location.View.Quit.Displayed);
+        }
+
+        public static void Quit(LocationBuilder locationBuilder)
+        {
+            Open(locationBuilder.Location);
+            locationBuilder.Quit();
+            locationBuilder.Check();
+            Assert.That(View.Location.View.IsCanceled);
+            Assert.That(View.Location.View.Activate.Displayed);
+        }
+
+        public static LocationBuilder CreateFromCustomer(Model.ValueObjects.Customer customer)
+        {
+            Customer.Open(customer);
+            var locationBuilder = new FromCustomer(customer);
+            locationBuilder.Create();
+            locationBuilder.Check();
+            Lobby.OpenLatestElement();
+            locationBuilder.Check();
+            return locationBuilder;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Model.Factory
             {
                 Arguments = "Arguments /-aa ? :XX01",
                 Interval = "1",
-                MachineName = "Machine SYR Auto A",
+                MachineName = "Machine_SYR_Auto1",
                 MaxRetries = "11",
                 Module = "Module A",
                 RetryInterval = "2",
@@ -25,7 +25,7 @@ namespace Six.Scs.Test.Model.Factory
             {
                 Arguments = "Arguments /-bb ? :XX01",
                 Interval = "2",
-                MachineName = "Machine SYR Auto B",
+                MachineName = "Machine_SYR_Auto2",
                 MaxRetries = "22",
                 Module = "Module B",
                 RetryInterval = "4",

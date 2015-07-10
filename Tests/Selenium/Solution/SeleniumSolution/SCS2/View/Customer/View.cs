@@ -174,6 +174,7 @@ namespace Six.Scs.Test.View.Customer
                     WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/scs2/Customer/Edit?customerId=']"));
             }
         }
+
         public static IWebElement Infotexts
         {
             get
@@ -181,6 +182,42 @@ namespace Six.Scs.Test.View.Customer
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector("a[href*='/InfoText/NewCustomerInfoText?customerId=']"));
+            }
+        }
+
+        public static IWebElement Quit
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a#resign[href*='/Customer/Resign?customerId=']"));
+            }
+        }
+
+        public static IWebElement ConfirmQuit
+        {
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("button#resign")); }
+        }
+
+        public static bool IsCanceled
+        {
+            get { return WebDriver.FindElements(By.CssSelector("td#content>div.canceled")).Count > 0; }
+        }
+
+        public static IWebElement Activate
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("a#activate[href*='/Customer/Activate?customerId=']"));
+            }
+        }
+
+        public static IWebElement ConfirmActivate
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("button#activate"));
             }
         }
     }

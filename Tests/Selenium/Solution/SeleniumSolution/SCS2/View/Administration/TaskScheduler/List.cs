@@ -14,7 +14,9 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         {
             get
             {
-                return WebDriver.FindAdaptedElement(By.CssSelector("td#content div a[href*='/TaskScheduler/Create']"));
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("td#content div a[href$='/TaskScheduler/TaskSchedulerAdministration/Create']"));
             }
         }
 

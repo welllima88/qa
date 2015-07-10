@@ -1,23 +1,25 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using List = Six.Scs.QA.Selenium.Administration.TaskScheduler.List;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Administration
+namespace Six.Scs.Test.Administration
 {
     [TestFixture]
+    [Ignore("BUG: Der Wert NULL kann in die IsUpToDate-Spalte, mgmt.scs2.TaskScheduler-Tabelle nicht eingefügt werden")]
     public class TaskSchedulerTest
     {
         [TestFixtureSetUp]
         public static void Navigate()
         {
-            TestDirector.Navigate("TaskScheduler/");
+            TestDirector.Navigate("TaskScheduler/TaskSchedulerAdministration");
         }
 
         [Test]
         [Category("TaskScheduler"), Category("Create"), Category("Edit"), Category("Delete")]
         public void Manage()
         {
-            List.CreateTask.Click();
+            TasksScheduler.Create();
+            var t = TasksScheduler.Edit();
+            TasksScheduler.Delete(t);
         }
     }
 }

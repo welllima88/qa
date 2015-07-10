@@ -66,5 +66,17 @@ namespace Six.Scs.Test.Workflow.Builder
         }
 
         protected abstract void SetCustomerData();
+
+        public void Quit()
+        {
+            View.Customer.View.Quit.Click();
+            View.Customer.View.ConfirmQuit.Click();
+        }
+
+        public void Activate()
+        {
+            View.Customer.View.Activate.Click();
+            View.Customer.View.ConfirmActivate.Click();
+        }
     }
 }
