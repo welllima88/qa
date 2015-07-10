@@ -56,11 +56,11 @@ namespace Six.Scs.Test.Builder.Customer.Six
                     () => Assert.AreEqual(Customer.Location.Contact.Language, View.Customer.View.Language),
                     () => Assert.AreEqual(Customer.Location.Adress.Country, View.Customer.View.Country),
                     () => Assert.AreEqual(Customer.Location.Contact.Email, View.Customer.View.Email),
-                    () => StringAssert.Contains(Customer.Location.Contact.Telephone, View.Customer.View.Telephone),
-                    () => StringAssert.Contains(Customer.Location.Contact.Mobile, View.Customer.View.Mobile),
-                    () => StringAssert.Contains(Customer.Location.Contact.Fax, View.Customer.View.Fax),
+                    () => Assert.That(View.Customer.View.Telephone, Is.StringEnding(Customer.Location.Contact.Telephone)),
+                    () => Assert.That(View.Customer.View.Mobile, Is.StringEnding(Customer.Location.Contact.Mobile)),
+                    () => Assert.That(View.Customer.View.Fax, Is.StringEnding(Customer.Location.Contact.Fax)),
                     () => Assert.AreEqual(Customer.Location.Contact.Web, View.Customer.View.Web)
-                }).Check();            
+                }).Check();
         }
 
         protected override void EditCustomerData()
