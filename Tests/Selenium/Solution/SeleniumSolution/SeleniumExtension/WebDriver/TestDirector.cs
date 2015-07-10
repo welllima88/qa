@@ -17,11 +17,12 @@ namespace Six.Test.Selenium.WebDriver
         /// </summary>
         public static void Start()
         {
+            Console.Out.WriteLine("starting browser");
             WebDriver.Manage().Window.Maximize();
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();
-            Console.Out.WriteLine("Logon");
+            Console.Out.WriteLine("logged on");
         }
 
         /// <summary>
@@ -32,6 +33,7 @@ namespace Six.Test.Selenium.WebDriver
         /// <returns></returns>
         public static void PrepareBrowser(string gridHub = "")
         {
+            Console.Out.WriteLine("preparing browser");
             var firefoxProfile = NoProxy();
             firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de");
 
@@ -101,9 +103,9 @@ namespace Six.Test.Selenium.WebDriver
         public static void Stop()
         {
             TestEnvironment.Application.LogOff();
-            Console.Out.WriteLine("Logoff");
+            Console.Out.WriteLine("logged off");
             WebDriver.Quit();
-            Console.Out.WriteLine("Close WebDriver");
+            Console.Out.WriteLine("closed WebDriver");
         }
     }
 }
