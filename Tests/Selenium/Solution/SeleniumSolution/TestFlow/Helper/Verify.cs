@@ -9,17 +9,17 @@ namespace Six.Scs.Test.Helper
 {
     public class Verify : ICheck
     {
+        /// <summary>
+        ///     provides access to all exceptions which have occured
+        /// </summary>
+        private static List<Exception> Exceptions = new List<Exception>();
+
         private readonly Action[] _verify;
 
         private Verify(Action[] verify)
         {
             _verify = verify;
         }
-
-        /// <summary>
-        ///     provides access to all exceptions which have occured
-        /// </summary>
-        public static List<Exception> Exceptions { get; private set; }
 
         public void Check()
         {
@@ -54,7 +54,7 @@ namespace Six.Scs.Test.Helper
                 catch (Exception ex)
                 {
                     Exceptions.Add(ex);
-                    Console.Error.WriteLine("Message: {0}\t-\tStacktrace: {1}", ex.Message, ex.StackTrace);
+                    Console.Error.WriteLine("Message:\n{0}\nStacktrace:\n{1}", ex.Message, ex.StackTrace);
                 }
         }
 
@@ -64,7 +64,7 @@ namespace Six.Scs.Test.Helper
             Console.Error.WriteLine("---ERROR---SUMMARY---START---");
             foreach (var exception in Exceptions)
             {
-                Console.Error.WriteLine("Message: {0}", exception.Message);
+                Console.Error.WriteLine("Message: {0} Source:{1}", exception.Message, exception.StackTrace);
             }
             Console.Error.WriteLine("---ERROR---SUMMARY---END----");
             throw new AssertionException(string.Format("{0} verifies failed during testing", Exceptions.Count));
