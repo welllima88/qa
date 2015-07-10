@@ -1,8 +1,7 @@
 ﻿using NUnit.Framework;
-using Six.QA.Selenium.Extension.WebDriver;
-using List = Six.Scs.QA.Selenium.Administration.TaskScheduler.List;
+using Six.Test.Selenium.WebDriver;
 
-namespace Six.Scs.QA.Selenium.SystemTest.Administration
+namespace Six.Scs.Test.Administration
 {
     [TestFixture]
     public class TaskSchedulerTest

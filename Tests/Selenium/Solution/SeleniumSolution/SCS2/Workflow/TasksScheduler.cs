@@ -1,4 +1,3 @@
-using System;
 using Six.Scs.Test.Model.ValueObjects;
 using Six.Scs.Test.View.Administration.TaskScheduler;
 
