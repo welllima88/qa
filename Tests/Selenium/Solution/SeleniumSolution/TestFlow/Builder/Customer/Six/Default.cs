@@ -44,6 +44,7 @@ namespace Six.Scs.Test.Builder.Customer.Six
                     () => Assert.AreEqual(Customer.Supplier, View.Customer.View.Supplier),
                     () => Assert.AreEqual(Customer.SbsBillingTenant, View.Customer.View.SbsBillingTenant),
                     () => Assert.AreEqual(Customer.SbsCurrency, View.Customer.View.SbsCurrency),
+                    () => Assert.AreEqual(Customer.SbsSegment, View.Customer.View.Segment),
                     () => Assert.AreEqual(Customer.Location.SbsDebitNumber, View.Customer.View.SbsDebitNumber),
                     () => Assert.AreEqual(Customer.Location.Adress.Po, View.Customer.View.Po),
                     () => Assert.AreEqual(Customer.Location.Adress.AdressAddition, View.Customer.View.AdressAddition),
