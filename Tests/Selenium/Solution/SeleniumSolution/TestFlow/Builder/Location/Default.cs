@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
+using Six.Scs.Test.Helper;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium;
 
@@ -6,6 +8,10 @@ namespace Six.Scs.Test.Builder.Location
 {
     public class Default : LocationBuilder
     {
+        public Default(Model.ValueObjects.Location location) : base(location)
+        {
+        }
+
         protected override void SetData()
         {
             View.Location.Create.CompanyName = Location.CompanyName;
@@ -27,23 +33,26 @@ namespace Six.Scs.Test.Builder.Location
 
         public override void Check()
         {
-            Assert.AreEqual(Location.CompanyName, View.Location.View.CompanyName);
-            StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.Location.View.SbsDebitNumber);
-            StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Location.View.Ep2MerchantId);
-            Assert.AreEqual(Location.Adress.StreetNo, View.Location.View.StreetNo);
-            Assert.AreEqual(Location.Adress.Po, View.Location.View.Po);
-            Assert.AreEqual(Location.Adress.Zip, View.Location.View.Zip);
-            Assert.AreEqual(Location.Adress.City, View.Location.View.City);
-            StringAssert.Contains(Location.Adress.Region, View.Location.View.Region);
-            Assert.AreEqual(Location.Adress.AdressAddition, View.Location.View.AdressAddition);
-            Assert.AreEqual(Location.Contact.Language, View.Location.View.Language);
-            Assert.AreEqual(Location.Adress.Country, View.Location.View.Country);
-            Assert.AreEqual(Location.Contact.Email, View.Location.View.Email);
-            StringAssert.Contains(Location.Contact.Telephone, View.Location.View.Telephone);
-            StringAssert.Contains(Location.Contact.Mobile, View.Location.View.Mobile);
-            StringAssert.Contains(Location.Contact.Fax, View.Location.View.Fax);
-            Assert.AreEqual(Location.Contact.Web, View.Location.View.Web);
-            Assert.AreEqual(Location.Agency, View.Location.View.Agency);
+            Verify.With(new Action[]
+            {
+                () => Assert.AreEqual(Location.CompanyName, View.Location.View.CompanyName),
+                () => StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo, View.Location.View.SbsDebitNumber),
+                () => StringAssert.IsMatch(TestRegExpPatterns.Ep2MerchantId, View.Location.View.Ep2MerchantId),
+                () => Assert.AreEqual(Location.Adress.StreetNo, View.Location.View.StreetNo),
+                () => Assert.AreEqual(Location.Adress.Po, View.Location.View.Po),
+                () => Assert.AreEqual(Location.Adress.Zip, View.Location.View.Zip),
+                () => Assert.AreEqual(Location.Adress.City, View.Location.View.City),
+                () => StringAssert.Contains(Location.Adress.Region, View.Location.View.Region),
+                () => Assert.AreEqual(Location.Adress.AdressAddition, View.Location.View.AdressAddition),
+                () => Assert.AreEqual(Location.Contact.Language, View.Location.View.Language),
+                () => Assert.AreEqual(Location.Adress.Country, View.Location.View.Country),
+                () => Assert.AreEqual(Location.Contact.Email, View.Location.View.Email),
+                () => Assert.That(View.Customer.View.Telephone, Is.StringEnding(Location.Contact.Telephone)),
+                () => Assert.That(View.Customer.View.Mobile, Is.StringEnding(Location.Contact.Mobile)),
+                () => Assert.That(View.Customer.View.Fax, Is.StringEnding(Location.Contact.Fax)),
+                () => Assert.AreEqual(Location.Contact.Web, View.Location.View.Web),
+                () => Assert.AreEqual(Location.Agency, View.Location.View.Agency)
+            }).Check();
         }
 
         protected override void EditData()
@@ -72,10 +81,6 @@ namespace Six.Scs.Test.Builder.Location
             Location.Ep2MerchantId = View.Location.View.Ep2MerchantId;
             Location.SbsDebitNumber = View.Location.View.SbsDebitNumber;
             // Customer.Location.SbsAdressNumber = CustomerView.SbsAdressNumber;
-        }
-
-        public Default(Model.ValueObjects.Location location) : base(location)
-        {
         }
     }
 }
