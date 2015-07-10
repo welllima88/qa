@@ -10,7 +10,7 @@ namespace Six.Scs.QA.Selenium.SystemTest.Administration
         [TestFixtureSetUp]
         public static void Navigate()
         {
-            TestDirector.Navigate("TaskScheduler/");
+            TestDirector.Navigate("TaskScheduler/TaskSchedulerAdministration");
         }
 
         [Test]
