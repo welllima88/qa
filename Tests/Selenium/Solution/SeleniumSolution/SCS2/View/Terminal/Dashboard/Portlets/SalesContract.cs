@@ -58,7 +58,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
                 return
                     new WebElement(WebDriver.WebDriverWait().Until(d => d.FindElement((
                         By.CssSelector(
-                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate?TerminalId=']")))));
+                            "div#frame_SalesPortlet div.portletLinks a[href*='/TerminalDuplicate/Step1?TerminalId=']")))));
             }
         }
 
