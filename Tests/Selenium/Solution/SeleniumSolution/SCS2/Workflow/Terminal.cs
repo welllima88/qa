@@ -22,7 +22,10 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.Duplicate.View.CopyPassword = duplicate.CopyPassword;
             View.Terminal.Duplicate.View.MessageForAcquirers = duplicate.MessageForAcquirers;
 
+            View.Terminal.Duplicate.View.Next.Click();
             View.Terminal.Duplicate.View.DulpicateButton.Click();
+
+            View.Massmuation.TerminalValidation.ExecuteButton.Click();
         }
 
         public static string Quit()

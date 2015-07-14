@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
+using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Duplicate
 {
@@ -62,6 +63,11 @@ namespace Six.Scs.Test.View.Terminal.Duplicate
         {
             set { WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().Set(value); }
             get { return WebDriver.FindAdaptedElement(By.Id("SendNotification")).CheckBox().IsChecked(); }
+        }
+
+        public static IWebElement Next
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("next")); }
         }
     }
 }
