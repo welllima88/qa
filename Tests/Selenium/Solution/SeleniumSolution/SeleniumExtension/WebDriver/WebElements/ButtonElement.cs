@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace Six.Test.Selenium.WebDriver.WebElements
+﻿namespace Six.Test.Selenium.WebDriver.WebElements
 {
     public class ButtonElement : WebElement
     {
