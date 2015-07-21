@@ -147,7 +147,9 @@ namespace Six.Scs.Test
             NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 
-            // Assert.That(RetourTable, Has.Member(terminal));
+            Assert.That(View.Terminal.Returns.TerminalLink(terminal).Displayed);
+            Assert.That(View.Terminal.Returns.Deactivate(terminal).Displayed);
+            Assert.That(View.Terminal.Returns.Cancel(terminal).Displayed);
         }
     }
 }
