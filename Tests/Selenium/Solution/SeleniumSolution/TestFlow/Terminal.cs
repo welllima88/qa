@@ -140,10 +140,10 @@ namespace Six.Scs.Test
             Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
 
-        public static void Retour(Model.ValueObjects.Terminal terminal)
+        public static void Return(Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            Workflow.Terminal.Retour();
+            Workflow.Terminal.Return();
             NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 

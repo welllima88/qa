@@ -101,7 +101,7 @@ namespace Six.Scs.Test.Workflow
             return terminalBuilder.Terminal;
         }
 
-        public static void Retour()
+        public static void Return()
         {
             SalesContract.MarkAsRetour.Click();
         }
