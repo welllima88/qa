@@ -9,21 +9,21 @@ namespace Six.Scs.Test.Massmutation
 {
     public class BusinessTemplate
     {
-        public static void Change(IEnumerable<Model.ValueObjects.Terminal> duplicatedTerminals)
+        public static void Change(IEnumerable<Model.ValueObjects.Terminal> terminals)
         {
             TestDirector.Navigate();
             MassMutationMenu.MassMutation.Click();
             MassMutationMenu.BusinessTemplate.Click();
-            View.Massmuation.BusinessTemplate.TerminalIds = duplicatedTerminals.Select(t => t.Id);
+            View.Massmuation.BusinessTemplate.TerminalIds = terminals.Select(t => t.Id);
             View.Massmuation.BusinessTemplate.Acquirer = "SIX Payment Services";
             View.Massmuation.BusinessTemplate.ActualBusinessTemplate = "0 - für alle Business-Templates";
             View.Massmuation.BusinessTemplate.NewBusinessTemplate = "Key_Account_300";
 
             Assert.That(View.Massmuation.BusinessTemplate.AffectedTerminals,
-                Is.EquivalentTo(duplicatedTerminals.Select(t => t.Id)));
+                Is.EquivalentTo(terminals.Select(t => t.Id)));
 
             View.Massmuation.BusinessTemplate.Save.Click();
-            foreach (var terminal in duplicatedTerminals)
+            foreach (var terminal in terminals)
             {
                 Terminal.Open(terminal);
                 BrandPortlet.ExpandAll();
