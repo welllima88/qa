@@ -216,6 +216,7 @@
     <Compile Include="View\Terminal\ListView.cs" />
     <Compile Include="View\Terminal\Replace.cs" />
     <Compile Include="View\Terminal\ArticleChange.cs" />
+    <Compile Include="View\Terminal\Returns.cs" />
     <Compile Include="View\Terminal\SoftwareChange.cs" />
     <Compile Include="View\Terminal\TraceLogConfig\TerminalTraceLogConfigEdit.cs" />
     <Compile Include="View\Terminal\TraceLogConfig\TerminalTraceLogConfigView.cs" />

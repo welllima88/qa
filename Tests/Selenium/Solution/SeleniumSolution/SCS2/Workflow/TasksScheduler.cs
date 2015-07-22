@@ -26,8 +26,6 @@ namespace Six.Scs.Test.Workflow
 
         public static void Edit(Task task)
         {
-            List.Select(task.TaskName);
-
             View.Administration.TaskScheduler.Create.TaskName = task.TaskName;
             View.Administration.TaskScheduler.Create.MachineName = task.MachineName;
             View.Administration.TaskScheduler.Create.Type = task.Type;
@@ -40,13 +38,13 @@ namespace Six.Scs.Test.Workflow
             View.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
             View.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
 
-            View.Administration.TaskScheduler.Create.CreateButton.Click();
+            View.Administration.TaskScheduler.Create.SaveButton.Click();
         }
 
-        public static void Delete(Task task)
+        public static void Delete()
         {
-            List.Select(task.TaskName);
             View.Administration.TaskScheduler.Edit.DeleteButton.Click();
+            View.Administration.TaskScheduler.Edit.DeleteConfirmButton.Click();
         }
     }
 }

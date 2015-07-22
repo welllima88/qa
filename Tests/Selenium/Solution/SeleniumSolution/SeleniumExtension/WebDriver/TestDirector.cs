@@ -18,7 +18,6 @@ namespace Six.Test.Selenium.WebDriver
         public static void Start()
         {
             Console.Out.WriteLine("starting browser");
-            WebDriver.Manage().Window.Maximize();
             WebDriver.Url = TestEnvironment.BaseUrl.AbsoluteUri;
             ConfigureTimeouts(TestEnvironment.SeleniumConfig.Timeouts);
             TestEnvironment.Authentication.LogOn();

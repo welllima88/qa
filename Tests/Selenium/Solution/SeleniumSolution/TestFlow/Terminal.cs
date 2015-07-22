@@ -140,14 +140,16 @@ namespace Six.Scs.Test
             Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
 
-        public static void Retour(Model.ValueObjects.Terminal terminal)
+        public static void Return(Model.ValueObjects.Terminal terminal)
         {
             Open(terminal);
-            Workflow.Terminal.Retour();
+            Workflow.Terminal.Return();
             NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 
-            // Assert.That(RetourTable, Has.Member(terminal));
+            Assert.That(View.Terminal.Returns.TerminalLink(terminal).Displayed);
+            Assert.That(View.Terminal.Returns.Deactivate(terminal).Displayed);
+            Assert.That(View.Terminal.Returns.Cancel(terminal).Displayed);
         }
     }
 }

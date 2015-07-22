@@ -67,10 +67,11 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
             get { return WebDriver.FindAdaptedElement(By.CssSelector(Pre + ":nth-child(9)")).Text; }
         }
 
-        public static void Select(string taskName)
+        public static void Open(string taskName)
         {
             WebDriver.FindAdaptedElements(
-                By.CssSelector("a[href*='/TaskScheduler/TaskSchedulerAdministration/Edit?TaskId=']"))
+                By.CssSelector(string.Format(
+                    "{0} td a[href*='/TaskScheduler/TaskSchedulerAdministration/Edit?TaskId=']", Pre)))
                 .FirstOrDefault(e => e.Text.Equals(taskName))
                 .Click();
         }

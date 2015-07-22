@@ -117,7 +117,7 @@ namespace Six.Scs.Test
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             Tickets.TroubleTicket.Edit(_troubleTicket);
 
-            Terminal.Retour(_duplicatedTerminals.ElementAt(1));
+            Terminal.Return(_duplicatedTerminals.ElementAt(1));
 
             _sim = SimCard.Create();
 

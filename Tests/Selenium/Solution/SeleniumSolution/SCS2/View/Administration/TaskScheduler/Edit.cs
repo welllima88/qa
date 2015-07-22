@@ -60,5 +60,14 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         {
             get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
         }
+
+        public static IWebElement DeleteConfirmButton
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(By.CssSelector("div.modal-dialog form button.btn-danger[type='submit']"));
+            }
+        }
     }
 }

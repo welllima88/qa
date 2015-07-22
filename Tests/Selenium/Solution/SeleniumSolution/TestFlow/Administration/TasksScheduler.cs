@@ -1,6 +1,7 @@
 using System;
 using NUnit.Framework;
 using Six.Scs.Test.Model.ValueObjects;
+using List = Six.Scs.Test.View.Administration.TaskScheduler.List;
 
 namespace Six.Scs.Test.Administration
 {
@@ -8,23 +9,34 @@ namespace Six.Scs.Test.Administration
     {
         public static void Delete(Task task)
         {
-            Workflow.TasksScheduler.Delete(task);
+            Open(task);
+            Workflow.TasksScheduler.Delete();
+
+            Assert.Throws(typeof (NullReferenceException), () => List.Open(task.TaskName));
         }
 
-        public static Task Edit()
+        public static Task Edit(Task task)
         {
-            var task = Model.Factory.Task.Edit();
-            Workflow.TasksScheduler.Edit(task);
-            Check(task);
-            return task;
+            var t = Model.Factory.Task.Edit();
+            Open(task);
+            Workflow.TasksScheduler.Edit(t);
+            Open(t);
+            Check(t);
+            return t;
         }
 
         public static Task Create()
         {
             var task = Model.Factory.Task.Create();
             Workflow.TasksScheduler.Create(task);
+            Open(task);
             Check(task);
             return task;
+        }
+
+        private static void Open(Task task)
+        {
+            List.Open(task.TaskName);
         }
 
         public static void Check(Task task)
@@ -40,6 +52,7 @@ namespace Six.Scs.Test.Administration
             Assert.That(View.Administration.TaskScheduler.Create.RetryInterval, Is.EqualTo(task.RetryInterval));
             Assert.That(View.Administration.TaskScheduler.Create.MaxRetries, Is.EqualTo(task.MaxRetries));
             Assert.That(View.Administration.TaskScheduler.Create.WaitOnShutdown, Is.EqualTo(task.WaitOnShutdown));
+            View.Administration.TaskScheduler.Create.CancelButton.Click(); //leave edit mode -> list
         }
     }
 }
