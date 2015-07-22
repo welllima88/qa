@@ -38,7 +38,7 @@ namespace Six.Scs.Test.Workflow
             View.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
             View.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
 
-            View.Administration.TaskScheduler.Create.CreateButton.Click();
+            View.Administration.TaskScheduler.Create.SaveButton.Click();
         }
 
         public static void Delete()
