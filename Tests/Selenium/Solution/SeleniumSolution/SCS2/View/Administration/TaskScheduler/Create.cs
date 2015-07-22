@@ -76,5 +76,20 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         {
             get { return WebDriver.FindAdaptedElement(By.Id("create")); }
         }
+
+        public static IWebElement CancelButton
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector("a.btn-default[href*='/TaskScheduler/TaskSchedulerAdministration']"));
+            }
+        }
+
+        public static IWebElement SaveButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+        }
     }
 }
