@@ -43,10 +43,10 @@ namespace Six.Scs.Test.Workflow
             View.Administration.TaskScheduler.Create.CreateButton.Click();
         }
 
-        public static void Delete(Task task)
+        public static void Delete()
         {
-            List.Select(task.TaskName);
             View.Administration.TaskScheduler.Edit.DeleteButton.Click();
+            View.Administration.TaskScheduler.Edit.DeleteConfirmButton.Click();
         }
     }
 }
