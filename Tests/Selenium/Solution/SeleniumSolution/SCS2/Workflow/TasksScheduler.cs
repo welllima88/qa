@@ -26,8 +26,6 @@ namespace Six.Scs.Test.Workflow
 
         public static void Edit(Task task)
         {
-            List.Select(task.TaskName);
-
             View.Administration.TaskScheduler.Create.TaskName = task.TaskName;
             View.Administration.TaskScheduler.Create.MachineName = task.MachineName;
             View.Administration.TaskScheduler.Create.Type = task.Type;
