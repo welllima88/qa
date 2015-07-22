@@ -70,7 +70,8 @@ namespace Six.Scs.Test.View.Administration.TaskScheduler
         public static void Open(string taskName)
         {
             WebDriver.FindAdaptedElements(
-                By.CssSelector("a[href*='/TaskScheduler/TaskSchedulerAdministration/Edit?TaskId=']"))
+                By.CssSelector(string.Format(
+                    "{0} td a[href*='/TaskScheduler/TaskSchedulerAdministration/Edit?TaskId=']", Pre)))
                 .FirstOrDefault(e => e.Text.Equals(taskName))
                 .Click();
         }
