@@ -14,12 +14,14 @@ namespace Six.Scs.Test.Administration
             Assert.Throws(typeof (NullReferenceException), () => List.Open(task.TaskName));
         }
 
-        public static Task Edit()
+        public static Task Edit(Task task)
         {
-            var task = Model.Factory.Task.Edit();
-            Workflow.TasksScheduler.Edit(task);
-            Check(task);
-            return task;
+            var t = Model.Factory.Task.Edit();
+            Open(task);
+            Workflow.TasksScheduler.Edit(t);
+            Open(t);
+            Check(t);
+            return t;
         }
 
         public static Task Create()
