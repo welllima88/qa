@@ -26,6 +26,7 @@ namespace Six.Scs.Test.Administration
         {
             var task = Model.Factory.Task.Create();
             Workflow.TasksScheduler.Create(task);
+            Open(task);
             Check(task);
             return task;
         }
