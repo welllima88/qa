@@ -12,7 +12,7 @@ namespace Six.Scs.Test.Model.Factory
                 MaxRetries = "11",
                 Module = "Module A",
                 RetryInterval = "2",
-                TaskName = "Task SYR Auto A",
+                TaskName = "Task SYR Auto A" + Factory.GenerateTestId(),
                 Type = "Executable",
                 WaitOnShutdown = "22",
                 WorkingDirectory = @"c:\create\\Task_SYR\HOME"
@@ -29,7 +29,7 @@ namespace Six.Scs.Test.Model.Factory
                 MaxRetries = "22",
                 Module = "Module B",
                 RetryInterval = "4",
-                TaskName = "Task SYR Auto B",
+                TaskName = "Task SYR Auto B" + Factory.GenerateTestId(),
                 Type = "IScheduledTask",
                 WaitOnShutdown = "44",
                 WorkingDirectory = @"c:\edit\\Task_SYR\HOME"
