@@ -1,6 +1,7 @@
 using System;
 using NUnit.Framework;
 using Six.Scs.Test.Model.ValueObjects;
+using List = Six.Scs.Test.View.Administration.TaskScheduler.List;
 
 namespace Six.Scs.Test.Administration
 {
@@ -51,6 +52,7 @@ namespace Six.Scs.Test.Administration
             Assert.That(View.Administration.TaskScheduler.Create.RetryInterval, Is.EqualTo(task.RetryInterval));
             Assert.That(View.Administration.TaskScheduler.Create.MaxRetries, Is.EqualTo(task.MaxRetries));
             Assert.That(View.Administration.TaskScheduler.Create.WaitOnShutdown, Is.EqualTo(task.WaitOnShutdown));
+            View.Administration.TaskScheduler.Create.CancelButton.Click(); //leave edit mode -> list
         }
     }
 }
