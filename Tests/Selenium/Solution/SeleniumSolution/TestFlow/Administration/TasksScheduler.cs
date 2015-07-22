@@ -33,6 +33,11 @@ namespace Six.Scs.Test.Administration
             return task;
         }
 
+        private static void Open(Task task)
+        {
+            List.Open(task.TaskName);
+        }
+
         public static void Check(Task task)
         {
             Assert.That(View.Administration.TaskScheduler.Create.TaskName, Is.EqualTo(task.TaskName));
