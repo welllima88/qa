@@ -8,7 +8,10 @@ namespace Six.Scs.Test.Administration
     {
         public static void Delete(Task task)
         {
-            Workflow.TasksScheduler.Delete(task);
+            Open(task);
+            Workflow.TasksScheduler.Delete();
+
+            Assert.Throws(typeof (NullReferenceException), () => List.Open(task.TaskName));
         }
 
         public static Task Edit()
