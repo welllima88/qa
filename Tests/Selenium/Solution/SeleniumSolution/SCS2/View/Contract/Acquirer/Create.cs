@@ -71,7 +71,7 @@ namespace Six.Scs.Test.View.Contract.Acquirer
 
         public static void SaveAndCreate()
         {
-            Create.SaveAndCreate();
+            Contract.Create.SaveAndCreate();
         }
     }
 }
