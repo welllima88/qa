@@ -1,9 +1,9 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.Test.View.Brand
+namespace Six.Scs.Test.View.Contract.Acquirer
 {
-    public class AcquirerCreate : WebObject
+    public class Create : WebObject
     {
         public static string SetActivationDate
         {

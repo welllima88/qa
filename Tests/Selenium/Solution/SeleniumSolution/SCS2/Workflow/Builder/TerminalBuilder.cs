@@ -1,4 +1,4 @@
-using Six.Scs.Test.View.Brand;
+using Six.Scs.Test.View.Contract;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
 

@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
-namespace Six.Scs.Test.View.Brand
+namespace Six.Scs.Test.View.Contract
 {
     public class Selection : WebObject
     {
