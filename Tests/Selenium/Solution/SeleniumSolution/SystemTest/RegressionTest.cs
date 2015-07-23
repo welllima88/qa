@@ -66,8 +66,8 @@ namespace Six.Scs.Test
 
             Customer.Edit(_six);
 
-            // TODO: Infotext.Create(_six.Customer);
             _billingAddress = BillingAdress.Create(_six.Customer);
+            Infotext.Create(_customerBuilder.Customer);
             BillingAdress.Edit(_billingAddress);
 
             _mpd = Mpd.Create(_six.Customer);
@@ -78,12 +78,12 @@ namespace Six.Scs.Test
             Terminal.Move(_terminalLocation2, _location2);
 
             Brands.Create(_terminalLocation2, new Builder.Brand.Ep2.Default());
-            // TODO: Infotext.Create(_location1);
+            Infotext.Create(_locationBuilder.Location);
 
             _terminalLocation3 = Terminal.Create(_location1.Location, new Davinci2());
             Brands.Create(_terminalLocation3, new Builder.Brand.Ifsf.Default());
             _location1 = Location.Edit(_location1.Location, new Builder.Location.Default(Model.Factory.Location.Edit()));
-            // TODO: Infotext.Create(_terminalLocation2);
+            Infotext.Create(_terminalOnLocation1);
 
             _personOnLocation = Contact.Create(_location1.Location);
 
