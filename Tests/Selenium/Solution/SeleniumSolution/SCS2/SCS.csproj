@@ -123,11 +123,11 @@
     <Compile Include="View\Administration\TaskScheduler\List.cs" />
     <Compile Include="View\Administration\TerminalType\Edit.cs" />
     <Compile Include="View\Administration\TerminalType\View.cs" />
-    <Compile Include="View\Brand\AcquirerCreate.cs" />
-    <Compile Include="View\Brand\Create.cs" />
-    <Compile Include="View\Brand\Edit.cs" />
-    <Compile Include="View\Brand\Selection.cs" />
-    <Compile Include="View\Brand\View.cs" />
+    <Compile Include="View\Contract\Acquirer\Create.cs" />
+    <Compile Include="View\Contract\Create.cs" />
+    <Compile Include="View\Contract\Edit.cs" />
+    <Compile Include="View\Contract\Selection.cs" />
+    <Compile Include="View\Contract\View.cs" />
     <Compile Include="View\Common\ApplicationInfo.cs" />
     <Compile Include="View\Common\ChangeForm.cs" />
     <Compile Include="View\Common\Footer.cs" />
@@ -263,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="View\Contract\Brand\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeleniumExtension\SeleniumExtension.csproj">

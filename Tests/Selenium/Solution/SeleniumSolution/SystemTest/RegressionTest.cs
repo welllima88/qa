@@ -15,20 +15,20 @@ namespace Six.Scs.Test
     [TestFixture]
     public class RegressionTest
     {
-        private static Model.ValueObjects.Terminal _terminalLocation2;
-        private static Model.ValueObjects.Terminal _terminalLocation1;
-        private static CustomerBuilder _six;
-        private static LocationBuilder _location1;
+        private static Model.ValueObjects.Terminal _terminalOnLocation2;
+        private static Model.ValueObjects.Terminal _terminalOnLocation1;
+        private static CustomerBuilder _customerBuilder;
+        private static LocationBuilder _locationBuilder;
         private static Person _personOnCustomer;
         private static Person _personOnLocation;
         private static Model.ValueObjects.User _user;
         private static IEnumerable<Model.ValueObjects.Terminal> _duplicatedTerminals;
         private static Model.ValueObjects.Mpd _mpd;
         private static Model.ValueObjects.SimCard _sim;
-        private static Model.ValueObjects.Location _location2;
+        private static Model.ValueObjects.Location _location;
         private static TroubleTicket _troubleTicket;
         private static BillingAddress _billingAddress;
-        private static Model.ValueObjects.Terminal _terminalLocation3;
+        private static Model.ValueObjects.Terminal _terminalOnLocation;
 
         [TestFixtureSetUp]
         public void Home()
@@ -46,58 +46,60 @@ namespace Six.Scs.Test
          */
         public static void ExecuteRegressiontest()
         {
-            _six = Customer.Create(new Default());
-            Customer.Quit(_six);
-            Customer.Activate(_six);
+            _customerBuilder = Customer.Create(new Default());
+            Customer.Quit(_customerBuilder);
+            Customer.Activate(_customerBuilder);
 
-            _location1 = Location.Create(_six.Customer, new Builder.Location.Default(Model.Factory.Location.Create()));
-            Location.Quit(_location1);
-            Location.Activate(_location1);
+            _locationBuilder = Location.Create(_customerBuilder.Customer,
+                new Builder.Location.Default(Model.Factory.Location.Create()));
+            Location.Quit(_locationBuilder);
+            Location.Activate(_locationBuilder);
 
-            Customer.Quit(_six);
-            Customer.Activate(_six);
-            Location.Activate(_location1);
+            Customer.Quit(_customerBuilder);
+            Customer.Activate(_customerBuilder);
+            Location.Activate(_locationBuilder);
 
-            _personOnCustomer = Contact.Create(_six.Customer);
+            _personOnCustomer = Contact.Create(_customerBuilder.Customer);
 
             var contracts = new Builder.Brand.Ep2.Default();
 
-            _terminalLocation1 = Terminal.Create(_location1.Location, new Yomani().With(contracts));
+            _terminalOnLocation1 = Terminal.Create(_locationBuilder.Location, new Yomani().With(contracts));
 
-            Customer.Edit(_six);
+            Customer.Edit(_customerBuilder);
 
-            // TODO: Infotext.Create(_six.Customer);
-            _billingAddress = BillingAdress.Create(_six.Customer);
+            Infotext.Create(_customerBuilder.Customer);
+            _billingAddress = BillingAdress.Create(_customerBuilder.Customer);
             BillingAdress.Edit(_billingAddress);
 
-            _mpd = Mpd.Create(_six.Customer);
-            Terminal.Assign(_mpd, _terminalLocation1);
+            _mpd = Mpd.Create(_customerBuilder.Customer);
+            Terminal.Assign(_mpd, _terminalOnLocation1);
 
-            _terminalLocation2 = Terminal.Create(_location1.Location, new Xentissimo());
-            _location2 = Location.CreateFromCustomer(_six.Customer).Location;
-            Terminal.Move(_terminalLocation2, _location2);
+            _terminalOnLocation2 = Terminal.Create(_locationBuilder.Location, new Xentissimo());
+            _location = Location.CreateFromCustomer(_customerBuilder.Customer).Location;
+            Terminal.Move(_terminalOnLocation2, _location);
 
-            Brands.Create(_terminalLocation2, new Builder.Brand.Ep2.Default());
-            // TODO: Infotext.Create(_location1);
+            Brands.Create(_terminalOnLocation2, new Builder.Brand.Ep2.Default());
+            Infotext.Create(_locationBuilder.Location);
 
-            _terminalLocation3 = Terminal.Create(_location1.Location, new Davinci2());
-            Brands.Create(_terminalLocation3, new Builder.Brand.Ifsf.Default());
-            _location1 = Location.Edit(_location1.Location, new Builder.Location.Default(Model.Factory.Location.Edit()));
-            // TODO: Infotext.Create(_terminalLocation2);
+            _terminalOnLocation = Terminal.Create(_locationBuilder.Location, new Davinci2());
+            Brands.Create(_terminalOnLocation, new Builder.Brand.Ifsf.Default());
+            _locationBuilder = Location.Edit(_locationBuilder.Location,
+                new Builder.Location.Default(Model.Factory.Location.Edit()));
+            Infotext.Create(_terminalOnLocation1);
 
-            _personOnLocation = Contact.Create(_location1.Location);
+            _personOnLocation = Contact.Create(_locationBuilder.Location);
 
             Mpd.Edit(_mpd);
 
-            Terminal.ArticleChange(_terminalLocation1, new Yoximo());
-            Terminal.Quit(_terminalLocation1);
+            Terminal.ArticleChange(_terminalOnLocation1, new Yoximo());
+            Terminal.Quit(_terminalOnLocation1);
             _personOnLocation = Contact.Edit(_personOnLocation);
             Contact.Delete(_personOnCustomer);
 
-            _user = User.Create(_six.Customer);
+            _user = User.Create(_customerBuilder.Customer);
             _user = User.Edit(_user);
 
-            _duplicatedTerminals = Terminal.Duplicate(_terminalLocation2);
+            _duplicatedTerminals = Terminal.Duplicate(_terminalOnLocation2);
             BusinessTemplate.Change(_duplicatedTerminals);
             User.Create(_personOnLocation);
 
@@ -112,7 +114,7 @@ namespace Six.Scs.Test
 
             User.Delete(_user);
 
-            Terminal.Replace(_terminalLocation2);
+            Terminal.Replace(_terminalOnLocation2);
 
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             Tickets.TroubleTicket.Edit(_troubleTicket);

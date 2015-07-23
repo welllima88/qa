@@ -1,21 +1,34 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.Test.View.Brand
+namespace Six.Scs.Test.View.Contract
 {
-    public class Create : WebObject
-//TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
+    public class View : WebObject
     {
+        /// <summary>
+        ///     calls Edit page for desired brand (sub contract/provider)
+        /// </summary>
+        /// <param name="brand">use for example as parameter "American Express [635]"</param>
         public static void ClickBrandContractEdit(string brand)
         {
+            //American Express [635]
             ClickEditContract(brand, "contract");
         }
 
+        /// <summary>
+        ///     calls Edit page for desired acquirer (main contract/provider)
+        /// </summary>
+        /// <param name="acquirer">for example "Multipay ep2" needs as parameter "Protokoll EP2 [281]"</param>
         public static void ClickAcquirerContractEdit(string acquirer)
         {
             ClickEditContract(acquirer, "brand");
         }
 
+        /// <summary>
+        ///     helper method
+        /// </summary>
+        /// <param name="brand"></param>
+        /// <param name="brandType"></param>
         private static void ClickEditContract(string brand, string brandType)
         {
             WebDriver.FindAdaptedElement(
@@ -23,6 +36,9 @@ namespace Six.Scs.Test.View.Brand
                 Click();
         }
 
+        /// <summary>
+        /// </summary>
+        /// <param name="mcc">use for example "5111: STATIONERY/OFF-SUPP/PRINTING"</param>
         public static void SelectMcc(string mcc)
         {
             WebDriver.FindAdaptedElement(
@@ -40,30 +56,15 @@ namespace Six.Scs.Test.View.Brand
                 .TypeText(vpNo);
         }
 
+        /// <summary>
+        ///     Selects an FO template and overrides the default setting (in Frontoffice)
+        /// </summary>
+        /// <param name="businessTemplate">use for example "( Keine )"</param>
         public static void SelectBusinessTemplate(string businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                SelectByValue(businessTemplate);
-        }
-
-        public static void Dcc(bool dccEnabled)
-        {
-            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
-                .CheckBox()
-                .Set(dccEnabled);
-        }
-
-        public static void SetDccBaseCurrency(string dccBaseCurrency)
-        {
-            WebDriver.FindAdaptedElement(
-                By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
-                .Click();
-        }
-
-        public static void SaveAndCreate()
-        {
-            WebDriver.FindAdaptedElement(By.Id("save")).Click();
+                SelectByText(businessTemplate);
         }
     }
 }

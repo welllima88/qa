@@ -1,6 +1,4 @@
-using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common.Infotext;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow;
 
@@ -11,33 +9,28 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            View.Customer.View.Infotexts.Click();
-            CreateAndSaveInfotext("Customer");
+            View.Customer.View.CreateInfotext.Click();
+            var infotext = InfoText.Create("Customer");
+
+            Assert.That(View.Customer.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
         public static void Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
-            View.Location.View.Infotexts.Click();
-            CreateAndSaveInfotext("Location");
+            View.Location.View.CreateInfotext.Click();
+            var infotext = InfoText.Create("Location");
+
+            Assert.That(View.Location.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
         public static void Create(Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
-            TerminalTexts.Infotexts.Click();
-            CreateAndSaveInfotext("Terminal");
-        }
+            TerminalTexts.CreateInfotext.Click();
+            var infotext = InfoText.Create("Terminal");
 
-        private static void CreateAndSaveInfotext(string parameter)
-        {
-            var infotext = InfoText.Create(parameter);
-            Check(infotext);
-        }
-
-        public static void Check(string infotext)
-        {
-            Assert.That(ListView.List.Contains(infotext));
+            Assert.That(View.Common.Infotext.ListView.List, Has.Exactly(1).ContainsSubstring(infotext));
         }
     }
 }

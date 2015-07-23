@@ -1,23 +1,16 @@
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 
-namespace Six.Scs.Test.View.Brand
+namespace Six.Scs.Test.View.Contract
 {
-    public class Edit : WebObject
+    public class Create : WebObject
+//TODO contract create does not indicate precisely for which brand the properties should be set if multiple brand create executed
     {
-        /// <summary>
-        ///     Clicks edit on the desired brand
-        /// </summary>
-        /// <param name="brand">brand name e.g. "American Express [635]"</param>
         public static void ClickBrandContractEdit(string brand)
         {
             ClickEditContract(brand, "contract");
         }
 
-        /// <summary>
-        ///     /// Clicks edit on the desired acquirer
-        /// </summary>
-        /// <param name="acquirer">"Protokoll EP2 [281]" for SIX Payment Services (Multipay)</param>
         public static void ClickAcquirerContractEdit(string acquirer)
         {
             ClickEditContract(acquirer, "brand");
@@ -30,10 +23,6 @@ namespace Six.Scs.Test.View.Brand
                 Click();
         }
 
-        /// <summary>
-        ///     Sets the MCC (merchant category code)
-        /// </summary>
-        /// <param name="mcc">e.g. "5111: STATIONERY/OFF-SUPP/PRINTING"</param>
         public static void SelectMcc(string mcc)
         {
             WebDriver.FindAdaptedElement(
@@ -51,25 +40,30 @@ namespace Six.Scs.Test.View.Brand
                 .TypeText(vpNo);
         }
 
-        /// <summary>
-        ///     Sets the desired Business Template for apply the appropiate settings for limits, functions etc. in Frontoffice
-        /// </summary>
-        /// <param name="businessTemplate">default: "( Keine )"</param>
         public static void SelectBusinessTemplate(string businessTemplate)
         {
             WebDriver.FindAdaptedElement(
                 By.CssSelector("#ctl00_bodyContentPlaceHolder_acquirerUserControl_ddBusinessTemplate")).Selector().
-                SelectByText(businessTemplate);
+                SelectByValue(businessTemplate);
         }
 
-        public static void Dcc(bool dccEnabeled)
+        public static void Dcc(bool dccEnabled)
         {
-            Create.Dcc(dccEnabeled);
+            WebDriver.FindAdaptedElement(By.CssSelector("input[id$='PropertyDCCflag_cbxDCC']"))
+                .CheckBox()
+                .Set(dccEnabled);
+        }
+
+        public static void SetDccBaseCurrency(string dccBaseCurrency)
+        {
+            WebDriver.FindAdaptedElement(
+                By.CssSelector("div[id*='PropertyDCCBaseCurrency'] div[value='" + dccBaseCurrency + "']"))
+                .Click();
         }
 
         public static void SaveAndCreate()
         {
-            Create.SaveAndCreate();
+            WebDriver.FindAdaptedElement(By.Id("save")).Click();
         }
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Brand;
+using Six.Scs.Test.View.Contract;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.Test.Workflow.Builder;
 
