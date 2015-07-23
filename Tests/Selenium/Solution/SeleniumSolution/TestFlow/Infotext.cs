@@ -11,8 +11,10 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Customer customer)
         {
             Customer.Open(customer);
-            View.Customer.View.Infotexts.Click();
-            CreateAndSaveInfotext("Customer");
+            View.Customer.View.CreateInfotext.Click();
+            var infotext = InfoText.Create("Customer");
+
+            Assert.That(View.Customer.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
         public static void Create(Model.ValueObjects.Location location)
