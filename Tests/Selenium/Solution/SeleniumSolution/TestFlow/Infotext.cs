@@ -20,8 +20,10 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Location location)
         {
             Location.Open(location);
-            View.Location.View.Infotexts.Click();
-            CreateAndSaveInfotext("Location");
+            View.Location.View.CreateInfotext.Click();
+            var infotext = InfoText.Create("Location");
+
+            Assert.That(View.Location.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
         public static void Create(Model.ValueObjects.Terminal terminal)
