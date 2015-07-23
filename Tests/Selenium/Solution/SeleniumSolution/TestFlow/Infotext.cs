@@ -1,6 +1,4 @@
-using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common.Infotext;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow;
 
@@ -29,19 +27,10 @@ namespace Six.Scs.Test
         public static void Create(Model.ValueObjects.Terminal terminal)
         {
             Terminal.Open(terminal);
-            TerminalTexts.Infotexts.Click();
-            CreateAndSaveInfotext("Terminal");
-        }
+            TerminalTexts.CreateInfotext.Click();
+            var infotext = InfoText.Create("Terminal");
 
-        private static void CreateAndSaveInfotext(string parameter)
-        {
-            var infotext = InfoText.Create(parameter);
-            Check(infotext);
-        }
-
-        public static void Check(string infotext)
-        {
-            Assert.That(ListView.List.Contains(infotext));
+            Assert.That(View.Common.Infotext.ListView.List, Has.Exactly(1).ContainsSubstring(infotext));
         }
     }
 }
