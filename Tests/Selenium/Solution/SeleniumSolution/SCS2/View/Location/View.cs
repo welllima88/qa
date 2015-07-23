@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
@@ -121,7 +123,7 @@ namespace Six.Scs.Test.View.Location
             get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Person/New?locationId=']")); }
         }
 
-        public static IWebElement Infotexts
+        public static IWebElement CreateInfotext
         {
             get
             {
@@ -161,6 +163,16 @@ namespace Six.Scs.Test.View.Location
         public static IWebElement ConfirmActivate
         {
             get { return WebDriver.FindAdaptedElement(By.CssSelector("button#activate")); }
+        }
+
+        public static IEnumerable<string> Infotexts
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElements(By.CssSelector("div#infotext div.panel-body div.row"))
+                        .Select(e => e.Text).ToList();
+            }
         }
     }
 }
