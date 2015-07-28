@@ -117,7 +117,7 @@ namespace Six.Scs.Test
             Terminal.Replace(_terminalOnLocation2);
 
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
-            Tickets.TroubleTicket.Edit(_troubleTicket);
+            // Tickets.TroubleTicket.Edit(_troubleTicket);
 
             Terminal.Return(_duplicatedTerminals.ElementAt(1));
 
