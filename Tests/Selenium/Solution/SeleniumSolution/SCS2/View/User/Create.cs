@@ -14,6 +14,7 @@ namespace Six.Scs.Test.View.User
         public static string Salutation
         {
             set { WebDriver.FindAdaptedElement(By.Id("UserData_SalutationId")).Selector().SelectByText(value); }
+            get { return WebDriver.FindAdaptedElement(By.Id("UserData_SalutationId")).Selector().SelectedOption; }
         }
 
         public static string FirstName

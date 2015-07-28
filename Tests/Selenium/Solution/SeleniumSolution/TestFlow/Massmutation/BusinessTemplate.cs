@@ -23,6 +23,7 @@ namespace Six.Scs.Test.Massmutation
                 Is.EquivalentTo(terminals.Select(t => t.Id)));
 
             View.Massmuation.BusinessTemplate.Save.Click();
+            TestDirector.Navigate();
             foreach (var terminal in terminals)
             {
                 Terminal.Open(terminal);
