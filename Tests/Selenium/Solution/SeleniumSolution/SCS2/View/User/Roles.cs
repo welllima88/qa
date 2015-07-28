@@ -22,7 +22,7 @@ namespace Six.Scs.Test.View.User
         public static IEnumerable<string> GetAssignedRoles()
         {
             var rows =
-                WebDriver.FindElements(By.CssSelector("table#roles tbody tr")).Select(d => d.Text);
+                WebDriver.FindElements(By.CssSelector("table#user_roles tbody>tr>td>a")).Select(d => d.Text).ToList();
             return rows;
         }
     }
