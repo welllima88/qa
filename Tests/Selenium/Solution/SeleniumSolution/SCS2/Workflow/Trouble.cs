@@ -46,7 +46,7 @@ namespace Six.Scs.Test.Workflow
 
         public static TroubleTicket Edit(TroubleTicket ticket)
         {
-            throw new NotImplementedException();
+            return new TroubleTicket();
         }
     }
 }
