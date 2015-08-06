@@ -30,49 +30,38 @@ namespace Six.Scs.Test.Search.Terminal
 
             Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
         }
-        /* TODO find test data
+
         [Test]
         [Category("Search"), Category("Terminal")]
         public void IfsfGroupAndDeviceTerminalId()
         {
-            _terminal = "30092755";
+            _terminal = "06081588";
             Workflow.Search.Find(_terminal);
             SearchResult.First(Result.Terminal).Click();
 
-            Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
+            Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo(_terminal));
         }
 
         [Test]
         [Category("Search"), Category("Terminal")]
         public void IfsfGroupTerminalId()
         {
-            _terminal = "30092755";
+            _terminal = "060815";
             Workflow.Search.Find(_terminal);
             SearchResult.First(Result.Terminal).Click();
 
-            Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
-        }
-
-        [Test]
-        [Category("Search"), Category("Terminal")]
-        public void IfsfDeviceTerminalId()
-        {
-            _terminal = "30092755";
-            Workflow.Search.Find(_terminal);
-            SearchResult.First(Result.Terminal).Click();
-
-            Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
+            Assert.That(TerminalInfo.ExternTerminalId, Is.StringStarting(_terminal));
         }
 
         [Test]
         [Category("Search"), Category("Terminal")]
         public void ScsTerminalId()
         {
-            _terminal = "30092755";
+            _terminal = "06081588";
             Workflow.Search.Find(_terminal);
             SearchResult.First(Result.Terminal).Click();
 
-            Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
-        }*/
+            Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo("06081588"));
+        }
     }
 }
