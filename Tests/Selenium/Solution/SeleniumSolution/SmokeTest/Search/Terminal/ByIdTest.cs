@@ -61,7 +61,9 @@ namespace Six.Scs.Test.Search.Terminal
             Workflow.Search.Find(_terminal);
             SearchResult.First(Result.Terminal).Click();
 
+            Assert.That(TerminalInfo.TerminalId, Is.EqualTo("21395264"));
             Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo("06081588"));
+            Assert.That(TerminalInfo.Article, Is.StringContaining("IFSF"));
         }
     }
 }
