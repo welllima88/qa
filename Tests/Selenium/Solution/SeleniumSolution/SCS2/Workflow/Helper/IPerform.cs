@@ -1,6 +1,6 @@
 namespace Six.Scs.Test.Workflow.Helper
 {
-    public interface IPerform : Scs.Test.Workflow.Helper.ICheck
+    public interface IPerform : ICheck
     {
         void Do();
     }

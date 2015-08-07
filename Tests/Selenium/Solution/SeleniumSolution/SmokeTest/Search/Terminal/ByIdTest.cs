@@ -22,7 +22,7 @@ namespace Six.Scs.Test.Search.Terminal
 
         [Test]
         [Category("Search"), Category("Terminal")]
-        public void Ep2TerminalId()
+        public void Ep2Id()
         {
             _terminal = "30092755";
             Workflow.Search.Find(_terminal);
@@ -33,7 +33,7 @@ namespace Six.Scs.Test.Search.Terminal
 
         [Test]
         [Category("Search"), Category("Terminal")]
-        public void IfsfGroupAndDeviceTerminalId()
+        public void IfsfGroupAndDeviceId()
         {
             _terminal = "06081588";
             Workflow.Search.Find(_terminal);
@@ -44,7 +44,7 @@ namespace Six.Scs.Test.Search.Terminal
 
         [Test]
         [Category("Search"), Category("Terminal")]
-        public void IfsfGroupTerminalId()
+        public void IfsfGroupId()
         {
             _terminal = "060815";
             Workflow.Search.Find(_terminal);
@@ -57,11 +57,13 @@ namespace Six.Scs.Test.Search.Terminal
         [Category("Search"), Category("Terminal")]
         public void ScsTerminalId()
         {
-            _terminal = "06081588";
+            _terminal = "21395264";
             Workflow.Search.Find(_terminal);
             SearchResult.First(Result.Terminal).Click();
 
+            Assert.That(TerminalInfo.TerminalId, Is.EqualTo("21395264"));
             Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo("06081588"));
+            Assert.That(TerminalInfo.Article, Is.StringContaining("IFSF"));
         }
     }
 }
