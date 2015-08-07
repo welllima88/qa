@@ -14,15 +14,12 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
         {
             get
             {
-                var w = WebDriver.WebDriverWait();
                 return
-                    new WebElement(
-                        w.Until(
-                            d =>
-                                d.FindElement(
-                                    By.CssSelector(
-                                        PortletLocator +
-                                        " div.portletLinks a[href*='ContractCreate/ListByTerminal?TerminalId=']"))));
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(PortletLocator +
+                                       " div.portletLinks a[href*='ContractCreate/ListByTerminal?TerminalId=']"));
+            }
+        }
 
         public static IWebElement AcuirerExchange
         {
