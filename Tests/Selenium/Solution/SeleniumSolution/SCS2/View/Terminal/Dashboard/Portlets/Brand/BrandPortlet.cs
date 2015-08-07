@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
-using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
@@ -24,6 +23,15 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                                     By.CssSelector(
                                         PortletLocator +
                                         " div.portletLinks a[href*='ContractCreate/ListByTerminal?TerminalId=']"))));
+
+        public static IWebElement AcuirerExchange
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(PortletLocator +
+                                       " a[href*='/Location/PrepareForAcquirerExchangeTerminal?TerminalId=']"));
             }
         }
 
