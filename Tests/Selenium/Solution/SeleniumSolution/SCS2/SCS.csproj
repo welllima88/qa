@@ -251,6 +251,7 @@
     <Compile Include="Workflow\Mpd.cs" />
     <Compile Include="Workflow\Search.cs" />
     <Compile Include="Workflow\SimCard.cs" />
+    <Compile Include="Workflow\AcquirerExchange.cs" />
     <Compile Include="Workflow\Terminal.cs" />
     <Compile Include="Workflow\TerminalType.cs" />
     <Compile Include="Workflow\Trouble.cs" />
