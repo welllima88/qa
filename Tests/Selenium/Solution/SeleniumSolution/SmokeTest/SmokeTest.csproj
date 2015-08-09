@@ -85,6 +85,7 @@
     <Compile Include="SerialNumberImport\SerialNumberPreviewTest.cs" />
     <Compile Include="SIMCard\SimCardViewTest.cs" />
     <Compile Include="SoftwareExchange\UiTest.cs" />
+    <Compile Include="Terminal\QuickOpen.cs" />
     <Compile Include="Terminal\FoMessage.cs" />
     <Compile Include="Terminal\Quit.cs" />
     <Compile Include="Terminal\Portlets.cs" />
