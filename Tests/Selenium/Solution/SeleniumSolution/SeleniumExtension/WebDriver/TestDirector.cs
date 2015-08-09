@@ -33,6 +33,7 @@ namespace Six.Test.Selenium.WebDriver
         public static void PrepareBrowser(string gridHub = "")
         {
             Console.Out.WriteLine("preparing browser");
+            // force german language, but doesn't work on grid:
             var firefoxProfile = NoProxy();
             firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de");
 
@@ -59,16 +60,14 @@ namespace Six.Test.Selenium.WebDriver
 
         private static DesiredCapabilities DesiredCapabilities(FirefoxProfile firefoxProfile)
         {
-            var capability = OpenQA.Selenium.Remote.DesiredCapabilities.Firefox();
-            capability.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
-            // force german language, but doesn't work on grid:
-            // firefoxProfile.SetPreference("intl.accept_languages", "de-ch,de,de-de");
+            var capabilities = OpenQA.Selenium.Remote.DesiredCapabilities.Firefox();
+            capabilities.SetCapability(FirefoxDriver.ProfileCapabilityName, firefoxProfile.ToBase64String());
             // capability.SetCapability(CapabilityType.Platform, new Platform(PlatformType.Windows));
             // capability.SetCapability(CapabilityType.Proxy, new Proxy().NoProxy);
             // capability.SetCapability("network.proxy.type", 0);
             // capability.SetCapability(CapabilityType.Version, "30.0.1");
-            // capability.SetCapability("six.machine", "syr"); // only for using grid on local
-            return capability;
+            capabilities.SetCapability("six.machine", "wksiegmund01"); // only for using grid on local
+            return capabilities;
         }
 
         private static FirefoxProfile NoProxy()
