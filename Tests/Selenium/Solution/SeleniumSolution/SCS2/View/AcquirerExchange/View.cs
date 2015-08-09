@@ -2,9 +2,9 @@ using OpenQA.Selenium;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
-namespace Six.Scs.Test.View.Acquirer
+namespace Six.Scs.Test.View.AcquirerExchange
 {
-    public class Exchange : WebObject
+    public class View : WebObject
     {
         public static IWebElement Reload
         {
@@ -20,6 +20,11 @@ namespace Six.Scs.Test.View.Acquirer
         public static IWebElement Save
         {
             get { return WebDriver.FindAdaptedElement(By.Id("save")); }
+        }
+
+        public static Acquirer AcquirerElement(string acquirerName)
+        {
+            return new Acquirer(acquirerName);
         }
     }
 }
