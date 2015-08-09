@@ -105,6 +105,7 @@
     <Compile Include="Model\ValueObjects\TerminalType.cs" />
     <Compile Include="Model\ValueObjects\TroubleTicket.cs" />
     <Compile Include="Model\ValueObjects\User.cs" />
+    <Compile Include="View\Acquirer\Exchange.cs" />
     <Compile Include="View\Administration\Agency\Create.cs" />
     <Compile Include="View\Administration\Agency\Edit.cs" />
     <Compile Include="View\Administration\Agency\List.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="View\Customer\Create.cs" />
     <Compile Include="View\Customer\Deactivate.cs" />
     <Compile Include="View\Customer\Edit.cs" />
+    <Compile Include="View\Customer\Move.cs" />
     <Compile Include="View\Customer\View.cs" />
     <Compile Include="View\Environments\Local.cs" />
     <Compile Include="View\Environments\Prod.cs" />
@@ -186,6 +188,7 @@
     <Compile Include="View\Search\SearchResult.cs" />
     <Compile Include="View\Search\Result.cs" />
     <Compile Include="View\Terminal\ContactlessCapability.cs" />
+    <Compile Include="View\Terminal\Dashboard\Portlets\QuickOpen.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\BrandContract.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\BrandPortlet.cs" />
@@ -236,11 +239,12 @@
     <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
+    <Compile Include="Workflow\Helper\Perform.cs" />
     <Compile Include="Workflow\TasksScheduler.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
     <Compile Include="View\User\Delete.cs" />
-    <Compile Include="Workflow\Helper\IBuilder.cs" />
+    <Compile Include="Workflow\Helper\Builder.cs" />
     <Compile Include="Workflow\Helper\ICheck.cs" />
     <Compile Include="Workflow\Helper\ICreate.cs" />
     <Compile Include="Workflow\Helper\IEdit.cs" />
@@ -250,6 +254,7 @@
     <Compile Include="Workflow\Mpd.cs" />
     <Compile Include="Workflow\Search.cs" />
     <Compile Include="Workflow\SimCard.cs" />
+    <Compile Include="Workflow\AcquirerExchange.cs" />
     <Compile Include="Workflow\Terminal.cs" />
     <Compile Include="Workflow\TerminalType.cs" />
     <Compile Include="Workflow\Trouble.cs" />
