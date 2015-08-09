@@ -237,11 +237,12 @@
     <Compile Include="Workflow\Builder\Now.cs" />
     <Compile Include="Workflow\Builder\DelayedChange.cs" />
     <Compile Include="Workflow\Builder\LocationBuilder.cs" />
+    <Compile Include="Workflow\Helper\Perform.cs" />
     <Compile Include="Workflow\TasksScheduler.cs" />
     <Compile Include="Workflow\Builder\TerminalBuilder.cs" />
     <Compile Include="Workflow\Contact.cs" />
     <Compile Include="View\User\Delete.cs" />
-    <Compile Include="Workflow\Helper\IBuilder.cs" />
+    <Compile Include="Workflow\Helper\Builder.cs" />
     <Compile Include="Workflow\Helper\ICheck.cs" />
     <Compile Include="Workflow\Helper\ICreate.cs" />
     <Compile Include="Workflow\Helper\IEdit.cs" />
