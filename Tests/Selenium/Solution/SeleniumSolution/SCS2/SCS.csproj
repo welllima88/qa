@@ -105,6 +105,7 @@
     <Compile Include="Model\ValueObjects\TerminalType.cs" />
     <Compile Include="Model\ValueObjects\TroubleTicket.cs" />
     <Compile Include="Model\ValueObjects\User.cs" />
+    <Compile Include="View\AcquirerExchange\Acquirer.cs" />
     <Compile Include="View\AcquirerExchange\View.cs" />
     <Compile Include="View\Administration\Agency\Create.cs" />
     <Compile Include="View\Administration\Agency\Edit.cs" />
