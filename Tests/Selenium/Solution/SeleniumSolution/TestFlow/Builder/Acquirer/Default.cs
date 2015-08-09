@@ -14,6 +14,15 @@ namespace Six.Scs.Test.Builder.Acquirer
         protected override void SetupBrands()
         {
         
+            var brands = View.AcquirerExchange.View.AcquirerElement("acq_multipay").Brands();
+            foreach (var brandElement in brands)
+            {
+                brandElement.Selected.Set(true);
+                brandElement.NewBrand.SelectByText("SIX Payment Services (Europe)");
+                brandElement.DccProvider.SelectByText("SIX Payment Services");
+                brandElement.Mcc.SelectByText("2343");
+                // brandElement.ContractNumber.TypeText("??");
+            }
         }
     }
 }
