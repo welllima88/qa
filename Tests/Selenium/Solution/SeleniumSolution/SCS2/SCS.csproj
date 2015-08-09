@@ -155,6 +155,7 @@
     <Compile Include="View\Customer\Create.cs" />
     <Compile Include="View\Customer\Deactivate.cs" />
     <Compile Include="View\Customer\Edit.cs" />
+    <Compile Include="View\Customer\Move.cs" />
     <Compile Include="View\Customer\View.cs" />
     <Compile Include="View\Environments\Local.cs" />
     <Compile Include="View\Environments\Prod.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="View\Search\SearchResult.cs" />
     <Compile Include="View\Search\Result.cs" />
     <Compile Include="View\Terminal\ContactlessCapability.cs" />
+    <Compile Include="View\Terminal\Dashboard\Portlets\QuickOpen.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\BrandContract.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\BrandPortlet.cs" />
