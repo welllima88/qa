@@ -91,7 +91,7 @@ namespace Six.Scs.Test.View.User
 
         public static IWebElement AddServiceButton
         {
-            get { return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/User/SetupLoginService?userName=']")); }
+            get { return WebDriver.FindAdaptedElement(By.CssSelector("a#addService[href*='/User/SetupLoginService?userName=']")); }
         }
 
         public static IWebElement AssignRoles
