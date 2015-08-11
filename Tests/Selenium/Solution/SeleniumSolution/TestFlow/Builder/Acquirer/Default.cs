@@ -1,5 +1,7 @@
 ﻿using NUnit.Framework;
+using Six.Scs.Test.View.AcquirerExchange;
 using Six.Scs.Test.View.Massmuation;
+using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.Test.Workflow;
 
 namespace Six.Scs.Test.Builder.Acquirer
@@ -8,12 +10,12 @@ namespace Six.Scs.Test.Builder.Acquirer
     {
         public override void Check()
         {
+            BrandPortlet.ExpandAll();
             Assert.That(Progress.BatchId, Is.GreaterThan(0));
         }
 
         protected override void SetupBrands()
         {
-        
             var brands = View.AcquirerExchange.View.AcquirerElement("acq_multipay").Brands();
             foreach (var brandElement in brands)
             {
