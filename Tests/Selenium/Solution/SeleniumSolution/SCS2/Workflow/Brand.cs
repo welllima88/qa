@@ -10,7 +10,7 @@ namespace Six.Scs.Test.Workflow
         ///     Selects the acquirer with all its brands
         /// </summary>
         /// <param name="acquirer"></param>
-        public static void Select(Acquirer acquirer)
+        public static void Select(Model.ValueObjects.Brand.Acquirer acquirer)
         {
             Selection.Select(acquirer.Id, Selection.Acquirer);
         }

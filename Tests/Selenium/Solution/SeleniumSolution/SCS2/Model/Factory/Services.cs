@@ -17,23 +17,8 @@ namespace Six.Scs.Test.Model.Factory
                 },
                 new Service
                 {
-                    Name = "SCS",
-                    Permission = "DPS-CustomerCare"
-                },
-                new Service
-                {
-                    Name = "SCS- acquirer",
-                    Permission = "alle Acquirer"
-                },
-                new Service
-                {
-                    Name = "SCS- supplier",
-                    Permission = "alle Supplier"
-                },
-                new Service
-                {
-                    Name = "SCS- ticket",
-                    Permission = "Alle Tickets"
+                    Name = "Analyzer",
+                    Permission = "Service Benutzer"
                 }
             };
         }

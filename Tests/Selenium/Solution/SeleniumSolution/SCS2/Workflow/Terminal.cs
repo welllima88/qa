@@ -2,6 +2,7 @@ using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
+using Location = Six.Scs.Test.Model.ValueObjects.Location;
 using TerminalDuplicate = Six.Scs.Test.Model.ValueObjects.TerminalDuplicate;
 using TerminalReplace = Six.Scs.Test.Model.ValueObjects.TerminalReplace;
 
@@ -84,7 +85,7 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.SoftwareChange.UnBlock.Click();
         }
 
-        public static void Move(Model.ValueObjects.Location location)
+        public static void Move(Location location)
         {
             BusinessViewpoint.MoveTerminal.Click();
 

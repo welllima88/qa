@@ -8,14 +8,13 @@ namespace Six.Scs.Test.View.Terminal.Dashboard
     public abstract class PortletViewBase : WebObject
     {
         public static readonly WebDriverWait WebDriverWait = WebDriver.WebDriverWait();
+        protected static string PortletId;
 
         protected PortletViewBase()
         {
             Suffix = " div.portletKeyValueRow div.treeGridValueCol";
             Prefix = "tbody div#dashboarditems div ";
         }
-
-        protected static string PortletId { get; set; }
 
         public IWebElement PortletTitle
         {

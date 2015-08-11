@@ -78,5 +78,12 @@ namespace Six.Scs.Test.Workflow.Builder
             View.Customer.View.Activate.Click();
             View.Customer.View.ConfirmActivate.Click();
         }
+
+        public void Move(Customer toCustomer)
+        {
+            View.Customer.View.MoveButton.Click();
+            View.Customer.Move.TargetCustomerId = toCustomer.CustomerNumber;
+            View.Customer.Move.Execute();
+        }
     }
 }

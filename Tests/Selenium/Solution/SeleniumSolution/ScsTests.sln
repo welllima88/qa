@@ -1,19 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{1700B98D-44B7-439C-A001-6C7A56EDB6D9}"
 	ProjectSection(SolutionItems) = preProject
 		Selenium.build = Selenium.build
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExtension", "SeleniumExtension\SeleniumExtension.csproj", "{D82EFC2F-3E2D-4892-9D5D-327139693BB4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCS", "SCS2\SCS.csproj", "{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4} = {D82EFC2F-3E2D-4892-9D5D-327139693BB4}
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{20517DF7-28B0-4749-864B-0E815ECD5152}"
 	ProjectSection(SolutionItems) = preProject
@@ -40,17 +35,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testlogic", "TestFlow\Testl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backoffice", "SaferpayBackoffice\Backoffice.csproj", "{724744A8-0BAA-437E-8CE2-3160CBDD9F44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumExtension", "SeleniumExtension\SeleniumExtension.csproj", "{D82EFC2F-3E2D-4892-9D5D-327139693BB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9CD23D-6DAC-46B5-A8B2-9966647CB131}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -72,6 +64,10 @@ Global
 		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{724744A8-0BAA-437E-8CE2-3160CBDD9F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82EFC2F-3E2D-4892-9D5D-327139693BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
