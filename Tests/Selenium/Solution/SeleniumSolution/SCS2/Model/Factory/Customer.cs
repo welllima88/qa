@@ -14,7 +14,7 @@
                 SupportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h",
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
                 SbsSegment = "01_CH",
-                WesMandant = "TKCPOS",
+                WesMandant = "tkcpos",
                 Location = Location.Create()
             };
         }
