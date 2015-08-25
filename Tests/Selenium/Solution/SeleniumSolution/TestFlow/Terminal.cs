@@ -7,6 +7,7 @@ using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.Massmuation;
+using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
@@ -51,7 +52,9 @@ namespace Six.Scs.Test
                 Assert.Fail("Batch has not been processed probably due to Job Control error. BatchId:{0} JobId:{1}",
                     Progress.BatchId, Progress.JobId);
             }
-            Assert.That(Progress.Failed, Is.EqualTo("0"));
+            Assert.That(Progress.Failed, Is.EqualTo("0"),
+                "Terminal duplicate has {0} failed jobs. BatchId:{1} JobId:{2}", Progress.Failed,
+                Progress.BatchId, Progress.JobId);
 
             // MassmutationProgress.DateTime;
             Assert.AreEqual(terminalDuplicate.NumberOfTerminals, Progress.TerminalList.Count().ToString());
@@ -71,9 +74,10 @@ namespace Six.Scs.Test
         private static IEnumerable<Model.ValueObjects.Terminal> CreateTerminalObjectsFromIds(
             IEnumerable<string> terminalList)
         {
-            var terminalObjects = new List<Model.ValueObjects.Terminal>(terminalList.Count());
+            var list = terminalList.ToList();
+            var terminalObjects = new List<Model.ValueObjects.Terminal>(list.Count());
             terminalObjects.AddRange(
-                terminalList.Select(terminalId => new Model.ValueObjects.Terminal {Id = terminalId}));
+                list.ToList().Select(terminalId => new Model.ValueObjects.Terminal {Id = terminalId}));
             return terminalObjects;
         }
 
@@ -147,9 +151,9 @@ namespace Six.Scs.Test
             NavigationBar.Lobby.Click();
             LobbyMenu.TerminalReturnShipping.Click();
 
-            Assert.That(View.Terminal.Returns.TerminalLink(terminal).Displayed);
-            Assert.That(View.Terminal.Returns.Deactivate(terminal).Displayed);
-            Assert.That(View.Terminal.Returns.Cancel(terminal).Displayed);
+            Assert.That(Returns.TerminalLink(terminal).Displayed);
+            Assert.That(Returns.Deactivate(terminal).Displayed);
+            Assert.That(Returns.Cancel(terminal).Displayed);
         }
     }
 }
