@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenQA.Selenium;
 
 namespace Six.Test.Selenium.WebDriver.WebElements
 {
@@ -51,7 +50,7 @@ namespace Six.Test.Selenium.WebDriver.WebElements
             }
             catch (Exception)
             {
-                Console.Out.WriteLine("Select tolerant way: contains {0} for {1}", text, _webElement);
+                Console.Out.WriteLine("Select tolerant way for {1} contains {0} ", text, _webElement);
                 _webElement.Options.FirstOrDefault(o => o.Text.Contains(text)).Click();
             }
         }
