@@ -28,8 +28,9 @@ namespace Six.Scs.Test.Saferpay
             _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default(Model.Factory.Location.Create()));
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new SaferPayPos().With(new Builder.Brand.ELink.Default()));
-            Terminal.Quit(_saferpayTerminal);
-            Customer.Quit(_saferpayCustomer);
+            // TODO new Quit for all terminals is only active for Saferpay by now wait until it is system wide, then enable both:
+            // Terminal.Quit(_saferpayTerminal); 
+            // Customer.Quit(_saferpayCustomer);
         }
     }
 }
