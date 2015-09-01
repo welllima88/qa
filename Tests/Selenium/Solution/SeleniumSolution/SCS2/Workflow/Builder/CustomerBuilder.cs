@@ -5,11 +5,15 @@ namespace Six.Scs.Test.Workflow.Builder
 {
     public abstract class CustomerBuilder : Helper.Builder
     {
-        public Customer Customer { get; protected set; }
+        public CustomerBuilder(Customer customer)
+        {
+            Customer = customer;
+        }
+
+        public Customer Customer { get; }
 
         public override void Create()
         {
-            Customer = Model.Factory.Customer.Create();
             ClickCreate();
             SelectTenant();
             Confirm();
@@ -20,7 +24,6 @@ namespace Six.Scs.Test.Workflow.Builder
 
         public override void Edit()
         {
-            Customer = Model.Factory.Customer.Edit();
             ReadInfo();
             ClickEdit();
             EditCustomerData();

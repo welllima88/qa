@@ -6,9 +6,12 @@ namespace Six.Scs.Test.Builder.Customer.Nsp
 {
     public class SixNsp : CustomerBuilder
     {
+        public SixNsp(Model.Customer customer) : base(customer)
+        {
+        }
+
         public override void Create()
         {
-            Customer = Model.Factory.Customer.Create();
             Customer.CustomerName = "SYR AUTO NSP" + Factory.GenerateTestId();
             Customer.Supplier = "SIX Payment Services (NSP)";
 

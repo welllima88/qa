@@ -6,9 +6,9 @@ namespace Six.Scs.Test
 {
     public class Customer
     {
-        public static CustomerBuilder Edit(CustomerBuilder customerBuilder)
+        public static CustomerBuilder Edit(Model.Customer customer, CustomerBuilder customerBuilder)
         {
-            Open(customerBuilder.Customer);
+            Open(customer);
             customerBuilder.Edit();
             customerBuilder.Check();
             Lobby.OpenLatestElement();

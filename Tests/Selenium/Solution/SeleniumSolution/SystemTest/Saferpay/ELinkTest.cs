@@ -24,7 +24,7 @@ namespace Six.Scs.Test.Saferpay
          Category("Saferpay"), Category("ELINK")]
         public static void ElinkCustomerStructure()
         {
-            _saferpayCustomer = Customer.Create(new Default());
+            _saferpayCustomer = Customer.Create(new Default(Model.Factory.Customer.Create()));
             _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default(Model.Factory.Location.Create()));
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new SaferPayPos().With(new Builder.Brand.ELink.Default()));

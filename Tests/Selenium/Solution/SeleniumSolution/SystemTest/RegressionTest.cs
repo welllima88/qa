@@ -46,7 +46,7 @@ namespace Six.Scs.Test
          */
         public static void ExecuteRegressiontest()
         {
-            _customerBuilder = Customer.Create(new Default());
+            _customerBuilder = Customer.Create(new Default(Model.Factory.Customer.Create()));
             Customer.Quit(_customerBuilder);
             Customer.Activate(_customerBuilder);
 
@@ -65,7 +65,7 @@ namespace Six.Scs.Test
 
             _terminalOnLocation1 = Terminal.Create(_locationBuilder.Location, new Yomani().With(contracts));
 
-            Customer.Edit(_customerBuilder);
+            Customer.Edit(_customerBuilder.Customer, new Default(Model.Factory.Customer.Edit()));
 
             Infotext.Create(_customerBuilder.Customer);
             _billingAddress = BillingAdress.Create(_customerBuilder.Customer);

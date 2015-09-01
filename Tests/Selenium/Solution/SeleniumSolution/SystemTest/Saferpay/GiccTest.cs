@@ -22,11 +22,15 @@ namespace Six.Scs.Test.Saferpay
         private static LocationBuilder _saferpayLocation;
 
         [Test]
-        [Category("Regression"), Category("Customer"), Category("Location"), Category("Terminal"),
-         Category("Saferpay"), Category("GICC")]
+        [Category("Regression")]
+        [Category("Customer")]
+        [Category("Location")]
+        [Category("Terminal")]
+        [Category("Saferpay")]
+        [Category("GICC")]
         public static void GiccCustomerStructure()
         {
-            _saferpayCustomer = Customer.Create(new SixNsp());
+            _saferpayCustomer = Customer.Create(new SixNsp(Model.Factory.Customer.Create()));
             _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Gicc(Model.Factory.Location.Create()));
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new Icp().With(new Default()));
