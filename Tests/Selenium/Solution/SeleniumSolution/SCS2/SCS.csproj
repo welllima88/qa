@@ -189,6 +189,7 @@
     <Compile Include="View\Environments\Dev.cs" />
     <Compile Include="View\Search\SearchResult.cs" />
     <Compile Include="View\Search\Result.cs" />
+    <Compile Include="View\Terminal\SaferPay.cs" />
     <Compile Include="View\Terminal\ContactlessCapability.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\QuickOpen.cs" />
     <Compile Include="View\Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />

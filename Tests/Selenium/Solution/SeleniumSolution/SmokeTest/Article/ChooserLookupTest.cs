@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.Terminal;
 using Six.Test.Selenium.WebDriver;
 
