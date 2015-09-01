@@ -22,7 +22,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
             {
                 return
                     WebDriver.FindAdaptedElement(
-                        By.CssSelector("div#frame_TerminalBusinessViewpointPortlet span#BVP_State")).Text;
+                        By.CssSelector("div#frame_TerminalBusinessViewpointPortlet #BVP_State")).Text;
             }
         }
 
@@ -33,7 +33,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            "div#frame_TerminalBusinessViewpointPortlet span#BVP_Appearance")).Text;
+                            "div#frame_TerminalBusinessViewpointPortlet #BVP_Appearance")).Text;
             }
         }
 
