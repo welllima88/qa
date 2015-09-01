@@ -22,7 +22,7 @@ namespace Six.Scs.Test.View.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.Id("StateReason"))
-                    .TextArea()
+                    .TextField()
                     .TypeText(value);
             }
         }
@@ -33,7 +33,8 @@ namespace Six.Scs.Test.View.Terminal
             {
                 WebDriver.FindAdaptedElement(
                     By.Id("ECommerceText"))
-                    .TextArea().TypeText(value);
+                    .TextField()
+                    .TypeText(value);
             }
         }
 
