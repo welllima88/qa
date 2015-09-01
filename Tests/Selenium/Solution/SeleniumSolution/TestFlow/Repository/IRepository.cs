@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Repository
+﻿namespace Six.Scs.Test.Repository
 {
     public interface IRepository
     {

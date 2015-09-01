@@ -79,8 +79,6 @@
     <Compile Include="Model\Factory\TerminalTyped.cs" />
     <Compile Include="Model\Factory\Ticket.cs" />
     <Compile Include="Model\Factory\User.cs" />
-    <Compile Include="Model\Repository\Customer.cs" />
-    <Compile Include="Model\Repository\IRepository.cs" />
     <Compile Include="Model\ValueObjects\Adress.cs" />
     <Compile Include="Model\ValueObjects\Agency.cs" />
     <Compile Include="Model\ValueObjects\BillingAddress.cs" />
