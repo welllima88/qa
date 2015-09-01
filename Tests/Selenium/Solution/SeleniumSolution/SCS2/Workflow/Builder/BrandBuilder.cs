@@ -1,4 +1,4 @@
-using Six.Scs.Test.Model.ValueObjects.Brand;
+using Six.Scs.Test.Model.Brand;
 using Six.Scs.Test.View.Contract;
 using Six.Scs.Test.View.Terminal.Dashboard;
 

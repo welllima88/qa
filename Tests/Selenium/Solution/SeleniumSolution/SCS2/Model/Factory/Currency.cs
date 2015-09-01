@@ -5,16 +5,16 @@ namespace Six.Scs.Test.Model.Factory
 {
     public class Currency
     {
-        public static IEnumerable<ValueObjects.Brand.Currency> StandardCurrencies()
+        public static IEnumerable<Model.Brand.Currency> StandardCurrencies()
         {
-            return new Collection<ValueObjects.Brand.Currency>
+            return new Collection<Model.Brand.Currency>
             {
-                new ValueObjects.Brand.Currency
+                new Model.Brand.Currency
                 {
                     IsoCode = "CHF"
                 }
                 ,
-                new ValueObjects.Brand.Currency
+                new Model.Brand.Currency
                 {
                     IsoCode = "EUR"
                 }

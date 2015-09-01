@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Six.Scs.Test.Model.ValueObjects
+namespace Six.Scs.Test.Model
 {
     public class TerminalType
     {

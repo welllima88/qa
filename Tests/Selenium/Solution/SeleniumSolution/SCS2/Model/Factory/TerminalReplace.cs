@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public class TerminalReplace
     {
-        public static ValueObjects.TerminalReplace Yoximo()
+        public static Model.TerminalReplace Yoximo()
         {
-            return new ValueObjects.TerminalReplace
+            return new Model.TerminalReplace
             {
                 Article = "yoximo PINPAD WLAN TCP/IP ep2 (DNS)",
                 InstallationType = "Installation",

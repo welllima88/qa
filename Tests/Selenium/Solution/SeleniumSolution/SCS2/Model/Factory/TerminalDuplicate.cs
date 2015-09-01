@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public class TerminalDuplicate
     {
-        public static ValueObjects.TerminalDuplicate Create()
+        public static Model.TerminalDuplicate Create()
         {
-            return new ValueObjects.TerminalDuplicate
+            return new Model.TerminalDuplicate
             {
                 NumberOfTerminals = "2",
                 InstallMessage = "SYR Install Message " + Factory.GenerateTestId(),

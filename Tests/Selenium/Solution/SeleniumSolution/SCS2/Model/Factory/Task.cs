@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public class Task
     {
-        public static ValueObjects.Task Create()
+        public static Model.Task Create()
         {
-            return new ValueObjects.Task
+            return new Model.Task
             {
                 Arguments = "Arguments /-aa ? :XX01",
                 Interval = "1",
@@ -19,9 +19,9 @@ namespace Six.Scs.Test.Model.Factory
             };
         }
 
-        public static ValueObjects.Task Edit()
+        public static Model.Task Edit()
         {
-            return new ValueObjects.Task
+            return new Model.Task
             {
                 Arguments = "Arguments /-bb ? :XX01",
                 Interval = "2",

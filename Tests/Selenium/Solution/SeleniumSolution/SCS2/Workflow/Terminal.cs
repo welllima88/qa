@@ -2,9 +2,9 @@ using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
-using Location = Six.Scs.Test.Model.ValueObjects.Location;
-using TerminalDuplicate = Six.Scs.Test.Model.ValueObjects.TerminalDuplicate;
-using TerminalReplace = Six.Scs.Test.Model.ValueObjects.TerminalReplace;
+using Location = Six.Scs.Test.Model.Location;
+using TerminalDuplicate = Six.Scs.Test.Model.TerminalDuplicate;
+using TerminalReplace = Six.Scs.Test.Model.TerminalReplace;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -38,7 +38,7 @@ namespace Six.Scs.Test.Workflow
             return reason;
         }
 
-        public static void Assign(Model.ValueObjects.Mpd mpd)
+        public static void Assign(Model.Mpd mpd)
         {
             TechnicalView.MpdAssign.Click();
 
@@ -95,7 +95,7 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.Move.SaveButton.Click();
         }
 
-        public static Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
+        public static Model.Terminal Create(TerminalBuilder terminalBuilder)
         {
             terminalBuilder.Create();
 

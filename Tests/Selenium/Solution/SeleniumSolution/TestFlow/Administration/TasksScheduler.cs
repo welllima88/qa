@@ -1,6 +1,6 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using List = Six.Scs.Test.View.Administration.TaskScheduler.List;
 
 namespace Six.Scs.Test.Administration

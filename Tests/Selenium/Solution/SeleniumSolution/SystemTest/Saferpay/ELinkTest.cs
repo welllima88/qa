@@ -15,7 +15,7 @@ namespace Six.Scs.Test.Saferpay
             TestDirector.Navigate();
         }
 
-        private static Model.ValueObjects.Terminal _saferpayTerminal;
+        private static Model.Terminal _saferpayTerminal;
         private static CustomerBuilder _saferpayCustomer;
         private static LocationBuilder _saferpayLocation;
 

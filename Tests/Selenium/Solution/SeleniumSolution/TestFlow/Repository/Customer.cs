@@ -2,9 +2,9 @@
 {
     public class Customer : IRepository
     {
-        public static Model.ValueObjects.Customer GetObject()
+        public static Model.Customer GetObject()
         {
-            return new Model.ValueObjects.Customer
+            return new Model.Customer
             {
                 CustomerNumber = "1"
             };

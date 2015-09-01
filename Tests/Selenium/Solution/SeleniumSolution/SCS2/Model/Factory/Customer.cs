@@ -2,9 +2,9 @@
 {
     public class Customer
     {
-        public static ValueObjects.Customer Create()
+        public static Model.Customer Create()
         {
-            return new ValueObjects.Customer
+            return new Model.Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "Euro",
@@ -19,9 +19,9 @@
             };
         }
 
-        public static ValueObjects.Customer Edit()
+        public static Model.Customer Edit()
         {
-            return new ValueObjects.Customer
+            return new Model.Customer
             {
                 CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
                 SbsSegment = "01_CH",
@@ -29,9 +29,9 @@
             };
         }
 
-        public static ValueObjects.Customer Invalid()
+        public static Model.Customer Invalid()
         {
-            return new ValueObjects.Customer
+            return new Model.Customer
             {
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "EUR",

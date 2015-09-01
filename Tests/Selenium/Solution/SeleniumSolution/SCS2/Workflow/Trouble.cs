@@ -1,5 +1,5 @@
 using System;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support;
 
 namespace Six.Scs.Test.Workflow

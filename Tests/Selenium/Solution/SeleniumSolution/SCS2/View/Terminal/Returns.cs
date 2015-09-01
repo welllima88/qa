@@ -6,12 +6,12 @@ namespace Six.Scs.Test.View.Terminal
 {
     public class Returns : WebObject
     {
-        public static IWebElement TerminalLink(Model.ValueObjects.Terminal terminal)
+        public static IWebElement TerminalLink(Model.Terminal terminal)
         {
             return WebDriver.FindAdaptedElement(By.LinkText(terminal.Id));
         }
 
-        public static IWebElement Deactivate(Model.ValueObjects.Terminal terminal)
+        public static IWebElement Deactivate(Model.Terminal terminal)
         {
             return
                 WebDriver.FindAdaptedElement(
@@ -21,7 +21,7 @@ namespace Six.Scs.Test.View.Terminal
                             terminal.Id)));
         }
 
-        public static IWebElement Cancel(Model.ValueObjects.Terminal terminal)
+        public static IWebElement Cancel(Model.Terminal terminal)
         {
             return
                 WebDriver.FindAdaptedElement(

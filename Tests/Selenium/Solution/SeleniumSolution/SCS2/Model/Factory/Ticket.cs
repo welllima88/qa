@@ -1,5 +1,3 @@
-using Six.Scs.Test.Model.ValueObjects;
-
 namespace Six.Scs.Test.Model.Factory
 {
     public class Ticket

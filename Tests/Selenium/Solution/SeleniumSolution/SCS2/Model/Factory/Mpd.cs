@@ -2,9 +2,9 @@
 {
     public class Mpd
     {
-        public static ValueObjects.Mpd Create()
+        public static Model.Mpd Create()
         {
-            return new ValueObjects.Mpd
+            return new Model.Mpd
             {
                 Adress = "Adress",
                 Port = "Port",
@@ -12,9 +12,9 @@
             };
         }
 
-        public static ValueObjects.Mpd Edit()
+        public static Model.Mpd Edit()
         {
-            return new ValueObjects.Mpd
+            return new Model.Mpd
             {
                 Adress = "Adress Edit",
                 Port = "Port E",

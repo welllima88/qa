@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium;
 
@@ -9,7 +9,7 @@ namespace Six.Scs.Test
 {
     public class BillingAdress
     {
-        public static BillingAddress Create(Model.ValueObjects.Customer customer)
+        public static BillingAddress Create(Model.Customer customer)
         {
             Customer.Open(customer);
 

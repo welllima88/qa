@@ -2,9 +2,9 @@
 {
     public class Location
     {
-        public static ValueObjects.Location Create()
+        public static Model.Location Create()
         {
-            return new ValueObjects.Location
+            return new Model.Location
             {
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
@@ -15,9 +15,9 @@
             };
         }
 
-        public static ValueObjects.Location Edit()
+        public static Model.Location Edit()
         {
-            return new ValueObjects.Location
+            return new Model.Location
             {
                 Adress = Adress.Edit(),
                 Contact = Contact.Edit(),
@@ -27,9 +27,9 @@
             };
         }
 
-        public static ValueObjects.Location Invalid()
+        public static Model.Location Invalid()
         {
-            return new ValueObjects.Location
+            return new Model.Location
             {
                 Adress = Adress.Invalid(),
                 Contact = Contact.Invalid(),

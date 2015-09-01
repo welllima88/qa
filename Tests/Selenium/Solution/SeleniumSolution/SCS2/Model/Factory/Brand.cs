@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Six.Scs.Test.Model.ValueObjects.Brand;
+using Six.Scs.Test.Model.Brand;
 
 namespace Six.Scs.Test.Model.Factory
 {
     public static class Brand
     {
-        public static IEnumerable<ValueObjects.Brand.Brand> SixBrands()
+        public static IEnumerable<Model.Brand.Brand> SixBrands()
         {
-            return new Collection<ValueObjects.Brand.Brand>
+            return new Collection<Model.Brand.Brand>
             {
                 new OnUs
                 {
                     Status = true,
                     Dcc = true,
                     Currencies = Currency.StandardCurrencies(),
-                    DccBaseCurrency = new ValueObjects.Brand.Currency
+                    DccBaseCurrency = new Model.Brand.Currency
                     {
                         IsoCode = "CHF"
                     },
@@ -26,7 +26,7 @@ namespace Six.Scs.Test.Model.Factory
                     Status = true,
                     Dcc = true,
                     Currencies = Currency.StandardCurrencies(),
-                    DccBaseCurrency = new ValueObjects.Brand.Currency
+                    DccBaseCurrency = new Model.Brand.Currency
                     {
                         IsoCode = "EUR"
                     },

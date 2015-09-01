@@ -1,4 +1,4 @@
-namespace Six.Scs.Test.Model.ValueObjects
+namespace Six.Scs.Test.Model
 {
     /// <summary>
     ///     the contact person has adress and contact fields

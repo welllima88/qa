@@ -2,9 +2,9 @@
 {
     public class Person
     {
-        public static ValueObjects.Person Create()
+        public static Model.Person Create()
         {
-            return new ValueObjects.Person
+            return new Model.Person
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Create",
@@ -14,9 +14,9 @@
             };
         }
 
-        public static ValueObjects.Person Edit()
+        public static Model.Person Edit()
         {
-            return new ValueObjects.Person
+            return new Model.Person
             {
                 FirstName = "SYR Contact" + Factory.GenerateTestId(),
                 Name = "SYR - Edit",

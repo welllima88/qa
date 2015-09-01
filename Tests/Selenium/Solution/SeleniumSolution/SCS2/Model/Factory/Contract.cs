@@ -2,9 +2,9 @@
 {
     public class Contract
     {
-        public static ValueObjects.Brand.Contract Create()
+        public static Model.Brand.Contract Create()
         {
-            return new ValueObjects.Brand.Contract
+            return new Model.Brand.Contract
             {
                 Acquirer =
                 {

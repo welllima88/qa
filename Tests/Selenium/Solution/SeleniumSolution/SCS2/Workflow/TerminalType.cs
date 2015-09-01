@@ -2,7 +2,7 @@
 {
     public static class TerminalType
     {
-        public static void Edit(Model.ValueObjects.TerminalType terminalType)
+        public static void Edit(Model.TerminalType terminalType)
         {
             View.Administration.TerminalType.View.EditButton.Click();
 

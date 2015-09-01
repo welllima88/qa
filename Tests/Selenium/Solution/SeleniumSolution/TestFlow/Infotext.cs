@@ -6,7 +6,7 @@ namespace Six.Scs.Test
 {
     public class Infotext
     {
-        public static void Create(Model.ValueObjects.Customer customer)
+        public static void Create(Model.Customer customer)
         {
             Customer.Open(customer);
             View.Customer.View.CreateInfotext.Click();
@@ -15,7 +15,7 @@ namespace Six.Scs.Test
             Assert.That(View.Customer.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
-        public static void Create(Model.ValueObjects.Location location)
+        public static void Create(Model.Location location)
         {
             Location.Open(location);
             View.Location.View.CreateInfotext.Click();
@@ -24,7 +24,7 @@ namespace Six.Scs.Test
             Assert.That(View.Location.View.Infotexts, Has.Exactly(1).ContainsSubstring(infotext));
         }
 
-        public static void Create(Model.ValueObjects.Terminal terminal)
+        public static void Create(Model.Terminal terminal)
         {
             Terminal.Open(terminal);
             TerminalTexts.CreateInfotext.Click();

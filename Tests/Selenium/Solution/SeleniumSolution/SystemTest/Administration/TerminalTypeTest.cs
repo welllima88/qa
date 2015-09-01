@@ -36,8 +36,8 @@ namespace Six.Scs.Test.Administration
             TerminalType.Edit(_terminalType);
         }
 
-        private Model.ValueObjects.TerminalType _terminalType;
-        private Model.ValueObjects.TerminalType _originTerminalType;
+        private Model.TerminalType _terminalType;
+        private Model.TerminalType _originTerminalType;
 
         [Test]
         [Category("TerminalType"), Category("View"), Category("Edit")]

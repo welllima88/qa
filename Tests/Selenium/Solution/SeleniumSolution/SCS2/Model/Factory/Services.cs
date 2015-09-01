@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Six.Scs.Test.Model.ValueObjects;
 
 namespace Six.Scs.Test.Model.Factory
 {

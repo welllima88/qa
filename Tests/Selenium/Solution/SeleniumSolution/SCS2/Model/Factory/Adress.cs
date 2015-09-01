@@ -2,9 +2,9 @@
 {
     public class Adress
     {
-        public static ValueObjects.Adress Create()
+        public static Model.Adress Create()
         {
-            return new ValueObjects.Adress
+            return new Model.Adress
             {
                 StreetNo = "Hardturmstr. 201",
                 Zip = "8021",
@@ -16,9 +16,9 @@
             };
         }
 
-        public static ValueObjects.Adress Edit()
+        public static Model.Adress Edit()
         {
-            return new ValueObjects.Adress
+            return new Model.Adress
             {
                 StreetNo = "Theater Platz 1a-3c",
                 AdressAddition = "SYR/Stage 3",
@@ -30,9 +30,9 @@
             };
         }
 
-        public static ValueObjects.Adress Invalid()
+        public static Model.Adress Invalid()
         {
-            return new ValueObjects.Adress
+            return new Model.Adress
             {
                 StreetNo = "Hardturmstr. 201$°",
                 Zip = "802$°",

@@ -3,9 +3,9 @@
     public static class TerminalType
 
     {
-        public static ValueObjects.TerminalType XentissimoMod()
+        public static Model.TerminalType XentissimoMod()
         {
-            return new ValueObjects.TerminalType
+            return new Model.TerminalType
             {
                 Supplier = "Alle Fremdhersteller",
                 ReferenceSystem = "GICC",
@@ -15,9 +15,9 @@
             };
         }
 
-        public static ValueObjects.TerminalType XentissimoOrigin()
+        public static Model.TerminalType XentissimoOrigin()
         {
-            return new ValueObjects.TerminalType
+            return new Model.TerminalType
             {
                 Supplier = "SIX Payment Services (Supplier)",
                 ReferenceSystem = "EP2",

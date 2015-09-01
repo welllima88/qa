@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public class User
     {
-        public static ValueObjects.User Create()
+        public static Model.User Create()
         {
-            return new ValueObjects.User
+            return new Model.User
             {
                 UserName = "s" + Factory.GenerateTestId(),
                 Salutation = "Herr",

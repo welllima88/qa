@@ -7,7 +7,7 @@ namespace Six.Scs.Test
 {
     public static class Location
     {
-        public static LocationBuilder Edit(Model.ValueObjects.Location location, LocationBuilder locationBuilder)
+        public static LocationBuilder Edit(Model.Location location, LocationBuilder locationBuilder)
         {
             Open(location);
             locationBuilder.Edit();
@@ -17,7 +17,7 @@ namespace Six.Scs.Test
             return locationBuilder;
         }
 
-        public static LocationBuilder Create(Model.ValueObjects.Customer customer, LocationBuilder locationBuilder)
+        public static LocationBuilder Create(Model.Customer customer, LocationBuilder locationBuilder)
         {
             Customer.Open(customer);
             locationBuilder.Create();
@@ -27,7 +27,7 @@ namespace Six.Scs.Test
             return locationBuilder;
         }
 
-        public static void Open(Model.ValueObjects.Location location)
+        public static void Open(Model.Location location)
         {
             Search.LocationCanBeFoundByLocationName(location.CompanyName);
             // Assert.AreEqual(location.Guid, LocationView.Guid);
@@ -52,7 +52,7 @@ namespace Six.Scs.Test
             Assert.That(View.Location.View.Activate.Displayed);
         }
 
-        public static LocationBuilder CreateFromCustomer(Model.ValueObjects.Customer customer)
+        public static LocationBuilder CreateFromCustomer(Model.Customer customer)
         {
             Customer.Open(customer);
             var locationBuilder = new FromCustomer(customer);

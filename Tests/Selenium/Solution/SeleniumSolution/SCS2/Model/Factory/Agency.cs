@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public static class Agency
     {
-        public static ValueObjects.Agency Default()
+        public static Model.Agency Default()
         {
-            return new ValueObjects.Agency
+            return new Model.Agency
             {
                 Name = "SYR Agency " + Factory.GenerateTestId(),
                 DisplayName = "SYR Agency Display" + Factory.GenerateTestId(),
@@ -16,9 +16,9 @@ namespace Six.Scs.Test.Model.Factory
             };
         }
 
-        public static ValueObjects.Agency Edit()
+        public static Model.Agency Edit()
         {
-            return new ValueObjects.Agency
+            return new Model.Agency
             {
                 Name = "SYR Agency E" + Factory.GenerateTestId(),
                 DisplayName = "SYR Agency D/E" + Factory.GenerateTestId(),

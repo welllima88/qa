@@ -2,9 +2,9 @@ namespace Six.Scs.Test.Model.Factory
 {
     public static class BillingAddress
     {
-        public static ValueObjects.BillingAddress Create()
+        public static Model.BillingAddress Create()
         {
-            return new ValueObjects.BillingAddress
+            return new Model.BillingAddress
             {
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
@@ -12,9 +12,9 @@ namespace Six.Scs.Test.Model.Factory
             };
         }
 
-        public static ValueObjects.BillingAddress Edit()
+        public static Model.BillingAddress Edit()
         {
-            return new ValueObjects.BillingAddress
+            return new Model.BillingAddress
             {
                 Adress = Adress.Edit(),
                 Contact = Contact.Edit(),

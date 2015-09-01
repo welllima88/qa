@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 

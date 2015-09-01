@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 using Six.Test.Selenium.WebDriver;
@@ -9,7 +9,7 @@ namespace Six.Scs.Test
 {
     public static class Contact
     {
-        public static Person Create(Model.ValueObjects.Customer customer)
+        public static Person Create(Model.Customer customer)
         {
             Customer.Open(customer);
             View.Customer.View.ContactCreate.Click();
@@ -26,7 +26,7 @@ namespace Six.Scs.Test
             return person;
         }
 
-        public static Person Create(Model.ValueObjects.Location location)
+        public static Person Create(Model.Location location)
         {
             Location.Open(location);
             View.Location.View.ContactCreate.Click();

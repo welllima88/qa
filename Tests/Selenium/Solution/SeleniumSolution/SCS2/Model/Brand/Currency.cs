@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.ValueObjects.Brand
+﻿namespace Six.Scs.Test.Model.Brand
 {
     public class Currency
     {

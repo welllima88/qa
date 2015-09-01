@@ -5,7 +5,7 @@ using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ifsf;
 using Six.Scs.Test.Massmutation;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium.WebDriver;
 using Default = Six.Scs.Test.Builder.Customer.Six.Default;
@@ -15,20 +15,20 @@ namespace Six.Scs.Test
     [TestFixture]
     public class RegressionTest
     {
-        private static Model.ValueObjects.Terminal _terminalOnLocation2;
-        private static Model.ValueObjects.Terminal _terminalOnLocation1;
+        private static Model.Terminal _terminalOnLocation2;
+        private static Model.Terminal _terminalOnLocation1;
         private static CustomerBuilder _customerBuilder;
         private static LocationBuilder _locationBuilder;
         private static Person _personOnCustomer;
         private static Person _personOnLocation;
-        private static Model.ValueObjects.User _user;
-        private static IEnumerable<Model.ValueObjects.Terminal> _duplicatedTerminals;
-        private static Model.ValueObjects.Mpd _mpd;
-        private static Model.ValueObjects.SimCard _sim;
-        private static Model.ValueObjects.Location _location;
+        private static Model.User _user;
+        private static IEnumerable<Model.Terminal> _duplicatedTerminals;
+        private static Model.Mpd _mpd;
+        private static Model.SimCard _sim;
+        private static Model.Location _location;
         private static TroubleTicket _troubleTicket;
         private static BillingAddress _billingAddress;
-        private static Model.ValueObjects.Terminal _terminalOnLocation;
+        private static Model.Terminal _terminalOnLocation;
 
         [TestFixtureSetUp]
         public void Home()

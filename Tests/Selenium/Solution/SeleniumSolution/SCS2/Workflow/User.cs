@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.User;
 
@@ -7,7 +7,7 @@ namespace Six.Scs.Test.Workflow
 {
     public static class User
     {
-        public static void Create(Model.ValueObjects.User u)
+        public static void Create(Model.User u)
         {
             CustomerMenu.Users.Click();
             List.UserCreate.Click();
@@ -28,7 +28,7 @@ namespace Six.Scs.Test.Workflow
             UserMenu.User.Click();
         }
 
-        public static void Edit(Model.ValueObjects.User u)
+        public static void Edit(Model.User u)
         {
             View.User.View.Edit.Click();
 

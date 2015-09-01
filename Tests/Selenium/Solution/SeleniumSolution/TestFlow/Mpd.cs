@@ -5,7 +5,7 @@ namespace Six.Scs.Test
 {
     public class Mpd
     {
-        public static Model.ValueObjects.Mpd Create(Model.ValueObjects.Customer customer)
+        public static Model.Mpd Create(Model.Customer customer)
         {
             Customer.Open(customer);
 
@@ -18,7 +18,7 @@ namespace Six.Scs.Test
             return mpd;
         }
 
-        public static Model.ValueObjects.Mpd Edit(Model.ValueObjects.Mpd _mpd)
+        public static Model.Mpd Edit(Model.Mpd _mpd)
         {
             Open(_mpd);
             var mpd = Model.Factory.Mpd.Edit();
@@ -32,12 +32,12 @@ namespace Six.Scs.Test
             return mpd;
         }
 
-        public static void Open(Model.ValueObjects.Mpd mpd)
+        public static void Open(Model.Mpd mpd)
         {
             Search.MpdCanBeFoundById(mpd.Id);
         }
 
-        public static void Check(Model.ValueObjects.Mpd m)
+        public static void Check(Model.Mpd m)
         {
             Assert.AreEqual(m.Id, View.Mpd.View.Id);
             Assert.AreEqual(m.Description, View.Mpd.View.Description);

@@ -2,9 +2,9 @@
 {
     public class Contact
     {
-        public static ValueObjects.Contact Create()
+        public static Model.Contact Create()
         {
-            return new ValueObjects.Contact
+            return new Model.Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-group.de",
@@ -15,9 +15,9 @@
             };
         }
 
-        public static ValueObjects.Contact Edit()
+        public static Model.Contact Edit()
         {
-            return new ValueObjects.Contact
+            return new Model.Contact
             {
                 Language = "Englisch [en]",
                 Email = "marc.siegmund@six-group.proof",
@@ -28,9 +28,9 @@
             };
         }
 
-        public static ValueObjects.Contact Invalid()
+        public static Model.Contact Invalid()
         {
-            return new ValueObjects.Contact
+            return new Model.Contact
             {
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-grou$°p.com",
