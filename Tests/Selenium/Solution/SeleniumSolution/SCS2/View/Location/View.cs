@@ -182,7 +182,7 @@ namespace Six.Scs.Test.View.Location
                 return
                     WebDriver.FindAdaptedElement(
                         By.CssSelector(
-                            "div#terminalInfos a[href*='/TerminalArticleSelector/LocationTerminalNew/?LOCATIONID=']"));
+                            "div#terminalInfos a[href*='/TerminalArticleSelector/LocationTerminalNew?LocationId=']"));
             }
         }
 
