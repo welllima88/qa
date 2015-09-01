@@ -7,7 +7,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
 {
     public class BrandPortlet : PortletViewBase
     {
-        private const string PortletLocator = "div[id*='BrandPortlet']";
+        private const string PortletLocator = ""; //"div[id*='BrandPortlet']";
         private const string ContractTreeLocator = "div[id*='ContractTree']>ul";
 
         public static IWebElement NewBrandButton
@@ -46,7 +46,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
                 WebDriver.FindAdaptedElements(
                     By.CssSelector(string.Format(
                         PortletLocator + " " + ContractTreeLocator +
-                        " ul li[id^='brandContract_'] div.treeParentNode span:nth-child(3)")))
+                        " ul li[id^='brandContract_'] div.treeParentNode span:nth-of-type(2)")))
                     .Select(e => e.Text);
         }
 
@@ -61,7 +61,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
             return
                 WebDriver.FindAdaptedElements(
                     By.CssSelector(string.Format(
-                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] a.acqContractNode span")))
+                        PortletLocator + " " + ContractTreeLocator + " li[id^='acqContract_'] .acqContractNode>span")))
                     .Select(e => e.Text);
         }
 
