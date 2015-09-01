@@ -31,17 +31,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElement TerminalCreate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "td#leftHandMenu a[href*='/TerminalArticleSelector/CustomerTerminalNew/?CUSTOMERID=']"));
-            }
-        }
-
         public static IWebElement LocationsOfCustomer
         {
             get
