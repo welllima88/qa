@@ -14,17 +14,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElement TerminalCreate
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(
-                        By.CssSelector(
-                            "td#leftHandMenu a[href*='/TerminalArticleSelector/LocationTerminalNew/?LOCATIONID=']"));
-            }
-        }
-
         public static IWebElement CreateInfotext
         {
             get
