@@ -32,7 +32,8 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
 
         protected override void SetBasics()
         {
-            ConfigCreate.Infotext = "E-Link" + Factory.GenerateTestId();
+            SaferPay.Reason = "E-Link" + Factory.GenerateTestId();
+            SaferPay.ECommerceIndicator = "E-Indicator" + Factory.GenerateTestId();
         }
 
         protected override void SetDetails()

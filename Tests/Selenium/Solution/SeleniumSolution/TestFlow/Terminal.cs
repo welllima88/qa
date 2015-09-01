@@ -22,7 +22,7 @@ namespace Six.Scs.Test
             TerminalBuilder terminalBuilder)
         {
             Location.Open(location);
-            LocationMenu.TerminalCreate.Click();
+            View.Location.View.TerminalCreate.Click();
 
             terminalBuilder.Create();
             terminalBuilder.Check();

@@ -174,5 +174,17 @@ namespace Six.Scs.Test.View.Location
                         .Select(e => e.Text).ToList();
             }
         }
+
+        public static IWebElement TerminalCreate
+        {
+            get
+            {
+                return
+                    WebDriver.FindAdaptedElement(
+                        By.CssSelector(
+                            "div#terminalInfos a[href*='/TerminalArticleSelector/LocationTerminalNew/?LOCATIONID=']"));
+            }
+        }
+
     }
 }
