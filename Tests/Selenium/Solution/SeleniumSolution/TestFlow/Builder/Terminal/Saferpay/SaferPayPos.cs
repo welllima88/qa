@@ -39,5 +39,14 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
         protected override void SetDetails()
         {
         }
+
+        public override void Create()
+        {
+            ChooseArticle();
+            SetBasics();
+            SaferPay.Save();
+            AddContracts();
+            ReadInfo();
+        }
     }
 }
