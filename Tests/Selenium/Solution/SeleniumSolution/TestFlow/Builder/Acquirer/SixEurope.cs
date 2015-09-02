@@ -20,6 +20,8 @@ namespace Six.Scs.Test.Builder.Acquirer
             var brands = View.AcquirerExchange.View.AcquirerElement("acq_multipay").Brands();
             foreach (var brandElement in brands)
             {
+                if (brandElement.Name.Text.Contains("Maestro-CH")) break;
+
                 brandElement.Selected.Set(true);
                 brandElement.NewBrand.SelectByText("SIX Payment Services (Europe)");
                 brandElement.DccProvider.SelectByText("SIX Payment Services");
