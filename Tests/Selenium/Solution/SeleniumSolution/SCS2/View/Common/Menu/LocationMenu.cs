@@ -24,15 +24,6 @@ namespace Six.Scs.Test.View.Common.Menu
             }
         }
 
-        public static IWebElement LocationEdit
-        {
-            get
-            {
-                return
-                    WebDriver.FindAdaptedElement(By.CssSelector("td#leftHandMenu a[href*='Location/Edit?LOCATIONID=']"));
-            }
-        }
-
         public static IWebElement LocationQuit
         {
             get

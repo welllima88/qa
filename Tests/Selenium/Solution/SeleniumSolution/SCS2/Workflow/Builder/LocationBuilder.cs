@@ -41,7 +41,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickEdit()
         {
-            LocationMenu.LocationEdit.Click();
+            View.Location.View.LocationEdit.Click();
         }
 
         protected abstract void EditData();
