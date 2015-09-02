@@ -115,7 +115,7 @@ namespace Six.Scs.Test
             User.Delete(_user);
 
             Terminal.Replace(_terminalOnLocation2);
-            // Acquirer.Exchange(_terminalOnLocation2, new Builder.Acquirer.Default());
+            Acquirer.Exchange(_terminalOnLocation2, new Builder.Acquirer.SixEurope());
 
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             // Tickets.TroubleTicket.Edit(_troubleTicket);
