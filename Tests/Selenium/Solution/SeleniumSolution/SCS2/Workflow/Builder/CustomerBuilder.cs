@@ -10,7 +10,7 @@ namespace Six.Scs.Test.Workflow.Builder
             Customer = customer;
         }
 
-        public Customer Customer { get; }
+        public Customer Customer { get; private set; }
 
         public override void Create()
         {
