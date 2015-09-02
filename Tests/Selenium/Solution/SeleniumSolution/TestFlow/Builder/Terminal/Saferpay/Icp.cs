@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
@@ -30,11 +31,20 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
 
         protected override void SetBasics()
         {
-            ConfigCreate.Infotext = "GICC" + Factory.Base.GenerateTestId();
+            SaferPay.Reason = "GICC" + Base.GenerateTestId();
         }
 
         protected override void SetDetails()
         {
+        }
+
+        public override void Create()
+        {
+            ChooseArticle();
+            SetBasics();
+            SaferPay.Save();
+            AddContracts();
+            ReadInfo();
         }
     }
 }
