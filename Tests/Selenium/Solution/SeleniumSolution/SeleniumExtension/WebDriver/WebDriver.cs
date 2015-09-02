@@ -132,14 +132,5 @@ namespace Six.Test.Selenium.WebDriver
         {
             return new EventFiringWebDriver(_webDriver);
         }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
-        /// <returns></returns>
-        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<WebElements.IWebElement> webElements)
-        {
-            return webElements.Select(item => item.Text).ToList();
-        }
     }
 }
