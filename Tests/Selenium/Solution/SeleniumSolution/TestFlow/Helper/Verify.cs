@@ -21,6 +21,11 @@ namespace Six.Scs.Test.Helper
             _verify = verify;
         }
 
+        private Verify(Action assertion)
+        {
+            _verify = new[] {assertion};
+        }
+
         public void Check()
         {
             VerifyAll(_verify);
@@ -34,6 +39,11 @@ namespace Six.Scs.Test.Helper
         public static Verify With(Action[] assertions)
         {
             return new Verify(assertions);
+        }
+
+        public static Verify With(Action assertion)
+        {
+            return new Verify(assertion);
         }
 
         public static bool ErrorOccured()
