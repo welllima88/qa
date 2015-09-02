@@ -20,7 +20,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
             {
                 return
                     WebDriver.FindElement(
-                        By.CssSelector(string.Format("div#{0} +ul li[id$='_Business Template'] div.treeValueCol>span",
+                        By.CssSelector(string.Format("div#{0} +ul li[id$='_Business Template'] div.treeValueCol>span:nth-of-type(1)",
                             _acquirerId))).Text;
             }
         }
