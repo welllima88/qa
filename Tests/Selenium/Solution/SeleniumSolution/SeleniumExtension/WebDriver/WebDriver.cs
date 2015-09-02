@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
@@ -53,7 +52,10 @@ namespace Six.Test.Selenium.WebDriver
             }
             catch (NotFoundException)
             {
-                // _webDriver.TakeScreenshot().SaveAsFile("failure", ImageFormat.Png);
+                //((RemoteWebDriver) _webDriver)
+                //    .GetScreenshot()
+                //    .SaveAsFile(string.Format("{0}_{1}", "NotFoundException", "2"), ImageFormat.Png);
+
                 Console.Error.WriteLine(_webDriver.PageSource);
                 throw;
             }
