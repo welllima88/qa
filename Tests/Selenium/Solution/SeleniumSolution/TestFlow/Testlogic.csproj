@@ -57,10 +57,11 @@
     <Compile Include="Administration\Agency.cs" />
     <Compile Include="Administration\TasksScheduler.cs" />
     <Compile Include="Administration\TerminalType.cs" />
+    <Compile Include="Batch.cs" />
     <Compile Include="BillingAdress.cs" />
     <Compile Include="Acquirer.cs" />
     <Compile Include="Brands.cs" />
-    <Compile Include="Builder\Acquirer\Default.cs" />
+    <Compile Include="Builder\Acquirer\SixEurope.cs" />
     <Compile Include="Builder\Brand\ELink\Default.cs" />
     <Compile Include="Builder\Brand\Ep2\Additional.cs" />
     <Compile Include="Builder\Brand\Ep2\Default.cs" />

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
@@ -53,7 +52,10 @@ namespace Six.Test.Selenium.WebDriver
             }
             catch (NotFoundException)
             {
-                // _webDriver.TakeScreenshot().SaveAsFile("failure", ImageFormat.Png);
+                //((RemoteWebDriver) _webDriver)
+                //    .GetScreenshot()
+                //    .SaveAsFile(string.Format("{0}_{1}", "NotFoundException", "2"), ImageFormat.Png);
+
                 Console.Error.WriteLine(_webDriver.PageSource);
                 throw;
             }
@@ -131,15 +133,6 @@ namespace Six.Test.Selenium.WebDriver
         public EventFiringWebDriver EventFiringWebDriver()
         {
             return new EventFiringWebDriver(_webDriver);
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="webElements">css locator string to return the list of web elements as strings with containing text</param>
-        /// <returns></returns>
-        public static IEnumerable<string> WebElementsAsStringList(IEnumerable<WebElements.IWebElement> webElements)
-        {
-            return webElements.Select(item => item.Text).ToList();
         }
     }
 }
