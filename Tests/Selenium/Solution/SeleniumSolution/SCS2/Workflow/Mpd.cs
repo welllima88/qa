@@ -5,7 +5,7 @@ namespace Six.Scs.Test.Workflow
 {
     public static class Mpd
     {
-        public static void Create(Model.ValueObjects.Mpd m)
+        public static void Create(Model.Mpd m)
         {
             CustomerMenu.AllMpds.Click();
             ListView.CreateButton.Click();
@@ -19,7 +19,7 @@ namespace Six.Scs.Test.Workflow
             m.Id = View.Mpd.View.Id;
         }
 
-        public static void Edit(Model.ValueObjects.Mpd m)
+        public static void Edit(Model.Mpd m)
         {
             View.Mpd.View.EditButton.Click();
 

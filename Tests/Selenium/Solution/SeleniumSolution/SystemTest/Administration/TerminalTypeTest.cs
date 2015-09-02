@@ -16,7 +16,7 @@ namespace Six.Scs.Test.Administration
 
             _originTerminalType = TerminalType.View();
 
-            _terminalType = Model.Factory.TerminalType.XentissimoMod();
+            _terminalType = Factory.TerminalType.XentissimoMod();
             // use existing configuration (for checking), due to UI problems:
             _terminalType.Providers = _originTerminalType.Providers;
             _terminalType.SoftwareIds = _originTerminalType.SoftwareIds;
@@ -27,7 +27,7 @@ namespace Six.Scs.Test.Administration
         [TestFixtureTearDown]
         public void Restore()
         {
-            _terminalType = Model.Factory.TerminalType.XentissimoOrigin();
+            _terminalType = Factory.TerminalType.XentissimoOrigin();
             // use existin configuration (for checking), due to UI problems:
             _terminalType.Providers = _originTerminalType.Providers;
             _terminalType.SoftwareIds = _originTerminalType.SoftwareIds;
@@ -36,8 +36,8 @@ namespace Six.Scs.Test.Administration
             TerminalType.Edit(_terminalType);
         }
 
-        private Model.ValueObjects.TerminalType _terminalType;
-        private Model.ValueObjects.TerminalType _originTerminalType;
+        private Model.TerminalType _terminalType;
+        private Model.TerminalType _originTerminalType;
 
         [Test]
         [Category("TerminalType"), Category("View"), Category("Edit")]

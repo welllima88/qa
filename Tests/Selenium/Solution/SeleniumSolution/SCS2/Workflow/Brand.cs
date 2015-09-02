@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Six.Scs.Test.Model.ValueObjects.Brand;
+using Six.Scs.Test.Model.Brand;
 using Six.Scs.Test.View.Contract;
 
 namespace Six.Scs.Test.Workflow
@@ -10,7 +10,7 @@ namespace Six.Scs.Test.Workflow
         ///     Selects the acquirer with all its brands
         /// </summary>
         /// <param name="acquirer"></param>
-        public static void Select(Model.ValueObjects.Brand.Acquirer acquirer)
+        public static void Select(Acquirer acquirer)
         {
             Selection.Select(acquirer.Id, Selection.Acquirer);
         }

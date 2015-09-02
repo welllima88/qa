@@ -1,6 +1,5 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
@@ -12,7 +11,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ifsf
     {
         public Davinci2()
         {
-            Terminal = Model.Factory.Terminal.DavinciIfsf();
+            Terminal = Factory.Terminal.DavinciIfsf();
         }
 
         public override void Edit()
@@ -39,7 +38,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ifsf
             ConfigCreate.SubStatus = "Aktiviert";
             ConfigCreate.ServiceCenter = "SIX Payment Services SC";
             ConfigCreate.Pms = "SIX Payment Services PMS";
-            ConfigCreate.Infotext = "Infotext SYR Terminal -" + Terminal.Type + Factory.GenerateTestId();
+            ConfigCreate.Infotext = "Infotext SYR Terminal -" + Terminal.Type + Factory.Base.GenerateTestId();
             Assert.That(ConfigCreate.Protocol, Is.EqualTo("IFSF"));
         }
 
@@ -48,7 +47,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ifsf
             ConfigDetailsCreate.InstallType = "Abholung";
             ConfigDetailsCreate.Contract = "Leihgerät";
             ConfigDetailsCreate.SupportContract = "ServicePaket Pro+ - Störungsbehebung vor Ort Mo-So 5h";
-            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Terminal.Type + Factory.GenerateTestId();
+            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Terminal.Type + Factory.Base.GenerateTestId();
             ConfigDetailsCreate.MinimumContractPeriodDate = "20.02.2020";
         }
     }

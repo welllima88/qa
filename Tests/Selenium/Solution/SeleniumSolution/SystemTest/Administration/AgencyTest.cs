@@ -6,7 +6,7 @@ namespace Six.Scs.Test.Administration
     [TestFixture]
     public class AgencyTest
     {
-        private Model.ValueObjects.Agency _agency;
+        private Model.Agency _agency;
 
         [TestFixtureSetUp]
         public static void ClassInit()

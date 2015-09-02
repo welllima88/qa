@@ -16,10 +16,10 @@ namespace Six.Scs.Test.Workflow.Builder
         protected TerminalBuilder()
         {
             _brandBuilder = null;
-            Terminal = new Model.ValueObjects.Terminal();
+            Terminal = new Model.Terminal();
         }
 
-        public Model.ValueObjects.Terminal Terminal { get; set; }
+        public Model.Terminal Terminal { get; set; }
 
         public override void Create()
         {

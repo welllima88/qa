@@ -6,9 +6,9 @@ namespace Six.Scs.Test
 {
     public class Customer
     {
-        public static CustomerBuilder Edit(CustomerBuilder customerBuilder)
+        public static CustomerBuilder Edit(Model.Customer customer, CustomerBuilder customerBuilder)
         {
-            Open(customerBuilder.Customer);
+            Open(customer);
             customerBuilder.Edit();
             customerBuilder.Check();
             Lobby.OpenLatestElement();
@@ -25,7 +25,7 @@ namespace Six.Scs.Test
             return customerBuilder;
         }
 
-        public static void Open(Model.ValueObjects.Customer customer)
+        public static void Open(Model.Customer customer)
         {
             Search.CustomerCanBeFoundByCustomerNumber(customer.CustomerNumber);
         }
@@ -54,7 +54,7 @@ namespace Six.Scs.Test
         /// </summary>
         /// <param name="customer">the customer which shall be moved</param>
         /// <param name="toCustomer">the target customer</param>
-        public static void Move(Model.ValueObjects.Customer customer, Model.ValueObjects.Customer toCustomer)
+        public static void Move(Model.Customer customer, Model.Customer toCustomer)
         {
             Open(customer);
             

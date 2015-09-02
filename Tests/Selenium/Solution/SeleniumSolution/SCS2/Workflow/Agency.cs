@@ -5,7 +5,7 @@ namespace Six.Scs.Test.Workflow
     public static class Agency
 
     {
-        public static void Create(Model.ValueObjects.Agency agency)
+        public static void Create(Model.Agency agency)
         {
             List.Create.Click();
 
@@ -22,7 +22,7 @@ namespace Six.Scs.Test.Workflow
             View.Administration.Agency.Create.SaveButton.Click();
         }
 
-        public static void Edit(Model.ValueObjects.Agency agency)
+        public static void Edit(Model.Agency agency)
         {
             View.Administration.Agency.View.Edit();
 

@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium.WebDriver;
 
@@ -7,7 +7,7 @@ namespace Six.Scs.Test.Tickets
 {
     public class TroubleTicket
     {
-        public static Model.ValueObjects.TroubleTicket Create(Model.ValueObjects.Terminal terminal)
+        public static Model.TroubleTicket Create(Model.Terminal terminal)
         {
             Terminal.Open(terminal);
             var troubleTicket = Ticket.TroubleTicket();
@@ -19,18 +19,18 @@ namespace Six.Scs.Test.Tickets
             return troubleTicket;
         }
 
-        private static void Check(Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Check(Model.TroubleTicket troubleTicket)
         {
             Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
-        private static void Open(Model.ValueObjects.TroubleTicket troubleTicket)
+        private static void Open(Model.TroubleTicket troubleTicket)
         {
             Search.TicketCanBeFoundById(troubleTicket.Id);
             Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
-        public static void Edit(Model.ValueObjects.TroubleTicket troubleTicket)
+        public static void Edit(Model.TroubleTicket troubleTicket)
         {
             Open(troubleTicket);
             var troubleTicketE = Trouble.Edit(troubleTicket);

@@ -1,4 +1,4 @@
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Administration.TaskScheduler;
 
 namespace Six.Scs.Test.Workflow

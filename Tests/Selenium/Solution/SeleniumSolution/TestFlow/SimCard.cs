@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 
@@ -7,7 +7,7 @@ namespace Six.Scs.Test
 {
     public class SimCard
     {
-        public static Model.ValueObjects.SimCard Create()
+        public static Model.SimCard Create()
         {
             NavigationBar.Lobby.Click();
             LobbyMenu.SimCardManage.Click();
@@ -19,7 +19,7 @@ namespace Six.Scs.Test
             return simCard;
         }
 
-        public static Model.ValueObjects.SimCard Edit(Model.ValueObjects.SimCard _simCard)
+        public static Model.SimCard Edit(Model.SimCard _simCard)
         {
             Open(_simCard);
             var simCard = Simcard.Edit();
@@ -29,12 +29,12 @@ namespace Six.Scs.Test
             return simCard;
         }
 
-        private static void Open(Model.ValueObjects.SimCard simCard)
+        private static void Open(Model.SimCard simCard)
         {
             Search.SimcardBySimCardNumber(simCard.SimCardNumber);
         }
 
-        public static void Check(Model.ValueObjects.SimCard simCard)
+        public static void Check(Model.SimCard simCard)
         {
             Assert.AreEqual(simCard.NetProvider, View.Administration.SimCard.View.NetProvider);
             Assert.AreEqual(simCard.SimCardNumber, View.Administration.SimCard.View.SimCardNumber);
@@ -45,7 +45,7 @@ namespace Six.Scs.Test
             Assert.AreEqual(simCard.TerminalId, View.Administration.SimCard.View.TerminalId);
         }
 
-        public static Model.ValueObjects.SimCard Lock(Model.ValueObjects.SimCard sim)
+        public static Model.SimCard Lock(Model.SimCard sim)
         {
             Open(sim);
             Workflow.SimCard.Lock(sim);
@@ -53,7 +53,7 @@ namespace Six.Scs.Test
             return sim;
         }
 
-        public static Model.ValueObjects.SimCard Unlink(Model.ValueObjects.SimCard simCard)
+        public static Model.SimCard Unlink(Model.SimCard simCard)
         {
             Open(simCard);
             Workflow.SimCard.Unlink(simCard);
@@ -61,8 +61,8 @@ namespace Six.Scs.Test
             return simCard;
         }
 
-        public static Model.ValueObjects.SimCard Link(Model.ValueObjects.SimCard simCard,
-            Model.ValueObjects.Terminal terminal)
+        public static Model.SimCard Link(Model.SimCard simCard,
+            Model.Terminal terminal)
         {
             Open(simCard);
             simCard.TerminalId = terminal.Id;

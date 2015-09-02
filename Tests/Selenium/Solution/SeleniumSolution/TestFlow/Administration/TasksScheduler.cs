@@ -1,6 +1,6 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using List = Six.Scs.Test.View.Administration.TaskScheduler.List;
 
 namespace Six.Scs.Test.Administration
@@ -17,7 +17,7 @@ namespace Six.Scs.Test.Administration
 
         public static Task Edit(Task task)
         {
-            var t = Model.Factory.Task.Edit();
+            var t = Factory.Task.Edit();
             Open(task);
             Workflow.TasksScheduler.Edit(t);
             Open(t);
@@ -27,7 +27,7 @@ namespace Six.Scs.Test.Administration
 
         public static Task Create()
         {
-            var task = Model.Factory.Task.Create();
+            var task = Factory.Task.Create();
             Workflow.TasksScheduler.Create(task);
             Open(task);
             Check(task);

@@ -92,7 +92,7 @@ namespace Six.Scs.Test.View.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
-        public static IWebElement List(Model.ValueObjects.BillingAddress billingAddress)
+        public static IWebElement List(Model.BillingAddress billingAddress)
         {
             return
                 WebDriver.FindAdaptedElements(By.Id("td#content table>tbody>tr>td>a"))

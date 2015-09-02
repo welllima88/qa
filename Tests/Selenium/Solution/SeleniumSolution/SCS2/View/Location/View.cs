@@ -186,5 +186,12 @@ namespace Six.Scs.Test.View.Location
             }
         }
 
+        public static IWebElement LocationEdit
+        {
+            get
+            {
+                return WebDriver.FindAdaptedElement(By.CssSelector("a[href*='/Location/Edit?locationId=']"));
+            }
+        }
     }
 }

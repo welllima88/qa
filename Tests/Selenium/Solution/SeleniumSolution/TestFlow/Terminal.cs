@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.Massmuation;
@@ -18,7 +18,7 @@ namespace Six.Scs.Test
 {
     public static class Terminal
     {
-        public static Model.ValueObjects.Terminal Create(Model.ValueObjects.Location location,
+        public static Model.Terminal Create(Model.Location location,
             TerminalBuilder terminalBuilder)
         {
             Location.Open(location);
@@ -32,8 +32,8 @@ namespace Six.Scs.Test
             return terminalBuilder.Terminal;
         }
 
-        public static IEnumerable<Model.ValueObjects.Terminal> Duplicate(
-            Model.ValueObjects.Terminal terminal)
+        public static IEnumerable<Model.Terminal> Duplicate(
+            Model.Terminal terminal)
         {
             Open(terminal);
             var terminalDuplicate = TerminalDuplicate.Create();
@@ -71,26 +71,26 @@ namespace Six.Scs.Test
             return CreateTerminalObjectsFromIds(Progress.TerminalList);
         }
 
-        private static IEnumerable<Model.ValueObjects.Terminal> CreateTerminalObjectsFromIds(
+        private static IEnumerable<Model.Terminal> CreateTerminalObjectsFromIds(
             IEnumerable<string> terminalList)
         {
             var list = terminalList.ToList();
-            var terminalObjects = new List<Model.ValueObjects.Terminal>(list.Count());
+            var terminalObjects = new List<Model.Terminal>(list.Count());
             terminalObjects.AddRange(
-                list.ToList().Select(terminalId => new Model.ValueObjects.Terminal {Id = terminalId}));
+                list.ToList().Select(terminalId => new Model.Terminal {Id = terminalId}));
             return terminalObjects;
         }
 
-        public static void Open(Model.ValueObjects.Terminal terminal)
+        public static void Open(Model.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
             PortletViewBase.AllHasBeenLoaded();
         }
 
-        public static void Quit(Model.ValueObjects.Terminal terminal)
+        public static void Quit(Model.Terminal terminal)
         {
             Open(terminal);
-            var info = Workflow.Terminal.Quit();
+            var info = Workflow.Terminal.Quit(Base.GenerateTestId());
             const int number = 5;
             var tries = new Try(number);
 
@@ -110,7 +110,7 @@ namespace Six.Scs.Test
             }).Check();
         }
 
-        public static void Assign(Model.ValueObjects.Mpd mpd, Model.ValueObjects.Terminal terminal)
+        public static void Assign(Model.Mpd mpd, Model.Terminal terminal)
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
@@ -120,7 +120,7 @@ namespace Six.Scs.Test
             StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);
         }
 
-        public static void Replace(Model.ValueObjects.Terminal terminal)
+        public static void Replace(Model.Terminal terminal)
         {
             Open(terminal);
             var replace = TerminalReplace.Yoximo();
@@ -128,7 +128,7 @@ namespace Six.Scs.Test
             Assert.AreEqual(replace.Article, BusinessViewpoint.TerminalType);
         }
 
-        public static void ArticleChange(Model.ValueObjects.Terminal terminal, IPerform articleChangePerfomer)
+        public static void ArticleChange(Model.Terminal terminal, IPerform articleChangePerfomer)
         {
             Open(terminal);
 
@@ -136,15 +136,15 @@ namespace Six.Scs.Test
             articleChangePerfomer.Check();
         }
 
-        public static void Move(Model.ValueObjects.Terminal terminal,
-            Model.ValueObjects.Location location)
+        public static void Move(Model.Terminal terminal,
+            Model.Location location)
         {
             Open(terminal);
             Workflow.Terminal.Move(location);
             Assert.AreEqual(location.Ep2MerchantId, LocationInfo.Ep2Id);
         }
 
-        public static void Return(Model.ValueObjects.Terminal terminal)
+        public static void Return(Model.Terminal terminal)
         {
             Open(terminal);
             Workflow.Terminal.Return();

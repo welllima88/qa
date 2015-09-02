@@ -4,13 +4,13 @@ namespace Six.Scs.Test.Administration
 {
     public class TerminalType
     {
-        public static void Edit(Model.ValueObjects.TerminalType terminalType)
+        public static void Edit(Model.TerminalType terminalType)
         {
             Workflow.TerminalType.Edit(terminalType);
             Check(terminalType);
         }
 
-        private static void Check(Model.ValueObjects.TerminalType terminalType)
+        private static void Check(Model.TerminalType terminalType)
         {
             Assert.That(Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,
                 Is.EqualTo(terminalType.DefaultAdditionalCapabilities));
@@ -29,9 +29,9 @@ namespace Six.Scs.Test.Administration
             Assert.That(Test.View.Administration.TerminalType.View.Suppliers, Is.EqualTo(terminalType.Suppliers));
         }
 
-        public static Model.ValueObjects.TerminalType View()
+        public static Model.TerminalType View()
         {
-            return new Model.ValueObjects.TerminalType
+            return new Model.TerminalType
             {
                 DefaultAdditionalCapabilities =
                     Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,

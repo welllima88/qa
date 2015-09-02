@@ -9,7 +9,7 @@ namespace Six.Scs.Test.Massmutation
 {
     public class BusinessTemplate
     {
-        public static void Change(IEnumerable<Model.ValueObjects.Terminal> terminals)
+        public static void Change(IEnumerable<Model.Terminal> terminals)
         {
             TestDirector.Navigate();
             MassMutationMenu.MassMutation.Click();

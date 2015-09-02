@@ -5,7 +5,7 @@ using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ifsf;
 using Six.Scs.Test.Massmutation;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium.WebDriver;
 using Default = Six.Scs.Test.Builder.Customer.Six.Default;
@@ -15,20 +15,20 @@ namespace Six.Scs.Test
     [TestFixture]
     public class RegressionTest
     {
-        private static Model.ValueObjects.Terminal _terminalOnLocation2;
-        private static Model.ValueObjects.Terminal _terminalOnLocation1;
+        private static Model.Terminal _terminalOnLocation2;
+        private static Model.Terminal _terminalOnLocation1;
         private static CustomerBuilder _customerBuilder;
         private static LocationBuilder _locationBuilder;
         private static Person _personOnCustomer;
         private static Person _personOnLocation;
-        private static Model.ValueObjects.User _user;
-        private static IEnumerable<Model.ValueObjects.Terminal> _duplicatedTerminals;
-        private static Model.ValueObjects.Mpd _mpd;
-        private static Model.ValueObjects.SimCard _sim;
-        private static Model.ValueObjects.Location _location;
+        private static Model.User _user;
+        private static IEnumerable<Model.Terminal> _duplicatedTerminals;
+        private static Model.Mpd _mpd;
+        private static Model.SimCard _sim;
+        private static Model.Location _location;
         private static TroubleTicket _troubleTicket;
         private static BillingAddress _billingAddress;
-        private static Model.ValueObjects.Terminal _terminalOnLocation;
+        private static Model.Terminal _terminalOnLocation;
 
         [TestFixtureSetUp]
         public void Home()
@@ -46,12 +46,12 @@ namespace Six.Scs.Test
          */
         public static void ExecuteRegressiontest()
         {
-            _customerBuilder = Customer.Create(new Default());
+            _customerBuilder = Customer.Create(new Default(Factory.Customer.Create()));
             Customer.Quit(_customerBuilder);
             Customer.Activate(_customerBuilder);
 
             _locationBuilder = Location.Create(_customerBuilder.Customer,
-                new Builder.Location.Default(Model.Factory.Location.Create()));
+                new Builder.Location.Default(Factory.Location.Create()));
             Location.Quit(_locationBuilder);
             Location.Activate(_locationBuilder);
 
@@ -65,7 +65,7 @@ namespace Six.Scs.Test
 
             _terminalOnLocation1 = Terminal.Create(_locationBuilder.Location, new Yomani().With(contracts));
 
-            Customer.Edit(_customerBuilder);
+            _customerBuilder = Customer.Edit(_customerBuilder.Customer, new Default(Factory.Customer.Edit()));
 
             Infotext.Create(_customerBuilder.Customer);
             _billingAddress = BillingAdress.Create(_customerBuilder.Customer);
@@ -84,7 +84,7 @@ namespace Six.Scs.Test
             _terminalOnLocation = Terminal.Create(_locationBuilder.Location, new Davinci2());
             Brands.Create(_terminalOnLocation, new Builder.Brand.Ifsf.Default());
             _locationBuilder = Location.Edit(_locationBuilder.Location,
-                new Builder.Location.Default(Model.Factory.Location.Edit()));
+                new Builder.Location.Default(Factory.Location.Edit()));
             Infotext.Create(_terminalOnLocation1);
 
             _personOnLocation = Contact.Create(_locationBuilder.Location);

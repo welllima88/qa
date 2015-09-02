@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Builder.Location
 {
     public class FromCustomer : LocationBuilder
     {
-        public FromCustomer(Model.ValueObjects.Customer customer) : base(customer.Location)
+        public FromCustomer(Model.Customer customer) : base(customer.Location)
         {
             Location.CompanyName = customer.CustomerName;
         }

@@ -7,6 +7,10 @@ namespace Six.Scs.Test.Builder.Customer.Six
 {
     public class Default : CustomerBuilder
     {
+        public Default(Model.Customer customer) : base(customer)
+        {
+        }
+
         protected override void SetCustomerData()
         {
             View.Customer.Create.SbsCurrency = Customer.SbsCurrency;

@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
@@ -11,7 +10,7 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
     {
         public Icp()
         {
-            Terminal = new Model.ValueObjects.Terminal {Type = "ICP"};
+            Terminal = new Model.Terminal {Type = "ICP"};
         }
 
         public override void Edit()
@@ -31,7 +30,7 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
 
         protected override void SetBasics()
         {
-            ConfigCreate.Infotext = "GICC" + Factory.GenerateTestId();
+            ConfigCreate.Infotext = "GICC" + Factory.Base.GenerateTestId();
         }
 
         protected override void SetDetails()

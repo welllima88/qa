@@ -6,9 +6,9 @@ namespace Six.Scs.Test.Administration
 {
     public class Agency
     {
-        public static Model.ValueObjects.Agency Create()
+        public static Model.Agency Create()
         {
-            var agency = Model.Factory.Agency.Default();
+            var agency = Factory.Agency.Default();
             Workflow.Agency.Create(agency);
 
             Check(agency);
@@ -18,10 +18,10 @@ namespace Six.Scs.Test.Administration
             return agency;
         }
 
-        public static Model.ValueObjects.Agency Edit(Model.ValueObjects.Agency agency)
+        public static Model.Agency Edit(Model.Agency agency)
         {
             Lobby.OpenLatestElement();
-            agency = Model.Factory.Agency.Edit();
+            agency = Factory.Agency.Edit();
             Workflow.Agency.Edit(agency);
 
             Check(agency);
@@ -31,12 +31,12 @@ namespace Six.Scs.Test.Administration
             return agency;
         }
 
-        private static void Open(Model.ValueObjects.Agency agency)
+        private static void Open(Model.Agency agency)
         {
             TestDirector.Navigate("Agency/List");
         }
 
-        private static void Check(Model.ValueObjects.Agency agency)
+        private static void Check(Model.Agency agency)
         {
             Assert.That(View.Administration.Agency.View.Status, Is.EqualTo(agency.Status));
             Assert.That(View.Administration.Agency.View.Name, Is.EqualTo(agency.Name));
@@ -49,7 +49,7 @@ namespace Six.Scs.Test.Administration
             Assert.That(View.Administration.Agency.View.Supplier, Is.EqualTo(agency.Supplier));
         }
 
-        public static void Deactivate(Model.ValueObjects.Agency agency)
+        public static void Deactivate(Model.Agency agency)
         {
             Lobby.OpenLatestElement();
             Workflow.Agency.Deactivate();

@@ -1,10 +1,9 @@
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
-using Location = Six.Scs.Test.Model.ValueObjects.Location;
-using TerminalDuplicate = Six.Scs.Test.Model.ValueObjects.TerminalDuplicate;
-using TerminalReplace = Six.Scs.Test.Model.ValueObjects.TerminalReplace;
+using Location = Six.Scs.Test.Model.Location;
+using TerminalDuplicate = Six.Scs.Test.Model.TerminalDuplicate;
+using TerminalReplace = Six.Scs.Test.Model.TerminalReplace;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -27,18 +26,18 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.Duplicate.View.DulpicateButton.Click();
         }
 
-        public static string Quit()
+        public static string Quit(string remark)
         {
             SalesContract.Quit.Click();
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
-            var reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
+            var reason = "SYR QUIT Terminal " + remark;
             View.Terminal.Quit.Quit.Reason = reason;
             View.Terminal.Quit.Quit.Save();
             return reason;
         }
 
-        public static void Assign(Model.ValueObjects.Mpd mpd)
+        public static void Assign(Model.Mpd mpd)
         {
             TechnicalView.MpdAssign.Click();
 
@@ -95,7 +94,7 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.Move.SaveButton.Click();
         }
 
-        public static Model.ValueObjects.Terminal Create(TerminalBuilder terminalBuilder)
+        public static Model.Terminal Create(TerminalBuilder terminalBuilder)
         {
             terminalBuilder.Create();
 

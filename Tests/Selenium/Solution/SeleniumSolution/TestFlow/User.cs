@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Factory;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Search;
 using Six.Scs.Test.View.User;
 using Six.Scs.Test.Workflow;
-using Person = Six.Scs.Test.Model.ValueObjects.Person;
+using Person = Six.Scs.Test.Model.Person;
 
 namespace Six.Scs.Test
 {
     public class User
     {
-        public static Model.ValueObjects.User Create(Model.ValueObjects.Customer customer)
+        public static Model.User Create(Model.Customer customer)
         {
             Customer.Open(customer);
-            var user = Model.Factory.User.Create();
+            var user = Factory.User.Create();
             Workflow.User.Create(user);
 
             Check(user);
@@ -24,11 +24,11 @@ namespace Six.Scs.Test
             return user;
         }
 
-        public static Model.ValueObjects.User Edit(Model.ValueObjects.User user)
+        public static Model.User Edit(Model.User user)
         {
             Open(user);
 
-            var _user = Model.Factory.User.Create();
+            var _user = Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
 
@@ -40,12 +40,12 @@ namespace Six.Scs.Test
             return _user;
         }
 
-        public static void Open(Model.ValueObjects.User user)
+        public static void Open(Model.User user)
         {
             Search.UserCanBeFoundByCustomerName(user.UserName);
         }
 
-        public static void Check(Model.ValueObjects.User u)
+        public static void Check(Model.User u)
         {
             Assert.AreEqual(u.UserName, View.User.View.UserName);
             // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
@@ -70,7 +70,7 @@ namespace Six.Scs.Test
             StringAssert.Contains(person.Contact.Language, View.User.Create.Language);
         }
 
-        public static void AddService(Model.ValueObjects.User user)
+        public static void AddService(Model.User user)
         {
             Open(user);
             IEnumerable<Service> services = Services.Scs();
@@ -79,7 +79,7 @@ namespace Six.Scs.Test
             CollectionAssert.AreEquivalent(services, actList);
         }
 
-        public static void AssignRoles(Model.ValueObjects.User user)
+        public static void AssignRoles(Model.User user)
         {
             Open(user);
             IEnumerable<string> roles =
@@ -92,7 +92,7 @@ namespace Six.Scs.Test
             Assert.That(actList, Is.EquivalentTo(roles));
         }
 
-        public static void Delete(Model.ValueObjects.User user)
+        public static void Delete(Model.User user)
         {
             Open(user);
             Workflow.User.Delete();

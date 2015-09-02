@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Builder.Location
 {
     public class Default : LocationBuilder
     {
-        public Default(Model.ValueObjects.Location location) : base(location)
+        public Default(Model.Location location) : base(location)
         {
         }
 

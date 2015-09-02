@@ -1,4 +1,4 @@
-using Six.Scs.Test.Model.ValueObjects;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.View.Common.Menu;
 
 namespace Six.Scs.Test.Workflow.Builder
@@ -41,7 +41,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickEdit()
         {
-            LocationMenu.LocationEdit.Click();
+            View.Location.View.LocationEdit.Click();
         }
 
         protected abstract void EditData();
