@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Search;
+using Six.Scs.Test.UI.Location;
+using Six.Scs.Test.UI.Search;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Search.Customer
@@ -19,7 +20,7 @@ namespace Six.Scs.Test.Search.Customer
             TestDirector.Navigate();
             Workflow.Search.Find("1");
             SearchResult.First(Result.Customer).Click();
-            _debitorNumber = View.Location.View.SbsDebitNumber;
+            _debitorNumber = View.SbsDebitNumber;
         }
 
         [Test]
@@ -29,7 +30,7 @@ namespace Six.Scs.Test.Search.Customer
             Workflow.Search.Find(_debitorNumber);
             StringAssert.Contains("SIX Payment Services AG", SearchResult.First(Result.Customer).Text);
             SearchResult.First(Result.Customer).Click();
-            Assert.That(_debitorNumber, Is.EqualTo(View.Location.View.SbsDebitNumber));
+            Assert.That(_debitorNumber, Is.EqualTo(View.SbsDebitNumber));
         }
     }
 }

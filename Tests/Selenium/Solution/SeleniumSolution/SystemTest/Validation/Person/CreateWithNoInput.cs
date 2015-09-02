@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.Person;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Customer;
 using Six.Test.Selenium.WebDriver;
+using Create = Six.Scs.Test.UI.Person.Create;
 
 namespace Six.Scs.Test.Validation.Person
 {
@@ -14,7 +14,7 @@ namespace Six.Scs.Test.Validation.Person
         public void GoToCreate()
         {
             TestDirector.Navigate("Customer/?CUSTOMERID=1");
-            View.Customer.View.ContactCreate.Click();
+            View.ContactCreate.Click();
             Create.SaveButton.Click();
         }
 

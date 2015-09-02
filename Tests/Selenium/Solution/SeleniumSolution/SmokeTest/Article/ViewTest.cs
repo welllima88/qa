@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using NUnit.Framework;
+using Six.Scs.Test.UI.Administration.Article;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Article
@@ -16,92 +17,92 @@ namespace Six.Scs.Test.Article
         [Test]
         public void ArticlelName()
         {
-            Assert.AreEqual("yomani XR S C O PINPAD, TCP/IP (IP)", View.Administration.Article.View.Name);
+            Assert.AreEqual("yomani XR S C O PINPAD, TCP/IP (IP)", View.Name);
         }
 
         [Test]
         public void CardReaderType()
         {
-            Assert.AreEqual("3", View.Administration.Article.View.CardReaderType);
+            Assert.AreEqual("3", View.CardReaderType);
         }
 
         [Test]
         public void Color()
         {
-            Assert.AreEqual("white", View.Administration.Article.View.Color);
+            Assert.AreEqual("white", View.Color);
         }
 
         [Test]
         public void ContactlessIndicator()
         {
-            Assert.AreEqual("1", View.Administration.Article.View.ContactlessIndicator);
+            Assert.AreEqual("1", View.ContactlessIndicator);
         }
 
         [Test]
         public void NetTypeEditWithoutSave()
         {
-            Assert.AreEqual("TCPIPEP2IP", View.Administration.Article.View.NetType);
+            Assert.AreEqual("TCPIPEP2IP", View.NetType);
         }
 
         [Test]
         public void PosInterface()
         {
-            Assert.AreEqual("MPD", View.Administration.Article.View.PosInterface);
+            Assert.AreEqual("MPD", View.PosInterface);
         }
 
         [Test]
         public void RecallInterval()
         {
-            Assert.AreEqual("86400", View.Administration.Article.View.RecallInterval);
+            Assert.AreEqual("86400", View.RecallInterval);
         }
 
         [Test]
         public void SbsArticleNumber()
         {
-            Assert.AreEqual("", View.Administration.Article.View.SbsArticleNumber);
+            Assert.AreEqual("", View.SbsArticleNumber);
         }
 
         [Test]
         public void SoftwareId()
         {
-            Assert.AreEqual("1095", View.Administration.Article.View.SoftwareId);
+            Assert.AreEqual("1095", View.SoftwareId);
         }
 
         [Test]
         public void Status()
         {
-            Assert.That(View.Administration.Article.View.Status);
+            Assert.That(View.Status);
         }
 
         [Test]
         public void SupplierList()
         {
-            CollectionAssert.AllItemsAreNotNull(View.Administration.Article.View.Supplier);
+            CollectionAssert.AllItemsAreNotNull(View.Supplier);
         }
 
         [Test]
         public void SupplierListHasAtLeastOneElement()
         {
-            Assert.That(View.Administration.Article.View.Supplier.Any(), "0 - :) or less elements");
+            Assert.That(View.Supplier.Any(), "0 - :) or less elements");
         }
 
         [Test]
         public void SupplierListHasSixSupplierElement()
         {
-            CollectionAssert.Contains(View.Administration.Article.View.Supplier, "SIX Payment Services AG");
-            CollectionAssert.Contains(View.Administration.Article.View.Supplier, "SIX Payment Services AT");
+            CollectionAssert.Contains(View.Supplier, "SIX Payment Services AG");
+            CollectionAssert.Contains(View.Supplier, "SIX Payment Services AT");
         }
 
         [Test]
         public void TrxSubmLim()
         {
-            Assert.AreEqual("1", View.Administration.Article.View.TrxSubmLim);
+            Assert.AreEqual("1", View.TrxSubmLim);
         }
 
         [Test]
         public void TrxTransLim()
         {
-            Assert.AreEqual("1", View.Administration.Article.View.TrxTransLim);
+            Assert.AreEqual("1", View.TrxTransLim);
         }
     }
 }

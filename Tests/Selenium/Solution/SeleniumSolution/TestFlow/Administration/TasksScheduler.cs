@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 using Six.Scs.Test.Model;
-using List = Six.Scs.Test.View.Administration.TaskScheduler.List;
+using List = Six.Scs.Test.UI.Administration.TaskScheduler.List;
 
 namespace Six.Scs.Test.Administration
 {
@@ -41,18 +41,18 @@ namespace Six.Scs.Test.Administration
 
         public static void Check(Task task)
         {
-            Assert.That(View.Administration.TaskScheduler.Create.TaskName, Is.EqualTo(task.TaskName));
-            Assert.That(View.Administration.TaskScheduler.Create.MachineName, Is.EqualTo(task.MachineName));
-            Assert.That(View.Administration.TaskScheduler.Create.Type, Is.EqualTo(task.Type));
-            Assert.That(View.Administration.TaskScheduler.Create.Module, Is.EqualTo(task.Module));
-            Assert.That(View.Administration.TaskScheduler.Create.Arguments, Is.EqualTo(task.Arguments));
-            Assert.That(View.Administration.TaskScheduler.Create.WorkingDirectory, Is.EqualTo(task.WorkingDirectory));
+            Assert.That(UI.Administration.TaskScheduler.Create.TaskName, Is.EqualTo(task.TaskName));
+            Assert.That(UI.Administration.TaskScheduler.Create.MachineName, Is.EqualTo(task.MachineName));
+            Assert.That(UI.Administration.TaskScheduler.Create.Type, Is.EqualTo(task.Type));
+            Assert.That(UI.Administration.TaskScheduler.Create.Module, Is.EqualTo(task.Module));
+            Assert.That(UI.Administration.TaskScheduler.Create.Arguments, Is.EqualTo(task.Arguments));
+            Assert.That(UI.Administration.TaskScheduler.Create.WorkingDirectory, Is.EqualTo(task.WorkingDirectory));
             //Assert.That(View.Administration.TaskScheduler.Create.NextRun, Is.EqualTo(task.NextRun));
-            Assert.That(View.Administration.TaskScheduler.Create.Interval, Is.EqualTo(task.Interval));
-            Assert.That(View.Administration.TaskScheduler.Create.RetryInterval, Is.EqualTo(task.RetryInterval));
-            Assert.That(View.Administration.TaskScheduler.Create.MaxRetries, Is.EqualTo(task.MaxRetries));
-            Assert.That(View.Administration.TaskScheduler.Create.WaitOnShutdown, Is.EqualTo(task.WaitOnShutdown));
-            View.Administration.TaskScheduler.Create.CancelButton.Click(); //leave edit mode -> list
+            Assert.That(UI.Administration.TaskScheduler.Create.Interval, Is.EqualTo(task.Interval));
+            Assert.That(UI.Administration.TaskScheduler.Create.RetryInterval, Is.EqualTo(task.RetryInterval));
+            Assert.That(UI.Administration.TaskScheduler.Create.MaxRetries, Is.EqualTo(task.MaxRetries));
+            Assert.That(UI.Administration.TaskScheduler.Create.WaitOnShutdown, Is.EqualTo(task.WaitOnShutdown));
+            UI.Administration.TaskScheduler.Create.CancelButton.Click(); //leave edit mode -> list
         }
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Six.Scs.Test.Model.Brand;
-using Six.Scs.Test.View.Contract;
+using Six.Scs.Test.UI.Contract;
 
 namespace Six.Scs.Test.Workflow
 {

@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.Test.View.Contract;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.Test.UI.Contract;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Brand.Ep2
@@ -30,7 +30,7 @@ namespace Six.Scs.Test.Builder.Brand.Ep2
 
         protected override void SetBrandDetails()
         {
-            View.Contract.Acquirer.Create.Remark = "SYR EP2 Contracts" + Factory.Base.GenerateTestId();
+            UI.Contract.Acquirer.Create.Remark = "SYR EP2 Contracts" + Factory.Base.GenerateTestId();
         }
 
         protected override void ChooseBrands()

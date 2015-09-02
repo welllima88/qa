@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Contract;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.Test.UI.Contract;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Brand.ELink

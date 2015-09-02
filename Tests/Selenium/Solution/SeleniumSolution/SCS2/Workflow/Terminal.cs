@@ -1,5 +1,6 @@
-using Six.Scs.Test.View.Terminal;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal.Duplicate;
 using Six.Scs.Test.Workflow.Builder;
 using Location = Six.Scs.Test.Model.Location;
 using TerminalDuplicate = Six.Scs.Test.Model.TerminalDuplicate;
@@ -14,16 +15,16 @@ namespace Six.Scs.Test.Workflow
             SalesContract.TerminalDuplicate.Click();
 
             // TerminalDuplicate.Location = "";
-            View.Terminal.Duplicate.View.NumberOfTerminals = duplicate.NumberOfTerminals;
+            View.NumberOfTerminals = duplicate.NumberOfTerminals;
             // TerminalDuplicate.DeliveryDate = "2";
             // TerminalDuplicate.InstallationType = "2";
-            View.Terminal.Duplicate.View.InstallationMessage = duplicate.InstallMessage;
-            View.Terminal.Duplicate.View.InformationText = duplicate.InformationText;
-            View.Terminal.Duplicate.View.CopyPassword = duplicate.CopyPassword;
+            View.InstallationMessage = duplicate.InstallMessage;
+            View.InformationText = duplicate.InformationText;
+            View.CopyPassword = duplicate.CopyPassword;
             // View.Terminal.Duplicate.View.MessageForAcquirers = duplicate.MessageForAcquirers;
 
-            View.Terminal.Duplicate.View.Next.Click();
-            View.Terminal.Duplicate.View.DulpicateButton.Click();
+            View.Next.Click();
+            View.DulpicateButton.Click();
         }
 
         public static string Quit(string remark)
@@ -32,8 +33,8 @@ namespace Six.Scs.Test.Workflow
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
             var reason = "SYR QUIT Terminal " + remark;
-            View.Terminal.Quit.Quit.Reason = reason;
-            View.Terminal.Quit.Quit.Save();
+            UI.Terminal.Quit.Quit.Reason = reason;
+            UI.Terminal.Quit.Quit.Save();
             return reason;
         }
 
@@ -41,10 +42,10 @@ namespace Six.Scs.Test.Workflow
         {
             TechnicalView.MpdAssign.Click();
 
-            View.Mpd.Assign.Primary = mpd.Id;
-            View.Mpd.Assign.Secondary = mpd.Id;
+            UI.Mpd.Assign.Primary = mpd.Id;
+            UI.Mpd.Assign.Secondary = mpd.Id;
 
-            View.Mpd.Assign.SaveButton.Click();
+            UI.Mpd.Assign.SaveButton.Click();
         }
 
         public static void Replace(TerminalReplace replace)
@@ -53,35 +54,35 @@ namespace Six.Scs.Test.Workflow
 
             ArticleChooser.Select = replace.Article;
 
-            View.Terminal.Replace.InstallationType = replace.InstallationType;
-            View.Terminal.Replace.SalesContract = replace.SalesContract;
-            View.Terminal.Replace.SupportContract = replace.SupportContract;
-            View.Terminal.Replace.Contactless = replace.Contactless;
-            View.Terminal.Replace.DeliveryDate = replace.DeliveryDate;
-            View.Terminal.Replace.InstallationRemark = replace.InstallationRemark;
-            View.Terminal.Replace.Infotext = replace.Infotext;
-            View.Terminal.Replace.SendNotifiaction = replace.SendNotifiaction;
+            UI.Terminal.Replace.InstallationType = replace.InstallationType;
+            UI.Terminal.Replace.SalesContract = replace.SalesContract;
+            UI.Terminal.Replace.SupportContract = replace.SupportContract;
+            UI.Terminal.Replace.Contactless = replace.Contactless;
+            UI.Terminal.Replace.DeliveryDate = replace.DeliveryDate;
+            UI.Terminal.Replace.InstallationRemark = replace.InstallationRemark;
+            UI.Terminal.Replace.Infotext = replace.Infotext;
+            UI.Terminal.Replace.SendNotifiaction = replace.SendNotifiaction;
 
-            View.Terminal.Replace.SaveButton.Click();
+            UI.Terminal.Replace.SaveButton.Click();
 
-            View.Terminal.Replace.SaveButton.Click(); // TODO: ContactlessCapabilities save without any changes
+            UI.Terminal.Replace.SaveButton.Click(); // TODO: ContactlessCapabilities save without any changes
         }
 
         public static void SoftwareChange()
         {
-            View.Terminal.SoftwareChange.NewSoftware = "";
-            View.Terminal.SoftwareChange.NotBefore = "";
-            View.Terminal.SoftwareChange.Save.Click();
+            UI.Terminal.SoftwareChange.NewSoftware = "";
+            UI.Terminal.SoftwareChange.NotBefore = "";
+            UI.Terminal.SoftwareChange.Save.Click();
         }
 
         public static void BlockSoftwareChange()
         {
-            View.Terminal.SoftwareChange.Block.Click();
+            UI.Terminal.SoftwareChange.Block.Click();
         }
 
         public static void UnBlockSoftwareChange()
         {
-            View.Terminal.SoftwareChange.UnBlock.Click();
+            UI.Terminal.SoftwareChange.UnBlock.Click();
         }
 
         public static void Move(Location location)
@@ -89,9 +90,9 @@ namespace Six.Scs.Test.Workflow
             BusinessViewpoint.MoveTerminal.Click();
 
             // Selenium.Terminal.Move.SelectLocation(location.CompanyName);
-            View.Terminal.Move.UpdateReceipt = true;
+            UI.Terminal.Move.UpdateReceipt = true;
 
-            View.Terminal.Move.SaveButton.Click();
+            UI.Terminal.Move.SaveButton.Click();
         }
 
         public static Model.Terminal Create(TerminalBuilder terminalBuilder)

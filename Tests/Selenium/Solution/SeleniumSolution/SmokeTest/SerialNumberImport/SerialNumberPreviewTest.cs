@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Administration.SerialNumberManage;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Administration.SerialNumberManage;
+using Six.Scs.Test.UI.Common.Menu;
 
 namespace Six.Scs.Test.SerialNumberImport
 {

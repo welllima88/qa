@@ -1,6 +1,6 @@
 using Six.Scs.Test.Model.Brand;
-using Six.Scs.Test.View.Contract;
-using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.UI.Contract;
+using Six.Scs.Test.UI.Terminal.Dashboard;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
@@ -23,7 +23,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickCreate()
         {
-            View.Contract.Acquirer.Create.SaveAndCreate();
+            UI.Contract.Acquirer.Create.SaveAndCreate();
             PortletViewBase.AllHasBeenLoaded();
         }
 

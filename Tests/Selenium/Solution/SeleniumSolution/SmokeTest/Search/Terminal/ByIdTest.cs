@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Search;
-using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.UI.Search;
+using Six.Scs.Test.UI.Terminal.Dashboard;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Search.Terminal

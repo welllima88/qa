@@ -1,4 +1,4 @@
-﻿using Six.Scs.Test.View.Administration.Agency;
+﻿using Six.Scs.Test.UI.Administration.Agency;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -9,42 +9,42 @@ namespace Six.Scs.Test.Workflow
         {
             List.Create.Click();
 
-            View.Administration.Agency.Create.Name = agency.Name;
-            View.Administration.Agency.Create.DisplayName = agency.DisplayName;
-            View.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
-            View.Administration.Agency.Create.Zip = agency.Adress.Zip;
-            View.Administration.Agency.Create.City = agency.Adress.City;
-            View.Administration.Agency.Create.Country = agency.Adress.Country;
-            View.Administration.Agency.Create.Supplier = agency.Supplier;
-            View.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
-            View.Administration.Agency.Create.Status = agency.Status;
+            UI.Administration.Agency.Create.Name = agency.Name;
+            UI.Administration.Agency.Create.DisplayName = agency.DisplayName;
+            UI.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
+            UI.Administration.Agency.Create.Zip = agency.Adress.Zip;
+            UI.Administration.Agency.Create.City = agency.Adress.City;
+            UI.Administration.Agency.Create.Country = agency.Adress.Country;
+            UI.Administration.Agency.Create.Supplier = agency.Supplier;
+            UI.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
+            UI.Administration.Agency.Create.Status = agency.Status;
 
-            View.Administration.Agency.Create.SaveButton.Click();
+            UI.Administration.Agency.Create.SaveButton.Click();
         }
 
         public static void Edit(Model.Agency agency)
         {
-            View.Administration.Agency.View.Edit();
+            View.Edit();
 
-            View.Administration.Agency.Create.Name = agency.Name;
-            View.Administration.Agency.Create.DisplayName = agency.DisplayName;
-            View.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
-            View.Administration.Agency.Create.Zip = agency.Adress.Zip;
-            View.Administration.Agency.Create.City = agency.Adress.City;
-            View.Administration.Agency.Create.Country = agency.Adress.Country;
-            View.Administration.Agency.Create.Supplier = agency.Supplier;
-            View.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
-            View.Administration.Agency.Create.Status = agency.Status;
-            View.Administration.Agency.Create.SaveButton.Click();
+            UI.Administration.Agency.Create.Name = agency.Name;
+            UI.Administration.Agency.Create.DisplayName = agency.DisplayName;
+            UI.Administration.Agency.Create.StreetNo = agency.Adress.StreetNo;
+            UI.Administration.Agency.Create.Zip = agency.Adress.Zip;
+            UI.Administration.Agency.Create.City = agency.Adress.City;
+            UI.Administration.Agency.Create.Country = agency.Adress.Country;
+            UI.Administration.Agency.Create.Supplier = agency.Supplier;
+            UI.Administration.Agency.Create.SbsAgentId = agency.SbsAgentId;
+            UI.Administration.Agency.Create.Status = agency.Status;
+            UI.Administration.Agency.Create.SaveButton.Click();
         }
 
         public static void Deactivate()
         {
-            View.Administration.Agency.View.Edit();
+            View.Edit();
 
-            View.Administration.Agency.Create.Status = false;
+            UI.Administration.Agency.Create.Status = false;
 
-            View.Administration.Agency.Create.SaveButton.Click();
+            UI.Administration.Agency.Create.SaveButton.Click();
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.Location;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Location;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Validation.Location

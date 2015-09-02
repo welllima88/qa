@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Six.Scs.Test.UI.Administration.Agency;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium.WebDriver;
 
@@ -38,15 +39,15 @@ namespace Six.Scs.Test.Administration
 
         private static void Check(Model.Agency agency)
         {
-            Assert.That(View.Administration.Agency.View.Status, Is.EqualTo(agency.Status));
-            Assert.That(View.Administration.Agency.View.Name, Is.EqualTo(agency.Name));
-            Assert.That(View.Administration.Agency.View.DisplayName, Is.EqualTo(agency.DisplayName));
-            Assert.That(View.Administration.Agency.View.City, Is.EqualTo(agency.Adress.City));
-            Assert.That(View.Administration.Agency.View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
-            Assert.That(agency.Adress.Country, Is.StringMatching(View.Administration.Agency.View.Country));
+            Assert.That(View.Status, Is.EqualTo(agency.Status));
+            Assert.That(View.Name, Is.EqualTo(agency.Name));
+            Assert.That(View.DisplayName, Is.EqualTo(agency.DisplayName));
+            Assert.That(View.City, Is.EqualTo(agency.Adress.City));
+            Assert.That(View.StreetNo, Is.EqualTo(agency.Adress.StreetNo));
+            Assert.That(agency.Adress.Country, Is.StringMatching(View.Country));
             // "Schweiz" vs "Schweiz [CH]"
-            Assert.That(View.Administration.Agency.View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
-            Assert.That(View.Administration.Agency.View.Supplier, Is.EqualTo(agency.Supplier));
+            Assert.That(View.SbsAgentId, Is.EqualTo(agency.SbsAgentId));
+            Assert.That(View.Supplier, Is.EqualTo(agency.Supplier));
         }
 
         public static void Deactivate(Model.Agency agency)

@@ -1,6 +1,6 @@
 using System;
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Support;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Support;
 
 namespace Six.Scs.Test.Workflow
 {

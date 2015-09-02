@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
-using Six.Scs.Test.View.Contract;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand;
+using Six.Scs.Test.UI.Contract;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Brand;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Brand.Ifsf
@@ -27,8 +27,8 @@ namespace Six.Scs.Test.Builder.Brand.Ifsf
 
         protected override void SetBrandDetails()
         {
-            View.Contract.Acquirer.Create.Remark = "SYR IFSF Contracts" + Factory.Base.GenerateTestId();
-            View.Contract.Acquirer.Create.DccProvider = "SIX Payment Services";
+            UI.Contract.Acquirer.Create.Remark = "SYR IFSF Contracts" + Factory.Base.GenerateTestId();
+            UI.Contract.Acquirer.Create.DccProvider = "SIX Payment Services";
         }
 
         protected override void ChooseBrands()

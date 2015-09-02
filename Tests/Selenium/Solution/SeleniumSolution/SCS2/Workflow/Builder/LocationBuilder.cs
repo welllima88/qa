@@ -1,5 +1,6 @@
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Location;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
@@ -31,7 +32,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private static void SaveButton()
         {
-            View.Location.Edit.SaveButton.Click();
+            UI.Location.Edit.SaveButton.Click();
         }
 
         private void ClickCreate()
@@ -41,33 +42,33 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickEdit()
         {
-            View.Location.View.LocationEdit.Click();
+            View.LocationEdit.Click();
         }
 
         protected abstract void EditData();
 
         protected virtual void ReadInfo()
         {
-            Location.Guid = View.Location.View.Guid;
+            Location.Guid = View.Guid;
         }
 
         private static void CreateButton()
         {
-            View.Customer.Create.SaveButton.Click();
+            UI.Customer.Create.SaveButton.Click();
         }
 
         protected abstract void SetData();
 
         public void Quit()
         {
-            View.Location.View.Quit.Click();
-            View.Location.View.ConfirmQuit.Click();
+            View.Quit.Click();
+            View.ConfirmQuit.Click();
         }
 
         public void Activate()
         {
-            View.Location.View.Activate.Click();
-            View.Location.View.ConfirmActivate.Click();
+            View.Activate.Click();
+            View.ConfirmActivate.Click();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 using Six.Test.Selenium.WebDriver;
-using List = Six.Scs.Test.View.Administration.Provider.List;
+using List = Six.Scs.Test.UI.Administration.Provider.List;
 
 namespace Six.Scs.Test.Provider
 {

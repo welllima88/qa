@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Six.Scs.Test.UI.Mpd;
 using Six.Scs.Test.Workflow;
 
 namespace Six.Scs.Test
@@ -39,10 +40,10 @@ namespace Six.Scs.Test
 
         public static void Check(Model.Mpd m)
         {
-            Assert.AreEqual(m.Id, View.Mpd.View.Id);
-            Assert.AreEqual(m.Description, View.Mpd.View.Description);
-            Assert.AreEqual(m.Adress, View.Mpd.View.Adress);
-            Assert.AreEqual(m.Port, View.Mpd.View.Port);
+            Assert.AreEqual(m.Id, View.Id);
+            Assert.AreEqual(m.Description, View.Description);
+            Assert.AreEqual(m.Adress, View.Adress);
+            Assert.AreEqual(m.Port, View.Port);
         }
     }
 }

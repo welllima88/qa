@@ -1,6 +1,6 @@
-using Six.Scs.Test.View.Contract;
-using Six.Scs.Test.View.Terminal;
-using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.UI.Contract;
+using Six.Scs.Test.UI.Terminal;
+using Six.Scs.Test.UI.Terminal.Dashboard;
 
 namespace Six.Scs.Test.Workflow.Builder
 {

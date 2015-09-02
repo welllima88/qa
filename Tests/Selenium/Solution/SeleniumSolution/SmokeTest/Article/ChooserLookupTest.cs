@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Terminal;
+using Six.Scs.Test.UI.Location;
+using Six.Scs.Test.UI.Terminal;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Article
@@ -12,7 +13,7 @@ namespace Six.Scs.Test.Article
         public void TestInit()
         {
             TestDirector.Navigate("Location?LocationId=261a0d6e-8136-4b48-95f4-bfcb986a142c");
-            View.Location.View.TerminalCreate.Click();
+            View.TerminalCreate.Click();
         }
 
         [Test]

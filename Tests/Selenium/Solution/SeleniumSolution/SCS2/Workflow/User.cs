@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.User;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.User;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -12,48 +12,48 @@ namespace Six.Scs.Test.Workflow
             CustomerMenu.Users.Click();
             List.UserCreate.Click();
 
-            View.User.Create.UserName = u.UserName;
-            View.User.Create.Salutation = u.Salutation;
-            View.User.Create.FirstName = u.FirstName;
-            View.User.Create.Name = u.Name;
-            View.User.Create.Language = u.Language;
-            View.User.Create.Email = u.Email;
-            View.User.Create.SecurId = u.SecurId;
-            View.User.Create.Comment = u.Comment;
-            View.User.Create.WesMandant = u.WesMandant;
+            UI.User.Create.UserName = u.UserName;
+            UI.User.Create.Salutation = u.Salutation;
+            UI.User.Create.FirstName = u.FirstName;
+            UI.User.Create.Name = u.Name;
+            UI.User.Create.Language = u.Language;
+            UI.User.Create.Email = u.Email;
+            UI.User.Create.SecurId = u.SecurId;
+            UI.User.Create.Comment = u.Comment;
+            UI.User.Create.WesMandant = u.WesMandant;
 
-            View.User.Create.SaveButton.Click();
-            u.Password = View.User.View.Password;
+            UI.User.Create.SaveButton.Click();
+            u.Password = View.Password;
             // Refresh for check due to inconsistent user interface ("de" vs "Deutsch [de]")
             UserMenu.User.Click();
         }
 
         public static void Edit(Model.User u)
         {
-            View.User.View.Edit.Click();
+            View.Edit.Click();
 
-            View.User.Create.Salutation = u.Salutation;
-            View.User.Create.FirstName = u.FirstName;
-            View.User.Create.Name = u.Name;
-            View.User.Create.Language = u.Language;
-            View.User.Create.Email = u.Email;
-            View.User.Create.SecurId = u.SecurId;
-            View.User.Create.Comment = u.Comment;
-            View.User.Create.WesMandant = u.WesMandant;
+            UI.User.Create.Salutation = u.Salutation;
+            UI.User.Create.FirstName = u.FirstName;
+            UI.User.Create.Name = u.Name;
+            UI.User.Create.Language = u.Language;
+            UI.User.Create.Email = u.Email;
+            UI.User.Create.SecurId = u.SecurId;
+            UI.User.Create.Comment = u.Comment;
+            UI.User.Create.WesMandant = u.WesMandant;
 
-            View.User.Create.SaveButton.Click();
+            UI.User.Create.SaveButton.Click();
         }
 
         public static string ResetPassword()
         {
             UserMenu.ResetPassword.Click();
-            View.User.View.ResetPasswordConfirm.Click();
-            return View.User.View.Password;
+            View.ResetPasswordConfirm.Click();
+            return View.Password;
         }
 
         public static void AddServices(IEnumerable<Service> services)
         {
-            View.User.View.AddServiceButton.Click();
+            View.AddServiceButton.Click();
 
             foreach (var service in services)
             {
@@ -65,7 +65,7 @@ namespace Six.Scs.Test.Workflow
 
         public static void AssignRoles(IEnumerable<string> roles)
         {
-            View.User.View.AssignRoles.Click();
+            View.AssignRoles.Click();
 
             foreach (var role in roles)
             {
@@ -76,8 +76,8 @@ namespace Six.Scs.Test.Workflow
 
         public static void Delete()
         {
-            View.User.View.DeleteButton.Click();
-            View.User.Delete.ConfirmButton.Click();
+            View.DeleteButton.Click();
+            UI.User.Delete.ConfirmButton.Click();
         }
     }
 }

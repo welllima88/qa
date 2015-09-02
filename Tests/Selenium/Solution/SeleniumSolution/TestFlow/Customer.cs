@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Six.Scs.Test.UI.Customer;
 using Six.Scs.Test.Workflow;
 using Six.Scs.Test.Workflow.Builder;
 
@@ -35,8 +36,8 @@ namespace Six.Scs.Test
             Open(customerBuilder.Customer);
             customerBuilder.Quit();
             customerBuilder.Check();
-            Assert.That(View.Customer.View.IsCanceled);
-            Assert.That(View.Customer.View.Activate.Displayed);
+            Assert.That(View.IsCanceled);
+            Assert.That(View.Activate.Displayed);
         }
 
         public static void Activate(CustomerBuilder customerBuilder)
@@ -45,8 +46,8 @@ namespace Six.Scs.Test
             customerBuilder.Activate();
 
             customerBuilder.Check();
-            Assert.That(!View.Customer.View.IsCanceled);
-            Assert.That(View.Customer.View.Quit.Displayed);
+            Assert.That(!View.IsCanceled);
+            Assert.That(View.Quit.Displayed);
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace Six.Scs.Test
             Open(customer);
             
 
-            Assert.That(View.Customer.View.Quit.Displayed);
+            Assert.That(View.Quit.Displayed);
         }
     }
 }

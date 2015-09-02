@@ -1,5 +1,5 @@
-﻿using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.Mpd;
+﻿using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Mpd;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -10,26 +10,26 @@ namespace Six.Scs.Test.Workflow
             CustomerMenu.AllMpds.Click();
             ListView.CreateButton.Click();
 
-            View.Mpd.Create.Description = m.Description;
-            View.Mpd.Create.Adress = m.Adress;
-            View.Mpd.Create.Port = m.Port;
+            UI.Mpd.Create.Description = m.Description;
+            UI.Mpd.Create.Adress = m.Adress;
+            UI.Mpd.Create.Port = m.Port;
 
-            View.Mpd.Create.SaveButton.Click();
+            UI.Mpd.Create.SaveButton.Click();
 
-            m.Id = View.Mpd.View.Id;
+            m.Id = View.Id;
         }
 
         public static void Edit(Model.Mpd m)
         {
-            View.Mpd.View.EditButton.Click();
+            View.EditButton.Click();
 
-            View.Mpd.Create.Description = m.Description;
-            View.Mpd.Create.Adress = m.Adress;
-            View.Mpd.Create.Port = m.Port;
+            UI.Mpd.Create.Description = m.Description;
+            UI.Mpd.Create.Adress = m.Adress;
+            UI.Mpd.Create.Port = m.Port;
 
-            View.Mpd.Create.SaveButton.Click();
+            UI.Mpd.Create.SaveButton.Click();
 
-            m.Id = View.Mpd.View.Id;
+            m.Id = View.Id;
         }
     }
 }

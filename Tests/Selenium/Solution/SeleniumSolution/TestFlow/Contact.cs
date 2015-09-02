@@ -1,7 +1,8 @@
 using NUnit.Framework;
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Customer;
 using Six.Test.Selenium.WebDriver;
 using Lobby = Six.Scs.Test.Workflow.Lobby;
 
@@ -12,7 +13,7 @@ namespace Six.Scs.Test
         public static Person Create(Model.Customer customer)
         {
             Customer.Open(customer);
-            View.Customer.View.ContactCreate.Click();
+            View.ContactCreate.Click();
             return CreateAndSave();
         }
 
@@ -29,7 +30,7 @@ namespace Six.Scs.Test
         public static Person Create(Model.Location location)
         {
             Location.Open(location);
-            View.Location.View.ContactCreate.Click();
+            UI.Location.View.ContactCreate.Click();
             return CreateAndSave();
         }
 
@@ -56,29 +57,29 @@ namespace Six.Scs.Test
 
         public static void Check(Person c)
         {
-            Assert.AreEqual(c.Salutation, View.Person.View.Salutation);
-            Assert.AreEqual(c.FirstName, View.Person.View.FirstName);
-            Assert.AreEqual(c.Name, View.Person.View.Name);
-            Assert.AreEqual(c.Contact.Language, View.Person.View.Language);
-            StringAssert.Contains(c.Contact.Telephone, View.Person.View.Telephone);
-            StringAssert.Contains(c.Contact.Mobile, View.Person.View.Mobile);
-            StringAssert.Contains(c.Contact.Fax, View.Person.View.Fax);
-            Assert.AreEqual(c.Contact.Email, View.Person.View.Email);
-            Assert.AreEqual(c.Adress.Po, View.Person.View.Po);
-            Assert.AreEqual(c.Adress.StreetNo, View.Person.View.StreetNo);
-            Assert.AreEqual(c.Adress.Zip, View.Person.View.Zip);
-            Assert.AreEqual(c.Adress.City, View.Person.View.City);
-            StringAssert.Contains(c.Adress.Region, View.Person.View.Region);
-            Assert.AreEqual(c.Adress.Country, View.Person.View.Country);
-            Assert.AreEqual(c.Contact.Web, View.Person.View.Web);
-            Assert.AreEqual(c.Adress.AdressAddition, View.Person.View.AddressAddition);
+            Assert.AreEqual(c.Salutation, UI.Person.View.Salutation);
+            Assert.AreEqual(c.FirstName, UI.Person.View.FirstName);
+            Assert.AreEqual(c.Name, UI.Person.View.Name);
+            Assert.AreEqual(c.Contact.Language, UI.Person.View.Language);
+            StringAssert.Contains(c.Contact.Telephone, UI.Person.View.Telephone);
+            StringAssert.Contains(c.Contact.Mobile, UI.Person.View.Mobile);
+            StringAssert.Contains(c.Contact.Fax, UI.Person.View.Fax);
+            Assert.AreEqual(c.Contact.Email, UI.Person.View.Email);
+            Assert.AreEqual(c.Adress.Po, UI.Person.View.Po);
+            Assert.AreEqual(c.Adress.StreetNo, UI.Person.View.StreetNo);
+            Assert.AreEqual(c.Adress.Zip, UI.Person.View.Zip);
+            Assert.AreEqual(c.Adress.City, UI.Person.View.City);
+            StringAssert.Contains(c.Adress.Region, UI.Person.View.Region);
+            Assert.AreEqual(c.Adress.Country, UI.Person.View.Country);
+            Assert.AreEqual(c.Contact.Web, UI.Person.View.Web);
+            Assert.AreEqual(c.Adress.AdressAddition, UI.Person.View.AddressAddition);
         }
 
         public static void Delete(Person person)
         {
             Open(person);
-            View.Person.View.DeleteButton.Click();
-            View.Person.View.DeleteConfirm();
+            UI.Person.View.DeleteButton.Click();
+            UI.Person.View.DeleteConfirm();
 
             Open(person);
             StringAssert.IsMatch("Element .*(not|nicht).*!", SiteContent.Header);

@@ -10,9 +10,9 @@
         public static string Create(string category, string infotext)
         {
             infotext =
-                View.Common.Infotext.Create.Text =
+                UI.Common.Infotext.Create.Text =
                     string.Format("SYR {0} Infotext {1}", category, infotext);
-            View.Common.Infotext.Create.SaveButton.Click();
+            UI.Common.Infotext.Create.SaveButton.Click();
             return infotext;
         }
     }

@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.Mpd;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Mpd;
 using Six.Test.Selenium.WebDriver;
-using Create = Six.Scs.Test.View.Administration.Agency.Create;
+using Create = Six.Scs.Test.UI.Administration.Agency.Create;
 
 namespace Six.Scs.Test.Validation.Mpd
 {

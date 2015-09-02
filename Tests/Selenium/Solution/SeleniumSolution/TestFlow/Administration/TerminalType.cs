@@ -12,21 +12,21 @@ namespace Six.Scs.Test.Administration
 
         private static void Check(Model.TerminalType terminalType)
         {
-            Assert.That(Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,
+            Assert.That(UI.Administration.TerminalType.View.DefaultAdditionalCapabilities,
                 Is.EqualTo(terminalType.DefaultAdditionalCapabilities));
 
-            Assert.That(Test.View.Administration.TerminalType.View.DefaultCapabilities,
+            Assert.That(UI.Administration.TerminalType.View.DefaultCapabilities,
                 Is.EqualTo(terminalType.DefaultCapabilities));
-            Assert.That(Test.View.Administration.TerminalType.View.DeviceType, Is.EqualTo(terminalType.DeviceType));
-            Assert.That(Test.View.Administration.TerminalType.View.Range, Is.EqualTo(terminalType.Range));
-            Assert.That(Test.View.Administration.TerminalType.View.ReferenceSystem,
+            Assert.That(UI.Administration.TerminalType.View.DeviceType, Is.EqualTo(terminalType.DeviceType));
+            Assert.That(UI.Administration.TerminalType.View.Range, Is.EqualTo(terminalType.Range));
+            Assert.That(UI.Administration.TerminalType.View.ReferenceSystem,
                 Is.EqualTo(terminalType.ReferenceSystem));
-            Assert.That(Test.View.Administration.TerminalType.View.Supplier, Is.EqualTo(terminalType.Supplier));
-            Assert.That(Test.View.Administration.TerminalType.View.DeviceType, Is.EqualTo(terminalType.DeviceType));
+            Assert.That(UI.Administration.TerminalType.View.Supplier, Is.EqualTo(terminalType.Supplier));
+            Assert.That(UI.Administration.TerminalType.View.DeviceType, Is.EqualTo(terminalType.DeviceType));
 
-            Assert.That(Test.View.Administration.TerminalType.View.SoftwareIds, Is.EqualTo(terminalType.SoftwareIds));
-            Assert.That(Test.View.Administration.TerminalType.View.Providers, Is.EqualTo(terminalType.Providers));
-            Assert.That(Test.View.Administration.TerminalType.View.Suppliers, Is.EqualTo(terminalType.Suppliers));
+            Assert.That(UI.Administration.TerminalType.View.SoftwareIds, Is.EqualTo(terminalType.SoftwareIds));
+            Assert.That(UI.Administration.TerminalType.View.Providers, Is.EqualTo(terminalType.Providers));
+            Assert.That(UI.Administration.TerminalType.View.Suppliers, Is.EqualTo(terminalType.Suppliers));
         }
 
         public static Model.TerminalType View()
@@ -34,15 +34,15 @@ namespace Six.Scs.Test.Administration
             return new Model.TerminalType
             {
                 DefaultAdditionalCapabilities =
-                    Test.View.Administration.TerminalType.View.DefaultAdditionalCapabilities,
-                DefaultCapabilities = Test.View.Administration.TerminalType.View.DefaultCapabilities,
-                DeviceType = Test.View.Administration.TerminalType.View.DeviceType,
-                Range = Test.View.Administration.TerminalType.View.Range,
-                ReferenceSystem = Test.View.Administration.TerminalType.View.ReferenceSystem,
-                Supplier = Test.View.Administration.TerminalType.View.Supplier,
-                Providers = Test.View.Administration.TerminalType.View.Providers,
-                SoftwareIds = Test.View.Administration.TerminalType.View.SoftwareIds,
-                Suppliers = Test.View.Administration.TerminalType.View.Suppliers
+                    UI.Administration.TerminalType.View.DefaultAdditionalCapabilities,
+                DefaultCapabilities = UI.Administration.TerminalType.View.DefaultCapabilities,
+                DeviceType = UI.Administration.TerminalType.View.DeviceType,
+                Range = UI.Administration.TerminalType.View.Range,
+                ReferenceSystem = UI.Administration.TerminalType.View.ReferenceSystem,
+                Supplier = UI.Administration.TerminalType.View.Supplier,
+                Providers = UI.Administration.TerminalType.View.Providers,
+                SoftwareIds = UI.Administration.TerminalType.View.SoftwareIds,
+                Suppliers = UI.Administration.TerminalType.View.Suppliers
             };
         }
     }

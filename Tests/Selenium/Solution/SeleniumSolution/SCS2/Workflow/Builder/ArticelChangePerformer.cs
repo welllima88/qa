@@ -1,5 +1,5 @@
-using Six.Scs.Test.View.Terminal;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Helper;
 
 namespace Six.Scs.Test.Workflow.Builder

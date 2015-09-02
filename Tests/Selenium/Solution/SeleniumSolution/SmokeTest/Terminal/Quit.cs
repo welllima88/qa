@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Terminal
@@ -20,22 +20,22 @@ namespace Six.Scs.Test.Terminal
         [Category("Terminal Quit")]
         public void Delivery()
         {
-            Assert.That(View.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
+            Assert.That(UI.Terminal.Quit.Quit.InstallationOnSiteRequested, Is.False);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void Reason()
         {
-            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Not.Null);
-            Assert.That(View.Terminal.Quit.Quit.Reason, Is.Empty);
+            Assert.That(UI.Terminal.Quit.Quit.Reason, Is.Not.Null);
+            Assert.That(UI.Terminal.Quit.Quit.Reason, Is.Empty);
         }
 
         [Test]
         [Category("Terminal Quit")]
         public void State()
         {
-            Assert.That(View.Terminal.Quit.Quit.State, Is.Not.Empty);
+            Assert.That(UI.Terminal.Quit.Quit.State, Is.Not.Empty);
         }
     }
 }

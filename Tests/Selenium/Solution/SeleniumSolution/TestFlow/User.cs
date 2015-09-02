@@ -3,8 +3,8 @@ using System.Collections.ObjectModel;
 using NUnit.Framework;
 using Six.Scs.Test.Factory;
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Search;
-using Six.Scs.Test.View.User;
+using Six.Scs.Test.UI.Search;
+using Six.Scs.Test.UI.User;
 using Six.Scs.Test.Workflow;
 using Person = Six.Scs.Test.Model.Person;
 
@@ -47,27 +47,27 @@ namespace Six.Scs.Test
 
         public static void Check(Model.User u)
         {
-            Assert.AreEqual(u.UserName, View.User.View.UserName);
+            Assert.AreEqual(u.UserName, View.UserName);
             // StringAssert.IsMatch(TestRegExpPatterns.UserPassword, View.Password);
-            Assert.AreEqual(u.Salutation, View.User.View.Salutation);
-            Assert.AreEqual(u.FirstName, View.User.View.FirstName);
-            Assert.AreEqual(u.Name, View.User.View.Name);
-            Assert.AreEqual(u.Language, View.User.View.Language);
-            Assert.AreEqual(u.Email, View.User.View.Email);
-            Assert.AreEqual(u.SecurId, View.User.View.SecurId);
-            Assert.AreEqual(u.Comment, View.User.View.Comment);
-            StringAssert.Contains(u.WesMandant, View.User.View.WesMandant);
+            Assert.AreEqual(u.Salutation, View.Salutation);
+            Assert.AreEqual(u.FirstName, View.FirstName);
+            Assert.AreEqual(u.Name, View.Name);
+            Assert.AreEqual(u.Language, View.Language);
+            Assert.AreEqual(u.Email, View.Email);
+            Assert.AreEqual(u.SecurId, View.SecurId);
+            Assert.AreEqual(u.Comment, View.Comment);
+            StringAssert.Contains(u.WesMandant, View.WesMandant);
         }
 
         public static void Create(Person person)
         {
             Contact.Open(person);
 
-            View.Person.View.CreateUser.Click();
+            UI.Person.View.CreateUser.Click();
 
-            StringAssert.Contains(person.Name, View.User.Create.Name);
-            StringAssert.Contains(person.FirstName, View.User.Create.FirstName);
-            StringAssert.Contains(person.Contact.Language, View.User.Create.Language);
+            StringAssert.Contains(person.Name, UI.User.Create.Name);
+            StringAssert.Contains(person.FirstName, UI.User.Create.FirstName);
+            StringAssert.Contains(person.Contact.Language, UI.User.Create.Language);
         }
 
         public static void AddService(Model.User user)

@@ -1,5 +1,5 @@
-﻿using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Search;
+﻿using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Search;
 
 namespace Six.Scs.Test.Workflow
 {

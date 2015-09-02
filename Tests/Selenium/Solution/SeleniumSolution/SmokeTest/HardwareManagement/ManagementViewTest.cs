@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Hardware;
+using Six.Scs.Test.UI.Hardware;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.HardwareManagement

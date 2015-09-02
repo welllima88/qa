@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Common.Menu;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Lobby

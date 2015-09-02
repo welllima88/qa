@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Search;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Search;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Search.Customer

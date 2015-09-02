@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.View.Massmuation;
+using Six.Scs.Test.UI.Massmuation;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test

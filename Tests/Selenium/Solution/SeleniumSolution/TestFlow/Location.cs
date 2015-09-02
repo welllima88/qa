@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.Test.Builder.Location;
+using Six.Scs.Test.UI.Location;
 using Six.Scs.Test.Workflow;
 using Six.Scs.Test.Workflow.Builder;
 
@@ -39,8 +40,8 @@ namespace Six.Scs.Test
 
             locationBuilder.Activate();
             locationBuilder.Check();
-            Assert.That(!View.Location.View.IsCanceled);
-            Assert.That(View.Location.View.Quit.Displayed);
+            Assert.That(!View.IsCanceled);
+            Assert.That(View.Quit.Displayed);
         }
 
         public static void Quit(LocationBuilder locationBuilder)
@@ -48,8 +49,8 @@ namespace Six.Scs.Test
             Open(locationBuilder.Location);
             locationBuilder.Quit();
             locationBuilder.Check();
-            Assert.That(View.Location.View.IsCanceled);
-            Assert.That(View.Location.View.Activate.Displayed);
+            Assert.That(View.IsCanceled);
+            Assert.That(View.Activate.Displayed);
         }
 
         public static LocationBuilder CreateFromCustomer(Model.Customer customer)

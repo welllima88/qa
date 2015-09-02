@@ -4,12 +4,13 @@ using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.Factory;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.Massmuation;
-using Six.Scs.Test.View.Terminal;
-using Six.Scs.Test.View.Terminal.Dashboard;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Location;
+using Six.Scs.Test.UI.Massmuation;
+using Six.Scs.Test.UI.Terminal;
+using Six.Scs.Test.UI.Terminal.Dashboard;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Scs.Test.Workflow.Helper;
 using Six.Test.Selenium.WebDriver;
@@ -22,7 +23,7 @@ namespace Six.Scs.Test
             TerminalBuilder terminalBuilder)
         {
             Location.Open(location);
-            View.Location.View.TerminalCreate.Click();
+            View.TerminalCreate.Click();
 
             terminalBuilder.Create();
             terminalBuilder.Check();

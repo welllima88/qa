@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
 using Six.Scs.Test.Factory;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Administration.SimCard;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
 
 namespace Six.Scs.Test
 {
@@ -36,13 +37,13 @@ namespace Six.Scs.Test
 
         public static void Check(Model.SimCard simCard)
         {
-            Assert.AreEqual(simCard.NetProvider, View.Administration.SimCard.View.NetProvider);
-            Assert.AreEqual(simCard.SimCardNumber, View.Administration.SimCard.View.SimCardNumber);
-            Assert.AreEqual(simCard.MobileNumber, View.Administration.SimCard.View.MobileNumber);
-            Assert.AreEqual(simCard.Pin, View.Administration.SimCard.View.Pin);
-            Assert.AreEqual(simCard.Puk, View.Administration.SimCard.View.Puk);
-            Assert.AreEqual(simCard.Status, View.Administration.SimCard.View.Status);
-            Assert.AreEqual(simCard.TerminalId, View.Administration.SimCard.View.TerminalId);
+            Assert.AreEqual(simCard.NetProvider, View.NetProvider);
+            Assert.AreEqual(simCard.SimCardNumber, View.SimCardNumber);
+            Assert.AreEqual(simCard.MobileNumber, View.MobileNumber);
+            Assert.AreEqual(simCard.Pin, View.Pin);
+            Assert.AreEqual(simCard.Puk, View.Puk);
+            Assert.AreEqual(simCard.Status, View.Status);
+            Assert.AreEqual(simCard.TerminalId, View.TerminalId);
         }
 
         public static Model.SimCard Lock(Model.SimCard sim)

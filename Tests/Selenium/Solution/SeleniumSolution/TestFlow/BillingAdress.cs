@@ -2,6 +2,7 @@ using System;
 using NUnit.Framework;
 using Six.Scs.Test.Helper;
 using Six.Scs.Test.Model;
+using Six.Scs.Test.UI.Location.BillingAddress;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium;
 
@@ -27,23 +28,23 @@ namespace Six.Scs.Test
         {
             Verify.With(new Action[]
             {
-                () => Assert.AreEqual(b.CompanyName, View.Location.BillingAddress.View.CompanyName),
+                () => Assert.AreEqual(b.CompanyName, View.CompanyName),
                 () =>
                     StringAssert.IsMatch(TestRegExpPatterns.SbsDebitorNo,
-                        View.Location.BillingAddress.View.SbsDebitNumber),
-                () => Assert.AreEqual(b.Adress.StreetNo, View.Location.BillingAddress.View.StreetNo),
-                () => Assert.AreEqual(b.Adress.Po, View.Location.BillingAddress.View.Po),
-                () => Assert.AreEqual(b.Adress.Zip, View.Location.BillingAddress.View.Zip),
-                () => Assert.AreEqual(b.Adress.City, View.Location.BillingAddress.View.City),
-                () => StringAssert.Contains(b.Adress.Region, View.Location.BillingAddress.View.Region),
-                () => Assert.AreEqual(b.Adress.AdressAddition, View.Location.BillingAddress.View.AdressAddition),
-                () => Assert.AreEqual(b.Contact.Language, View.Location.BillingAddress.View.Language),
-                () => Assert.AreEqual(b.Adress.Country, View.Location.BillingAddress.View.Country),
-                () => Assert.AreEqual(b.Contact.Email, View.Location.BillingAddress.View.Email),
-                () => StringAssert.Contains(b.Contact.Telephone, View.Location.BillingAddress.View.Telephone),
-                () => StringAssert.Contains(b.Contact.Mobile, View.Location.BillingAddress.View.Mobile),
-                () => StringAssert.Contains(b.Contact.Fax, View.Location.BillingAddress.View.Fax),
-                () => Assert.AreEqual(b.Contact.Web, View.Location.BillingAddress.View.Web)
+                        View.SbsDebitNumber),
+                () => Assert.AreEqual(b.Adress.StreetNo, View.StreetNo),
+                () => Assert.AreEqual(b.Adress.Po, View.Po),
+                () => Assert.AreEqual(b.Adress.Zip, View.Zip),
+                () => Assert.AreEqual(b.Adress.City, View.City),
+                () => StringAssert.Contains(b.Adress.Region, View.Region),
+                () => Assert.AreEqual(b.Adress.AdressAddition, View.AdressAddition),
+                () => Assert.AreEqual(b.Contact.Language, View.Language),
+                () => Assert.AreEqual(b.Adress.Country, View.Country),
+                () => Assert.AreEqual(b.Contact.Email, View.Email),
+                () => StringAssert.Contains(b.Contact.Telephone, View.Telephone),
+                () => StringAssert.Contains(b.Contact.Mobile, View.Mobile),
+                () => StringAssert.Contains(b.Contact.Fax, View.Fax),
+                () => Assert.AreEqual(b.Contact.Web, View.Web)
             }).Check();
         }
 

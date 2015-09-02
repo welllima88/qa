@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using Six.Scs.Test.View.Terminal;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Terminal.Ep2

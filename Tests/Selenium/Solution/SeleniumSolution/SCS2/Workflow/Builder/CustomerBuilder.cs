@@ -1,5 +1,6 @@
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Common.Menu;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.Customer;
 
 namespace Six.Scs.Test.Workflow.Builder
 {
@@ -33,7 +34,7 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private static void SaveButton()
         {
-            View.Customer.Edit.SaveButton.Click();
+            UI.Customer.Edit.SaveButton.Click();
         }
 
         protected void ClickCreate()
@@ -43,50 +44,50 @@ namespace Six.Scs.Test.Workflow.Builder
 
         private void ClickEdit()
         {
-            View.Customer.View.CustomerEdit.Click();
+            View.CustomerEdit.Click();
         }
 
         protected abstract void EditCustomerData();
 
         protected virtual void ReadInfo()
         {
-            Customer.CustomerNumber = View.Customer.View.CustomerNumber;
+            Customer.CustomerNumber = View.CustomerNumber;
         }
 
         protected static void Confirm()
         {
-            View.Customer.Create.Confirm.Click();
+            UI.Customer.Create.Confirm.Click();
         }
 
         protected void SelectTenant()
         {
-            View.Customer.Create.Supplier = Customer.Supplier;
+            UI.Customer.Create.Supplier = Customer.Supplier;
         }
 
         protected static void CreateButton()
         {
-            View.Customer.Create.SaveButton.Click();
+            UI.Customer.Create.SaveButton.Click();
         }
 
         protected abstract void SetCustomerData();
 
         public void Quit()
         {
-            View.Customer.View.Quit.Click();
-            View.Customer.View.ConfirmQuit.Click();
+            View.Quit.Click();
+            View.ConfirmQuit.Click();
         }
 
         public void Activate()
         {
-            View.Customer.View.Activate.Click();
-            View.Customer.View.ConfirmActivate.Click();
+            View.Activate.Click();
+            View.ConfirmActivate.Click();
         }
 
         public void Move(Customer toCustomer)
         {
-            View.Customer.View.MoveButton.Click();
-            View.Customer.Move.TargetCustomerId = toCustomer.CustomerNumber;
-            View.Customer.Move.Execute();
+            View.MoveButton.Click();
+            UI.Customer.Move.TargetCustomerId = toCustomer.CustomerNumber;
+            UI.Customer.Move.Execute();
         }
     }
 }

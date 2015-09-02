@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Six.Scs.Test.Factory;
+using Six.Scs.Test.UI.Tickets.Trouble;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium.WebDriver;
 
@@ -21,13 +22,13 @@ namespace Six.Scs.Test.Tickets
 
         private static void Check(Model.TroubleTicket troubleTicket)
         {
-            Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
+            Assert.That(View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
         private static void Open(Model.TroubleTicket troubleTicket)
         {
             Search.TicketCanBeFoundById(troubleTicket.Id);
-            Assert.That(View.Tickets.Trouble.View.Header, Is.StringMatching(troubleTicket.Id));
+            Assert.That(View.Header, Is.StringMatching(troubleTicket.Id));
         }
 
         public static void Edit(Model.TroubleTicket troubleTicket)

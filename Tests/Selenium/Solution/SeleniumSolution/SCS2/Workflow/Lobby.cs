@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Six.Scs.Test.View.Common;
+using Six.Scs.Test.UI.Common;
 
 namespace Six.Scs.Test.Workflow
 {

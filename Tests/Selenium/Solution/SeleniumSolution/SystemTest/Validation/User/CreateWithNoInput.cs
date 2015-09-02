@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using NUnit.Framework;
-using Six.Scs.Test.View.Common;
-using Six.Scs.Test.View.Common.Menu;
-using Six.Scs.Test.View.User;
+using Six.Scs.Test.UI.Common;
+using Six.Scs.Test.UI.Common.Menu;
+using Six.Scs.Test.UI.User;
 using Six.Test.Selenium.WebDriver;
-using List = Six.Scs.Test.View.User.List;
+using List = Six.Scs.Test.UI.User.List;
 
 namespace Six.Scs.Test.Validation.User
 {

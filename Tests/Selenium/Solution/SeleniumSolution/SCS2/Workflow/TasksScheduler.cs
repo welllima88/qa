@@ -1,5 +1,5 @@
 using Six.Scs.Test.Model;
-using Six.Scs.Test.View.Administration.TaskScheduler;
+using Six.Scs.Test.UI.Administration.TaskScheduler;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -9,42 +9,42 @@ namespace Six.Scs.Test.Workflow
         {
             List.CreateTask.Click();
 
-            View.Administration.TaskScheduler.Create.TaskName = task.TaskName;
-            View.Administration.TaskScheduler.Create.MachineName = task.MachineName;
-            View.Administration.TaskScheduler.Create.Type = task.Type;
-            View.Administration.TaskScheduler.Create.Module = task.Module;
-            View.Administration.TaskScheduler.Create.Arguments = task.Arguments;
-            View.Administration.TaskScheduler.Create.WorkingDirectory = task.WorkingDirectory;
+            UI.Administration.TaskScheduler.Create.TaskName = task.TaskName;
+            UI.Administration.TaskScheduler.Create.MachineName = task.MachineName;
+            UI.Administration.TaskScheduler.Create.Type = task.Type;
+            UI.Administration.TaskScheduler.Create.Module = task.Module;
+            UI.Administration.TaskScheduler.Create.Arguments = task.Arguments;
+            UI.Administration.TaskScheduler.Create.WorkingDirectory = task.WorkingDirectory;
             // View.Administration.TaskScheduler.Create.NextRun = task.NextRun;
-            View.Administration.TaskScheduler.Create.Interval = task.Interval;
-            View.Administration.TaskScheduler.Create.RetryInterval = task.RetryInterval;
-            View.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
-            View.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
+            UI.Administration.TaskScheduler.Create.Interval = task.Interval;
+            UI.Administration.TaskScheduler.Create.RetryInterval = task.RetryInterval;
+            UI.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
+            UI.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
 
-            View.Administration.TaskScheduler.Create.CreateButton.Click();
+            UI.Administration.TaskScheduler.Create.CreateButton.Click();
         }
 
         public static void Edit(Task task)
         {
-            View.Administration.TaskScheduler.Create.TaskName = task.TaskName;
-            View.Administration.TaskScheduler.Create.MachineName = task.MachineName;
-            View.Administration.TaskScheduler.Create.Type = task.Type;
-            View.Administration.TaskScheduler.Create.Module = task.Module;
-            View.Administration.TaskScheduler.Create.Arguments = task.Arguments;
-            View.Administration.TaskScheduler.Create.WorkingDirectory = task.WorkingDirectory;
+            UI.Administration.TaskScheduler.Create.TaskName = task.TaskName;
+            UI.Administration.TaskScheduler.Create.MachineName = task.MachineName;
+            UI.Administration.TaskScheduler.Create.Type = task.Type;
+            UI.Administration.TaskScheduler.Create.Module = task.Module;
+            UI.Administration.TaskScheduler.Create.Arguments = task.Arguments;
+            UI.Administration.TaskScheduler.Create.WorkingDirectory = task.WorkingDirectory;
             // View.Administration.TaskScheduler.Create.NextRun = task.NextRun;
-            View.Administration.TaskScheduler.Create.Interval = task.Interval;
-            View.Administration.TaskScheduler.Create.RetryInterval = task.RetryInterval;
-            View.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
-            View.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
+            UI.Administration.TaskScheduler.Create.Interval = task.Interval;
+            UI.Administration.TaskScheduler.Create.RetryInterval = task.RetryInterval;
+            UI.Administration.TaskScheduler.Create.MaxRetries = task.MaxRetries;
+            UI.Administration.TaskScheduler.Create.WaitOnShutdown = task.WaitOnShutdown;
 
-            View.Administration.TaskScheduler.Create.SaveButton.Click();
+            UI.Administration.TaskScheduler.Create.SaveButton.Click();
         }
 
         public static void Delete()
         {
-            View.Administration.TaskScheduler.Edit.DeleteButton.Click();
-            View.Administration.TaskScheduler.Edit.DeleteConfirmButton.Click();
+            UI.Administration.TaskScheduler.Edit.DeleteButton.Click();
+            UI.Administration.TaskScheduler.Edit.DeleteConfirmButton.Click();
         }
     }
 }

@@ -1,4 +1,4 @@
-using Six.Scs.Test.View.Common;
+using Six.Scs.Test.UI.Common;
 using Six.Scs.Test.Workflow.Helper;
 
 namespace Six.Scs.Test.Workflow

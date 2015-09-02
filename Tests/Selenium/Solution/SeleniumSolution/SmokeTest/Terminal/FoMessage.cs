@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Terminal.Dashboard;
-using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
+using Six.Scs.Test.UI.Terminal.Dashboard;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Terminal
@@ -20,38 +20,38 @@ namespace Six.Scs.Test.Terminal
         [Test]
         public void Date()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.Date, Is.Not.Empty);
         }
 
         [Test]
         public void Id()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.Id, Is.Not.Empty);
         }
 
         [Test]
         public void JobId()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
-            Assert.That(View.Terminal.FoMessages.FoMessage.JobId, Is.Not.EqualTo("0"));
+            Assert.That(UI.Terminal.FoMessages.FoMessage.JobId, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.JobId, Is.Not.EqualTo("0"));
         }
 
         [Test]
         public void ResponseCode()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.ResponseCode, Is.Not.Empty);
         }
 
         [Test]
         public void TerminalId()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.TerminalId, Is.Not.Empty);
         }
 
         [Test]
         public void UserName()
         {
-            Assert.That(View.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
+            Assert.That(UI.Terminal.FoMessages.FoMessage.UserName, Is.Not.Empty);
         }
     }
 }

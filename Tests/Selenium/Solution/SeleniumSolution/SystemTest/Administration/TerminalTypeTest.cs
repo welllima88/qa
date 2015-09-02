@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Search;
+using Six.Scs.Test.UI.Search;
 
 namespace Six.Scs.Test.Administration
 {

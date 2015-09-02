@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Administration.SoftwareExchange;
+using Six.Scs.Test.UI.Administration.SoftwareExchange;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.SoftwareExchange

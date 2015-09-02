@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NUnit.Framework;
-using Six.Scs.Test.View.Massmuation;
+using Six.Scs.Test.UI.AcquirerExchange;
+using Six.Scs.Test.UI.Massmuation;
 using Six.Scs.Test.Workflow;
 
 namespace Six.Scs.Test.Builder.Acquirer
@@ -17,7 +18,7 @@ namespace Six.Scs.Test.Builder.Acquirer
         protected override Collection<string> SetupBrands()
         {
             var brandIdsWithChange = new Collection<string>();
-            var brands = View.AcquirerExchange.View.AcquirerElement("acq_multipay").Brands();
+            var brands = View.AcquirerElement("acq_multipay").Brands();
             foreach (var brandElement in brands)
             {
                 if (brandElement.Name.Text.Contains("Maestro CH")) continue;
@@ -29,7 +30,7 @@ namespace Six.Scs.Test.Builder.Acquirer
                 brandElement.ContractNumber.TypeText("100007761");
                 brandIdsWithChange.Add(brandElement.Id);
             }
-            brands = View.AcquirerExchange.View.AcquirerElement("acq_amexco").Brands();
+            brands = View.AcquirerElement("acq_amexco").Brands();
             foreach (var brandElement in brands)
             {
                 brandElement.Selected.Set(true);

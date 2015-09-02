@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.View.Search;
-using Six.Scs.Test.View.Terminal.Dashboard;
+using Six.Scs.Test.UI.Terminal.Dashboard;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Terminal
@@ -26,9 +25,9 @@ namespace Six.Scs.Test.Terminal
         public void Empty()
         {
             _terminal = "";
-            View.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
+            UI.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
 
-            Assert.That(View.Terminal.Dashboard.Portlets.QuickOpen.Info, Is.EqualTo("Bitte geben Sie einen Wert ein"));
+            Assert.That(UI.Terminal.Dashboard.Portlets.QuickOpen.Info, Is.EqualTo("Bitte geben Sie einen Wert ein"));
         }
 
         [Test]
@@ -36,7 +35,7 @@ namespace Six.Scs.Test.Terminal
         public void IfsfGroupAndDeviceId()
         {
             _terminal = "06081588";
-            View.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
+            UI.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
             
             Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo(_terminal));
             Assert.That(TerminalInfo.TerminalId, Is.EqualTo("21395264"));
@@ -48,9 +47,9 @@ namespace Six.Scs.Test.Terminal
         public void Ivalid()
         {
             _terminal = "654*-ç";
-            View.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
+            UI.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
 
-            Assert.That(View.Terminal.Dashboard.Portlets.QuickOpen.Info,
+            Assert.That(UI.Terminal.Dashboard.Portlets.QuickOpen.Info,
                 Is.EqualTo(string.Format("Es wurde nichts für die Suchanfrage '{0}' gefunden", _terminal)));
         }
 
@@ -59,7 +58,7 @@ namespace Six.Scs.Test.Terminal
         public void ScsTerminalId()
         {
             _terminal = "30092755";
-            View.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
+            UI.Terminal.Dashboard.Portlets.QuickOpen.OpenTerminalId = _terminal;
 
             Assert.That(TerminalInfo.TerminalId, Is.EqualTo(_terminal));
             Assert.That(TerminalInfo.ExternTerminalId, Is.EqualTo(_terminal));
