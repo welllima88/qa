@@ -13,7 +13,7 @@ namespace Six.Scs.Test
         {
             Customer.Open(customer);
 
-            var billingAddress = Model.Factory.BillingAddress.Create();
+            var billingAddress = Factory.BillingAddress.Create();
             Workflow.BillingAdress.Create(billingAddress);
 
             Check(billingAddress);
@@ -51,7 +51,7 @@ namespace Six.Scs.Test
         {
             Open(billingAddress);
 
-            var billingAddressE = Model.Factory.BillingAddress.Edit();
+            var billingAddressE = Factory.BillingAddress.Edit();
             Workflow.BillingAdress.Edit(billingAddressE);
 
             Check(billingAddressE);

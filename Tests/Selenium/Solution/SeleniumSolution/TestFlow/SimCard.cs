@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 

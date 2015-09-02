@@ -8,7 +8,7 @@ namespace Six.Scs.Test.Administration
     {
         public static Model.Agency Create()
         {
-            var agency = Model.Factory.Agency.Default();
+            var agency = Factory.Agency.Default();
             Workflow.Agency.Create(agency);
 
             Check(agency);
@@ -21,7 +21,7 @@ namespace Six.Scs.Test.Administration
         public static Model.Agency Edit(Model.Agency agency)
         {
             Lobby.OpenLatestElement();
-            agency = Model.Factory.Agency.Edit();
+            agency = Factory.Agency.Edit();
             Workflow.Agency.Edit(agency);
 
             Check(agency);

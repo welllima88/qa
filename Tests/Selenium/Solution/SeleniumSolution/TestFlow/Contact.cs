@@ -18,7 +18,7 @@ namespace Six.Scs.Test
 
         private static Person CreateAndSave()
         {
-            var person = Model.Factory.Person.Create();
+            var person = Factory.Person.Create();
             Workflow.Contact.Create(person);
             Check(person);
             Lobby.OpenLatestElement();
@@ -37,7 +37,7 @@ namespace Six.Scs.Test
         {
             Open(_person);
             ContactMenu.ContactEdit.Click();
-            var person = Model.Factory.Person.Edit();
+            var person = Factory.Person.Edit();
 
             Workflow.Contact.Edit(person);
             Check(person);

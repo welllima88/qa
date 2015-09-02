@@ -46,12 +46,12 @@ namespace Six.Scs.Test
          */
         public static void ExecuteRegressiontest()
         {
-            _customerBuilder = Customer.Create(new Default(Model.Factory.Customer.Create()));
+            _customerBuilder = Customer.Create(new Default(Factory.Customer.Create()));
             Customer.Quit(_customerBuilder);
             Customer.Activate(_customerBuilder);
 
             _locationBuilder = Location.Create(_customerBuilder.Customer,
-                new Builder.Location.Default(Model.Factory.Location.Create()));
+                new Builder.Location.Default(Factory.Location.Create()));
             Location.Quit(_locationBuilder);
             Location.Activate(_locationBuilder);
 
@@ -65,7 +65,7 @@ namespace Six.Scs.Test
 
             _terminalOnLocation1 = Terminal.Create(_locationBuilder.Location, new Yomani().With(contracts));
 
-            Customer.Edit(_customerBuilder.Customer, new Default(Model.Factory.Customer.Edit()));
+            Customer.Edit(_customerBuilder.Customer, new Default(Factory.Customer.Edit()));
 
             Infotext.Create(_customerBuilder.Customer);
             _billingAddress = BillingAdress.Create(_customerBuilder.Customer);
@@ -84,7 +84,7 @@ namespace Six.Scs.Test
             _terminalOnLocation = Terminal.Create(_locationBuilder.Location, new Davinci2());
             Brands.Create(_terminalOnLocation, new Builder.Brand.Ifsf.Default());
             _locationBuilder = Location.Edit(_locationBuilder.Location,
-                new Builder.Location.Default(Model.Factory.Location.Edit()));
+                new Builder.Location.Default(Factory.Location.Edit()));
             Infotext.Create(_terminalOnLocation1);
 
             _personOnLocation = Contact.Create(_locationBuilder.Location);

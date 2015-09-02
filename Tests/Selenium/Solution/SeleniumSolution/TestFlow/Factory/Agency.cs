@@ -1,4 +1,4 @@
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
     public static class Agency
     {
@@ -6,8 +6,8 @@ namespace Six.Scs.Test.Model.Factory
         {
             return new Model.Agency
             {
-                Name = "SYR Agency " + Factory.GenerateTestId(),
-                DisplayName = "SYR Agency Display" + Factory.GenerateTestId(),
+                Name = "SYR Agency " + Base.GenerateTestId(),
+                DisplayName = "SYR Agency Display" + Base.GenerateTestId(),
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
                 Supplier = "Alle Fremdhersteller",
@@ -20,8 +20,8 @@ namespace Six.Scs.Test.Model.Factory
         {
             return new Model.Agency
             {
-                Name = "SYR Agency E" + Factory.GenerateTestId(),
-                DisplayName = "SYR Agency D/E" + Factory.GenerateTestId(),
+                Name = "SYR Agency E" + Base.GenerateTestId(),
+                DisplayName = "SYR Agency D/E" + Base.GenerateTestId(),
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
                 Supplier = "SIX Payment Services AG",

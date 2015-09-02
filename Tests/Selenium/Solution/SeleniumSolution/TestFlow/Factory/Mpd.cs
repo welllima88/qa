@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public class Mpd
     {
@@ -8,7 +8,7 @@
             {
                 Adress = "Adress",
                 Port = "Port",
-                Description = "SYR MPD" + Factory.GenerateTestId()
+                Description = "SYR MPD" + Base.GenerateTestId()
             };
         }
 
@@ -18,7 +18,7 @@
             {
                 Adress = "Adress Edit",
                 Port = "Port E",
-                Description = "SYR MPD" + Factory.GenerateTestId()
+                Description = "SYR MPD" + Base.GenerateTestId()
             };
         }
     }

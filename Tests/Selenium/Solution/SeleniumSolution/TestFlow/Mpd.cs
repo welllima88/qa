@@ -9,7 +9,7 @@ namespace Six.Scs.Test
         {
             Customer.Open(customer);
 
-            var mpd = Model.Factory.Mpd.Create();
+            var mpd = Factory.Mpd.Create();
             Workflow.Mpd.Create(mpd);
             Check(mpd);
 
@@ -21,7 +21,7 @@ namespace Six.Scs.Test
         public static Model.Mpd Edit(Model.Mpd _mpd)
         {
             Open(_mpd);
-            var mpd = Model.Factory.Mpd.Edit();
+            var mpd = Factory.Mpd.Edit();
             mpd.Id = _mpd.Id; // keep Id
 
             Workflow.Mpd.Edit(mpd);

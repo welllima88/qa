@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public class Customer
     {
@@ -9,7 +9,7 @@
                 Supplier = "SIX Payment Services AG",
                 SbsCurrency = "Euro",
                 SbsBillingTenant = "SIX Payment Services (Europe)",
-                CustomerName = "SYR Customer Create" + Factory.GenerateTestId(),
+                CustomerName = "SYR Customer Create" + Base.GenerateTestId(),
                 CategoryCode = "3364: AGENCY RENT-A-CAR",
                 SupportContract = "ServicePaket Top Account - Störungsbehebung vor Ort Mo-So 5h",
                 CashIntegrator = "Wincor Nixdorf AG, Brüttisellen",
@@ -23,7 +23,7 @@
         {
             return new Model.Customer
             {
-                CustomerName = "SYR Customer Edit" + Factory.GenerateTestId(),
+                CustomerName = "SYR Customer Edit" + Base.GenerateTestId(),
                 SbsSegment = "01_CH",
                 Location = Location.Edit()
             };

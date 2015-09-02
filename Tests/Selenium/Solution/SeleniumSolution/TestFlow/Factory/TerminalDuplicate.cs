@@ -1,4 +1,4 @@
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
     public class TerminalDuplicate
     {
@@ -7,8 +7,8 @@ namespace Six.Scs.Test.Model.Factory
             return new Model.TerminalDuplicate
             {
                 NumberOfTerminals = "2",
-                InstallMessage = "SYR Install Message " + Factory.GenerateTestId(),
-                InformationText = "SYR Infotext " + Factory.GenerateTestId(),
+                InstallMessage = "SYR Install Message " + Base.GenerateTestId(),
+                InformationText = "SYR Infotext " + Base.GenerateTestId(),
                 CopyPassword = true,
                 MessageForAcquirers = true
             };

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Six.Scs.Test.Model.Brand;
 
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
     public static class Brand
     {

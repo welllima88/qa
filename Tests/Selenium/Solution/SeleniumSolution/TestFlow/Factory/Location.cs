@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public class Location
     {
@@ -8,7 +8,7 @@
             {
                 Adress = Adress.Create(),
                 Contact = Contact.Create(),
-                CompanyName = "SYR Location Create" + Factory.GenerateTestId(),
+                CompanyName = "SYR Location Create" + Base.GenerateTestId(),
                 SapNumber = "4444",
                 Agency = "B05 Leiser Peter",
                 Ep2MerchantId = ""
@@ -21,7 +21,7 @@
             {
                 Adress = Adress.Edit(),
                 Contact = Contact.Edit(),
-                CompanyName = "SYR Location Edit" + Factory.GenerateTestId(),
+                CompanyName = "SYR Location Edit" + Base.GenerateTestId(),
                 SapNumber = "1234",
                 Agency = "SIX Payment Services (Europe)"
             };

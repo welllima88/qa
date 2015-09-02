@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Common;
 using Six.Scs.Test.View.Common.Menu;
 using Six.Scs.Test.View.Massmuation;
@@ -90,7 +90,7 @@ namespace Six.Scs.Test
         public static void Quit(Model.Terminal terminal)
         {
             Open(terminal);
-            var info = Workflow.Terminal.Quit();
+            var info = Workflow.Terminal.Quit(Base.GenerateTestId());
             const int number = 5;
             var tries = new Try(number);
 

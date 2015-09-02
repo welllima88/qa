@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium.WebDriver;
 

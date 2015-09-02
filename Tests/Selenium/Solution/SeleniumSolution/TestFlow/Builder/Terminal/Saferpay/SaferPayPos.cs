@@ -1,6 +1,5 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
@@ -32,8 +31,8 @@ namespace Six.Scs.Test.Builder.Terminal.Saferpay
 
         protected override void SetBasics()
         {
-            SaferPay.Reason = "E-Link" + Factory.GenerateTestId();
-            SaferPay.ECommerceIndicator = "E-Indicator" + Factory.GenerateTestId();
+            SaferPay.Reason = "E-Link" + Factory.Base.GenerateTestId();
+            SaferPay.ECommerceIndicator = "E-Indicator" + Factory.Base.GenerateTestId();
         }
 
         protected override void SetDetails()

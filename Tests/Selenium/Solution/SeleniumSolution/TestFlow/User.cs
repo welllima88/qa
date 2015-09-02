@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NUnit.Framework;
+using Six.Scs.Test.Factory;
 using Six.Scs.Test.Model;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Search;
 using Six.Scs.Test.View.User;
 using Six.Scs.Test.Workflow;
@@ -15,7 +15,7 @@ namespace Six.Scs.Test
         public static Model.User Create(Model.Customer customer)
         {
             Customer.Open(customer);
-            var user = Model.Factory.User.Create();
+            var user = Factory.User.Create();
             Workflow.User.Create(user);
 
             Check(user);
@@ -28,7 +28,7 @@ namespace Six.Scs.Test
         {
             Open(user);
 
-            var _user = Model.Factory.User.Create();
+            var _user = Factory.User.Create();
             _user.UserName = user.UserName;
             _user.Password = user.Password; // copy password from creation
 

@@ -24,8 +24,8 @@ namespace Six.Scs.Test.Saferpay
          Category("Saferpay"), Category("ELINK")]
         public static void ElinkCustomerStructure()
         {
-            _saferpayCustomer = Customer.Create(new Default(Model.Factory.Customer.Create()));
-            _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default(Model.Factory.Location.Create()));
+            _saferpayCustomer = Customer.Create(new Default(Factory.Customer.Create()));
+            _saferpayLocation = Location.Create(_saferpayCustomer.Customer, new Builder.Location.Default(Factory.Location.Create()));
             _saferpayTerminal = Terminal.Create(_saferpayLocation.Location,
                 new SaferPayPos().With(new Builder.Brand.ELink.Default()));
             // TODO new Quit for all terminals is only active for Saferpay by now wait until it is system wide, then enable both:

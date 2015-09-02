@@ -1,4 +1,4 @@
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
     public class TerminalReplace
     {
@@ -11,8 +11,8 @@ namespace Six.Scs.Test.Model.Factory
                 SalesContract = "Kaufvertrag",
                 SupportContract = "ServicePaket Light",
                 Contactless = "contact and contactless",
-                InstallationRemark = "Install remark " + Factory.GenerateTestId(),
-                Infotext = "Infotext " + Factory.GenerateTestId(),
+                InstallationRemark = "Install remark " + Base.GenerateTestId(),
+                Infotext = "Infotext " + Base.GenerateTestId(),
                 DeliveryDate = "11.11.2022",
                 SendNotifiaction = false
             };

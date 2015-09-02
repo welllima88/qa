@@ -1,6 +1,5 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
@@ -12,7 +11,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
     {
         public Yomani()
         {
-            Terminal = Model.Factory.Terminal.Yomani();
+            Terminal = Factory.Terminal.Yomani();
         }
 
         public override void Edit()
@@ -47,7 +46,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
             ConfigDetailsCreate.InstallType = "Installation";
             ConfigDetailsCreate.Contract = "Mietvertrag";
             ConfigDetailsCreate.SupportContract = "ServicePaket Pro+ - Störungsbehebung vor Ort Mo-So 5h";
-            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.GenerateTestId();
+            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.Base.GenerateTestId();
             ConfigDetailsCreate.EcrInterface = "MPD over IP";
             ConfigDetailsCreate.EcrText = "SYR with MPD over IP";
             ConfigDetailsCreate.MinimumContractPeriodDate = "20.02.2020";

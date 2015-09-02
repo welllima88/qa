@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
-    public static class Factory
+    public static class Base
     {
         public static string GenerateTestId()
         {

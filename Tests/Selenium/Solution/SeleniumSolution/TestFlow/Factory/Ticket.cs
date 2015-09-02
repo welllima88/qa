@@ -1,4 +1,6 @@
-namespace Six.Scs.Test.Model.Factory
+using Six.Scs.Test.Model;
+
+namespace Six.Scs.Test.Factory
 {
     public class Ticket
     {
@@ -16,8 +18,8 @@ namespace Six.Scs.Test.Model.Factory
                 Mobile = "+32 - 58 399 6237",
                 Category = "Probleme Display",
                 Solutions = new[] {"", ""},
-                Description = "SYR Trouble Ticket" + Factory.GenerateTestId(),
-                ExternReferenceId = Factory.GenerateTestId()
+                Description = "SYR Trouble Ticket" + Base.GenerateTestId(),
+                ExternReferenceId = Base.GenerateTestId()
             };
         }
     }

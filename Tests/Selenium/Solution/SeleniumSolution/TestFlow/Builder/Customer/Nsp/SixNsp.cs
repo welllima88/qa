@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.Workflow.Builder;
 
 namespace Six.Scs.Test.Builder.Customer.Nsp
@@ -12,7 +11,7 @@ namespace Six.Scs.Test.Builder.Customer.Nsp
 
         public override void Create()
         {
-            Customer.CustomerName = "SYR AUTO NSP" + Factory.GenerateTestId();
+            Customer.CustomerName = "SYR AUTO NSP" + Factory.Base.GenerateTestId();
             Customer.Supplier = "SIX Payment Services (NSP)";
 
             ClickCreate();

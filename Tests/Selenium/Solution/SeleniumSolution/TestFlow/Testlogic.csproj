@@ -74,6 +74,27 @@
     <Compile Include="Builder\Terminal\Saferpay\SaferPayPos.cs" />
     <Compile Include="Builder\Customer\Nsp\SixNsp.cs" />
     <Compile Include="Builder\Customer\Six\Default.cs" />
+    <Compile Include="Factory\Adress.cs" />
+    <Compile Include="Factory\Agency.cs" />
+    <Compile Include="Factory\BillingAddress.cs" />
+    <Compile Include="Factory\Brand.cs" />
+    <Compile Include="Factory\Contact.cs" />
+    <Compile Include="Factory\Contract.cs" />
+    <Compile Include="Factory\Currency.cs" />
+    <Compile Include="Factory\Customer.cs" />
+    <Compile Include="Factory\Base.cs" />
+    <Compile Include="Factory\Location.cs" />
+    <Compile Include="Factory\Mpd.cs" />
+    <Compile Include="Factory\Person.cs" />
+    <Compile Include="Factory\Services.cs" />
+    <Compile Include="Factory\Simcard.cs" />
+    <Compile Include="Factory\Task.cs" />
+    <Compile Include="Factory\Terminal.cs" />
+    <Compile Include="Factory\TerminalDuplicate.cs" />
+    <Compile Include="Factory\TerminalReplace.cs" />
+    <Compile Include="Factory\TerminalTyped.cs" />
+    <Compile Include="Factory\Ticket.cs" />
+    <Compile Include="Factory\User.cs" />
     <Compile Include="Helper\Verify.cs" />
     <Compile Include="Massmutation\BusinessTemplate.cs" />
     <Compile Include="Repository\Customer.cs" />
@@ -107,9 +128,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factory\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -1,6 +1,5 @@
 ﻿using System;
 using NUnit.Framework;
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
@@ -12,7 +11,7 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
     {
         public Xentissimo()
         {
-            Terminal = Model.Factory.Terminal.Xentissimo();
+            Terminal = Factory.Terminal.Xentissimo();
         }
 
         public override void Edit()
@@ -36,12 +35,12 @@ namespace Six.Scs.Test.Builder.Terminal.Ep2
 
         protected override void SetBasics()
         {
-            ConfigCreate.Infotext = "Infotext SYR Terminal - xentissimo MOBILE WLAN, TCP/IP " + Factory.GenerateTestId();
+            ConfigCreate.Infotext = "Infotext SYR Terminal - xentissimo MOBILE WLAN, TCP/IP " + Factory.Base.GenerateTestId();
         }
 
         protected override void SetDetails()
         {
-            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.GenerateTestId();
+            ConfigDetailsCreate.InstallRemark = "Install SYR Auto " + Factory.Base.GenerateTestId();
             ConfigDetailsCreate.MinimumContractPeriodDate = "20.02.2020";
         }
     }

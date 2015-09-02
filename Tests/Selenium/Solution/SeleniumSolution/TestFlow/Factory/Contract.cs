@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public class Contract
     {

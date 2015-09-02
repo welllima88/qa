@@ -1,4 +1,4 @@
-namespace Six.Scs.Test.Model.Factory
+namespace Six.Scs.Test.Factory
 {
     public class User
     {
@@ -6,9 +6,9 @@ namespace Six.Scs.Test.Model.Factory
         {
             return new Model.User
             {
-                UserName = "s" + Factory.GenerateTestId(),
+                UserName = "s" + Base.GenerateTestId(),
                 Salutation = "Herr",
-                FirstName = "SYR User" + Factory.GenerateTestId(),
+                FirstName = "SYR User" + Base.GenerateTestId(),
                 Name = "SYR User",
                 Language = "Deutsch [de]",
                 Email = "marc.siegmund@six-group.com",

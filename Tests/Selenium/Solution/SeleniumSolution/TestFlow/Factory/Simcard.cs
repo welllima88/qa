@@ -1,13 +1,13 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public static class Simcard
     {
-        public static SimCard Create()
+        public static Model.SimCard Create()
         {
-            return new SimCard
+            return new Model.SimCard
             {
                 NetProvider = "SIX via Swisscom",
-                SimCardNumber = "8" + Factory.GenerateTestId(),
+                SimCardNumber = "8" + Base.GenerateTestId(),
                 MobileNumber = "1234567890",
                 Pin = "4321",
                 Puk = "22446688",
@@ -17,16 +17,16 @@
             };
         }
 
-        public static SimCard Edit()
+        public static Model.SimCard Edit()
         {
-            return new SimCard
+            return new Model.SimCard
             {
                 MobileNumber = "0123456789",
                 NetProvider = "SIX via Swisscom",
                 Pin = "0123",
                 Puk = "01234567",
                 Region = "Schweiz",
-                SimCardNumber = "9" + Factory.GenerateTestId(),
+                SimCardNumber = "9" + Base.GenerateTestId(),
                 Usage = "K - Kauf",
                 Status = true,
                 TerminalId = ""

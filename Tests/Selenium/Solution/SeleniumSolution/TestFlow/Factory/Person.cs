@@ -1,4 +1,4 @@
-﻿namespace Six.Scs.Test.Model.Factory
+﻿namespace Six.Scs.Test.Factory
 {
     public class Person
     {
@@ -6,7 +6,7 @@
         {
             return new Model.Person
             {
-                FirstName = "SYR Contact" + Factory.GenerateTestId(),
+                FirstName = "SYR Contact" + Base.GenerateTestId(),
                 Name = "SYR - Create",
                 Salutation = "Herr",
                 Adress = Adress.Create(),
@@ -18,7 +18,7 @@
         {
             return new Model.Person
             {
-                FirstName = "SYR Contact" + Factory.GenerateTestId(),
+                FirstName = "SYR Contact" + Base.GenerateTestId(),
                 Name = "SYR - Edit",
                 Salutation = "Frau",
                 Adress = Adress.Edit(),

@@ -1,4 +1,3 @@
-using Six.Scs.Test.Model.Factory;
 using Six.Scs.Test.View.Terminal;
 using Six.Scs.Test.View.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
@@ -27,12 +26,12 @@ namespace Six.Scs.Test.Workflow
             View.Terminal.Duplicate.View.DulpicateButton.Click();
         }
 
-        public static string Quit()
+        public static string Quit(string remark)
         {
             SalesContract.Quit.Click();
             // Selenium.Terminal.Quit.TerminalQuit.State = "";
             // Selenium.Terminal.Quit.TerminalQuit.Delivery = "";
-            var reason = "SYR QUIT Terminal " + Factory.GenerateTestId();
+            var reason = "SYR QUIT Terminal " + remark;
             View.Terminal.Quit.Quit.Reason = reason;
             View.Terminal.Quit.Quit.Save();
             return reason;
