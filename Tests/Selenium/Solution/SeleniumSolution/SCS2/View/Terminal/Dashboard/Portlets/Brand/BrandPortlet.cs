@@ -75,7 +75,7 @@ namespace Six.Scs.Test.View.Terminal.Dashboard.Portlets.Brand
 
         public static void ExpandAll()
         {
-            WebDriver.FindAdaptedElement(By.CssSelector(PortletLocator + " span[title='expand']")).Click();
+            WebDriver.FindAdaptedElement(By.CssSelector("div#dashboarditems div[id$='BrandPortlet'] span[title='expand']")).Click();
         }
     }
 }
