@@ -27,14 +27,14 @@ namespace Six.Scs.Test.View.AcquirerExchange
             {
                 var brand = new Brand();
                 brand.Id = brandElement.GetAttribute("id");
-                brand.Selected = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(1)"))).CheckBox();
-                brand.Name = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(2)")));
-                brand.NewBrand = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(3)"))).Selector();
+                brand.Selected = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(1) input"))).CheckBox();
+                brand.Name = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(1)")));
+                brand.NewBrand = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(2) > select"))).Selector();
                 brand.DccProvider =
-                    new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(4)"))).Selector();
-                brand.Mcc = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(5)"))).Selector();
+                    new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(3) > select"))).Selector();
+                brand.Mcc = new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(4) > select"))).Selector();
                 brand.ContractNumber =
-                    new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(6)"))).TextField();
+                    new WebElement(brandElement.FindElement(By.CssSelector("td:nth-child(5) > input"))).TextField();
                 brands.Add(brand);
             }
             return brands;
