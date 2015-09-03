@@ -57,5 +57,12 @@ namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
             var w = WebDriver.WebDriverWait();
             w.Until(d => d.FindElement(By.CssSelector(cssLocator + ".jstree-closed>ins"))).Click();
         }
+
+        public static void ExpandAll()
+        {
+            WebDriver.FindAdaptedElement(
+                By.CssSelector(string.Format("div#dashboarditems div[id$='{0}'] span[title='expand']", PortletId)))
+                .Click();
+        }
     }
 }
