@@ -113,6 +113,7 @@ namespace Six.Scs.Test
             contracts.Check();
 
             User.Delete(_user);
+            BillingAdress.Delete(_billingAddress);
 
             Terminal.Replace(_terminalOnLocation2);
             Acquirer.Exchange(_terminalOnLocation2, new Builder.Acquirer.SixEurope());
