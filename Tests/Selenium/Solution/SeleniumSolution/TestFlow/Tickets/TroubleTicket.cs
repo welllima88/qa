@@ -2,6 +2,7 @@ using NUnit.Framework;
 using Six.Scs.Test.Factory;
 using Six.Scs.Test.UI.Tickets.Trouble;
 using Six.Scs.Test.Workflow;
+using Six.Scs.Test.Workflow.Ticket;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Tickets
