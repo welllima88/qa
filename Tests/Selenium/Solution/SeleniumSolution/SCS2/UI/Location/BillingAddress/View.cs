@@ -92,11 +92,21 @@ namespace Six.Scs.Test.UI.Location.BillingAddress
             get { return WebDriver.FindAdaptedElement(By.Id("Region")).Text; }
         }
 
+        public static IWebElement DeleteButton
+        {
+            get { return WebDriver.FindAdaptedElement(By.Id("delete")); }
+        }
+
         public static IWebElement List(Model.BillingAddress billingAddress)
         {
             return
-                WebDriver.FindAdaptedElements(By.Id("td#content table>tbody>tr>td>a"))
+                WebDriver.FindAdaptedElements(By.CssSelector("td#content table>tbody>tr>td>a"))
                     .FirstOrDefault(ba => ba.Text.Contains(billingAddress.CompanyName));
+        }
+
+        public static void DeleteDialogConfirm()
+        {
+            WebDriver.FindAdaptedElement(By.CssSelector("div.modal-content button#delete")).Click();
         }
     }
 }
