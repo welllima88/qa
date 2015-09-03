@@ -5,7 +5,7 @@ using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Support
 {
-    public class TroubleTickets : PortletViewBase
+    public class TroubleTickets : PortletBase
     {
         private const string _prefix = "div#frame_SupportTicketPortlet ";
 

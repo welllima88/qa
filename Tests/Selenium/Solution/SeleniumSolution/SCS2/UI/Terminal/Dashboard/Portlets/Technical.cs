@@ -3,13 +3,13 @@ using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public class TechnicalView : PortletViewBase
+    public class Technical : PortletBase
     {
         //baseUrl + "TerminalTechnicalViewpointPortlet?TerminalId=21011402" + "&DontCacheRequest=cbc996ae-865f-b7cd-358a-2c0e769f53dc"
 
         public const string EcrLocator = "li#PosInterface";
 
-        public TechnicalView()
+        public Technical()
         {
             PortletId = "div#frame_TerminalTechnicalViewpointPortlet ";
         }

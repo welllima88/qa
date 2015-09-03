@@ -4,7 +4,7 @@ using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public class SalesContract : PortletViewBase
+    public class SalesContract : PortletBase
     {
         public SalesContract()
         {

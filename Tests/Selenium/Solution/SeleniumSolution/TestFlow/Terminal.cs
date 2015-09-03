@@ -72,7 +72,7 @@ namespace Six.Scs.Test
         public static void Open(Model.Terminal terminal)
         {
             Search.TerminalCanBeFoundById(terminal.Id);
-            PortletViewBase.AllHasBeenLoaded();
+            PortletBase.AllHasBeenLoaded();
         }
 
         public static void Quit(Model.Terminal terminal)
@@ -102,10 +102,10 @@ namespace Six.Scs.Test
         {
             Open(terminal);
             Workflow.Terminal.Assign(mpd);
-            PortletViewBase.AllHasBeenLoaded();
-            PortletViewBase.OpenTree(TechnicalView.EcrLocator);
-            StringAssert.Contains(mpd.Id, TechnicalView.PrimaryMpd);
-            StringAssert.Contains(mpd.Id, TechnicalView.SecondaryMpd);
+            PortletBase.AllHasBeenLoaded();
+            PortletBase.OpenTree(Technical.EcrLocator);
+            StringAssert.Contains(mpd.Id, Technical.PrimaryMpd);
+            StringAssert.Contains(mpd.Id, Technical.SecondaryMpd);
         }
 
         public static void Replace(Model.Terminal terminal)

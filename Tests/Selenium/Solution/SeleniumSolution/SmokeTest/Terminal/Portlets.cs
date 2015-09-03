@@ -45,7 +45,7 @@ namespace Six.Scs.Test.Terminal
         [Category("TechnicalView")]
         public void TechnicalView()
         {
-            Assert.That(UI.Terminal.Dashboard.Portlets.TechnicalView.TerminalId, Is.Not.Empty);
+            Assert.That(UI.Terminal.Dashboard.Portlets.Technical.TerminalId, Is.Not.Empty);
         }
 
         [Test]

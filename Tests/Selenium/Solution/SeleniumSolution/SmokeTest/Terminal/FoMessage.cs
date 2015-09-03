@@ -13,7 +13,7 @@ namespace Six.Scs.Test.Terminal
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=30092755");
 
-            PortletViewBase.AllHasBeenLoaded();
+            PortletBase.AllHasBeenLoaded();
             Activity.FoMessages.Click();
         }
 

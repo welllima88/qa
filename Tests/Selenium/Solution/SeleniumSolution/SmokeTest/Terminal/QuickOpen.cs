@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.Test.UI.Terminal.Dashboard;
+using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Test.Selenium.WebDriver;
 
 namespace Six.Scs.Test.Terminal
@@ -15,7 +16,7 @@ namespace Six.Scs.Test.Terminal
         public static void ClassInit()
         {
             TestDirector.Navigate("TerminalDashboard/?TerminalId=30092755");
-            PortletViewBase.AllHasBeenLoaded();
+            PortletBase.AllHasBeenLoaded();
         }
 
         private static string _terminal;

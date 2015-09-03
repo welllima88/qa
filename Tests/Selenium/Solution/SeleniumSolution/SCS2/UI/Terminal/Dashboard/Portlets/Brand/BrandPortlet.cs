@@ -5,7 +5,7 @@ using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Brand
 {
-    public class BrandPortlet : PortletViewBase
+    public class BrandPortlet : PortletBase
     {
         private const string PortletLocator = ""; //"div[id*='BrandPortlet']";
         private const string ContractTreeLocator = "div[id*='ContractTree']>ul";

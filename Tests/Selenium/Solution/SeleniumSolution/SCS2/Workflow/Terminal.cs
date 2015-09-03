@@ -40,7 +40,7 @@ namespace Six.Scs.Test.Workflow
 
         public static void Assign(Model.Mpd mpd)
         {
-            TechnicalView.MpdAssign.Click();
+            Technical.MpdAssign.Click();
 
             UI.Mpd.Assign.Primary = mpd.Id;
             UI.Mpd.Assign.Secondary = mpd.Id;

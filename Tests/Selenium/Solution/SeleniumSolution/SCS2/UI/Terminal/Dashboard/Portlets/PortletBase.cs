@@ -3,14 +3,14 @@ using OpenQA.Selenium.Support.UI;
 using Six.Test.Selenium.WebDriver.WebElements;
 using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
-namespace Six.Scs.Test.UI.Terminal.Dashboard
+namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public abstract class PortletViewBase : WebObject
+    public abstract class PortletBase : WebObject
     {
         public static readonly WebDriverWait WebDriverWait = WebDriver.WebDriverWait();
         protected static string PortletId;
 
-        protected PortletViewBase()
+        protected PortletBase()
         {
             Suffix = " div.portletKeyValueRow div.treeGridValueCol";
             Prefix = "tbody div#dashboarditems div ";

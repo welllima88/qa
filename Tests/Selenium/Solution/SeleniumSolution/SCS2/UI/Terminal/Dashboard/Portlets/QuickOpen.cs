@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public class QuickOpen : PortletViewBase
+    public class QuickOpen : PortletBase
     {
         // PortletId = "div#frame_TerminalIdSearchPortlet ";
 

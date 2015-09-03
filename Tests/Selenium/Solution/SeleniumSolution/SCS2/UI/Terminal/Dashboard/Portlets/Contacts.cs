@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public class Contacts : PortletViewBase
+    public class Contacts : PortletBase
     {
         public Contacts()
         {

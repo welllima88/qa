@@ -166,6 +166,7 @@
     <Compile Include="UI\Environments\Dev.cs" />
     <Compile Include="UI\Search\SearchResult.cs" />
     <Compile Include="UI\Search\Result.cs" />
+    <Compile Include="UI\Terminal\Dashboard\Portlets\PortletBase.cs" />
     <Compile Include="UI\Terminal\SaferPay.cs" />
     <Compile Include="UI\Terminal\ContactlessCapability.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\QuickOpen.cs" />
@@ -180,9 +181,8 @@
     <Compile Include="UI\Terminal\Dashboard\LocationInfo.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Support\Priority.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Activity.cs" />
-    <Compile Include="UI\Terminal\Dashboard\PortletViewBase.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\SalesContract.cs" />
-    <Compile Include="UI\Terminal\Dashboard\Portlets\TechnicalView.cs" />
+    <Compile Include="UI\Terminal\Dashboard\Portlets\Technical.cs" />
     <Compile Include="UI\Terminal\Dashboard\TerminalInfo.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\TerminalTexts.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Support\TroubleTickets.cs" />
@@ -237,7 +237,8 @@
     <Compile Include="Workflow\AcquirerExchange.cs" />
     <Compile Include="Workflow\Terminal.cs" />
     <Compile Include="Workflow\TerminalType.cs" />
-    <Compile Include="Workflow\Trouble.cs" />
+    <Compile Include="Workflow\Ticket\Process.cs" />
+    <Compile Include="Workflow\Ticket\Trouble.cs" />
     <Compile Include="Workflow\User.cs" />
   </ItemGroup>
   <ItemGroup>

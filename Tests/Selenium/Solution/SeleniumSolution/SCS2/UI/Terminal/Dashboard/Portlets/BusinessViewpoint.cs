@@ -3,7 +3,7 @@ using IWebElement = Six.Test.Selenium.WebDriver.WebElements.IWebElement;
 
 namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
-    public class BusinessViewpoint : PortletViewBase
+    public class BusinessViewpoint : PortletBase
     {
         public static IWebElement ReceiptHeader
         {
