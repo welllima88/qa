@@ -171,7 +171,7 @@
     <Compile Include="UI\Terminal\ContactlessCapability.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\QuickOpen.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\Acquirer.cs" />
-    <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\BrandContract.cs" />
+    <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\Contract.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\BrandPortlet.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\Pms.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\Brand\ServiceCenter.cs" />
