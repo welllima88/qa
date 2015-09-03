@@ -4,6 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using Six.Scs.Test.Factory;
 using Six.Scs.Test.Helper;
+using Six.Scs.Test.Model;
 using Six.Scs.Test.UI.Common;
 using Six.Scs.Test.UI.Common.Menu;
 using Six.Scs.Test.UI.Location;
@@ -14,13 +15,15 @@ using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Scs.Test.Workflow.Helper;
 using Six.Test.Selenium.WebDriver;
+using TerminalDuplicate = Six.Scs.Test.Factory.TerminalDuplicate;
+using TerminalReplace = Six.Scs.Test.Factory.TerminalReplace;
 
 namespace Six.Scs.Test
 {
     public static class Terminal
     {
         public static Model.Terminal Create(Model.Location location,
-            TerminalBuilder terminalBuilder)
+                                            TerminalBuilder terminalBuilder)
         {
             Location.Open(location);
             View.TerminalCreate.Click();
@@ -125,7 +128,7 @@ namespace Six.Scs.Test
         }
 
         public static void Move(Model.Terminal terminal,
-            Model.Location location)
+                                Model.Location location)
         {
             Open(terminal);
             Workflow.Terminal.Move(location);
@@ -142,6 +145,34 @@ namespace Six.Scs.Test
             Assert.That(Returns.TerminalLink(terminal).Displayed);
             Assert.That(Returns.Deactivate(terminal).Displayed);
             Assert.That(Returns.Cancel(terminal).Displayed);
+        }
+
+        public static void ChangeReceiptHeader(Model.Terminal terminal)
+        {
+            Open(terminal);
+            var a = new ReceiptHeader
+            {
+                Line1 = "Line 1 SYR",
+                Line2 = "Line 2 SYR",
+                Line3 = "Line 3 SYR"
+            };
+            Workflow.Terminal.ChangeReceipt(a);
+
+            Assert.That(BusinessViewpoint.ReceiptHeader.Text, Is.EqualTo(a));
+        }
+
+        public static void ResetReceiptHeader(Model.Terminal terminal, Model.Location location)
+        {
+            Open(terminal);
+            var a = new ReceiptHeader
+            {
+                Line1 = location.CompanyName,
+                Line2 = location.Adress.StreetNo,
+                Line3 = location.Adress.Zip + " " + location.Adress.City
+            };
+            Workflow.Terminal.Reset();
+
+            Assert.That(BusinessViewpoint.ReceiptHeader.Text, Is.EqualTo(a));
         }
     }
 }
