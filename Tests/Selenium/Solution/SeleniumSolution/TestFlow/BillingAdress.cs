@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Six.Scs.Test.Helper;
 using Six.Scs.Test.Model;
 using Six.Scs.Test.UI.Location.BillingAddress;
+using Six.Scs.Test.UI.Search;
 using Six.Scs.Test.Workflow;
 using Six.Test.Selenium;
 
@@ -59,6 +60,17 @@ namespace Six.Scs.Test
             Lobby.OpenLatestElement();
             Check(billingAddressE);
             return billingAddressE;
+        }
+
+        public static void Delete(BillingAddress billingAddress)
+        {
+            Open(billingAddress);
+
+            Workflow.BillingAdress.Delete();
+
+            Workflow.Search.Find(billingAddress.CompanyName);
+            Assert.That(SearchResult.Result(Result.BillingAddress), Is.Not.Null);
+            Assert.That(SearchResult.Result(Result.BillingAddress), Is.Empty);
         }
 
         private static void Open(BillingAddress billingAddress)
