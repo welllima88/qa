@@ -72,6 +72,7 @@
     <Compile Include="Model\Location.cs" />
     <Compile Include="Model\Mpd.cs" />
     <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\ReceiptHeader.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Model\SimCard.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="UI\Search\SearchResult.cs" />
     <Compile Include="UI\Search\Result.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\PortletBase.cs" />
+    <Compile Include="UI\Terminal\ReceiptHeader\Edit.cs" />
     <Compile Include="UI\Terminal\SaferPay.cs" />
     <Compile Include="UI\Terminal\ContactlessCapability.cs" />
     <Compile Include="UI\Terminal\Dashboard\Portlets\QuickOpen.cs" />
