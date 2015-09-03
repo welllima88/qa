@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Six.Scs.Test.Helper;
-using Six.Scs.Test.View.Environments;
+using Six.Scs.Test.UI.Environments;
 using Six.Test.Selenium.Environment;
 using Six.Test.Selenium.WebDriver;
 
