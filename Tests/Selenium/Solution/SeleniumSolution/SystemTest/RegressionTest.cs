@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using Six.Scs.Test.Builder.Acquirer;
 using Six.Scs.Test.Builder.Brand.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ep2;
 using Six.Scs.Test.Builder.Terminal.Ifsf;
 using Six.Scs.Test.Massmutation;
 using Six.Scs.Test.Model;
+using Six.Scs.Test.Tickets;
 using Six.Scs.Test.Workflow.Builder;
 using Six.Test.Selenium.WebDriver;
 using Default = Six.Scs.Test.Builder.Customer.Six.Default;
+using TroubleTicket = Six.Scs.Test.Model.TroubleTicket;
 
 namespace Six.Scs.Test
 {
@@ -118,7 +121,7 @@ namespace Six.Scs.Test
             BillingAdress.Delete(_billingAddress);
 
             Terminal.Replace(_terminalOnLocation2);
-            Acquirer.Exchange(_terminalOnLocation2, new Builder.Acquirer.SixEurope());
+            Acquirer.Exchange(_terminalOnLocation2, new SixEurope());
 
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             // Tickets.TroubleTicket.Edit(_troubleTicket);
