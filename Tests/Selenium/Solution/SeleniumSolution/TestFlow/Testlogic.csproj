@@ -113,6 +113,7 @@
     <Compile Include="Builder\Terminal\Saferpay\Icp.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="Helper\Try.cs" />
+    <Compile Include="Tickets\Process.cs" />
     <Compile Include="Tickets\TroubleTicket.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

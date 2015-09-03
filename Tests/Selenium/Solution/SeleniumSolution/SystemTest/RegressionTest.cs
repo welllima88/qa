@@ -65,6 +65,8 @@ namespace Six.Scs.Test
 
             _terminalOnLocation1 = Terminal.Create(_locationBuilder.Location, new Yomani().With(contracts));
 
+            Process.Activate(_terminalOnLocation1);
+
             _customerBuilder = Customer.Edit(_customerBuilder.Customer, new Default(Factory.Customer.Edit()));
 
             Infotext.Create(_customerBuilder.Customer);
