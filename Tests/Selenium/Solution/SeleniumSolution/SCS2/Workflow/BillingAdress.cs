@@ -59,5 +59,11 @@ namespace Six.Scs.Test.Workflow
 
             UI.Location.BillingAddress.Edit.SaveButton.Click();
         }
+
+        public static void Delete()
+        {
+            View.DeleteButton.Click();
+            View.DeleteDialogConfirm();
+        }
     }
 }
