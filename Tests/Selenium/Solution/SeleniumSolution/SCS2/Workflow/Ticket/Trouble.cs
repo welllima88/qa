@@ -1,8 +1,7 @@
-using System;
 using Six.Scs.Test.Model;
 using Six.Scs.Test.UI.Terminal.Dashboard.Portlets.Support;
 
-namespace Six.Scs.Test.Workflow
+namespace Six.Scs.Test.Workflow.Ticket
 {
     public class Trouble
     {
