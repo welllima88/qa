@@ -123,6 +123,9 @@ namespace Six.Scs.Test
             Terminal.Replace(_terminalOnLocation2);
             Acquirer.Exchange(_terminalOnLocation2, new SixEurope());
 
+            Terminal.ChangeReceiptHeader(_terminalOnLocation);
+            Terminal.ResetReceiptHeader(_terminalOnLocation, _locationBuilder.Location);
+
             _troubleTicket = Tickets.TroubleTicket.Create(_duplicatedTerminals.ElementAt(1));
             // Tickets.TroubleTicket.Edit(_troubleTicket);
 

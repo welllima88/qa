@@ -1,10 +1,9 @@
+using Six.Scs.Test.Model;
 using Six.Scs.Test.UI.Terminal;
 using Six.Scs.Test.UI.Terminal.Dashboard.Portlets;
 using Six.Scs.Test.UI.Terminal.Duplicate;
+using Six.Scs.Test.UI.Terminal.ReceiptHeader;
 using Six.Scs.Test.Workflow.Builder;
-using Location = Six.Scs.Test.Model.Location;
-using TerminalDuplicate = Six.Scs.Test.Model.TerminalDuplicate;
-using TerminalReplace = Six.Scs.Test.Model.TerminalReplace;
 
 namespace Six.Scs.Test.Workflow
 {
@@ -105,6 +104,26 @@ namespace Six.Scs.Test.Workflow
         public static void Return()
         {
             SalesContract.MarkAsRetour.Click();
+        }
+
+        public static void ChangeReceipt(ReceiptHeader newReceiptHeader)
+        {
+            BusinessViewpoint.ReceiptHeaderEdit.Click();
+
+            Edit.Line1 = newReceiptHeader.Line1;
+            Edit.Line2 = newReceiptHeader.Line2;
+            Edit.Line3 = newReceiptHeader.Line3;
+
+            Edit.SaveButton().Click();
+        }
+
+        public static void Reset()
+        {
+            BusinessViewpoint.ReceiptHeaderEdit.Click();
+
+            Edit.CopyFromLocation();
+
+            Edit.SaveButton().Click();
         }
     }
 }
