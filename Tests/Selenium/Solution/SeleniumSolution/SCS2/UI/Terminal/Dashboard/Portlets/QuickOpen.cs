@@ -4,7 +4,10 @@ namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
     public class QuickOpen : PortletBase
     {
-        // PortletId = "div#frame_TerminalIdSearchPortlet ";
+        public QuickOpen()
+        {
+            PortletId = "div#frame_TerminalIdSearchPortlet";
+        }
 
         public static string OpenTerminalId
         {

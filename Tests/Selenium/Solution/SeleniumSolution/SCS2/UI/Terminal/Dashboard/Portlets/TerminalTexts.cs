@@ -6,6 +6,11 @@ namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
     public class TerminalTexts : PortletBase
     {
+        public TerminalTexts()
+        {
+            PortletId = "div#frame_TerminalInfotextPortlet";
+        }
+
         public static IWebElement CreateInfotext
         {
             get

@@ -5,6 +5,11 @@ namespace Six.Scs.Test.UI.Terminal.Dashboard.Portlets
 {
     public class BusinessViewpoint : PortletBase
     {
+        public BusinessViewpoint()
+        {
+            PortletId = "div#frame_TerminalBusinessViewpointPortlet";
+        }
+
         public static IWebElement ReceiptHeader
         {
             get
